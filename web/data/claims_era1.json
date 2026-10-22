@@ -1,0 +1,149 @@
+{
+  "_meta": {
+    "era": 1,
+    "count": 14,
+    "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
+  },
+  "claims": [
+    {
+      "id": "cl_000000101",
+      "statement": "إذا استأجر رجل حقلاً للزراعة ولم ينتج فيه حبوباً، يُحاسَب، ويعطي صاحب الحقل حبوباً على أساس الحقول المجاورة",
+      "quote": "If a man rent a field for cultivation and do not produce any grain in the field",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "rule",
+      "hedge": null,
+      "chapter": "قوانين العقود والزراعة"
+    },
+    {
+      "id": "cl_000000102",
+      "statement": "إذا أجّر رجل حقله لمستأجر بحصة من المحصول، ثم أغرق أدد الحقل وجرف المحصول، تقع الخسارة على المستأجر",
+      "quote": "inundate the field and carry away the produce, the loss (falls on) the tenant",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "rule",
+      "hedge": null,
+      "chapter": "قوانين العقود والزراعة"
+    },
+    {
+      "id": "cl_000000103",
+      "statement": "إذا كان على رجل دين، فأغرق أدد حقله وجرف محصوله، أو لم تنبت حبوب فيه لقلة الماء، لا يردّ حبوباً للدائن في تلك السنة، ويُعدَّل عقد الدين، ولا يدفع فائدة تلك السنة",
+      "quote": "Adad inundate his field and carry away the produce",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "rule",
+      "hedge": null,
+      "chapter": "قوانين الديون والفيضان"
+    },
+    {
+      "id": "cl_000000104",
+      "statement": "إذا أهمل رجل تقوية سده فانكسر وجرف الماء الأرض الزراعية، يعوّض من انكسر سده الحبوب التي أتلفت",
+      "quote": "a break be made in his dyke and the water carry away the farm-land",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "rule",
+      "hedge": null,
+      "chapter": "قوانين السدود والري"
+    },
+    {
+      "id": "cl_000000105",
+      "statement": "إذا فتح رجل قناة للري وأهملها، فجرف الماء حقلاً مجاوراً، يعوّض صاحب الحقل بالحبوب على أساس الحقول المجاورة",
+      "quote": "open his canal for irrigation and neglect it",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "rule",
+      "hedge": null,
+      "chapter": "قوانين السدود والري"
+    },
+    {
+      "id": "cl_000000106",
+      "statement": "النصيحة الأولى للابن: لا تفخر بعلمك، وحاور الجاهل كما تحاور الحكيم",
+      "quote": "Be not proud because thou art learned",
+      "attributed_to": null,
+      "layer": "tradition",
+      "type": "judgment",
+      "hedge": null,
+      "chapter": "التعليم الأول"
+    },
+    {
+      "id": "cl_000000107",
+      "statement": "لا حد للمهارة، ولا صانع يملك المزايا كلها",
+      "quote": "For no limit can be set to skill",
+      "attributed_to": null,
+      "layer": "tradition",
+      "type": "judgment",
+      "hedge": null,
+      "chapter": "التعليم الأول"
+    },
+    {
+      "id": "cl_000000108",
+      "statement": "وصف جورج سميث، في مقدمته، إرسال الحمامة بعد الطوفان ضمن الرواية البابلية",
+      "quote": "the sending forth of the dove",
+      "attributed_to": "George Smith",
+      "layer": "modern_scholarship",
+      "type": "description",
+      "hedge": null,
+      "chapter": "مقدمة الترجمة"
+    },
+    {
+      "id": "cl_000000109",
+      "statement": "قرأ سميث أن السفينة استقرت على جبال نيزير، وهي رواية الطوفان في اللوح الحادي عشر",
+      "quote": "the ship rested on the mountains of Nizir",
+      "attributed_to": "George Smith",
+      "layer": "modern_scholarship",
+      "type": "event",
+      "hedge": null,
+      "chapter": "مقدمة الترجمة"
+    },
+    {
+      "id": "cl_000000110",
+      "statement": "في فهرس اللوح الحادي عشر أمر ببناء السفينة قبل الطوفان",
+      "quote": "Command to build the ark",
+      "attributed_to": null,
+      "layer": "tradition",
+      "type": "event",
+      "hedge": null,
+      "chapter": "فهرس اللوح الحادي عشر"
+    },
+    {
+      "id": "cl_000000111",
+      "statement": "الكلام الحسن أندر من الزمرد الذي تجده الجواري على الحجارة",
+      "quote": "Fair speech is more rare than the emerald that is found by slave-maidens on the pebbles.",
+      "attributed_to": null,
+      "layer": "tradition",
+      "type": "description",
+      "hedge": null,
+      "chapter": "التعليم الأول"
+    },
+    {
+      "id": "cl_000000112",
+      "statement": "يدفع عشرة كور من الحبوب عن كل جريب (GAN)",
+      "quote": "he shall measure out ten GUR of grain per GAN.",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "quantity",
+      "hedge": null,
+      "chapter": "قوانين السدود والري"
+    },
+    {
+      "id": "cl_000000113",
+      "statement": "كان النص الأصلي ستة أعمدة من الكتابة",
+      "quote": "d originally six columns of text; two of these (the third and fourth) were still nearly perfect; two others (the second and fifth) were imperfect, about half remaining, while the remaining columns (the first and sixth) were entirely lost.",
+      "attributed_to": null,
+      "layer": "modern_scholarship",
+      "type": "quantity",
+      "hedge": null,
+      "chapter": "مقدمة الترجمة"
+    },
+    {
+      "id": "cl_000000114",
+      "statement": "رأيت في الحال أنني وجدت هنا جزءاً على الأقل من قصة الطوفان البابلية",
+      "quote": "I saw at once that I had here discovered a portion at least of the Chaldean account of the Deluge.",
+      "attributed_to": null,
+      "layer": "modern_scholarship",
+      "type": "judgment",
+      "hedge": null,
+      "chapter": "مقدمة الترجمة"
+    }
+  ]
+}

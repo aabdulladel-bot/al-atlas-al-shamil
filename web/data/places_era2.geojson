@@ -1,0 +1,392 @@
+{
+  "type": "FeatureCollection",
+  "_meta": {
+    "era": 2,
+    "status": "partly-verified",
+    "source": "Pleiades (pleiades.stoa.org)، ملف places-latest، ترخيص CC BY 3.0، يتطلب الإسناد",
+    "raw_sha256": "aa521b916561a45560249f0bf1b9e5cd53696c5646101906b2ce431d4dd6af82",
+    "matched": "17 من 19",
+    "generated_by": "scripts/build_places.mjs",
+    "note": "الإحداثيات الممثّلة في Pleiades نقاط تمثيلية لا مواقع مساحية."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "tyre",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.2018,
+          33.2693
+        ]
+      },
+      "properties": {
+        "name_ar": "صور",
+        "name_en": "Tyre",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "678437",
+        "pleiades_title": "Tyrus/Col. Septimia Severa",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sidon",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.3728,
+          33.5619
+        ]
+      },
+      "properties": {
+        "name_ar": "صيدا",
+        "name_en": "Sidon",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "678393",
+        "pleiades_title": "Sidon/Col. Aurelia Pia",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "byblos",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.6461,
+          34.1192
+        ]
+      },
+      "properties": {
+        "name_ar": "جبيل",
+        "name_en": "Byblos",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "668216",
+        "pleiades_title": "Byblos",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ugarit",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.78,
+          35.6
+        ]
+      },
+      "properties": {
+        "name_ar": "أوغاريت",
+        "name_en": "Ugarit",
+        "era": 2,
+        "coord_status": "approximate",
+        "pleiades_id": null,
+        "pleiades_title": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "jerusalem",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.235,
+          31.7772
+        ]
+      },
+      "properties": {
+        "name_ar": "أورشليم",
+        "name_en": "Jerusalem",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "687928",
+        "pleiades_title": "Ierusalem/Hierosolyma/Col. Aelia Capitolina",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "megiddo",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.1842,
+          32.5856
+        ]
+      },
+      "properties": {
+        "name_ar": "مجدو",
+        "name_en": "Megiddo",
+        "era": 2,
+        "coord_status": "approximate",
+        "pleiades_id": null,
+        "pleiades_title": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kition",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.632,
+          34.9212
+        ]
+      },
+      "properties": {
+        "name_ar": "كيتيون",
+        "name_en": "Kition",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "707534",
+        "pleiades_title": "Kition",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "carthage",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.3231,
+          36.8531
+        ]
+      },
+      "properties": {
+        "name_ar": "قرطاج",
+        "name_en": "Carthage",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "314921",
+        "pleiades_title": "Carthago",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nineveh",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.1599,
+          36.3608
+        ]
+      },
+      "properties": {
+        "name_ar": "نينوى",
+        "name_en": "Nineveh",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "874621",
+        "pleiades_title": "Nineveh/Ninos",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ashur",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.2613,
+          35.4556
+        ]
+      },
+      "properties": {
+        "name_ar": "آشور",
+        "name_en": "Ashur",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "893945",
+        "pleiades_title": "Ashur/‘Lamban’?/‘Liba(nai)’?",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nimrud",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.3315,
+          36.1
+        ]
+      },
+      "properties": {
+        "name_ar": "نمرود",
+        "name_en": "Nimrud",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "894019",
+        "pleiades_title": "Nimrud",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hattusa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.6172,
+          40.0149
+        ]
+      },
+      "properties": {
+        "name_ar": "حاتوشا",
+        "name_en": "Hattusa",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "283602441",
+        "pleiades_title": "Hattusa",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gordion",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9785,
+          39.6503
+        ]
+      },
+      "properties": {
+        "name_ar": "غورديون",
+        "name_en": "Gordion",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "609393",
+        "pleiades_title": "Gordion/Vindia?",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sardis",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.0403,
+          38.4883
+        ]
+      },
+      "properties": {
+        "name_ar": "ساردس",
+        "name_en": "Sardis",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "550867",
+        "pleiades_title": " Sardis/Hyde?",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "miletus",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.2788,
+          37.5305
+        ]
+      },
+      "properties": {
+        "name_ar": "ميليتوس",
+        "name_en": "Miletus",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "599799",
+        "pleiades_title": "Miletus",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "athens",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.724,
+          37.9716
+        ]
+      },
+      "properties": {
+        "name_ar": "أثينا",
+        "name_en": "Athens",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "579885",
+        "pleiades_title": "Athenae",
+        "pleiades_location_precision": "related"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "susa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.2535,
+          32.1899
+        ]
+      },
+      "properties": {
+        "name_ar": "شوش",
+        "name_en": "Susa",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "912936",
+        "pleiades_title": "Susa/Seleucia ad Eulaeum",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ecbatana",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.5164,
+          34.8056
+        ]
+      },
+      "properties": {
+        "name_ar": "هَمَذان",
+        "name_en": "Ecbatana",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "903021",
+        "pleiades_title": "Ecbatana/Hagmatana/Achmeta/Epiphaneia/Ahmadan",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "persepolis",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          52.8904,
+          29.9352
+        ]
+      },
+      "properties": {
+        "name_ar": "برسيبوليس",
+        "name_en": "Persepolis",
+        "era": 2,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "922695",
+        "pleiades_title": "Persepolis/Parsa/Persai/Sat Setun",
+        "pleiades_location_precision": "precise"
+      }
+    }
+  ]
+}

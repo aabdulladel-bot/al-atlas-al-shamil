@@ -1,0 +1,23 @@
+{
+  "name": "al-atlas-al-shamil",
+  "version": "1.0.0",
+  "description": "الأطلس الشامل: أطلس تفاعلي للتاريخ والجغرافيا والثقافة والسكان، مبني على شواهد موثّقة",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test pipeline/normalize.test.mjs pipeline/extract_batch.test.mjs",
+    "fetch:sources": "node scripts/fetch_sources.mjs",
+    "build:places": "node scripts/build_places.mjs && node scripts/build_places.mjs scripts/config/places_era2.json data/raw/pleiades-places-latest.csv.gz web/data/places_era2.geojson",
+    "build:claims": "node scripts/build_claims.mjs",
+    "build:claim-points": "node scripts/build_places.mjs scripts/config/claim_places.json data/raw/pleiades-places-latest.csv.gz web/data/claim_places.geojson && node scripts/build_claim_points.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^2.1.1",
+    "csv-parse": "7.0.3",
+    "maplibre-gl": "4.7.1"
+  }
+}

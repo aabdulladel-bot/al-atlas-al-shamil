@@ -1,0 +1,26 @@
+{
+  "source": "Hultsch، Polybii Historiae، الكتب I–III (archive: polybiihistoria05polygoog)",
+  "results": [
+    {
+      "claim": "cl_000000383",
+      "greek_quote": "μακραῖς ναυσὶ",
+      "note": "τοὺς Ῥωμαίους μακραῖς ναυσὶ … ἐπέχεινα πλεῖν … τοῦ Καλοῦ ἀκρωτηρίου؛ وفي الموضع نفسه: ὑπὸ χειμῶνος ἢ πολεμίων",
+      "status": "ok",
+      "window_sha256": "b95426c0137fa953413172de00cccbe3d4b921c0d3a71df8f8d3b7c882f12fb4"
+    },
+    {
+      "claim": "cl_000000384",
+      "greek_quote": "ἔνια μόλις ἐξ ἐπιστάσεως",
+      "note": "τηλικαύτη γὰρ ἡ διαφορὰ … ὥστε τοὺς συνετωτάτους ἔνια μόλις ἐξ ἐπιστάσεως διευκρινεῖν",
+      "status": "ok",
+      "window_sha256": "10e8c2b45bfa1a25a5e12cd27ac5dbc4babf36e3a50ae79d420fd162b222f5b9"
+    },
+    {
+      "claim": "cl_000000385",
+      "greek_quote": "μηδὲ πόλιν κτίξειν",
+      "note": "μὴ λήξεσϑαι ἐπέκεινα Ῥωμαίους μηδ᾽ ἐμπορεύεσϑαι μηδὲ πόλιν κτίξειν، بعد الرأس الجميل وماستيا وتارسيوم",
+      "status": "ok",
+      "window_sha256": "90d831aaeaf8f2e62134a229aa3cf4843bc5cd1e69ecda8098f12ad31c262ddd"
+    }
+  ]
+}

@@ -1,0 +1,811 @@
+[
+  {
+    "id": "cl_000000201",
+    "passage_id": "behistun:rawlinson1846:c1:p1",
+    "quote": "the King of (the dependent) provinces",
+    "statement": "يلقّب داريوس نفسه ملك الولايات (التابعة)",
+    "type": "description",
+    "layer": "material",
+    "hedge": null,
+    "attributed_to": null,
+    "isnad": null,
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000202",
+    "passage_id": "behistun:rawlinson1846:c1:p6",
+    "quote": "Persia, Susiana, Babylonia, Assyria, Arabia, Egypt",
+    "statement": "يعدّ داريوس فارس وسوسيانا وبابل وآشور وعربية ومصر من البلدان التي صارت في يده",
+    "type": "description",
+    "layer": "material",
+    "hedge": null,
+    "attributed_to": null,
+    "isnad": null,
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000203",
+    "passage_id": "behistun:rawlinson1846:c1:p6",
+    "quote": "the total amount being twenty-one (twenty-three ?) countries",
+    "statement": "يذكر داريوس أن مجموع البلدان واحد وعشرون بلداً، والقراءة في الطبعة 21 أو 23",
+    "type": "quantity",
+    "layer": "material",
+    "hedge": "القراءة في الطبعة مشكوك فيها (21 أو 23)",
+    "attributed_to": null,
+    "isnad": null,
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000204",
+    "passage_id": "behistun:rawlinson1846:c2:p2",
+    "quote": "Persis, Susiana, Media, Assyria, Armenia, Parthia, Margiana, Sattagydia, and Sacia",
+    "statement": "ثارت على داريوس بلدان عدة وهو في بابل، منها فارس وسوسيانا وميديا وآشور وأرمينيا وبارثيا",
+    "type": "event",
+    "layer": "material",
+    "hedge": null,
+    "attributed_to": null,
+    "isnad": null,
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000205",
+    "passage_id": "luckenbill:c_esarhaddon:590",
+    "quote": "These are the road regulations",
+    "statement": "يسمّي إسارحدون هذه الوثيقة «لوائح الطرق» التي أصدرها لبعل ومدن الساحل",
+    "type": "rule",
+    "layer": "material",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "علامة استفهام في الطبعة على \"road regulations\"، والنص مضطرب في أجزاء كثيرة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000206",
+    "passage_id": "luckenbill:c_esarhaddon:590",
+    "quote": "Gebail (Gubla, Byblos)",
+    "statement": "تشمل اللوائح جبيل (بيبلوس) بين مدن الساحل وجبل لبنان",
+    "type": "description",
+    "layer": "material",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "النص مضطرب، والأسماء بين أقواس في الطبعة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000207",
+    "passage_id": "luckenbill:c_esarhaddon:690",
+    "quote": "a grand total of 22 kings of the Hittite-land (Syria), the seacoast and the (islands) in the midst of the sea",
+    "statement": "يذكر إسارحدون أن مجموع الملوك الذين استدعاهم من سوريا والساحل والجزر 22 ملكاً",
+    "type": "quantity",
+    "layer": "material",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": null,
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000208",
+    "passage_id": "luckenbill:c_esarhaddon:690",
+    "quote": "I gave them their orders and great beams",
+    "statement": "أعطى إسارحدون الملوك أوامره وعوارض كبيرة",
+    "type": "event",
+    "layer": "material",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "عبارة great beams وغرضها غير مذكور صراحة في الفقرة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000209",
+    "passage_id": "luckenbill:c_esarhaddon:536",
+    "quote": "Hazael, king of the Arabs, came to Nineveh, my royal city, with his rich (heavy) gifts",
+    "statement": "جاء حزائيل ملك العرب إلى نينوى بهدايا ثمينة",
+    "type": "event",
+    "layer": "material",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "الهدايا وصفت بـ rich (heavy) وهو وصف مترجم",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000210",
+    "passage_id": "kjv1611:summary:1kgs9",
+    "quote": "His nauie fetcheth golde from Ophir",
+    "statement": "يذكر ملخص الإصحاح أن أسطول سليمان يجلب الذهب من أوفير",
+    "type": "event",
+    "layer": "tradition",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ ومسار أسطول سليمان إلى أوفير موضع خلاف تاريخي",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000211",
+    "passage_id": "kjv1611:summary:1kgs5",
+    "quote": "furnifheth him with trees",
+    "statement": "يذكر الملخص أن حيرام يزوّد سليمان بالأشجار (الخشب) لبناء الهيكل",
+    "type": "event",
+    "layer": "tradition",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ ومسار أسطول سليمان إلى أوفير موضع خلاف تاريخي",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000212",
+    "passage_id": "herodotus:rawlinson1858:5:52",
+    "quote": "Royal stations exist along its whole length, and excellent caravanserais",
+    "statement": "يصف هيرودوت الطريق المؤدي إلى الملك بأن على طوله محطات ملكية ونُزُلاً جيداً",
+    "type": "description",
+    "layer": "later_historian",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": null,
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000213",
+    "passage_id": "herodotus:rawlinson1858:5:52",
+    "quote": "and is free from danger",
+    "statement": "يذكر هيرودوت أن الطريق يمر بأرض مأهولة وخالٍ من الخطر",
+    "type": "description",
+    "layer": "later_historian",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": null,
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000214",
+    "passage_id": "herodotus:rawlinson1858:4:42",
+    "quote": "sent to sea a number of ships manned by Phoenicians",
+    "statement": "يذكر هيرودوت أن نخاو أرسل سفناً بحارتها من الفينيقيين للإبحار حول أفريقيا",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "الرواية في هيرودوت، وقد لا تكون موثقة بالكامل",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000215",
+    "passage_id": "herodotus:rawlinson1858:4:42",
+    "quote": "it was not till the third year that they doubled the Pillars of Hercules",
+    "statement": "يذكر هيرودوت أن الرحلة استغرقت ثلاث سنوات، وأن الفينيقيين عادوا بعد أن اجتازوا أعمدة هرقل في السنة الثالثة",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "رواية هيرودوت، وقد لا تكون موثقة بالكامل",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000216",
+    "passage_id": "herodotus:rawlinson1858:4:42",
+    "quote": "in sailing round Libya they had the sun upon their right hand",
+    "statement": "يذكر الملاحون أنهم رأوا الشمس عن يمينهم في دورانهم حول ليبيا، وهيرودوت نفسه لا يصدّق ذلك",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "هيرودوت يصرّح بعدم تصديقه: \"I for my part do not believe them\"",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000217",
+    "passage_id": "kjv1611:summary:ezek27",
+    "quote": "The rich fupplyofTyrus",
+    "statement": "يصف ملخص الإصحاح 27 صور بأنها مصدر وافر للإمداد والتجارة",
+    "type": "description",
+    "layer": "scripture",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ حروف OCR مشوّهة في العنوان",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "صور"
+      ],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000218",
+    "passage_id": "kjv1611:summary:ezek27",
+    "quote": "The great and vnrecouerable fall thereof",
+    "statement": "يصف الملخص سقوط صور بأنه عظيم لا يُستدرك",
+    "type": "description",
+    "layer": "scripture",
+    "attributed_to": null,
+    "isnad": null,
+    "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ حروف OCR مشوّهة في العنوان",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "صور"
+      ],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000386",
+    "passage_id": "kjv1611:1872:1kgs9-28-ophir-gold",
+    "quote": "fetched from thence gold, four hundred and twenty talents",
+    "statement": "يذكر الكتاب أن سفن سليمان جلبت من أوفير ذهباً قدره أربعمائة وعشرون وزنة",
+    "type": "quantity",
+    "layer": "tradition",
+    "attributed_to": "سفر الملوك الأول 9:28 (KJV 1611، طبعة 1872)",
+    "isnad": null,
+    "hedge": "نص ديني وليس سجلاً تجارياً؛ موقع أوفير محل خلاف، وقد ذكر المحرر الخلاف في الشرح نفسه",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "أوفير"
+      ],
+      "persons": [
+        "سليمان"
+      ],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000387",
+    "passage_id": "kjv1611:1872:1kgs5-8-hiram-timber",
+    "quote": "I will do all thy desire concerning timber of cedar",
+    "statement": "يعد حيرام سليمان بتزويده بخشب الأرز والسرو لبناء الهيكل",
+    "type": "event",
+    "layer": "tradition",
+    "attributed_to": "سفر الملوك الأول 5:8 (KJV 1611، طبعة 1872)",
+    "isnad": null,
+    "hedge": "نص ديني وليس وثيقة تعاقد؛ الشحنة تُنقل بالبحر في الآية 5:9 كما يصفها النص نفسه",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "أوفير"
+      ],
+      "persons": [
+        "سليمان"
+      ],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000397",
+    "passage_id": "kjv1611:1872:ezek27:v12-tarshish",
+    "quote": "Tarshish was thy merchant",
+    "statement": "يذكر النص أن ترشيش كانت تاجراً لصور لكثرة كل أنواع الثروة",
+    "type": "event",
+    "layer": "tradition",
+    "attributed_to": "حزقيال 27 (KJV 1611، طبعة 1872 مع الشرح)",
+    "isnad": null,
+    "hedge": "نص نبوي وشعري يصف مدينة صور؛ كثرة الثروة وصف أدبي، وليس إحصاءً تجارياً",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "صور",
+        "دمشق",
+        "ترشيش",
+        "يهوذا"
+      ],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000398",
+    "passage_id": "kjv1611:1872:ezek27:v17-judah-wheat",
+    "quote": "in thy market wheat of Minnith",
+    "statement": "يذكر النص أن يهوذا وأرض إسرائيل كانا يبيعان في سوق صور القمح والعسل والزيت والبلسم",
+    "type": "event",
+    "layer": "tradition",
+    "attributed_to": "حزقيال 27 (KJV 1611، طبعة 1872 مع الشرح)",
+    "isnad": null,
+    "hedge": "نص ديني نبوي؛ قائمة السلع تدل على التبادل لا على الكميات، والأرقام غير موجودة",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "صور",
+        "دمشق",
+        "ترشيش",
+        "يهوذا"
+      ],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000399",
+    "passage_id": "kjv1611:1872:ezek27:v18-damascus-wine",
+    "quote": "Damascus was thy merchant",
+    "statement": "يذكر النص أن دمشق كانت تاجراً لصور في خيرات كثيرة، بخمر حلبون وصوف أبيض",
+    "type": "event",
+    "layer": "tradition",
+    "attributed_to": "حزقيال 27 (KJV 1611، طبعة 1872 مع الشرح)",
+    "isnad": null,
+    "hedge": "نص نبوي؛ حلبون وصف لنوع من الخمر في النص نفسه، والعلاقة التجارية مُقدَّمة كشهادة على ثراء صور",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "صور",
+        "دمشق",
+        "ترشيش",
+        "يهوذا"
+      ],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era2"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era2"
+    },
+    "status": "draft",
+    "version": 1
+  }
+]

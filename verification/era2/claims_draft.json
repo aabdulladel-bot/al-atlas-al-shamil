@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cl_000000201",
+    "passage_id": "behistun:rawlinson1846:c1:p1",
+    "quote": "the King of (the dependent) provinces",
+    "statement": "يلقّب داريوس نفسه ملك الولايات (التابعة)",
+    "type": "description",
+    "layer": "material",
+    "hedge": null,
+    "note": "لقب ضمن قائمة الألقاب في الفقرة الأولى من العمود الأول"
+  },
+  {
+    "id": "cl_000000202",
+    "passage_id": "behistun:rawlinson1846:c1:p6",
+    "quote": "Persia, Susiana, Babylonia, Assyria, Arabia, Egypt",
+    "statement": "يعدّ داريوس فارس وسوسيانا وبابل وآشور وعربية ومصر من البلدان التي صارت في يده",
+    "type": "description",
+    "layer": "material",
+    "hedge": null,
+    "note": "قائمة البلدان في الفقرة السادسة من العمود الأول، ولا تشمل كل الولايات بالضرورة"
+  },
+  {
+    "id": "cl_000000203",
+    "passage_id": "behistun:rawlinson1846:c1:p6",
+    "quote": "the total amount being twenty-one (twenty-three ?) countries",
+    "statement": "يذكر داريوس أن مجموع البلدان واحد وعشرون بلداً، والقراءة في الطبعة 21 أو 23",
+    "type": "quantity",
+    "layer": "material",
+    "hedge": "القراءة في الطبعة مشكوك فيها (21 أو 23)",
+    "note": "الرقم مشكوك فيه في الطبعة نفسها"
+  },
+  {
+    "id": "cl_000000204",
+    "passage_id": "behistun:rawlinson1846:c2:p2",
+    "quote": "Persis, Susiana, Media, Assyria, Armenia, Parthia, Margiana, Sattagydia, and Sacia",
+    "statement": "ثارت على داريوس بلدان عدة وهو في بابل، منها فارس وسوسيانا وميديا وآشور وأرمينيا وparthia",
+    "type": "event",
+    "layer": "material",
+    "hedge": null,
+    "note": "تمرد الولايات أثناء حكم داريوس الأول"
+  }
+]

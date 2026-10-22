@@ -1,0 +1,49 @@
+{
+  "_note": "بيانات اختبار مصطنعة لتجربة المخطط ومطابقة الاقتباس. ليست نصاً من أي مصدر تاريخي ولا تُنشر.",
+  "passage": {
+    "id": "test-src:test-ed:1:10:p1",
+    "source_id": "test-src",
+    "volume": 1,
+    "page": 10,
+    "para": 1,
+    "chapter": "فصل تجريبي",
+    "text": "ثم دخلت سنة اثنتين وسبعين ومئة، فبنى الخليفة مدينة السلام، وقال الراوي إنها كانت مدورة الشكل.",
+    "text_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "claims": [
+    {
+      "id": "cl_000000001",
+      "passage_id": "test-src:test-ed:1:10:p1",
+      "quote": "فبنى الخليفة مدينة السلام",
+      "statement": "بنى الخليفة مدينة السلام",
+      "type": "event",
+      "layer": "later_historian",
+      "attributed_to": null,
+      "isnad": null,
+      "hedge": null,
+      "author_preference": null,
+      "mentions": { "places": ["مدينة السلام"], "persons": ["الخليفة"], "dates": ["سنة اثنتين وسبعين ومئة"] },
+      "links": { "places": ["Q1530"], "persons": [], "time": { "from": 762, "to": 763 } },
+      "checks": { "quote_match": true, "pass_agreement": true, "verified_by": "h1" },
+      "status": "verified",
+      "version": 1
+    },
+    {
+      "id": "cl_000000002",
+      "passage_id": "test-src:test-ed:1:10:p1",
+      "quote": "كانت مدورة الشكل",
+      "statement": "كانت المدينة مدورة الشكل",
+      "type": "description",
+      "layer": "later_historian",
+      "attributed_to": "الراوي",
+      "isnad": null,
+      "hedge": "قال الراوي إنها",
+      "author_preference": "neutral",
+      "mentions": { "places": ["مدينة السلام"], "persons": [], "dates": [] },
+      "links": { "places": ["Q1530"], "persons": [], "time": { "from": 762, "to": 763 } },
+      "checks": { "quote_match": true, "pass_agreement": false, "verified_by": "h2" },
+      "status": "escalated",
+      "version": 1
+    }
+  ]
+}

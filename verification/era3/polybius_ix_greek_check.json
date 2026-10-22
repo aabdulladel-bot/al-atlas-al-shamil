@@ -1,0 +1,40 @@
+{
+  "source": "Hultsch، Polybii Historiae (archive: polybiihistoria06polygoog)",
+  "results": [
+    {
+      "claim": "cl_000000392",
+      "greek_quote": "τῶν οἰκούντων ἀρετῆς",
+      "note": "Οὐκ ἐκ τῶν ἔξω κοσμεῖται πόλις، ἀλλ' ἐκ τῆς τῶν οἰκούντων ἀρετῆς",
+      "status": "ok",
+      "window_sha256": "1dda69d45f8cc8e45f278ac504afc07a963334b0bea063ec4a66ee336078612f"
+    },
+    {
+      "claim": "cl_000000393",
+      "greek_quote": "ὀργή τις ἐκκαίεται πρὸς τοὺς εὐτυχοῦντας",
+      "note": "οὐ μόνον φϑόνος، ἀλλ᾽ οἷον ὀργή τις ἐκκαίεται πρὸς τοὺς εὐτυχοῦντας … τὸ κατὰ τῶν πραξάντων μῖσος",
+      "status": "ok",
+      "window_sha256": "97513f9e9aa81cfd23bd6e06e6fe85684e51c8cd7ec8605d2cdea564cd7782b0"
+    },
+    {
+      "claim": "cl_000000394",
+      "greek_quote": "ἕν καὶ τὸ τυχὸν",
+      "note": "ἡ φύσις πρὸς τὰς ἀποτυχίας τῶν ἐπινοηθέντων ἱκανὸν ἕν καὶ τὸ τυχὸν ἐποίησε",
+      "status": "ok",
+      "window_sha256": "539d3cdbc91b44230d182cd6b2cc83cd11bd2f0091b9818fbc9dc49f0c2c239b"
+    },
+    {
+      "claim": "cl_000000395",
+      "greek_quote": "τὴν ἐναντίαν τῇ φύσει",
+      "note": "ἀναγκαζόμενοι ταῖς τῶν πραγμάτων μεταβολαῖς συμμετατίθεσθαι τὴν ἐναντίαν τῇ φύσει",
+      "status": "ok",
+      "window_sha256": "83a10795a2ad43ea5d8b0b45f88bdb76ad5ac6d5c78e5c1ad75e22fce9c892d7"
+    },
+    {
+      "claim": "cl_000000396",
+      "greek_quote": "ἐὰν μόνον σὺν νῷ γένηται",
+      "note": "ἐὰν μόνον σὺν νῷ γένηται τὰ πραττόμενα",
+      "status": "ok",
+      "window_sha256": "71d73bb5e462529955ff93496b182a1ddbb0f56c701ea808dc0fbbba3e6af14f"
+    }
+  ]
+}

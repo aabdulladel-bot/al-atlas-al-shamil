@@ -1,0 +1,145 @@
+{
+  "_note": "مواقع الحقبة الثانية: الطرق والممالك الأولى (1200-500 ق.م). كل معرّف Pleiades مطابق لعنوان متوقع مُتحقَّق منه. المواقع بلا سجل في Pleiades تأخذ تقديرات موسومة. | بحث Pleiades (لقطة 2026): لا يوجد سجل باسم Megiddo أو Ugarit بأي تهجئة مقاربة، فتبقى الإحداثيات تقديرية.",
+  "era": 2,
+  "places": [
+    {
+      "slug": "tyre",
+      "name_ar": "صور",
+      "name_en": "Tyre",
+      "pleiades_id": "678437",
+      "expected_title": "Tyrus/Col. Septimia Severa"
+    },
+    {
+      "slug": "sidon",
+      "name_ar": "صيدا",
+      "name_en": "Sidon",
+      "pleiades_id": "678393",
+      "expected_title": "Sidon/Col. Aurelia Pia"
+    },
+    {
+      "slug": "byblos",
+      "name_ar": "جبيل",
+      "name_en": "Byblos",
+      "pleiades_id": "668216",
+      "expected_title": "Byblos"
+    },
+    {
+      "slug": "ugarit",
+      "name_ar": "أوغاريت",
+      "name_en": "Ugarit",
+      "pleiades_id": null,
+      "fallback": {
+        "lon": 35.78,
+        "lat": 35.6
+      }
+    },
+    {
+      "slug": "jerusalem",
+      "name_ar": "أورشليم",
+      "name_en": "Jerusalem",
+      "pleiades_id": "687928",
+      "expected_title": "Ierusalem/Hierosolyma/Col. Aelia Capitolina"
+    },
+    {
+      "slug": "megiddo",
+      "name_ar": "مجدو",
+      "name_en": "Megiddo",
+      "pleiades_id": null,
+      "fallback": {
+        "lon": 35.1842,
+        "lat": 32.5856
+      }
+    },
+    {
+      "slug": "kition",
+      "name_ar": "كيتيون",
+      "name_en": "Kition",
+      "pleiades_id": "707534",
+      "expected_title": "Kition"
+    },
+    {
+      "slug": "carthage",
+      "name_ar": "قرطاج",
+      "name_en": "Carthage",
+      "pleiades_id": "314921",
+      "expected_title": "Carthago"
+    },
+    {
+      "slug": "nineveh",
+      "name_ar": "نينوى",
+      "name_en": "Nineveh",
+      "pleiades_id": "874621",
+      "expected_title": "Nineveh/Ninos"
+    },
+    {
+      "slug": "ashur",
+      "name_ar": "آشور",
+      "name_en": "Ashur",
+      "pleiades_id": "893945",
+      "expected_title": "Ashur/‘Lamban’?/‘Liba(nai)’?"
+    },
+    {
+      "slug": "nimrud",
+      "name_ar": "نمرود",
+      "name_en": "Nimrud",
+      "pleiades_id": "894019",
+      "expected_title": "Nimrud"
+    },
+    {
+      "slug": "hattusa",
+      "name_ar": "حاتوشا",
+      "name_en": "Hattusa",
+      "pleiades_id": "283602441",
+      "expected_title": "Hattusa"
+    },
+    {
+      "slug": "gordion",
+      "name_ar": "غورديون",
+      "name_en": "Gordion",
+      "pleiades_id": "609393",
+      "expected_title": "Gordion/Vindia?"
+    },
+    {
+      "slug": "sardis",
+      "name_ar": "ساردس",
+      "name_en": "Sardis",
+      "pleiades_id": "550867",
+      "expected_title": " Sardis/Hyde?"
+    },
+    {
+      "slug": "miletus",
+      "name_ar": "ميليتوس",
+      "name_en": "Miletus",
+      "pleiades_id": "599799",
+      "expected_title": "Miletus"
+    },
+    {
+      "slug": "athens",
+      "name_ar": "أثينا",
+      "name_en": "Athens",
+      "pleiades_id": "579885",
+      "expected_title": "Athenae"
+    },
+    {
+      "slug": "susa",
+      "name_ar": "شوش",
+      "name_en": "Susa",
+      "pleiades_id": "912936",
+      "expected_title": "Susa/Seleucia ad Eulaeum"
+    },
+    {
+      "slug": "ecbatana",
+      "name_ar": "هَمَذان",
+      "name_en": "Ecbatana",
+      "pleiades_id": "903021",
+      "expected_title": "Ecbatana/Hagmatana/Achmeta/Epiphaneia/Ahmadan"
+    },
+    {
+      "slug": "persepolis",
+      "name_ar": "برسيبوليس",
+      "name_en": "Persepolis",
+      "pleiades_id": "922695",
+      "expected_title": "Persepolis/Parsa/Persai/Sat Setun"
+    }
+  ]
+}

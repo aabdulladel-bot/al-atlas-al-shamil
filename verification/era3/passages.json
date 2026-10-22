@@ -1,0 +1,392 @@
+[
+  {
+    "id": "chavannes:intro:route-west",
+    "source_id": "chavannes",
+    "volume": 1,
+    "page": "LXXIV",
+    "para": null,
+    "chapter": "مقدمة شافان: الطريق الغربي بعد حملات الهان (يُكتب بالمقدمة لا بنص سيما تشيان)",
+    "text": "il fit prisonnier le roi de Leou-lan et vainguit celui de Kou-che; la route de Pouest fut dés lors débarrassée de tout obstacle, Les Chinois purent ainsi pénétrer jusqu’au royaume de Ta-yuan; le Ferganah et le Zarafchan étaient des contrées trés florissantes. Tchang-k’ien avait parlé avec éloge de la belle race de chevaux qu’on y élevait ; l'empe- reur envoya plusieurs fois chercher quelques-uns de ces coursiers renommés dont on disait que la sueur était de sang. Les gens de Ta-yuan finirent cependant par se lasser des demandes des Chinois et refusérent caté- goriquement",
+    "text_hash": "sha256:d57555b872c166df714dd531fb7d664098c1688cd25c70b6b57f413842366a07"
+  },
+  {
+    "id": "chavannes:intro:report",
+    "source_id": "chavannes",
+    "volume": 1,
+    "page": "LXX",
+    "para": null,
+    "chapter": "مقدمة شافان: تقرير تشانغ تشيان (يذكر أن سيما تشيان حفظ نصه)",
+    "text": "Tchang Kien n’avait pas été atteint, son expédition eut cependant des résultats considérables en ouvrant aux Chinois tout un monde nouveau poureux. Se-ma Tsien nous a conservé, en l’abrégeant peut-étre, le texte méme du rapport que Vambassadeur présenta 4 son souverain; on y trouve décrits d’une maniére sommaire, mais précise, les états de Ta-yuan (Ferganah), des Ou-suen (vallée de lili), de Kang-kiu {(aunord du Syr-daria), de Ngan-ts’ai (steppes des Kirghiz), des 7a Yue-iche (Sogdiane), de Ngan-si (Parthie), de Tiao-tche (Chaldée?), de Ta-hia (Bactriane). Tchang Kien avait noté si ces peuples étaient nomades ou sédentaires; il indiquait quelles étaient leur popula- tion et leur force militaire.",
+    "text_hash": "sha256:905c2e67640031e286ffde0a6e2eb3f431b53c9d56f535096f87b9a6555b06c8"
+  },
+  {
+    "id": "chavannes:intro:relations",
+    "source_id": "chavannes",
+    "volume": 1,
+    "page": "LXXIV",
+    "para": null,
+    "chapter": "مقدمة شافان: أول علاقات منتظمة مع الهان",
+    "text": "Ce furent les cités du Turkestan oriental et, plus loin encore, le Ferganah ou royaume de Ta-yuan, qui en- trérent alors.en relations suivies avec les Han.",
+    "text_hash": "sha256:6bc9135c5c642dcd7ac0defec59b106ca9a4f0c84584d9458bf724d87e55289c"
+  },
+  {
+    "id": "sima:zh-wikisource:123:mission",
+    "source_id": "sima-qian-zh",
+    "volume": 123,
+    "page": null,
+    "para": "張騫出使",
+    "chapter": "史記 卷123 大宛列傳：張騫出使月氏，經大宛",
+    "text": "騫以郎應募，使月氏，與堂邑氏（故）胡奴甘父俱出隴西。經匈奴，匈奴得之，傳詣單于。單于留之，曰：「月氏在吾北，漢何以得往使？吾欲使越，漢肯聽我乎？」留騫十餘歲，與妻，有子，然騫持漢節不失。居匈奴中，益寬，騫因與其屬亡鄉月氏，西走數十日至大宛。大宛聞漢之饒財，欲通不得，見騫，喜，問曰：「若欲何之？」騫曰：「為漢使月氏，而為匈奴所閉道。今亡，唯王使人導送我。誠得至，反漢，漢之賂遺王財物不可勝言。」大宛以為然，遣騫，為發導繹，抵康居，康居傳致大月氏。",
+    "text_hash": "sha256:f6d2486fec41a40e4636815b45da6df395c963d97b8026d49fdfe1f7e4fb33bf"
+  },
+  {
+    "id": "sima:zh-wikisource:123:dayuan",
+    "source_id": "sima-qian-zh",
+    "volume": 123,
+    "page": null,
+    "para": "大宛總述",
+    "chapter": "史記 卷123 大宛列傳：大宛的位置與俗",
+    "text": "大宛在匈奴西南，在漢正西，去漢可萬里。其俗土著，耕田，田稻麥。有蒲陶酒。多善馬，馬汗血，其先天馬子也。有城郭屋室。其屬邑大小七十餘城，眾可數十萬。",
+    "text_hash": "sha256:913a369904f3a614af57e8a754fc0bf3e9e01b6e4d80cd878237e543bf8f3dab"
+  },
+  {
+    "id": "sima:zh-wikisource:123:end",
+    "source_id": "sima-qian-zh",
+    "volume": 123,
+    "page": null,
+    "para": "張騫所至",
+    "chapter": "史記 卷123 大宛列傳：所至之國",
+    "text": "騫身所至者大宛、大月氏、大夏、康居，而傳聞其旁大國五六，具為天子言之。",
+    "text_hash": "sha256:0f35089a846bad042b8d9d7ae436d7d54f1e3629b3345d672315b579e21d878d"
+  },
+  {
+    "id": "sima:zh-wikisource:123:arrival",
+    "source_id": "sima-qian-zh",
+    "volume": 123,
+    "page": null,
+    "para": "وصول تشانغ تشيان إلى دايوان",
+    "chapter": "史記 卷123 大宛列傳：وصول تشانغ تشيان إلى دايوان",
+    "text": "騫因與其屬亡鄉月氏，西走數十日至大宛。大宛聞漢之饒財，欲通不得，見騫，喜，問曰：「若欲何之？」騫曰：「為漢使月氏，而為匈奴所閉道。今亡，唯王使人導送我。誠得至，反漢，漢之賂遺王財物不可勝言。」",
+    "text_hash": "sha256:1e5030522ceefbcb6e79b49ff293650d599e92dbb167ce3f3efbe158ce81ac4b"
+  },
+  {
+    "id": "sima:zh-wikisource:123:anxi",
+    "source_id": "sima-qian-zh",
+    "volume": 123,
+    "page": null,
+    "para": null,
+    "chapter": "史記 卷123 大宛列傳：الأنسي (فرثيا): الأسواق والتجارة",
+    "text": "安息在大月氏西可數千里。其俗土著，耕田，田稻麥，蒲陶酒。城邑如大宛。其屬小大數百城，地方數千里，最為大國。臨媯水，有市，民商賈用車及船，行旁國或數千里。以銀為錢，錢如其王面，王死輒更錢，效王面焉。畫革旁行以為書記。其西則條枝，北有奄蔡、黎軒。",
+    "text_hash": "sha256:092563be2f02abd83f194ec51f0a3a0ed73a8fc77fc8fa5749e758175a015897"
+  },
+  {
+    "id": "sima:zh-wikisource:123:dahia",
+    "source_id": "sima-qian-zh",
+    "volume": 123,
+    "page": null,
+    "para": null,
+    "chapter": "史記 卷123 大宛列傳：باكتريا (大夏) والهند (身毒)",
+    "text": "大夏在大宛西南二千餘里媯水南。其俗土著，有城屋，與大宛同俗。無大（王）［君］長，往往城邑置小長。其兵弱，畏戰。善賈市。及大月氏西徙，攻敗之，皆臣畜大夏。大夏民多，可百餘萬。其都曰藍市城，有市販賈諸物。其東南有身毒國。",
+    "text_hash": "sha256:59b8712ed91ab769ea3d04596124c72533d0013c6a647b08abd0c33a8241f0b0"
+  },
+  {
+    "id": "sima:zh-wikisource:123:shu",
+    "source_id": "sima-qian-zh",
+    "volume": 123,
+    "page": null,
+    "para": null,
+    "chapter": "史記 卷123 大宛列傳：تشانغ تشيان: الطرق من شو إلى باكتريا",
+    "text": "騫曰：「臣在大夏時，見邛竹杖、蜀布。問曰：『安得此？』大夏國人曰：『吾賈人往市之身毒。身毒在大夏東南可數千里。其俗土著，大與大夏同，而卑溼暑熱云。其人民乘象以戰。其國臨大水焉。』以騫度之，大夏去漢萬二千里，居漢西南。今身毒國又居大夏東南數千里，有蜀物，此其去蜀不遠矣。今使大夏，從羌中，險，羌人惡之；少北，則為匈奴所得；從蜀宜徑，又無寇。」",
+    "text_hash": "sha256:280cb251554bf9575aa2536d3aa207263775a419273459360f02c65d0ff7ae53"
+  },
+  {
+    "id": "sima:zh-wikisource:123:post",
+    "source_id": "sima-qian-zh",
+    "volume": 123,
+    "page": null,
+    "para": null,
+    "chapter": "史記 卷123 大宛列傳：بعد وفاة تشانغ تشيان: الحصون والطرق إلى الغرب",
+    "text": "而漢始筑令居以西，初置酒泉郡以通西北國。因益發使抵安息、奄蔡、黎軒、條枝、身毒國。而天子好宛馬，使者相望於道。諸使外國一輩大者數百，少者百餘人，人所齎操大放博望侯時。其后益習而衰少焉。漢率一歲中使多者十餘，少者五六輩，遠者八九歲，近者數歲而反。是時漢既滅越，而蜀、西南夷皆震，請吏入朝。於是置益州、越巂、牂柯、沈黎、汶山郡，欲地接以前通大夏。乃遣使柏始昌、呂越人等歲十餘輩，出此初郡抵大夏，皆復閉昆明，為所殺，奪幣財，終莫能通至大夏焉。於是漢發三輔罪人，因巴蜀士數萬人，遣兩將軍郭昌、衛廣等往擊昆明之遮漢使者，斬首虜數萬人而去。其後遣使，昆明復為寇，竟莫能得通。而北道酒泉抵大夏，使者既多，而外國益厭漢幣，不貴其物。自博望侯開外國道以尊貴，其後從吏卒皆爭上書言外國奇怪利害，求使。天子為其絕遠，非人所樂往，聽其言，予節，募吏民毋問所從來，為具備人眾遣之，以廣其道。來還不能毋侵盜幣物，及使失指，天子為其習之，輒覆案致重罪，以激怒令贖，復求使。使端無窮，而輕犯法。其吏卒亦輒復盛推外國所有，言大者予節，言小者為副，故妄言無行之徒皆爭效之。其使皆貧人子，私縣官齎物，欲賤市以私其利外國。外國亦厭漢使人人有言輕重，度漢兵遠不能至，而禁其食物以苦漢使。漢使乏絕積怨，至相攻擊。而樓蘭、姑師小國耳，當空道，攻劫漢使王恢等尤甚。而匈奴奇兵時時遮擊使西國者。使者爭遍言外國災害，皆有城邑，兵弱易擊。於是天子以故遣從驃侯破奴將屬國騎及郡兵數萬，至匈河水，欲以擊胡，胡皆去。其明年，擊姑師，破奴與輕騎七百餘先至，虜樓蘭王，遂破姑師。因舉兵威以困烏孫、大宛之屬。還，封破奴為浞野侯。王恢數使，為樓蘭所苦，言天子，天子發兵令恢佐破奴擊破之，封恢為浩侯。於是酒泉列亭鄣至玉門矣。",
+    "text_hash": "sha256:12953f3ae2582a5ef1866f304a842055517bf5c45f1c2d817eac9f827b0e3b4e"
+  },
+  {
+    "id": "polybius:shuckburgh:34:5",
+    "source_id": "polybius",
+    "volume": 34,
+    "page": null,
+    "para": 5,
+    "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال",
+    "text": "In treating of the geography of Europe I shall say nothing of the ancient geographers, but shall confine my attention to their modern critics, Dicaearchus, Eratosthenes, who is the most recent writer on geography, and Pytheas, who has misled many readers by professing to have traversed on foot the whole of Britain, the coastline of which island, he says, is more than forty thousand stades. And again by his stories of Thule and the countries in its neighbourhood, ‘in which,” he says, “there is neither unmixed land or sea or air, but a kind of compound of all three (like the jelly-fish or Pulmo Marinus), in which earth and sea and everything else are held in suspense, and which forms a kind of connecting link to the whole, through which one can neither walk nor sail.” This substance, which he says is like the Pulmo Marinus, he saw with his own eyes, the rest he learnt by report. Such is Pytheas’s story, and he adds that, on his return thence, he traversed the whole of the coast of Europe from Gades to the Tanais. But we cannot believe that a private person, who was also a poor man, should have made such immense journeys by land and sea.",
+    "text_hash": "sha256:0564c20e509634930a02193e2f0b100b55b0060375b493eedec99e6b30d4029e"
+  },
+  {
+    "id": "thucydides:crawley1910:mytilene-corn",
+    "source_id": "thucydides",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: things that they were engaged in fetchin",
+    "text": "The Lesbians had wished to revolt even before the war, but the Lacedsemonians would not receive them ; and yet now when they did revolt, they were compelled to do so sooner than they had intended. While they were waiting until the moles for their harbours and the ships and walls that they had in building should be finished, and for the arrival of archers and corn and other, things that they were engaged in fetching from the Pontus, the Tenedians, with whom they were at enmity, and the Methymnians, and some factious persons in Mitylene itself, who were Proxent of Athens, informed the Athenians 173 BOOK — 174 THE PELOPONNESIAN WAR [3 that the Mitylenians were forcibly uniting the island under their sovereignty, and that the preparations about which B.C, (at they were so active, were all concerted with the Breotians ans send their kindred and the Lacedemonians with a view to a a fleet to revolt, and that unless they were immediately prevented, Lesbos Se \" Athens would lose Lesbos. However, the Athenians, distressed by the plague, and, by the war that had recently broken out and was now raging, thought it a serious matter to add Lesbos with its fleet and untouched resources to the list of their enemies ; and at first would not believe the charge, giving too much weight to their wish that it might not be true.",
+    "text_hash": "sha256:0ae6e92cbe24430fb09bcb467e852c5a79eafaace43839d7f7396c094dcb4361"
+  },
+  {
+    "id": "thucydides:crawley1910:sunium-corn-ships",
+    "source_id": "thucydides",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: to enable their corn-ships to round it",
+    "text": "' In the meantime thé Athenians were not idle. During this same winter, as they had determined, they contri- buted timber and pushed ‘on their ship-building, and fortified Sunium to enable their corn-ships to round it in . safety, and evacuated the fort in Laconia which they had built on their way to Sicily; while they also, for economy, cut down any other expenses that seemed unriecessary, and above all kept a careful look-out against the révolt of their confederates.",
+    "text_hash": "sha256:2fde8e1bf6948df5905fb62e6bf85184d3c6f520aab29d55db8fd32815ca00ef"
+  },
+  {
+    "id": "thucydides:crawley1910:phormio-merchantmen",
+    "source_id": "thucydides",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: the passage of the merchantmen from Phas",
+    "text": "The ensuing winter the Athenians sent twenty ships round Peloponnese, - under the command of Phormio, who stationed himself at Naupactus and kept watch against any one sailing in or out of Corinth and the Crissean gulf. Six others went to Caria and Lycia under Melesander, to collect tribute in those parts, and also to prevent the Peloponnesian privateers from taking up their station in those waters and molesting the passage of the merchantmen from Phaselis ‘ and Pheenicia and the adjoining continent. However, Melesander, going up the country into Lycia with a force of Athenians from the ships and the allies, was defeated and killed in battle, with the loss of a number of his troops.",
+    "text_hash": "sha256:2b7a192fea39fef3752d2a6a0e377ead314ea7f05e5bff45b6e86d52659d4c93"
+  },
+  {
+    "id": "thucydides:crawley1910:traders-slain",
+    "source_id": "thucydides",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: all the Athenian and allied traders whom",
+    "text": "430. Ambra- ciot at- 144 THE PELOPONNESIAN WAR {68 their ‘arrival, the Athenians, afraid that Aristeus, who had been notably the prime mover in the previous aifairs of Potidea and their Thractan possessions, might live to do them still] more mischief if he escaped, slew them all tack the same day, without giving them a trial or hearing the Amohi- locking Argos, defence which they wished to offer, and cast their bodies into a pit; thinking themselves justified in using in retaliation the same mode of warfare which the Lacedemonians had begun, ‘when they slew and cast into pits all the Athenian and allied traders whom they caught on board the merchantmen round Peloponnese. Indeed, at the outset of the war, the Lacedzmonians butchered as enemies all whom they took on the sea, whether allies of Athens or neutrals.",
+    "text_hash": "sha256:7cf377dcddbfd1c1f644c931def68a28dfcd19a355dbbd4935686a07269cec34"
+  },
+  {
+    "id": "thucydides:crawley1910:odrysian-coast",
+    "source_id": "thucydides",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: takes a merchantman four days and four n",
+    "text": "The empire of the Odrysians extended along the sea~ board from Abdera to the mouth of the Danube in the Euxine. The navigation of this coast by the shortest route takes a merchantman four days and four nights with a wind astern the whole way: by land an active man, travelling by the shortest road, can get from Abdera to the Danube in eleven days. Such was the length of its coast line.",
+    "text_hash": "sha256:fd22f4136d6ac20c5c1f38dc21a6acb148728bd28fdee84e96451934f2b6f8e3"
+  },
+  {
+    "id": "tacitus:church-brodribb1921:corn-tax-exemption",
+    "source_id": "tacitus",
+    "volume": "XIII",
+    "page": null,
+    "para": "51",
+    "chapter": "الحوليات، الكتاب XIII (تقريبي)، الفقرة 51 (تقريبي)",
+    "text": "taxes remains in force, as well as that of others bearing names invented by the collec- tors to cover their illegal exactions. In our transmarine pro- vinces the conveyance of corn was rendered less costly, and it was decided that merchant ships should not be assessed with their owner’s property, and that no tax should be paid on them. 52.",
+    "text_hash": "sha256:cfbe7ee7f80cc3a6d2585a83ea8f6189930ea50dc9620ef80fb72bed5d02ec47"
+  },
+  {
+    "id": "tacitus:church-brodribb1921:londinium-merchants",
+    "source_id": "tacitus",
+    "volume": "XIV",
+    "page": null,
+    "para": 33,
+    "chapter": "الحوليات، الكتاب 14، الفقرة 33 (ظاهرة في النص: \"33. Suetonius\")",
+    "text": "33. _ Suetonius, however, with wonderful resolution, marched amidst a hostile population to Londinium,* which, though undistinguished by the name of a colony, was much frequented by a number of merchants and trading vessels. Un- certain whether he should choose it as a seat of war, as he looked round on his scanty force of soldiers, and remembered with what a serious warning the rashness of Petilius had been punished, he resolved to save the province at the cost of a single town.",
+    "text_hash": "sha256:199515a43b608989d94e696244f2a7878b5a478ac7526b679284874c44d8aa52"
+  },
+  {
+    "id": "tacitus:church-brodribb1921:clitae-merchants",
+    "source_id": "tacitus",
+    "volume": "XII",
+    "page": null,
+    "para": "55",
+    "chapter": "الحوليات، الكتاب XII (تقريبي)، الفقرة 55 (تقريبي)",
+    "text": "55. Not long afterwards some tribes of the wild population of Cilicia, known as the Clitae, which had often been in com- motion, established a camp, under a leader Troxobor, on their rocky mountains, whence rushing down on the coast, and on the towns, they dared to do violence to the farmers and townsfolk, frequently even to the merchants and ship-owners. They besieged the city Anemurium, and routed some troopers sent from Syria to its rescue under the command of Curtius Severus ; for the rough country in the neighbourhood, suited as it is for the fighting of infantry, did not allow of cavalry operations.",
+    "text_hash": "sha256:0308c034ef2e1dc797a7dc1ac7d7e60a4268e6f288087d56990605b6d511f0d0"
+  },
+  {
+    "id": "asoka:bhandarkar1920:rock2-medical",
+    "source_id": "asoka",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)",
+    "text": "m piyena S tasa Aratiyokasa samarnta (ra)jano saveatra devanatn priyasa ne M.sa... +. Samanta vaja . ,vratra . . « priyasa - . ee oe / . 4 ae ’ ‘ ~ 7 }- ° ¢ Y ae * 7 ee A ae? 0 INSCRIPTIONS OF ASOKA. ‘G Priyadasino - yiliio dve chikichha kata(4) manusachikichha atin arg K + Piyadasisi lajine duve chikisaki kata manusachikisa- cha D'PG)yatajasinta]. ee Gh ee a J Piyadasing laji. . . . . (ch)ikist (cha)(7) - S Priyadrasisa rao duvi 2 (chiki)sa eh manuga(ekthte ae M Priya(dra)sisa rajine(G) duve 2 chikisa kata manusachi(tisa cha)’ * ‘ | Mh : . 4 “= G pasuchikichhicha (.) Osudhi",
+    "text_hash": "sha256:1ca061cae0319459e3d16685e03c0cf9c921297942bbf93fada2b78f1fa2d05a"
+  },
+  {
+    "id": "asoka:bhandarkar1920:rock2-wells-roads",
+    "source_id": "asoka",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)",
+    "text": "nasti . - _ INSCRIPTIONS OF ASOKA. Ril. BIT. 6 sarvatra harapitini cha ropspitiini cha(.7) Parnthesi kipa — cha K D J § M M sate me nia (o)napayi(t)e savratra vijitasia(me) (tee tayo ge savata halapita- cha lopapita- cha(.) Magesu Jlukhani . (va)ta (ha)lapita cha(7) lo(p)apita cha{.) Ma(g)e[su] u.panani ° -savat(a) hala(pi)t? cha lopapita cha(.) Magesu = udupanani 7 © _ > kupa — 3 cha .. tra harapita cha ro(papi)ta cha(.) Ma(geshu) ru(chha) [. . od ‘* ‘khanapita vrachha echaropapita paribhogiya pasumanusiinan(.8) lopitani udapainani-cha khanapitani patibhogiye pasumunisanatn khanapitani l(uj)khani cha lopa(p)itani patibhogaye . . . . . nara(.8) khanapitani",
+    "text_hash": "sha256:1039f22163ebd7adba6219b37d8e94e5ba03a777f758cce2e5a9e0dbf3d13a63"
+  },
+  {
+    "id": "hanshu:zh-wikisource:96b:zan",
+    "source_id": "hanshu-zh",
+    "volume": 96,
+    "page": null,
+    "para": null,
+    "chapter": "漢書 卷96下 西域傳：赞：开玉门、通大宛安息",
+    "text": "孝武之世，圖制匈奴，患者兼從西國，結黨南羌，乃表河西，列四郡，開玉門，通四域，以斷匈奴右臂，隔絕南羌、月氏。單于失援，由是遠遁，而幕南無王庭。遭值文、景玄默，養民五世，天下殷富，財力有餘，士馬強盛。故能睹犀布、玳瑁則建珠崖七郡，感枸醬、竹杖則開牂柯、越巂，聞天馬、蒲陶則通大宛、安息。",
+    "text_hash": "sha256:bef743e07715f2fb180146bff05c31a64d36ed685907574d3fae61c2235a0e5f"
+  },
+  {
+    "id": "hanshu:zh-wikisource:96b:chesh-road",
+    "source_id": "hanshu-zh",
+    "volume": 96,
+    "page": null,
+    "para": null,
+    "chapter": "漢書 卷96下 西域傳：车师后王国新道与玉门关",
+    "text": "車師後王國有新道，出五船北，通玉門關，往來差近，戊己校尉徐普欲開以省道裡半，避白龍堆之厄。",
+    "text_hash": "sha256:0e02c2240c660236ccd1e19a520baa798bf08a0791ace5d5c8d678cfcd135e01"
+  },
+  {
+    "id": "hanshu:zh-wikisource:96b:wusun-distance",
+    "source_id": "hanshu-zh",
+    "volume": 96,
+    "page": null,
+    "para": null,
+    "chapter": "漢書 卷96下 西域傳：乌孫国：里数",
+    "text": "烏孫國，大昆彌治赤谷城，去長安八千九百里。戶十二萬，口六十三萬，勝兵十八萬八千八百人。相，大祿，左右大將二人，侯三人，大將、都尉各一人，大監二人，大吏一人，捨中大吏二人，騎君一人。東至都護治所千七百二十一里，西至康居蕃內地五千里。",
+    "text_hash": "sha256:e0fdd6bc6b289fc01b6ba45807f919d5b4790fd589502d7c260a9d5ae7efcef2"
+  },
+  {
+    "id": "arthashastra:shamasastry1929:II-settlement-roads",
+    "source_id": "arthashastra",
+    "volume": 2,
+    "page": null,
+    "para": null,
+    "chapter": "كوتيليا (منسوب): مهام الملك في استيطان الأراضي",
+    "text": "He shall regard with fatherly kindness those who have passed the period of remission of taxes. He shall carry on mining operation* and manufactures, exploit timber and elephant forests, oSer facilities for cattle-breeding and commerce, construct roads for traffic both by land and water, and set up market towns (paqyapattana). Ke shell also construct reservoirs (sfitu).",
+    "text_hash": "sha256:2c33309395c6668e36c9941c0d8e94b051359f4f18171df8b1b9794f2962ed44"
+  },
+  {
+    "id": "arthashastra:shamasastry1929:II-clear-roads",
+    "source_id": "arthashastra",
+    "volume": 2,
+    "page": null,
+    "para": null,
+    "chapter": "كوتيليا (منسوب): تطهير الطرق من التعدي والسرقة",
+    "text": "free labour, and taxes (dandavislgilcar&blidhaih) : herds of cattle from thieves, tigers, poisonous creatures and cattle disease. He shall not only clear roads of traffic from the molestations of courtiers (PaUabhn), of workmen (kSrmika), of robbers, and of boundary-giiaid*, hut also keep them from being destroyed by herds of cattle. Thus the king shall not only keep in good n*i>air timber and elephant forests, buildings, and mines created in the past, but also set up new ones.",
+    "text_hash": "sha256:90d0437bbd6b807045c676e3cf1703dd925bd9a2407ca9ebc7e41ad8cf5293ce"
+  },
+  {
+    "id": "arthashastra:shamasastry1929:II-fort-roads",
+    "source_id": "arthashastra",
+    "volume": 2,
+    "page": null,
+    "para": null,
+    "chapter": "كوتيليا (منسوب): تخطيط المدينة المحصنة",
+    "text": "End of twenty-fourth chapter from the beginning.] CHAPTER IV Buildings within tme Fort Demarcation of the ground inside ibe fort shall be made first by opening three royal roads from won to east and three from south to north.",
+    "text_hash": "sha256:3cdd607451519210b101510f200d78837258a29a4460dd2d4697a4973c8c18ff"
+  },
+  {
+    "id": "arthashastra:shamasastry1929:II-toll-purchases",
+    "source_id": "arthashastra",
+    "volume": 2,
+    "page": null,
+    "para": null,
+    "chapter": "كوتيليا (منسوب): الجمارك على مبيعات الملك",
+    "text": "88 kastilya's arthaSastra Imported selt (Sgar.tnlavacam) shall pay one-sixth portion (shatfbhaga) 1 to the kings- The sale of this portion (hbagavihhiga) shall fetch the prernta of five per cent (ryijO, of eight per cent (rupilci 8 ) in casta {raj»l. The purchasers shall pay not only the toll (4ullca), bot also the compensation (vaidhanuja)’ equivalent to the loss entailed on the king’s commerce. In default of the above pay- ment, lie* shall It compelled to jay a fine of 600 punas.",
+    "text_hash": "sha256:70938aa1ed1f49b45795734a74874b9d22de694dc4bc61c9c63c9b7bea9c6c82"
+  },
+  {
+    "id": "hanshu:zh-wikisource:96a:two-routes",
+    "source_id": "hanshu-zh",
+    "volume": 96,
+    "page": null,
+    "para": null,
+    "chapter": "漢書 卷96上 西域傳：طريقان من يومن ويانغ",
+    "text": "自玉門、陽關出西域有兩道：從鄯善傍南山北，波河西行至莎車，為南道，南道西逾蔥嶺則出大月氏、安息。自車師前王廷隨北山，波河西行至疏勒，為北道，北道西逾蔥嶺則出大宛、康居、奄蔡焉。",
+    "text_hash": "sha256:8f60dd67155470a0e7a31e5c398648d04c446bc464a36773f36074b4008476c3"
+  },
+  {
+    "id": "hanshu:zh-wikisource:96a:lop-nor",
+    "source_id": "hanshu-zh",
+    "volume": 96,
+    "page": null,
+    "para": null,
+    "chapter": "漢書 卷96上 西域傳：بحيرة بوتشانغ",
+    "text": "蒲昌海，一名鹽澤者也，去玉門、陽關三百餘里，廣袤三四百里。",
+    "text_hash": "sha256:625fb658c85aef3aa2d603f5bf2dbf20e73044ed678d8bd6f82f6c354c809d1f"
+  },
+  {
+    "id": "polybius:paton1922:treaty-1-long-ships",
+    "source_id": "polybius-paton-1922",
+    "volume": "II (Loeb)",
+    "page": null,
+    "para": null,
+    "chapter": "بوليبيوس الكتاب 3: معاهدة روما وقرطاجة الأولى",
+    "text": "most intelligent men. The treaty is more or less as follows: ‘‘ There is to be friendship between the Romans and their allies and the Carthaginians and their allies on these terms: The Romans and their allies not to sail with long ships beyond the Fair Promontory unless forced by storm or by enemies: it is forbidden to anyone carried beyond it by force to buy or carry away anything beyond what is required for the repair of his ship or for sacrifice,",
+    "text_hash": "7892e271a3b7c68d60f5f54291b755009932d072a5a81532e02ce9d3300ea116"
+  },
+  {
+    "id": "polybius:paton1922:treaty-text-hard-to-read",
+    "source_id": "polybius-paton-1922",
+    "volume": "II (Loeb)",
+    "page": null,
+    "para": null,
+    "chapter": "بوليبيوس الكتاب 3: صعوبة قراءة المعاهدة",
+    "text": "BOOK III. 22.3- 23.2 much from the modern that it can only be partially made out, and that after much application, by the most intelligent men. The treaty is more or less as follows: ‘‘ There is to be friendship between the Romans and their allies and the Carthaginians and their allies on these terms: The Romans and their",
+    "text_hash": "56a3df3071be66895b638d14bd97ef440fc2a46ec60afc2b840ef4394ffef8a9"
+  },
+  {
+    "id": "polybius:paton1922:treaty-2-no-roman-expansion",
+    "source_id": "polybius-paton-1922",
+    "volume": "II (Loeb)",
+    "page": null,
+    "para": null,
+    "chapter": "بوليبيوس الكتاب 3: معاهدة لاحقة",
+    "text": "or trade, or found cities This treaty is more or less as follows: “‘ There is to be friendship on the following conditions between the Romans and their allies and the Carthaginians, Tyrians, and the people of Utica and their respective allies. The Romans shall not maraud or trade or found a city on the farther side of Fair Promontory, Mastia, and",
+    "text_hash": "ef790bd3d80af3c0801b7dea0b5582d7f1854c138430671f2d82586def464533"
+  },
+  {
+    "id": "polybius:paton-loeb4:city-virtue",
+    "source_id": "polybius-paton-1925",
+    "volume": "IV (Loeb), الكتاب IX",
+    "page": null,
+    "para": null,
+    "chapter": "بوليبيوس الكتاب IX",
+    "text": "unable to render any assistance to those in the town, as the Roman camp was so securely defended, he used up his supplies before he was well aware of it. He had been forced to come by urgent entreaties and large promises, and he was now compelled to sail off at the earnest request of the inhabitants. IIJ. Arrartrs oF Sicity The Spoils of Syracuse 10. A city is not adorned by external splendours, but by the virtue of its inhabitants. .. . The Romans, then, decided for this reason to transfer all these objects to their own city and leave nothing behind. As to whether in doing so they acted rightly and in their own interest or the reverse, there is much to be said on both sides, but the more weighty arguments are in favour of their conduct having been wrong then and still being wrong. For if they had originally relied on such things for the advancement of their country, they would evidently have been right in bringing to their home the kind of things which had contributed to their aggrandizement. But if, on the contrary, while leading the simplest of lives, very far removed",
+    "text_hash": "abf0d9b8bb3430a8c8d34380bef3dd1f9f004dc72d39d4f2bef88b8bc8589e4f"
+  },
+  {
+    "id": "polybius:paton-loeb4:hatred-of-fortune",
+    "source_id": "polybius-paton-1925",
+    "volume": "IV (Loeb), الكتاب IX",
+    "page": null,
+    "para": null,
+    "chapter": "بوليبيوس الكتاب IX",
+    "text": "dreaded by superiors in power, is surely an in- contestable error. For in no case is one who contemplates such works of art moved so much by admiration of the good fortune of those who have ‘possessed themselves of the property of others, as _by pity as well as envy for the original owners. And when opportunities become ever more frequent, and the victor collects around him all the treasures of other peoples, and these treasures may be almost said to invite those who were robbed of them to come and inspect them, things are twice as bad. For now spectators no longer pity their neighbours, but themselves, as they recall to mind their own calamities. And hence not only envy, but a sort of passionate hatred for the favourites of fortune flares up, for the memories awakened of their own disaster move them to abhor the authors of it. There were indeed perhaps good reasons for appropriating all the gold and silver: for it was impossible for them to aim at a world empire without weakening the resources of other peoples and strengthening their own. But it was possible for them to leave everything which did not contribute to such strength, together with the envy attached to its possession, in its original place, and to add to the glory of their native city by adorning it not with paintings and reliefs but-with dignity and magna- nimity. At any rate these remarks will serve to teach all those who succeed to empire, that they",
+    "text_hash": "7dcf83236aa3c6ad9176f60d22aab675cd7d0f6b5f4e8603b93daa198267e5a8"
+  },
+  {
+    "id": "polybius:paton-loeb4:trivial-error",
+    "source_id": "polybius-paton-1925",
+    "volume": "IV (Loeb), الكتاب IX",
+    "page": null,
+    "para": null,
+    "chapter": "بوليبيوس الكتاب IX",
+    "text": "TONKS mapa TobTO Td Lev advvata SoKobv7’ efvat 9duvard, Ta Se Svvard médnvev advvata. TO Sé tedevratov ovvOnudrwv Kai TapacuvOnudtwr, ere d€ Tis exdoyfs, 8? Sv Kat eB dv evepynOijcerat TO Kpley, od« dAtywpyréov. 32 BOOK IX. 12. 9-13. 9 - his choice of each and all of these will not meet with failure, but the neglect of anyone of them will ruin the whole design; so true is it that nature makes a single trivial error sufficient to cause failure in a design, but correctness in every detail barely enough for success. 13. Therefore in such enter- prises commanders must be careful about every detail. The first and foremost requisite is to keep silence, and never either from joy if some un- expected hope shall present itself, or from fear, or from familiarity with or affection for certain persons, to reveal one’s design to anyone unconcerned in it, but to communicate it only to those without whom it cannot be put in execution, and even to these not earlier than when the need of their services renders it imperative. And we must keep not only our tongues tied but even more so our minds. For many who have kept their own counsel have",
+    "text_hash": "39a708475dbf912961fc9e0f0c5359981448110340eac5a4d450f9676ab53751"
+  },
+  {
+    "id": "polybius:paton-loeb4:princes-circumstances",
+    "source_id": "polybius-paton-1925",
+    "volume": "IV (Loeb), الكتاب IX",
+    "page": null,
+    "para": null,
+    "chapter": "بوليبيوس الكتاب IX",
+    "text": "a consideration of which will show that this is so. Take Agathocles the tyrant of Sicily. Do not all historians tell us that after showing himself exceed- ingly cruel in his first enterprises and in the estab- lishment of his power, afterwards, when once he thought that he had securely attached the Sicilians to his rule, he became to all appearance the gentlest and mildest of men? Again, was not Cleomenes of Sparta at once a most excellent king and a most cruel tyrant, and then again in private intercourse most urbane and courteous? Now we can hardly suppose that dispositions so diametrically opposite existed in the same natures. The fact is rather that some princes are compelled to change with the change of circumstances and often exhibit to others a disposition which is quite the opposite of their real nature, so that so far from men’s natures being revealed by such means they are rather obscured. And a like effect is usually produced by the sugges- tions of friends not only on generals, princes, and kings but on cities. At Athens at least we find that during the government of Aristides and Pericles the state was the author of few cruel actions, but of many kind and praiseworthy ones, while under Cleon and Chares it was quite the reverse ; and again when the Lacedaemonians were supreme in Greece, all that King Cleombrotus did was done in the spirit of friendly alliance, but it was the reverse with Agesilaus ; so that the character of cities also changes",
+    "text_hash": "90285c1d3f732efa466d15d42ffd03c844234e7a7c23a759a72c4eb8fd050e04"
+  },
+  {
+    "id": "polybius:paton-loeb4:sound-reasoning",
+    "source_id": "polybius-paton-1925",
+    "volume": "IV (Loeb), الكتاب IX",
+    "page": null,
+    "para": null,
+    "chapter": "بوليبيوس الكتاب IX",
+    "text": "ginians that I have offered these remarks—I have often had occasion to bestow praise on both peoples —but rather for the sake of the leaders of both these states, and of all, no matter where, who shall be charged with the conduct of public affairs, so that by memory or actual sight of such actions as these, they be moved to emulation, and not shrink from undertaking designs, which may seem indeed to be fraught with risk and peril, but on the contrary are courageous without being hazardous, are admirable in their conception, and their excellence, whether the result be success or failure alike, will deserve to live in men’s memories for ever, always provided that all that is done is the result of sound reasoning. . - - Tarentum When the Romans were besieging Tarentum Bomilcar, the Carthaginian admiral, came with a very large force to its help, and finding himself 23 THE HISTORIES OF POLYBIUS",
+    "text_hash": "d3c52fc8d3278ddb1af4e866f65cfe60a608769b73a95ee2cb04bbfd2d44b254"
+  }
+]

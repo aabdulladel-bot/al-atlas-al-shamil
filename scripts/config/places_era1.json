@@ -1,0 +1,64 @@
+{
+  "_note": "قائمة مواقع الحقبة الأولى. pleiades_id يُطابَق مع عنوان متوقع يُفحص قبل القبول. الموقع بلا معرّف يأخذ إحداثيات تقديرية مع وسم صريح. | بحث Pleiades (لقطة 2026): لا يوجد سجل للموقع باسم Mari. الموجود \"Ishtar Temple at Mari\" (682549108) وهو معبد داخل الموقع، فلم يُستخدم، والإحداثيات تقديرية.",
+  "places": [
+    {
+      "slug": "babylon",
+      "name_ar": "بابل",
+      "name_en": "Babylon",
+      "pleiades_id": "893951",
+      "expected_title": "Babylon"
+    },
+    {
+      "slug": "nippur",
+      "name_ar": "نيبور",
+      "name_en": "Nippur",
+      "pleiades_id": "912910",
+      "expected_title": "Nippur/Nufar/‘Hippareni’"
+    },
+    {
+      "slug": "ur",
+      "name_ar": "أور",
+      "name_en": "Ur",
+      "pleiades_id": "912985",
+      "expected_title": "Ur(i)"
+    },
+    {
+      "slug": "uruk",
+      "name_ar": "أوروك",
+      "name_en": "Uruk",
+      "pleiades_id": "912986",
+      "expected_title": "Uruk/Orchoe/Erech/Orikut"
+    },
+    {
+      "slug": "sippar",
+      "name_ar": "سيبار",
+      "name_en": "Sippar",
+      "pleiades_id": "894089",
+      "expected_title": "Sippar"
+    },
+    {
+      "slug": "mari",
+      "name_ar": "ماري",
+      "name_en": "Mari",
+      "pleiades_id": null,
+      "fallback": {
+        "lon": 40.9,
+        "lat": 34.5333
+      }
+    },
+    {
+      "slug": "memphis",
+      "name_ar": "منف",
+      "name_en": "Memphis",
+      "pleiades_id": "736963",
+      "expected_title": "Memphis"
+    },
+    {
+      "slug": "thebes",
+      "name_ar": "طيبة",
+      "name_en": "Thebes (Karnak)",
+      "pleiades_id": "786050",
+      "expected_title": "Karnak"
+    }
+  ]
+}

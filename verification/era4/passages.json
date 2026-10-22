@@ -1,0 +1,202 @@
+[
+  {
+    "id": "xuanzang:beal1884:fahian-merchant-ship",
+    "source_id": "xuanzang-beal",
+    "volume": 1,
+    "page": null,
+    "para": null,
+    "chapter": "فاهيان: الإبحار من البلد الذي أقام فيه إلى سيمهالا",
+    "text": "Fa-Hian remained here for two years, writing out copies of the sacred books (siXtras) and drawing image-pictures. He then shipped himself on board a great merchant vessel. Putting to sea, they pro- 86 Fan.",
+    "text_hash": "sha256:06df39d10d89faf6f4d7e66a27c9a2187317d2a625575343f8972fa0c14f30d8"
+  },
+  {
+    "id": "xuanzang:beal1884:fahian-14-days",
+    "source_id": "xuanzang-beal",
+    "volume": 1,
+    "page": null,
+    "para": null,
+    "chapter": "فاهيان: مدة الإبحار",
+    "text": "lxxii INTRODUCTION. ceeded in a south-westerly direction, catching the first fair wind of the winter season. They sailed for fourteen days and nights, and arrived at the country of the lions (Simhala, Ceylon). Men of that country (Tamralipti) say that the distance between the two is about 700 yojanas.",
+    "text_hash": "sha256:adc1676faa05380534614af7d87ac12f3859cf722a9e37a099fdb1e2bde68e86"
+  },
+  {
+    "id": "xuanzang:beal1884:ceylon-merchants",
+    "source_id": "xuanzang-beal",
+    "volume": 1,
+    "page": null,
+    "para": null,
+    "chapter": "فاهيان: تجارة سيلان",
+    "text": "This kingdom had originally no inhabitants, hut only demons and dragons dwelt in it. Merchants of dif- ferent countries (however) came here to trade.",
+    "text_hash": "sha256:362b4f1cd30fe24692e60d2484f57c5322648589ffce17fd1f026eeaaa888a53"
+  },
+  {
+    "id": "xuanzang:beal1884:fei-han-size",
+    "source_id": "xuanzang-beal",
+    "volume": 1,
+    "page": null,
+    "para": null,
+    "chapter": "شوانزانغ: فرغانة (Fei-han)",
+    "text": "From this in a south-easterly direction some 1000 li or so, there is a country called Fei-kan. Fei-han [Ferghanah].97 This kingdom is about 4000 li in circuit. It is enclosed by mountains on every side.",
+    "text_hash": "sha256:e1b6e3e69e4e91d26848ea9eeb3d224966d865a0f84ecde593a6f71b22f22074"
+  },
+  {
+    "id": "gregory:brehaut1916:leudast-traders",
+    "source_id": "gregory-brehaut",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "غريغوريوس: ليودا��ت يتجول بين بيوت التجار في الساحة (الكتاب Sixth، تقريبي)",
+    "text": "The king and queen returned from the holy church and Leudast went to the square having no idea what was going to happen to him ; he went around the traders' houses, examined their costly wares, tested the weight of the silver articles and looked at various ornaments, saying: \"I'll buy this and this because I still have much gold and silver.\" As he was saying this the queen's servants came suddenly and wished to bind him with chains.",
+    "text_hash": "sha256:69e001f7a760f60b22b5b698cb5e5098850be25ff623056c941fa4e424098b6f"
+  },
+  {
+    "id": "gregory:brehaut1916:famine-traders",
+    "source_id": "gregory-brehaut",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "غريغوريوس: التجار ينهبون الناس في المجاعة (الكتاب Seventh، تقريبي)",
+    "text": "At that time the traders plundered the people greatly, selling scarcely a peck of grain or half measure of wine for the third of a gold piece.",
+    "text_hash": "sha256:2d89bac059b7905cda20f187ccdacb20e2e8d6385474e946d1fde0453dd1380b"
+  },
+  {
+    "id": "gregory:brehaut1916:hermit-herbs-traders",
+    "source_id": "gregory-brehaut",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "غريغوريوس: أعشاب مصرية يحضرها التجار لناسك (الكتاب Sixth، تقريبي)",
+    "text": "And during Lent he lived on roots of Egyptian herbs such as the hermits use, which were brought to him by traders.",
+    "text_hash": "sha256:af95c6679a5bf9e17dc94b24394c8a3b8c0dd447be72e6a8cf02e64a68d3a73e"
+  },
+  {
+    "id": "gregory:brehaut1916:italian-syrian-wine",
+    "source_id": "gregory-brehaut",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "غريغوريوس: الخمر الإيطالي والسوري في فخ كلوديوس (الكتاب Tenth، تقريبي)",
+    "text": "\" He sent his men one after another to get strong wine, Italian wine, of course, and Syrian wine.\" This took place in the courtyard of the church.",
+    "text_hash": "sha256:a2de7cfb945e220419e85abd61e263ff014c9bb74f38ca235c9bacbde1ef5051"
+  },
+  {
+    "id": "bede:latin-PL95:1:1-rutupiae",
+    "source_id": "bede-latin-pl95",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "الكتاب الأول، الفصل 1 (تقريبي): وصف بريطانيا والمعبر",
+    "text": "Habet a meridie Galliam Belgicam, cuius proximum litus transmeantibus aperit ciuitas, quae dicitur Rutubi portus, a gente Anglorum nunc corrupte Reptacastir uocata, interposito mari a Gessoriaco Morynorum gentis litore proximo, traiectu milium L, siue, ut quidam scripsere, stadiorum CCCCL.",
+    "text_hash": "sha256:360d8d22bc6b32aa19230f446411d2998fa35d39bfc3b6a629b26b7da0d61da4"
+  },
+  {
+    "id": "bede:latin-PL95:1:1-crossing",
+    "source_id": "bede-latin-pl95",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "الكتاب الأول، الفصل 1 (تقريبي): المسافة إلى البر الغالي",
+    "text": "Habet a meridie Galliam Belgicam, cuius proximum litus transmeantibus aperit ciuitas, quae dicitur Rutubi portus, a gente Anglorum nunc corrupte Reptacastir uocata, interposito mari a Gessoriaco Morynorum gentis litore proximo, traiectu milium L, siue, ut quidam scripsere, stadiorum CCCCL.",
+    "text_hash": "sha256:360d8d22bc6b32aa19230f446411d2998fa35d39bfc3b6a629b26b7da0d61da4"
+  },
+  {
+    "id": "bede:latin-PL95:1:2-caesar-ships",
+    "source_id": "bede-latin-pl95",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "الكتاب الأول، الفصل 2 (تقريبي): أسطول قيصر",
+    "text": "et navibus (h)onerariis atque actuariis circiter octoginta praeparatis, in Brittaniam transvehitur, ubi acerba primum pugna fatigatus, deinde adversa tempestate correptus, plurimam classis partem, et non parvum numerum militum, equitum vero pene omnem disperdidit.",
+    "text_hash": "sha256:9ebc5eca84cc702ca825dbf680e37d3ac5f33a3e42bae6f1a12a6eca4e4cbf5e"
+  },
+  {
+    "id": "bede:latin-PL95:2:1-rome-market",
+    "source_id": "bede-latin-pl95",
+    "volume": null,
+    "page": null,
+    "para": 1,
+    "chapter": "الكتاب الثاني، الفصل 1 (تقريبي): تجار في سوق روما",
+    "text": "Dicunt, quia die quadam cum, aduenientibus nuper mercatoribus, multa uenalia in forum fuissent conlata, multi ad emendum confluxissent, et ipsum Gregorium inter alios aduenisse, ac uidisse inter alia pueros uenales positos candidi corporis, ac uenusti uultus, capillorum quoque forma egregia.",
+    "text_hash": "sha256:4774916f49a678d74181cbd6f5c597dae69dabd5b3b3d1485c66284a84b60947"
+  },
+  {
+    "id": "bede:latin-PL95:4:1-quentovic",
+    "source_id": "bede-latin-pl95",
+    "volume": null,
+    "page": null,
+    "para": 1,
+    "chapter": "الكتاب الرابع، الفصل 1 (تقريبي): ميناء كوينتافيك",
+    "text": "quo cum uenisset, adsumsit Theodorum cum Ebrini licentia, et perduxit eum ad portum, cui nomen est Quentauic; ubi fatigatus infirmitate aliquantisper moratus est, et, cum conualescere coepisset, nauigauit Brittaniam.",
+    "text_hash": "sha256:0e1a1e9b2313dba02153a695bb800302ff67283abc22e983681585e70a1440cf"
+  },
+  {
+    "id": "procopius:dewing1928:silk-monks-serinda",
+    "source_id": "procopius-dewing-1928",
+    "volume": 8,
+    "page": null,
+    "para": null,
+    "chapter": "بروكوبيوس: رهبان من الهند ومن سيرِندا (الكتاب الثامن، الفصل 17 تقريباً)",
+    "text": "1-7 entertained the desire that the Romans should no longer purchase their silk from the Persians, came before the emperor and promised so to settle the silk question that the Romans would no longer purchase this article from their enemies, the Persians, nor indeed from any other nation; for they had, they said, spent a long time in the country situated north of.the numerous nations of India—a country called Serinda—and there they had learned accurately by what means it was possible for_silk to be pro- duced in the land of the Romans.",
+    "text_hash": "sha256:0d4d389c4320250955543c6e6b19bf77f1bc5f35fbc3e42417ac4f402ef7ca44"
+  },
+  {
+    "id": "procopius:dewing1928:silkworm-eggs",
+    "source_id": "procopius-dewing-1928",
+    "volume": 8,
+    "page": null,
+    "para": null,
+    "chapter": "بروكوبيوس: بيض دودة القز (الكتاب الثامن، الفصل 17 تقريباً)",
+    "text": "Whereupon the emperor made very diligent enquiries and asked them many questions to see whether their state- ments were true, and the monks explained to him that certain worms are the manufacturers of silk, nature being their teacher and compelling them to work continually.",
+    "text_hash": "sha256:233fa86cb8bd49bf37ab27006440beec04fed3f7e47e21cf42edb193f25fd7eb"
+  },
+  {
+    "id": "procopius:dewing1928:romans-stop-persian-silk",
+    "source_id": "procopius-dewing-1928",
+    "volume": 8,
+    "page": null,
+    "para": null,
+    "chapter": "بروكوبيوس: وقف شراء الحرير من الفرس (الكتاب الثامن، الفصل 17 تقريباً)",
+    "text": "1-7 entertained the desire that the Romans should no longer purchase their silk from the Persians, came before the emperor and promised so to settle the silk question that the Romans would no longer purchase this article from their enemies, the Persians, nor indeed from any other nation; for they had, they said, spent a long time in the country situated north of.the numerous nations of India—a country called Serinda—and there they had learned accurately by what means it was possible for_silk to be pro- duced in the land of the Romans.",
+    "text_hash": "sha256:0d4d389c4320250955543c6e6b19bf77f1bc5f35fbc3e42417ac4f402ef7ca44"
+  },
+  {
+    "id": "procopius:dewing1928:silk-in-roman-land",
+    "source_id": "procopius-dewing-1928",
+    "volume": 8,
+    "page": null,
+    "para": null,
+    "chapter": "بروكوبيوس: إنتاج الحرير في أرض الرومان (الكتاب الثامن، الفصل 17 تقريباً)",
+    "text": "7-14 they made possible from that time forth the pro- duction of silk in the land of the Romans.+ At that time then matters stood thus between the Romans and the Persians, both as touching the war and in regard to silk.",
+    "text_hash": "sha256:1e61b9c2180f61faefc86671c090a1ed606d4dcf423678713c75b52d3a354553"
+  },
+  {
+    "id": "procopius:dewing1928:offspring-of-worms",
+    "source_id": "procopius-dewing-1928",
+    "volume": 8,
+    "page": null,
+    "para": null,
+    "chapter": "بروكوبيوس: نقل بيض الدودة (الكتاب الثامن، الفصل 17 تقريباً)",
+    "text": "Now the offspring of these worms, they said, con- sisted of innumerable eggs from each one.",
+    "text_hash": "sha256:59ad2ec24a51f080034c99c41ef46cb6955173b9f8ffec44ca4c05c1481e4fb6"
+  },
+  {
+    "id": "tabari:turath9783:v9p13-escort",
+    "source_id": "tabari-turath-9783",
+    "volume": 9,
+    "page": 13,
+    "para": null,
+    "chapter": "الطبري (تراث 9783، ط المعارف): حراسة القوافل من أردبيل، سنة 220هـ",
+    "text": "والقوافل تخرج من أردبيل معها من يبذرقها حتى تصل إلى حصن النهر، ثم يبذرقها صاحب حصن النهر إلى الهيثم الغنوي، ويخرج هيثم فيمن جاء من ناحيته حتى يسلمه إلى أصحاب حصن النهر، ويبذرق من جاء من أردبيل حتى يصير الهيثم وصاحب حصن النهر في منتصف الطريق، فيسلم صاحب حصن النهر من معه إلى هيثم، ويسلم هيثم من معه إلى صاحب حصن النهر، فيسير هذا مع هؤلاء. وهذا مع هؤلاء وإن سبق أحدهما صاحبه إلى الموضع لم يجزه حتى يجيء الآخر،",
+    "text_hash": "sha256:bf2171e22e815790ae0a9e124f80296ba7014f109858b3876660de56a28f2d9b"
+  },
+  {
+    "id": "tabari:turath9783:v9p577-bridge",
+    "source_id": "tabari-turath-9783",
+    "volume": 9,
+    "page": 577,
+    "para": null,
+    "chapter": "الطبري (تراث 9783، ط المعارف): قنطرة الأهواز وانقطاع الميرة",
+    "text": "فوجد الجند قد كانوا قطعوا قنطرة قديمة أعجمية كانت بين سوق الأهواز ورام هرمز يقال لها قنطرة أربك، فامتنع التجار ومن يحمل الميرة من تطرقه لقطع تلك القنطرة فركب أبو أحمد إليها وهي على فرسخين من سوق الأهواز، فجمع من كان بقي في العسكر من السودان، وأمرهم بنقل الحجارة والصخر لإصلاح هذه القنطرة وبذل لهم الأموال الرغيبة، فلم يرم حتى أصلحت في يومه ذلك، وردت إلى ما كانت عليه فسلكها الناس، ووافت القوافل بالمير، فحيي أهل العسكر، وحسنت أحوالهم.",
+    "text_hash": "sha256:5169873b2f9bd78cd1325ed10efad62498e863afff9ea16d7f03b7c250db5c7b"
+  }
+]

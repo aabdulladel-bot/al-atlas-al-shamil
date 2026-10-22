@@ -1,0 +1,134 @@
+{
+  "type": "FeatureCollection",
+  "_meta": {
+    "era": 0,
+    "status": "pleiades-verified",
+    "source": "Pleiades (pleiades.stoa.org)، ملف places-latest، ترخيص CC BY 3.0، يتطلب الإسناد",
+    "raw_sha256": "aa521b916561a45560249f0bf1b9e5cd53696c5646101906b2ce431d4dd6af82",
+    "matched": "6 من 6",
+    "generated_by": "scripts/build_places.mjs",
+    "note": "الإحداثيات الممثّلة في Pleiades نقاط تمثيلية لا مواقع مساحية."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "tyre",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.2018,
+          33.2693
+        ]
+      },
+      "properties": {
+        "name_ar": "صور",
+        "name_en": "Tyre",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "678437",
+        "pleiades_title": "Tyrus/Col. Septimia Severa",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "carthage",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.3231,
+          36.8531
+        ]
+      },
+      "properties": {
+        "name_ar": "قرطاج",
+        "name_en": "Carthage",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "314921",
+        "pleiades_title": "Carthago",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rome",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4913,
+          41.89
+        ]
+      },
+      "properties": {
+        "name_ar": "روما",
+        "name_en": "Rome",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "423025",
+        "pleiades_title": "Roma",
+        "pleiades_location_precision": "related"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "syracuse",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.2833,
+          37.0701
+        ]
+      },
+      "properties": {
+        "name_ar": "سرقوسة",
+        "name_en": "Syracuse",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "462503",
+        "pleiades_title": "Syracusae/Syrakousai",
+        "pleiades_location_precision": "related"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "damascus",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.3091,
+          33.5116
+        ]
+      },
+      "properties": {
+        "name_ar": "دمشق",
+        "name_en": "Damascus",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "678106",
+        "pleiades_title": "Damascus",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bursa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0638,
+          40.1829
+        ]
+      },
+      "properties": {
+        "name_ar": "بورصة",
+        "name_en": "Bursa",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "511384",
+        "pleiades_title": "Prusa",
+        "pleiades_location_precision": "precise"
+      }
+    }
+  ]
+}

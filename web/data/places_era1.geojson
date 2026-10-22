@@ -1,0 +1,173 @@
+{
+  "type": "FeatureCollection",
+  "_meta": {
+    "era": 1,
+    "status": "partly-verified",
+    "source": "Pleiades (pleiades.stoa.org)، ملف places-latest، ترخيص CC BY 3.0، يتطلب الإسناد",
+    "raw_sha256": "aa521b916561a45560249f0bf1b9e5cd53696c5646101906b2ce431d4dd6af82",
+    "matched": "7 من 8",
+    "generated_by": "scripts/build_places.mjs",
+    "note": "الإحداثيات الممثّلة في Pleiades نقاط تمثيلية لا مواقع مساحية."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "babylon",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.425,
+          32.5373
+        ]
+      },
+      "properties": {
+        "name_ar": "بابل",
+        "name_en": "Babylon",
+        "era": 1,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "893951",
+        "pleiades_title": "Babylon",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nippur",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.2306,
+          32.1268
+        ]
+      },
+      "properties": {
+        "name_ar": "نيبور",
+        "name_en": "Nippur",
+        "era": 1,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "912910",
+        "pleiades_title": "Nippur/Nufar/‘Hippareni’",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ur",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.1054,
+          30.9613
+        ]
+      },
+      "properties": {
+        "name_ar": "أور",
+        "name_en": "Ur",
+        "era": 1,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "912985",
+        "pleiades_title": "Ur(i)",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "uruk",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.6391,
+          31.3234
+        ]
+      },
+      "properties": {
+        "name_ar": "أوروك",
+        "name_en": "Uruk",
+        "era": 1,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "912986",
+        "pleiades_title": "Uruk/Orchoe/Erech/Orikut",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sippar",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.2542,
+          33.0597
+        ]
+      },
+      "properties": {
+        "name_ar": "سيبار",
+        "name_en": "Sippar",
+        "era": 1,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "894089",
+        "pleiades_title": "Sippar",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mari",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9,
+          34.5333
+        ]
+      },
+      "properties": {
+        "name_ar": "ماري",
+        "name_en": "Mari",
+        "era": 1,
+        "coord_status": "approximate",
+        "pleiades_id": null,
+        "pleiades_title": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "memphis",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2551,
+          29.8495
+        ]
+      },
+      "properties": {
+        "name_ar": "منف",
+        "name_en": "Memphis",
+        "era": 1,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "736963",
+        "pleiades_title": "Memphis",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "thebes",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6581,
+          25.7182
+        ]
+      },
+      "properties": {
+        "name_ar": "طيبة",
+        "name_en": "Thebes (Karnak)",
+        "era": 1,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "786050",
+        "pleiades_title": "Karnak",
+        "pleiades_location_precision": "precise"
+      }
+    }
+  ]
+}

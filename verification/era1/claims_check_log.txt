@@ -1,0 +1,11 @@
+ok        cl_000000101 draft
+ok        cl_000000102 draft
+ok        cl_000000103 draft
+ok        cl_000000104 draft
+ok        cl_000000105 draft
+ok        cl_000000106 draft
+ok        cl_000000107 draft
+ok        cl_000000108 draft
+ok        cl_000000109 draft
+ok        cl_000000110 escalated
+quote_match ok: 10/10

@@ -1,0 +1,125 @@
+{
+  "_note": "روابط الملفات المؤكدة هنا. المصادر بلا رابط لها ملاحظة سببها.",
+  "sources": [
+    {
+      "id": "pleiades-places",
+      "file": "pleiades-places-latest.csv.gz",
+      "url": "https://atlantides.org/downloads/pleiades/dumps/pleiades-places-latest.csv.gz",
+      "license": "CC BY 3.0 (بحسب سجل Zenodo للإصدار 4.1؛ يُتحقق من ملف الداتا نفسه)",
+      "tier": "A",
+      "landing": "https://pleiades.stoa.org/downloads",
+      "status": "ok",
+      "sha256": "aa521b916561a45560249f0bf1b9e5cd53696c5646101906b2ce431d4dd6af82",
+      "bytes": 6823937,
+      "retrieved_at": "2026-10-20T22:43:57.434Z"
+    },
+    {
+      "id": "pleiades-names",
+      "file": "pleiades-names-latest.csv.gz",
+      "url": "https://atlantides.org/downloads/pleiades/dumps/pleiades-names-latest.csv.gz",
+      "license": "CC BY 3.0 (يُتحقق كما أعلاه)",
+      "tier": "A",
+      "landing": "https://pleiades.stoa.org/downloads",
+      "status": "ok",
+      "sha256": "045ab366b3414563d7f0391c21fe8c9781280ca15fc460689ed72f1b1d39891f",
+      "bytes": 3829110,
+      "retrieved_at": "2026-10-20T22:43:58.121Z"
+    },
+    {
+      "id": "pleiades-locations",
+      "file": "pleiades-locations-latest.csv.gz",
+      "url": "https://atlantides.org/downloads/pleiades/dumps/pleiades-locations-latest.csv.gz",
+      "license": "CC BY 3.0 (يُتحقق كما أعلاه)",
+      "tier": "A",
+      "landing": "https://pleiades.stoa.org/downloads",
+      "status": "ok",
+      "sha256": "6c5ab9e2c60959b1130e1bb279e9c07b10722f508ee033b241b24f08b88876a3",
+      "bytes": 39385908,
+      "retrieved_at": "2026-10-20T22:43:58.881Z"
+    },
+    {
+      "id": "hyde-3.3",
+      "file": "hyde-3.3.zip",
+      "url": null,
+      "license": "CC BY 4.0 (بحسب صفحة الجامعة)",
+      "tier": "A",
+      "landing": "https://public.yoda.uu.nl/geo/UU01/67UHB4.html",
+      "note": "محجوب بتحدٍّ ضد الروبوتات (Anubis) على مستودع الجامعة. يلزم تنزيل يدوي أو مسار آخر.",
+      "status": "skipped: لا يوجد رابط ملف مؤكد بعد (محجوب بتحدٍّ ضد الروبوتات (Anubis) على مستودع الجامعة. يلزم تنزيل يدوي أو مسار آخر.)"
+    },
+    {
+      "id": "cdli-text",
+      "file": "cdli-text.csv",
+      "url": null,
+      "license": "CC BY 4.0 (الصفحة الرسمية؛ الصور لها شروطها)",
+      "tier": "A",
+      "landing": "https://cdli.earth/",
+      "note": "بيانات CDLI على GitHub عبر Git LFS، وآخر تحديث أغسطس 2022، وأسماء الملفات غير مؤكدة (cdli_catalogue_*.csv غير موجودة على الفرع الرئيسي).",
+      "status": "skipped: لا يوجد رابط ملف مؤكد بعد (بيانات CDLI على GitHub (cdli-gh)، وGitHub محجوب للجلسة.)"
+    },
+    {
+      "id": "seshat-equinox",
+      "file": "Equinox_Data-v.1.zip",
+      "url": "https://zenodo.org/api/records/6642230/files/seshatdb/Equinox_Data-v.1.zip/content",
+      "license": "CC BY-NC-SA بحسب README الأرشيف ومستودع Seshat. الاستخدام غير تجاري مسموح بإسناد وبنفس الترخيص للمشتق. ملف LICENSE المرفق (CC0) وسجل Zenodo (cc-by) متعارضان، والاعتماد على الأشد. المالك: الأطلس غير تجاري.",
+      "tier": "B",
+      "landing": "https://zenodo.org/records/6642229",
+      "status": "ok",
+      "sha256": "bf38dd49dcec9881e4f1ba9651e11bd60fd4400450b301e5b579553386729e14",
+      "bytes": 3591457,
+      "retrieved_at": "2026-10-20T22:44:02.944Z",
+      "permission_basis": "README الأرشيف المرفق (تاريخ الجلب في retrieved_at)",
+      "attribution": "This research employed data from the Seshat Databank (seshatdatabank.info) under Creative Commons Attribution Non-Commercial (CC By-NC SA) licensing.",
+      "restrictions": [
+        "غير تجاري فقط",
+        "إسناد إلزامي بالنص أعلاه",
+        "أي مشتق يُنشر بـ CC BY-NC-SA"
+      ]
+    },
+    {
+      "id": "gapminder-total-population",
+      "file": "data/raw/gapminder/ddf--datapoints--total_population_with_projections--by--geo--time.csv",
+      "url": "https://raw.githubusercontent.com/open-numbers/ddf--gapminder--systema_globalis/master/countries-etc-datapoints/ddf--datapoints--total_population_with_projections--by--geo--time.csv",
+      "license": "CC BY 4.0 (بحسب README المستودع: Gapminder created this dataset and provides it under CC BY 4.0)",
+      "tier": "B",
+      "landing": "https://github.com/open-numbers/ddf--gapminder--systema_globalis",
+      "attribution": "Population data from Gapminder (Systema Globalis, CC BY 4.0). https://www.gapminder.org",
+      "note": "حزمة DDF لا تنسب كل سلسلة إلى مصدرها الأصلي، فالمصادر التاريخية غير موثقة في الملف. السنوات بعد 2023 إسقاطات وليست بيانات مرصودة. ملف واحد: إجمالي السكان حسب الدولة/المنطقة والسنة.",
+      "status": "ok",
+      "sha256": "18a043e8b3c2563212988e2672f94421ea4e842ccca4602e10de329300f9831b",
+      "bytes": 372471,
+      "retrieved_at": "2026-10-22T10:14:27.860Z",
+      "permission_basis": "README المستودع (CC BY 4.0)"
+    },
+    {
+      "id": "gapminder-country-entities",
+      "file": "data/raw/gapminder/ddf--entities--geo--country.csv",
+      "url": "https://raw.githubusercontent.com/open-numbers/ddf--gapminder--systema_globalis/master/ddf--entities--geo--country.csv",
+      "license": "CC BY 4.0 (بحسب README المستودع نفسه)",
+      "tier": "B",
+      "landing": "https://github.com/open-numbers/ddf--gapminder--systema_globalis",
+      "attribution": "Country entities from Gapminder (Systema Globalis, CC BY 4.0).",
+      "note": "أسماء الدول وإحداثيات مراكزها، تُستخدم لوضع نقاط الطبقة الديموغرافية.",
+      "status": "ok",
+      "sha256": "eb9428941f8a2d7b6ce10feada30d723f8b5284fcb47e566128851a1637a4e35",
+      "bytes": 52934,
+      "retrieved_at": "2026-10-22T10:22:09.808Z",
+      "permission_basis": "README المستودع (CC BY 4.0)"
+    },
+    {
+      "id": "owid-hyde-regional-population",
+      "file": "data/raw/owid/hyde-region-population.csv",
+      "url": "https://github.com/owid/owid-datasets/tree/master/datasets/Global Population by Region with projections - HYDE (2016) & UN (2017)",
+      "license": "CC BY 4.0 (OWID للبيانات المنشورة؛ HYDE: CC BY 4.0 بحسب فهرس DataHub)",
+      "tier": "B",
+      "landing": "https://datahub.io/climate-and-environment/hyde-history-database-of-the-global-environment",
+      "attribution": "Population data from HYDE (Klein Goldewijk et al., 2016), via Our World in Data (CC BY 4.0).",
+      "note": "يُستخدم فقط عمود HYDE وقيم حتى 1940؛ قيم UN بعد 1940 مستبعدة. مصدر HYDE الأصلي (Utrecht) لم يُفحص لأنه محجوب.",
+      "status": "ok",
+      "sha256": "09f7708ec4ad52881977ad4cf6165b233f0c02f1685fa232b9e104e9cb950050",
+      "bytes": 44882,
+      "retrieved_at": "2026-10-22T16:09:51.600Z",
+      "permission_basis": "فهرس DataHub (CC BY 4.0)"
+    }
+  ]
+}

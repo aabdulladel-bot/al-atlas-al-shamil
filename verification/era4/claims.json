@@ -1,0 +1,684 @@
+[
+  {
+    "id": "cl_000000345",
+    "passage_id": "xuanzang:beal1884:fahian-merchant-ship",
+    "quote": "shipped himself on board a great merchant vessel",
+    "statement": "يذكر فاهيان أنه ركب سفينة تجارية كبيرة بعد أن أقام سنتين في البلد الذي كان فيه",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "فاهيان (ينقله بيل في مقدمة ترجمة شوانزانغ، 1884)",
+    "isnad": null,
+    "hedge": "الرواية عن فاهيان منقولة في مقدمة بيل، وليست من نص فاهيان الكامل",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000346",
+    "passage_id": "xuanzang:beal1884:fahian-14-days",
+    "quote": "They sailed for fourteen days and nights",
+    "statement": "يذكر فاهيان أن الإبحار إلى سيمهالا (سيلان) استغرق أربعة عشر يوماً وليلة بريح الشتاء المواتية",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "فاهيان (ينقله بيل في مقدمة ترجمة شوانزانغ، 1884)",
+    "isnad": null,
+    "hedge": "المسافة المذكورة 700 يوجانا تقدير، والمدة هي الموثوق منها",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000347",
+    "passage_id": "xuanzang:beal1884:ceylon-merchants",
+    "quote": "came here to trade",
+    "statement": "يذكر فاهيان أن تجار بلدان شتى كانوا يأتون إلى مملكة سيلان للتجارة، فيعرضون السلع بأسعار موسومة",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "فاهيان (ينقله بيل في مقدمة ترجمة شوانزانغ، 1884)",
+    "isnad": null,
+    "hedge": "الرواية تتضمن عناصر أسطورية (الشياطين تعرض السلع)، فالتجارة هي المعتمد منها",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000348",
+    "passage_id": "xuanzang:beal1884:fei-han-size",
+    "quote": "This kingdom is about 4000 li in circuit",
+    "statement": "يصف شوانزانغ فرغانة (Fei-han) بأن محيطها نحو 4000 لي، محاطة بالجبال من كل جانب وتربتها خصبة",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "شوانزانغ (ترجمة بيل، 1884)",
+    "isnad": null,
+    "hedge": "اللي وحدة صينية، والرقم تقريبي كما ترجمه بيل",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000349",
+    "passage_id": "gregory:brehaut1916:leudast-traders",
+    "quote": "examined their costly wares",
+    "statement": "يصف غريغوريوس ليودست يتجول بين بيوت التجار في الساحة، يفحص بضائعهم الثمينة، ويختبر وزن الأدوات الفضية",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+    "isnad": null,
+    "hedge": null,
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000350",
+    "passage_id": "gregory:brehaut1916:famine-traders",
+    "quote": "the traders plundered the people greatly",
+    "statement": "يذكر غريغوريوس أن التجار نهبوا الناس نهباً شديداً أثناء المجاعة",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+    "isnad": null,
+    "hedge": "الفقرة نفسها تذكر أسعار الحبوب والخمر، وهي خارج الاقتباس المعتمد",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000351",
+    "passage_id": "gregory:brehaut1916:hermit-herbs-traders",
+    "quote": "which were brought to him by traders",
+    "statement": "يذكر غريغوريوس أن الأعشاب المصرية التي كان يأكلها ناسك في الصوم كان التجار يحملونها إليه",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+    "isnad": null,
+    "hedge": "تفصيل في سيرة ناسك، وليس وصفاً تجارياً مباشراً",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000352",
+    "passage_id": "gregory:brehaut1916:italian-syrian-wine",
+    "quote": "Italian wine, of course, and Syrian wine",
+    "statement": "يذكر غريغوريوس أن أتباع كلوديوس أحضروا خمراً إيطالياً وسورياً ليسكروا إيبرولف في الكنيسة",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+    "isnad": null,
+    "hedge": "مكيدة سياسية في الرواية، وليست وصفاً لتجارة الخمر",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000353",
+    "passage_id": "bede:latin-PL95:1:1-rutupiae",
+    "quote": "Rutubi portus",
+    "statement": "يذكر بيدا أن المرفأ المقابل لبريطانيا على الساحل الغالي كان يسمى روتوبي (Rutubi portus)، ويسميه الإنجليز ريبتاكاستير",
+    "type": "description",
+    "layer": "later_historian",
+    "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+    "isnad": null,
+    "hedge": "الاسم الإنجليزي لدى بيدا Reptacastir، ويُعرف اليوم بموقع Richborough",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000354",
+    "passage_id": "bede:latin-PL95:1:1-crossing",
+    "quote": "interposito mari a Gessoriaco Morynorum gentis litore proximo, traiectu milium L",
+    "statement": "يذكر بيدا أن البحر بين غيسوريا (ساحل المورينيين) وبريطانيا عرضه خمسون ميلاً، وقال بعض الكتّاب إنه 450 ستاديون",
+    "type": "quantity",
+    "layer": "later_historian",
+    "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+    "isnad": null,
+    "hedge": "الأرقام كما وردت عند بيدا، والوحدات رومانية (ميل) وإغريقية (ستاديون)",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000355",
+    "passage_id": "bede:latin-PL95:1:2-caesar-ships",
+    "quote": "navibus (h)onerariis atque actuariis circiter octoginta",
+    "statement": "يروي بيدا أن قيصر جهّز نحو ثمانين سفينة نقل وسفن خفيفة للعبور إلى بريطانيا",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+    "isnad": null,
+    "hedge": "رواية بيدا عن قيصر، ينقلها من كتاب آخر، وليست تقريراً مباشراً من بيدا",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000356",
+    "passage_id": "bede:latin-PL95:2:1-rome-market",
+    "quote": "aduenientibus nuper mercatoribus, multa uenalia in forum fuissent conlata",
+    "statement": "يروي بيدا أن تجاراً قدموا حديثاً إلى روما وعرضوا بضائع كثيرة للبيع في السوق",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+    "isnad": null,
+    "hedge": "الحكاية تقليدية (traditio maiorum) نقلها بيدا، ولم يشهدها بنفسه",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "روما"
+      ],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000357",
+    "passage_id": "bede:latin-PL95:4:1-quentovic",
+    "quote": "perduxit eum ad portum, cui nomen est Quentauic",
+    "statement": "يذكر بيدا أن رايدفريدوس نقل ثيودور إلى ميناء كوينتافيك (Quentovic)، ومنه أبحر إلى بريطانيا",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+    "isnad": null,
+    "hedge": null,
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000358",
+    "passage_id": "procopius:dewing1928:silk-monks-serinda",
+    "quote": "a country called Serinda",
+    "statement": "يروي بروكوبيوس أن رهباناً قدموا من الهند، وقالوا إنهم أقاموا زمناً طويلاً في بلد يسمى سيرِندا شمال الهند، وتعلّموا هناك كيف يُنتج الحرير",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+    "isnad": null,
+    "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000359",
+    "passage_id": "procopius:dewing1928:silkworm-eggs",
+    "quote": "certain worms are the manufacturers of silk",
+    "statement": "يذكر بروكوبيوس أن الرهبان أخبروا الإمبراطور بأن دوداً معيناً هو الذي ينتج الحرير",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+    "isnad": null,
+    "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000360",
+    "passage_id": "procopius:dewing1928:romans-stop-persian-silk",
+    "quote": "purchase their silk from the Persians",
+    "statement": "يذكر بروكوبيوس أن يوستينيانوس أراد أن يتوقف الرومان عن شراء الحرير من الفرس",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+    "isnad": null,
+    "hedge": "رغبة الإمبراطور كما يصفها بروكوبيوس، وليست سياسة مثبتة من مصدر آخر",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000361",
+    "passage_id": "procopius:dewing1928:silk-in-roman-land",
+    "quote": "silk in the land of the Romans",
+    "statement": "يذكر بروكوبيوس أن الرهبان وعدوا بأن إنتاج الحرير يصبح ممكناً داخل أرض الرومان",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+    "isnad": null,
+    "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000362",
+    "passage_id": "procopius:dewing1928:offspring-of-worms",
+    "quote": "offspring of these worms",
+    "statement": "يذكر بروكوبيوس أن نقل بيض هذه الدودة، لا الدودة الحية، إلى الأرض الرومانية ممكن وسهل",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+    "isnad": null,
+    "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000366",
+    "passage_id": "tabari:turath9783:v9p13-escort",
+    "quote": "والقوافل تخرج من أردبيل معها من يبذرقها",
+    "statement": "يصف الطبري أن القوافل تخرج من أردبيل بمن يحرسها، ويتناقل الحراس القافلة بين مواضع الحراسة حتى تصل إلى وجهتها، ويكون التسليم عند منتصف الطريق",
+    "type": "description",
+    "layer": "later_historian",
+    "attributed_to": "الطبري (تاريخ الرسل والملوك، ط المعارف عبر تراث، برخصة شفهية من المنصة؛ غير موثقة كتابة)",
+    "isnad": null,
+    "hedge": "ذكر أحداث سنة 220هـ عند الطبري، وصف لنظام الحراسة في الطريق بين أردبيل وعسكر الأفشين",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000367",
+    "passage_id": "tabari:turath9783:v9p577-bridge",
+    "quote": "قطعوا قنطرة قديمة أعجمية",
+    "statement": "يذكر الطبري أن الجند قطعوا قنطرة قديمة بين سوق الأهواز ورام هرمز، فامتنع التجار وحاملو الميرة عن المرور، فتأخرت الميرة عن العسكر ثلاثة أيام حتى أُصلحت القنطرة",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "الطبري (تاريخ الرسل والملوك، ط المعارف عبر تراث، برخصة شفهية من المنصة؛ غير موثقة كتابة)",
+    "isnad": null,
+    "hedge": "رواية الطبري عن أحداث الزنج أواخر القرن الثالث الهجري، والتاريخ الدقيق للحادثة لم يُتحقق منه بمصدر آخر",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  }
+]

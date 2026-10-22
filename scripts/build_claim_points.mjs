@@ -1,0 +1,47 @@
+// يربط الادعاءات الموثّقة (مطابقة النص) بالأماكن المعرّفة في config/claim_places.json.
+// ادعاء يُربط بمكان إذا ذكر أحد مرادفاته في mentions.places. الأماكن غير المعرّفة تُسجَّل ولا تُعرض.
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/claim_places.json"), "utf8"));
+const places = JSON.parse(fs.readFileSync(path.join(ROOT, "web/data/claim_places.geojson"), "utf8")).features;
+const bySlug = new Map(places.map((f) => [f.id, f]));
+const aliasToSlug = new Map();
+for (const p of cfg.places) for (const a of p.aliases) aliasToSlug.set(a, p.slug);
+
+const linked = new Map(); // slug -> claims
+const unlinked = new Map();
+for (const era of [1, 2, 3, 4, 5, 6]) {
+  const claims = JSON.parse(fs.readFileSync(path.join(ROOT, "verification", `era${era}`, "claims.json"), "utf8"));
+  for (const c of claims) {
+    if (c.checks.quote_match !== true) continue;
+    for (const name of (c.mentions && c.mentions.places) || []) {
+      const slug = aliasToSlug.get(name);
+      if (!slug) { unlinked.set(name, (unlinked.get(name) || 0) + 1); continue; }
+      if (!linked.has(slug)) linked.set(slug, []);
+      const list = linked.get(slug);
+      if (!list.some((x) => x.id === c.id)) list.push({ id: c.id, era, statement: c.statement, quote: c.quote, attributed_to: c.attributed_to, hedge: c.hedge });
+    }
+  }
+}
+
+const features = [];
+for (const [slug, claims] of linked) {
+  const place = bySlug.get(slug);
+  features.push({
+    type: "Feature",
+    id: slug,
+    geometry: place.geometry,
+    properties: { slug, name_ar: place.properties.name_ar, name_en: place.properties.name_en, coord_status: place.properties.coord_status, count: claims.length, claims: JSON.stringify(claims) },
+  });
+}
+const out = {
+  _meta: { note: "ادعاءات موثّقة مرتبطة بأماكن، مطابقة للنص وقيد المراجعة", linked_places: features.length, unlinked_mentions: Object.fromEntries(unlinked) },
+  type: "FeatureCollection",
+  features,
+};
+fs.writeFileSync(path.join(ROOT, "web/data/claim_points.geojson"), JSON.stringify(out) + "\n");
+console.log("أماكن مرتبطة:", features.map((f) => `${f.properties.name_ar}(${f.properties.count})`).join("، "));
+console.log("أسماء غير مرتبطة:", JSON.stringify(Object.fromEntries(unlinked)));

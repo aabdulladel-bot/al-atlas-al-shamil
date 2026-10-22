@@ -1,0 +1,879 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlas-sunan.local/schemas/atlas.schema.json",
+  "title": "أطلس السُّنن: نموذج البيانات",
+  "description": "كل كيان يُخزَّن في سلسلة الطبقات. الادعاء هو الوحدة الأساسية، وكل ما عداه مبني عليه.",
+  "$defs": {
+    "isoDateYear": {
+      "description": "سنة ميلادية صحيحة. السالب للقبل الميلاد. لا تُحوَّل التواريخ الهجرية هنا.",
+      "type": "integer",
+      "minimum": -4000,
+      "maximum": 2100
+    },
+    "wikidataId": {
+      "type": "string",
+      "pattern": "^Q[0-9]+$"
+    },
+    "Source": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "author_id",
+        "composed",
+        "language",
+        "civilization",
+        "scope",
+        "wave",
+        "license_tier"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "author_id": {
+          "$ref": "#/$defs/wikidataId"
+        },
+        "composed": {
+          "type": "object",
+          "required": [
+            "from",
+            "to",
+            "approx"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "from": {
+              "$ref": "#/$defs/isoDateYear"
+            },
+            "to": {
+              "$ref": "#/$defs/isoDateYear"
+            },
+            "approx": {
+              "type": "boolean"
+            }
+          }
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}$"
+        },
+        "civilization": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "enum": [
+            "world",
+            "region",
+            "period",
+            "specialized",
+            "primary"
+          ]
+        },
+        "wave": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "edition": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "editor": {
+              "type": "string"
+            },
+            "years": {
+              "type": "string"
+            }
+          }
+        },
+        "license_tier": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ],
+          "description": "A: في الملك العام. B: مرخّص أو محمي بإذن موثّق. C: مرجع للإحالة فقط، لا يدخل الاستخراج."
+        },
+        "license_note": {
+          "type": "string"
+        },
+        "author_proximity_note": {
+          "type": "string"
+        }
+      }
+    },
+    "Passage": {
+      "type": "object",
+      "required": [
+        "id",
+        "source_id",
+        "text",
+        "text_hash"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+:[a-z0-9_-]+:[0-9]+(:[0-9]+)?(:p[0-9]+)?$"
+        },
+        "source_id": {
+          "type": "string"
+        },
+        "volume": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "para": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chapter": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text_hash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "Claim": {
+      "type": "object",
+      "required": [
+        "id",
+        "passage_id",
+        "quote",
+        "statement",
+        "type",
+        "layer",
+        "status",
+        "version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^cl_[0-9]+$"
+        },
+        "passage_id": {
+          "type": "string"
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "event",
+            "state",
+            "quantity",
+            "cause",
+            "description",
+            "judgment",
+            "reported_belief",
+            "rule"
+          ]
+        },
+        "layer": {
+          "type": "string",
+          "enum": [
+            "scripture",
+            "tradition",
+            "contemporary_witness",
+            "later_historian",
+            "material",
+            "modern_scholarship"
+          ]
+        },
+        "attributed_to": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isnad": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hedge": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "author_preference": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "preferred",
+            "rejected",
+            "neutral",
+            null
+          ]
+        },
+        "mentions": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "places": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "persons": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "dates": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "links": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "places": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/wikidataId"
+              }
+            },
+            "persons": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/wikidataId"
+              }
+            },
+            "time": {
+              "type": "object",
+              "required": [
+                "from",
+                "to"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "from": {
+                  "$ref": "#/$defs/isoDateYear"
+                },
+                "to": {
+                  "$ref": "#/$defs/isoDateYear"
+                }
+              }
+            }
+          }
+        },
+        "checks": {
+          "type": "object",
+          "description": "أربعة حقول مستقلة: المطابقة الحرفية، والمراجعة الدلالية، ومقارنة الاستخراجين، والمراجع.",
+          "additionalProperties": false,
+          "required": [
+            "quote_match",
+            "meaning",
+            "pass_agreement"
+          ],
+          "properties": {
+            "quote_match": {
+              "type": "boolean",
+              "description": "هل الاقتباس موجود حرفياً في المقطع بعد توحيد الهمزات والتشكيل"
+            },
+            "meaning": {
+              "type": "object",
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "not_reviewed",
+                    "self_reviewed",
+                    "independently_reviewed"
+                  ],
+                  "description": "self_reviewed مراجعة من كاتب الشرح نفسه، وindependently_reviewed مراجعة من شخص آخر"
+                },
+                "reviewer": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "pass_agreement": {
+              "type": "object",
+              "description": "قاعدة content-first-v1: الاتفاق يُحسب على المحتوى أولاً، والتصنيف يُسجَّل منفصلاً.",
+              "required": [
+                "status",
+                "classification_agree",
+                "runs",
+                "rule"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "not_run",
+                    "agree",
+                    "disagree"
+                  ],
+                  "description": "agree إذا وُجدت القضية نفسها عند قارئ مستقل"
+                },
+                "classification_agree": {
+                  "type": "boolean",
+                  "description": "هل اتفق النوع والطبقة (تُراجع ولا تُسقط الادعاء)"
+                },
+                "runs": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "rule": {
+                  "type": "string",
+                  "enum": [
+                    "content-first-v1"
+                  ]
+                }
+              }
+            },
+            "verified_by": {
+              "type": "string"
+            }
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "verified",
+            "escalated",
+            "rejected"
+          ]
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "Entity": {
+      "type": "object",
+      "required": [
+        "id",
+        "kind",
+        "names"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/wikidataId"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "place",
+            "person",
+            "polity",
+            "group",
+            "text",
+            "concept"
+          ]
+        },
+        "names": {
+          "type": "object",
+          "properties": {
+            "ar": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "en": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "geo": {
+          "type": "object",
+          "required": [
+            "lat",
+            "lon",
+            "precision"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "lat": {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            "lon": {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            "precision": {
+              "type": "string",
+              "enum": [
+                "exact",
+                "city",
+                "region",
+                "approx"
+              ]
+            }
+          }
+        },
+        "valid": {
+          "type": "object",
+          "properties": {
+            "from": {
+              "$ref": "#/$defs/isoDateYear"
+            },
+            "to": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/isoDateYear"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "external_ids": {
+          "type": "object",
+          "properties": {
+            "wikidata": {
+              "$ref": "#/$defs/wikidataId"
+            },
+            "pleiades": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Event": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "time",
+        "lenses",
+        "claims"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^ev_[a-z0-9_]+$"
+        },
+        "title": {
+          "type": "object",
+          "required": [
+            "ar"
+          ],
+          "properties": {
+            "ar": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "time": {
+          "type": "object",
+          "required": [
+            "from",
+            "to",
+            "certainty"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "from": {
+              "$ref": "#/$defs/isoDateYear"
+            },
+            "to": {
+              "$ref": "#/$defs/isoDateYear"
+            },
+            "certainty": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            }
+          }
+        },
+        "places": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/wikidataId"
+          }
+        },
+        "actors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/wikidataId"
+          }
+        },
+        "lenses": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": [
+              "history",
+              "geography",
+              "culture",
+              "demography"
+            ]
+          }
+        },
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^cl_[0-9]+$"
+          },
+          "minItems": 1
+        },
+        "sensitivity": {
+          "type": "string",
+          "enum": [
+            "normal",
+            "sensitive"
+          ]
+        }
+      }
+    },
+    "Dossier": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "consensus",
+        "disputes",
+        "context",
+        "balance_check"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "type": "string"
+        },
+        "consensus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "text",
+              "claims"
+            ],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "claims": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        },
+        "disputes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "point",
+              "positions"
+            ],
+            "properties": {
+              "point": {
+                "type": "string"
+              },
+              "positions": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "view",
+                    "claims",
+                    "strength",
+                    "why"
+                  ],
+                  "properties": {
+                    "view": {
+                      "type": "string"
+                    },
+                    "claims": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1
+                    },
+                    "strength": {
+                      "type": "string",
+                      "enum": [
+                        "راجح",
+                        "مرجوح",
+                        "مختلف فيه",
+                        "ضعيف"
+                      ]
+                    },
+                    "why": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "economy": {
+              "type": "string"
+            },
+            "politics": {
+              "type": "string"
+            },
+            "religion": {
+              "type": "string"
+            },
+            "geography": {
+              "type": "string"
+            },
+            "climate": {
+              "type": "string"
+            }
+          }
+        },
+        "balance_check": {
+          "type": "object",
+          "required": [
+            "passed",
+            "flags"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "flags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "editor": {
+              "type": "string"
+            },
+            "approved": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      }
+    },
+    "Sunna": {
+      "type": "object",
+      "required": [
+        "id",
+        "statement",
+        "origin",
+        "evidence",
+        "limits",
+        "civilizations_covered"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^sn_[a-z0-9_]+$"
+        },
+        "statement": {
+          "type": "object",
+          "required": [
+            "ar"
+          ],
+          "properties": {
+            "ar": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "origin": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "kind",
+              "ref"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "scripture",
+                  "classical",
+                  "modern_theory"
+                ]
+              },
+              "ref": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3
+        },
+        "counter_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limits": {
+          "type": "string",
+          "minLength": 1
+        },
+        "civilizations_covered": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2
+        }
+      }
+    },
+    "LevelText": {
+      "type": "object",
+      "required": [
+        "target",
+        "level",
+        "lang",
+        "sentences"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "type": "string"
+        },
+        "level": {
+          "type": "string",
+          "enum": [
+            "child",
+            "teen",
+            "deep"
+          ]
+        },
+        "lang": {
+          "type": "string",
+          "pattern": "^[a-z]{2}$"
+        },
+        "sentences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "text",
+              "claims",
+              "attribution_check"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "claims": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "attribution_check": {
+                "type": "string",
+                "enum": [
+                  "supported",
+                  "adds_information",
+                  "contradicts",
+                  "overstates"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

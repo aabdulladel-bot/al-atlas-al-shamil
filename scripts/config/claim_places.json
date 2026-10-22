@@ -1,0 +1,12 @@
+{
+  "_note": "أماكن تُربط بها الادعاءات الموثّقة على الخريطة. المعرّفات من Pleiades، ويُطابَق كل عنوان قبل البناء. المرادفات تطابق الأسماء كما وردت في الادعاءات.",
+  "era": 0,
+  "places": [
+    { "slug": "tyre", "name_ar": "صور", "name_en": "Tyre", "aliases": ["صور"], "pleiades_id": "678437", "expected_title": "Tyrus/Col. Septimia Severa" },
+    { "slug": "carthage", "name_ar": "قرطاج", "name_en": "Carthage", "aliases": ["قرطاجة", "قرطاج"], "pleiades_id": "314921", "expected_title": "Carthago" },
+    { "slug": "rome", "name_ar": "روما", "name_en": "Rome", "aliases": ["روما"], "pleiades_id": "423025", "expected_title": "Roma" },
+    { "slug": "syracuse", "name_ar": "سرقوسة", "name_en": "Syracuse", "aliases": ["سرقوسة"], "pleiades_id": "462503", "expected_title": "Syracusae/Syrakousai" },
+    { "slug": "damascus", "name_ar": "دمشق", "name_en": "Damascus", "aliases": ["دمشق"], "pleiades_id": "678106", "expected_title": "Damascus" },
+    { "slug": "bursa", "name_ar": "بورصة", "name_en": "Bursa", "aliases": ["بورصة"], "pleiades_id": "511384", "expected_title": "Prusa" }
+  ]
+}

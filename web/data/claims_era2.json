@@ -1,0 +1,239 @@
+{
+  "_meta": {
+    "era": 2,
+    "count": 23,
+    "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
+  },
+  "claims": [
+    {
+      "id": "cl_000000201",
+      "statement": "يلقّب داريوس نفسه ملك الولايات (التابعة)",
+      "quote": "the King of (the dependent) provinces",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "description",
+      "hedge": null,
+      "chapter": "العمود الأول: ألقاب داريوس"
+    },
+    {
+      "id": "cl_000000202",
+      "statement": "يعدّ داريوس فارس وسوسيانا وبابل وآشور وعربية ومصر من البلدان التي صارت في يده",
+      "quote": "Persia, Susiana, Babylonia, Assyria, Arabia, Egypt",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "description",
+      "hedge": null,
+      "chapter": "العمود الأول: البلدان التي صارت في يده"
+    },
+    {
+      "id": "cl_000000203",
+      "statement": "يذكر داريوس أن مجموع البلدان واحد وعشرون بلداً، والقراءة في الطبعة 21 أو 23",
+      "quote": "the total amount being twenty-one (twenty-three ?) countries",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "quantity",
+      "hedge": "القراءة في الطبعة مشكوك فيها (21 أو 23)",
+      "chapter": "العمود الأول: البلدان التي صارت في يده"
+    },
+    {
+      "id": "cl_000000204",
+      "statement": "ثارت على داريوس بلدان عدة وهو في بابل، منها فارس وسوسيانا وميديا وآشور وأرمينيا وبارثيا",
+      "quote": "Persis, Susiana, Media, Assyria, Armenia, Parthia, Margiana, Sattagydia, and Sacia",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "event",
+      "hedge": null,
+      "chapter": "العمود الثاني: البلدان التي ثارت"
+    },
+    {
+      "id": "cl_000000205",
+      "statement": "يسمّي إسارحدون هذه الوثيقة «لوائح الطرق» التي أصدرها لبعل ومدن الساحل",
+      "quote": "These are the road regulations",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "rule",
+      "hedge": "علامة استفهام في الطبعة على \"road regulations\"، والنص مضطرب في أجزاء كثيرة",
+      "chapter": "إسارحدون: لوائح الطرق لبعل ملك صور"
+    },
+    {
+      "id": "cl_000000206",
+      "statement": "تشمل اللوائح جبيل (بيبلوس) بين مدن الساحل وجبل لبنان",
+      "quote": "Gebail (Gubla, Byblos)",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "description",
+      "hedge": "النص مضطرب، والأسماء بين أقواس في الطبعة",
+      "chapter": "إسارحدون: لوائح الطرق لبعل ملك صور"
+    },
+    {
+      "id": "cl_000000207",
+      "statement": "يذكر إسارحدون أن مجموع الملوك الذين استدعاهم من سوريا والساحل والجزر 22 ملكاً",
+      "quote": "a grand total of 22 kings of the Hittite-land (Syria), the seacoast and the (islands) in the midst of the sea",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "quantity",
+      "hedge": null,
+      "chapter": "إسارحدون: ترميم قصر نينوى"
+    },
+    {
+      "id": "cl_000000208",
+      "statement": "أعطى إسارحدون الملوك أوامره وعوارض كبيرة",
+      "quote": "I gave them their orders and great beams",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "event",
+      "hedge": "عبارة great beams وغرضها غير مذكور صراحة في الفقرة",
+      "chapter": "إسارحدون: ترميم قصر نينوى"
+    },
+    {
+      "id": "cl_000000209",
+      "statement": "جاء حزائيل ملك العرب إلى نينوى بهدايا ثمينة",
+      "quote": "Hazael, king of the Arabs, came to Nineveh, my royal city, with his rich (heavy) gifts",
+      "attributed_to": null,
+      "layer": "material",
+      "type": "event",
+      "hedge": "الهدايا وصفت بـ rich (heavy) وهو وصف مترجم",
+      "chapter": "إسارحدون: تسوية المسألة العربية"
+    },
+    {
+      "id": "cl_000000210",
+      "statement": "يذكر ملخص الإصحاح أن أسطول سليمان يجلب الذهب من أوفير",
+      "quote": "His nauie fetcheth golde from Ophir",
+      "attributed_to": null,
+      "layer": "tradition",
+      "type": "event",
+      "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ ومسار أسطول سليمان إلى أوفير موضع خلاف تاريخي",
+      "chapter": "ملخص إصحاح الملوك الأول 9 (طبعة 1611، تحريري؛ يظهر في المسح تحت CHAP. X)"
+    },
+    {
+      "id": "cl_000000211",
+      "statement": "يذكر الملخص أن حيرام يزوّد سليمان بالأشجار (الخشب) لبناء الهيكل",
+      "quote": "furnifheth him with trees",
+      "attributed_to": null,
+      "layer": "tradition",
+      "type": "event",
+      "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ ومسار أسطول سليمان إلى أوفير موضع خلاف تاريخي",
+      "chapter": "ملخص إصحاح الملوك الأول 5 (طبعة 1611، تحريري)"
+    },
+    {
+      "id": "cl_000000212",
+      "statement": "يصف هيرودوت الطريق المؤدي إلى الملك بأن على طوله محطات ملكية ونُزُلاً جيداً",
+      "quote": "Royal stations exist along its whole length, and excellent caravanserais",
+      "attributed_to": null,
+      "layer": "later_historian",
+      "type": "description",
+      "hedge": null,
+      "chapter": "الكتاب الخامس 52: الطريق المؤدي إلى الملك"
+    },
+    {
+      "id": "cl_000000213",
+      "statement": "يذكر هيرودوت أن الطريق يمر بأرض مأهولة وخالٍ من الخطر",
+      "quote": "and is free from danger",
+      "attributed_to": null,
+      "layer": "later_historian",
+      "type": "description",
+      "hedge": null,
+      "chapter": "الكتاب الخامس 52: الطريق المؤدي إلى الملك"
+    },
+    {
+      "id": "cl_000000214",
+      "statement": "يذكر هيرودوت أن نخاو أرسل سفناً بحارتها من الفينيقيين للإبحار حول أفريقيا",
+      "quote": "sent to sea a number of ships manned by Phoenicians",
+      "attributed_to": null,
+      "layer": "later_historian",
+      "type": "event",
+      "hedge": "الرواية في هيرودوت، وقد لا تكون موثقة بالكامل",
+      "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو"
+    },
+    {
+      "id": "cl_000000215",
+      "statement": "يذكر هيرودوت أن الرحلة استغرقت ثلاث سنوات، وأن الفينيقيين عادوا بعد أن اجتازوا أعمدة هرقل في السنة الثالثة",
+      "quote": "it was not till the third year that they doubled the Pillars of Hercules",
+      "attributed_to": null,
+      "layer": "later_historian",
+      "type": "event",
+      "hedge": "رواية هيرودوت، وقد لا تكون موثقة بالكامل",
+      "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو"
+    },
+    {
+      "id": "cl_000000216",
+      "statement": "يذكر الملاحون أنهم رأوا الشمس عن يمينهم في دورانهم حول ليبيا، وهيرودوت نفسه لا يصدّق ذلك",
+      "quote": "in sailing round Libya they had the sun upon their right hand",
+      "attributed_to": null,
+      "layer": "later_historian",
+      "type": "event",
+      "hedge": "هيرودوت يصرّح بعدم تصديقه: \"I for my part do not believe them\"",
+      "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو"
+    },
+    {
+      "id": "cl_000000217",
+      "statement": "يصف ملخص الإصحاح 27 صور بأنها مصدر وافر للإمداد والتجارة",
+      "quote": "The rich fupplyofTyrus",
+      "attributed_to": null,
+      "layer": "scripture",
+      "type": "description",
+      "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ حروف OCR مشوّهة في العنوان",
+      "chapter": "ملخص حزقيال 27 (طبعة 1611، تحريري)"
+    },
+    {
+      "id": "cl_000000218",
+      "statement": "يصف الملخص سقوط صور بأنه عظيم لا يُستدرك",
+      "quote": "The great and vnrecouerable fall thereof",
+      "attributed_to": null,
+      "layer": "scripture",
+      "type": "description",
+      "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ حروف OCR مشوّهة في العنوان",
+      "chapter": "ملخص حزقيال 27 (طبعة 1611، تحريري)"
+    },
+    {
+      "id": "cl_000000386",
+      "statement": "يذكر الكتاب أن سفن سليمان جلبت من أوفير ذهباً قدره أربعمائة وعشرون وزنة",
+      "quote": "fetched from thence gold, four hundred and twenty talents",
+      "attributed_to": "سفر الملوك الأول 9:28 (KJV 1611، طبعة 1872)",
+      "layer": "tradition",
+      "type": "quantity",
+      "hedge": "نص ديني وليس سجلاً تجارياً؛ موقع أوفير محل خلاف، وقد ذكر المحرر الخلاف في الشرح نفسه",
+      "chapter": "الملوك الأول 9: أوفير"
+    },
+    {
+      "id": "cl_000000387",
+      "statement": "يعد حيرام سليمان بتزويده بخشب الأرز والسرو لبناء الهيكل",
+      "quote": "I will do all thy desire concerning timber of cedar",
+      "attributed_to": "سفر الملوك الأول 5:8 (KJV 1611، طبعة 1872)",
+      "layer": "tradition",
+      "type": "event",
+      "hedge": "نص ديني وليس وثيقة تعاقد؛ الشحنة تُنقل بالبحر في الآية 5:9 كما يصفها النص نفسه",
+      "chapter": "الملوك الأول 5: حيرام وخشب لبنان"
+    },
+    {
+      "id": "cl_000000397",
+      "statement": "يذكر النص أن ترشيش كانت تاجراً لصور لكثرة كل أنواع الثروة",
+      "quote": "Tarshish was thy merchant",
+      "attributed_to": "حزقيال 27 (KJV 1611، طبعة 1872 مع الشرح)",
+      "layer": "tradition",
+      "type": "event",
+      "hedge": "نص نبوي وشعري يصف مدينة صور؛ كثرة الثروة وصف أدبي، وليس إحصاءً تجارياً",
+      "chapter": "حزقيال 27:12 (تجارة ترشيش)"
+    },
+    {
+      "id": "cl_000000398",
+      "statement": "يذكر النص أن يهوذا وأرض إسرائيل كانا يبيعان في سوق صور القمح والعسل والزيت والبلسم",
+      "quote": "in thy market wheat of Minnith",
+      "attributed_to": "حزقيال 27 (KJV 1611، طبعة 1872 مع الشرح)",
+      "layer": "tradition",
+      "type": "event",
+      "hedge": "نص ديني نبوي؛ قائمة السلع تدل على التبادل لا على الكميات، والأرقام غير موجودة",
+      "chapter": "حزقيال 27:17 (القمح والزيت والعسل)"
+    },
+    {
+      "id": "cl_000000399",
+      "statement": "يذكر النص أن دمشق كانت تاجراً لصور في خيرات كثيرة، بخمر حلبون وصوف أبيض",
+      "quote": "Damascus was thy merchant",
+      "attributed_to": "حزقيال 27 (KJV 1611، طبعة 1872 مع الشرح)",
+      "layer": "tradition",
+      "type": "event",
+      "hedge": "نص نبوي؛ حلبون وصف لنوع من الخمر في النص نفسه، والعلاقة التجارية مُقدَّمة كشهادة على ثراء صور",
+      "chapter": "حزقيال 27:18 (تجارة دمشق)"
+    }
+  ]
+}

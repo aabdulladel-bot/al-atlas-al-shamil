@@ -1,0 +1,396 @@
+[
+  {
+    "id": "cl_000000370",
+    "passage_id": "garcilaso:rycaut1688:highway-security",
+    "quote": "nor have any Merchants and Dealers ever been affaulted on the highway",
+    "statement": "يذكر غارسيلاسو أنه لم يُسجَّل اعتداء على التجار في الطريق منذ الفتح عام 1531 حتى نحو 1610",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+    "isnad": null,
+    "hedge": "شهادة غارسيلاسو وهو يكتب في 1610 عن الحكم الإسباني، وفيها تحيّز الدعاية وليست إحصاءً للجرائم",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000371",
+    "passage_id": "garcilaso:rycaut1688:highway-security",
+    "quote": "over Defarts and Mountains",
+    "statement": "يذكر غارسيلاسو أن التجار كانوا ينقلون الذهب والفضة عبر الصحاري والجبال لمسافة ثلاثمئة إلى أربعمئة فرسخ",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+    "isnad": null,
+    "hedge": "الفرسخ وحدة قياس تقليدية، والمسافة تقدير الكاتب، والكلمة الأصلية في OCR: Defarts (Deserts)",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000372",
+    "passage_id": "diaz:maudslay1908:tlatelolco-market",
+    "quote": "Each kind of merchandise was kept by itself",
+    "statement": "يصف برناردينو دياز سوق تلاتيلولكو الكبير بكثرة الناس وكمية البضائع، وأن كل صنف من البضائع كان موضوعاً على حدة",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "برناردينو دياز دل كاستييو (ترجمة Maudslay، 1908–1916)",
+    "isnad": null,
+    "hedge": "شهادة عيان من حملة كورتيس (1519)، ووصف النظام السوقي لا إحصاء للكميات",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000373",
+    "passage_id": "diaz:maudslay1908:tlatelolco-market",
+    "quote": "cacahuateros who sold cacao",
+    "statement": "يذكر دياز أن باعة الكاكاو كانوا يبيعونه في السوق، وأن ذكرهم جاء بعد باعة الأقمشة القطنية والخيوط",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "برناردينو دياز دل كاستييو (ترجمة Maudslay، 1908–1916)",
+    "isnad": null,
+    "hedge": "المصطلح cacahuateros كما ورد عنده، والنص عن السوق عامة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000374",
+    "passage_id": "gama:ravenstein1898:merchants-ship",
+    "quote": "They are merchants, and have transactions with white Moors",
+    "statement": "تصف اليومية سكان المدينة (كاليكوت حسب سياق اليومية) بأنهم تجار، ويتعاملون مع المور البيض، أي التجار المسلمين",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
+    "isnad": null,
+    "hedge": "المدينة مذكورة في السياق السابق، والنص لا يذكر اسمها في هذه الجملة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000375",
+    "passage_id": "gama:ravenstein1898:merchants-ship",
+    "quote": "four of whose vessels were at the time in port, laden with gold, silver, cloves, pepper, ginger",
+    "statement": "تذكر اليومية أن أربع سفن للمور البيض كانت راسية في الميناء محمّلة بالذهب والفضة والقرنفل والفلفل والزنجبيل",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
+    "isnad": null,
+    "hedge": "مشاهدة مباشرة من طاقم السفينة وفق اليومية",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000376",
+    "passage_id": "gama:ravenstein1898:spices-hearsay",
+    "quote": "precious stones, pearls and spices were so plentiful",
+    "statement": "يذكر الطاقم أنهم سمعوا أن الأحجار الكريمة واللؤلؤ والتوابل وفيرة هناك إلى حد جمعها بالسلال، عن بحار كان أسيراً سابقاً عند المور",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
+    "isnad": null,
+    "hedge": "رواية مسموعة (hearsay) وليست مشاهدة مباشرة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000388",
+    "passage_id": "ricci:trigault1615:provinces-cities",
+    "quote": "ter has alix funt tredecim",
+    "statement": "يذكر النص أن إلى جانب الإقليمين الكبيرين (نانجينغ وبكين) توجد ثلاثة عشر إقليماً أخرى، فيكون المجموع خمسة عشر",
+    "type": "quantity",
+    "layer": "contemporary_witness",
+    "attributed_to": "ماتيو ريتشي عبر Trigault، De Christiana expeditione (1615، اللاتينية)",
+    "isnad": null,
+    "hedge": "يجمع Trigault يوميات ريتشي، والنص اللاتيني من OCR فيه كلمات مشوهة؛ الإحصاء تقدير من الشاهد نفسه",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "الصين",
+        "نانجينغ",
+        "بكين"
+      ],
+      "persons": [
+        "ماتيو ريتشي"
+      ],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000389",
+    "passage_id": "ricci:trigault1615:provinces-cities",
+    "quote": "ln his regionibus 247",
+    "statement": "يذكر النص أن في تلك الأقاليم 247 مدينة كبيرة، وفق ما نقله Trigault عن ريتشي",
+    "type": "quantity",
+    "layer": "contemporary_witness",
+    "attributed_to": "ماتيو ريتشي عبر Trigault، De Christiana expeditione (1615، اللاتينية)",
+    "isnad": null,
+    "hedge": "تعريف \"المدينة الكبيرة\" وفق مقياس المؤلف غير محدد في النص، والرقم من شاهد لا من إحصاء رسمي",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "الصين",
+        "نانجينغ",
+        "بكين"
+      ],
+      "persons": [
+        "ماتيو ريتشي"
+      ],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000390",
+    "passage_id": "evliya:ottoman1896-v2:bursa-suq-nine-thousand",
+    "quote": "طقوز بيك دکاندر",
+    "statement": "يذكر أوليا جلبي أن سوق السلطان في بورصة فيه تسعة آلاف دكان",
+    "type": "quantity",
+    "layer": "contemporary_witness",
+    "attributed_to": "أوليا جلبي، سياحتنامه (طبعة إسطنبول 1896، المجلد الثاني، OCR عثماني)",
+    "isnad": null,
+    "hedge": "رقم من رحالة في القرن السابع عشر، والمبالغة شائعة في وصف الأسواق؛ لا يوجد تحقق مستقل من العدد",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "بورصة"
+      ],
+      "persons": [
+        "أوليا جلبي"
+      ],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000391",
+    "passage_id": "evliya:ottoman1896-v2:bursa-bezestan-three-hundred",
+    "quote": "اوحبوز دولابدر",
+    "statement": "يذكر أوليا جلبي أن البزستان العظيم في بورصة فيه ثلاثمئة دولاب (دكان)، وفي كل منها تاجر غني",
+    "type": "quantity",
+    "layer": "contemporary_witness",
+    "attributed_to": "أوليا جلبي، سياحتنامه (طبعة إسطنبول 1896، المجلد الثاني، OCR عثماني)",
+    "isnad": null,
+    "hedge": "الرقم من الرحالة نفسه، ويتفق مع ترجمة Hammer الإنجليزية (three hundred shops)؛ الاتفاق لا يُثبت صحة العدد",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "بورصة"
+      ],
+      "persons": [
+        "أوليا جلبي"
+      ],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  }
+]

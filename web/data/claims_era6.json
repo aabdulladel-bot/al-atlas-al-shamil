@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "era": 6,
+    "count": 11,
+    "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
+  },
+  "claims": [
+    {
+      "id": "cl_000000370",
+      "statement": "يذكر غارسيلاسو أنه لم يُسجَّل اعتداء على التجار في الطريق منذ الفتح عام 1531 حتى نحو 1610",
+      "quote": "nor have any Merchants and Dealers ever been affaulted on the highway",
+      "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "شهادة غارسيلاسو وهو يكتب في 1610 عن الحكم الإسباني، وفيها تحيّز الدعاية وليست إحصاءً للجرائم",
+      "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): أمن الطريق والتجار بعد الفتح الإسباني، الكتاب IL"
+    },
+    {
+      "id": "cl_000000371",
+      "statement": "يذكر غارسيلاسو أن التجار كانوا ينقلون الذهب والفضة عبر الصحاري والجبال لمسافة ثلاثمئة إلى أربعمئة فرسخ",
+      "quote": "over Defarts and Mountains",
+      "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "الفرسخ وحدة قياس تقليدية، والمسافة تقدير الكاتب، والكلمة الأصلية في OCR: Defarts (Deserts)",
+      "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): أمن الطريق والتجار بعد الفتح الإسباني، الكتاب IL"
+    },
+    {
+      "id": "cl_000000372",
+      "statement": "يصف برناردينو دياز سوق تلاتيلولكو الكبير بكثرة الناس وكمية البضائع، وأن كل صنف من البضائع كان موضوعاً على حدة",
+      "quote": "Each kind of merchandise was kept by itself",
+      "attributed_to": "برناردينو دياز دل كاستييو (ترجمة Maudslay، 1908–1916)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "شهادة عيان من حملة كورتيس (1519)، ووصف النظام السوقي لا إحصاء للكميات",
+      "chapter": "برناردينو دياز (ترجمة Maudslay، 1908): سوق تلاتيلولكو الكبير"
+    },
+    {
+      "id": "cl_000000373",
+      "statement": "يذكر دياز أن باعة الكاكاو كانوا يبيعونه في السوق، وأن ذكرهم جاء بعد باعة الأقمشة القطنية والخيوط",
+      "quote": "cacahuateros who sold cacao",
+      "attributed_to": "برناردينو دياز دل كاستييو (ترجمة Maudslay، 1908–1916)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "المصطلح cacahuateros كما ورد عنده، والنص عن السوق عامة",
+      "chapter": "برناردينو دياز (ترجمة Maudslay، 1908): سوق تلاتيلولكو الكبير"
+    },
+    {
+      "id": "cl_000000374",
+      "statement": "تصف اليومية سكان المدينة (كاليكوت حسب سياق اليومية) بأنهم تجار، ويتعاملون مع المور البيض، أي التجار المسلمين",
+      "quote": "They are merchants, and have transactions with white Moors",
+      "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "المدينة مذكورة في السياق السابق، والنص لا يذكر اسمها في هذه الجملة",
+      "chapter": "فاسكو دا غاما (يومية الرحلة، ترجمة Hakluyt/Ravenstein 1898): تجار الساحل وسفنهم"
+    },
+    {
+      "id": "cl_000000375",
+      "statement": "تذكر اليومية أن أربع سفن للمور البيض كانت راسية في الميناء محمّلة بالذهب والفضة والقرنفل والفلفل والزنجبيل",
+      "quote": "four of whose vessels were at the time in port, laden with gold, silver, cloves, pepper, ginger",
+      "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
+      "layer": "contemporary_witness",
+      "type": "event",
+      "hedge": "مشاهدة مباشرة من طاقم السفينة وفق اليومية",
+      "chapter": "فاسكو دا غاما (يومية الرحلة، ترجمة Hakluyt/Ravenstein 1898): تجار الساحل وسفنهم"
+    },
+    {
+      "id": "cl_000000376",
+      "statement": "يذكر الطاقم أنهم سمعوا أن الأحجار الكريمة واللؤلؤ والتوابل وفيرة هناك إلى حد جمعها بالسلال، عن بحار كان أسيراً سابقاً عند المور",
+      "quote": "precious stones, pearls and spices were so plentiful",
+      "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
+      "layer": "contemporary_witness",
+      "type": "event",
+      "hedge": "رواية مسموعة (hearsay) وليست مشاهدة مباشرة",
+      "chapter": "فاسكو دا غاما (يومية الرحلة، ترجمة Hakluyt/Ravenstein 1898): وفرة التوابل عند البحار"
+    },
+    {
+      "id": "cl_000000388",
+      "statement": "يذكر النص أن إلى جانب الإقليمين الكبيرين (نانجينغ وبكين) توجد ثلاثة عشر إقليماً أخرى، فيكون المجموع خمسة عشر",
+      "quote": "ter has alix funt tredecim",
+      "attributed_to": "ماتيو ريتشي عبر Trigault، De Christiana expeditione (1615، اللاتينية)",
+      "layer": "contemporary_witness",
+      "type": "quantity",
+      "hedge": "يجمع Trigault يوميات ريتشي، والنص اللاتيني من OCR فيه كلمات مشوهة؛ الإحصاء تقدير من الشاهد نفسه",
+      "chapter": "ريتشي: أقاليم الصين والمدن"
+    },
+    {
+      "id": "cl_000000389",
+      "statement": "يذكر النص أن في تلك الأقاليم 247 مدينة كبيرة، وفق ما نقله Trigault عن ريتشي",
+      "quote": "ln his regionibus 247",
+      "attributed_to": "ماتيو ريتشي عبر Trigault، De Christiana expeditione (1615، اللاتينية)",
+      "layer": "contemporary_witness",
+      "type": "quantity",
+      "hedge": "تعريف \"المدينة الكبيرة\" وفق مقياس المؤلف غير محدد في النص، والرقم من شاهد لا من إحصاء رسمي",
+      "chapter": "ريتشي: أقاليم الصين والمدن"
+    },
+    {
+      "id": "cl_000000390",
+      "statement": "يذكر أوليا جلبي أن سوق السلطان في بورصة فيه تسعة آلاف دكان",
+      "quote": "طقوز بيك دکاندر",
+      "attributed_to": "أوليا جلبي، سياحتنامه (طبعة إسطنبول 1896، المجلد الثاني، OCR عثماني)",
+      "layer": "contemporary_witness",
+      "type": "quantity",
+      "hedge": "رقم من رحالة في القرن السابع عشر، والمبالغة شائعة في وصف الأسواق؛ لا يوجد تحقق مستقل من العدد",
+      "chapter": "أوليا جلبي: سوق بورصة"
+    },
+    {
+      "id": "cl_000000391",
+      "statement": "يذكر أوليا جلبي أن البزستان العظيم في بورصة فيه ثلاثمئة دولاب (دكان)، وفي كل منها تاجر غني",
+      "quote": "اوحبوز دولابدر",
+      "attributed_to": "أوليا جلبي، سياحتنامه (طبعة إسطنبول 1896، المجلد الثاني، OCR عثماني)",
+      "layer": "contemporary_witness",
+      "type": "quantity",
+      "hedge": "الرقم من الرحالة نفسه، ويتفق مع ترجمة Hammer الإنجليزية (three hundred shops)؛ الاتفاق لا يُثبت صحة العدد",
+      "chapter": "أوليا جلبي: البزستان في بورصة"
+    }
+  ]
+}

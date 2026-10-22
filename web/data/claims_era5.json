@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "era": 5,
+    "count": 11,
+    "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
+  },
+  "claims": [
+    {
+      "id": "cl_000000363",
+      "statement": "يذكر بولو أن الطريق البري من بكين إلى تبريز كان بعيداً جداً على حامل رسالة ثمينة، ومهدداً بالحرب",
+      "quote": "The overland road from Peking to Tabriz",
+      "attributed_to": "ماركو بولو وروستيكيلو (ترجمة Yule، جون موراي، 1871)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "وصف بولو لطول الطريق ومخاطره في وقت الرسالة، وليس قياساً حديثاً للمسافة",
+      "chapter": "ماركو بولو: الطريق البري من بكين إلى تبريز"
+    },
+    {
+      "id": "cl_000000364",
+      "statement": "يذكر بولو أن المبعوثين المغول طلبوا العودة بحراً، بعد أن سبقتهم معرفتهم بالبنادقة وخبرتهم البحرية",
+      "quote": "desired to return by sea",
+      "attributed_to": "ماركو بولو وروستيكيلو (ترجمة Yule، جون موراي، 1871)",
+      "layer": "contemporary_witness",
+      "type": "event",
+      "hedge": "رواية بولو عن رحلة المبعوثين، والسبب المذكور منه",
+      "chapter": "ماركو بولو: الطريق البري من بكين إلى تبريز"
+    },
+    {
+      "id": "cl_000000365",
+      "statement": "يذكر بولو أن طرق القوافل بدأت تكتسب ميزة بعد السيطرة المغولية، فتصب في موانئ أرمينيا الكيليكية على المتوسط وطرابزون على البحر الأسود، بينما لم تكن تانا (آزوف) بعد منفذاً لمثل هذه التجارة",
+      "quote": "caravan routes which debouched at the ports of Cilician Armenia",
+      "attributed_to": "ماركو بولو وروستيكيلو (ترجمة Yule، جون موراي، 1871)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "ملاحظة بولو عن تراجع الإسكندرية وتحول طرق التجارة، ومرجعها تقديره لا إحصاء",
+      "chapter": "ماركو بولو: طرق القوافل بعد الفتح المغولي"
+    },
+    {
+      "id": "cl_000000368",
+      "statement": "يصف ابن بطوطة ميناء الإسكندرية بأنه مرفأ رائع لم يرَ مثله في العالم",
+      "quote": "Alexandrie a un port magnifique",
+      "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول؛ السنة غير مقروءة في الملف)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "سنة طبع المجلد غير مقروءة في الملف، والمرجح أنه 1853",
+      "chapter": "ابن بطوطة (Defrémery وSanguinetti): وصف الإسكندرية وأرصفتها ومقارنتها بموانئ أخرى"
+    },
+    {
+      "id": "cl_000000369",
+      "statement": "يستثني ابن بطوطة من ذلك موانئ قولام وكاليكوت في الهند، وموانئ السوداق (القرم) التي كان يملكها الجنويون، وموانئ زيتون في الصين",
+      "quote": "en excepte les ports de",
+      "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول؛ السنة غير مقروءة في الملف)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "أسماء الموانئ في النص الفرنسي مشوهة بالـ OCR (Coùlemet، Käbikoëth، Zeïtoûn)، والمعنى من الترجمة",
+      "chapter": "ابن بطوطة (Defrémery وSanguinetti): وصف الإسكندرية وأرصفتها ومقارنتها بموانئ أخرى"
+    },
+    {
+      "id": "cl_000000377",
+      "statement": "يذكر ابن خلدون أن أربعة أجيال تكفي لإتمام الحسب والشرف لأسرة، وهو يصفه بأنه حكم عام",
+      "quote": "quatre générations suffisent pour en achever la noblesse et la considération",
+      "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+      "layer": "contemporary_witness",
+      "type": "rule",
+      "hedge": "المؤلف نفسه يقول إن القاعدة \"عامة الصحة\" ولها استثناءات، فهي حكم نظري وليست قانوناً تاريخياً مُختبراً",
+      "chapter": "المقدمة: الحسب والنسب"
+    },
+    {
+      "id": "cl_000000378",
+      "statement": "يعلل ابن خلدون تجنب الصحابة للترف في الملبس والطعام بأنهم حافظوا على خشونة الحياة البدوية",
+      "quote": "parce qu'ils conservaient toujours la rudesse de la vie nomade",
+      "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+      "layer": "later_historian",
+      "type": "cause",
+      "hedge": "تفسير المؤلف لسلوك جماعة في صدر الإسلام، وليس وثيقة معاصرة لهم",
+      "chapter": "المقدمة: الترف والبداوة"
+    },
+    {
+      "id": "cl_000000379",
+      "statement": "يقول ابن خلدون إن روح العصبية انقرضت عند المسلمين الإسبان في زمنه، وهو حكم على جماعة معاصرة له",
+      "quote": "tout esprit de corps chez eux",
+      "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "حكم على جماعة في زمن المؤلف يبنيه على مشاهدته، وليس قياساً كمياً",
+      "chapter": "المقدمة: العصبية في الأندلس"
+    },
+    {
+      "id": "cl_000000380",
+      "statement": "يذكر ابن خلدون أن الزعيم إذا أطاعه قومه دخل في طريق الغلبة والقهر ولا يتركه، لأن للسلطة جاذبية للنفوس",
+      "quote": "tant le pouvoir a d'attraits pour les âmes",
+      "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+      "layer": "contemporary_witness",
+      "type": "rule",
+      "hedge": "تعميم نظري عن الزعامة، وليس وصفاً لحالة بعينها",
+      "chapter": "المقدمة: الملك والقهر"
+    },
+    {
+      "id": "cl_000000381",
+      "statement": "يقول ابن خلدون إن الدولة إذا بدأت تضعف ولم تعد تعتمد على إخلاص قادة الحزب الذي يسندها، فإنها تسقط في الصراع",
+      "quote": "ne peut plus compter sur le dévouement des chefs du parti qui la soutient",
+      "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+      "layer": "contemporary_witness",
+      "type": "rule",
+      "hedge": "شرط مشروط (إذا ضعفت... فإنها تسقط)، وليس قانوناً مطلقاً",
+      "chapter": "المقدمة: سقوط الدول"
+    },
+    {
+      "id": "cl_000000382",
+      "statement": "يصف ابن خلدون روح الجماعة والنسب بأنها شعور طبيعي عند العرب، ويستدل بزعماء ثقيف على ذلك",
+      "quote": "sentiment naturel aux Arabes",
+      "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "تعميم على شعب كامل مبني على الاستشهاد بأمثلة، وليس دراسة إحصائية",
+      "chapter": "المقدمة: العصبية عند العرب"
+    }
+  ]
+}

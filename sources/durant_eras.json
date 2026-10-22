@@ -1,0 +1,105 @@
+{
+  "_status": "قائمة مرشّحة من معرفة عامة بالمصادر الأولية لكل حقبة. لم تُقارن بقائمة مراجع ديورانت الفعلية، لأن نسخته لم تُفتح من البيئة. كل مدخل verified=false حتى يُطابَق بقائمة المراجع في النسخة المملوكة.",
+  "_rule": "الطبقة C لديورانت: لا يُستخرج منه نص. هذه المدخلات مصادر أولية مستقلة، والطبقة تُحدَّد لكل نسخة مترجمة على حدة.",
+  "_tier_guide": "A: الأصل والترجمة في الملك العام بثقة. B: الترجمة أحدث أو غير مؤكدة الحالة، وتحتاج تحققاً أو إذناً. الأصل نفسه يبقى مستقلاً عن الترجمة.",
+  "volumes": [
+    {
+      "volume": 1, "title": "Our Oriental Heritage", "year": 1935, "era": "الشرق القديم: وادي الرافدين ومصر وفارس والهند والصين",
+      "sources": [
+        { "title": "شريعة حمورابي", "author": "حمورابي (منسوبة)", "original_period": "نحو 1754 ق.م", "language": "akkadian", "translation_hint": "Harper 1904", "tier": "A", "verified": false },
+        { "title": "تاريخ (الكتاب الثاني)", "author": "هيرودوت", "original_period": "القرن 5 ق.م", "language": "greek", "translation_hint": "Rawlinson 1858", "tier": "A", "verified": false },
+        { "title": "الحوارات", "author": "كونفوشيوس (تلاميذه)", "original_period": "القرن 5 ق.م", "language": "classical_chinese", "translation_hint": "Legge 1861", "tier": "A", "verified": false },
+        { "title": "تاريخ مصر (فقرات)", "author": "مانيتون (مقتطفات)", "original_period": "القرن 3 ق.م", "language": "greek", "translation_hint": "مقتطفات مجموعة قديمة، يحتاج تحديد الطبعة", "tier": "B", "verified": false }
+      ]
+    },
+    {
+      "volume": 2, "title": "The Life of Greece", "year": 1939, "era": "اليونان من هوميروس إلى الإسكندر",
+      "sources": [
+        { "title": "تاريخ الحرب البيلوبونيسية", "author": "ثوكيديديس", "original_period": "القرن 5 ق.م", "language": "greek", "translation_hint": "Crawley 1874", "tier": "A", "verified": false },
+        { "title": "الجمهورية", "author": "أفلاطون", "original_period": "القرن 4 ق.م", "language": "greek", "translation_hint": "Jowett 1871", "tier": "A", "verified": false },
+        { "title": "السياسة", "author": "أرسطو", "original_period": "القرن 4 ق.م", "language": "greek", "translation_hint": "Jowett 1885", "tier": "A", "verified": false },
+        { "title": "حياة المشاهير", "author": "بلوتارخ", "original_period": "القرن 2 م", "language": "greek", "translation_hint": "Clough 1864 أو Dryden", "tier": "A", "verified": false }
+      ]
+    },
+    {
+      "volume": 3, "title": "Caesar and Christ", "year": 1944, "era": "روما من الجمهورية إلى المسيحية",
+      "sources": [
+        { "title": "التواريخ", "author": "بوليبيوس", "original_period": "القرن 2 ق.م", "language": "greek", "translation_hint": "Shuckburgh 1889", "tier": "A", "verified": false },
+        { "title": "الحوليات", "author": "تاسيتوس", "original_period": "القرن 2 م", "language": "latin", "translation_hint": "Church and Brodribb 1876", "tier": "A", "verified": false },
+        { "title": "حياة القياصرة الاثني عشر", "author": "سويتونيوس", "original_period": "نحو 120 م", "language": "latin", "translation_hint": "Thomson 1796 أو Forster 1606", "tier": "A", "verified": false },
+        { "title": "الأناجيل", "author": "مؤلفون متعددون", "original_period": "القرن 1 م", "language": "greek", "translation_hint": "نصوص قديمة متعددة في الملك العام", "tier": "A", "verified": false }
+      ]
+    },
+    {
+      "volume": 4, "title": "The Age of Faith", "year": 1950, "era": "أوروبا والعالم الإسلامي في القرون الوسطى المبكرة",
+      "sources": [
+        { "title": "تاريخ الرسل والملوك", "author": "الطبري", "original_period": "القرن 4 هـ / 10 م", "language": "arabic", "translation_hint": "طبعة ليدن 1879-1901 للأصل العربي", "tier": "A", "verified": false },
+        { "title": "الاعترافات", "author": "أوغسطين", "original_period": "القرن 5 م", "language": "latin", "translation_hint": "Pusey 1838", "tier": "A", "verified": false },
+        { "title": "المقدمة", "author": "ابن خلدون", "original_period": "القرن 8 هـ / 14 م", "language": "arabic", "translation_hint": "الأصل العربي في الملك العام، والترجمة الإنجليزية Rosenthal 1958 تحتاج تحققاً", "tier": "B", "verified": false },
+        { "title": "تاريخ الكنيسة الإنجليزية", "author": "بيدا", "original_period": "القرن 8 م", "language": "latin", "translation_hint": "Giles 1843", "tier": "A", "verified": false }
+      ]
+    },
+    {
+      "volume": 5, "title": "The Renaissance", "year": 1953, "era": "عصر النهضة الإيطالي",
+      "sources": [
+        { "title": "الأمير", "author": "نيكولو مكيافيلي", "original_period": "1532", "language": "italian", "translation_hint": "Marriott 1908", "tier": "A", "verified": false },
+        { "title": "حياة أشهر المصورين والنحاتين والمعماريين", "author": "جورجو فاساري", "original_period": "1550", "language": "italian", "translation_hint": "Bell 1850", "tier": "A", "verified": false },
+        { "title": "المتملق", "author": "بالداسار كاستيليوني", "original_period": "1528", "language": "italian", "translation_hint": "Hoby 1561", "tier": "A", "verified": false },
+        { "title": "خطاب في كرامة الإنسان", "author": "بيكو دلا ميرندولا", "original_period": "1486", "language": "latin", "translation_hint": "ترجمة قديمة في الملك العام، تحتاج تحديد الطبعة", "tier": "B", "verified": false }
+      ]
+    },
+    {
+      "volume": 6, "title": "The Reformation", "year": 1957, "era": "الإصلاح الديني وأوروبا المنقسمة",
+      "sources": [
+        { "title": "القضايا الخمس والتسعون", "author": "مارتن لوثر", "original_period": "1517", "language": "latin", "translation_hint": "نصوص مترجمة قديمة في الملك العام", "tier": "A", "verified": false },
+        { "title": "مديح الحماقة", "author": "إيراسموس", "original_period": "1511", "language": "latin", "translation_hint": "Wilson 1668 أو Seebohm", "tier": "A", "verified": false },
+        { "title": "مبادئ المسيحية", "author": "جان كالفن", "original_period": "1536", "language": "latin", "translation_hint": "Beveridge 1845", "tier": "A", "verified": false },
+        { "title": "قرارات مجمع ترنت", "author": "مجمع ترنت", "original_period": "1545-1563", "language": "latin", "translation_hint": "Waterworth 1848", "tier": "A", "verified": false }
+      ]
+    },
+    {
+      "volume": 7, "title": "The Age of Reason Begins", "year": 1961, "era": "بدايات العقل الحديث في القرن السابع عشر",
+      "sources": [
+        { "title": "مقال عن المنهج", "author": "ديكارت", "original_period": "1637", "language": "french", "translation_hint": "Veitch 1850", "tier": "A", "verified": false },
+        { "title": "الأورجانون الجديد", "author": "فرانسيس بيكون", "original_period": "1620", "language": "latin", "translation_hint": "Spedding 1857", "tier": "A", "verified": false },
+        { "title": "المبادئ الرياضية للفلسفة الطبيعية", "author": "إسحاق نيوتن", "original_period": "1687", "language": "latin", "translation_hint": "Motte 1729", "tier": "A", "verified": false },
+        { "title": "لوياثان", "author": "توماس هوبز", "original_period": "1651", "language": "english", "translation_hint": "الأصل الإنجليزي في الملك العام", "tier": "A", "verified": false }
+      ]
+    },
+    {
+      "volume": 8, "title": "The Age of Louis XIV", "year": 1963, "era": "فرنسا في عهد لويس الرابع عشر",
+      "sources": [
+        { "title": "مذكرات", "author": "دوق سان سيمون", "original_period": "القرن 18 م", "language": "french", "translation_hint": "Bayle St John 1876", "tier": "A", "verified": false },
+        { "title": "أفكار", "author": "بليز باسكال", "original_period": "1670", "language": "french", "translation_hint": "Trotter 1901", "tier": "A", "verified": false },
+        { "title": "رسائل", "author": "مدام دي سفينيه", "original_period": "1671-1696", "language": "french", "translation_hint": "نصوص قديمة في الملك العام", "tier": "A", "verified": false }
+      ]
+    },
+    {
+      "volume": 9, "title": "The Age of Voltaire", "year": 1965, "era": "عصر التنوير الفرنسي والإنجليزي",
+      "sources": [
+        { "title": "كانديد", "author": "فولتير", "original_period": "1759", "language": "french", "translation_hint": "نصوص قديمة في الملك العام", "tier": "A", "verified": false },
+        { "title": "روح القوانين", "author": "مونتسكيو", "original_period": "1748", "language": "french", "translation_hint": "Nugent 1750", "tier": "A", "verified": false },
+        { "title": "ثروة الأمم", "author": "آدم سميث", "original_period": "1776", "language": "english", "translation_hint": "الأصل الإنجليزي في الملك العام", "tier": "A", "verified": false },
+        { "title": "المقالات الأخلاقية والسياسية", "author": "ديفيد هيوم", "original_period": "1741", "language": "english", "translation_hint": "الأصل الإنجليزي في الملك العام", "tier": "A", "verified": false }
+      ]
+    },
+    {
+      "volume": 10, "title": "Rousseau and Revolution", "year": 1967, "era": "روسو والثورة الفرنسية",
+      "sources": [
+        { "title": "العقد الاجتماعي", "author": "جان جاك روسو", "original_period": "1762", "language": "french", "translation_hint": "Cole 1913", "tier": "A", "verified": false },
+        { "title": "إعلان حقوق الإنسان والمواطن", "author": "الجمعية الوطنية الفرنسية", "original_period": "1789", "language": "french", "translation_hint": "نص أصلي في الملك العام", "tier": "A", "verified": false },
+        { "title": "تأملات في الثورة الفرنسية", "author": "إدموند بيرك", "original_period": "1790", "language": "english", "translation_hint": "الأصل الإنجليزي في الملك العام", "tier": "A", "verified": false },
+        { "title": "حقوق الإنسان", "author": "توماس باين", "original_period": "1791", "language": "english", "translation_hint": "الأصل الإنجليزي في الملك العام", "tier": "A", "verified": false }
+      ]
+    },
+    {
+      "volume": 11, "title": "The Age of Napoleon", "year": 1975, "era": "نابليون وأوروبا بعد الثورة",
+      "sources": [
+        { "title": "القانون المدني الفرنسي", "author": "نابليون (المجلس)", "original_period": "1804", "language": "french", "translation_hint": "نص أصلي في الملك العام", "tier": "A", "verified": false },
+        { "title": "في الحرب", "author": "كارل فون كلاوزفيتز", "original_period": "1832", "language": "german", "translation_hint": "Graham 1873", "tier": "A", "verified": false },
+        { "title": "محاضرات في فلسفة التاريخ", "author": "هيغل", "original_period": "1837", "language": "german", "translation_hint": "Sibree 1857", "tier": "A", "verified": false },
+        { "title": "عن حرية القدماء والمحدثين", "author": "بنجامان كونستان", "original_period": "1819", "language": "french", "translation_hint": "نص أصلي في الملك العام", "tier": "A", "verified": false }
+      ]
+    }
+  ]
+}

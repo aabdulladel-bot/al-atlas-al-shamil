@@ -1,0 +1,1356 @@
+{
+  "_note": "حقب الأطلس، مبنية على معايير الأطلس نفسه لا على تقسيم أي كتاب. المعيار: شبكة الحركة (ماء، طرق، إمبراطوريات، أديان، مال، إنتاج). كل حقبة تُملأ بمصادر أولية في الطبقة A أو B فقط.",
+  "criteria": [
+    "الشبكة الغالبة للحركة والتبادل",
+    "الإنتاج الغالب: زراعة، تجارة، صناعة",
+    "الدين أو الفكر المؤسِّس",
+    "أكبر تحول ديموغرافي أو بيئي في الحقبة"
+  ],
+  "eras": [
+    {
+      "id": "era_1_water",
+      "name": "الماء والاستقرار",
+      "from": -4000,
+      "to": -1200,
+      "network": "أنهار وقرى ومعابد",
+      "lenses": [
+        "history",
+        "geography",
+        "culture",
+        "demography"
+      ],
+      "sunan": [
+        "sn_water"
+      ],
+      "candidate_sources": [
+        {
+          "title": "شريعة حمورابي",
+          "author": "حمورابي (منسوبة)",
+          "period": "نحو 1754 ق.م",
+          "language": "akkadian",
+          "role": "تنظيم الماء والأرض والعقود والعدالة",
+          "translation_hint": "Harper 1904",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: codeofhammurabik00harpuoft — Harper (1864–1914)، 1904، نسخة موقّعة",
+              "checked": "المؤلف والسنة والطبعة",
+              "not_checked": "نص المواد والترجمة نفسها"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "§53 في الطبعة: \"if a man neglect to strengthen his dyke ... the water carry away the farm-land\" — وهي المادة الخاصة بالسدود والماء",
+              "scanned_text": "archive stream: codeofhammurabik00harpuoft_djvu.txt",
+              "limits": "OCR فيه أخطاء، والاقتباس يحتاج مطابقة حرفية بالطبعة الورقية"
+            },
+            "quotes": {
+              "status": "matched",
+              "items": [
+                {
+                  "quote_id": "harper-s53-dyke",
+                  "note": "النتيجة تثبت وجود الاقتباس في نص الطبعة الممسوح، وتحتاج مطابقة الصفحة الورقية"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "ملحمة جلجامش (لوحة الطوفان)",
+          "author": "مؤلف مجهول",
+          "period": "الألفية الثانية ق.م",
+          "language": "akkadian",
+          "role": "الطوفان والمدينة والسلطة، ويظهر فيه الماء بوصفه تهديداً وحياة",
+          "translation_hint": "George Smith 1876 (The Chaldean Account of Genesis)",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: thechaldeanaccou00smituoft — George Smith (1840–1876)، 1876",
+              "checked": "الطبعة والمؤلف والسنة",
+              "not_checked": "وجود لوحة الطوفان بالترجمة داخل هذه الطبعة (لم يُفتح النص)"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "فصل \"Eleventh tablet — The story of the flood\" موجود في فهرس الطبعة، مع \"Hasisadra\" في النص",
+              "scanned_text": "archive stream: thechaldeanaccou00smituoft_djvu.txt",
+              "limits": "لم أقرأ الترجمة الإنجليزية للوحة نفسها، فقط وجودها"
+            },
+            "quotes": {
+              "status": "corrected",
+              "items": [
+                {
+                  "quote_id": "smith-flood-six-days",
+                  "note": "تصحيح: العبارة \"this be done six days and seven nights\" ليست من مشهد الطوفان، بل من تعليمات تجربة السهر في مقطع جلجامش. الاقتباس الصحيح للطوفان يأتي في الادعاءات cl_000000108 إلى cl_000000110."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "تعاليم بتاح حتب",
+          "author": "بتاح حتب (منسوبة)",
+          "period": "نحو 2400 ق.م",
+          "language": "egyptian",
+          "role": "نظام الإدارة والسلوك في الدولة المصرية المبكرة",
+          "translation_hint": "يحتاج تحديد الطبعة المترجمة في الملك العام",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: instructionofpta00ptahrich — Gunn (1883–1950)، 1912؛ وGutenberg: theinstructionof30508gut",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "النص نفسه، وأثبت أن المترجم توفي 1950 فيكون العمل في الملك العام في معظم الدول"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "النص موجود: \"Be not proud because thou art learned\" وفيه \"Governor of the Land\" في المقدمة",
+              "scanned_text": "archive stream: instructionofpta00ptahrich_djvu.txt",
+              "limits": "المحتوى ينقل نصيحة للابن وللمسؤول، ويحتاج تحديد الفقرات التي تخص الإدارة"
+            },
+            "quotes": {
+              "status": "matched",
+              "items": [
+                {
+                  "quote_id": "gunn-proud-learned",
+                  "note": "النتيجة تثبت وجود الاقتباس في نص الطبعة الممسوح، وتحتاج مطابقة الصفحة الورقية"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "قائمة الملوك السومريين",
+          "author": "مؤلف مجهول",
+          "period": "نحو 2100 ق.م",
+          "language": "sumerian",
+          "role": "توزيع السلطة بين المدن وتسلسلها",
+          "translation_hint": "Jacobsen 1939 (محمية في أمريكا حتى 2034 تقريباً، تحتاج تحققاً)",
+          "tier": "B",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: sumeriankinglist0000thor — Jacobsen، 1939",
+              "checked": "الطبعة والمؤلف والسنة",
+              "not_checked": "حالة الحقوق؛ 1939 ما زالت محمية في الولايات المتحدة، فتبقى B"
+            },
+            "content": {
+              "status": "not_confirmed",
+              "found": "لم يظهر في النص المستخرج أي اسم من أسماء المدن (Eridu, Kish) ولا كلمة kingship، فلم تُثبت قائمة الملوك في الملف",
+              "scanned_text": "archive stream: sumeriankinglist0000thor_djvu.txt (115 ألف حرف، لكنه لا يحوي القائمة)",
+              "limits": "الملف المتاح لا يحوي القائمة. يحتاج نسخة أخرى أو فحصاً بصرياً للصفحات"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "سفر التكوين",
+          "author": "أسفار موسى (تقليدياً)",
+          "period": "ما بين القرنين 8 و5 ق.م تقريباً",
+          "language": "hebrew",
+          "role": "الخلق والطوفان وانتشار البشر والحضارات الأولى",
+          "translation_hint": "King James 1611 أو ترجمات أقدم في الملك العام",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: 1611-king-james-bible (1611) وعلامة الملك العام",
+              "checked": "الطبعة والسنة والترخيص",
+              "not_checked": "نص الإصحاحات الواردة في الحقبة"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "\"Noe\" موجود 17 مرة في الطبعة (تهجئة 1611)، والإصحاحات التي تتحدث عن الطوفان موجودة",
+              "scanned_text": "archive stream: 1611 King James Bible_djvu.txt",
+              "limits": "OCR شديد الضوضاء، فالتحقق من الآيات نفسها يحتاج مطابقة يدوية"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        }
+      ],
+      "status": "candidates"
+    },
+    {
+      "id": "era_2_routes",
+      "name": "الطرق والممالك الأولى",
+      "from": -1200,
+      "to": -500,
+      "network": "طرق بحرية وبرية بين الشرق الأدنى والمتوسط وآسيا",
+      "lenses": [
+        "history",
+        "geography",
+        "culture",
+        "demography"
+      ],
+      "sunan": [
+        "sn_trade"
+      ],
+      "candidate_sources": [
+        {
+          "title": "نقش بيستون",
+          "author": "داريوس الأول",
+          "period": "نحو 520 ق.م",
+          "language": "old_persian_elamite_babylonian",
+          "role": "الإمبراطورية الأخمينية، والإدارة والولايات",
+          "translation_hint": "Rawlinson (1846 وما بعدها)",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: 10250456bsb — Rawlinson (1846) The Persian cuneiform inscription at Behistun",
+              "checked": "الطبعة والمؤلف والسنة",
+              "not_checked": "نص الترجمة الإنجليزية نفسه، وعدد الأعمدة والسطور في الطبعة"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "النص موجود: \"I am Darius, the great King... of the provinces\"، وقائمة البلدان بينها Babylonia. أما \"الطرق\" فلم تظهر في هذا النص",
+              "scanned_text": "archive stream: 10250456bsb_djvu.txt",
+              "limits": "الطرق ليست موضوع النقش؛ الدور في الحقبة يقتصر على الولايات والإدارة"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "حوليات الملوك الآشوريين",
+          "author": "ملوك آشور (نقوش ملكية)",
+          "period": "القرون 13-7 ق.م",
+          "language": "akkadian",
+          "role": "الحروب والجزية والطرق التجارية في الشرق الأدنى",
+          "translation_hint": "Luckenbill 1926-1927 (Ancient Records of Assyria and Babylonia)",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: ancient-records-of-assyria-and-babylonia-volume-2 — Luckenbill، 1927 (المجلد الثاني: السجلات التاريخية)",
+              "checked": "المجلد والمؤلف والسنة",
+              "not_checked": "المحتوى، وحالة الحقوق مستنتجة من تاريخ النشر (1927) ومن وفاة المؤلف"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "المجلد الثاني يحوي \"Treaty with Ba'alu of Tyre\" (معاهدة مع صور)، وذكر القوافل التجارية للبابليين",
+              "scanned_text": "archive stream: Ancient Records of Assyria and Babylonia Volume 2_djvu.txt",
+              "limits": "ورود كلمة tribute في النص مصدرها كود برمجي للصفحة، لا محتوى تاريخي"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "أسفار الملوك",
+          "author": "مؤلف مجهول",
+          "period": "ما بين القرنين 7 و6 ق.م تقريباً",
+          "language": "hebrew",
+          "role": "الممالك المتجاورة، وتجارة سليمان البحرية",
+          "translation_hint": "King James 1611",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: holybibleaccordi0002unse — According to the Authorized Version (A.D. 1611)، لندن، 1872، المجلد II (يوشع حتى الملوك الأول)",
+              "checked": "السنة والنص والمجلد",
+              "not_checked": "المجلد III (حزقيال غير موجود فيه)"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "ملخص الإصحاح التاسع: \"His nauie fetcheth golde from Ophir\" (أسطول سليمان يجلب الذهب من أوفير)",
+              "scanned_text": "archive stream: 1611 King James Bible_djvu.txt (OCR)",
+              "limits": "النص الكامل للآيات لم يُقرأ، والملخص فقط"
+            },
+            "quotes": {
+              "status": "confirmed",
+              "matched": "2/2",
+              "method": "آيتان مقروءتان: 1 Kings 9:28 و5:8، بمطابقة checkQuote؛ الملخصات القديمة (210–211) تبقى مرجعاً"
+            }
+          }
+        },
+        {
+          "title": "حزقيال، الإصحاح 27 (صور وتجارتها)",
+          "author": "حزقيال (منسوب)",
+          "period": "القرن 6 ق.م",
+          "language": "hebrew",
+          "role": "قائمة سلع وشركاء تجاريين على طريق البحر المتوسط",
+          "translation_hint": "King James 1611",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: 1611-king-james-bible (مشترك مع التكوين)",
+              "checked": "الطبعة والسنة والترخيص",
+              "not_checked": "نص الإصحاح 27 نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "الآيات 12 و17 و18 من الإصحاح 27 مقروءة",
+              "scanned_text": "archive: holybibleaccordi0006unse، المقطع في ezekiel27_kjv1611_1872.txt",
+              "limits": "الآية 12 مقروءة جزئياً"
+            },
+            "quotes": {
+              "status": "confirmed",
+              "matched": "3/3",
+              "method": "checkQuote على نص الآيات"
+            }
+          }
+        },
+        {
+          "title": "التواريخ",
+          "author": "هيرودوت",
+          "period": "القرن 5 ق.م",
+          "language": "greek",
+          "role": "طرق الفرس ومصر والمدن اليونانية وتجارتها",
+          "translation_hint": "Rawlinson (1858–1861)",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: historyofherod03hero — Herodotus ترجمة Rawlinson، 1861 (وطبعة 1859 في umich)",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "نص الكتاب، والترجمة المحددة للمقطع الذي سيُستعمل"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "\"THE ROYAL ROAD\" في الكتاب الخامس، وذكر الفينيقيين في النص",
+              "scanned_text": "archive stream: historyofherod03hero_djvu.txt",
+              "limits": "الترجمة هنا لـ Rawlinson وقد تختلف عن النص اليوناني في تفاصيل"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        }
+      ],
+      "status": "candidates"
+    },
+    {
+      "id": "era_3_empires",
+      "name": "الإمبراطوريات الكبرى",
+      "from": -500,
+      "to": 300,
+      "network": "جيوش وطرق معبدة وعملات واسعة الانتشار",
+      "lenses": [
+        "history",
+        "geography",
+        "culture",
+        "demography"
+      ],
+      "sunan": [
+        "sn_plague",
+        "sn_umran"
+      ],
+      "candidate_sources": [
+        {
+          "title": "التاريخ (أو التواريخ)",
+          "author": "بوليبيوس",
+          "period": "القرن 2 ق.م",
+          "language": "greek",
+          "role": "صعود روما وتوسع الإمبراطورية في المتوسط",
+          "translation_hint": "Shuckburgh 1889 (ed. Hultsch)",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: historieswitheng02poly (III–IV)، historieswitheng03poly (V–VIII)، historieswitheng01poly (I–II)، polybiushistorie0000wrpa (IX–XII) — Paton، Loeb، 1922–1925؛ وHultsch اليوناني (polybiihistoria01polygoog)",
+              "checked": "السنة والمترجم والكتاب III",
+              "not_checked": "المجلد I من Shuckburgh"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "الكتب I–XII بالإنجليزية، والكتاب III اليوناني",
+              "limits": "طبعة شكبرغ للمجلد I غير متاحة"
+            },
+            "quotes": {
+              "status": "confirmed",
+              "matched": "3/3 للكتاب III",
+              "method": "checkQuote على نص Loeb؛ التحقق المتقاطع باليوناني (Hultsch) للعبارتين"
+            }
+          }
+        },
+        {
+          "title": "تاريخ الحرب البيلوبونيسية",
+          "author": "ثوكيديديس",
+          "period": "القرن 5 ق.م",
+          "language": "greek",
+          "role": "الحرب بين القوى اليونانية وأثرها في المدن",
+          "translation_hint": "Crawley (طبعة 1910؛ المترجم توفي 1892). طبعة 1874 لم تُعثر عليها بعد",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: india.history.resource.91344 — Crawley، 1910",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "طبعة 1874 المذكورة سابقاً، والنص نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "\"Peloponnesian War\" و\"Pericles\" موجودان في الفهرس والنص",
+              "scanned_text": "archive stream: 91344_djvu.txt",
+              "limits": "طبعة Crawley 1910 (مؤكدة سابقاً)، وتفاصيل الحرب لم تُراجع"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "الحوليات",
+          "author": "تاسيتوس",
+          "period": "القرن 2 م",
+          "language": "latin",
+          "role": "الإمبراطورية الرومانية في عهد أوغسطس وخلفائه",
+          "translation_hint": "Church & Brodribb (طبعة 1921؛ المترجمان توفيا 1912 و1905). طبعة 1876 لم تُعثر عليها بعد",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: annalsoftacitus0000alfr — Church، 1921",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "طبعة 1876 الأصلية، والنص نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "\"Augustus\" و\"Tiberius\" موجودان في الفهرس والنص، مع جداول أسرة أغسطس",
+              "scanned_text": "archive stream: annalsoftacitus0000alfr_djvu.txt",
+              "limits": "المقاطع المتعلقة بالإمبراطورية والولايات لم تُقرأ فقرة فقرة"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "أرثاشاسترا",
+          "author": "كوتيليا (منسوب)",
+          "period": "القرن 3-4 ق.م تقريباً",
+          "language": "sanskrit",
+          "role": "الإدارة والضرائب والتجارة في الدولة الموريانية",
+          "translation_hint": "Shamasastry (طبعة 1929 في الأرشيف؛ طبعة 1915 لم تُعثر عليها). المترجم توفي 1944",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: KautilyasArthasastra — Shamasastry، 1929",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "طبعة 1915، والنص نفسه؛ ملاحظة: نسخة CC BY-NC-ND لترجمة أخرى مرفوضة للاستخدام التجاري"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "النص يذكر \"superintendent of tolls\" و\"superintendent of roads\" وغيرها من الوظائف الإدارية",
+              "scanned_text": "archive stream: Kautilyas-Arthasastra_djvu.txt",
+              "limits": "الفهرس اللغوي غالب، والفقرات المتعلقة بالضرائب والتجارة تحتاج قراءة مفصلة"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "نقوش أشوكا",
+          "author": "الإمبراطور أشوكا",
+          "period": "القرن 3 ق.م",
+          "language": "prakrit_brahmi",
+          "role": "الدولة الموريانية والدين والمرافق العامة على الطرق",
+          "translation_hint": "Bhandarkar (1920، ترخيص CC0 حسب الأرشيف). طبعة Hultzsch 1925 لم تُعثر عليها",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: cu_pub648 — Bhandarkar، 1920، الترخيص public-domain mark 1.0",
+              "checked": "الطبعة والمؤلف والسنة والترخيص",
+              "not_checked": "النقوش نفسها وترجمتها؛ طبعة Hultzsch"
+            },
+            "content": {
+              "status": "not_confirmed",
+              "found": "\"Dhamma\" موجود في النص المحقق، لكن عبارات الطرق والآبار والعلاج لم تظهر في نص OCR (الكلمات المطابقة كانت من كود الصفحة)",
+              "scanned_text": "archive stream: cu_pub648_djvu.txt",
+              "limits": "الدور المتعلق بالطرق غير مؤكد. OCR للبراكريتية ضعيف، فيحتاج مراجعة يدوية لمرسوم الطرق"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "تاريخ الهان (أجزاء)",
+          "author": "بان قو",
+          "period": "القرن 1 م",
+          "language": "classical_chinese",
+          "role": "الإمبراطورية الهانية وطرق الحرير وإدارتها",
+          "translation_hint": "Dubs (المجلد الثاني، 1944 في الأرشيف؛ المجلد الأول 1938 لم يُعثر عليه)",
+          "tier": "B",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: historyofformerh0000home — Dubs، المجلد الثاني، 1944",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "المجلد الأول، والنص نفسه، وحالة الحقوق (ما زالت محمية في معظم الدول حتى 2039 تقريباً)"
+            },
+            "content": {
+              "status": "not_confirmed",
+              "found": "ملف المجلد الثاني في الأرشيف بلا نص (المحتوى فارغ)، فلم يُثبت أي شيء",
+              "scanned_text": "archive stream: historyofformerh0000home_djvu.txt (فارغ)",
+              "limits": "يحتاج نسخة أخرى ذات OCR صالح أو فحصاً بصرياً"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "السجلات التاريخية (شي جي)",
+          "author": "سيما تشيان",
+          "period": "نحو 94 ق.م",
+          "language": "classical_chinese",
+          "role": "الممالك الصينية المبكرة وطرقها مع الغرب",
+          "translation_hint": "Chavannes 1895-1905 (الفرنسية)",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: lesmemoireshisto0001edou — Chavannes، 1895 (الفرنسية)",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "نص المجلدات المعنية، والترجمة الفرنسية لا العربية"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "الترجمة الفرنسية تذكر طريق تشانغ تشيان إلى Ferghana (Ta-yuan) والطرق الغربية",
+              "scanned_text": "archive stream: lesmemoireshisto0001edou_djvu.txt",
+              "limits": "المحتوى الفرنسي يُراجع مقابل الترجمة الصينية حين يلزم الاستشهاد"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        }
+      ],
+      "status": "candidates"
+    },
+    {
+      "id": "era_4_faiths",
+      "name": "الأديان الكبرى وتشكّل العالم القديم المتأخر",
+      "from": 300,
+      "to": 1000,
+      "network": "مدن دينية وعلوم منقولة وتجارة بحرية وبرية",
+      "lenses": [
+        "history",
+        "geography",
+        "culture",
+        "demography"
+      ],
+      "sunan": [
+        "sn_knowledge",
+        "sn_umran"
+      ],
+      "candidate_sources": [
+        {
+          "title": "تاريخ الرسل والملوك",
+          "author": "الطبري",
+          "period": "القرن 4 هـ / 10 م",
+          "language": "arabic",
+          "role": "الدولة الإسلامية المبكرة والعالم المتوسطي والفارسي",
+          "translation_hint": "طبعة ليدن (de Goeje وHoutsma وآخرون) 1879-1901 للأصل العربي",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "protected_modern_edition_permitted_verbal",
+              "evidence": "turath: book_id 9783 — \"تاريخ الطبري = تاريخ الرسل والملوك\"، الجذر: ط المعارف 1-11 (طبعة حديثة، المحقق غير مذكور في البيانات). الأرشيف: tabari.txt (OCR رديء). ويكي مصدر: الجزء الثاني بطبعة غير معروفة",
+              "checked": "هوية الطبعة على تراث (الجذر وعدد الأجزاء)",
+              "not_checked": "المحقق والناشر وسنة الطبع من صفحة الغلاف؛ حالة الحقوق؛ طبعة ليدن (PD) بنص مقروء"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "النص العربي موجود (طبعة de Goeje)، وفيه أخبار الخلفاء مثل عثمان بن عفان",
+              "scanned_text": "archive stream: 2015.323631.Nnales-Quos_djvu.txt",
+              "limits": "OCR عربي ضعيف جداً، فالاقتباس يحتاج مطابقة بالطبعة الورقية"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            },
+            "permission": {
+              "basis": "إذن شفهي أبلغ به المالك منصة تراث (هاتفياً)، تاريخ الإبلاغ 2026-10-22",
+              "status": "شفهي، غير موثّق كتابة",
+              "required_action": "طلب تأكيد كتابي من تراث قبل النشر العام"
+            }
+          }
+        },
+        {
+          "title": "الحروب (تاريخ الحروب الفارسية والوندالية والقوطية)",
+          "author": "بروكوبيوس القيصري",
+          "period": "القرن 6 م",
+          "language": "greek",
+          "role": "الإمبراطورية البيزنطية وحدودها مع الفرس والقوط",
+          "translation_hint": "Dewing (Loeb) 1914",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: procopiuswitheng05procuoft — Dewing، لوب، المجلد الخامس (الكتابان VII-VIII)، نُشر 1928 وأعيد طبعه 1954 و1962. نص يوناني مع إنجليزي",
+              "checked": "الطبعة والمترجم والسنة والمجلد",
+              "not_checked": "المجلدات الأخرى (1914 وغيرها)، والنص نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "قصة رهبان الحرير من سيرِندا (الكتاب الثامن، الفصل 17)، وحرير الفرس",
+              "scanned_text": "archive stream: procopiuswitheng05procuoft_djvu.txt",
+              "limits": "الفقرات المستخرجة من الكتاب الثامن فقط؛ مجلدات الحروب الفارسية والوندالية تحتاج فهرسة"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "تاريخ الكنيسة الإنجليزية",
+          "author": "بيدا",
+          "period": "القرن 8 م",
+          "language": "latin",
+          "role": "الممالك الإنجليزية وانتشار المسيحية وأثر الهجرات",
+          "translation_hint": "ترجمة إنجليزية مجهولة المترجم من طبعة Smith اللاتينية (لندن، القرن 18)؛ الترجمة الحديثة غير معروفة بعد",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "la.wikisource: Historia Ecclesiastica gentis Anglorum — editio: Patrologia Latina XCV (Migne)، ترخيص CC BY-SA. الترجمة الإنجليزية في الأرشيف (ecclesiasticalh00stevgoog) مجهولة المترجم من القرن 18 وتحمل حالة conflict",
+              "checked": "الطبعة اللاتينية والمرجع (PL 95) والناشر",
+              "not_checked": "صحة نسخة PL 95 مقابل المخطوطات"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "المرفأ روتوبي، والمعبر إلى بريطانيا، وأسطول قيصر، وتجار سوق روما، وميناء كوينتافيك",
+              "scanned_text": "la.wikisource (نص لاتيني كامل بالكتب الخمسة)",
+              "limits": "الفقرات المستخرجة في الكتاب الأول والثاني والرابع؛ الكتب الأخرى لم تُقرأ للتجارة"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "تاريخ الفرنجة",
+          "author": "غريغوريوس التوري",
+          "period": "القرن 6 م",
+          "language": "latin",
+          "role": "مملكة الفرنجة والكنيسة والسلطة الملكية",
+          "translation_hint": "Brehaut 1916",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: historyoffranks01greg — Gregory of Tours، ترجمة Brehaut، 1916",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "النص نفسه، والفصول المعنية"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "\"Clovis\" ورد أكثر من 90 مرة، و\"Franks\" في النص والمقدمة",
+              "scanned_text": "archive stream: historyoffranks01greg_djvu.txt",
+              "limits": "المقدمة التي كتبها المحرر تتضمن آراء حديثة، فتُفصل عن نص غريغوريوس"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "سجلات الأقاليم الغربية (تشيوي شي)",
+          "author": "شوانزانغ (يوان تشوانغ)",
+          "period": "القرن 7 م",
+          "language": "classical_chinese",
+          "role": "طرق آسيا الوسطى والهند والتجارة والديانات",
+          "translation_hint": "Beal 1884 (Si-yu-ki)",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: si-yu-ki-1884 — Beal (توفي 1889)، 1884، ترخيص public-domain mark 1.0",
+              "checked": "الطبعة والمترجم والسنة والترخيص",
+              "not_checked": "النص نفسه، والمقاطع المعنية"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "فهرس المجلد يذكر Fei-han (Ferghanah) وKia-pi-shi (Kapisa) وكثيراً من أسماء البلدان في آسيا الوسطى",
+              "scanned_text": "archive stream: Si-yu-ki (1884) vol-1_djvu.txt",
+              "limits": "الترجمة قديمة (Beal)، وأسماء البلدان فيها تحتاج مطابقة بالحديثة"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        }
+      ],
+      "status": "candidates"
+    },
+    {
+      "id": "era_5_intercontinental",
+      "name": "التبادل العابر للقارات",
+      "from": 1000,
+      "to": 1450,
+      "network": "طريق الحرير والمغول والقوافل والطاعون",
+      "lenses": [
+        "history",
+        "geography",
+        "culture",
+        "demography"
+      ],
+      "sunan": [
+        "sn_knowledge",
+        "sn_plague",
+        "sn_trade"
+      ],
+      "candidate_sources": [
+        {
+          "title": "رحلة ابن بطوطة (تحفة النظار)",
+          "author": "ابن بطوطة",
+          "period": "القرن 8 هـ / 14 م",
+          "language": "arabic",
+          "role": "الطرق بين المغرب والهند والصين وإفريقيا",
+          "translation_hint": "Defrémery وSanguinetti، النص العربي مع الترجمة الفرنسية 1853–1858. ترجمة Gibb (1929) لم تُعثر عليها",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: voyagestextearab01ibnb — Voyages d’Ibn Batoutah، texte arabe، accompagné d’une traduction، Defrémery وSanguinetti، Paris: Imprimerie nationale، M DCCC LIII (1853)، صفحة العنوان",
+              "checked": "المحررين والمكان والسنة (1853)",
+              "not_checked": "النص العربي (OCR لا يُقرأ عربياً في هذه النسخة)"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "الترجمة الفرنسية (Defrémery وSanguinetti) تذكر جزر المالديف، ووصف نهر السند",
+              "scanned_text": "archive stream: voyagesdibnbato02sanggoog_djvu.txt",
+              "limits": "الترجمة فرنسية وليست عربية؛ الاقتباس يحتاج مطابقة بالنص العربي"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "رحلات ماركو بولو",
+          "author": "ماركو بولو وروستيكيلو",
+          "period": "نحو 1300 م",
+          "language": "italian_french",
+          "role": "آسيا في عهد المغول وطرق التجارة",
+          "translation_hint": "Yule (1871)",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: bookofsermarcopo01polo — Yule (توفي 1889)، 1871",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "النص نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "\"Kublai\" يرد 139 مرة، و\"Cambaluc\" في الفهرس، و\"silk\" في الملاحظات",
+              "scanned_text": "archive stream: bookofsermarcopo01polo_djvu.txt",
+              "limits": "ترجمة Yule، وشرح المحرر يُفصل عن نص ماركو بولو"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "المقدمة",
+          "author": "ابن خلدون",
+          "period": "القرن 8 هـ / 14 م",
+          "language": "arabic",
+          "role": "دورة العمران والعصبية وطبائع الدول",
+          "translation_hint": "الأصل العربي: طبعة المطبعة الأزهرية 1311هـ (1893م) في الأرشيف، إضافة إلى التفريغ في ويكي مصدر. ترجمة Rosenthal (1958) لم تُعثر عليها",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: bub_gb_JTs8AAAAMAAJ — Ibn Khaldoun، Les Prolégomènes، ترجمة de Slane، Paris، Imprimerie impériale، MDCCCLXIII (1863)، صفحة العنوان",
+              "checked": "المترجم والمكان والسنة",
+              "not_checked": "مقارنة بالنص العربي (OCR بولاق ضعيف)"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "الأربعة أجيال، والعصبية، والترف، وحكم الدولة الضعيفة",
+              "scanned_text": "khaldun_slane1863.txt (OCR، نحو 1.5 مليون حرف)",
+              "limits": "ست مقاطع فقط"
+            },
+            "quotes": {
+              "status": "confirmed",
+              "matched": "6/6",
+              "method": "checkQuote على نص الترجمة، مقاطع من أسطر نظيفة"
+            }
+          }
+        },
+        {
+          "title": "البداية والنهاية",
+          "author": "ابن كثير",
+          "period": "القرن 8 هـ / 14 م",
+          "language": "arabic",
+          "role": "تاريخ عالمي بالأسانيد، ومنه الطاعون والممالك",
+          "translation_hint": "الأصل العربي في الملك العام. الطبعة المرجعية Turki (دار هجر) محمية التحقيق، ولم تُعثر على طبعة قديمة في الأرشيف",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "not_found",
+              "evidence": "لا توجد نتيجة في الأرشيف",
+              "checked": "—",
+              "not_checked": "طبعة قديمة مؤكدة، والطبعة المرجعية"
+            },
+            "content": {
+              "status": "not_checked",
+              "found": "لم يُفحص، لأن طبعة قديمة مؤكدة لم تُعثر عليها في الأرشيف",
+              "scanned_text": "—",
+              "limits": "يحتاج طبعة مؤكدة ثم فحص"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "رحلة ابن جبير",
+          "author": "ابن جبير",
+          "period": "القرن 6 هـ / 12 م",
+          "language": "arabic",
+          "role": "الحج والتجارة والمدن في الشرق الأوسط وصقلية",
+          "translation_hint": "طبعة ليدن 1907 (de Goeje) للنص العربي. ترجمة Broadhurst (1952) لم تُفحص",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: travelsibnjubay00goejgoog — The travels of Ibn Jubayr، de Goeje، 1907",
+              "checked": "الطبعة والمحرر والسنة",
+              "not_checked": "النص العربي نفسه، والترجمة الإنجليزية"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "النص العربي فيه \"مكة\" و\"بغداد\" و\"صقلية\" (بصقلية)",
+              "scanned_text": "archive stream: travelsibnjubay00goejgoog_djvu.txt",
+              "limits": "OCR ضعيف جداً، فالمحتوى أكد بالكلمات فقط"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "جامع التواريخ",
+          "author": "رشيد الدين الهمذاني",
+          "period": "أوائل القرن 8 هـ / 14 م",
+          "language": "persian",
+          "role": "تاريخ عالمي يشمل المغول والصين والهند وأوروبا",
+          "translation_hint": "Thackston (1999) وغيرها: لم تُعثر في الأرشيف",
+          "tier": "B",
+          "verification": {
+            "edition": {
+              "status": "not_found",
+              "evidence": "لا توجد نتيجة في الأرشيف",
+              "checked": "—",
+              "not_checked": "جميع الطبعات"
+            },
+            "content": {
+              "status": "not_checked",
+              "found": "لم يُفحص، لأن أي طبعة لم تُعثر عليها في الأرشيف",
+              "scanned_text": "—",
+              "limits": "يحتاج طبعة ثم فحص"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        }
+      ],
+      "status": "candidates"
+    },
+    {
+      "id": "era_6_exchange",
+      "name": "الكشوف وتبادل العالم",
+      "from": 1450,
+      "to": 1760,
+      "network": "محيطات مفتوحة وتجارة عابرة وطباعة",
+      "lenses": [
+        "history",
+        "geography",
+        "culture",
+        "demography"
+      ],
+      "sunan": [
+        "sn_knowledge",
+        "sn_plague"
+      ],
+      "candidate_sources": [
+        {
+          "title": "التعليقات الملكية للإنكا",
+          "author": "غارسيلاسو دي لا فيغا",
+          "period": "القرن 16-17 م",
+          "language": "spanish",
+          "role": "حضارة الإنكا بعد الغزو وتبادل المعارف",
+          "translation_hint": "ترجمة إنجليزية قديمة 1688 في الأرشيف، وطبعة Markham (1869) لم تُعثر عليها",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: royalcommentarie00vega_0 — The royal commentaries of Peru، 1688",
+              "checked": "الطبعة والمؤلف والسنة",
+              "not_checked": "المترجم الدقيق، والنص نفسه، وطبعة Markham"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "الترجمة الإنجليزية (1688) فيها \"Incas\" 980 مرة، و\"Cuzco\" و\"Quipus\" (نظام السجلات)",
+              "scanned_text": "archive stream: royalcommentarie00vega_0_djvu.txt",
+              "limits": "ترجمة قديمة بأسلوب القرن 17، ويحتاج مطابقة المترجم"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "التاريخ الحقيقي لغزو المكسيك",
+          "author": "برناردينو دياز ديل كاستييو",
+          "period": "1568 تقريباً",
+          "language": "spanish",
+          "role": "الغزو الإسباني للمكسيك وتبادل الأطعمة والأمراض",
+          "translation_hint": "Maudslay (1908–1916) في الأرشيف",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: truehistoryofcon2242dazd — The true history of the conquest of New Spain، 1908",
+              "checked": "الطبعة والسنة والمؤلف",
+              "not_checked": "المترجم الدقيق، والنص نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "النص الإنجليزي (Maudslay 1908) فيه Cortés وMontezuma وTenochtitlan",
+              "scanned_text": "archive stream: truehistoryofcon2242dazd_djvu.txt",
+              "limits": "تُراجع الفصول المحددة؛ وفي الفهرس \"Mexico\" كثيراً"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "يوميات ماتيو ريتشي في الصين",
+          "author": "ماتيو ريتشي",
+          "period": "1610 تقريباً",
+          "language": "italian_latin",
+          "role": "التبادل الثقافي والعلمي بين أوروبا والصين",
+          "translation_hint": "Trigault (1615) لم تُعثر عليها في الأرشيف",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: dechristianaexpe00ricc — Trigault، De Christiana expeditione apud Sinas، 1615 (تحرير يوميات ريتشي)",
+              "checked": "السنة والمحرر",
+              "not_checked": "الطبعة الثانية والترجمات الحديثة"
+            },
+            "content": {
+              "status": "not_checked",
+              "found": "لم يُفحص: الطبعة غير مؤكدة في الأرشيف أو المصدر بيانات",
+              "scanned_text": "—",
+              "limits": "يحتاج طبعة مؤكدة ثم فحص"
+            },
+            "quotes": {
+              "status": "confirmed",
+              "matched": "2/2",
+              "method": "checkQuote على OCR اللاتيني؛ الاقتباسات كما وردت في النص المصوّر"
+            }
+          }
+        },
+        {
+          "title": "سياحتنامه",
+          "author": "أوليا جلبي",
+          "period": "القرن 11 هـ / 17 م",
+          "language": "ottoman_turkish",
+          "role": "العالم العثماني وجواره والتجارة والطرق",
+          "translation_hint": "النص التركي العثماني: طبعة 1896 في الأرشيف. ترجمة von Hammer (1834–1850) لم تُعثر عليها",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: evliyaelebisey08evliuoft — Seyahatname، 1896",
+              "checked": "الطبعة والمؤلف والسنة",
+              "not_checked": "النص نفسه، والترجمة الألمانية"
+            },
+            "content": {
+              "status": "partial",
+              "found": "بورصة: السوق والبزستان",
+              "limits": "المجلد I لم يُستخرج منه"
+            },
+            "quotes": {
+              "status": "confirmed",
+              "matched": "2/2 (المجلد II)",
+              "method": "قراءة عثمانية من OCR المجلد II، والتحقق بالترجمة الإنجليزية لـ Hammer (المجلد II)"
+            }
+          }
+        },
+        {
+          "title": "كتاب الطريق (رحلة فاسكو دا غاما)",
+          "author": "مؤلف مجهول من رحلة فاسكو دا غاما",
+          "period": "1498-1499",
+          "language": "portuguese",
+          "role": "الطريق البحري بين أوروبا والهند",
+          "translation_hint": "Ravenstein (1898) لم تُعثر عليها في الأرشيف",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: worksissuedbyha00unkngoog — صفحة العنوان: E. G. Ravenstein، Hakluyt Society، M.DCCC.XCVIII (1898)",
+              "checked": "الطبعة والسنة",
+              "not_checked": "النص الكامل بالبرتغالية، وطبعات أخرى"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "تجار الساحل والسفن، وسماع وفرة التوابل",
+              "scanned_text": "archive stream: worksissuedbyha00unkngoog_djvu.txt",
+              "limits": "ثلاثة مقاطع فقط"
+            },
+            "quotes": {
+              "status": "confirmed",
+              "matched": "3/3",
+              "method": "checkQuote على نص الأرشيف، ومقاطع متن اليومية"
+            }
+          }
+        },
+        {
+          "title": "مجموعة بيانات السكان العالمية",
+          "author": "الأمم المتحدة (World Population Prospects)",
+          "period": "من 1950 حتى اليوم",
+          "language": "dataset",
+          "role": "تقديرات السكان للمقارنة الديموغرافية",
+          "translation_hint": "بيانات الأمم المتحدة، لم تُفحص من البيئة لأنها خارج الحقول المسموحة",
+          "tier": "B",
+          "verification": {
+            "edition": {
+              "status": "not_found",
+              "evidence": "غير متاح",
+              "checked": "—",
+              "not_checked": "شروط الترخيص والإصدار"
+            },
+            "content": {
+              "status": "not_checked",
+              "found": "لم يُفحص: الطبعة غير مؤكدة في الأرشيف أو المصدر بيانات",
+              "scanned_text": "—",
+              "limits": "يحتاج طبعة مؤكدة ثم فحص"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        }
+      ],
+      "status": "candidates"
+    },
+    {
+      "id": "era_7_industry",
+      "name": "الصناعة والمدينة",
+      "from": 1760,
+      "to": 1914,
+      "network": "سكك حديد وبواخر ومصانع ومستعمرات",
+      "lenses": [
+        "history",
+        "geography",
+        "culture",
+        "demography"
+      ],
+      "sunan": [
+        "sn_demo",
+        "sn_umran"
+      ],
+      "candidate_sources": [
+        {
+          "title": "الديمقراطية في أمريكا",
+          "author": "ألكسيس دي توكفيل",
+          "period": "1835",
+          "language": "french",
+          "role": "المجتمع والمدينة والديمقراطية في القرن التاسع عشر",
+          "translation_hint": "Reeve (ترجمة 1835، وطبعات 1836 و1840 في الأرشيف)",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: in.ernet.dli.2015.42993 — Reeve، 1836؛ democracyinamer09tocqgoog — 1840",
+              "checked": "الطبعة والمترجم والسنة",
+              "not_checked": "المجلد الأول بالتحديد، والنص نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "النص (Reeve) فيه \"democracy\" و\"associations\" في فصول المجلد الثاني، منها الجمعيات المدنية والصحافة",
+              "scanned_text": "archive stream: democracyinamer09tocqgoog_djvu.txt",
+              "limits": "لم يُفحص المجلد الأول بالتحديد؛ ترجمة Reeve قديمة"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "أصل الأنواع",
+          "author": "تشارلز داروين",
+          "period": "1859",
+          "language": "english",
+          "role": "التنوع والتكيف وأثره على فهم الإنسان والعالم",
+          "translation_hint": "الطبعة الأولى 1859 في الأرشيف",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: B-001-004-417 — On the Origin of Species، 1859",
+              "checked": "الطبعة الأولى والمؤلف والسنة",
+              "not_checked": "النص نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "النص (1859) فيه \"natural selection\" 303 مرات و\"variation\" 212 مرة",
+              "scanned_text": "archive stream: B-001-004-417 (content1_djvu.txt)",
+              "limits": "الطبعة الأولى؛ نص OCR يحتاج مطابقة للاقتباس"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "البيان الشيوعي",
+          "author": "كارل ماركس وفريدريك إنجلز",
+          "period": "1848",
+          "language": "german",
+          "role": "الصناعة والطبقات والتحولات الاجتماعية",
+          "translation_hint": "النص الأصلي 1848 في الأرشيف. ترجمة Moore (1888) لم تظهر بعنوانها",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: ManifestoOfTheCommunistPartyKarlMarxFrederickEngels — 1848",
+              "checked": "النص الأصلي والمؤلفان والسنة",
+              "not_checked": "المترجم، والنص نفسه، وطبعات 2005 و2010 بتراخيص مختلفة"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "النص (1848) فيه \"bourgeoisie\" 140 مرة و\"proletariat\" 137 و\"class struggle\" 14",
+              "scanned_text": "archive stream: Manifesto of the Communist Party_djvu.txt",
+              "limits": "الترجمة الإنجليزية الحديثة للمحرر، وليست طبعة Moore 1888"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "تخليص الإبريز في تلخيص باريز",
+          "author": "رفاعة الطهطاوي",
+          "period": "1834",
+          "language": "arabic",
+          "role": "أول رحلة عربية منظمة إلى أوروبا، والتعليم والمدينة",
+          "translation_hint": "الطبعة الأولى 1834 لم تُعثر عليها في الأرشيف",
+          "tier": "A",
+          "verification": {
+            "edition": {
+              "status": "not_found",
+              "evidence": "لا توجد نتيجة في الأرشيف",
+              "checked": "—",
+              "not_checked": "جميع الطبعات"
+            },
+            "content": {
+              "status": "not_checked",
+              "found": "لم يُفحص: لا طبعة مؤكدة",
+              "scanned_text": "—",
+              "limits": "يحتاج طبعة مؤكدة"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "ميثاق الإمبراطور (ميجي)",
+          "author": "الإمبراطور ميجي",
+          "period": "1868",
+          "language": "japanese",
+          "role": "الإصلاح الياباني وبناء الدولة الحديثة",
+          "translation_hint": "الميثاق 1868 لم يظهر في الأرشيف، وترجماته تحتاج بحثاً آخر",
+          "tier": "B",
+          "verification": {
+            "edition": {
+              "status": "not_found",
+              "evidence": "لا توجد نتيجة في الأرشيف",
+              "checked": "—",
+              "not_checked": "جميع الطبعات"
+            },
+            "content": {
+              "status": "not_checked",
+              "found": "لم يُفحص: لا نص مؤكد",
+              "scanned_text": "—",
+              "limits": "يحتاج نصاً مؤكداً"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        }
+      ],
+      "status": "candidates"
+    },
+    {
+      "id": "era_8_global",
+      "name": "الحروب العالمية والدولة الحديثة",
+      "from": 1914,
+      "to": 2025,
+      "network": "دول قومية ومنظمات دولية وشبكات اتصال عالمية",
+      "lenses": [
+        "history",
+        "geography",
+        "culture",
+        "demography"
+      ],
+      "sunan": [
+        "sn_demo",
+        "sn_knowledge"
+      ],
+      "candidate_sources": [
+        {
+          "title": "معاهدة فرساي",
+          "author": "الحلفاء والمنتصرون",
+          "period": "1919",
+          "language": "english_french",
+          "role": "إعادة رسم الخريطة بعد الحرب العالمية الأولى",
+          "translation_hint": "نص المعاهدة نفسه لم يظهر. وجدت وثائق متصلة بها: جلسات استماع الكونغرس 1919، والبنود الاقتصادية (Baruch)",
+          "tier": "B",
+          "verification": {
+            "edition": {
+              "status": "not_found",
+              "evidence": "archive: cu31924007463353 — جلسات استماع الكونغرس حول المعاهدة، 1919 (ليس نص المعاهدة)",
+              "checked": "وجود وثائق متصلة بالمعاهدة في الأرشيف",
+              "not_checked": "نص المعاهدة الرسمي، وحالة النشر في كل بلد"
+            },
+            "content": {
+              "status": "not_checked",
+              "found": "لم يُفحص: نص المعاهدة لم يظهر في الأرشيف",
+              "scanned_text": "—",
+              "limits": "يحتاج النص الرسمي"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "ميثاق الأمم المتحدة",
+          "author": "الأمم المتحدة",
+          "period": "1945",
+          "language": "english",
+          "role": "النظام الدولي بعد الحرب العالمية الثانية",
+          "translation_hint": "منشور الأمم المتحدة 1945 في الأرشيف، إضافة إلى وثيقة جلسات استماع مرخصة بالملك العام",
+          "tier": "B",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: charterofunitedn00unit — United Nations، 1945؛ و1945CharterOfTheUnitedNationsHearings — ترخيص public-domain mark",
+              "checked": "الطبعة والجهة والسنة",
+              "not_checked": "شروط إعادة نشر منشور الأمم المتحدة، والنص نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "\"We the peoples of the United Nations\" و\"Security Council\" و\"Article 1\" و\"Article 2\" موجودة في النص",
+              "scanned_text": "archive stream: charterofunitedn00unit_djvu.txt",
+              "limits": "النص يتضمن ملحق محكمة العدل الدولية وفصولاً أخرى، وتُراجع الترجمة الرسمية للعربية منفصلة"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "الإعلان العالمي لحقوق الإنسان",
+          "author": "الأمم المتحدة",
+          "period": "1948",
+          "language": "english",
+          "role": "الحقوق والقيم المشتركة بعد الحرب",
+          "translation_hint": "منشور إدارة الإعلام في الأمم المتحدة 1948 في الأرشيف عبر Rosetta Project",
+          "tier": "B",
+          "verification": {
+            "edition": {
+              "status": "confirmed",
+              "evidence": "archive: rosettaproject_eng_undec-1 — UN Department of Public Information، 1948",
+              "checked": "الطبعة والجهة والسنة",
+              "not_checked": "شروط إعادة الاستخدام، والنص نفسه"
+            },
+            "content": {
+              "status": "confirmed",
+              "found": "\"Article I All human beings are born free and equal in dignity and rights\" موجودة، ومعها المادة 2 عن عدم التمييز",
+              "scanned_text": "archive stream: rosettaproject_eng_undec-1_djvu.txt",
+              "limits": "نسخة إنجليزية من 1948؛ النص العربي الرسمي منفصل ويحتاج التحقق"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        },
+        {
+          "title": "مجموعة بيانات السكان العالمية (Our World in Data)",
+          "author": "Our World in Data",
+          "period": "من 1800 حتى اليوم",
+          "language": "dataset",
+          "role": "تحولات السكان والتحول الديموغرافي",
+          "translation_hint": "Our World in Data لم تظهر في الأرشيف بوصفها مجموعة بيانات",
+          "tier": "B",
+          "verification": {
+            "edition": {
+              "status": "not_found",
+              "evidence": "لا توجد نتيجة مؤكدة في الأرشيف",
+              "checked": "—",
+              "not_checked": "الترخيص والإصدار والمصدر الأصلي للبيانات"
+            },
+            "content": {
+              "status": "not_checked",
+              "found": "لم يُفحص: لا مجموعة بيانات مؤكدة في الأرشيف",
+              "scanned_text": "—",
+              "limits": "يحتاج مصدراً مؤكداً"
+            },
+            "quotes": {
+              "status": "not_checked",
+              "items": []
+            }
+          }
+        }
+      ],
+      "status": "candidates"
+    }
+  ]
+}
