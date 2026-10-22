@@ -120,6 +120,61 @@
       "bytes": 44882,
       "retrieved_at": "2026-10-22T16:09:51.600Z",
       "permission_basis": "فهرس DataHub (CC BY 4.0)"
+    },
+    {
+      "id": "wikisource-muqaddima-ar",
+      "file": "data/raw/wikisource_muqaddima",
+      "url": "https://ar.wikisource.org/wiki/مقدمة_ابن_خلدون",
+      "license": "النص الأصلي في الملك العام (ابن خلدون، ت 808هـ). التفريغ في ويكي مصدر بترخيص CC BY-SA.",
+      "tier": "B",
+      "landing": "https://ar.wikisource.org/wiki/مقدمة_ابن_خلدون",
+      "attribution": "نص مقدمة ابن خلدون من ويكي مصدر العربي (CC BY-SA)، https://ar.wikisource.org",
+      "note": "الأجزاء 3–6 كاملة، وأربعة فصول من الباب الثاني من صفحاتها المستقلة. التفريغ قد يحوي أخطاء طباعية، والمطابقة بالطبعة الورقية مطلوبة قبل النشر.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/wikisource_muqaddima/bab2_fasl15_lineage.txt",
+          "sha256": "518bd1a5fcb2da08c4435de8e31599a178c52099a777cd0f8c2051dafc4d24e2",
+          "bytes": 6971
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/bab2_fasl17_asabiyya.txt",
+          "sha256": "090fb52504048730c602925c641f61f60e7096b3cb729a865dcc8ad21c1c9860",
+          "bytes": 4786
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/bab2_fasl18_luxury.txt",
+          "sha256": "aa8473d1bfb1329175b941a799060c068618cbbb8a11b4d3c159659ab7b1cf26",
+          "bytes": 3469
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/bab2_fasl23_imitation.txt",
+          "sha256": "cf05638b89b38dfd48f6a6c883ae87351b71fc216c1c3846bc52f786f0ea8177",
+          "bytes": 3728
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/part_الثالث.txt",
+          "sha256": "2391be0bfc59d06f9747b3927be6df326e195bab8908ab92ac1a602bf59ab965",
+          "bytes": 674457
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/part_الخامس.txt",
+          "sha256": "e17b21e81ca1669befeb3eb00e45bec0dd7b6d7d0f44ca10270b7ec2bbecc7ef",
+          "bytes": 374555
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/part_الرابع.txt",
+          "sha256": "82a77d990d099fcdfe1b33099384b4d8e39b4847965339e793e2194cde1bd761",
+          "bytes": 401708
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/part_السادس.txt",
+          "sha256": "ca434ef203fa4edeb3709f13d45c673246e6f802116a0649a060061cbe20cd5a",
+          "bytes": 413788
+        }
+      ],
+      "retrieved_at": "2026-10-22T21:09:07.888Z",
+      "permission_basis": "ترخيص ويكي مصدر (CC BY-SA)"
     }
   ]
 }

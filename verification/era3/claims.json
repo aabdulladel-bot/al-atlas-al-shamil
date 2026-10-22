@@ -1805,5 +1805,83 @@
     },
     "status": "draft",
     "version": 1
+  },
+  {
+    "id": "cl_000000400",
+    "passage_id": "polybius:paton-loeb4:victors-imitate-conquered",
+    "quote": "To abandon the habits of the victors and to imitate those of the conquered",
+    "statement": "يعدّ بوليبيوس خطأً أن يترك الرومان المنتصرون عاداتهم ويقلّدوا عادات المغلوبين، حين نقلوا كنوز سرقوسة الفنية إلى روما",
+    "type": "judgment",
+    "layer": "later_historian",
+    "attributed_to": "بوليبيوس، التواريخ الكتاب IX (ترجمة Paton، Loeb IV، 1925)",
+    "isnad": null,
+    "hedge": "حكم من المؤرخ على قرار روماني؛ ويسير هنا عكس اتجاه سُنّة ابن خلدون (المغلوب يقلّد الغالب)، فهو شاهد مقيِّد لا ناقض لها",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "روما",
+        "سرقوسة"
+      ],
+      "persons": [],
+      "dates": [
+        "211 ق.م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era3"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era3"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000401",
+    "passage_id": "polybius:paton-loeb4:simple-lives-victorious",
+    "quote": "while leading the simplest of lives",
+    "statement": "يذكر بوليبيوس أن الرومان كانوا يعيشون أبسط حياة، بعيداً عن الترف، ومع ذلك غلبوا دائماً من يملكون أجمل الأعمال الفنية وأكثرها",
+    "type": "judgment",
+    "layer": "later_historian",
+    "attributed_to": "بوليبيوس، التواريخ الكتاب IX (ترجمة Paton، Loeb IV، 1925)",
+    "isnad": null,
+    "hedge": "تعميم من المؤرخ عن جيل روماني سابق، يُستعمل حجةً في جدال أخلاقي؛ ليس وصفاً إحصائياً لنمط العيش",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "روما",
+        "سرقوسة"
+      ],
+      "persons": [],
+      "dates": [
+        "211 ق.م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era3"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era3"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]
