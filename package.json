@@ -8,7 +8,12 @@
     "fetch:sources": "node scripts/fetch_sources.mjs",
     "build:places": "node scripts/build_places.mjs && node scripts/build_places.mjs scripts/config/places_era2.json data/raw/pleiades-places-latest.csv.gz web/data/places_era2.geojson",
     "build:claims": "node scripts/build_claims.mjs",
-    "build:claim-points": "node scripts/build_places.mjs scripts/config/claim_places.json data/raw/pleiades-places-latest.csv.gz web/data/claim_places.geojson && node scripts/build_claim_points.mjs"
+    "build:claim-points": "node scripts/build_places.mjs scripts/config/claim_places.json data/raw/pleiades-places-latest.csv.gz web/data/claim_places.geojson && node scripts/build_claim_points.mjs",
+    "build:basemap": "node scripts/build_basemap.mjs",
+    "build:sunan": "node sunan/check_sunan.mjs",
+    "build:review": "node scripts/build_review_sheet.mjs",
+    "build:all": "npm run build:places && npm run build:claims && npm run build:claim-points && npm run build:sunan && npm run build:review",
+    "check:all": "for e in 1 2 3 4 5 6; do node verification/era$e/check_claims.mjs | tail -1; done && node verification/era3/polybius_iii_greek_check.mjs && node verification/era3/polybius_ix_greek_check.mjs && node sunan/check_sunan.mjs"
   },
   "keywords": [],
   "author": "",

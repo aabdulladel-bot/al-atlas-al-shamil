@@ -9,70 +9,70 @@
       "id": "cl_000000101",
       "statement": "إذا استأجر رجل حقلاً للزراعة ولم ينتج فيه حبوباً، يُحاسَب، ويعطي صاحب الحقل حبوباً على أساس الحقول المجاورة",
       "quote": "If a man rent a field for cultivation and do not produce any grain in the field",
-      "attributed_to": null,
+      "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
       "layer": "material",
       "type": "rule",
-      "hedge": null,
+      "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
       "chapter": "قوانين العقود والزراعة"
     },
     {
       "id": "cl_000000102",
       "statement": "إذا أجّر رجل حقله لمستأجر بحصة من المحصول، ثم أغرق أدد الحقل وجرف المحصول، تقع الخسارة على المستأجر",
       "quote": "inundate the field and carry away the produce, the loss (falls on) the tenant",
-      "attributed_to": null,
+      "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
       "layer": "material",
       "type": "rule",
-      "hedge": null,
+      "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
       "chapter": "قوانين العقود والزراعة"
     },
     {
       "id": "cl_000000103",
       "statement": "إذا كان على رجل دين، فأغرق أدد حقله وجرف محصوله، أو لم تنبت حبوب فيه لقلة الماء، لا يردّ حبوباً للدائن في تلك السنة، ويُعدَّل عقد الدين، ولا يدفع فائدة تلك السنة",
       "quote": "Adad inundate his field and carry away the produce",
-      "attributed_to": null,
+      "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
       "layer": "material",
       "type": "rule",
-      "hedge": null,
+      "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
       "chapter": "قوانين الديون والفيضان"
     },
     {
       "id": "cl_000000104",
       "statement": "إذا أهمل رجل تقوية سده فانكسر وجرف الماء الأرض الزراعية، يعوّض من انكسر سده الحبوب التي أتلفت",
       "quote": "a break be made in his dyke and the water carry away the farm-land",
-      "attributed_to": null,
+      "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
       "layer": "material",
       "type": "rule",
-      "hedge": null,
+      "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
       "chapter": "قوانين السدود والري"
     },
     {
       "id": "cl_000000105",
       "statement": "إذا فتح رجل قناة للري وأهملها، فجرف الماء حقلاً مجاوراً، يعوّض صاحب الحقل بالحبوب على أساس الحقول المجاورة",
       "quote": "open his canal for irrigation and neglect it",
-      "attributed_to": null,
+      "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
       "layer": "material",
       "type": "rule",
-      "hedge": null,
+      "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
       "chapter": "قوانين السدود والري"
     },
     {
       "id": "cl_000000106",
       "statement": "النصيحة الأولى للابن: لا تفخر بعلمك، وحاور الجاهل كما تحاور الحكيم",
       "quote": "Be not proud because thou art learned",
-      "attributed_to": null,
+      "attributed_to": "تعاليم بتاح حتب (ترجمة Gunn، 1912)",
       "layer": "tradition",
       "type": "judgment",
-      "hedge": null,
+      "hedge": "أدب حكمة يقدّم توجيهاً أخلاقياً، لا وصفاً لواقع مُثبت",
       "chapter": "التعليم الأول"
     },
     {
       "id": "cl_000000107",
       "statement": "لا حد للمهارة، ولا صانع يملك المزايا كلها",
       "quote": "For no limit can be set to skill",
-      "attributed_to": null,
+      "attributed_to": "تعاليم بتاح حتب (ترجمة Gunn، 1912)",
       "layer": "tradition",
       "type": "judgment",
-      "hedge": null,
+      "hedge": "أدب حكمة يقدّم توجيهاً أخلاقياً، لا وصفاً لواقع مُثبت",
       "chapter": "التعليم الأول"
     },
     {
@@ -82,7 +82,7 @@
       "attributed_to": "George Smith",
       "layer": "modern_scholarship",
       "type": "description",
-      "hedge": null,
+      "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
       "chapter": "مقدمة الترجمة"
     },
     {
@@ -92,57 +92,57 @@
       "attributed_to": "George Smith",
       "layer": "modern_scholarship",
       "type": "event",
-      "hedge": null,
+      "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
       "chapter": "مقدمة الترجمة"
     },
     {
       "id": "cl_000000110",
       "statement": "في فهرس اللوح الحادي عشر أمر ببناء السفينة قبل الطوفان",
       "quote": "Command to build the ark",
-      "attributed_to": null,
+      "attributed_to": "George Smith، The Chaldean Account of Genesis (1876)",
       "layer": "tradition",
       "type": "event",
-      "hedge": null,
+      "hedge": "من فهرس المحرر للوح الحادي عشر، لا من نص الملحمة",
       "chapter": "فهرس اللوح الحادي عشر"
     },
     {
       "id": "cl_000000111",
       "statement": "الكلام الحسن أندر من الزمرد الذي تجده الجواري على الحجارة",
       "quote": "Fair speech is more rare than the emerald that is found by slave-maidens on the pebbles.",
-      "attributed_to": null,
+      "attributed_to": "تعاليم بتاح حتب (ترجمة Gunn، 1912)",
       "layer": "tradition",
       "type": "description",
-      "hedge": null,
+      "hedge": "أدب حكمة يقدّم توجيهاً أخلاقياً، لا وصفاً لواقع مُثبت",
       "chapter": "التعليم الأول"
     },
     {
       "id": "cl_000000112",
       "statement": "يدفع عشرة كور من الحبوب عن كل جريب (GAN)",
       "quote": "he shall measure out ten GUR of grain per GAN.",
-      "attributed_to": null,
+      "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
       "layer": "material",
       "type": "quantity",
-      "hedge": null,
+      "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
       "chapter": "قوانين السدود والري"
     },
     {
       "id": "cl_000000113",
       "statement": "كان النص الأصلي ستة أعمدة من الكتابة",
       "quote": "d originally six columns of text; two of these (the third and fourth) were still nearly perfect; two others (the second and fifth) were imperfect, about half remaining, while the remaining columns (the first and sixth) were entirely lost.",
-      "attributed_to": null,
+      "attributed_to": "George Smith، The Chaldean Account of Genesis (1876)",
       "layer": "modern_scholarship",
       "type": "quantity",
-      "hedge": null,
+      "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
       "chapter": "مقدمة الترجمة"
     },
     {
       "id": "cl_000000114",
       "statement": "رأيت في الحال أنني وجدت هنا جزءاً على الأقل من قصة الطوفان البابلية",
       "quote": "I saw at once that I had here discovered a portion at least of the Chaldean account of the Deluge.",
-      "attributed_to": null,
+      "attributed_to": "George Smith، The Chaldean Account of Genesis (1876)",
       "layer": "modern_scholarship",
       "type": "judgment",
-      "hedge": null,
+      "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
       "chapter": "مقدمة الترجمة"
     }
   ]

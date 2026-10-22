@@ -7,43 +7,81 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="vendor/maplibre-gl.css">
   <style>
-    :root { --bg: #f4efe6; --ink: #2a2620; --muted: #6b6356; --accent: #8a4b2a; --panel: #fffdf8; }
+    :root { --bg: #f4efe6; --ink: #2a2620; --muted: #6b6356; --accent: #8a4b2a; --panel: #fffdf8; --sea: #dfe7ea; --land: #f4efe6; --river: #8fb3c4; --evidence: #2a6f6a; --limit: #a0522d; }
     @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; }
+      :root:not([data-theme="light"]) { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; --evidence: #5fb3aa; --limit: #d08a5c; }
     }
-    :root[data-theme="dark"] { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; }
+    :root[data-theme="dark"] { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; --evidence: #5fb3aa; --limit: #d08a5c; }
     html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; }
     #map { position: absolute; inset: 0; }
-    #panel { position: absolute; top: 12px; inset-inline-start: 12px; max-width: min(360px, calc(100% - 24px)); background: var(--panel); padding: 14px 16px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.15); max-height: calc(100vh - 24px); overflow-y: auto; }
-    #panel h1 { font-size: 18px; margin: 0 0 6px; }
+    #panel { position: absolute; top: 12px; inset-inline-start: 12px; width: min(380px, calc(100% - 24px)); max-height: calc(100vh - 24px); overflow-y: auto; box-sizing: border-box; background: var(--panel); padding: 14px 16px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+    #panel h1 { font-size: 20px; margin: 0; }
+    .tagline { margin: 2px 0 8px; font-size: 13px; color: var(--muted); }
     #panel p { margin: 4px 0; font-size: 14px; color: var(--muted); line-height: 1.6; }
+    details.section { border-top: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); padding: 6px 0; }
+    details.section > summary { cursor: pointer; font-weight: 700; font-size: 15px; padding: 4px 0; }
+    .row { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
+    .row button, .mode button { font: inherit; font-size: 13px; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
+    .row button[aria-pressed="true"], .mode button[aria-pressed="true"] { background: var(--accent); color: var(--panel); }
+    .mode { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+    select { font: inherit; font-size: 14px; padding: 6px; border-radius: 6px; border: 1px solid var(--accent); background: var(--panel); color: var(--ink); width: 100%; }
     .warn { color: var(--accent); font-weight: 600; }
-    .eras { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
-    .eras button { font: inherit; font-size: 13px; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
-    .eras button[aria-pressed="true"] { background: var(--accent); color: var(--panel); }
-    .claims-list { max-height: 260px; overflow-y: auto; font-size: 13px; line-height: 1.6; }
-    .claims-list .claim { border-top: 1px solid var(--accent); padding: 6px 0; }
-    .claims-list .quote { color: var(--muted); font-style: italic; }
+    .card { font-size: 14px; line-height: 1.7; }
+    .hyp { font-weight: 600; margin: 6px 0; }
+    .khaldun { border-inline-start: 3px solid var(--accent); padding-inline-start: 8px; margin: 6px 0; font-family: "Amiri", "Traditional Arabic", serif; font-size: 17px; }
+    .badge { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 10px; border: 1px solid var(--muted); color: var(--muted); }
+    .ev { border-top: 1px dashed color-mix(in srgb, var(--muted) 45%, transparent); padding: 6px 0; font-size: 13px; }
+    .ev.support::before { content: "شاهد مؤيد · "; color: var(--evidence); font-weight: 700; }
+    .ev.limit::before { content: "شاهد مقيِّد · "; color: var(--limit); font-weight: 700; }
+    .sub { color: var(--muted); font-size: 12px; }
+    .src-quote { color: var(--muted); font-style: italic; }
+    body[data-mode="simple"] .research-only { display: none; }
+    .claims-list { max-height: 300px; overflow-y: auto; }
     .popup-name { font-weight: 700; font-size: 15px; }
     .popup-sub { color: var(--muted); font-size: 13px; }
+    .credits { font-size: 11px !important; }
+    @media (max-width: 600px) { #panel { max-height: 55vh; } }
   </style>
 </head>
-<body>
+<body data-mode="simple">
   <div id="map"></div>
   <aside id="panel">
     <h1>الأطلس الشامل</h1>
-    <div class="eras" id="eras"></div>
-    <p id="era-desc"></p>
-    <p>طبقة السكان (تُعرض على الخريطة مع الحقبة المختارة):</p>
-    <div class="eras" id="demo-eras"></div>
-    <p id="demo-note"></p>
-    <p class="warn" id="era-warn"></p>
-    <p id="count"></p>
-    <p>ادعاءات موثّقة (مسودة):</p>
-    <div class="eras" id="claims-eras"></div>
-    <div id="claims-list" class="claims-list"></div>
-    <div class="eras"><button type="button" id="claim-map-btn" aria-pressed="false">عرض الادعاءات على الخريطة</button></div>
-    <p>المصادر: Pleiades، ترخيص CC BY 3.0. السكان: Gapminder، ترخيص CC BY 4.0.</p>
+    <p class="tagline">التاريخ والجغرافيا والثقافة والسكان على خريطة واحدة، والسنن فرضيات تُختبر بالشواهد.</p>
+    <div class="mode">طريقة العرض:
+      <button type="button" data-mode="simple" aria-pressed="true">مبسّط</button>
+      <button type="button" data-mode="research" aria-pressed="false">باحث</button>
+    </div>
+
+    <details class="section" open>
+      <summary>السنن</summary>
+      <p>اختر سُنّة لترى نص ابن خلدون وشواهدها، وأماكن الشواهد على الخريطة.</p>
+      <div class="row" id="sunan-list"></div>
+      <div id="sunan-detail" class="card"></div>
+    </details>
+
+    <details class="section">
+      <summary>الحقب والمواقع</summary>
+      <div class="row" id="eras"></div>
+      <p id="era-desc"></p>
+      <p class="warn research-only" id="era-warn"></p>
+      <p id="count"></p>
+    </details>
+
+    <details class="section">
+      <summary>السكان</summary>
+      <select id="demo-select" aria-label="طبقة السكان"></select>
+      <p id="demo-note"></p>
+    </details>
+
+    <details class="section">
+      <summary>الادعاءات بحسب الحقبة</summary>
+      <div class="row" id="claims-eras"></div>
+      <div id="claims-list" class="claims-list card"></div>
+      <div class="row"><button type="button" id="claim-map-btn" aria-pressed="false">عرض أماكن الادعاءات على الخريطة</button></div>
+    </details>
+
+    <p class="credits">المصادر: Pleiades (CC BY 3.0)، Gapminder وHYDE عبر OWID (CC BY 4.0)، Natural Earth (ملك عام)، نص المقدمة من ويكي مصدر (CC BY-SA). الادعاءات مسودات قيد المراجعة.</p>
   </aside>
   <script src="vendor/maplibre-gl.js"></script>
   <script src="app.js"></script>

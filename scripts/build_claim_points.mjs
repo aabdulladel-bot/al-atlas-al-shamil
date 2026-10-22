@@ -34,7 +34,7 @@ for (const [slug, claims] of linked) {
     type: "Feature",
     id: slug,
     geometry: place.geometry,
-    properties: { slug, name_ar: place.properties.name_ar, name_en: place.properties.name_en, coord_status: place.properties.coord_status, count: claims.length, claims: JSON.stringify(claims) },
+    properties: { slug, name_ar: place.properties.name_ar, name_en: place.properties.name_en, coord_status: place.properties.coord_status, count: claims.length, claim_ids: "," + claims.map((c) => c.id).join(",") + ",", claims: JSON.stringify(claims) },
   });
 }
 const out = {

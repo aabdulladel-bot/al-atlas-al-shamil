@@ -1,57 +1,89 @@
-// كل حقبة لها ملف مواقع مستقل، وتُبنى بـ scripts/build_places.mjs.
-const ERAS = [
-  { id: 1, label: "الماء والاستقرار", file: "data/places_era1.geojson", desc: "الحقبة الأولى: وادي الرافدين ومصر القديمة (4000-1200 ق.م)." },
-  { id: 2, label: "الطرق والممالك", file: "data/places_era2.geojson", desc: "الحقبة الثانية: الطرق والممالك الأولى (1200-500 ق.م)." },
-];
-
-const COORD_LABEL = {
-  "pleiades-representative": "إحداثيات من Pleiades (نقطة تمثيلية)",
-  approximate: "إحداثيات تقديرية، لم تُطابَق بعد",
-};
+// الأطلس الشامل: الواجهة.
+// الطبقات: خريطة أساس (Natural Earth)، مواقع الحقب (Pleiades)، السكان، أماكن الادعاءات، والسنن.
 
 function escapeHtml(text) {
   return String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
+const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const isNarrow = () => window.innerWidth < 600;
+const fitPadding = () => (isNarrow() ? 30 : { top: 40, bottom: 40, left: 40, right: 420 });
 
+// ---------- طريقة العرض: مبسّط أو باحث ----------
+const modeButtons = document.querySelectorAll(".mode button");
+function setMode(mode) {
+  document.body.dataset.mode = mode;
+  for (const b of modeButtons) b.setAttribute("aria-pressed", String(b.dataset.mode === mode));
+  try { localStorage.setItem("atlas-mode", mode); } catch {}
+}
+for (const b of modeButtons) b.addEventListener("click", () => setMode(b.dataset.mode));
+try { const saved = localStorage.getItem("atlas-mode"); if (saved === "research" || saved === "simple") setMode(saved); } catch {}
+
+// ---------- الخريطة وطبقات الأساس ----------
 const map = new maplibregl.Map({
   container: "map",
   style: {
     version: 8,
-    sources: {},
-    layers: [{ id: "background", type: "background", paint: { "background-color": getComputedStyle(document.body).backgroundColor } }],
+    sources: {
+      land: { type: "geojson", data: "data/base/land.geojson" },
+      lakes: { type: "geojson", data: "data/base/lakes.geojson" },
+      rivers: { type: "geojson", data: "data/base/rivers.geojson" },
+    },
+    layers: [
+      { id: "sea", type: "background", paint: { "background-color": cssVar("--sea") } },
+      { id: "land", type: "fill", source: "land", paint: { "fill-color": cssVar("--land") } },
+      { id: "lakes", type: "fill", source: "lakes", paint: { "fill-color": cssVar("--sea") } },
+      { id: "rivers", type: "line", source: "rivers", paint: { "line-color": cssVar("--river"), "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.6, 6, 1.6] } },
+    ],
   },
-  center: [40, 32],
-  zoom: 4.5,
+  center: [35, 32],
+  zoom: 3,
+  attributionControl: { customAttribution: "Natural Earth · Pleiades · OWID/HYDE · Gapminder" },
 });
 map.addControl(new maplibregl.NavigationControl(), "bottom-left");
+const popup = new maplibregl.Popup({ closeButton: true, closeOnClick: true, maxWidth: "320px" });
 
-const popup = new maplibregl.Popup({ closeButton: false, closeOnClick: true });
-const countEl = document.getElementById("count");
-const warnEl = document.getElementById("era-warn");
-const descEl = document.getElementById("era-desc");
+function fitTo(features, maxZoom) {
+  if (!features.length) return;
+  const bounds = new maplibregl.LngLatBounds();
+  for (const f of features) bounds.extend(f.geometry.coordinates);
+  map.fitBounds(bounds, { padding: fitPadding(), maxZoom, duration: 500 });
+}
+function pointerOn(layer) {
+  map.on("mouseenter", layer, () => (map.getCanvas().style.cursor = "pointer"));
+  map.on("mouseleave", layer, () => (map.getCanvas().style.cursor = ""));
+}
+async function getJson(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+// ---------- الحقب ومواقعها ----------
+const ERAS = [
+  { id: 1, label: "الماء والاستقرار", file: "data/places_era1.geojson", desc: "الحقبة الأولى: وادي الرافدين ومصر القديمة (4000-1200 ق.م)." },
+  { id: 2, label: "الطرق والممالك", file: "data/places_era2.geojson", desc: "الحقبة الثانية: الطرق والممالك الأولى (1200-500 ق.م)." },
+];
+const COORD_LABEL = {
+  "pleiades-representative": "إحداثيات من Pleiades (نقطة تمثيلية)",
+  approximate: "إحداثيات تقديرية، لم تُطابَق بعد",
+};
 const erasEl = document.getElementById("eras");
+const descEl = document.getElementById("era-desc");
+const warnEl = document.getElementById("era-warn");
+const countEl = document.getElementById("count");
 
 async function loadEra(era) {
   countEl.textContent = "جارٍ التحميل...";
   let data;
-  try {
-    const res = await fetch(era.file);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    data = await res.json();
-  } catch (err) {
-    countEl.textContent = `تعذّر تحميل البيانات: ${err.message}`;
-    return;
-  }
-
+  try { data = await getJson(era.file); } catch (err) { countEl.textContent = `تعذّر تحميل المواقع: ${err.message}`; return; }
   descEl.textContent = era.desc;
   const matched = data._meta?.matched ?? "";
-  warnEl.textContent = matched ? `طابق Pleiades: ${matched}. المواقع التقديرية موسومة على الخريطة.` : "";
+  warnEl.textContent = matched ? `طابق Pleiades: ${matched}. المواقع التقديرية بلون أفتح.` : "";
   countEl.textContent = `عدد المواقع: ${data.features.length}`;
-
-  if (map.getLayer("places")) map.setLayoutProperty("places", "visibility", "visible");
   const source = map.getSource("places");
   if (source) {
     source.setData(data);
+    map.setLayoutProperty("places", "visibility", "visible");
   } else {
     map.addSource("places", { type: "geojson", data });
     map.addLayer({
@@ -59,7 +91,7 @@ async function loadEra(era) {
       type: "circle",
       source: "places",
       paint: {
-        "circle-radius": 7,
+        "circle-radius": 6,
         "circle-color": ["match", ["get", "coord_status"], "approximate", "#b59a7a", "#8a4b2a"],
         "circle-stroke-color": "#fffdf8",
         "circle-stroke-width": 2,
@@ -67,68 +99,56 @@ async function loadEra(era) {
     });
     map.on("click", "places", (e) => {
       const p = e.features[0].properties;
-      popup
-        .setLngLat(e.lngLat)
-        .setHTML(
-          `<div class="popup-name">${escapeHtml(p.name_ar)}</div>` +
-            `<div class="popup-sub">${escapeHtml(p.name_en)} · ${escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)}</div>`
-        )
-        .addTo(map);
+      popup.setLngLat(e.lngLat).setHTML(
+        `<div class="popup-name">${escapeHtml(p.name_ar)}</div>` +
+        `<div class="popup-sub">${escapeHtml(p.name_en)}<span class="research-only"> · ${escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)}</span></div>`
+      ).addTo(map);
     });
-    map.on("mouseenter", "places", () => (map.getCanvas().style.cursor = "pointer"));
-    map.on("mouseleave", "places", () => (map.getCanvas().style.cursor = ""));
+    pointerOn("places");
   }
-
-  const bounds = new maplibregl.LngLatBounds();
-  for (const f of data.features) bounds.extend(f.geometry.coordinates);
-  map.fitBounds(bounds, { padding: { top: 230, bottom: 60, left: 40, right: 40 }, maxZoom: 6, duration: 400 });
-
-  for (const btn of erasEl.querySelectorAll("button")) {
-    btn.setAttribute("aria-pressed", String(Number(btn.dataset.era) === era.id));
-  }
+  fitTo(data.features, 6);
+  for (const btn of erasEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(Number(btn.dataset.era) === era.id));
+}
+for (const era of ERAS) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.textContent = era.label;
+  btn.dataset.era = era.id;
+  btn.setAttribute("aria-pressed", "false");
+  btn.addEventListener("click", () => loadEra(era));
+  erasEl.appendChild(btn);
 }
 
-// طبقة السكان: الحقب 6 و7 و8 فقط، لأن الحقب الأخرى لا تملك بيانات في المصدر (انظر data/derived/README.md).
+// ---------- السكان ----------
 const DEMO = [
-  { key: "r1", label: "إقليمي ق.م ٤٠٠٠–١٢٠٠", file: "data/demography_regional_era1.geojson" },
-  { key: "r2", label: "إقليمي ق.م ١٢٠٠–٥٠٠", file: "data/demography_regional_era2.geojson" },
-  { key: "r3", label: "إقليمي ق.م ٥٠٠–٣٠٠", file: "data/demography_regional_era3.geojson" },
-  { key: "r4", label: "إقليمي ٣٠٠–١٠٠٠", file: "data/demography_regional_era4.geojson" },
-  { key: "r5", label: "إقليمي ١٠٠٠–١٤٥٠", file: "data/demography_regional_era5.geojson" },
-  { key: "r6", label: "إقليمي ١٤٥٠–١٧٦٠", file: "data/demography_regional_era6.geojson" },
-  { key: "r7", label: "إقليمي ١٧٦٠–١٩١٤", file: "data/demography_regional_era7.geojson" },
-  { key: "c6", label: "السكان ١٤٥٠–١٧٦٠", file: "data/demography_era6.geojson" },
-  { key: "c7", label: "السكان ١٧٦٠–١٩١٤", file: "data/demography_era7.geojson" },
-  { key: "c8", label: "السكان ١٩١٤–٢٠٢٥", file: "data/demography_era8.geojson" },
+  { key: "r1", label: "إقليمي: ٤٠٠٠–١٢٠٠ ق.م (سنة ٢٠٠٠ ق.م)", file: "data/demography_regional_era1.geojson" },
+  { key: "r2", label: "إقليمي: ١٢٠٠–٥٠٠ ق.م (سنة ١٠٠٠ ق.م)", file: "data/demography_regional_era2.geojson" },
+  { key: "r3", label: "إقليمي: ٥٠٠ ق.م–٣٠٠م (سنة ١م)", file: "data/demography_regional_era3.geojson" },
+  { key: "r4", label: "إقليمي: ٣٠٠–١٠٠٠م (سنة ٧٠٠)", file: "data/demography_regional_era4.geojson" },
+  { key: "r5", label: "إقليمي: ١٠٠٠–١٤٥٠م (سنة ١٢٠٠)", file: "data/demography_regional_era5.geojson" },
+  { key: "r6", label: "إقليمي: ١٤٥٠–١٧٦٠م (سنة ١٦٠٠)", file: "data/demography_regional_era6.geojson" },
+  { key: "r7", label: "إقليمي: ١٧٦٠–١٩١٤م (سنة ١٨٠٠)", file: "data/demography_regional_era7.geojson" },
+  { key: "c6", label: "بحسب الدولة: سنة ١٧٠٠", file: "data/demography_era6.geojson" },
+  { key: "c7", label: "بحسب الدولة: سنة ١٨٠٠", file: "data/demography_era7.geojson" },
+  { key: "c8", label: "بحسب الدولة: سنة ٢٠٠٨", file: "data/demography_era8.geojson" },
 ];
-const demoEl = document.getElementById("demo-eras");
+const demoSelect = document.getElementById("demo-select");
 const demoNoteEl = document.getElementById("demo-note");
-let activeDemo = null;
+demoSelect.innerHTML = `<option value="">بدون طبقة سكان</option>` + DEMO.map((d) => `<option value="${d.key}">${escapeHtml(d.label)}</option>`).join("");
+const formatPop = (n) => Number(n).toLocaleString("ar-u-nu-latn");
 
-function formatPop(n) {
-  return Number(n).toLocaleString("ar-u-nu-latn");
-}
-
-async function loadDemography(demo) {
-  let data;
-  try {
-    const res = await fetch(demo.file);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    data = await res.json();
-  } catch (err) {
-    demoNoteEl.textContent = `تعذّر تحميل طبقة السكان: ${err.message}`;
+async function loadDemography(key) {
+  if (!key) {
+    if (map.getLayer("demography")) map.setLayoutProperty("demography", "visibility", "none");
+    demoNoteEl.textContent = "";
     return;
   }
-  activeDemo = demo.key;
-  if (map.getLayer("places")) map.setLayoutProperty("places", "visibility", "none");
-  countEl.textContent = "";
-  warnEl.textContent = "";
-  descEl.textContent = `طبقة السكان: ${demo.label}`;
-  for (const btn of erasEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", "false");
+  const demo = DEMO.find((d) => d.key === key);
+  let data;
+  try { data = await getJson(demo.file); } catch (err) { demoNoteEl.textContent = `تعذّر تحميل طبقة السكان: ${err.message}`; return; }
   const m = data._meta;
   const unit = m.countries ? `${m.countries} دولة` : "6 أقاليم";
-  demoNoteEl.textContent = `سنة ${m.year}، ${unit}. ${m.note}`;
-
+  demoNoteEl.innerHTML = `سنة ${escapeHtml(m.year)}، ${unit}.<span class="research-only"> ${escapeHtml(m.note)}</span>`;
   const source = map.getSource("demography");
   if (source) {
     source.setData(data);
@@ -142,157 +162,157 @@ async function loadDemography(demo) {
       paint: {
         "circle-radius": ["interpolate", ["linear"], ["get", "population"], 0, 3, 1000000, 8, 100000000, 22, 1000000000, 40],
         "circle-color": "#8a4b2a",
-        "circle-opacity": 0.45,
+        "circle-opacity": 0.4,
         "circle-stroke-color": "#fffdf8",
         "circle-stroke-width": 1,
       },
-    });
+    }, map.getLayer("claim-points") ? "claim-points" : undefined);
     map.on("click", "demography", (e) => {
       const p = e.features[0].properties;
-      popup
-        .setLngLat(e.lngLat)
-        .setHTML(
-          `<div class="popup-name">${escapeHtml(p.name_en)}</div>` +
-            `<div class="popup-sub">${formatPop(p.population)} نسمة، سنة ${p.year}</div>` +
-            `<div class="popup-sub">${p.level === "region" ? "إقليم HYDE، تقريبي، وليس حدود الحقبة" : "حدود الدولة الحديثة، وليست كيانات الحقبة"}</div>`
-        )
-        .addTo(map);
+      popup.setLngLat(e.lngLat).setHTML(
+        `<div class="popup-name">${escapeHtml(p.name_en)}</div>` +
+        `<div class="popup-sub">${formatPop(p.population)} نسمة، سنة ${escapeHtml(p.year)}</div>` +
+        `<div class="popup-sub">${p.level === "region" ? "إقليم تقريبي، وليس حدود الحقبة" : "حدود الدولة الحديثة، وليست كيانات الحقبة"}</div>`
+      ).addTo(map);
     });
-    map.on("mouseenter", "demography", () => (map.getCanvas().style.cursor = "pointer"));
-    map.on("mouseleave", "demography", () => (map.getCanvas().style.cursor = ""));
+    pointerOn("demography");
   }
-  const bounds = new maplibregl.LngLatBounds();
-  for (const f of data.features) bounds.extend(f.geometry.coordinates);
-  map.fitBounds(bounds, { padding: { top: 40, bottom: 40, left: 40, right: 420 }, maxZoom: 3, duration: 400 });
-
-  for (const btn of demoEl.querySelectorAll("button")) {
-    btn.setAttribute("aria-pressed", String(btn.dataset.demo === demo.key));
-  }
+  fitTo(data.features, 3);
 }
+demoSelect.addEventListener("change", () => loadDemography(demoSelect.value));
 
-for (const demo of DEMO) {
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.textContent = demo.label;
-  btn.dataset.demo = demo.key;
-  btn.setAttribute("aria-pressed", "false");
-  btn.addEventListener("click", () => loadDemography(demo));
-  demoEl.appendChild(btn);
-}
-
-const noDemoBtn = document.createElement("button");
-noDemoBtn.type = "button";
-noDemoBtn.textContent = "بدون طبقة";
-noDemoBtn.setAttribute("aria-pressed", "true");
-noDemoBtn.addEventListener("click", () => {
-  if (map.getLayer("demography")) map.setLayoutProperty("demography", "visibility", "none");
-  activeDemo = null;
-  demoNoteEl.textContent = "";
-  for (const btn of demoEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(btn === noDemoBtn));
-});
-demoEl.appendChild(noDemoBtn);
-
-for (const era of ERAS) {
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.textContent = era.label;
-  btn.dataset.era = era.id;
-  btn.setAttribute("aria-pressed", "false");
-  btn.addEventListener("click", () => loadEra(era));
-  erasEl.appendChild(btn);
-}
-
-// ادعاءات موثّقة لكل حقبة (مسودة): تُعرض بعد مطابقة النص.
-const CLAIM_ERAS = [1, 2, 3, 4, 5, 6];
+// ---------- الادعاءات بحسب الحقبة ----------
 const claimsEl = document.getElementById("claims-eras");
 const claimsListEl = document.getElementById("claims-list");
 
-function renderClaims(data) {
-  const items = data.claims.map((c) => {
-    const where = c.chapter ? `<div class="popup-sub">${escapeHtml(c.chapter)}</div>` : "";
-    return `<div class="claim">${where}<div>${escapeHtml(c.statement)}</div>` +
-      `<div class="quote">“${escapeHtml(c.quote)}”</div>` +
-      `<div class="popup-sub">${escapeHtml(c.attributed_to)}</div>` +
-      `<div class="popup-sub">تحفّظ: ${escapeHtml(c.hedge)}</div></div>`;
-  });
-  return items.length ? items.join("") : "<p>لا ادعاءات موثّقة لهذه الحقبة بعد.</p>";
+function claimHtml(c, extra = "") {
+  return `<div class="ev ${extra}">${escapeHtml(c.statement)}` +
+    `<div class="sub">${escapeHtml(c.attributed_to)}</div>` +
+    `<details class="research-only"><summary class="sub">الاقتباس والتحفّظ</summary>` +
+    `<div class="src-quote">“${escapeHtml(c.quote)}”</div><div class="sub">تحفّظ: ${escapeHtml(c.hedge)}</div></details></div>`;
 }
-
 async function loadClaims(n) {
   claimsListEl.textContent = "جارٍ التحميل...";
   try {
-    const res = await fetch(`data/claims_era${n}.json`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    claimsListEl.innerHTML = `<p class="popup-sub">${escapeHtml(data._meta.status)} (${data._meta.count})</p>` + renderClaims(data);
+    const data = await getJson(`data/claims_era${n}.json`);
+    claimsListEl.innerHTML = `<p class="sub">${escapeHtml(data._meta.status)} (${data._meta.count})</p>` +
+      (data.claims.length ? data.claims.map((c) => claimHtml(c)).join("") : "<p>لا ادعاءات موثّقة لهذه الحقبة بعد.</p>");
   } catch (err) {
     claimsListEl.textContent = `تعذّر تحميل الادعاءات: ${err.message}`;
   }
-  for (const btn of claimsEl.querySelectorAll("button")) {
-    btn.setAttribute("aria-pressed", String(Number(btn.dataset.claims) === n));
-  }
+  for (const btn of claimsEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(Number(btn.dataset.claims) === n));
 }
-
-for (const n of CLAIM_ERAS) {
+for (const n of [1, 2, 3, 4, 5, 6]) {
   const btn = document.createElement("button");
   btn.type = "button";
-  btn.textContent = `ح${n}`;
-  btn.title = `ادعاءات الحقبة ${n}`;
+  btn.textContent = `الحقبة ${n}`;
   btn.dataset.claims = n;
   btn.setAttribute("aria-pressed", "false");
   btn.addEventListener("click", () => loadClaims(n));
   claimsEl.appendChild(btn);
 }
 
-// ادعاءات مرتبطة بأماكن على الخريطة (طبقة منفصلة، تُحمَّل عند الطلب).
+// ---------- أماكن الادعاءات ----------
 const claimMapBtn = document.getElementById("claim-map-btn");
-let claimLayerReady = false;
+let claimPoints = null;
 
-async function toggleClaimPoints() {
+async function ensureClaimPoints() {
+  if (claimPoints) return true;
+  try { claimPoints = await getJson("data/claim_points.geojson"); } catch { return false; }
+  map.addSource("claim-points", { type: "geojson", data: claimPoints });
+  map.addLayer({
+    id: "claim-points",
+    type: "circle",
+    source: "claim-points",
+    layout: { visibility: "none" },
+    paint: {
+      "circle-radius": ["+", 9, ["*", 2.5, ["get", "count"]]],
+      "circle-color": cssVar("--evidence"),
+      "circle-opacity": 0.7,
+      "circle-stroke-color": "#fffdf8",
+      "circle-stroke-width": 2,
+    },
+  });
+  map.on("click", "claim-points", (e) => {
+    const p = e.features[0].properties;
+    const only = activeSunna ? new Set(activeSunna.ids) : null;
+    const list = JSON.parse(p.claims).filter((c) => !only || only.has(c.id)).map((c) =>
+      `<div style="margin-top:6px">${escapeHtml(c.statement)}` +
+      `<div class="popup-sub">الحقبة ${c.era} · ${escapeHtml(c.attributed_to)}</div>` +
+      `<div class="popup-sub research-only">“${escapeHtml(c.quote)}”</div></div>`
+    ).join("");
+    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.name_ar)}</div>${list}`).addTo(map);
+  });
+  pointerOn("claim-points");
+  return true;
+}
+function showClaimPoints(show, filter = null) {
+  if (!map.getLayer("claim-points")) return;
+  map.setFilter("claim-points", filter);
+  map.setLayoutProperty("claim-points", "visibility", show ? "visible" : "none");
+  claimMapBtn.setAttribute("aria-pressed", String(show && !filter));
+}
+claimMapBtn.addEventListener("click", async () => {
+  if (!(await ensureClaimPoints())) return;
   const show = claimMapBtn.getAttribute("aria-pressed") !== "true";
-  if (show && !claimLayerReady) {
-    try {
-      const res = await fetch("data/claim_points.geojson");
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      map.addSource("claim-points", { type: "geojson", data });
-      map.addLayer({
-        id: "claim-points",
-        type: "circle",
-        source: "claim-points",
-        paint: {
-          "circle-radius": ["+", 10, ["*", 3, ["get", "count"]]],
-          "circle-color": "#2a6f6a",
-          "circle-opacity": 0.65,
-          "circle-stroke-color": "#fffdf8",
-          "circle-stroke-width": 2,
-        },
-      });
-      map.on("click", "claim-points", (e) => {
-        const p = e.features[0].properties;
-        const list = JSON.parse(p.claims).map((c) =>
-          `<div style="margin-top:6px">${escapeHtml(c.statement)}` +
-          `<div class="popup-sub">حقبة ${c.era}: “${escapeHtml(c.quote)}”</div>` +
-          `<div class="popup-sub">${escapeHtml(c.attributed_to)}</div></div>`
-        ).join("");
-        popup
-          .setLngLat(e.lngLat)
-          .setHTML(`<div class="popup-name">${escapeHtml(p.name_ar)} (${escapeHtml(p.name_en)})</div>${list}`)
-          .addTo(map);
-      });
-      map.on("mouseenter", "claim-points", () => (map.getCanvas().style.cursor = "pointer"));
-      map.on("mouseleave", "claim-points", () => (map.getCanvas().style.cursor = ""));
-      claimLayerReady = true;
-    } catch (err) {
-      countEl.textContent = `تعذّر تحميل الادعاءات على الخريطة: ${err.message}`;
-      return;
-    }
+  activeSunna = null;
+  for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", "false");
+  showClaimPoints(show);
+  if (show) fitTo(claimPoints.features, 4);
+});
+
+// ---------- السنن ----------
+const sunanListEl = document.getElementById("sunan-list");
+const sunanDetailEl = document.getElementById("sunan-detail");
+let sunanData = null;
+let activeSunna = null;
+
+function renderSunna(s, placesLinked) {
+  const khaldun = s.khaldun.map((k) => `<div class="khaldun">«${escapeHtml(k.quote)}»<div class="sub">ابن خلدون، المقدمة: ${escapeHtml(k.location)}</div></div>`).join("");
+  const support = s.supporting.length
+    ? s.supporting.map((c) => claimHtml(c, "support")).join("")
+    : `<p class="sub">لا شواهد مؤيدة موثّقة بعد.</p>`;
+  const limits = s.limiting.map((x) => {
+    if (x.kind === "claim") return claimHtml({ ...x, statement: `${x.statement} — ${x.note}` }, "limit");
+    if (x.kind === "khaldun") return `<div class="ev limit">«${escapeHtml(x.quote)}» <span class="sub">(${escapeHtml(x.location)})</span><div class="sub">${escapeHtml(x.note)}</div></div>`;
+    return `<div class="ev limit research-only">${escapeHtml(x.note)}</div>`;
+  }).join("");
+  const modern = s.modern.length
+    ? `<details class="research-only"><summary class="sub">قراءات حديثة (إحالة عامة لم تُقتبس)</summary>${s.modern.map((m) => `<div class="sub">${escapeHtml(m.work)}: ${escapeHtml(m.note)}</div>`).join("")}</details>`
+    : "";
+  const mapNote = placesLinked ? `<p class="sub">أماكن الشواهد معروضة على الخريطة باللون الأخضر.</p>` : `<p class="sub">لا أماكن موثّقة الإحداثيات لشواهد هذه السُنّة بعد.</p>`;
+  sunanDetailEl.innerHTML =
+    `<div class="hyp">${escapeHtml(s.hypothesis)}</div>` +
+    `<span class="badge">${escapeHtml(s.strength)}: ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>` +
+    khaldun + mapNote + support + limits + modern;
+}
+async function selectSunna(s) {
+  for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.sunna === s.id));
+  const ids = [...s.supporting, ...s.limiting].filter((x) => x.id).map((x) => x.id);
+  activeSunna = { id: s.id, ids };
+  const ready = await ensureClaimPoints();
+  let linked = [];
+  if (ready && ids.length) {
+    linked = claimPoints.features.filter((f) => ids.some((id) => f.properties.claim_ids.includes(`,${id},`)));
+    showClaimPoints(linked.length > 0, ["any", ...ids.map((id) => ["in", `,${id},`, ["get", "claim_ids"]])]);
+    fitTo(linked, 4);
+  } else if (ready) {
+    showClaimPoints(false);
   }
-  if (claimLayerReady) map.setLayoutProperty("claim-points", "visibility", show ? "visible" : "none");
-  claimMapBtn.setAttribute("aria-pressed", String(show));
-  claimMapBtn.textContent = show ? "إخفاء الادعاءات من الخريطة" : "عرض الادعاءات على الخريطة";
+  renderSunna(s, linked.length > 0);
+}
+async function loadSunan() {
+  try { sunanData = await getJson("data/sunan.json"); } catch (err) { sunanDetailEl.textContent = `تعذّر تحميل السنن: ${err.message}`; return; }
+  for (const s of sunanData.sunan) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.textContent = s.name.replace("سُنّة ", "");
+    btn.title = s.name;
+    btn.dataset.sunna = s.id;
+    btn.setAttribute("aria-pressed", "false");
+    btn.addEventListener("click", () => selectSunna(s));
+    sunanListEl.appendChild(btn);
+  }
 }
 
-claimMapBtn.addEventListener("click", toggleClaimPoints);
-
-map.on("load", () => loadEra(ERAS[0]));
+map.on("load", () => { loadSunan(); });
