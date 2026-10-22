@@ -6,7 +6,8 @@ function escapeHtml(text) {
 }
 const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const isNarrow = () => window.innerWidth < 600;
-const fitPadding = () => (isNarrow() ? 30 : { top: 40, bottom: 40, left: 40, right: 420 });
+// على الشاشات الضيقة تشغل اللوحة أعلى الشاشة (حتى 55%)، فتوضع النقاط تحتها.
+const fitPadding = () => (isNarrow() ? { top: Math.round(window.innerHeight * 0.55) + 20, bottom: 30, left: 30, right: 30 } : { top: 40, bottom: 40, left: 40, right: 420 });
 
 // ---------- طريقة العرض: مبسّط أو باحث ----------
 const modeButtons = document.querySelectorAll(".mode button");
