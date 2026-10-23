@@ -67,7 +67,7 @@ node pipeline/validate.mjs Claim fixtures/sample_claims.json
 
 ## الواجهة (Node.js + MapLibre GL)
 
-- `web/index.html` و`web/app.js`: خريطة تعرض مواقع الحقبة الأولى من `web/data/places_era1.geojson`.
+- `web/index.html` و`web/app.js`: خريطة تعرض مواقع الحقب الأربع الأولى (`web/data/places_era1..4.geojson`) بأزرار تبديل.
 - `web/vendor/`: ملفات MapLibre GL 4.7.1، منسوخة من `node_modules` لتعمل بلا CDN.
 - تشغيل محلي: `cd web && python3 -m http.server 8000` ثم افتح `http://localhost:8000`.
 - الإحداثيات في الملف **تقريبية ولم تُراجع** بعد مع Pleiades، وتحمل `coord_status: approximate`.
@@ -89,10 +89,11 @@ node pipeline/validate.mjs Claim fixtures/sample_claims.json
 ## الحقب على الخريطة
 
 - كل حقبة لها إعداد في `scripts/config/places_eraN.json`، وملف مبني في `web/data/places_eraN.geojson`.
-- `node scripts/build_places.mjs scripts/config/places_era2.json data/raw/pleiades-places-latest.csv.gz web/data/places_era2.geojson` يبني حقبة ثانية.
-- الحقبة الأولى: 8 مواقع، 7 منها من Pleiades. الحقبة الثانية: 19 موقعاً، 17 منها من Pleiades، ومجدو وأوغاريت تقديريان ومُوسَمان.
-- الواجهة تعرض أزرار تبديل بين الحقب.
-- **لم تُبنَ بعد** للحقبة الثانية: تحقق المصادر (الـ passages والـ claims) الذي اكتمل للحقبة الأولى.
+- الحقب المبنية الآن: 1 إلى 4. كل إعداد يُبنى بـ `npm run build:places`، وعدد المواقع في كل ملف يُطبع عند البناء.
+- الحقبتان الأولى والثانية: أغلب المواقع بإحداثيات Pleiades، وما بقي تقديري وموسوم بلون أفتح (في الحقبة الثانية مجدو وأوغاريت).
+- الحقبتان الثالثة والرابعة: كل المواقع بإحداثيات Pleiades، ولا مواقع تقديرية.
+- مدن العصر الإسلامي المؤسسة (بغداد، الكوفة، البصرة، الفسطاط، القيروان) غير موجودة في Pleiades، فلا تظهر بعد.
+- الواجهة تعرض أزرار تبديل بين الحقب، وعدد ادعاءات كل حقبة في `web/data/claims_index.json`.
 
 ## ربط الادعاءات بالخريطة
 

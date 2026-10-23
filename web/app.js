@@ -63,6 +63,8 @@ async function getJson(url) {
 const ERAS = [
   { id: 1, label: "الماء والاستقرار", file: "data/places_era1.geojson", desc: "الحقبة الأولى: وادي الرافدين ومصر القديمة (4000-1200 ق.م)." },
   { id: 2, label: "الطرق والممالك", file: "data/places_era2.geojson", desc: "الحقبة الثانية: الطرق والممالك الأولى (1200-500 ق.م)." },
+  { id: 3, label: "الإمبراطوريات الكبرى", file: "data/places_era3.geojson", desc: "الحقبة الثالثة: الإمبراطوريات الكبرى (500 ق.م-300م)." },
+  { id: 4, label: "الأديان الكبرى", file: "data/places_era4.geojson", desc: "الحقبة الرابعة: الأديان الكبرى وتشكّل العالم القديم المتأخر (300-1000م). مدن العصر الإسلامي المؤسسة حديثاً ليست في هذه الطبقة بعد." },
 ];
 const COORD_LABEL = {
   "pleiades-representative": "إحداثيات من Pleiades (نقطة تمثيلية)",

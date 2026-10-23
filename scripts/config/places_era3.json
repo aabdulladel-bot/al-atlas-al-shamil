@@ -1,0 +1,24 @@
+{
+  "_note": "مواقع الحقبة الثالثة: الإمبراطوريات الكبرى (500 ق.م-300م). كل معرّف Pleiades مطابق لعنوان متوقع. لا مواقع تقديرية في هذه الطبقة.",
+  "era": 3,
+  "places": [
+    { "slug": "athens", "name_ar": "أثينا", "name_en": "Athens", "pleiades_id": "579885", "expected_title": "Athenae" },
+    { "slug": "rome", "name_ar": "روما", "name_en": "Rome", "pleiades_id": "423025", "expected_title": "Roma" },
+    { "slug": "carthage", "name_ar": "قرطاج", "name_en": "Carthage", "pleiades_id": "314921", "expected_title": "Carthago" },
+    { "slug": "syracuse", "name_ar": "سرقوسة", "name_en": "Syracuse", "pleiades_id": "462503", "expected_title": "Syracusae/Syrakousai" },
+    { "slug": "alexandria", "name_ar": "الإسكندرية", "name_en": "Alexandria", "pleiades_id": "727070", "expected_title": "Alexandria" },
+    { "slug": "jerusalem", "name_ar": "القدس", "name_en": "Jerusalem", "pleiades_id": "687928", "expected_title": "Ierusalem/Hierosolyma/Col. Aelia Capitolina" },
+    { "slug": "persepolis", "name_ar": "برسبوليس", "name_en": "Persepolis", "pleiades_id": "922695", "expected_title": "Persepolis/Parsa/Persai/Sat Setun" },
+    { "slug": "babylon", "name_ar": "بابل", "name_en": "Babylon", "pleiades_id": "893951", "expected_title": "Babylon" },
+    { "slug": "ctesiphon", "name_ar": "طيسفون (المدائن)", "name_en": "Ctesiphon", "pleiades_id": "893976", "expected_title": "Ctesiphon" },
+    { "slug": "palmyra", "name_ar": "تدمر", "name_en": "Palmyra", "pleiades_id": "668331", "expected_title": "Palmyra" },
+    { "slug": "petra", "name_ar": "البتراء", "name_en": "Petra", "pleiades_id": "697725", "expected_title": "Petra" },
+    { "slug": "ephesus", "name_ar": "أفسس", "name_en": "Ephesus", "pleiades_id": "599612", "expected_title": "Ephesus/Arsinoe(ia)" },
+    { "slug": "gades", "name_ar": "قادس", "name_en": "Gades", "pleiades_id": "256177", "expected_title": "Gadeira/Gades/Col. Augusta Gaditana" },
+    { "slug": "lepcis", "name_ar": "لبدة الكبرى", "name_en": "Lepcis Magna", "pleiades_id": "344448", "expected_title": "Neapolis/Lepcis Magna" },
+    { "slug": "londinium", "name_ar": "لوندينيوم (لندن)", "name_en": "Londinium", "pleiades_id": "79574", "expected_title": "Londinium/Augusta" },
+    { "slug": "pataliputra", "name_ar": "باتاليبوترا", "name_en": "Pataliputra", "pleiades_id": "59978", "expected_title": "Palibothra" },
+    { "slug": "taxila", "name_ar": "تكسيلا", "name_en": "Taxila", "pleiades_id": "60083", "expected_title": "Taxila" },
+    { "slug": "marakanda", "name_ar": "مرقندة (سمرقند)", "name_en": "Marakanda", "pleiades_id": "59915", "expected_title": "Marakanda" }
+  ]
+}

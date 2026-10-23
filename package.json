@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node --test pipeline/normalize.test.mjs pipeline/extract_batch.test.mjs",
     "fetch:sources": "node scripts/fetch_sources.mjs",
-    "build:places": "node scripts/build_places.mjs && node scripts/build_places.mjs scripts/config/places_era2.json data/raw/pleiades-places-latest.csv.gz web/data/places_era2.geojson",
+    "build:places": "node scripts/build_places.mjs && node scripts/build_places.mjs scripts/config/places_era2.json data/raw/pleiades-places-latest.csv.gz web/data/places_era2.geojson && node scripts/build_places.mjs scripts/config/places_era3.json data/raw/pleiades-places-latest.csv.gz web/data/places_era3.geojson && node scripts/build_places.mjs scripts/config/places_era4.json data/raw/pleiades-places-latest.csv.gz web/data/places_era4.geojson",
     "build:claims": "node scripts/build_claims.mjs",
     "build:claim-points": "node scripts/build_places.mjs scripts/config/claim_places.json data/raw/pleiades-places-latest.csv.gz web/data/claim_places.geojson && node scripts/build_claim_points.mjs",
     "build:basemap": "node scripts/build_basemap.mjs",
@@ -16,7 +16,8 @@
     "check:all": "node scripts/check_all_quotes.mjs && node scripts/check_schema.mjs && node verification/era3/polybius_iii_greek_check.mjs && node verification/era3/polybius_ix_greek_check.mjs && node sunan/check_sunan.mjs",
     "analyze:seshat": "mkdir -p /tmp/seshat_x && unzip -oq data/raw/Equinox_Data-v.1.zip -d /tmp/seshat_x && python3 -I analysis/seshat_sunan.py /tmp/seshat_x/seshatdb-Equinox_Data-ed8f570/Equinox_on_GitHub_June9_2022.xlsx analysis > /dev/null && node analysis/build_report.mjs && node sunan/check_sunan.mjs",
     "check:quotes": "node scripts/check_all_quotes.mjs",
-    "test:ui": "node scripts/ui_smoke.mjs"
+    "test:ui": "node scripts/ui_smoke.mjs",
+    "review:import": "node scripts/import_review.mjs"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,51 @@
+{
+  "era": 7,
+  "source": {
+    "source_id": "marx-manifesto-moore-1888-mia",
+    "file": "verification/era7/marx_moore1888_mia.txt",
+    "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+    "chapter": "I. Bourgeois and Proletarians"
+  },
+  "items": [
+    {
+      "slug": "class-struggles",
+      "quote": "The history of all hitherto existing society 1 is the history of class struggles.",
+      "statement": "يقرر البيان أن تاريخ كل مجتمع حتى الآن هو تاريخ صراع الطبقات",
+      "type": "rule",
+      "layer": "contemporary_witness",
+      "hedge": "أطروحة في بيان سياسي تعبوي لا دراسة تاريخية، والرقم 1 إحالة إلى هامش إنجلز (1888) الذي يقيّدها بالتاريخ المكتوب"
+    },
+    {
+      "slug": "revolutionising-production",
+      "quote": "The bourgeoisie cannot exist without constantly revolutionising the instruments of production, and thereby the relations of production, and with them the whole relations of society.",
+      "statement": "يرى البيان أن البرجوازية لا تبقى إلا بتثوير أدوات الإنتاج باستمرار، ومعها علاقات الإنتاج وعلاقات المجتمع كلها",
+      "type": "judgment",
+      "layer": "contemporary_witness",
+      "hedge": "حكم تحليلي من مؤلفَين لهما موقف سياسي معلن"
+    },
+    {
+      "slug": "solid-melts",
+      "quote": "All that is solid melts into air, all that is holy is profaned, and man is at last compelled to face with sober senses his real conditions of life, and his relations with his kind.",
+      "statement": "يصف البيان عصر البرجوازية بأنه يذيب كل ثابت ويدنّس كل مقدس، فيضطر الإنسان إلى مواجهة ظروف حياته الحقيقية",
+      "type": "judgment",
+      "layer": "contemporary_witness",
+      "hedge": "صياغة بلاغية في بيان سياسي، والترجمة الإنجليزية لـ Moore تتصرف في الأصل الألماني"
+    },
+    {
+      "slug": "expanding-market",
+      "quote": "The need of a constantly expanding market for its products chases the bourgeoisie over the entire surface of the globe.",
+      "statement": "يرى البيان أن حاجة البرجوازية إلى سوق تتسع باستمرار تدفعها إلى الانتشار في أرجاء الأرض",
+      "type": "cause",
+      "layer": "contemporary_witness",
+      "hedge": "تفسير سببي من مؤلفَين لهما موقف سياسي معلن، لا وصف محايد"
+    },
+    {
+      "slug": "cosmopolitan-production",
+      "quote": "The bourgeoisie has through its exploitation of the world market given a cosmopolitan character to production and consumption in every country.",
+      "statement": "يرى البيان أن استغلال البرجوازية للسوق العالمية أعطى الإنتاج والاستهلاك طابعاً عالمياً في كل بلد",
+      "type": "judgment",
+      "layer": "contemporary_witness",
+      "hedge": "حكم عام في بيان سياسي سنة 1848، قبل كثير من التحولات التي يصفها"
+    }
+  ]
+}

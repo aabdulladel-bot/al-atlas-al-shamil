@@ -284,6 +284,24 @@
           "bytes": 242758
         }
       ]
+    },
+    {
+      "id": "turath-4129-tibr-masbuk",
+      "file": "verification/era5/ghazali_tibr_turath4129_v1p44.txt",
+      "url": "https://app.turath.io/book/4129",
+      "license": "النص الأصلي من القرن السادس الهجري في الملك العام. النشرة: ضبط أحمد شمس الدين، دار الكتب العلمية، بيروت 1988. الاقتباس بإذن شفهي من تراث (قرار المستخدم).",
+      "tier": "B",
+      "landing": "https://app.turath.io/book/4129",
+      "attribution": "التبر المسبوك في نصيحة الملوك، عبر تراث (turath.io)",
+      "note": "صفحة واحدة فقط (ج1 ص44). الكتاب ترجمة عربية لنصيحة الملوك المنسوبة إلى الغزالي.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era5/ghazali_tibr_turath4129_v1p44.txt",
+          "sha256": "3d7e97e19c5a544a66e1e956c0e95fecab984a6e867c00bd50d3f87e9d8ad056",
+          "bytes": 2719
+        }
+      ]
     }
   ]
 }
