@@ -55,8 +55,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -66,8 +66,8 @@
       },
       "verified_by": "pilot-era7"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000409",
@@ -141,7 +141,7 @@
     "id": "cl_000000411",
     "passage_id": "tocqueville-reeve-1840-vol3:love-of-wellbeing",
     "quote": "The love of well-being is there displayed as a tenn- cious, exclusive, universal passion ; but its range is confined.",
-    "statement": "يرى توكفيل أن حب الرفاه في المجتمع الديمقراطي شغف عنيد شامل يستأثر بالناس، لكن مداه محدود",
+    "statement": "يرى توكفيل أن حب الرفاه عند الأمريكيين شغف عنيد شامل يستأثر بالناس، لكن مداه محدود",
     "type": "judgment",
     "layer": "contemporary_witness",
     "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
@@ -157,8 +157,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era7"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -168,8 +168,8 @@
       },
       "verified_by": "pilot-era7"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000412",
@@ -429,8 +429,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -440,8 +440,8 @@
       },
       "verified_by": "pilot-era7"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000420",
@@ -463,8 +463,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -474,7 +474,7 @@
       },
       "verified_by": "pilot-era7"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   }
 ]

@@ -71,7 +71,7 @@
     "id": "cl_000000347",
     "passage_id": "xuanzang:beal1884:ceylon-merchants",
     "quote": "came here to trade",
-    "statement": "يذكر فاهيان أن تجار بلدان شتى كانوا يأتون إلى مملكة سيلان للتجارة، فيعرضون السلع بأسعار موسومة",
+    "statement": "يذكر فاهيان أن تجار بلدان شتى كانوا يأتون إلى مملكة سيلان للتجارة",
     "type": "description",
     "layer": "contemporary_witness",
     "attributed_to": "فاهيان (ينقله بيل في مقدمة ترجمة شوانزانغ، 1884)",
@@ -87,8 +87,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era4"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -98,8 +98,8 @@
       },
       "verified_by": "pilot-era4"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000348",
@@ -189,8 +189,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -200,8 +200,8 @@
       },
       "verified_by": "pilot-era4"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000351",
@@ -497,8 +497,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -508,19 +508,19 @@
       },
       "verified_by": "pilot-era4"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000360",
     "passage_id": "procopius:dewing1928:romans-stop-persian-silk",
     "quote": "purchase their silk from the Persians",
-    "statement": "يذكر بروكوبيوس أن يوستينيانوس أراد أن يتوقف الرومان عن شراء الحرير من الفرس",
+    "statement": "يذكر بروكوبيوس أن الرهبان الذين جاءوا إلى الإمبراطور أرادوا أن يتوقف الرومان عن شراء الحرير من الفرس، ووعدوا بتدبير ذلك",
     "type": "event",
     "layer": "contemporary_witness",
     "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
     "isnad": null,
-    "hedge": "رغبة الإمبراطور كما يصفها بروكوبيوس، وليست سياسة مثبتة من مصدر آخر",
+    "hedge": "رغبة الرهبان كما يرويها بروكوبيوس، وليست سياسة للإمبراطور مثبتة من مصدر آخر",
     "author_preference": null,
     "mentions": {
       "places": [],
@@ -531,8 +531,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era4"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -542,8 +542,8 @@
       },
       "verified_by": "pilot-era4"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000361",
@@ -583,7 +583,7 @@
     "id": "cl_000000362",
     "passage_id": "procopius:dewing1928:offspring-of-worms",
     "quote": "offspring of these worms",
-    "statement": "يذكر بروكوبيوس أن نقل بيض هذه الدودة، لا الدودة الحية، إلى الأرض الرومانية ممكن وسهل",
+    "statement": "يذكر بروكوبيوس أن الرهبان قالوا إن نسل هذه الدودة يتكون من بيض لا يُحصى من كل واحدة",
     "type": "event",
     "layer": "contemporary_witness",
     "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
@@ -599,8 +599,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era4"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -610,8 +610,8 @@
       },
       "verified_by": "pilot-era4"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000366",
@@ -633,8 +633,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -644,14 +644,14 @@
       },
       "verified_by": "pilot-era4"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000367",
     "passage_id": "tabari:turath9783:v9p577-bridge",
     "quote": "قطعوا قنطرة قديمة أعجمية",
-    "statement": "يذكر الطبري أن الجند قطعوا قنطرة قديمة بين سوق الأهواز ورام هرمز، فامتنع التجار وحاملو الميرة عن المرور، فتأخرت الميرة عن العسكر ثلاثة أيام حتى أُصلحت القنطرة",
+    "statement": "يذكر الطبري أن الجند قطعوا قنطرة قديمة بين سوق الأهواز ورام هرمز، فامتنع التجار ومن يحمل الميرة من عبورها، ثم أُصلحت القنطرة في اليوم نفسه",
     "type": "event",
     "layer": "later_historian",
     "attributed_to": "الطبري (تاريخ الرسل والملوك، ط المعارف عبر تراث، برخصة شفهية من المنصة؛ غير موثقة كتابة)",
@@ -667,8 +667,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era4"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -678,7 +678,7 @@
       },
       "verified_by": "pilot-era4"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   }
 ]
