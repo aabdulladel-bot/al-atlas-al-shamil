@@ -124,3 +124,7 @@ node pipeline/validate.mjs Claim fixtures/sample_claims.json
 ## المراجعة البشرية
 
 `review/sunan_evidence_review.csv` يضم كل الادعاءات التي تعتمد عليها السنن (31)، مع تعليمات في `review/README.md`.
+
+## الاختبار الكمي للسنن (Seshat)
+
+`analysis/` يختبر ثلاث سنن ببيانات Seshat (CC BY-NC-SA): أعمار الدول، والتجارة ومراكزها، والصنائع والعمران. النتائج في `analysis/seshat_results.json`، والتقرير في `analysis/README.md`، وتظهر في بطاقة كل سُنّة بالواجهة مع حكم مشتق من فترة الثقة (يؤيد، أو لا يؤيد، أو غير حاسم). إعادة التشغيل: `npm run analyze:seshat`.

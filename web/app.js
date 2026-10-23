@@ -281,11 +281,16 @@ function renderSunna(s, placesLinked) {
   const modern = s.modern.length
     ? `<details class="research-only"><summary class="sub">قراءات حديثة (إحالة عامة لم تُقتبس)</summary>${s.modern.map((m) => `<div class="sub">${escapeHtml(m.work)}: ${escapeHtml(m.note)}</div>`).join("")}</details>`
     : "";
+  const quant = (s.quantitative || []).length
+    ? `<div class="quant"><div class="sub"><b>اختبار كمي ببيانات Seshat</b> (ارتباط لا سببية):</div>` +
+      s.quantitative.map((q) => `<div class="ev"><span class="badge">${escapeHtml(q.verdict)}</span> ${escapeHtml(q.scope)}<div class="sub research-only">${escapeHtml(q.text)}</div></div>`).join("") +
+      `</div>`
+    : "";
   const mapNote = placesLinked ? `<p class="sub">أماكن الشواهد معروضة على الخريطة باللون الأخضر.</p>` : `<p class="sub">لا أماكن موثّقة الإحداثيات لشواهد هذه السُنّة بعد.</p>`;
   sunanDetailEl.innerHTML =
     `<div class="hyp">${escapeHtml(s.hypothesis)}</div>` +
     `<span class="badge">${escapeHtml(s.strength)}: ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>` +
-    khaldun + mapNote + support + limits + modern;
+    khaldun + quant + mapNote + support + limits + modern;
 }
 async function selectSunna(s) {
   for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.sunna === s.id));

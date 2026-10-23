@@ -1,0 +1,261 @@
+{
+  "_source": "Seshat Equinox 2020 (Equinox_on_GitHub_June9_2022.xlsx)، ترخيص CC BY-NC-SA",
+  "_note": "نتائج ارتباطية من بيانات مُرمَّزة ومُستكمَلة إحصائياً (imputed)، لا تثبت سببية. الكيان في Seshat ليس دائماً دولة بمعنى ابن خلدون.",
+  "seed": 7,
+  "test_a_dynasty_age": {
+    "hypothesis": "الدولة في الغالب لا تعدو أعمار ثلاثة أجيال (120 سنة)",
+    "state_definition": "كيان له ثلاثة مستويات إدارية فأكثر في أي وقت (AdmLev ≥ 3)",
+    "all_states_raw": {
+      "label": "كل الدول، مراحل Seshat كما هي",
+      "n": 244,
+      "median_years": 144.5,
+      "iqr_years": [
+        100.0,
+        200.0
+      ],
+      "share_le_120": 0.377,
+      "share_le_120_ci95": [
+        0.316,
+        0.443
+      ]
+    },
+    "all_states_merged": {
+      "label": "كل الدول، بعد دمج المراحل المرقّمة",
+      "n": 227,
+      "median_years": 149.0,
+      "iqr_years": [
+        101.5,
+        219.0
+      ],
+      "share_le_120": 0.348,
+      "share_le_120_ci95": [
+        0.286,
+        0.41
+      ]
+    },
+    "islamic_world_raw": {
+      "label": "العالم الإسلامي تقريباً (بعد 650م، غرب آسيا وأفريقيا وآسيا الوسطى وجنوبها)",
+      "n": 58,
+      "median_years": 104.0,
+      "iqr_years": [
+        74.0,
+        162.25
+      ],
+      "share_le_120": 0.621,
+      "share_le_120_ci95": [
+        0.5,
+        0.741
+      ]
+    },
+    "islamic_world_merged": {
+      "label": "العالم الإسلامي تقريباً، بعد دمج المراحل",
+      "n": 54,
+      "median_years": 114.0,
+      "iqr_years": [
+        74.0,
+        174.25
+      ],
+      "share_le_120": 0.556,
+      "share_le_120_ci95": [
+        0.426,
+        0.685
+      ]
+    },
+    "merged_phase_groups": 15,
+    "longest_merged": [
+      {
+        "name": "Egypt - Dynasty",
+        "Start": -3100,
+        "End": -2651,
+        "dur": 450
+      },
+      {
+        "name": "Republic of Venice",
+        "Start": 1204,
+        "End": 1669,
+        "dur": 466
+      },
+      {
+        "name": "Tairona",
+        "Start": 1050,
+        "End": 1524,
+        "dur": 475
+      },
+      {
+        "name": "Longshan",
+        "Start": -3000,
+        "End": -1900,
+        "dur": 1101
+      },
+      {
+        "name": "Susa",
+        "Start": -3800,
+        "End": -2676,
+        "dur": 1125
+      }
+    ],
+    "shortest_merged": [
+      {
+        "name": "Ottoman Emirate",
+        "Start": 1393,
+        "End": 1402,
+        "dur": 10
+      },
+      {
+        "name": "Principality of Ghur",
+        "Start": 1193,
+        "End": 1206,
+        "dur": 14
+      },
+      {
+        "name": "Abbasid Caliphate",
+        "Start": 1191,
+        "End": 1207,
+        "dur": 17
+      },
+      {
+        "name": "Kingdom of Lysimachus",
+        "Start": -300,
+        "End": -282,
+        "dur": 19
+      },
+      {
+        "name": "Bazi Dynasty",
+        "Start": -1005,
+        "End": -980,
+        "dur": 26
+      }
+    ]
+  },
+  "test_b_trade_centers": {
+    "hypothesis": "تتركز التجارة في المراكز الكبرى: الأسواق والموانئ والطرق تقترن بمدن أكبر",
+    "measure": "الفرق في لوغاريتم سكان أكبر مدينة (Cap من ImpSCDat) بين وجود المتغير وغيابه، داخل كل ألفية، مع اختبار تبديل داخل الألفيات",
+    "results": [
+      {
+        "variable": "Market",
+        "n_polities": 258,
+        "n_present": 203,
+        "n_absent": 55,
+        "diff_log10_cap_within_millennium": 1.676,
+        "ratio_largest_city": 47.38,
+        "p_one_sided_permutation": 0.0002
+      },
+      {
+        "variable": "Port",
+        "n_polities": 250,
+        "n_present": 165,
+        "n_absent": 85,
+        "diff_log10_cap_within_millennium": 1.374,
+        "ratio_largest_city": 23.65,
+        "p_one_sided_permutation": 0.0002
+      },
+      {
+        "variable": "Road",
+        "n_polities": 264,
+        "n_present": 215,
+        "n_absent": 49,
+        "diff_log10_cap_within_millennium": 1.745,
+        "ratio_largest_city": 55.53,
+        "p_one_sided_permutation": 0.0002
+      }
+    ],
+    "controlled_for_population": {
+      "measure": "معامل المتغير في انحدار لوغاريتم أكبر مدينة على المتغير + لوغاريتم سكان الكيان + تأثيرات الألفية",
+      "results": [
+        {
+          "y": "cap",
+          "x": "Market",
+          "n": 261,
+          "coef": 0.45,
+          "ci95": [
+            0.261,
+            0.671
+          ]
+        },
+        {
+          "y": "cap",
+          "x": "Port",
+          "n": 254,
+          "coef": 0.211,
+          "ci95": [
+            0.045,
+            0.401
+          ]
+        },
+        {
+          "y": "cap",
+          "x": "Road",
+          "n": 279,
+          "coef": 0.317,
+          "ci95": [
+            0.112,
+            0.533
+          ]
+        }
+      ]
+    }
+  },
+  "test_c_crafts_urbanism": {
+    "hypothesis": "الصنائع والعلوم تكمل بكمال العمران الحضري",
+    "cap_vs_info": {
+      "overall_rho": 0.82,
+      "overall_ci95": [
+        0.777,
+        0.855
+      ],
+      "n": 373,
+      "within_millennium": [
+        {
+          "bin_start": -3000,
+          "n": 18,
+          "rho": 0.644
+        },
+        {
+          "bin_start": -2000,
+          "n": 43,
+          "rho": 0.749
+        },
+        {
+          "bin_start": -1000,
+          "n": 71,
+          "rho": 0.797
+        },
+        {
+          "bin_start": 0,
+          "n": 86,
+          "rho": 0.816
+        },
+        {
+          "bin_start": 1000,
+          "n": 121,
+          "rho": 0.783
+        }
+      ],
+      "median_within_rho": 0.783
+    },
+    "scilit_presence": {
+      "variable": "SciLit",
+      "n_polities": 254,
+      "n_present": 154,
+      "n_absent": 100,
+      "diff_log10_cap_within_millennium": 1.577,
+      "ratio_largest_city": 37.75,
+      "p_one_sided_permutation": 0.0002
+    },
+    "controlled_for_population": {
+      "measure": "معامل حجم المدينة في انحدار مؤشر المعلومات على لوغاريتم أكبر مدينة + لوغاريتم سكان الكيان + تأثيرات الألفية",
+      "results": [
+        {
+          "y": "info",
+          "x": "cap",
+          "n": 373,
+          "coef": 0.088,
+          "ci95": [
+            0.026,
+            0.147
+          ]
+        }
+      ]
+    }
+  }
+}
