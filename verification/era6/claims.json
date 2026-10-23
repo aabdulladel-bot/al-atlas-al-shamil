@@ -31,7 +31,7 @@
       "verified_by": "pilot-era6"
     },
     "status": "verified",
-    "version": 2
+    "version": 3
   },
   {
     "id": "cl_000000371",
@@ -99,7 +99,7 @@
       "verified_by": "pilot-era6"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000373",
@@ -201,7 +201,7 @@
       "verified_by": "pilot-era6"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000376",
@@ -353,7 +353,7 @@
       "verified_by": "pilot-era6"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000391",
@@ -397,7 +397,7 @@
     "id": "cl_000000423",
     "passage_id": "turath-30026-sayrafi:officials-ruin-by-injustice",
     "quote": "لعلمهما أن الدواوين لا تسد ولا تقوم بالكلف إلا بالظلم، وصار كل من ظفر بشى أخذه وسد به، فخربت البلاد وظهر الفساد",
-    "statement": "يرى ابن الصيرفي أن الوزير والأستادار ظلما الناس، لأنهما رأيا أن الدواوين لا تقوم إلا بالظلم، فخربت البلاد وظهر الفساد",
+    "statement": "يرى ابن الصيرفي أن الوزير والأستادار، لعلمهما أن الدواوين لا تقوم إلا بالظلم، صار كل منهما يأخذ ما يظفر به، فخربت البلاد وظهر الفساد",
     "type": "cause",
     "layer": "contemporary_witness",
     "attributed_to": "ابن الصيرفي، إنباء الهصر بأنباء العصر، ج1 (نص تراث)",
@@ -413,8 +413,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era6"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -424,8 +424,8 @@
       },
       "verified_by": "pilot-era6"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000424",
@@ -447,8 +447,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era6"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -458,8 +458,8 @@
       },
       "verified_by": "pilot-era6"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000425",
@@ -481,8 +481,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era6"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -492,7 +492,7 @@
       },
       "verified_by": "pilot-era6"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   }
 ]
