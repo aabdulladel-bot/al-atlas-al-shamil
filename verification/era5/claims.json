@@ -19,8 +19,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -30,14 +30,14 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000364",
     "passage_id": "polo:yule1871:overland-road",
     "quote": "desired to return by sea",
-    "statement": "يذكر بولو أن المبعوثين المغول طلبوا العودة بحراً، بعد أن سبقتهم معرفتهم بالبنادقة وخبرتهم البحرية",
+    "statement": "يذكر بولو أن المبعوثين المغول طلبوا العودة بحراً، لأن الطريق البري كان بعيداً جداً ومهدداً بالحرب",
     "type": "event",
     "layer": "contemporary_witness",
     "attributed_to": "ماركو بولو وروستيكيلو (ترجمة Yule، جون موراي، 1871)",
@@ -53,8 +53,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -64,19 +64,19 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000365",
     "passage_id": "polo:yule1871:caravan-ports",
     "quote": "caravan routes which debouched at the ports of Cilician Armenia",
-    "statement": "يذكر بولو أن طرق القوافل بدأت تكتسب ميزة بعد السيطرة المغولية، فتصب في موانئ أرمينيا الكيليكية على المتوسط وطرابزون على البحر الأسود، بينما لم تكن تانا (آزوف) بعد منفذاً لمثل هذه التجارة",
+    "statement": "يذكر بولو أن الإسكندرية ما زالت مركزاً كبيراً للبضائع الهندية في فترات الحرب، وأن طرق القوافل بدأت تكتسب ميزة بعد السيطرة المغولية، فتصب في موانئ أرمينيا الكيليكية على المتوسط وطرابزون على البحر الأسود",
     "type": "description",
     "layer": "contemporary_witness",
     "attributed_to": "ماركو بولو وروستيكيلو (ترجمة Yule، جون موراي، 1871)",
     "isnad": null,
-    "hedge": "ملاحظة بولو عن تراجع الإسكندرية وتحول طرق التجارة، ومرجعها تقديره لا إحصاء",
+    "hedge": "ملاحظة بولو عن موقع الإسكندرية وصعود طرق بديلة، ومرجعها تقديره لا إحصاء",
     "author_preference": null,
     "mentions": {
       "places": [],
@@ -87,8 +87,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -98,8 +98,8 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000368",
@@ -121,8 +121,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -132,8 +132,8 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000369",
@@ -189,8 +189,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -200,8 +200,8 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000378",
@@ -223,8 +223,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -234,8 +234,8 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000379",
@@ -257,8 +257,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -268,8 +268,8 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000380",
@@ -291,8 +291,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -302,8 +302,8 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000381",
@@ -325,8 +325,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -336,8 +336,8 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000382",
@@ -359,8 +359,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -370,8 +370,8 @@
       },
       "verified_by": "pilot-era5"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000421",

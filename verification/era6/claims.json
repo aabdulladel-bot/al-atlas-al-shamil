@@ -3,12 +3,12 @@
     "id": "cl_000000370",
     "passage_id": "garcilaso:rycaut1688:highway-security",
     "quote": "nor have any Merchants and Dealers ever been affaulted on the highway",
-    "statement": "يذكر غارسيلاسو أنه لم يُسجَّل اعتداء على التجار في الطريق منذ الفتح عام 1531 حتى نحو 1610",
+    "statement": "يذكر غارسيلاسو أنه لم يُسجَّل اعتداء على التجار في الطريق بعد الفتح الإسباني",
     "type": "description",
     "layer": "contemporary_witness",
     "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
     "isnad": null,
-    "hedge": "شهادة غارسيلاسو وهو يكتب في 1610 عن الحكم الإسباني، وفيها تحيّز الدعاية وليست إحصاءً للجرائم",
+    "hedge": "شهادة غارسيلاسو عن الحكم الإسباني، وفيها تحيّز الدعاية وليست إحصاءً للجرائم",
     "author_preference": null,
     "mentions": {
       "places": [],
@@ -19,8 +19,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era6"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -30,8 +30,8 @@
       },
       "verified_by": "pilot-era6"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000371",
@@ -87,8 +87,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -98,8 +98,8 @@
       },
       "verified_by": "pilot-era6"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000373",
@@ -189,8 +189,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -200,8 +200,8 @@
       },
       "verified_by": "pilot-era6"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000376",
@@ -341,8 +341,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "قراءة نموذج ثانية"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -352,8 +352,8 @@
       },
       "verified_by": "pilot-era6"
     },
-    "status": "draft",
-    "version": 2
+    "status": "verified",
+    "version": 3
   },
   {
     "id": "cl_000000391",
