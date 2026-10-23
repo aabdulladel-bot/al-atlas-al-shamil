@@ -325,8 +325,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era1"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "agree",
@@ -336,8 +336,8 @@
       },
       "verified_by": "pilot-era1"
     },
-    "status": "escalated",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000111",
@@ -359,8 +359,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "not_reviewed",
-        "reviewer": null
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -370,14 +370,14 @@
       },
       "verified_by": "pending"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000112",
     "passage_id": "hammurabi:harper1904:1:55",
     "quote": "he shall measure out ten GUR of grain per GAN.",
-    "statement": "يدفع عشرة كور من الحبوب عن كل جريب (GAN)",
+    "statement": "يذكر قانون حمورابي (§56) أن من فتح الماء فجرف الماء تحسينات حقل جاره يدفع عشرة كور من الحبوب عن كل جريب",
     "type": "quantity",
     "layer": "material",
     "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
@@ -393,8 +393,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "not_reviewed",
-        "reviewer": null
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -404,8 +404,8 @@
       },
       "verified_by": "pending"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000113",
@@ -427,8 +427,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "not_reviewed",
-        "reviewer": null
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -438,8 +438,8 @@
       },
       "verified_by": "pending"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000114",
@@ -461,8 +461,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "not_reviewed",
-        "reviewer": null
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -472,7 +472,7 @@
       },
       "verified_by": "pending"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   }
 ]
