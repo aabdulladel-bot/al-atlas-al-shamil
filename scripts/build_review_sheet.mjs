@@ -3,11 +3,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { claimEras } from "./lib/eras.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sunan = JSON.parse(fs.readFileSync(path.join(ROOT, "sunan/sunan.json"), "utf8")).sunan;
 const claims = new Map(), passages = new Map();
-for (const era of [1, 2, 3, 4, 5, 6]) {
+for (const era of claimEras(ROOT)) {
   const dir = path.join(ROOT, "verification", `era${era}`);
   for (const c of JSON.parse(fs.readFileSync(path.join(dir, "claims.json"), "utf8"))) claims.set(c.id, { ...c, era });
   for (const p of JSON.parse(fs.readFileSync(path.join(dir, "passages.json"), "utf8"))) passages.set(p.id, p);

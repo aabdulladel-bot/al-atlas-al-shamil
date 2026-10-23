@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { claimEras } from "./lib/eras.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/claim_places.json"), "utf8"));
@@ -13,10 +14,10 @@ for (const p of cfg.places) for (const a of p.aliases) aliasToSlug.set(a, p.slug
 
 const linked = new Map(); // slug -> claims
 const unlinked = new Map();
-for (const era of [1, 2, 3, 4, 5, 6]) {
+for (const era of claimEras(ROOT)) {
   const claims = JSON.parse(fs.readFileSync(path.join(ROOT, "verification", `era${era}`, "claims.json"), "utf8"));
   for (const c of claims) {
-    if (c.checks.quote_match !== true) continue;
+    if (c.checks.quote_match !== true || c.status === "rejected") continue;
     for (const name of (c.mentions && c.mentions.places) || []) {
       const slug = aliasToSlug.get(name);
       if (!slug) { unlinked.set(name, (unlinked.get(name) || 0) + 1); continue; }

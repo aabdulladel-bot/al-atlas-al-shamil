@@ -230,6 +230,60 @@
       ],
       "retrieved_at": "2026-10-23T10:08:54.845Z",
       "permission_basis": "ترخيص ويكي مصدر (CC BY-SA)"
+    },
+    {
+      "id": "tocqueville-reeve-1840-vol3",
+      "file": "verification/era7/tocqueville_reeve1840_vol3.txt",
+      "url": "https://archive.org/stream/democracyinamer09tocqgoog/democracyinamer09tocqgoog_djvu.txt",
+      "license": "ملك عام: ترجمة Henry Reeve، لندن: Saunders and Otley، 1840 (المترجم ت. 1895).",
+      "tier": "A",
+      "landing": "https://archive.org/stream/democracyinamer09tocqgoog/democracyinamer09tocqgoog_djvu.txt",
+      "attribution": "Tocqueville, Democracy in America, Part II (vol. III), tr. H. Reeve, 1840; scan by Google via Internet Archive",
+      "note": "نص OCR من مسح Google. المجلد الثالث فقط (الجزء الثاني من الكتاب). مستخرج من وسم <pre> في صفحة الأرشيف.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era7/tocqueville_reeve1840_vol3.txt",
+          "sha256": "e6d9a4a3b2b8798433b5d971fa76246fcbd539eb9c5f66e101df98130e506860",
+          "bytes": 374322
+        }
+      ]
+    },
+    {
+      "id": "darwin-origin-1859",
+      "file": "verification/era7/darwin_murray1859.txt",
+      "url": "https://archive.org/details/B-001-004-417",
+      "license": "ملك عام: London: John Murray, 1859 (الطبعة الأولى).",
+      "tier": "A",
+      "landing": "https://archive.org/details/B-001-004-417",
+      "attribution": "Darwin, On the Origin of Species, 1st ed., London: John Murray, 1859; scan via Internet Archive",
+      "note": "نص OCR من مسح Google؛ تمهيد Google بالروسية في أوله. مستخرج من وسم <pre>.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era7/darwin_murray1859.txt",
+          "sha256": "efaa64b8b93c2e772bfeda4f2711aea297ebe8e4269cfbf5d09932dac22571f6",
+          "bytes": 1086409
+        }
+      ]
+    },
+    {
+      "id": "marx-manifesto-moore-1888-mia",
+      "file": "verification/era7/marx_moore1888_mia.txt",
+      "url": "https://archive.org/details/ManifestoOfTheCommunistPartyKarlMarxFrederickEngels",
+      "license": "ترجمة Samuel Moore (1888) في الملك العام. التفريغ من أرشيف الماركسيين (marxists.org، Copyleft) عن Progress Publishers 1969.",
+      "tier": "B",
+      "landing": "https://archive.org/details/ManifestoOfTheCommunistPartyKarlMarxFrederickEngels",
+      "attribution": "Marx & Engels, Manifesto of the Communist Party, tr. S. Moore 1888; transcription Marxists Internet Archive",
+      "note": "يُقتبس من نص البيان (الأقسام I–IV) فقط. المقدمة التحريرية والهوامش من Progress/MIA لا تُقتبس.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era7/marx_moore1888_mia.txt",
+          "sha256": "531cfbf2a9b9978c0dffd888a1fd23310eea71727c2ddd0dc61d6188f2f07fed",
+          "bytes": 242758
+        }
+      ]
     }
   ]
 }
