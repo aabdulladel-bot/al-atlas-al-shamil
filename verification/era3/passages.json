@@ -408,5 +408,55 @@
     "chapter": "بوليبيوس الكتاب IX §10: غنائم سرقوسة",
     "text": "transfer all these objects to their own city and leave nothing behind. As to whether in doing so they acted rightly and in their own interest or the reverse, there is much to be said on both sides, but the more weighty arguments are in favour of their conduct having been wrong then and still being wrong. For if they had originally relied on such things for the advancement of their country, they would evidently have been right in bringing to their home the kind of things which had contributed to their aggrandizement. But if, on the contrary, while leading the simplest of lives, very far removed from all such superfluous magnificence, they were constantly victorious over those who possessed the greatest number and finest examples of such works, must we not consider that they committed a mistake? To abandon the habits of the victors and to imitate those of the conquered, not only appropriating the objects, but at the same time attracting that envy which is inseparable from their possession, which is the one thing most to be 25",
     "text_hash": "5d55dd5d349d2f928d3af8e30e779f835df84a5f9e89ab2ff550913ad99fb54c"
+  },
+  {
+    "id": "tacitus:la-ws:toga",
+    "source_id": "tacitus-agricola-la-ws",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "تاسيتوس، أغريكولا 21: البريطانيون والعادات الرومانية",
+    "text": "is consiliis absumpta. Namque ut homines dispersi ac rudes eoque in bella faciles quieti et otio per voluptates adsuescerent, hortari privatim, adiuvare publice, ut templa fora domos extruerent, laudando promptos, castigando segnis: ita honoris aemulatio pro necessitate erat. Iam vero principum filios liberalibus artibus erudire, et ingenia Britannorum studiis Gallorum anteferre, ut qui modo linguam Romanam abnuebant, eloquentiam concupiscerent. Inde etiam habitus nostri honor et frequens toga; paulatimque discessum ad delenimenta vitiorum, porticus et balinea et conviviorum elegantiam. Idque apud imperitos humanitas vocabatur, cum pars servitutis esset. === XXII === Tertius expeditionum annus novas gentis aperuit, vastatis usque ad Tanau",
+    "text_hash": "7ef49d9693f59f642619f01400c99b7bcf001377ccb9774262a5297fe265cbcb"
+  },
+  {
+    "id": "tacitus:la-ws:humanitas",
+    "source_id": "tacitus-agricola-la-ws",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "تاسيتوس، أغريكولا 21: البريطانيون والعادات الرومانية",
+    "text": "adiuvare publice, ut templa fora domos extruerent, laudando promptos, castigando segnis: ita honoris aemulatio pro necessitate erat. Iam vero principum filios liberalibus artibus erudire, et ingenia Britannorum studiis Gallorum anteferre, ut qui modo linguam Romanam abnuebant, eloquentiam concupiscerent. Inde etiam habitus nostri honor et frequens toga; paulatimque discessum ad delenimenta vitiorum, porticus et balinea et conviviorum elegantiam. Idque apud imperitos humanitas vocabatur, cum pars servitutis esset. === XXII === Tertius expeditionum annus novas gentis aperuit, vastatis usque ad Tanaum (aestuario nomen est) nationibus. Qua formdine territi hostes quamquam conflictatum saevis tempestatibus exercitum lacessere non ausi; ponendisque insuper castel",
+    "text_hash": "c1be4ad26c83e5bd26e7f36024c12f2a7f922044dcacd4ac0c1ab1312c170eca"
+  },
+  {
+    "id": "sallust:la-ws:cupido",
+    "source_id": "sallust-catilina-la-ws",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "سالوست، كاتيلينا 10: بعد زوال قرطاجة",
+    "text": "persequi malebant. ==X.== {{pn|10.1|1}}Sed ubi labore atque iustitia res publica crevit, reges magni bello domiti, nationes ferae et populi ingentes vi subacti, Carthago aemula imperi Romani ab stirpe interiit, cuncta maria terraeque patebant, saevire fortuna ac miscere omnia coepit. {{pn|10.2|2}}qui labores, pericula, dubias atque asperas res facile toleraverant, iis otium divitiaeque, optanda alias, oneri miseriaeque fuere. {{pn|10.3|3}}igitur primo pecuniae, deinde imperi cupido crevit: ea quasi materies omnium malorum fuere. namque avaritia fidem probitatem ceterasque artis bonas subvortit; {{pn|10.4|4}}pro his superbiam, crudelitatem, deos neglegere, omnia venalia habere edocuit. {{pn|10.5|5}}ambitio multos mortalis falsos fieri",
+    "text_hash": "b2fa0a5662d280f9fa2f0727f1e9da3e843fea706b9ecd6085bf43a77e5cac87"
+  },
+  {
+    "id": "sallust:la-ws:otium-divitiae",
+    "source_id": "sallust-catilina-la-ws",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "سالوست، كاتيلينا 10: بعد زوال قرطاجة",
+    "text": "od beneficiis magis quam metu imperium agitabant et accepta iniuria ignoscere quam persequi malebant. ==X.== {{pn|10.1|1}}Sed ubi labore atque iustitia res publica crevit, reges magni bello domiti, nationes ferae et populi ingentes vi subacti, Carthago aemula imperi Romani ab stirpe interiit, cuncta maria terraeque patebant, saevire fortuna ac miscere omnia coepit. {{pn|10.2|2}}qui labores, pericula, dubias atque asperas res facile toleraverant, iis otium divitiaeque, optanda alias, oneri miseriaeque fuere. {{pn|10.3|3}}igitur primo pecuniae, deinde imperi cupido crevit: ea quasi materies omnium malorum fuere. namque avaritia fidem probitatem ceterasque artis bonas subvortit; {{pn|10.4|4}}pro his superbiam, crudelitatem, deos neglegere, omnia venalia ",
+    "text_hash": "b15b2a8fe6be36a29f9a7f7a032ec1b56116e06647524741a0b5c43bdaca4858"
+  },
+  {
+    "id": "sallust:la-ws:concordia",
+    "source_id": "sallust-catilina-la-ws",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "سالوست، كاتيلينا 6: نشأة روما",
+    "text": "sserere. ==VI.== {{pn|6.1|1}}Urbem Romam, sicuti ego accepi, condidere atque habuere initio Troiani, qui Aenea duce profugi sedibus incertis vagabantur, cumque iis Aborigines, genus hominum agreste, sine legibus, sine imperio, liberum atque solutum. {{pn|6.2|2}}hi postquam in una moenia convenere, dispari genere, dissimili lingua, alius alio more viventes, incredibile memoratu est quam facile coaluerint: < ita brevi multitudo dispersa atque vaga concordia civitas facta erat >. {{pn|6.3|3}}sed postquam res eorum civibus moribus agris aucta satis prospera satisque pollens videbatur, sicuti pleraque mortalium habentur, invidia ex opulentia orta est. {{pn|6.4|4}}igitur reges populique finitumi bello temptare, pauci ex amic",
+    "text_hash": "72a9a89e4d48db529011579c2934478417bc0de8c795cad8c0cfc7a1712b8772"
   }
 ]

@@ -205,6 +205,31 @@
       ],
       "retrieved_at": "2026-10-22T21:12:03.650Z",
       "permission_basis": "شروط Natural Earth: ملك عام"
+    },
+    {
+      "id": "wikisource-latin-tacitus-sallust",
+      "file": "data/raw/wikisource_latin",
+      "url": "https://la.wikisource.org/wiki/De_vita_et_moribus_Iulii_Agricolae ; https://la.wikisource.org/wiki/De_Catilinae_coniuratione",
+      "license": "النصان الأصليان في الملك العام (تاسيتوس نحو 98م، سالوست نحو 40 ق.م). التفريغ في ويكي مصدر بترخيص CC BY-SA.",
+      "tier": "B",
+      "landing": "https://la.wikisource.org",
+      "attribution": "Latin texts from Wikisource (CC BY-SA)",
+      "note": "الطبعة المعتمدة في التفريغ غير مذكورة في البيانات. علامتا < > في نص سالوست تدلان على زيادة نقدية.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/wikisource_latin/sallust_catilina.txt",
+          "sha256": "ea5ccfc20d97ad480a2871d3532109d2d22a96c0cbca7dc47fde329ae5d4949a",
+          "bytes": 83104
+        },
+        {
+          "file": "data/raw/wikisource_latin/tacitus_agricola.txt",
+          "sha256": "18a4c90dff6e49c93403f1597f337a8aded614937c1624bf180a8a7bd03be5fa",
+          "bytes": 51789
+        }
+      ],
+      "retrieved_at": "2026-10-23T10:08:54.845Z",
+      "permission_basis": "ترخيص ويكي مصدر (CC BY-SA)"
     }
   ]
 }
