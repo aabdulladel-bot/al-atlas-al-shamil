@@ -372,5 +372,73 @@
     },
     "status": "draft",
     "version": 1
+  },
+  {
+    "id": "cl_000000421",
+    "passage_id": "turath-4129-tibr-masbuk:unjust-ruler",
+    "quote": "والسلطان الظالم شؤم لا يبقى ملكه ولا يدوم",
+    "statement": "يقرر نص التبر المسبوك أن ملك السلطان الظالم لا يبقى ولا يدوم",
+    "type": "judgment",
+    "layer": "tradition",
+    "attributed_to": "التبر المسبوك في نصيحة الملوك، المنسوب إلى الغزالي (ت 505هـ)، ضبط أحمد شمس الدين، بيروت 1988، ج1 ص44",
+    "isnad": null,
+    "hedge": "حكم وعظي في كتاب نصيحة للملوك لا رصد تاريخي. نسبة الكتاب إلى الغزالي محل نظر عند بعض الباحثين، ولم يُتحقق في هذه الجولة من موضع هذا الفصل في الأصل الفارسي",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era5"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era5"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000422",
+    "passage_id": "turath-4129-tibr-masbuk:kingship-and-injustice",
+    "quote": "الملك يبقى مع الكفر ولا يبقى مع الظلم",
+    "statement": "يورد النص قولاً ينسبه إلى النبي ﷺ: الملك يبقى مع الكفر ولا يبقى مع الظلم",
+    "type": "reported_belief",
+    "layer": "tradition",
+    "attributed_to": "التبر المسبوك في نصيحة الملوك، المنسوب إلى الغزالي (ت 505هـ)، ضبط أحمد شمس الدين، بيروت 1988، ج1 ص44",
+    "isnad": null,
+    "hedge": "النص ينسب القول إلى النبي ﷺ، ولم يُتحقق من نسبته في كتب الحديث في هذه الجولة، فلا يُعرض حديثاً",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era5"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era5"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]
