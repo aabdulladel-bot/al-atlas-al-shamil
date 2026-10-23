@@ -1,0 +1,16 @@
+{
+  "_note": "مواقع الحقبة الرابعة (300-1000م). المدن المؤسسة في العصر الإسلامي (بغداد، الكوفة، البصرة، الفسطاط، القيروان، سامراء العباسية) ليست في Pleiades، ولم تُضف لأن لا معجم أماكن مفتوحاً معتمداً لها بعد.",
+  "era": 4,
+  "places": [
+    { "slug": "constantinople", "name_ar": "القسطنطينية", "name_en": "Constantinople", "pleiades_id": "520998", "expected_title": "Constantinopolis" },
+    { "slug": "ctesiphon", "name_ar": "طيسفون (المدائن)", "name_en": "Ctesiphon", "pleiades_id": "893976", "expected_title": "Ctesiphon" },
+    { "slug": "damascus", "name_ar": "دمشق", "name_en": "Damascus", "pleiades_id": "678106", "expected_title": "Damascus" },
+    { "slug": "jerusalem", "name_ar": "القدس", "name_en": "Jerusalem", "pleiades_id": "687928", "expected_title": "Ierusalem/Hierosolyma/Col. Aelia Capitolina" },
+    { "slug": "alexandria", "name_ar": "الإسكندرية", "name_en": "Alexandria", "pleiades_id": "727070", "expected_title": "Alexandria" },
+    { "slug": "ravenna", "name_ar": "رافينا", "name_en": "Ravenna", "pleiades_id": "393480", "expected_title": "Ravenna" },
+    { "slug": "cordoba", "name_ar": "قرطبة", "name_en": "Córdoba", "pleiades_id": "256128", "expected_title": "Corduba/Col. Patricia" },
+    { "slug": "toledo", "name_ar": "طليطلة", "name_en": "Toledo", "pleiades_id": "266066", "expected_title": "Toletum" },
+    { "slug": "edessa", "name_ar": "الرُّها", "name_en": "Edessa", "pleiades_id": "658457", "expected_title": "Edessa/Antiochia ad Callirhoem" },
+    { "slug": "bostra", "name_ar": "بصرى", "name_en": "Bostra", "pleiades_id": "678073", "expected_title": "Bostra/Col. Nova Traiana Alexandriana" }
+  ]
+}
