@@ -16,7 +16,8 @@
     "check:all": "node scripts/check_all_quotes.mjs && node scripts/check_schema.mjs && node verification/era3/polybius_iii_greek_check.mjs && node verification/era3/polybius_ix_greek_check.mjs && node sunan/check_sunan.mjs",
     "analyze:seshat": "mkdir -p /tmp/seshat_x && unzip -oq data/raw/Equinox_Data-v.1.zip -d /tmp/seshat_x && python3 -I analysis/seshat_sunan.py /tmp/seshat_x/seshatdb-Equinox_Data-ed8f570/Equinox_on_GitHub_June9_2022.xlsx analysis > /dev/null && node analysis/build_report.mjs && node sunan/check_sunan.mjs",
     "check:quotes": "node scripts/check_all_quotes.mjs",
-    "test:ui": "node scripts/ui_smoke.mjs"
+    "test:ui": "node scripts/ui_smoke.mjs",
+    "review:import": "node scripts/import_review.mjs"
   },
   "keywords": [],
   "author": "",
