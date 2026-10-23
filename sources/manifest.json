@@ -302,6 +302,24 @@
           "bytes": 2719
         }
       ]
+    },
+    {
+      "id": "turath-30026-sayrafi",
+      "file": "verification/era6/ibn_sayrafi_inba_alhasr_turath30026_v1.txt",
+      "url": "https://app.turath.io/book/30026",
+      "license": "النص من تاريخ مصر المملوكية (القرن التاسع الهجري)، في الملك العام. النشرة من تراث بإذن شفهي من المستخدم (قرار المستخدم). بيانات الطبعة غير مقروءة في الاستجابة المحفوظة.",
+      "tier": "B",
+      "landing": "https://app.turath.io/book/30026",
+      "attribution": "ابن الصيرفي، إنباء الهصر بأنباء العصر، عبر تراث (turath.io)",
+      "note": "ثلاث صفحات فقط من الجزء الأول: 37 و234 و392. الكلمة «يظلمان» في ص37 قراءة المحقق، والأصل «يكلمون» بحسب الهامش، والاقتباس لا يتضمنها.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era6/ibn_sayrafi_inba_alhasr_turath30026_v1.txt",
+          "sha256": "4804c0e5dcd38ee527ac8af9c3fbaff0f622d339c758c5806316e8c4bc379ec9",
+          "bytes": 7334
+        }
+      ]
     }
   ]
 }

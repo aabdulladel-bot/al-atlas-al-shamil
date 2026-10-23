@@ -392,5 +392,107 @@
     },
     "status": "draft",
     "version": 1
+  },
+  {
+    "id": "cl_000000423",
+    "passage_id": "turath-30026-sayrafi:officials-ruin-by-injustice",
+    "quote": "لعلمهما أن الدواوين لا تسد ولا تقوم بالكلف إلا بالظلم، وصار كل من ظفر بشى أخذه وسد به، فخربت البلاد وظهر الفساد",
+    "statement": "يرى ابن الصيرفي أن الوزير والأستادار ظلما الناس، لأنهما رأيا أن الدواوين لا تقوم إلا بالظلم، فخربت البلاد وظهر الفساد",
+    "type": "cause",
+    "layer": "contemporary_witness",
+    "attributed_to": "ابن الصيرفي، إنباء الهصر بأنباء العصر، ج1 (نص تراث)",
+    "isnad": null,
+    "hedge": "تفسير سببي من مؤرخ يكتب عن زمنه بحكم أخلاقي، وليس قياساً. وكلمة «يظلمان» الواردة قبل الاقتباس قراءة المحقق، والأصل «يكلمون» بحسب هامشه، والاقتباس لا يتضمنها",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000424",
+    "passage_id": "turath-30026-sayrafi:official-destroys-fields",
+    "quote": "كان شديد الظلم على الخلق سيما لما عمر الأشرف المراكب لغزو قبرص، فخرب غيطان المسلمين",
+    "statement": "يذكر ابن الصيرفي أن أحد الأمراء، وكان شديد الظلم على الناس، لما جُهّزت المراكب لغزو قبرص خرّب غيطان المسلمين",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "ابن الصيرفي، إنباء الهصر بأنباء العصر، ج1 (نص تراث)",
+    "isnad": null,
+    "hedge": "وصف لواقعة فردية يرويها مؤرخ معاصر، وليس إحصاءً لأثر الظلم في الزراعة. تجريدة قبرص سنة 863هـ بحسب هامش المحقق، والاسم يرد بصيغ مختلفة في الهامش فلم يُذكر هنا",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000425",
+    "passage_id": "turath-30026-sayrafi:ruler-to-governor",
+    "quote": "أنا أعدل وانت تظلم؟ أنا أعمر وأنت تخرب؟",
+    "statement": "يروي ابن الصيرفي أن السلطان قال لمن ضُرب بأمره: «أنا أعدل وأنت تظلم؟ أنا أعمر وأنت تخرب؟»",
+    "type": "reported_belief",
+    "layer": "contemporary_witness",
+    "attributed_to": "ابن الصيرفي، إنباء الهصر بأنباء العصر، ج1 (نص تراث)",
+    "isnad": null,
+    "hedge": "قول منسوب إلى السلطان في لحظة غضب كما يرويه المؤرخ، وليس سياسة معلنة. وهو شاهد على أن الربط بين الظلم والخراب كان معروفاً عند الحكام أنفسهم",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]
