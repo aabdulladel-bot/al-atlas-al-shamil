@@ -1,0 +1,149 @@
+{
+  "_meta": {
+    "era": 7,
+    "count": 14,
+    "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
+  },
+  "claims": [
+    {
+      "id": "cl_000000407",
+      "statement": "يلاحظ توكفيل أن الأمريكيين على اختلاف أعمارهم وأحوالهم وطباعهم يؤلفون الجمعيات باستمرار",
+      "quote": "Americans of all ages, all conditions, and all dispositions, con- stantly form associations.",
+      "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "ملاحظة زائر فرنسي بعد رحلته في 1831–1832، وتعميم على مجتمع كامل لا إحصاء",
+      "chapter": "Democracy in America, Part II"
+    },
+    {
+      "id": "cl_000000408",
+      "statement": "يقرر توكفيل قاعدة عامة: إن أراد الناس أن يبقوا متحضرين فلا بد أن ينمو فن الاجتماع في جمعيات بقدر ما تزداد المساواة في الأحوال",
+      "quote": "If men are to remain civilized, or to become so, the art of associating together must grow and improve, in the same ratio in which the equaUty of conditions is in- creased.",
+      "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+      "layer": "contemporary_witness",
+      "type": "rule",
+      "hedge": "قاعدة يصوغها توكفيل بنفسه عن المجتمعات الديمقراطية، وهي فرضية لم يختبرها بقياس",
+      "chapter": "Democracy in America, Part II"
+    },
+    {
+      "id": "cl_000000409",
+      "statement": "يصف توكفيل الفردانية بأنها لفظ جديد ولّدته فكرة جديدة",
+      "quote": "Individualism is a novel expres- sion to which a novel idea has given birth.",
+      "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "حكم توكفيل على مصطلح عصره، والنص ترجمة إنجليزية لا الأصل الفرنسي",
+      "chapter": "Democracy in America, Part II"
+    },
+    {
+      "id": "cl_000000410",
+      "statement": "يرى توكفيل أن الأرستقراطية الصناعية الناشئة في عصره من أقسى ما عرفه العالم، لكنها في الوقت نفسه من أضيقها نطاقاً وأقلها خطراً",
+      "quote": "I am of opinion, upon the whole, that the manufacturing aristocracy which is growing up under our eyes, is one of the harshest which ever existed in the world ; but at the same time it is one of the most confined and least danger- ous.",
+      "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "رأي يقدّمه توكفيل بصيغة الظن (I am of opinion)، ويقيّده هو نفسه في الجملة ذاتها",
+      "chapter": "Democracy in America, Part II"
+    },
+    {
+      "id": "cl_000000411",
+      "statement": "يرى توكفيل أن حب الرفاه في المجتمع الديمقراطي شغف عنيد شامل يستأثر بالناس، لكن مداه محدود",
+      "quote": "The love of well-being is there displayed as a tenn- cious, exclusive, universal passion ; but its range is confined.",
+      "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "حكم عام على الشعوب الديمقراطية مستمد من ملاحظة أمريكا، و'tenn- cious' خطأ OCR لكلمة tenacious",
+      "chapter": "Democracy in America, Part II"
+    },
+    {
+      "id": "cl_000000412",
+      "statement": "يسمّي داروين مبدأ حفظ كل تغيّر طفيف إذا كان نافعاً «الانتقاء الطبيعي»، ليبيّن صلته بانتقاء الإنسان",
+      "quote": "I have called this principle, by which each slight variation, if useful, is preserved, by the term of Natural Selection, in order to mark its relation to man’s power of selection.",
+      "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "تعريف داروين لمصطلحه في الطبعة الأولى، وقد عدّل صياغات كثيرة في الطبعات اللاحقة",
+      "chapter": "On the Origin of Species"
+    },
+    {
+      "id": "cl_000000413",
+      "statement": "يعدّ داروين صراع البقاء تطبيقاً لمذهب مالثوس على الممالك الحيوانية والنباتية كلها بقوة مضاعفة",
+      "quote": "It is the doctrine of Malthus applied with manifold force to the whole animal and vegetable kingdoms ;",
+      "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "داروين يصف مصدر فكرته بنفسه، والسياق في الفصل الثالث عن صراع البقاء",
+      "chapter": "On the Origin of Species"
+    },
+    {
+      "id": "cl_000000414",
+      "statement": "يرى داروين أن العزلة عنصر مهم في عملية الانتقاء الطبيعي",
+      "quote": "Isolation, also, is an important element in the process of natural selection.",
+      "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "فرضية علمية في 1859، والتفصيل في علم الأحياء الحديث تجاوز صياغتها",
+      "chapter": "On the Origin of Species"
+    },
+    {
+      "id": "cl_000000415",
+      "statement": "يقرر داروين أن صراع البقاء ينتج حتماً عن ارتفاع معدل التكاثر الهندسي المشترك بين الكائنات الحية",
+      "quote": "The struggle for exist- ence inevitably follows from the high geometrical ratio of increase which is common to all organic beings.",
+      "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+      "layer": "contemporary_witness",
+      "type": "rule",
+      "hedge": "خلاصة داروين في الفصل الأخير، وهي قاعدة نظرية لا قياس",
+      "chapter": "On the Origin of Species"
+    },
+    {
+      "id": "cl_000000416",
+      "statement": "يقرر البيان أن تاريخ كل مجتمع حتى الآن هو تاريخ صراع الطبقات",
+      "quote": "The history of all hitherto existing society 1 is the history of class struggles.",
+      "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+      "layer": "contemporary_witness",
+      "type": "rule",
+      "hedge": "أطروحة في بيان سياسي تعبوي لا دراسة تاريخية، والرقم 1 إحالة إلى هامش إنجلز (1888) الذي يقيّدها بالتاريخ المكتوب",
+      "chapter": "I. Bourgeois and Proletarians"
+    },
+    {
+      "id": "cl_000000417",
+      "statement": "يرى البيان أن البرجوازية لا تبقى إلا بتثوير أدوات الإنتاج باستمرار، ومعها علاقات الإنتاج وعلاقات المجتمع كلها",
+      "quote": "The bourgeoisie cannot exist without constantly revolutionising the instruments of production, and thereby the relations of production, and with them the whole relations of society.",
+      "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "حكم تحليلي من مؤلفَين لهما موقف سياسي معلن",
+      "chapter": "I. Bourgeois and Proletarians"
+    },
+    {
+      "id": "cl_000000418",
+      "statement": "يصف البيان عصر البرجوازية بأنه يذيب كل ثابت ويدنّس كل مقدس، فيضطر الإنسان إلى مواجهة ظروف حياته الحقيقية",
+      "quote": "All that is solid melts into air, all that is holy is profaned, and man is at last compelled to face with sober senses his real conditions of life, and his relations with his kind.",
+      "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "صياغة بلاغية في بيان سياسي، والترجمة الإنجليزية لـ Moore تتصرف في الأصل الألماني",
+      "chapter": "I. Bourgeois and Proletarians"
+    },
+    {
+      "id": "cl_000000419",
+      "statement": "يرى البيان أن حاجة البرجوازية إلى سوق تتسع باستمرار تدفعها إلى الانتشار في أرجاء الأرض",
+      "quote": "The need of a constantly expanding market for its products chases the bourgeoisie over the entire surface of the globe.",
+      "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+      "layer": "contemporary_witness",
+      "type": "cause",
+      "hedge": "تفسير سببي من مؤلفَين لهما موقف سياسي معلن، لا وصف محايد",
+      "chapter": "I. Bourgeois and Proletarians"
+    },
+    {
+      "id": "cl_000000420",
+      "statement": "يرى البيان أن استغلال البرجوازية للسوق العالمية أعطى الإنتاج والاستهلاك طابعاً عالمياً في كل بلد",
+      "quote": "The bourgeoisie has through its exploitation of the world market given a cosmopolitan character to production and consumption in every country.",
+      "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+      "layer": "contemporary_witness",
+      "type": "judgment",
+      "hedge": "حكم عام في بيان سياسي سنة 1848، قبل كثير من التحولات التي يصفها",
+      "chapter": "I. Bourgeois and Proletarians"
+    }
+  ]
+}

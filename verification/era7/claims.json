@@ -1,0 +1,480 @@
+[
+  {
+    "id": "cl_000000407",
+    "passage_id": "tocqueville-reeve-1840-vol3:associations-everywhere",
+    "quote": "Americans of all ages, all conditions, and all dispositions, con- stantly form associations.",
+    "statement": "يلاحظ توكفيل أن الأمريكيين على اختلاف أعمارهم وأحوالهم وطباعهم يؤلفون الجمعيات باستمرار",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+    "isnad": null,
+    "hedge": "ملاحظة زائر فرنسي بعد رحلته في 1831–1832، وتعميم على مجتمع كامل لا إحصاء",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "الولايات المتحدة"
+      ],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000408",
+    "passage_id": "tocqueville-reeve-1840-vol3:association-equality-law",
+    "quote": "If men are to remain civilized, or to become so, the art of associating together must grow and improve, in the same ratio in which the equaUty of conditions is in- creased.",
+    "statement": "يقرر توكفيل قاعدة عامة: إن أراد الناس أن يبقوا متحضرين فلا بد أن ينمو فن الاجتماع في جمعيات بقدر ما تزداد المساواة في الأحوال",
+    "type": "rule",
+    "layer": "contemporary_witness",
+    "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+    "isnad": null,
+    "hedge": "قاعدة يصوغها توكفيل بنفسه عن المجتمعات الديمقراطية، وهي فرضية لم يختبرها بقياس",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000409",
+    "passage_id": "tocqueville-reeve-1840-vol3:individualism-new-word",
+    "quote": "Individualism is a novel expres- sion to which a novel idea has given birth.",
+    "statement": "يصف توكفيل الفردانية بأنها لفظ جديد ولّدته فكرة جديدة",
+    "type": "judgment",
+    "layer": "contemporary_witness",
+    "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+    "isnad": null,
+    "hedge": "حكم توكفيل على مصطلح عصره، والنص ترجمة إنجليزية لا الأصل الفرنسي",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000410",
+    "passage_id": "tocqueville-reeve-1840-vol3:manufacturing-aristocracy",
+    "quote": "I am of opinion, upon the whole, that the manufacturing aristocracy which is growing up under our eyes, is one of the harshest which ever existed in the world ; but at the same time it is one of the most confined and least danger- ous.",
+    "statement": "يرى توكفيل أن الأرستقراطية الصناعية الناشئة في عصره من أقسى ما عرفه العالم، لكنها في الوقت نفسه من أضيقها نطاقاً وأقلها خطراً",
+    "type": "judgment",
+    "layer": "contemporary_witness",
+    "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+    "isnad": null,
+    "hedge": "رأي يقدّمه توكفيل بصيغة الظن (I am of opinion)، ويقيّده هو نفسه في الجملة ذاتها",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000411",
+    "passage_id": "tocqueville-reeve-1840-vol3:love-of-wellbeing",
+    "quote": "The love of well-being is there displayed as a tenn- cious, exclusive, universal passion ; but its range is confined.",
+    "statement": "يرى توكفيل أن حب الرفاه في المجتمع الديمقراطي شغف عنيد شامل يستأثر بالناس، لكن مداه محدود",
+    "type": "judgment",
+    "layer": "contemporary_witness",
+    "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+    "isnad": null,
+    "hedge": "حكم عام على الشعوب الديمقراطية مستمد من ملاحظة أمريكا، و'tenn- cious' خطأ OCR لكلمة tenacious",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000412",
+    "passage_id": "darwin-origin-1859:natural-selection-term",
+    "quote": "I have called this principle, by which each slight variation, if useful, is preserved, by the term of Natural Selection, in order to mark its relation to man’s power of selection.",
+    "statement": "يسمّي داروين مبدأ حفظ كل تغيّر طفيف إذا كان نافعاً «الانتقاء الطبيعي»، ليبيّن صلته بانتقاء الإنسان",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+    "isnad": null,
+    "hedge": "تعريف داروين لمصطلحه في الطبعة الأولى، وقد عدّل صياغات كثيرة في الطبعات اللاحقة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000413",
+    "passage_id": "darwin-origin-1859:malthus-applied",
+    "quote": "It is the doctrine of Malthus applied with manifold force to the whole animal and vegetable kingdoms ;",
+    "statement": "يعدّ داروين صراع البقاء تطبيقاً لمذهب مالثوس على الممالك الحيوانية والنباتية كلها بقوة مضاعفة",
+    "type": "judgment",
+    "layer": "contemporary_witness",
+    "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+    "isnad": null,
+    "hedge": "داروين يصف مصدر فكرته بنفسه، والسياق في الفصل الثالث عن صراع البقاء",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000414",
+    "passage_id": "darwin-origin-1859:isolation-element",
+    "quote": "Isolation, also, is an important element in the process of natural selection.",
+    "statement": "يرى داروين أن العزلة عنصر مهم في عملية الانتقاء الطبيعي",
+    "type": "judgment",
+    "layer": "contemporary_witness",
+    "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+    "isnad": null,
+    "hedge": "فرضية علمية في 1859، والتفصيل في علم الأحياء الحديث تجاوز صياغتها",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000415",
+    "passage_id": "darwin-origin-1859:struggle-from-increase",
+    "quote": "The struggle for exist- ence inevitably follows from the high geometrical ratio of increase which is common to all organic beings.",
+    "statement": "يقرر داروين أن صراع البقاء ينتج حتماً عن ارتفاع معدل التكاثر الهندسي المشترك بين الكائنات الحية",
+    "type": "rule",
+    "layer": "contemporary_witness",
+    "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+    "isnad": null,
+    "hedge": "خلاصة داروين في الفصل الأخير، وهي قاعدة نظرية لا قياس",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000416",
+    "passage_id": "marx-manifesto-moore-1888-mia:class-struggles",
+    "quote": "The history of all hitherto existing society 1 is the history of class struggles.",
+    "statement": "يقرر البيان أن تاريخ كل مجتمع حتى الآن هو تاريخ صراع الطبقات",
+    "type": "rule",
+    "layer": "contemporary_witness",
+    "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+    "isnad": null,
+    "hedge": "أطروحة في بيان سياسي تعبوي لا دراسة تاريخية، والرقم 1 إحالة إلى هامش إنجلز (1888) الذي يقيّدها بالتاريخ المكتوب",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000417",
+    "passage_id": "marx-manifesto-moore-1888-mia:revolutionising-production",
+    "quote": "The bourgeoisie cannot exist without constantly revolutionising the instruments of production, and thereby the relations of production, and with them the whole relations of society.",
+    "statement": "يرى البيان أن البرجوازية لا تبقى إلا بتثوير أدوات الإنتاج باستمرار، ومعها علاقات الإنتاج وعلاقات المجتمع كلها",
+    "type": "judgment",
+    "layer": "contemporary_witness",
+    "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+    "isnad": null,
+    "hedge": "حكم تحليلي من مؤلفَين لهما موقف سياسي معلن",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000418",
+    "passage_id": "marx-manifesto-moore-1888-mia:solid-melts",
+    "quote": "All that is solid melts into air, all that is holy is profaned, and man is at last compelled to face with sober senses his real conditions of life, and his relations with his kind.",
+    "statement": "يصف البيان عصر البرجوازية بأنه يذيب كل ثابت ويدنّس كل مقدس، فيضطر الإنسان إلى مواجهة ظروف حياته الحقيقية",
+    "type": "judgment",
+    "layer": "contemporary_witness",
+    "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+    "isnad": null,
+    "hedge": "صياغة بلاغية في بيان سياسي، والترجمة الإنجليزية لـ Moore تتصرف في الأصل الألماني",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000419",
+    "passage_id": "marx-manifesto-moore-1888-mia:expanding-market",
+    "quote": "The need of a constantly expanding market for its products chases the bourgeoisie over the entire surface of the globe.",
+    "statement": "يرى البيان أن حاجة البرجوازية إلى سوق تتسع باستمرار تدفعها إلى الانتشار في أرجاء الأرض",
+    "type": "cause",
+    "layer": "contemporary_witness",
+    "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+    "isnad": null,
+    "hedge": "تفسير سببي من مؤلفَين لهما موقف سياسي معلن، لا وصف محايد",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000420",
+    "passage_id": "marx-manifesto-moore-1888-mia:cosmopolitan-production",
+    "quote": "The bourgeoisie has through its exploitation of the world market given a cosmopolitan character to production and consumption in every country.",
+    "statement": "يرى البيان أن استغلال البرجوازية للسوق العالمية أعطى الإنتاج والاستهلاك طابعاً عالمياً في كل بلد",
+    "type": "judgment",
+    "layer": "contemporary_witness",
+    "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+    "isnad": null,
+    "hedge": "حكم عام في بيان سياسي سنة 1848، قبل كثير من التحولات التي يصفها",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  }
+]

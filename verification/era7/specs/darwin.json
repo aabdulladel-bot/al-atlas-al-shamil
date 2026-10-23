@@ -1,0 +1,43 @@
+{
+  "era": 7,
+  "source": {
+    "source_id": "darwin-origin-1859",
+    "file": "verification/era7/darwin_murray1859.txt",
+    "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+    "chapter": "On the Origin of Species"
+  },
+  "items": [
+    {
+      "slug": "natural-selection-term",
+      "quote": "I have called this principle, by which each slight variation, if useful, is preserved, by the term of Natural Selection, in order to mark its relation to man’s power of selection.",
+      "statement": "يسمّي داروين مبدأ حفظ كل تغيّر طفيف إذا كان نافعاً «الانتقاء الطبيعي»، ليبيّن صلته بانتقاء الإنسان",
+      "type": "description",
+      "layer": "contemporary_witness",
+      "hedge": "تعريف داروين لمصطلحه في الطبعة الأولى، وقد عدّل صياغات كثيرة في الطبعات اللاحقة"
+    },
+    {
+      "slug": "malthus-applied",
+      "quote": "It is the doctrine of Malthus applied with manifold force to the whole animal and vegetable kingdoms ;",
+      "statement": "يعدّ داروين صراع البقاء تطبيقاً لمذهب مالثوس على الممالك الحيوانية والنباتية كلها بقوة مضاعفة",
+      "type": "judgment",
+      "layer": "contemporary_witness",
+      "hedge": "داروين يصف مصدر فكرته بنفسه، والسياق في الفصل الثالث عن صراع البقاء"
+    },
+    {
+      "slug": "isolation-element",
+      "quote": "Isolation, also, is an important element in the process of natural selection.",
+      "statement": "يرى داروين أن العزلة عنصر مهم في عملية الانتقاء الطبيعي",
+      "type": "judgment",
+      "layer": "contemporary_witness",
+      "hedge": "فرضية علمية في 1859، والتفصيل في علم الأحياء الحديث تجاوز صياغتها"
+    },
+    {
+      "slug": "struggle-from-increase",
+      "quote": "The struggle for exist- ence inevitably follows from the high geometrical ratio of increase which is common to all organic beings.",
+      "statement": "يقرر داروين أن صراع البقاء ينتج حتماً عن ارتفاع معدل التكاثر الهندسي المشترك بين الكائنات الحية",
+      "type": "rule",
+      "layer": "contemporary_witness",
+      "hedge": "خلاصة داروين في الفصل الأخير، وهي قاعدة نظرية لا قياس"
+    }
+  ]
+}

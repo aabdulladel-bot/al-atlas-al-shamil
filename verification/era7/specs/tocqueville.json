@@ -1,0 +1,52 @@
+{
+  "era": 7,
+  "source": {
+    "source_id": "tocqueville-reeve-1840-vol3",
+    "file": "verification/era7/tocqueville_reeve1840_vol3.txt",
+    "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+    "chapter": "Democracy in America, Part II"
+  },
+  "items": [
+    {
+      "slug": "associations-everywhere",
+      "quote": "Americans of all ages, all conditions, and all dispositions, con- stantly form associations.",
+      "statement": "يلاحظ توكفيل أن الأمريكيين على اختلاف أعمارهم وأحوالهم وطباعهم يؤلفون الجمعيات باستمرار",
+      "type": "description",
+      "layer": "contemporary_witness",
+      "hedge": "ملاحظة زائر فرنسي بعد رحلته في 1831–1832، وتعميم على مجتمع كامل لا إحصاء",
+      "mentions": { "places": ["الولايات المتحدة"], "persons": [], "dates": [] }
+    },
+    {
+      "slug": "association-equality-law",
+      "quote": "If men are to remain civilized, or to become so, the art of associating together must grow and improve, in the same ratio in which the equaUty of conditions is in- creased.",
+      "statement": "يقرر توكفيل قاعدة عامة: إن أراد الناس أن يبقوا متحضرين فلا بد أن ينمو فن الاجتماع في جمعيات بقدر ما تزداد المساواة في الأحوال",
+      "type": "rule",
+      "layer": "contemporary_witness",
+      "hedge": "قاعدة يصوغها توكفيل بنفسه عن المجتمعات الديمقراطية، وهي فرضية لم يختبرها بقياس"
+    },
+    {
+      "slug": "individualism-new-word",
+      "quote": "Individualism is a novel expres- sion to which a novel idea has given birth.",
+      "statement": "يصف توكفيل الفردانية بأنها لفظ جديد ولّدته فكرة جديدة",
+      "type": "judgment",
+      "layer": "contemporary_witness",
+      "hedge": "حكم توكفيل على مصطلح عصره، والنص ترجمة إنجليزية لا الأصل الفرنسي"
+    },
+    {
+      "slug": "manufacturing-aristocracy",
+      "quote": "I am of opinion, upon the whole, that the manufacturing aristocracy which is growing up under our eyes, is one of the harshest which ever existed in the world ; but at the same time it is one of the most confined and least danger- ous.",
+      "statement": "يرى توكفيل أن الأرستقراطية الصناعية الناشئة في عصره من أقسى ما عرفه العالم، لكنها في الوقت نفسه من أضيقها نطاقاً وأقلها خطراً",
+      "type": "judgment",
+      "layer": "contemporary_witness",
+      "hedge": "رأي يقدّمه توكفيل بصيغة الظن (I am of opinion)، ويقيّده هو نفسه في الجملة ذاتها"
+    },
+    {
+      "slug": "love-of-wellbeing",
+      "quote": "The love of well-being is there displayed as a tenn- cious, exclusive, universal passion ; but its range is confined.",
+      "statement": "يرى توكفيل أن حب الرفاه في المجتمع الديمقراطي شغف عنيد شامل يستأثر بالناس، لكن مداه محدود",
+      "type": "judgment",
+      "layer": "contemporary_witness",
+      "hedge": "حكم عام على الشعوب الديمقراطية مستمد من ملاحظة أمريكا، و'tenn- cious' خطأ OCR لكلمة tenacious"
+    }
+  ]
+}
