@@ -439,7 +439,7 @@
       "verified_by": "pilot-era2"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000214",
@@ -613,7 +613,7 @@
       "verified_by": "pilot-era2"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000386",
@@ -728,7 +728,7 @@
       "verified_by": "pilot-era2"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000398",
@@ -767,7 +767,7 @@
       "verified_by": "pilot-era2"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000399",
@@ -806,6 +806,6 @@
       "verified_by": "pilot-era2"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   }
 ]

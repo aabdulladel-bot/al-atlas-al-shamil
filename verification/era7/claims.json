@@ -67,7 +67,7 @@
       "verified_by": "pilot-era7"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000409",
@@ -169,7 +169,7 @@
       "verified_by": "pilot-era7"
     },
     "status": "verified",
-    "version": 2
+    "version": 3
   },
   {
     "id": "cl_000000412",
@@ -441,7 +441,7 @@
       "verified_by": "pilot-era7"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000420",
@@ -475,6 +475,6 @@
       "verified_by": "pilot-era7"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   }
 ]

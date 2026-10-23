@@ -1604,7 +1604,7 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000392",
@@ -1644,7 +1644,7 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000393",
@@ -1684,7 +1684,7 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000394",
@@ -1843,7 +1843,7 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000401",
@@ -1882,7 +1882,7 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000402",
@@ -1920,7 +1920,7 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000403",
@@ -1958,7 +1958,7 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000404",
@@ -1994,7 +1994,7 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000405",
@@ -2030,7 +2030,7 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000406",
@@ -2066,6 +2066,6 @@
       "verified_by": "pilot-era3"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   }
 ]
