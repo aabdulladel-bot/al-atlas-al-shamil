@@ -203,15 +203,18 @@ async function loadClaims(n) {
   }
   for (const btn of claimsEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(Number(btn.dataset.claims) === n));
 }
-for (const n of [1, 2, 3, 4, 5, 6]) {
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.textContent = `الحقبة ${n}`;
-  btn.dataset.claims = n;
-  btn.setAttribute("aria-pressed", "false");
-  btn.addEventListener("click", () => loadClaims(n));
-  claimsEl.appendChild(btn);
-}
+// أزرار الحقب تُبنى من الفهرس الذي يولّده scripts/build_claims.mjs.
+getJson("data/claims_index.json").then((index) => {
+  for (const { era: n, count } of index) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.textContent = `الحقبة ${n} (${count})`;
+    btn.dataset.claims = n;
+    btn.setAttribute("aria-pressed", "false");
+    btn.addEventListener("click", () => loadClaims(n));
+    claimsEl.appendChild(btn);
+  }
+}).catch((err) => { claimsListEl.textContent = `تعذّر تحميل فهرس الادعاءات: ${err.message}`; });
 
 // ---------- أماكن الادعاءات ----------
 const claimMapBtn = document.getElementById("claim-map-btn");
@@ -278,6 +281,9 @@ function renderSunna(s, placesLinked) {
     if (x.kind === "khaldun") return `<div class="ev limit">«${escapeHtml(x.quote)}» <span class="sub">(${escapeHtml(x.location)})</span><div class="sub">${escapeHtml(x.note)}</div></div>`;
     return `<div class="ev limit research-only">${escapeHtml(x.note)}</div>`;
   }).join("");
+  const antecedents = (s.antecedents || []).length
+    ? `<details class="research-only"><summary class="sub">صياغات سابقة للفكرة (لا تُحسب شواهد)</summary>${s.antecedents.map((c) => claimHtml({ ...c, statement: `${c.statement} — ${c.why}` }, "antecedent")).join("")}</details>`
+    : "";
   const modern = s.modern.length
     ? `<details class="research-only"><summary class="sub">قراءات حديثة (إحالة عامة لم تُقتبس)</summary>${s.modern.map((m) => `<div class="sub">${escapeHtml(m.work)}: ${escapeHtml(m.note)}</div>`).join("")}</details>`
     : "";
@@ -290,7 +296,7 @@ function renderSunna(s, placesLinked) {
   sunanDetailEl.innerHTML =
     `<div class="hyp">${escapeHtml(s.hypothesis)}</div>` +
     `<span class="badge">${escapeHtml(s.strength)}: ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>` +
-    khaldun + quant + mapNote + support + limits + modern;
+    khaldun + quant + mapNote + support + limits + antecedents + modern;
 }
 async function selectSunna(s) {
   for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.sunna === s.id));

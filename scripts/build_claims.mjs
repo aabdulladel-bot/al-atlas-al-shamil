@@ -1,18 +1,20 @@
-// يبني ملفات الادعاءات للعرض في الواجهة: ادعاء واحد لكل سطر، ولا يُعرض إلا ما طابق نصه (quote_match).
+// يبني ملفات الادعاءات للعرض في الواجهة: ادعاء واحد لكل سطر، ولا يُعرض إلا ما طابق نصه (quote_match) ولم يُرفض في المراجعة.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { claimEras } from "./lib/eras.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = path.join(ROOT, "web/data");
 fs.mkdirSync(OUT, { recursive: true });
 
-for (const era of [1, 2, 3, 4, 5, 6]) {
+const index = [];
+for (const era of claimEras(ROOT)) {
   const dir = path.join(ROOT, "verification", `era${era}`);
   const claims = JSON.parse(fs.readFileSync(path.join(dir, "claims.json"), "utf8"));
   const passages = new Map(JSON.parse(fs.readFileSync(path.join(dir, "passages.json"), "utf8")).map((p) => [p.id, p]));
   const shown = claims
-    .filter((c) => c.checks.quote_match === true)
+    .filter((c) => c.checks.quote_match === true && c.status !== "rejected")
     .map((c) => ({
       id: c.id,
       statement: c.statement,
@@ -33,4 +35,6 @@ for (const era of [1, 2, 3, 4, 5, 6]) {
   };
   fs.writeFileSync(path.join(OUT, `claims_era${era}.json`), JSON.stringify(out, null, 2) + "\n");
   console.log(`حقبة ${era}: ${shown.length} ادعاء`);
+  index.push({ era, count: shown.length });
 }
+fs.writeFileSync(path.join(OUT, "claims_index.json"), JSON.stringify(index) + "\n");

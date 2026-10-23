@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { claimEras } from "./lib/eras.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const BY_SOURCE = {
@@ -23,7 +24,7 @@ const BY_CLAIM = {
   cl_000000357: { hedge: "رواية بيدا، وترقيم الفصل تقريبي في هذه الطبعة" },
 };
 const log = [];
-for (const era of [1, 2, 3, 4, 5, 6]) {
+for (const era of claimEras(ROOT)) {
   const dir = path.join(ROOT, "verification", `era${era}`);
   const claims = JSON.parse(fs.readFileSync(path.join(dir, "claims.json"), "utf8"));
   const passages = new Map(JSON.parse(fs.readFileSync(path.join(dir, "passages.json"), "utf8")).map((p) => [p.id, p]));
