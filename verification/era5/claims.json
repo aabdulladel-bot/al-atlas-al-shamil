@@ -20,7 +20,7 @@
       "quote_match": true,
       "meaning": {
         "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "reviewer": "قراءة نموذج ثانية"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -31,7 +31,7 @@
       "verified_by": "pilot-era5"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000364",
@@ -122,7 +122,7 @@
       "quote_match": true,
       "meaning": {
         "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "reviewer": "قراءة نموذج ثانية"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -133,7 +133,7 @@
       "verified_by": "pilot-era5"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000369",
@@ -190,7 +190,7 @@
       "quote_match": true,
       "meaning": {
         "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "reviewer": "قراءة نموذج ثانية"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -201,7 +201,7 @@
       "verified_by": "pilot-era5"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000378",
@@ -224,7 +224,7 @@
       "quote_match": true,
       "meaning": {
         "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "reviewer": "قراءة نموذج ثانية"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -235,7 +235,7 @@
       "verified_by": "pilot-era5"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000379",
@@ -258,7 +258,7 @@
       "quote_match": true,
       "meaning": {
         "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "reviewer": "قراءة نموذج ثانية"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -269,7 +269,7 @@
       "verified_by": "pilot-era5"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000380",
@@ -292,7 +292,7 @@
       "quote_match": true,
       "meaning": {
         "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "reviewer": "قراءة نموذج ثانية"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -303,7 +303,7 @@
       "verified_by": "pilot-era5"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000381",
@@ -326,7 +326,7 @@
       "quote_match": true,
       "meaning": {
         "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "reviewer": "قراءة نموذج ثانية"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -337,7 +337,7 @@
       "verified_by": "pilot-era5"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000382",
@@ -360,7 +360,7 @@
       "quote_match": true,
       "meaning": {
         "status": "self_reviewed",
-        "reviewer": "pilot-era5"
+        "reviewer": "قراءة نموذج ثانية"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -371,7 +371,7 @@
       "verified_by": "pilot-era5"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000421",

@@ -1,5 +1,7 @@
 // يستورد ورقة المراجعة البشرية (review/sunan_evidence_review.csv) ويحدّث حالة الادعاءات.
-// الاستعمال: node scripts/import_review.mjs --reviewer "<اسم المراجع>" [--csv <مسار>] [--dry-run]
+// الاستعمال: node scripts/import_review.mjs --reviewer "<اسم المراجع>" [--csv <مسار>] [--dry-run] [--self-review]
+// --self-review: قراءة نموذج لا مراجع بشري. تُسجَّل الحالة self_reviewed، ولا تُغيَّر حالة الادعاء (تبقى مسودة)،
+// ولا يُرفض ادعاء: "خطأ" يُسجَّل تعديلاً معلقاً لأن الرفض قرار بشري.
 // الأحكام: "صحيح" يرفع الحالة إلى verified، و"خطأ" يرفضها (rejected)،
 // و"يحتاج تعديلاً" لا يغيّر الادعاء بل يُسجَّل في review/pending_edits.json.
 // الذرّية: إن وُجد أي خطأ في الورقة لا يُكتب أي ملف.
@@ -16,6 +18,7 @@ const opt = (name) => { const i = args.indexOf(name); return i >= 0 ? args[i + 1
 const reviewer = opt("--reviewer");
 const csvPath = path.resolve(ROOT, opt("--csv") ?? "review/sunan_evidence_review.csv");
 const dry = args.includes("--dry-run");
+const selfReview = args.includes("--self-review");
 if (!reviewer) { console.error('الاستعمال: node scripts/import_review.mjs --reviewer "<اسم المراجع>" [--csv <مسار>] [--dry-run]'); process.exit(2); }
 
 const COL_ID = "المعرّف";
@@ -47,14 +50,15 @@ rows.forEach((row, n) => {
   if (!hit) { errors.push(`السطر ${n + 2}: معرّف غير موجود: ${id}`); return; }
   if (!VERDICTS.has(verdict)) { errors.push(`السطر ${n + 2} (${id}): حكم غير مقبول: "${verdict}"`); return; }
   counts[verdict]++;
-  if (verdict === "يحتاج تعديلاً") {
-    pending.push({ id, reviewer, note, date: today });
+  if (verdict === "يحتاج تعديلاً" || (selfReview && verdict === "خطأ")) {
+    const text = selfReview && verdict === "خطأ" ? `خطأ (قراءة نموذج): ${note}` : note;
+    pending.push({ id, reviewer, note: text, date: today });
     return;
   }
   const c = hit.c;
-  c.checks.meaning = { status: "independently_reviewed", reviewer };
-  if (verdict === "صحيح" && c.checks.quote_match === true) c.status = "verified";
-  if (verdict === "خطأ") c.status = "rejected";
+  c.checks.meaning = { status: selfReview ? "self_reviewed" : "independently_reviewed", reviewer };
+  if (!selfReview && verdict === "صحيح" && c.checks.quote_match === true) c.status = "verified";
+  if (!selfReview && verdict === "خطأ") c.status = "rejected";
   c.version = (c.version ?? 1) + 1;
   changed.add(hit);
 });
