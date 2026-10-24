@@ -64,13 +64,14 @@ const ERAS = [
   { id: 1, label: "الماء والاستقرار", file: "data/places_era1.geojson", desc: "الحقبة الأولى: وادي الرافدين ومصر القديمة (4000-1200 ق.م)." },
   { id: 2, label: "الطرق والممالك", file: "data/places_era2.geojson", desc: "الحقبة الثانية: الطرق والممالك الأولى (1200-500 ق.م)." },
   { id: 3, label: "الإمبراطوريات الكبرى", file: "data/places_era3.geojson", desc: "الحقبة الثالثة: الإمبراطوريات الكبرى (500 ق.م-300م)." },
-  { id: 4, label: "الأديان الكبرى", file: "data/places_era4.geojson", desc: "الحقبة الرابعة: الأديان الكبرى وتشكّل العالم القديم المتأخر (300-1000م). مدن العصر الإسلامي (بغداد والبصرة) مواقع مدن حديثة من Natural Earth، لا مواقع أثرية." },
+  { id: 4, label: "الأديان الكبرى", file: "data/places_era4.geojson", desc: "الحقبة الرابعة: الأديان الكبرى وتشكّل العالم القديم المتأخر (300-1000م). مدن العصر الإسلامي (بغداد والبصرة وسامراء والقيروان والفسطاط) مواقع مدن حديثة، لا مواقع أثرية." },
   { id: 5, label: "التبادل العابر للقارات", file: "data/places_era5.geojson", desc: "الحقبة الخامسة: التبادل العابر للقارات (1000-1450م). مدن العالم الإسلامي (القاهرة وتونس وفاس وأصفهان وسمرقند وحلب ودلهي) مواقع مدن حديثة من Natural Earth، لا مواقع أثرية." },
 ];
 const COORD_LABEL = {
   "pleiades-representative": "إحداثيات من Pleiades (نقطة تمثيلية)",
   approximate: "إحداثيات تقديرية، لم تُطابَق بعد",
   "natural-earth-modern-city": "موقع المدينة الحديثة من Natural Earth (ملك عام)، لا موقع أثري",
+  "wikidata-modern-city": "موقع المدينة من Wikidata (CC0)، لا موقع أثري",
 };
 const erasEl = document.getElementById("eras");
 const descEl = document.getElementById("era-desc");
