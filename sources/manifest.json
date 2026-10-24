@@ -320,6 +320,24 @@
           "bytes": 7334
         }
       ]
+    },
+    {
+      "id": "naturalearth-populated-places-50m",
+      "file": "data/raw/naturalearth/ne_50m_populated_places_simple.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_populated_places_simple.geojson",
+      "license": "ملك عام (Natural Earth)",
+      "tier": "A",
+      "landing": "https://github.com/nvkelso/natural-earth-vector",
+      "attribution": "Natural Earth (public domain): populated places",
+      "note": "مواقع مدن حديثة، لا مواقع أثرية. تُستعمل لمدن لا تغطيها Pleiades، وتوسم في الواجهة كذلك.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/naturalearth/ne_50m_populated_places_simple.geojson",
+          "sha256": "8e70756b39fae9bcdc1e332bfc510c024c5edd3a13203ffd20092ee37b61d978",
+          "bytes": 850767
+        }
+      ]
     }
   ]
 }
