@@ -1,14 +1,98 @@
 {
-  "_note": "مدن إسلامية لا تغطيها Pleiades. الإحداثيات من Natural Earth (ملك عام) وهي مواقع مدن حديثة لا مواقع أثرية، وتُوسم كذلك في الواجهة. الاسم والدولة يُطابقان حرفياً، والالتباس يفشل البناء.",
+  "_note": "مدن إسلامية لا تغطيها Pleiades. الإحداثيات من Natural Earth (ملك عام) وهي مواقع مدن حديثة لا مواقع أثرية، وتُوسم كذلك في الواجهة. الاسم والدولة يُطابقان حرفياً، والالتباس يفشل البناء. المدن ذات wikidata_id تُقرأ إحداثياتها من data/raw/wikidata/ (CC0).",
   "places": [
-    { "era": 4, "slug": "baghdad", "name_ar": "بغداد", "name_en": "Baghdad", "ne_name": "Baghdad", "ne_adm0": "Iraq" },
-    { "era": 4, "slug": "basra", "name_ar": "البصرة", "name_en": "Basra", "ne_name": "Basra", "ne_adm0": "Iraq" },
-    { "era": 5, "slug": "cairo", "name_ar": "القاهرة", "name_en": "Cairo", "ne_name": "Cairo", "ne_adm0": "Egypt" },
-    { "era": 5, "slug": "tunis", "name_ar": "تونس", "name_en": "Tunis", "ne_name": "Tunis", "ne_adm0": "Tunisia" },
-    { "era": 5, "slug": "fez", "name_ar": "فاس", "name_en": "Fez", "ne_name": "Fez", "ne_adm0": "Morocco" },
-    { "era": 5, "slug": "isfahan", "name_ar": "أصفهان", "name_en": "Isfahan", "ne_name": "Isfahan", "ne_adm0": "Iran" },
-    { "era": 5, "slug": "samarkand", "name_ar": "سمرقند", "name_en": "Samarkand", "ne_name": "Samarkand", "ne_adm0": "Uzbekistan" },
-    { "era": 5, "slug": "aleppo", "name_ar": "حلب", "name_en": "Aleppo", "ne_name": "Aleppo", "ne_adm0": "Syria" },
-    { "era": 5, "slug": "delhi", "name_ar": "دلهي", "name_en": "Delhi", "ne_name": "Delhi", "ne_adm0": "India" }
+    {
+      "era": 4,
+      "slug": "baghdad",
+      "name_ar": "بغداد",
+      "name_en": "Baghdad",
+      "ne_name": "Baghdad",
+      "ne_adm0": "Iraq"
+    },
+    {
+      "era": 4,
+      "slug": "basra",
+      "name_ar": "البصرة",
+      "name_en": "Basra",
+      "ne_name": "Basra",
+      "ne_adm0": "Iraq"
+    },
+    {
+      "era": 5,
+      "slug": "cairo",
+      "name_ar": "القاهرة",
+      "name_en": "Cairo",
+      "ne_name": "Cairo",
+      "ne_adm0": "Egypt"
+    },
+    {
+      "era": 5,
+      "slug": "tunis",
+      "name_ar": "تونس",
+      "name_en": "Tunis",
+      "ne_name": "Tunis",
+      "ne_adm0": "Tunisia"
+    },
+    {
+      "era": 5,
+      "slug": "fez",
+      "name_ar": "فاس",
+      "name_en": "Fez",
+      "ne_name": "Fez",
+      "ne_adm0": "Morocco"
+    },
+    {
+      "era": 5,
+      "slug": "isfahan",
+      "name_ar": "أصفهان",
+      "name_en": "Isfahan",
+      "ne_name": "Isfahan",
+      "ne_adm0": "Iran"
+    },
+    {
+      "era": 5,
+      "slug": "samarkand",
+      "name_ar": "سمرقند",
+      "name_en": "Samarkand",
+      "ne_name": "Samarkand",
+      "ne_adm0": "Uzbekistan"
+    },
+    {
+      "era": 5,
+      "slug": "aleppo",
+      "name_ar": "حلب",
+      "name_en": "Aleppo",
+      "ne_name": "Aleppo",
+      "ne_adm0": "Syria"
+    },
+    {
+      "era": 5,
+      "slug": "delhi",
+      "name_ar": "دلهي",
+      "name_en": "Delhi",
+      "ne_name": "Delhi",
+      "ne_adm0": "India"
+    },
+    {
+      "era": 4,
+      "slug": "samarra",
+      "name_ar": "سامراء",
+      "name_en": "Samarra",
+      "wikidata_id": "Q170047"
+    },
+    {
+      "era": 4,
+      "slug": "kairouan",
+      "name_ar": "القيروان",
+      "name_en": "Kairouan",
+      "wikidata_id": "Q179570"
+    },
+    {
+      "era": 4,
+      "slug": "fustat",
+      "name_ar": "الفسطاط",
+      "name_en": "Fustat",
+      "wikidata_id": "Q839456"
+    }
   ]
 }

@@ -338,6 +338,29 @@
           "bytes": 850767
         }
       ]
+    },
+    {
+      "id": "wikidata-islamic-cities",
+      "file": "data/raw/wikidata/wikidata_Q170047_Q179570.json",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q170047.json",
+      "license": "CC0 (Wikidata)",
+      "tier": "A",
+      "landing": "https://www.wikidata.org",
+      "attribution": "Wikidata (CC0)",
+      "note": "إحداثيات مدن إسلامية (سامراء والقيروان والفسطاط)، كما في Wikidata. مواقع مدن لا أثرية. الكوفة ستُضاف بعد جلبها.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/wikidata/wikidata_Q170047_Q179570.json",
+          "sha256": "336543f6501efc38af5065c86a1b854392330c9e25ca43da8668d29ff4d87bb0",
+          "bytes": 115161
+        },
+        {
+          "file": "data/raw/wikidata/wikidata_Q839456.json",
+          "sha256": "f43b59a2313290bd11affb24f86c62aa5a1a2d348b93c272ffb200576902babf",
+          "bytes": 21915
+        }
+      ]
     }
   ]
 }
