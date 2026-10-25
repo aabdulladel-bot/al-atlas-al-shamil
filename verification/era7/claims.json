@@ -481,12 +481,12 @@
     "id": "cl_000000426",
     "passage_id": "tahtawi-takhlis-archive:workshops-closed-1830",
     "quote": "فأغلقت « الورشات » والمعامل ( والفبريقات ) والمدارس",
-    "statement": "يذكر الطهطاوي أن الورشات والمعامل والمدارس أُغلقت في باريس في أيام يوليو 1830، بعد أن امتنعت صحف المعارضة عن الصدور وانتشرت الحركة في الناس",
+    "statement": "يذكر الطهطاوي أنه في 27 يوليو، بعد أن امتنعت صحف المعارضة عن الصدور، أُغلقت الورشات والمعامل والمدارس في باريس",
     "type": "event",
     "layer": "contemporary_witness",
     "attributed_to": "رفاعة الطهطاوي، تخليص الإبريز في تلخيص باريز (نسخة أرشيف الإنترنت)",
     "isnad": null,
-    "hedge": "شهادة مشاهد من أعضاء البعثة المصرية في باريس، يكتب بعد الحدث بسنين ويصف ما بلغه ورآه. النص يذكر «الأوامر» دون أن يسمّي فاعل الإغلاق، والكتاب لا يقدم إحصاءً لعدد ما أُغلق. النص من OCR فراجِعه بالصورة",
+    "hedge": "شهادة مشاهد من أعضاء البعثة المصرية في باريس، يكتب بعد الحدث بسنين ويصف ما بلغه ورآه. السنة (1830) ليست في المقطع وإنما يُعرف الحدث من تاريخه. النص يذكر «الأوامر» دون أن يسمّي فاعل الإغلاق، والكتاب لا يقدم إحصاءً لعدد ما أُغلق. النص من OCR فراجِعه بالصورة",
     "author_preference": null,
     "mentions": {
       "places": [],
@@ -497,8 +497,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era7"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -508,8 +508,8 @@
       },
       "verified_by": "pilot-era7"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000427",
@@ -531,8 +531,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era7"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -542,14 +542,14 @@
       },
       "verified_by": "pilot-era7"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000428",
     "passage_id": "brinkley-japan-v4-1901:oath-public-discussion",
     "quote": "wide counsels should be sought, and all things determined by public discussion",
-    "statement": "يذكر بريكلي أن الإمبراطور أقسم عند الاستعادة (1868) أن تُلتمس المشورة الواسعة، وأن يُقرَّر كل أمر بالنقاش العام",
+    "statement": "يذكر بريكلي أن الإمبراطور أقسم عند الاستعادة أن تُلتمس المشورة الواسعة، وأن يُقرَّر كل أمر بالنقاش العام",
     "type": "reported_belief",
     "layer": "modern_scholarship",
     "attributed_to": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
@@ -565,8 +565,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era7"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -576,8 +576,8 @@
       },
       "verified_by": "pilot-era7"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   },
   {
     "id": "cl_000000429",
@@ -599,8 +599,8 @@
     "checks": {
       "quote_match": true,
       "meaning": {
-        "status": "self_reviewed",
-        "reviewer": "pilot-era7"
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -610,7 +610,7 @@
       },
       "verified_by": "pilot-era7"
     },
-    "status": "draft",
-    "version": 1
+    "status": "verified",
+    "version": 2
   }
 ]
