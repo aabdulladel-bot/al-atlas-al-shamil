@@ -544,5 +544,73 @@
     },
     "status": "draft",
     "version": 1
+  },
+  {
+    "id": "cl_000000428",
+    "passage_id": "brinkley-japan-v4-1901:oath-public-discussion",
+    "quote": "wide counsels should be sought, and all things determined by public discussion",
+    "statement": "يذكر بريكلي أن الإمبراطور أقسم عند الاستعادة (1868) أن تُلتمس المشورة الواسعة، وأن يُقرَّر كل أمر بالنقاش العام",
+    "type": "reported_belief",
+    "layer": "modern_scholarship",
+    "attributed_to": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
+    "isnad": null,
+    "hedge": "نقل المؤرخ بالإنجليزية لمضمون الميثاق، وليست الوثيقة اليابانية نفسها. الكتاب من 1901، ويقرأ الميثاق من خلال تفسيره الخاص",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000429",
+    "passage_id": "brinkley-japan-v4-1901:oath-samurai-only",
+    "quote": "had the samurai alone in view",
+    "statement": "يرى بريكلي أن واضعي الميثاق لم يقصدوا إلا الساموراي، ولم يدخل عامة الناس في حسابهم",
+    "type": "judgment",
+    "layer": "modern_scholarship",
+    "attributed_to": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
+    "isnad": null,
+    "hedge": "حكم المؤرخ على مقاصد الواضعين، وليس وثيقة تنص على ذلك. يعتمد على قراءة سياسية لعصر ميجي كتبها مؤرخ من 1901",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]

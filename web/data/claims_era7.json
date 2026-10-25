@@ -1,7 +1,7 @@
 {
   "_meta": {
     "era": 7,
-    "count": 16,
+    "count": 18,
     "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
   },
   "claims": [
@@ -164,6 +164,26 @@
       "type": "event",
       "hedge": "وصف لمشهد من أيام الاضطراب، من شاهد عيان من البعثة المصرية يكتب بعد الحدث. الصيغة العامة (الرعية) لا تحدد الفئات، والنص من OCR فراجِعه بالصورة",
       "chapter": "باريس في أيام ثورة 1830"
+    },
+    {
+      "id": "cl_000000428",
+      "statement": "يذكر بريكلي أن الإمبراطور أقسم عند الاستعادة (1868) أن تُلتمس المشورة الواسعة، وأن يُقرَّر كل أمر بالنقاش العام",
+      "quote": "wide counsels should be sought, and all things determined by public discussion",
+      "attributed_to": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
+      "layer": "modern_scholarship",
+      "type": "reported_belief",
+      "hedge": "نقل المؤرخ بالإنجليزية لمضمون الميثاق، وليست الوثيقة اليابانية نفسها. الكتاب من 1901، ويقرأ الميثاق من خلال تفسيره الخاص",
+      "chapter": "الاستعادة وميثاق 1868"
+    },
+    {
+      "id": "cl_000000429",
+      "statement": "يرى بريكلي أن واضعي الميثاق لم يقصدوا إلا الساموراي، ولم يدخل عامة الناس في حسابهم",
+      "quote": "had the samurai alone in view",
+      "attributed_to": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
+      "layer": "modern_scholarship",
+      "type": "judgment",
+      "hedge": "حكم المؤرخ على مقاصد الواضعين، وليس وثيقة تنص على ذلك. يعتمد على قراءة سياسية لعصر ميجي كتبها مؤرخ من 1901",
+      "chapter": "الاستعادة وميثاق 1868"
     }
   ]
 }
