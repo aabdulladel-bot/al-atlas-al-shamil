@@ -93,6 +93,13 @@
       "name_ar": "الفسطاط",
       "name_en": "Fustat",
       "wikidata_id": "Q839456"
+    },
+    {
+      "era": 4,
+      "slug": "kufa",
+      "name_ar": "الكوفة",
+      "name_en": "Kufa",
+      "wikidata_id": "Q186234"
     }
   ]
 }

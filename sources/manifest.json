@@ -347,7 +347,7 @@
       "tier": "A",
       "landing": "https://www.wikidata.org",
       "attribution": "Wikidata (CC0)",
-      "note": "إحداثيات مدن إسلامية (سامراء والقيروان والفسطاط)، كما في Wikidata. مواقع مدن لا أثرية. الكوفة ستُضاف بعد جلبها.",
+      "note": "إحداثيات مدن إسلامية كما في Wikidata: سامراء والقيروان والفسطاط والكوفة. مواقع مدن لا أثرية.",
       "status": "ok",
       "files": [
         {
@@ -359,6 +359,11 @@
           "file": "data/raw/wikidata/wikidata_Q839456.json",
           "sha256": "f43b59a2313290bd11affb24f86c62aa5a1a2d348b93c272ffb200576902babf",
           "bytes": 21915
+        },
+        {
+          "file": "data/raw/wikidata/wikidata_Q186234.json",
+          "sha256": "82d50c3bb38b140682ac4831b671d91cb69872e56877840099b2878f2d1a8447",
+          "bytes": 38407
         }
       ]
     }
