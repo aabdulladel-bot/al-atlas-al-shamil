@@ -366,6 +366,24 @@
           "bytes": 38407
         }
       ]
+    },
+    {
+      "id": "tahtawi-takhlis-archive",
+      "file": "verification/era7/tahtawi_takhlis_archive.txt",
+      "url": "https://archive.org/details/3p.d.f4555",
+      "license": "ملك عام: تأليف رفاعة الطهطاوي (ت 1873)، والطبعة غير مؤرخة في بيانات هذه النسخة. النص من أرشيف الإنترنت (OCR).",
+      "tier": "A",
+      "landing": "https://archive.org/details/3p.d.f4555",
+      "attribution": "رفاعة الطهطاوي، تخليص الإبريز في تلخيص باريز (نسخة أرشيف الإنترنت)",
+      "note": "OCR بجودة متوسطة، وفيه كلمات مكسورة. كل اقتباس يجب أن يُتحقق منه بالصورة قبل الاعتماد النهائي. الطبعة الأصلية 1834 حسب المعروف، ولم تُتحقق من هذه النسخة.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era7/tahtawi_takhlis_archive.txt",
+          "sha256": "9a389ddf9ba9b47c10a67f56b8d2b6c7e78d1f265c58af8a763f5045ecf7250f",
+          "bytes": 257059
+        }
+      ]
     }
   ]
 }
