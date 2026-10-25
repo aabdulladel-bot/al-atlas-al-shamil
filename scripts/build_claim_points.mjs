@@ -8,9 +8,18 @@ import { claimEras } from "./lib/eras.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/claim_places.json"), "utf8"));
 const places = JSON.parse(fs.readFileSync(path.join(ROOT, "web/data/claim_places.geojson"), "utf8")).features;
+// أماكن حديثة من Natural Earth (ملك عام): مدن لا أثرية، توسم بذلك في coord_status
+const naturalCfg = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/claim_natural_places.json"), "utf8"));
+const neFeatures = JSON.parse(fs.readFileSync(path.join(ROOT, "data/raw/naturalearth/ne_50m_populated_places_simple.geojson"), "utf8")).features;
+for (const p of naturalCfg.places) {
+  const hits = neFeatures.filter((f) => f.properties.name === p.ne_name && f.properties.adm0name === p.ne_adm0);
+  if (hits.length !== 1) throw new Error(`${p.slug}: ${hits.length} مطابقات لـ ${p.ne_name} في ${p.ne_adm0}`);
+  const [lon, lat] = hits[0].geometry.coordinates;
+  places.push({ type: "Feature", id: p.slug, geometry: { type: "Point", coordinates: [Math.round(lon * 1e4) / 1e4, Math.round(lat * 1e4) / 1e4] }, properties: { name_ar: p.name_ar, name_en: p.name_en, coord_status: "natural-earth-modern-city" } });
+}
 const bySlug = new Map(places.map((f) => [f.id, f]));
 const aliasToSlug = new Map();
-for (const p of cfg.places) for (const a of p.aliases) aliasToSlug.set(a, p.slug);
+for (const p of [...cfg.places, ...naturalCfg.places]) for (const a of p.aliases) aliasToSlug.set(a, p.slug);
 
 const linked = new Map(); // slug -> claims
 const unlinked = new Map();
