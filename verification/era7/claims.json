@@ -476,5 +476,73 @@
     },
     "status": "verified",
     "version": 4
+  },
+  {
+    "id": "cl_000000426",
+    "passage_id": "tahtawi-takhlis-archive:workshops-closed-1830",
+    "quote": "فأغلقت « الورشات » والمعامل ( والفبريقات ) والمدارس",
+    "statement": "يذكر الطهطاوي أن الورشات والمعامل والمدارس أُغلقت في باريس في أيام يوليو 1830، بعد أن امتنعت صحف المعارضة عن الصدور وانتشرت الحركة في الناس",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "رفاعة الطهطاوي، تخليص الإبريز في تلخيص باريز (نسخة أرشيف الإنترنت)",
+    "isnad": null,
+    "hedge": "شهادة مشاهد من أعضاء البعثة المصرية في باريس، يكتب بعد الحدث بسنين ويصف ما بلغه ورآه. النص يذكر «الأوامر» دون أن يسمّي فاعل الإغلاق، والكتاب لا يقدم إحصاءً لعدد ما أُغلق. النص من OCR فراجِعه بالصورة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000427",
+    "passage_id": "tahtawi-takhlis-archive:citizens-seize-arms-1830",
+    "quote": "وأخذت الرعية الأسلحة من السيوفية بشراء أو غصب",
+    "statement": "يذكر الطهطاوي أن الرعية في باريس أخذت الأسلحة من محلات السيوفية بالشراء أو بالغصب في أيام الثورة",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "رفاعة الطهطاوي، تخليص الإبريز في تلخيص باريز (نسخة أرشيف الإنترنت)",
+    "isnad": null,
+    "hedge": "وصف لمشهد من أيام الاضطراب، من شاهد عيان من البعثة المصرية يكتب بعد الحدث. الصيغة العامة (الرعية) لا تحدد الفئات، والنص من OCR فراجِعه بالصورة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era7"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era7"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]
