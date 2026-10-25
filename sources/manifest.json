@@ -384,6 +384,24 @@
           "bytes": 257059
         }
       ]
+    },
+    {
+      "id": "brinkley-japan-v4-1901",
+      "file": "verification/era7/brinkley_japan_v4_meiji_oath_excerpt.txt",
+      "url": "https://archive.org/details/japanitshistory4brin",
+      "license": "ملك عام: كتاب 1901 (المؤلف فرانك بريكلي ت 1912). النص من أرشيف الإنترنت (OCR).",
+      "tier": "A",
+      "landing": "https://archive.org/details/japanitshistory4brin",
+      "attribution": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
+      "note": "مقتطفان فقط من الفصل الذي يصف الاستعادة (1868). الكاتب مؤرخ من أوائل القرن العشرين، والعبارة الواردة نقل للميثاق بالإنجليزية وليست الوثيقة اليابانية نفسها.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era7/brinkley_japan_v4_meiji_oath_excerpt.txt",
+          "sha256": "4db1023988276e59f31319e387eed4e50e293870ab65a33df1b5600dac5d6c8b",
+          "bytes": 1316
+        }
+      ]
     }
   ]
 }
