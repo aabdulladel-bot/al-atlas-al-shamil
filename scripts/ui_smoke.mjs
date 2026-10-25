@@ -38,6 +38,15 @@ try {
     const opts = await page.$$eval("#demo-select option", (os) => os.map((o) => o.value).filter(Boolean));
     counts.demo = opts.length;
     for (const v of opts) { await page.selectOption("#demo-select", v); await page.waitForTimeout(700); }
+    // لوحة التحولات: زوجان من السنين، أحدهما معكوس الترتيب، ثم الضغط على اسم
+    for (const [a, b] of [["1800", "1945"], ["modern", "1200"], ["-4000", "-1000"]]) {
+      await page.selectOption("#tr-from", a); await page.selectOption("#tr-to", b); await page.waitForTimeout(800);
+    }
+    await page.selectOption("#tr-from", "1800"); await page.selectOption("#tr-to", "1945"); await page.waitForTimeout(800);
+    counts.transitions = await page.$$eval("#tr-result button.ent", (bs) => bs.length);
+    await page.evaluate(() => document.querySelectorAll("#tr-result details").forEach((d) => (d.open = true)));
+    const ent = await page.$('#tr-result button.ent[data-name="Ottoman Empire"]');
+    if (ent) { await ent.click(); await page.waitForTimeout(1200); } else problems.push(`[${name}] لا زر للدولة العثمانية في لوحة التحولات`);
     await page.click("#claim-map-btn"); await page.waitForTimeout(1000);
     await page.screenshot({ path: path.join(ROOT, "out", `ui_${name}.png`) });
     console.log(`${name}: ${JSON.stringify(counts)}`);

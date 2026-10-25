@@ -97,18 +97,20 @@ async function loadBorders(key) {
   borderNoteEl.textContent = modern
     ? `حدود الدول اليوم (${data.features.length} كياناً) من Natural Earth، ملك عام.`
     : `حدود تقريبية لسنة ${yearLabel(key)} (${data.features.length} كياناً). المصدر: Historical Basemaps (GPL-3)، ولا تعكس وضعاً مؤكداً.`;
-  if (map.getSource("borders")) { map.getSource("borders").setData(data); return; }
+  if (map.getSource("borders")) { map.getSource("borders").setData(data); map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]); return data; }
   map.addSource("borders", { type: "geojson", data });
   const before = map.getLayer("places") ? "places" : undefined;
   // الدقة تحدد الشفافية وسُمك الخط: الحد التقريبي أخفّ، والمحدد بالقانون أوضح
   map.addLayer({ id: "borders-fill", type: "fill", source: "borders", paint: { "fill-color": "#8a4b2a", "fill-opacity": ["match", ["get", "BORDERPRECISION"], 1, 0.06, 2, 0.12, 3, 0.18, 0.12] } }, before);
   map.addLayer({ id: "borders-line", type: "line", source: "borders", paint: { "line-color": "#8a4b2a", "line-width": ["match", ["get", "BORDERPRECISION"], 3, 1.4, 1], "line-opacity": ["match", ["get", "BORDERPRECISION"], 1, 0.35, 0.7] } }, before);
+  map.addLayer({ id: "borders-highlight", type: "line", source: "borders", filter: ["==", ["get", "NAME"], ""], paint: { "line-color": "#c0392b", "line-width": 3 } }, before);
   map.on("click", "borders-fill", (e) => {
     const p = e.features[0].properties;
     const prec = PRECISION_LABEL[p.BORDERPRECISION];
     popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.NAME)}</div>${p.PARTOF ? `<div class="popup-sub">ضمن: ${escapeHtml(p.PARTOF)}</div>` : ""}${prec ? `<div class="popup-sub">دقة الحد: ${escapeHtml(prec)}</div>` : ""}`).addTo(map);
   });
   pointerOn("borders-fill");
+  return data;
 }
 async function loadEra(era) {
   markEra(era.id);
@@ -378,8 +380,8 @@ async function loadSunan() {
 
 map.on("load", () => { loadSunan(); });
 
-// ---------- لوحة التحولات: ما بقي وما اختفى وما ظهر بين سنتين، من أسماء ملفات الحدود ----------
-const TRANSITION_KEYS = ["modern", ...BORDER_YEARS];
+// ---------- لوحة التحولات: مطابقة جغرافية بين خريطتين (مسبقة الحساب في scripts/build_transitions.py) ----------
+const TRANSITION_KEYS = [...BORDER_YEARS.map(String), "modern"];
 const transitionLabel = (k) => (k === "modern" ? "الدول اليوم" : yearLabel(k));
 const trFrom = document.getElementById("tr-from");
 const trTo = document.getElementById("tr-to");
@@ -387,33 +389,99 @@ const trResultEl = document.getElementById("tr-result");
 const trOptions = TRANSITION_KEYS.map((k) => `<option value="${k}">${escapeHtml(transitionLabel(k))}</option>`).join("");
 trFrom.innerHTML = trOptions;
 trTo.innerHTML = trOptions;
-trFrom.value = "1200";
-trTo.value = "1600";
-const namesCache = new Map();
-async function namesOf(key) {
-  if (!namesCache.has(key)) {
-    const url = key === "modern" ? "data/borders/modern_countries.geojson" : `data/borders/borders_${key}.geojson`;
-    const data = await getJson(url);
-    namesCache.set(key, new Set(data.features.map((f) => f.properties.NAME).filter(Boolean)));
+trFrom.value = "1800";
+trTo.value = "1945";
+const pct = (x) => `${Math.round(x * 100)}%`;
+// زر اسم يُظهر الكيان على خريطة سنته
+const entBtn = (name, key) => `<button type="button" class="ent" data-key="${escapeHtml(key)}" data-name="${escapeHtml(name)}">${escapeHtml(name)}</button>`;
+// المصير والمنشأ: علاقات مكانية بين خريطتين، لا أحكام تاريخية بالسببية
+const FATES = [
+  ["split", "انقسمت أرضه", "كيانان أو أكثر أخذ كل منهما 10% فأكثر من أرضه"],
+  ["succeeded", "خلفه اسم آخر على معظم أرضه", "أكثر من نصف أرضه في كيان واحد، وأكثر من نصف ذلك الكيان من أرضه: تغيّر اسم أو خلافة دولة"],
+  ["absorbed", "دخلت أرضه في كيان أوسع", "ربع أرضه فأكثر صار جزءاً صغيراً من كيان أكبر"],
+  ["reduced", "تقلّص", "بقي ربع أرضه فأكثر في كيان قائم عليها، وما بقي بلا كيان مسمّى"],
+  ["dispersed", "توزّعت أرضه بين كيانات صغيرة", "لم يأخذ أي كيان ربع أرضه"],
+  ["vanished", "زال ولم يغطِّ أرضه كيان مسمّى", "أقل من ربع أرضه تحت كيانات مسمّاة في الخريطة الثانية"],
+  ["name_moved", "بقي اسمه في موضع آخر", "الاسم نفسه لكن التداخل أقل من الربع"],
+  ["kept", "بقي اسمه", "الاسم نفسه على جزء من الأرض نفسها"],
+];
+const ORIGINS = [
+  ["merged", "تكوّن من أراضي عدة كيانات", "كيانان أو أكثر أسهم كل منهما بـ 10% فأكثر من أرضه"],
+  ["carved", "قام على جزء من كيان أوسع", "ربع أرضه فأكثر من كيان أكبر منه"],
+  ["expanded", "قام على كيان سابق وتجاوزه", "أكثر من نصف أرض الكيان السابق فيه، وأكثر أرضه من خارجه"],
+  ["assembled", "تجمّع من قطع صغيرة", "لم يُسهم أي كيان بربع أرضه"],
+  ["new_land", "قام على أرض لم يسمّها المصدر", "أقل من ربع أرضه تحت كيانات مسمّاة في الخريطة الأولى"],
+];
+const trCache = new Map();
+async function transitionData(a, b) {
+  const k = `${a}__${b}`;
+  if (!trCache.has(k)) trCache.set(k, getJson(`data/transitions/${k}.json`));
+  return trCache.get(k);
+}
+function linkText(links, i, key) {
+  // links: [الاسم، نصيبه من أرض الأول، نصيب الأول من أرضه]
+  return links.filter((l) => l[i] >= 0.1).map((l) => `<span class="lk">${entBtn(l[0], key)} <span class="sub">${pct(l[i])}</span></span>`).join(" · ");
+}
+function fateLine(r, a, b) {
+  const f = r.fate;
+  const head = `${entBtn(r.name, a)}${r.precision === 1 ? ' <span class="sub" title="حدود تقريبية في المصدر">≈</span>' : ""}`;
+  if (f.type === "kept" || f.type === "name_moved") {
+    const ratio = f.area_ratio;
+    const change = ratio >= 1.5 ? `اتسع ×${ratio.toFixed(1)}` : ratio <= 0.67 ? `تقلّص إلى ${pct(ratio)}` : "";
+    return `<li>${head}${change ? ` <span class="sub">${change}</span>` : ""}<span class="sub research-only"> · بقي ${pct(f.retained)} من أرضه تحت الاسم</span></li>`;
   }
-  return namesCache.get(key);
+  if (f.type === "dispersed" || f.type === "vanished") return `<li>${head} <span class="sub research-only">تغطية الكيانات المسمّاة: ${pct(f.named_cover)}</span></li>`;
+  return `<li>${head} ← ${linkText(r.links, 1, b)}</li>`;
 }
-const sortNames = (list) => list.sort((x, y) => x.localeCompare(y, "en"));
+function originLine(r, a, b) {
+  const o = r.origin;
+  const head = `${entBtn(r.name, b)}${r.name_ar ? ` <span class="sub">${escapeHtml(r.name_ar)}</span>` : ""}`;
+  if (o.type === "assembled" || o.type === "new_land") return `<li>${head} <span class="sub research-only">تغطية الكيانات المسمّاة: ${pct(o.named_cover)}</span></li>`;
+  return `<li>${head} ← ${linkText(r.links, 2, a)}</li>`;
+}
+function group(label, help, items) {
+  if (!items.length) return "";
+  return `<details><summary>${escapeHtml(label)} <b>${items.length}</b></summary><p class="sub">${escapeHtml(help)}</p><ul class="tr-list">${items.join("")}</ul></details>`;
+}
+let trRequest = 0;
 async function showTransition() {
-  const a = trFrom.value;
-  const b = trTo.value;
+  const req = ++trRequest;
+  let a = trFrom.value;
+  let b = trTo.value;
   if (a === b) { trResultEl.textContent = "اختر سنتين مختلفتين."; return; }
-  trResultEl.textContent = "جارٍ الحساب...";
-  let A, B;
-  try { [A, B] = await Promise.all([namesOf(a), namesOf(b)]); } catch (err) { trResultEl.textContent = `تعذّر تحميل البيانات: ${err.message}`; return; }
-  const gone = sortNames([...A].filter((n) => !B.has(n)));
-  const born = sortNames([...B].filter((n) => !A.has(n)));
-  const kept = [...A].filter((n) => B.has(n)).length;
+  const swapped = TRANSITION_KEYS.indexOf(a) > TRANSITION_KEYS.indexOf(b);
+  if (swapped) [a, b] = [b, a];
+  trResultEl.textContent = "جارٍ التحميل...";
+  let d;
+  try { d = await transitionData(a, b); } catch (err) { if (req === trRequest) trResultEl.textContent = `تعذّر تحميل المقارنة: ${err.message}`; return; }
+  if (req !== trRequest) return; // تغيّر الاختيار أثناء التحميل
+  const c = d.counts;
+  const n = (side, t) => c[side][t] ?? 0;
+  const fates = FATES.map(([t, label, help]) => group(label, help, d.from.filter((r) => r.fate.type === t).map((r) => fateLine(r, a, b))));
+  const origins = ORIGINS.map(([t, label, help]) => group(label, help, d.to.filter((r) => r.origin.type === t).map((r) => originLine(r, a, b))));
   trResultEl.innerHTML =
-    `<p>من ${escapeHtml(transitionLabel(a))} إلى ${escapeHtml(transitionLabel(b))}: بقي <b>${kept}</b> كياناً بالاسم نفسه.</p>` +
-    `<details><summary>اختفى ${gone.length}</summary><div class="sub">${escapeHtml(gone.join("، "))}</div></details>` +
-    `<details><summary>ظهر ${born.length}</summary><div class="sub">${escapeHtml(born.join("، "))}</div></details>`;
+    (swapped ? `<p class="sub">رُتّبت السنتان زمنياً.</p>` : "") +
+    `<p>من ${escapeHtml(transitionLabel(a))} (${d.from.length} كياناً مسمّى) إلى ${escapeHtml(transitionLabel(b))} (${d.to.length}): ` +
+    `بقي اسم <b>${n("from", "kept")}</b>، وحلّ اسم آخر على معظم أرض <b>${n("from", "succeeded")}</b>، وانقسم <b>${n("from", "split")}</b>، ودخل <b>${n("from", "absorbed")}</b> في كيان أوسع.</p>` +
+    `<h4 class="tr-h">مصير كيانات ${escapeHtml(transitionLabel(a))}</h4>${fates.join("")}` +
+    `<h4 class="tr-h">منشأ الكيانات الجديدة في ${escapeHtml(transitionLabel(b))}</h4>${origins.join("")}`;
 }
+// الضغط على اسم يعرض حدود سنته ويقرّب إليه ويبرزه
+trResultEl.addEventListener("click", async (e) => {
+  const btn = e.target.closest("button.ent");
+  if (!btn) return;
+  const key = btn.dataset.key === "modern" ? "modern" : Number(btn.dataset.key);
+  const data = await loadBorders(key);
+  if (!data) return;
+  const name = btn.dataset.name;
+  const feats = data.features.filter((f) => f.properties.NAME === name);
+  if (!feats.length) return;
+  const bb = [Infinity, Infinity, -Infinity, -Infinity];
+  const walk = (c) => { if (typeof c[0] === "number") { bb[0] = Math.min(bb[0], c[0]); bb[1] = Math.min(bb[1], c[1]); bb[2] = Math.max(bb[2], c[0]); bb[3] = Math.max(bb[3], c[1]); } else c.forEach(walk); };
+  for (const f of feats) walk(f.geometry.coordinates);
+  map.setFilter("borders-highlight", ["==", ["get", "NAME"], name]);
+  map.fitBounds([[bb[0], bb[1]], [bb[2], bb[3]]], { padding: fitPadding(), maxZoom: 6 });
+});
 trFrom.addEventListener("change", showTransition);
 trTo.addEventListener("change", showTransition);
 showTransition();
