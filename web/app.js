@@ -61,12 +61,18 @@ async function getJson(url) {
 
 // ---------- الحقب ومواقعها ----------
 const ERAS = [
-  { id: 1, label: "الماء والاستقرار", file: "data/places_era1.geojson", desc: "الحقبة الأولى: وادي الرافدين ومصر القديمة (4000-1200 ق.م)." },
-  { id: 2, label: "الطرق والممالك", file: "data/places_era2.geojson", desc: "الحقبة الثانية: الطرق والممالك الأولى (1200-500 ق.م)." },
-  { id: 3, label: "الإمبراطوريات الكبرى", file: "data/places_era3.geojson", desc: "الحقبة الثالثة: الإمبراطوريات الكبرى (500 ق.م-300م)." },
-  { id: 4, label: "الأديان الكبرى", file: "data/places_era4.geojson", desc: "الحقبة الرابعة: الأديان الكبرى وتشكّل العالم القديم المتأخر (300-1000م). مدن العصر الإسلامي (بغداد والبصرة وسامراء والقيروان والفسطاط) مواقع مدن حديثة، لا مواقع أثرية." },
-  { id: 5, label: "التبادل العابر للقارات", file: "data/places_era5.geojson", desc: "الحقبة الخامسة: التبادل العابر للقارات (1000-1450م). مدن العالم الإسلامي (القاهرة وتونس وفاس وأصفهان وسمرقند وحلب ودلهي) مواقع مدن حديثة من Natural Earth، لا مواقع أثرية." },
+  { id: 1, border: -4000, label: "الماء والاستقرار", file: "data/places_era1.geojson", desc: "الحقبة الأولى: وادي الرافدين ومصر القديمة (4000-1200 ق.م)." },
+  { id: 2, border: -1000, label: "الطرق والممالك", file: "data/places_era2.geojson", desc: "الحقبة الثانية: الطرق والممالك الأولى (1200-500 ق.م)." },
+  { id: 3, border: -1, label: "الإمبراطوريات الكبرى", file: "data/places_era3.geojson", desc: "الحقبة الثالثة: الإمبراطوريات الكبرى (500 ق.م-300م)." },
+  { id: 4, border: 700, label: "الأديان الكبرى", file: "data/places_era4.geojson", desc: "الحقبة الرابعة: الأديان الكبرى وتشكّل العالم القديم المتأخر (300-1000م). مدن العصر الإسلامي (بغداد والبصرة وسامراء والقيروان والفسطاط) مواقع مدن حديثة، لا مواقع أثرية." },
+  { id: 5, border: 1200, label: "التبادل العابر للقارات", file: "data/places_era5.geojson", desc: "الحقبة الخامسة: التبادل العابر للقارات (1000-1450م). مدن العالم الإسلامي (القاهرة وتونس وفاس وأصفهان وسمرقند وحلب ودلهي) مواقع مدن حديثة من Natural Earth، لا مواقع أثرية." },
+  { id: 6, border: 1600, label: "الكشوف وتبادل العالم", file: null, desc: "الحقبة السادسة: الكشوف وتبادل العالم (1450-1760م). الحدود تقريبية لسنة 1600، ولا مواقع موثّقة لهذه الحقبة بعد." },
+  { id: 7, border: 1800, label: "الصناعة والمدينة", file: null, desc: "الحقبة السابعة: الصناعة والمدينة (1760-1914م). الحدود تقريبية لسنة 1800، والمواقع الموثّقة لهذه الحقبة في الادعاءات فقط." },
+  { id: 8, border: 1945, label: "الحروب العالمية والدولة الحديثة", file: null, desc: "الحقبة الثامنة: الحروب العالمية والدولة الحديثة (1914-2025م). الحدود تقريبية لسنة 1945، ولا مواقع موثّقة بعد." },
 ];
+// سنوات طبقة الحدود المتاحة (web/data/borders)، وتُختار بها الحقبة أو يدوياً من القائمة
+const BORDER_YEARS = [-4000, -1000, -1, 700, 1200, 1600, 1800, 1914, 1945, 2010];
+const yearLabel = (y) => (y < 0 ? `${-y} ق.م` : `${y}م`);
 const COORD_LABEL = {
   "pleiades-representative": "إحداثيات من Pleiades (نقطة تمثيلية)",
   approximate: "إحداثيات تقديرية، لم تُطابَق بعد",
@@ -78,11 +84,38 @@ const descEl = document.getElementById("era-desc");
 const warnEl = document.getElementById("era-warn");
 const countEl = document.getElementById("count");
 
+function markEra(id) {
+  for (const btn of erasEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(Number(btn.dataset.era) === id));
+}
+async function loadBorders(year) {
+  borderSelect.value = String(year);
+  let data;
+  try { data = await getJson(`data/borders/borders_${year}.geojson`); } catch (err) { borderNoteEl.textContent = `تعذّر تحميل الحدود: ${err.message}`; return; }
+  borderNoteEl.textContent = `حدود تقريبية لسنة ${yearLabel(year)} (${data.features.length} كياناً). المصدر: Historical Basemaps (GPL-3)، ولا تعكس وضعاً مؤكداً.`;
+  if (map.getSource("borders")) { map.getSource("borders").setData(data); return; }
+  map.addSource("borders", { type: "geojson", data });
+  const before = map.getLayer("places") ? "places" : undefined;
+  map.addLayer({ id: "borders-fill", type: "fill", source: "borders", paint: { "fill-color": "#8a4b2a", "fill-opacity": 0.12 } }, before);
+  map.addLayer({ id: "borders-line", type: "line", source: "borders", paint: { "line-color": "#8a4b2a", "line-width": 1, "line-opacity": 0.6 } }, before);
+  map.on("click", "borders-fill", (e) => {
+    const p = e.features[0].properties;
+    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.NAME)}</div>${p.PARTOF ? `<div class="popup-sub">ضمن: ${escapeHtml(p.PARTOF)}</div>` : ""}`).addTo(map);
+  });
+  pointerOn("borders-fill");
+}
 async function loadEra(era) {
+  markEra(era.id);
+  descEl.textContent = era.desc;
+  loadBorders(era.border);
+  if (!era.file) {
+    if (map.getLayer("places")) map.setLayoutProperty("places", "visibility", "none");
+    countEl.textContent = "لا مواقع موثّقة لهذه الحقبة بعد.";
+    warnEl.textContent = "";
+    return;
+  }
   countEl.textContent = "جارٍ التحميل...";
   let data;
   try { data = await getJson(era.file); } catch (err) { countEl.textContent = `تعذّر تحميل المواقع: ${err.message}`; return; }
-  descEl.textContent = era.desc;
   const matched = data._meta?.matched ?? "";
   warnEl.textContent = matched ? `طابق Pleiades: ${matched}. المواقع التقديرية بلون أفتح.` : "";
   countEl.textContent = `عدد المواقع: ${data.features.length}`;
@@ -115,6 +148,10 @@ async function loadEra(era) {
   fitTo(data.features, 6);
   for (const btn of erasEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(Number(btn.dataset.era) === era.id));
 }
+const borderSelect = document.getElementById("border-select");
+const borderNoteEl = document.getElementById("border-note");
+borderSelect.innerHTML = BORDER_YEARS.map((y) => `<option value="${y}">${escapeHtml(yearLabel(y))}</option>`).join("");
+borderSelect.addEventListener("change", () => loadBorders(Number(borderSelect.value)));
 for (const era of ERAS) {
   const btn = document.createElement("button");
   btn.type = "button";

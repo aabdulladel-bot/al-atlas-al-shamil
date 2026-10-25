@@ -1,0 +1,34 @@
+// يبني طبقات الحدود السياسية للحقب من Historical Basemaps (GPL-3) في web/data/borders/.
+// يبسّط الإحداثيات إلى أربع خانات عشرية ويُبقي حقول الاسم والدقة فقط، لتبقى الملفات صغيرة.
+// المصدر محفوظ في data/raw/historical-basemaps، ومسجل في sources/manifest.json بتجزئته.
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const RAW = path.join(ROOT, "data/raw/historical-basemaps");
+const OUT = path.join(ROOT, "web/data/borders");
+// السنة التي تمثّل كل حقبة (من الملفات المتاحة في الفهرس)
+const YEARS = [-4000, -1000, -1, 700, 1200, 1600, 1800, 1914, 1945, 2010];
+const r4 = (n) => Math.round(n * 1e4) / 1e4;
+const roundRing = (ring) => ring.map(([x, y]) => [r4(x), r4(y)]);
+const roundGeom = (g) => {
+  if (g.type === "Polygon") return { type: "Polygon", coordinates: g.coordinates.map(roundRing) };
+  if (g.type === "MultiPolygon") return { type: "MultiPolygon", coordinates: g.coordinates.map((p) => p.map(roundRing)) };
+  return null;
+};
+
+fs.mkdirSync(OUT, { recursive: true });
+for (const year of YEARS) {
+  const name = year < 0 ? `world_bc${-year}.geojson` : `world_${year}.geojson`;
+  const src = JSON.parse(fs.readFileSync(path.join(RAW, name), "utf8"));
+  const features = [];
+  for (const f of src.features) {
+    const geometry = roundGeom(f.geometry);
+    if (!geometry) continue;
+    features.push({ type: "Feature", properties: { NAME: f.properties.NAME, PARTOF: f.properties.PARTOF ?? null, BORDERPRECISION: f.properties.BORDERPRECISION ?? null }, geometry });
+  }
+  const out = { type: "FeatureCollection", _meta: { year, source: "Historical Basemaps (GPL-3)", note: "حدود تقريبية؛ انظر sources/manifest.json" }, features };
+  fs.writeFileSync(path.join(OUT, `borders_${year}.geojson`), JSON.stringify(out) + "\n");
+  console.log(`سنة ${year}: ${features.length} حدود`);
+}
