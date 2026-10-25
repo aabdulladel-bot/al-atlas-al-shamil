@@ -402,6 +402,24 @@
           "bytes": 1316
         }
       ]
+    },
+    {
+      "id": "versailles-1919",
+      "file": "verification/era8/versailles_1919_excerpt.txt",
+      "url": "https://archive.org/details/treatyofpeacebe00alli",
+      "license": "ملك عام: نص معاهدة منشورة سنة 1919 من حكومة بريطانيا (HMSO)، وحقوق التاج على الوثائق الحكومية انتهت. النص من أرشيف الإنترنت.",
+      "tier": "A",
+      "landing": "https://archive.org/details/treatyofpeacebe00alli",
+      "attribution": "The Treaty of Peace between the Allied and Associated Powers and Germany (1919)",
+      "note": "مقطعان فقط: المادة 119 والمادة 231، بالنص الإنجليزي. لا تُستعمل مواد الأمم المتحدة (الطبقة C)، والمعاهدة ليست منها.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era8/versailles_1919_excerpt.txt",
+          "sha256": "e3c8d06a76a6e13d048486935a12b4d2fe29bcfd6057789f650fb077382d4f39",
+          "bytes": 1259
+        }
+      ]
     }
   ]
 }

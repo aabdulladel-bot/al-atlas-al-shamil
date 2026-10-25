@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "era": 8,
+    "count": 2,
+    "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
+  },
+  "claims": [
+    {
+      "id": "cl_000000430",
+      "statement": "تنص المادة 119 من معاهدة فرساي (1919) على أن ألمانيا تتنازل للقوى الحليفة الرئيسية عن جميع حقوقها وألقابها على مستعمراتها ما وراء البحار",
+      "quote": "Germany renounces in favour of the Principal Allied and Associated Powers all her rights and titles over her oversea possessions.",
+      "attributed_to": "The Treaty of Peace between the Allied and Associated Powers and Germany (1919)",
+      "layer": "material",
+      "type": "rule",
+      "hedge": "نص قانوني لمعاهدة صلح، يقرر ما اتفق عليه المنتصرون، ولا يثبت كيف طُبّق في كل مستعمرة. الإحالة هنا إلى نص المادة، لا إلى تنفيذها",
+      "chapter": "معاهدة فرساي: المستعمرات والمسؤولية عن الحرب"
+    },
+    {
+      "id": "cl_000000431",
+      "statement": "تصف المادة 231 من معاهدة فرساي (1919) الحرب بأنها فُرضت على الحكومات الحليفة بعدوان ألمانيا وحلفائها",
+      "quote": "as a consequence of the war imposed upon them by the aggression of Germany and her allies",
+      "attributed_to": "The Treaty of Peace between the Allied and Associated Powers and Germany (1919)",
+      "layer": "material",
+      "type": "judgment",
+      "hedge": "هذا وصف أحادي من المنتصرين في معاهدتهم، وليس حكماً تاريخياً محايداً على المسؤولية عن الحرب، وقد جادلت فيه كتب التاريخ اللاحقة",
+      "chapter": "معاهدة فرساي: المستعمرات والمسؤولية عن الحرب"
+    }
+  ]
+}
