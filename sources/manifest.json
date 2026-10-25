@@ -420,6 +420,74 @@
           "bytes": 1259
         }
       ]
+    },
+    {
+      "id": "historical-basemaps",
+      "file": "data/raw/historical-basemaps",
+      "url": "https://github.com/aourednik/historical-basemaps",
+      "license": "GNU GPL v3 (الملف LICENSE في المستودع). لا يُذكر ترخيص البيانات منفصلاً، فتُعامل الملفات بترخيص المستودع. الاستعمال في الأطلس يخضع لشروط GPL-3، ويجب تحديد ذلك عند التوزيع.",
+      "tier": "B",
+      "landing": "https://github.com/aourednik/historical-basemaps",
+      "attribution": "Historical Basemaps (aourednik), GPL-3",
+      "note": "حدود سياسية تاريخية تقريبية، ويقول المستودع نفسه إنها تحتاج تحققاً قبل الاستعمال الأكاديمي. مستعملة لعرض حدود الحقب فقط، لا لاستخراج ادعاءات منها.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/historical-basemaps/world_bc4000.geojson",
+          "sha256": "e3c4f1a6a255301e69edcb75b3e5fd8d0e52461967e54146bb9f1f57d4654173",
+          "bytes": 786563
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_bc1000.geojson",
+          "sha256": "ace64cae988ab72ab5536b76e052a9564eed81390404bccbc5e6a48ac646d7fc",
+          "bytes": 875454
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_bc1.geojson",
+          "sha256": "830fac0104ebafff7b576333cd5ab4a9bf4b6f732ddf828cec47797cf65047cb",
+          "bytes": 1185421
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_700.geojson",
+          "sha256": "bb66ebee15e57f5d43b0ca524dd9a230651bb821e7e002882b1981a25fd42a38",
+          "bytes": 966976
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_1200.geojson",
+          "sha256": "2d6913ecedb38e269e41d249c87874d81e3e8d7351754821f57e627442d91525",
+          "bytes": 1050917
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_1600.geojson",
+          "sha256": "7285c07eeedfda9048de5354ea1744d327b07614085e9696c5802bb54c86849c",
+          "bytes": 1680222
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_1800.geojson",
+          "sha256": "51fcb6b1f1c361956a3fc24a9c646844ff88754842aa113780428fb4abcd5f2c",
+          "bytes": 1638994
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_1914.geojson",
+          "sha256": "a99425f9486e2243835fdc75ad7d82e6ddf3c72fcef87a63429f3313d830cf19",
+          "bytes": 1289554
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_1945.geojson",
+          "sha256": "3005839db7bcc5256d511b3abb01f1140c0cce245189bc5c28e7d557a47bc775",
+          "bytes": 1563965
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_2010.geojson",
+          "sha256": "d18dcbe41df5e68ec174e5f3887578142bf70fba72f56e204c9de5a8571ae0f4",
+          "bytes": 1893860
+        },
+        {
+          "file": "data/raw/historical-basemaps/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "bytes": 35147
+        }
+      ]
     }
   ]
 }
