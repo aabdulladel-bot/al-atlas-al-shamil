@@ -1,0 +1,27 @@
+{
+  "era": 8,
+  "source": {
+    "source_id": "versailles-1919",
+    "file": "verification/era8/versailles_1919_excerpt.txt",
+    "attributed_to": "The Treaty of Peace between the Allied and Associated Powers and Germany (1919)",
+    "chapter": "معاهدة فرساي: المستعمرات والمسؤولية عن الحرب"
+  },
+  "items": [
+    {
+      "slug": "colonies-renounced",
+      "quote": "Germany renounces in favour of the Principal Allied and Associated Powers all her rights and titles over her oversea possessions.",
+      "statement": "تنص المادة 119 من معاهدة فرساي (1919) على أن ألمانيا تتنازل للقوى الحليفة الرئيسية عن جميع حقوقها وألقابها على مستعمراتها ما وراء البحار",
+      "type": "rule",
+      "layer": "material",
+      "hedge": "نص قانوني لمعاهدة صلح، يقرر ما اتفق عليه المنتصرون، ولا يثبت كيف طُبّق في كل مستعمرة. الإحالة هنا إلى نص المادة، لا إلى تنفيذها"
+    },
+    {
+      "slug": "war-imposed-by-aggression",
+      "quote": "as a consequence of the war imposed upon them by the aggression of Germany and her allies",
+      "statement": "تصف المادة 231 من معاهدة فرساي (1919) الحرب بأنها فُرضت على الحكومات الحليفة بعدوان ألمانيا وحلفائها",
+      "type": "judgment",
+      "layer": "material",
+      "hedge": "هذا وصف أحادي من المنتصرين في معاهدتهم، وليس حكماً تاريخياً محايداً على المسؤولية عن الحرب، وقد جادلت فيه كتب التاريخ اللاحقة"
+    }
+  ]
+}
