@@ -377,3 +377,43 @@ async function loadSunan() {
 }
 
 map.on("load", () => { loadSunan(); });
+
+// ---------- لوحة التحولات: ما بقي وما اختفى وما ظهر بين سنتين، من أسماء ملفات الحدود ----------
+const TRANSITION_KEYS = ["modern", ...BORDER_YEARS];
+const transitionLabel = (k) => (k === "modern" ? "الدول اليوم" : yearLabel(k));
+const trFrom = document.getElementById("tr-from");
+const trTo = document.getElementById("tr-to");
+const trResultEl = document.getElementById("tr-result");
+const trOptions = TRANSITION_KEYS.map((k) => `<option value="${k}">${escapeHtml(transitionLabel(k))}</option>`).join("");
+trFrom.innerHTML = trOptions;
+trTo.innerHTML = trOptions;
+trFrom.value = "1200";
+trTo.value = "1600";
+const namesCache = new Map();
+async function namesOf(key) {
+  if (!namesCache.has(key)) {
+    const url = key === "modern" ? "data/borders/modern_countries.geojson" : `data/borders/borders_${key}.geojson`;
+    const data = await getJson(url);
+    namesCache.set(key, new Set(data.features.map((f) => f.properties.NAME).filter(Boolean)));
+  }
+  return namesCache.get(key);
+}
+const sortNames = (list) => list.sort((x, y) => x.localeCompare(y, "en"));
+async function showTransition() {
+  const a = trFrom.value;
+  const b = trTo.value;
+  if (a === b) { trResultEl.textContent = "اختر سنتين مختلفتين."; return; }
+  trResultEl.textContent = "جارٍ الحساب...";
+  let A, B;
+  try { [A, B] = await Promise.all([namesOf(a), namesOf(b)]); } catch (err) { trResultEl.textContent = `تعذّر تحميل البيانات: ${err.message}`; return; }
+  const gone = sortNames([...A].filter((n) => !B.has(n)));
+  const born = sortNames([...B].filter((n) => !A.has(n)));
+  const kept = [...A].filter((n) => B.has(n)).length;
+  trResultEl.innerHTML =
+    `<p>من ${escapeHtml(transitionLabel(a))} إلى ${escapeHtml(transitionLabel(b))}: بقي <b>${kept}</b> كياناً بالاسم نفسه.</p>` +
+    `<details><summary>اختفى ${gone.length}</summary><div class="sub">${escapeHtml(gone.join("، "))}</div></details>` +
+    `<details><summary>ظهر ${born.length}</summary><div class="sub">${escapeHtml(born.join("، "))}</div></details>`;
+}
+trFrom.addEventListener("change", showTransition);
+trTo.addEventListener("change", showTransition);
+showTransition();
