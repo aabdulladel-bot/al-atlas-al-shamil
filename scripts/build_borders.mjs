@@ -19,6 +19,19 @@ const roundGeom = (g) => {
 };
 
 fs.mkdirSync(OUT, { recursive: true });
+// حدود الدول اليوم من Natural Earth (ملك عام): تُعامل كالدقة الثالثة (محددة بالقانون الدولي)
+{
+  const ne = JSON.parse(fs.readFileSync(path.join(ROOT, "data/raw/naturalearth/ne_50m_admin_0_countries.geojson"), "utf8"));
+  const features = [];
+  for (const f of ne.features) {
+    const geometry = roundGeom(f.geometry);
+    if (!geometry) continue;
+    const p = f.properties;
+    features.push({ type: "Feature", properties: { NAME: p.NAME, NAME_AR: p.NAME_AR || p.NAME, PARTOF: null, BORDERPRECISION: 3 }, geometry });
+  }
+  fs.writeFileSync(path.join(OUT, "modern_countries.geojson"), JSON.stringify({ type: "FeatureCollection", _meta: { source: "Natural Earth (public domain)" }, features }) + "\n");
+  console.log(`الدول اليوم: ${features.length} حدود`);
+}
 for (const year of YEARS) {
   const name = year < 0 ? `world_bc${-year}.geojson` : `world_${year}.geojson`;
   const src = JSON.parse(fs.readFileSync(path.join(RAW, name), "utf8"));
