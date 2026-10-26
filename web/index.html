@@ -39,6 +39,7 @@
     .sub { color: var(--muted); font-size: 12px; }
     label.opt { display: flex; align-items: center; gap: 6px; margin: 3px 0; font-size: 14px; cursor: pointer; }
     input[type=range] { width: 100%; accent-color: var(--accent); }
+    .ln { display: inline-block; width: 18px; height: 3px; border-radius: 2px; flex: none; }
     .legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 2px 0 6px; }
     .legend span { display: inline-flex; align-items: center; gap: 5px; }
     .sw { display: inline-block; width: 22px; height: 12px; border-radius: 2px; }
@@ -91,6 +92,32 @@
       <label class="opt"><input type="checkbox" data-group="demography" checked> السكان (حين تُختار طبقة)</label>
       <p class="sub">اسحب بالزر الأيمن، أو بإصبعين على الجوال، لإمالة الخريطة وتدويرها ورؤية التضاريس. التضخيم يجعل الجبال مرئية على مستوى القارات، فالارتفاع ليس بمقياس الأرض.</p>
       <p class="sub warn" id="relief-note"></p>
+    </details>
+
+    <details class="section" id="cube-panel">
+      <summary>المكعّب الزمكاني</summary>
+      <p class="sub">الأرض في الأسفل والزمن يصعد: كل خريطة حدود طبقة فوق الأرض، والخيوط بينها تتبع الأرض من كيان إلى ما صار إليه. اضغط كياناً لتتبّع سلالته عبر الزمن.</p>
+      <label class="opt"><input type="checkbox" id="cube-toggle"> تشغيل المكعّب</label>
+      <p class="sub warn" id="cube-status"></p>
+      <div id="cube-controls" hidden>
+        <div id="cube-focus" class="card sub"></div>
+        <p class="tr-h">ما يُعرض</p>
+        <label class="opt"><input type="checkbox" id="cube-show-fill" checked> الحدود (أسطح)</label>
+        <label class="opt"><input type="checkbox" id="cube-show-edges" checked> حواف الكيانات</label>
+        <label class="opt"><input type="checkbox" id="cube-show-same" checked><i class="ln" style="background:#ebe6dc"></i> خيط: الاسم نفسه</label>
+        <label class="opt"><input type="checkbox" id="cube-show-succ" checked><i class="ln" style="background:#5cdcc8"></i> خيط: خلفه اسم آخر على معظم أرضه</label>
+        <label class="opt"><input type="checkbox" id="cube-show-change"><i class="ln" style="background:#ff6e50"></i> خيط: انقسام أو اندماج أو دخول في أوسع</label>
+        <label class="opt"><input type="checkbox" id="cube-show-places" checked> مواقع الحقب وأماكن الادعاءات</label>
+        <p class="tr-h">الطبقات الزمنية</p>
+        <div class="row"><button type="button" id="cube-slices-all">الكل</button><button type="button" id="cube-slices-none">لا شيء</button></div>
+        <div id="cube-slices"></div>
+        <p class="tr-h">المحور العمودي</p>
+        <label class="opt"><input type="radio" name="cube-axis" value="even" checked> طبقات متساوية البعد (أوضح)</label>
+        <label class="opt"><input type="radio" name="cube-axis" value="years"> متناسب مع السنين (الحديث يتزاحم في الأعلى)</label>
+        <label for="cube-spacing" class="sub">المسافة بين الطبقات: <span id="cube-spacing-val"></span></label>
+        <input type="range" id="cube-spacing" min="40" max="500" step="10" value="150">
+        <p class="sub">المحور العمودي ترتيب زمني لا ارتفاع، فتُطفأ التضاريس وحدود الخريطة أثناء المكعّب وتعودان بعده. الخيط علاقة مكانية بين خريطتين متتاليتين من لوحة التحولات، لا حكم بالسببية، ولا يرى ما جرى بين السنتين. قبل 1900 تُرسم كل الحدود تقريبية (أسطح أخف).</p>
+      </div>
     </details>
 
     <details class="section" open>
@@ -146,5 +173,6 @@
   </aside>
   <script src="vendor/maplibre-gl.js"></script>
   <script src="app.js"></script>
+  <script src="cube.js"></script>
 </body>
 </html>
