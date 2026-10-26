@@ -20,28 +20,197 @@ for (const b of modeButtons) b.addEventListener("click", () => setMode(b.dataset
 try { const saved = localStorage.getItem("atlas-mode"); if (saved === "research" || saved === "simple") setMode(saved); } catch {}
 
 // ---------- الخريطة وطبقات الأساس ----------
+const DEM_TILES = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png";
+const DEM_ATTRIBUTION = "التضاريس: Terrain Tiles (USGS 3DEP/SRTM/GMTED2010، NOAA ETOPO1، Copernicus EU-DEM، وغيرها)";
+// صور الأقمار الصناعية: NASA Blue Marble: Next Generation (مركّب صور MODIS الحقيقية، 500 م للبكسل) من خدمة NASA GIBS،
+// ملك عام. تُجلب وقت العرض حتى المستوى 8، وبعده تُكبَّر البلاطات.
+const SAT_TILES = "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg";
+const SAT_ATTRIBUTION = "صور الأقمار الصناعية: NASA Blue Marble: Next Generation (Reto Stöckli، NASA Earth Observatory) عبر NASA GIBS";
+// لكل أساس ألوانه: الظلال والسماء والحدود. صور الأقمار داكنة، فتُرسم الحدود فوقها بلون فاتح.
+const HILLSHADE = {
+  satellite: { "hillshade-exaggeration": 0.3, "hillshade-shadow-color": "#000000", "hillshade-highlight-color": "#ffffff", "hillshade-accent-color": "#000000" },
+  drawn: { "hillshade-exaggeration": 0.45, "hillshade-shadow-color": cssVar("--relief-shadow"), "hillshade-highlight-color": cssVar("--relief-light"), "hillshade-accent-color": cssVar("--relief-shadow") },
+};
+// هالة الغلاف الجوي حول الكرة تخفت مع التقريب، والضباب عند الأفق فقط
+const SKY = {
+  satellite: { "sky-color": "#0b1d3a", "horizon-color": "#9cc3ef", "fog-color": "#9cc3ef", "fog-ground-blend": 0.9, "horizon-fog-blend": 0.4, "sky-horizon-blend": 0.6, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 3, 0.8, 5, 0] },
+  drawn: { "sky-color": cssVar("--sea"), "horizon-color": cssVar("--bg"), "fog-color": cssVar("--bg"), "fog-ground-blend": 0.9, "horizon-fog-blend": 0.4, "sky-horizon-blend": 0.6, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 3, 0.8, 5, 0] },
+};
+const BORDER_COLOR = { satellite: "#ffe2b0", drawn: "#8a4b2a" };
+const HIGHLIGHT_COLOR = { satellite: "#ff5a36", drawn: "#c0392b" };
+const basemap = { mode: "satellite" };
 const map = new maplibregl.Map({
   container: "map",
   style: {
     version: 8,
+    // كرة أرضية افتراضياً، ويمكن التبديل إلى الخريطة المسطحة من لوحة الطبقات
+    projection: { type: "globe" },
     sources: {
       land: { type: "geojson", data: "data/base/land.geojson" },
       lakes: { type: "geojson", data: "data/base/lakes.geojson" },
       rivers: { type: "geojson", data: "data/base/rivers.geojson" },
+      // التضاريس: بلاطات الارتفاعات المفتوحة (Terrain Tiles على AWS)، تُجلب وقت العرض ولا تُخزَّن.
+      // مصدران منفصلان للتجسيم وللظلال، كما توصي MapLibre، حتى لا تتنازعا دقة البلاطات.
+      dem: { type: "raster-dem", tiles: [DEM_TILES], encoding: "terrarium", tileSize: 256, maxzoom: 12, attribution: DEM_ATTRIBUTION },
+      "dem-hs": { type: "raster-dem", tiles: [DEM_TILES], encoding: "terrarium", tileSize: 256, maxzoom: 12, attribution: DEM_ATTRIBUTION },
+      ocean: { type: "geojson", data: "data/base/ocean.geojson" },
+      satellite: { type: "raster", tiles: [SAT_TILES], tileSize: 256, maxzoom: 8, attribution: SAT_ATTRIBUTION },
     },
     layers: [
       { id: "sea", type: "background", paint: { "background-color": cssVar("--sea") } },
-      { id: "land", type: "fill", source: "land", paint: { "fill-color": cssVar("--land") } },
-      { id: "lakes", type: "fill", source: "lakes", paint: { "fill-color": cssVar("--sea") } },
+      { id: "satellite", type: "raster", source: "satellite", paint: { "raster-fade-duration": 200 } },
+      { id: "land", type: "fill", source: "land", layout: { visibility: "none" }, paint: { "fill-color": cssVar("--land") } },
+      { id: "hillshade", type: "hillshade", source: "dem-hs", paint: HILLSHADE.satellite },
+      { id: "ocean", type: "fill", source: "ocean", layout: { visibility: "none" }, paint: { "fill-color": cssVar("--sea") } },
+      { id: "lakes", type: "fill", source: "lakes", layout: { visibility: "none" }, paint: { "fill-color": cssVar("--sea") } },
       { id: "rivers", type: "line", source: "rivers", paint: { "line-color": cssVar("--river"), "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.6, 6, 1.6] } },
     ],
+    sky: SKY.satellite,
   },
   center: [35, 32],
   zoom: 3,
+  pitch: 35,
+  maxPitch: 85,
   attributionControl: { customAttribution: "Natural Earth · Pleiades · OWID/HYDE · Gapminder" },
 });
-map.addControl(new maplibregl.NavigationControl(), "bottom-left");
+map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-left");
 const popup = new maplibregl.Popup({ closeButton: true, closeOnClick: true, maxWidth: "320px" });
+
+// ---------- لوحة الطبقات: ما يختاره القارئ يعلو على ما تفتحه الأقسام ----------
+// كل قسم يطلب إظهار طبقته أو إخفاءها عبر setVis، والطبقة لا تظهر إلا إذا طلبها القسم ولم يطفئها القارئ.
+const LAYER_GROUPS = {
+  hillshade: ["hillshade"],
+  water: ["lakes", "rivers"],
+  borders: ["borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-highlight"],
+  places: ["places"],
+  claims: ["claim-points"],
+  demography: ["demography"],
+};
+const groupOf = (id) => Object.keys(LAYER_GROUPS).find((g) => LAYER_GROUPS[g].includes(id));
+const wanted = new Map(["hillshade", "lakes", "rivers"].map((id) => [id, true])); // طبقات الأساس ظاهرة ابتداءً
+const userOff = new Set();
+function setVis(id, on) {
+  wanted.set(id, on);
+  if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", on && !userOff.has(groupOf(id)) ? "visible" : "none");
+}
+// التضخيم التلقائي: قوي على مستوى القارات حيث الجبال لا تُرى بمقياسها، وخفيف عند الاقتراب من الأرض
+const autoExaggeration = (z) => Math.round(Math.max(1.5, Math.min(15, 15 * Math.pow(0.6, z - 3))) * 2) / 2;
+const terrainState = { on: true, auto: true, exaggeration: autoExaggeration(3) };
+function applyTerrain() {
+  if (!map.getSource("dem")) return; // أُوقفت التضاريس لتعذّر الوصول إلى بلاطاتها
+  map.setTerrain(terrainState.on ? { source: "dem", exaggeration: terrainState.exaggeration } : null);
+}
+map.on("zoomend", () => {
+  if (!terrainState.auto) return;
+  const e = autoExaggeration(map.getZoom());
+  if (e === terrainState.exaggeration) return;
+  terrainState.exaggeration = e;
+  showExaggeration();
+  if (terrainState.on) applyTerrain();
+});
+const reliefNoteEl = document.getElementById("relief-note");
+// خطأ في بلاطات التضاريس لا يكسر الأطلس. إن فشلت البلاطات الأولى كلها (لا شبكة أو حجب)، تُوقف التضاريس والظلال
+// فتكفّ الطلبات وتبقى الخريطة مسطحة مع ذكر السبب. وإن فشل بعضها فقط يُنبَّه إلى ذلك. والأخطاء الأخرى تُطبع كما كانت.
+const dem = { ok: 0, failed: 0, stopped: false };
+map.on("data", (e) => { if (e.dataType === "source" && (e.sourceId === "dem" || e.sourceId === "dem-hs") && e.tile) dem.ok++; });
+function stopRelief() {
+  dem.stopped = true;
+  map.setTerrain(null);
+  if (map.getLayer("hillshade")) map.removeLayer("hillshade");
+  for (const id of ["dem", "dem-hs"]) if (map.getSource(id)) map.removeSource(id);
+  for (const id of ["terrain-toggle", "terrain-exaggeration", "terrain-auto"]) document.getElementById(id).disabled = true;
+  document.querySelector('#layer-panel input[data-group="hillshade"]').disabled = true;
+  reliefNoteEl.textContent = "تعذّر الوصول إلى بلاطات التضاريس، فعُرضت الخريطة بلا تضاريس. بقية الطبقات تعمل.";
+}
+map.on("error", (e) => {
+  if (e.sourceId === "satellite") {
+    sat.failed++;
+    if (!sat.stopped && sat.ok === 0 && sat.failed >= 8) stopSatellite();
+    else if (!sat.stopped && sat.ok > 0) basemapNoteEl.textContent = "تعذّر تحميل بعض بلاطات صور الأقمار الصناعية.";
+    return;
+  }
+  if (e.sourceId === "dem" || e.sourceId === "dem-hs") {
+    dem.failed++;
+    if (!dem.stopped && dem.ok === 0 && dem.failed >= 8) stopRelief();
+    else if (!dem.stopped && dem.ok > 0) reliefNoteEl.textContent = "تعذّر تحميل بعض بلاطات التضاريس، فقد تظهر أجزاء مسطحة.";
+    return;
+  }
+  console.error(e.error ?? e);
+});
+map.on("load", applyTerrain);
+
+// ---------- الأساس: صور الأقمار الصناعية أو خريطة مرسومة ----------
+const basemapNoteEl = document.getElementById("basemap-note");
+function applyBasemap(mode) {
+  basemap.mode = mode;
+  const sat = mode === "satellite";
+  document.getElementById("map").classList.toggle("space", sat);
+  if (map.getLayer("satellite")) map.setLayoutProperty("satellite", "visibility", sat ? "visible" : "none");
+  for (const id of ["land", "ocean"]) map.setLayoutProperty(id, "visibility", sat ? "none" : "visible");
+  setVis("lakes", !sat); // البحيرات ظاهرة في الصور نفسها
+  if (map.getLayer("hillshade")) for (const [k, v] of Object.entries(HILLSHADE[mode])) map.setPaintProperty("hillshade", k, v);
+  map.setSky(SKY[mode]);
+  if (map.getLayer("borders-fill")) {
+    map.setPaintProperty("borders-fill", "fill-color", BORDER_COLOR[mode]);
+    for (const id of ["borders-halo", "borders-line-approx", "borders-line"]) map.setPaintProperty(id, "line-color", BORDER_COLOR[mode]);
+    map.setPaintProperty("borders-highlight", "line-color", HIGHLIGHT_COLOR[mode]);
+  }
+}
+wanted.set("lakes", false);
+document.getElementById("map").classList.add("space");
+// إن فشلت أولى بلاطات الصور كلها (لا شبكة أو حجب) يُحذف مصدرها فتكفّ الطلبات، ويُعرض الأساس المرسوم مع ذكر السبب
+const sat = { ok: 0, failed: 0, stopped: false };
+map.on("data", (e) => { if (e.dataType === "source" && e.sourceId === "satellite" && e.tile) sat.ok++; });
+function stopSatellite() {
+  sat.stopped = true;
+  if (map.getLayer("satellite")) map.removeLayer("satellite");
+  if (map.getSource("satellite")) map.removeSource("satellite");
+  const satRadio = document.querySelector('input[name="basemap"][value="satellite"]');
+  satRadio.disabled = true;
+  document.querySelector('input[name="basemap"][value="drawn"]').checked = true;
+  applyBasemap("drawn");
+  basemapNoteEl.textContent = "تعذّر الوصول إلى صور الأقمار الصناعية (NASA GIBS)، فعُرضت الخريطة المرسومة.";
+}
+// على الشاشات الضيقة: قسم الطبقات مطويّ، والإسناد مطويّ خلف زر ⓘ، لتبقى الخريطة مرئية
+if (isNarrow()) {
+  document.getElementById("layer-panel").open = false;
+  map.on("load", () => document.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show"));
+}
+document.getElementById("layer-panel").addEventListener("change", (e) => {
+  const t = e.target;
+  if (t.dataset.group) {
+    if (t.checked) userOff.delete(t.dataset.group); else userOff.add(t.dataset.group);
+    for (const id of LAYER_GROUPS[t.dataset.group]) if (wanted.has(id)) setVis(id, wanted.get(id));
+  } else if (t.id === "terrain-toggle") {
+    terrainState.on = t.checked;
+    applyTerrain();
+  } else if (t.name === "projection") {
+    map.setProjection({ type: t.value });
+  } else if (t.name === "basemap") {
+    applyBasemap(t.value);
+  }
+});
+const exaggerationEl = document.getElementById("terrain-exaggeration");
+const exaggerationVal = document.getElementById("terrain-exaggeration-val");
+const exaggerationAutoEl = document.getElementById("terrain-auto");
+function showExaggeration() {
+  exaggerationEl.value = String(terrainState.exaggeration);
+  exaggerationVal.textContent = `×${terrainState.exaggeration}${terrainState.auto ? " (تلقائي)" : ""}`;
+  exaggerationAutoEl.checked = terrainState.auto;
+}
+showExaggeration();
+exaggerationEl.addEventListener("input", () => {
+  terrainState.auto = false;
+  terrainState.exaggeration = Number(exaggerationEl.value);
+  showExaggeration();
+  if (terrainState.on) applyTerrain();
+});
+exaggerationAutoEl.addEventListener("change", () => {
+  terrainState.auto = exaggerationAutoEl.checked;
+  if (terrainState.auto) terrainState.exaggeration = autoExaggeration(map.getZoom());
+  showExaggeration();
+  if (terrainState.on) applyTerrain();
+});
 
 function fitTo(features, maxZoom) {
   if (!features.length) return;
@@ -122,14 +291,15 @@ async function loadBorders(key) {
   const before = map.getLayer("places") ? "places" : undefined;
   // الدقة ترسم اليقين: الحد المحدد خط متصل، والتقريبي (أو مجهول الدقة) خط متقطع فوق هالة ضبابية
   // تُري الحد منطقةً لا خطاً. والأرض التي لا يسمّي المصدر عليها كياناً تبقى بلا تعبئة ولا حد.
-  map.addLayer({ id: "borders-fill", type: "fill", source: "borders", paint: { "fill-color": "#8a4b2a", "fill-opacity": fillOpacity } }, before);
+  const bc = BORDER_COLOR[basemap.mode];
+  map.addLayer({ id: "borders-fill", type: "fill", source: "borders", paint: { "fill-color": bc, "fill-opacity": fillOpacity } }, before);
   map.addLayer({
     id: "borders-halo", type: "line", source: "borders", filter: ["all", named, ["!", precise]],
-    paint: { "line-color": "#8a4b2a", "line-opacity": 0.32, "line-width": ["interpolate", ["linear"], ["zoom"], 1, 4, 4, 10, 7, 22], "line-blur": ["interpolate", ["linear"], ["zoom"], 1, 3, 4, 8, 7, 18] },
+    paint: { "line-color": bc, "line-opacity": 0.32, "line-width": ["interpolate", ["linear"], ["zoom"], 1, 4, 4, 10, 7, 22], "line-blur": ["interpolate", ["linear"], ["zoom"], 1, 3, 4, 8, 7, 18] },
   }, before);
-  map.addLayer({ id: "borders-line-approx", type: "line", source: "borders", filter: ["all", named, ["!", precise]], paint: { "line-color": "#8a4b2a", "line-width": 1, "line-opacity": 0.55, "line-dasharray": [3, 3] } }, before);
-  map.addLayer({ id: "borders-line", type: "line", source: "borders", filter: ["all", named, precise], paint: { "line-color": "#8a4b2a", "line-width": 1.3, "line-opacity": 0.75 } }, before);
-  map.addLayer({ id: "borders-highlight", type: "line", source: "borders", filter: ["==", ["get", "NAME"], ""], paint: { "line-color": "#c0392b", "line-width": 3 } }, before);
+  map.addLayer({ id: "borders-line-approx", type: "line", source: "borders", filter: ["all", named, ["!", precise]], paint: { "line-color": bc, "line-width": 1, "line-opacity": 0.55, "line-dasharray": [3, 3] } }, before);
+  map.addLayer({ id: "borders-line", type: "line", source: "borders", filter: ["all", named, precise], paint: { "line-color": bc, "line-width": 1.3, "line-opacity": 0.75 } }, before);
+  map.addLayer({ id: "borders-highlight", type: "line", source: "borders", filter: ["==", ["get", "NAME"], ""], paint: { "line-color": HIGHLIGHT_COLOR[basemap.mode], "line-width": 3 } }, before);
   map.on("click", "borders-fill", (e) => {
     const p = e.features[0].properties;
     if (!p.NAME) {
@@ -140,6 +310,7 @@ async function loadBorders(key) {
     popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.NAME)}</div>${p.PARTOF && p.PARTOF !== p.NAME ? `<div class="popup-sub">ضمن: ${escapeHtml(p.PARTOF)}</div>` : ""}<div class="popup-sub">دقة الحد: ${escapeHtml(prec)}</div>`).addTo(map);
   });
   pointerOn("borders-fill");
+  for (const id of LAYER_GROUPS.borders) setVis(id, true);
   return data;
 }
 async function loadEra(era) {
@@ -147,7 +318,7 @@ async function loadEra(era) {
   descEl.textContent = era.desc;
   loadBorders(era.border);
   if (!era.file) {
-    if (map.getLayer("places")) map.setLayoutProperty("places", "visibility", "none");
+    setVis("places", false);
     countEl.textContent = "لا مواقع موثّقة لهذه الحقبة بعد.";
     warnEl.textContent = "";
     return;
@@ -161,7 +332,7 @@ async function loadEra(era) {
   const source = map.getSource("places");
   if (source) {
     source.setData(data);
-    map.setLayoutProperty("places", "visibility", "visible");
+    setVis("places", true);
   } else {
     map.addSource("places", { type: "geojson", data });
     map.addLayer({
@@ -183,6 +354,7 @@ async function loadEra(era) {
       ).addTo(map);
     });
     pointerOn("places");
+    setVis("places", true);
   }
   fitTo(data.features, 6);
   for (const btn of erasEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(Number(btn.dataset.era) === era.id));
@@ -221,7 +393,7 @@ const formatPop = (n) => Number(n).toLocaleString("ar-u-nu-latn");
 
 async function loadDemography(key) {
   if (!key) {
-    if (map.getLayer("demography")) map.setLayoutProperty("demography", "visibility", "none");
+    setVis("demography", false);
     demoNoteEl.textContent = "";
     return;
   }
@@ -234,7 +406,7 @@ async function loadDemography(key) {
   const source = map.getSource("demography");
   if (source) {
     source.setData(data);
-    map.setLayoutProperty("demography", "visibility", "visible");
+    setVis("demography", true);
   } else {
     map.addSource("demography", { type: "geojson", data });
     map.addLayer({
@@ -258,6 +430,7 @@ async function loadDemography(key) {
       ).addTo(map);
     });
     pointerOn("demography");
+    setVis("demography", true);
   }
   fitTo(data.features, 3);
 }
@@ -335,7 +508,7 @@ async function ensureClaimPoints() {
 function showClaimPoints(show, filter = null) {
   if (!map.getLayer("claim-points")) return;
   map.setFilter("claim-points", filter);
-  map.setLayoutProperty("claim-points", "visibility", show ? "visible" : "none");
+  setVis("claim-points", show);
   claimMapBtn.setAttribute("aria-pressed", String(show && !filter));
 }
 claimMapBtn.addEventListener("click", async () => {
