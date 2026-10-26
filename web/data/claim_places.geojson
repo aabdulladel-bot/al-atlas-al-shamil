@@ -5,7 +5,7 @@
     "status": "pleiades-verified",
     "source": "Pleiades (pleiades.stoa.org)، ملف places-latest، ترخيص CC BY 3.0، يتطلب الإسناد",
     "raw_sha256": "aa521b916561a45560249f0bf1b9e5cd53696c5646101906b2ce431d4dd6af82",
-    "matched": "6 من 6",
+    "matched": "9 من 9",
     "generated_by": "scripts/build_places.mjs",
     "note": "الإحداثيات الممثّلة في Pleiades نقاط تمثيلية لا مواقع مساحية."
   },
@@ -128,6 +128,66 @@
         "pleiades_id": "511384",
         "pleiades_title": "Prusa",
         "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tarshish",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.6715,
+          37.293
+        ]
+      },
+      "properties": {
+        "name_ar": "ترشيش",
+        "name_en": "Tartessos",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "256468",
+        "pleiades_title": "Tartessos",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "judah",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.0017,
+          31.7342
+        ]
+      },
+      "properties": {
+        "name_ar": "يهوذا",
+        "name_en": "Iudaea (region)",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "687934",
+        "pleiades_title": "Iudaea (region)",
+        "pleiades_location_precision": "related"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "britain",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5,
+          52.5
+        ]
+      },
+      "properties": {
+        "name_ar": "بريطانيا",
+        "name_en": "Britannia (province)",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "981513",
+        "pleiades_title": "Britannia (province)",
+        "pleiades_location_precision": "rough"
       }
     }
   ]
