@@ -48,6 +48,15 @@ try {
     page.on("pageerror", (e) => problems.push(`[${name}] pageerror: ${e.message}`));
     page.on("response", (r) => { if (r.status() >= 400) problems.push(`[${name}] HTTP ${r.status()} ${r.url()}`); });
     await page.goto(URL, { waitUntil: "networkidle" });
+    // انتظار سكون الخريطة (انتهاء الحركة وتحميل البلاطات) بعد كل نقرة، كما ينتظر القارئ، بدل مهلة ثابتة:
+    // في العرض البرمجي تستغرق أُولى إطارات التضاريس في منطقة جديدة ثوانيَ، فكانت النقرة التالية تقع وسطها.
+    // map معرّفة في نطاق الصفحة لا في window، فتُعرَّف دالة الانتظار بوسم سكربت.
+    await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 60000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
+    const settle = () => page.evaluate(() => window.__settle());
+    // التضاريس تُطفأ لبقية الفحوص (غايتها أخطاء الواجهة لا سرعة الرسم البرمجي)، وتُختبر وحدها في خطوة لوحة الطبقات
+    await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 15000 });
+    await page.evaluate(() => { document.getElementById("layer-panel").open = true; });
+    await page.click("#terrain-toggle"); await settle();
     await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 15000 });
     const counts = {};
     // افتح كل الأقسام المطوية قبل الضغط
@@ -56,24 +65,37 @@ try {
       step = `${name}: ${key}`;
       const btns = await page.$$(sel);
       counts[key] = btns.length;
-      for (const b of btns) { await b.click(); await page.waitForTimeout(700); }
+      for (const b of btns) { await b.click(); await page.waitForTimeout(300); await settle(); }
     }
     const opts = await page.$$eval("#demo-select option", (os) => os.map((o) => o.value).filter(Boolean));
     counts.demo = opts.length;
-    for (const v of opts) { await page.selectOption("#demo-select", v); await page.waitForTimeout(700); }
+    for (const v of opts) { await page.selectOption("#demo-select", v); await page.waitForTimeout(300); await settle(); }
     step = `${name}: لوحة الطبقات`;
     // لوحة الطبقات: المسطحة ثم الكرة، والتضاريس، وتضخيمها، وكل مجموعة طبقات إطفاءً وإشعالاً
     await page.click('input[name="basemap"][value="drawn"]'); await page.waitForTimeout(400);
     await page.click('input[name="basemap"][value="satellite"]'); await page.waitForTimeout(400);
     await page.click('input[name="projection"][value="mercator"]'); await page.waitForTimeout(500);
     await page.click('input[name="projection"][value="globe"]'); await page.waitForTimeout(500);
-    await page.click("#terrain-toggle"); await page.waitForTimeout(300);
+    await page.click("#terrain-toggle"); await page.waitForTimeout(300); await settle();
     await page.click("#terrain-toggle"); await page.waitForTimeout(300);
     await page.$eval("#terrain-exaggeration", (el) => { el.value = "20"; el.dispatchEvent(new Event("input", { bubbles: true })); });
     await page.click("#terrain-auto"); await page.waitForTimeout(300);
     const groups = await page.$$("#layer-panel input[data-group]");
     counts.layerGroups = groups.length;
     for (const g of groups) { await g.click(); await page.waitForTimeout(150); await g.click(); await page.waitForTimeout(150); }
+    step = `${name}: المكعّب الزمكاني`;
+    // المكعّب: تشغيله وانتظار طبقاته، ثم كل مفاتيحه، والتركيز على كيان، ثم إطفاؤه
+    await page.click("#cube-toggle");
+    await page.waitForFunction(() => document.getElementById("cube-status").textContent === "", null, { timeout: 120000 });
+    for (const id of ["fill", "edges", "same", "succ", "change", "places"]) { await page.click(`#cube-show-${id}`); await page.waitForTimeout(150); await page.click(`#cube-show-${id}`); }
+    await page.click("#cube-slices-none"); await page.waitForTimeout(200); await page.click("#cube-slices-all"); await page.waitForTimeout(300);
+    await page.click('input[name="cube-axis"][value="years"]'); await page.waitForTimeout(300); await page.click('input[name="cube-axis"][value="even"]');
+    await page.$eval("#cube-spacing", (el) => { el.value = "300"; el.dispatchEvent(new Event("input", { bubbles: true })); });
+    await page.addScriptTag({ content: 'cubeSetFocus("1800", "Ottoman Empire");' }); await page.waitForTimeout(800);
+    counts.cubeFocus = await page.$$eval("#cube-focus li", (li) => li.length);
+    await page.click('input[name="cube-lineage"][value="wide"]'); await page.waitForTimeout(500);
+    await page.click("#cube-focus-clear"); await page.waitForTimeout(300);
+    await page.click("#cube-toggle"); await page.waitForTimeout(800);
     step = `${name}: قائمة الحدود`;
     // قائمة الحدود: كل السنوات والدول اليوم
     const borderOpts = await page.$$eval("#border-select option", (os) => os.map((o) => o.value));
@@ -89,7 +111,7 @@ try {
     await page.evaluate(() => document.querySelectorAll("#tr-result details").forEach((d) => (d.open = true)));
     const ent = await page.$('#tr-result button.ent[data-name="Ottoman Empire"]');
     if (ent) { await ent.click(); await page.waitForTimeout(1200); } else problems.push(`[${name}] لا زر للدولة العثمانية في لوحة التحولات`);
-    await page.click("#claim-map-btn"); await page.waitForTimeout(1000);
+    await page.click("#claim-map-btn"); await page.waitForTimeout(300); await settle();
     await page.screenshot({ path: path.join(ROOT, "out", `ui_${name}.png`) });
     console.log(`${name}: ${JSON.stringify(counts)}`);
     for (const [k, n] of Object.entries(counts)) if (n === 0) problems.push(`[${name}] لا أزرار في ${k}`);
