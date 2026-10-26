@@ -15,9 +15,9 @@ const PORT = 8765;
 const URL = `http://127.0.0.1:${PORT}/`;
 fs.mkdirSync(path.join(ROOT, "out"), { recursive: true });
 
-// بلاطة تضاريس مسطحة (ارتفاع صفر بترميز terrarium: أحمر 128) تُقدَّم بدل البلاطات الخارجية،
-// فيُختبر مسار التضاريس كاملاً بلا اعتماد على الشبكة.
-function flatTerrariumPng() {
+// بلاطات بديلة بلون واحد تُقدَّم بدل البلاطات الخارجية، فيُختبر مسار التضاريس والصور كاملاً بلا اعتماد على الشبكة:
+// تضاريس مسطحة (ارتفاع صفر بترميز terrarium: أحمر 128)، وصورة فضائية بلون البحر. ليست صوراً حقيقية.
+function solidPng([r, g, b]) {
   const chunk = (type, data) => {
     const len = Buffer.alloc(4); len.writeUInt32BE(data.length);
     const td = Buffer.concat([Buffer.from(type), data]);
@@ -25,11 +25,12 @@ function flatTerrariumPng() {
     return Buffer.concat([len, td, crc]);
   };
   const ihdr = Buffer.alloc(13); ihdr.writeUInt32BE(256, 0); ihdr.writeUInt32BE(256, 4); ihdr[8] = 8; ihdr[9] = 2;
-  const row = Buffer.concat([Buffer.from([0]), Buffer.alloc(256 * 3).fill(Buffer.from([128, 0, 0]))]);
+  const row = Buffer.concat([Buffer.from([0]), Buffer.alloc(256 * 3).fill(Buffer.from([r, g, b]))]);
   const raw = Buffer.concat(Array.from({ length: 256 }, () => row));
   return Buffer.concat([Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]), chunk("IHDR", ihdr), chunk("IDAT", zlib.deflateSync(raw)), chunk("IEND", Buffer.alloc(0))]);
 }
-const FLAT_TILE = flatTerrariumPng();
+const FLAT_TILE = solidPng([128, 0, 0]);
+const SAT_STANDIN = solidPng([12, 28, 64]);
 const server = spawn("python3", ["-m", "http.server", String(PORT), "--bind", "127.0.0.1"], { cwd: path.join(ROOT, "web"), stdio: "ignore" });
 const problems = [];
 let step = "البداية"; // آخر خطوة بدأت، تُذكر عند الفشل
@@ -42,6 +43,7 @@ try {
   for (const [name, viewport] of [["desktop", { width: 1366, height: 860 }], ["mobile", { width: 390, height: 844 }]]) {
     const page = await browser.newPage({ viewport });
     await page.route("**/elevation-tiles-prod/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: FLAT_TILE, headers: { "access-control-allow-origin": "*" } }));
+    await page.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
     page.on("console", (m) => { if (m.type() === "error") problems.push(`[${name}] console: ${m.text()}`); });
     page.on("pageerror", (e) => problems.push(`[${name}] pageerror: ${e.message}`));
     page.on("response", (r) => { if (r.status() >= 400) problems.push(`[${name}] HTTP ${r.status()} ${r.url()}`); });
@@ -61,6 +63,8 @@ try {
     for (const v of opts) { await page.selectOption("#demo-select", v); await page.waitForTimeout(700); }
     step = `${name}: لوحة الطبقات`;
     // لوحة الطبقات: المسطحة ثم الكرة، والتضاريس، وتضخيمها، وكل مجموعة طبقات إطفاءً وإشعالاً
+    await page.click('input[name="basemap"][value="drawn"]'); await page.waitForTimeout(400);
+    await page.click('input[name="basemap"][value="satellite"]'); await page.waitForTimeout(400);
     await page.click('input[name="projection"][value="mercator"]'); await page.waitForTimeout(500);
     await page.click('input[name="projection"][value="globe"]'); await page.waitForTimeout(500);
     await page.click("#terrain-toggle"); await page.waitForTimeout(300);

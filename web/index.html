@@ -14,6 +14,7 @@
     :root[data-theme="dark"] { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; --evidence: #5fb3aa; --limit: #d08a5c; --relief-shadow: #0b0907; --relief-light: #6b6050; }
     html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; }
     #map { position: absolute; inset: 0; }
+    #map.space { background: radial-gradient(circle at 50% 50%, #0b1730 0%, #03060d 70%); }
     #panel { position: absolute; top: 12px; inset-inline-start: 12px; width: min(380px, calc(100% - 24px)); max-height: calc(100vh - 24px); overflow-y: auto; box-sizing: border-box; background: var(--panel); padding: 14px 16px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
     #panel h1 { font-size: 20px; margin: 0; }
     .tagline { margin: 2px 0 8px; font-size: 13px; color: var(--muted); }
@@ -69,6 +70,11 @@
 
     <details class="section" id="layer-panel" open>
       <summary>الطبقات</summary>
+      <div class="mode">
+        <label><input type="radio" name="basemap" value="satellite" checked> صور الأقمار الصناعية</label>
+        <label><input type="radio" name="basemap" value="drawn"> خريطة مرسومة</label>
+      </div>
+      <p class="sub warn" id="basemap-note"></p>
       <div class="mode">
         <label><input type="radio" name="projection" value="globe" checked> كرة أرضية</label>
         <label><input type="radio" name="projection" value="mercator"> خريطة مسطحة</label>
@@ -133,7 +139,8 @@
 
     <p class="credits">المصادر: Pleiades (CC BY 3.0)، Gapminder وHYDE عبر OWID (CC BY 4.0)، Natural Earth (ملك عام)، حدود الحقب التاريخية من Historical Basemaps (GPL-3، تقريبية وغير مؤكدة)، نص المقدمة من ويكي مصدر (CC BY-SA)، الاختبارات الكمية من بيانات Seshat (CC BY-NC-SA، استعمال غير تجاري). الادعاءات مسودات قيد المراجعة.</p>
     <details class="credits sub">
-      <summary>إسناد بيانات التضاريس (Terrain Tiles)</summary>
+      <summary>إسناد صور الأقمار الصناعية وبيانات التضاريس</summary>
+      <p class="credits" dir="ltr">Satellite imagery: NASA Blue Marble: Next Generation, Reto Stöckli, NASA Earth Observatory (public domain). We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).</p>
       <p class="credits" dir="ltr">ArcticDEM terrain data DEM(s) were created from DigitalGlobe, Inc., imagery and funded under National Science Foundation awards 1043681, 1559691, and 1542736; Australia terrain data © Commonwealth of Australia (Geoscience Australia) 2017; Austria terrain data © offene Daten Österreichs – Digitales Geländemodell (DGM) Österreich; Canada terrain data contains information licensed under the Open Government Licence – Canada; Europe terrain data produced using Copernicus data and information funded by the European Union - EU-DEM layers; Global ETOPO1 terrain data U.S. National Oceanic and Atmospheric Administration; Mexico terrain data source: INEGI, Continental relief, 2016; New Zealand terrain data Copyright 2011 Crown copyright (c) Land Information New Zealand and the New Zealand Government (All rights reserved); Norway terrain data © Kartverket; United Kingdom terrain data © Environment Agency copyright and/or database right 2015. All rights reserved; United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.</p>
     </details>
   </aside>

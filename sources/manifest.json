@@ -522,6 +522,17 @@
       "attribution": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md (النص الكامل منقول في تذييل الواجهة)",
       "note": "تضاريس الخريطة الثلاثية الأبعاد. تُجلب في متصفح القارئ وقت العرض ولا يُخزَّن منها شيء في المستودع، فلا تجزئة لها. إن تعذّر الوصول تبقى الخريطة مسطحة مع تنبيه.",
       "status": "runtime"
+    },
+    {
+      "id": "nasa-gibs-bluemarble",
+      "runtime": true,
+      "tile_url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg",
+      "license": "ملك عام (صور NASA)، مع طلب الإسناد لـ NASA وخدمة GIBS",
+      "tier": "A",
+      "landing": "https://nasa-gibs.github.io/gibs-api-docs/",
+      "attribution": "NASA Blue Marble: Next Generation, Reto Stöckli, NASA Earth Observatory; imagery via NASA GIBS (ESDIS)",
+      "note": "صور الأقمار الصناعية للخريطة الثلاثية الأبعاد: مركّب صور MODIS لشهر واحد من 2004، بدقة 500 م للبكسل (المستوى 8). تُجلب في متصفح القارئ وقت العرض ولا يُخزَّن منها شيء. الصورة حديثة لا تاريخية: السواحل والغطاء النباتي اليوم. لم تُعاين من بيئة البناء لأن المضيف محجوب فيها.",
+      "status": "runtime"
     }
   ]
 }
