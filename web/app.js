@@ -103,6 +103,7 @@ const LAYER_GROUPS = {
   places: ["places"],
   claims: ["claim-points"],
   demography: ["demography"],
+  labels: [], // أسماء الدول: عناصر HTML لا طبقات خريطة، تُدار في updateLabels
 };
 const groupOf = (id) => Object.keys(LAYER_GROUPS).find((g) => LAYER_GROUPS[g].includes(id));
 const wanted = new Map(["hillshade", "lakes", "rivers"].map((id) => [id, true])); // طبقات الأساس ظاهرة ابتداءً
@@ -199,6 +200,7 @@ document.getElementById("layer-panel").addEventListener("change", (e) => {
   if (t.dataset.group) {
     if (t.checked) userOff.delete(t.dataset.group); else userOff.add(t.dataset.group);
     for (const id of LAYER_GROUPS[t.dataset.group]) if (wanted.has(id)) setVis(id, wanted.get(id));
+    if (t.dataset.group === "labels") updateLabels();
   } else if (t.id === "terrain-toggle") {
     terrainState.on = t.checked;
     applyTerrain();
@@ -229,6 +231,49 @@ exaggerationAutoEl.addEventListener("change", () => {
   showExaggeration();
   if (terrainState.on) applyTerrain();
 });
+
+// ---------- أسماء الدول اليوم بالعربية ----------
+// عناصر HTML يرسمها المتصفح، فيأتي الخط العربي سليماً بلا خطوط خارجية. الاسم والموضع وأدنى تقريب من Natural Earth.
+// تظهر الأسماء عند تقريب أدنى بدرجة مما يقترحه المصدر، لأن الكرة تعرض العالم أصغر من الخريطة المسطحة.
+const countryLabels = [];
+function updateLabels() {
+  const on = !userOff.has("labels");
+  const z = map.getZoom();
+  for (const l of countryLabels) {
+    const show = on && z >= l.min - 1;
+    if (show && !l.added) { l.marker.addTo(map); l.added = true; } else if (!show && l.added) { l.marker.remove(); l.added = false; }
+  }
+  declutterLabels();
+}
+// منع التراكب: الأسماء مرتبة بأولويتها في المصدر (أدنى تقريب أولاً)، ويُخفى كل اسم يتراكب مع اسم أعلى منه أولوية
+// حتى يُقرَّب. ما خلف الكرة أو التضاريس تخفيه MapLibre (opacityWhenCovered) فلا يحجز مكاناً.
+function declutterLabels() {
+  const kept = [];
+  for (const l of countryLabels) {
+    if (!l.added) continue;
+    const el = l.marker.getElement();
+    el.style.visibility = "";
+    if (el.style.opacity === "0") continue;
+    const r = el.getBoundingClientRect();
+    const box = { l: r.left - 3, r: r.right + 3, t: r.top - 2, b: r.bottom + 2 };
+    if (kept.some((k) => box.l < k.r && box.r > k.l && box.t < k.b && box.b > k.t)) el.style.visibility = "hidden";
+    else kept.push(box);
+  }
+}
+map.on("load", async () => {
+  let data;
+  try { data = await getJson("data/borders/modern_labels.json"); } catch { return; }
+  for (const l of data.labels) {
+    const el = document.createElement("div");
+    el.className = `country-label${l.min <= 2 ? " major" : l.min <= 3 ? " mid" : ""}`;
+    el.textContent = l.ar;
+    el.title = l.en;
+    countryLabels.push({ min: l.min, added: false, marker: new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]) });
+  }
+  updateLabels();
+});
+map.on("zoomend", updateLabels);
+map.on("moveend", declutterLabels);
 
 function fitTo(features, maxZoom) {
   if (!features.length) return;

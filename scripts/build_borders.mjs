@@ -30,6 +30,14 @@ fs.mkdirSync(OUT, { recursive: true });
     features.push({ type: "Feature", properties: { NAME: p.NAME, NAME_AR: p.NAME_AR || p.NAME, PARTOF: null, BORDERPRECISION: 3 }, geometry });
   }
   fs.writeFileSync(path.join(OUT, "modern_countries.geojson"), JSON.stringify({ type: "FeatureCollection", _meta: { source: "Natural Earth (public domain)" }, features }) + "\n");
+  // أسماء الدول بالعربية ومواضعها: الاسم (NAME_AR) ونقطة التسمية (LABEL_X/Y) وأدنى تقريب تظهر عنده (MIN_LABEL)،
+  // كلها من Natural Earth نفسه، لا ترجمة ولا مواضع مكتوبة يدوياً
+  const labels = ne.features
+    .filter((f) => f.properties.NAME_AR && Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y))
+    .map((f) => ({ ar: f.properties.NAME_AR, en: f.properties.NAME, x: r4(f.properties.LABEL_X), y: r4(f.properties.LABEL_Y), min: f.properties.MIN_LABEL ?? 5 }))
+    .sort((a, b) => a.min - b.min);
+  fs.writeFileSync(path.join(OUT, "modern_labels.json"), JSON.stringify({ _meta: { source: "Natural Earth (public domain): NAME_AR, LABEL_X/Y, MIN_LABEL" }, labels }) + "\n");
+  console.log(`أسماء الدول بالعربية: ${labels.length}`);
   console.log(`الدول اليوم: ${features.length} حدود`);
 }
 for (const year of YEARS) {
