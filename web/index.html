@@ -7,11 +7,11 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="vendor/maplibre-gl.css">
   <style>
-    :root { --bg: #f4efe6; --ink: #2a2620; --muted: #6b6356; --accent: #8a4b2a; --panel: #fffdf8; --sea: #dfe7ea; --land: #f4efe6; --river: #8fb3c4; --evidence: #2a6f6a; --limit: #a0522d; }
+    :root { --bg: #f4efe6; --ink: #2a2620; --muted: #6b6356; --accent: #8a4b2a; --panel: #fffdf8; --sea: #dfe7ea; --land: #f4efe6; --river: #8fb3c4; --evidence: #2a6f6a; --limit: #a0522d; --relief-shadow: #5c4a36; --relief-light: #fffaf0; }
     @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; --evidence: #5fb3aa; --limit: #d08a5c; }
+      :root:not([data-theme="light"]) { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; --evidence: #5fb3aa; --limit: #d08a5c; --relief-shadow: #0b0907; --relief-light: #6b6050; }
     }
-    :root[data-theme="dark"] { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; --evidence: #5fb3aa; --limit: #d08a5c; }
+    :root[data-theme="dark"] { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; --evidence: #5fb3aa; --limit: #d08a5c; --relief-shadow: #0b0907; --relief-light: #6b6050; }
     html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; }
     #map { position: absolute; inset: 0; }
     #panel { position: absolute; top: 12px; inset-inline-start: 12px; width: min(380px, calc(100% - 24px)); max-height: calc(100vh - 24px); overflow-y: auto; box-sizing: border-box; background: var(--panel); padding: 14px 16px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
@@ -36,6 +36,8 @@
     .ev.limit::before { content: "شاهد مقيِّد · "; color: var(--limit); font-weight: 700; }
     .ev.antecedent::before { content: "سابقة نصية · "; color: var(--muted); font-weight: 700; }
     .sub { color: var(--muted); font-size: 12px; }
+    label.opt { display: flex; align-items: center; gap: 6px; margin: 3px 0; font-size: 14px; cursor: pointer; }
+    input[type=range] { width: 100%; accent-color: var(--accent); }
     .legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 2px 0 6px; }
     .legend span { display: inline-flex; align-items: center; gap: 5px; }
     .sw { display: inline-block; width: 22px; height: 12px; border-radius: 2px; }
@@ -64,6 +66,26 @@
       <button type="button" data-mode="simple" aria-pressed="true">مبسّط</button>
       <button type="button" data-mode="research" aria-pressed="false">باحث</button>
     </div>
+
+    <details class="section" id="layer-panel" open>
+      <summary>الطبقات</summary>
+      <div class="mode">
+        <label><input type="radio" name="projection" value="globe" checked> كرة أرضية</label>
+        <label><input type="radio" name="projection" value="mercator"> خريطة مسطحة</label>
+      </div>
+      <label class="opt"><input type="checkbox" id="terrain-toggle" checked> التضاريس المجسّمة</label>
+      <label for="terrain-exaggeration" class="sub">تضخيم الارتفاع: <span id="terrain-exaggeration-val"></span></label>
+      <input type="range" id="terrain-exaggeration" min="1" max="30" step="0.5" value="15">
+      <label class="opt sub"><input type="checkbox" id="terrain-auto" checked> تضخيم تلقائي بحسب التقريب</label>
+      <label class="opt"><input type="checkbox" data-group="hillshade" checked> ظلال التضاريس</label>
+      <label class="opt"><input type="checkbox" data-group="water" checked> الأنهار والبحيرات</label>
+      <label class="opt"><input type="checkbox" data-group="borders" checked> حدود الدول والكيانات</label>
+      <label class="opt"><input type="checkbox" data-group="places" checked> مواقع الحقبة</label>
+      <label class="opt"><input type="checkbox" data-group="claims" checked> أماكن الادعاءات (حين تُعرض)</label>
+      <label class="opt"><input type="checkbox" data-group="demography" checked> السكان (حين تُختار طبقة)</label>
+      <p class="sub">اسحب بالزر الأيمن، أو بإصبعين على الجوال، لإمالة الخريطة وتدويرها ورؤية التضاريس. التضخيم يجعل الجبال مرئية على مستوى القارات، فالارتفاع ليس بمقياس الأرض.</p>
+      <p class="sub warn" id="relief-note"></p>
+    </details>
 
     <details class="section" open>
       <summary>السنن</summary>
@@ -110,6 +132,10 @@
     </details>
 
     <p class="credits">المصادر: Pleiades (CC BY 3.0)، Gapminder وHYDE عبر OWID (CC BY 4.0)، Natural Earth (ملك عام)، حدود الحقب التاريخية من Historical Basemaps (GPL-3، تقريبية وغير مؤكدة)، نص المقدمة من ويكي مصدر (CC BY-SA)، الاختبارات الكمية من بيانات Seshat (CC BY-NC-SA، استعمال غير تجاري). الادعاءات مسودات قيد المراجعة.</p>
+    <details class="credits sub">
+      <summary>إسناد بيانات التضاريس (Terrain Tiles)</summary>
+      <p class="credits" dir="ltr">ArcticDEM terrain data DEM(s) were created from DigitalGlobe, Inc., imagery and funded under National Science Foundation awards 1043681, 1559691, and 1542736; Australia terrain data © Commonwealth of Australia (Geoscience Australia) 2017; Austria terrain data © offene Daten Österreichs – Digitales Geländemodell (DGM) Österreich; Canada terrain data contains information licensed under the Open Government Licence – Canada; Europe terrain data produced using Copernicus data and information funded by the European Union - EU-DEM layers; Global ETOPO1 terrain data U.S. National Oceanic and Atmospheric Administration; Mexico terrain data source: INEGI, Continental relief, 2016; New Zealand terrain data Copyright 2011 Crown copyright (c) Land Information New Zealand and the New Zealand Government (All rights reserved); Norway terrain data © Kartverket; United Kingdom terrain data © Environment Agency copyright and/or database right 2015. All rights reserved; United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.</p>
+    </details>
   </aside>
   <script src="vendor/maplibre-gl.js"></script>
   <script src="app.js"></script>

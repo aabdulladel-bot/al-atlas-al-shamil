@@ -19,6 +19,8 @@ function refusal(src) {
 fs.mkdirSync(outDir, { recursive: true });
 let fetched = 0;
 for (const src of manifest.sources) {
+  // مصادر وقت العرض (بلاطات يجلبها المتصفح) لا تُنزَّل ولا تُخزَّن
+  if (src.runtime) continue;
   const why = refusal(src);
   if (why) {
     src.status = `refused: ${why}`;

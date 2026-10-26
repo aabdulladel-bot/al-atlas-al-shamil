@@ -1,4 +1,4 @@
-// يبني طبقات الأساس للخريطة من Natural Earth (ملك عام): اليابسة والأنهار والبحيرات بدقة 1:50 مليون.
+// يبني طبقات الأساس للخريطة من Natural Earth (ملك عام): اليابسة والمحيطات والأنهار والبحيرات بدقة 1:50 مليون.
 // يحذف الخصائص غير اللازمة ويقرّب الإحداثيات لتخفيف الحجم.
 import fs from "node:fs";
 import path from "node:path";
@@ -12,6 +12,8 @@ fs.mkdirSync(OUT, { recursive: true });
 const round = (c) => (typeof c[0] === "number" ? [Math.round(c[0] * 1000) / 1000, Math.round(c[1] * 1000) / 1000] : c.map(round));
 const layers = [
   ["ne_50m_land.geojson", "land.geojson", () => ({})],
+  // المحيطات تُرسم فوق ظلال التضاريس لتغطي قاع البحر (بيانات الارتفاع تشمل الأعماق)
+  ["ne_50m_ocean.geojson", "ocean.geojson", () => ({})],
   ["ne_50m_lakes.geojson", "lakes.geojson", () => ({})],
   ["ne_50m_rivers_lake_centerlines.geojson", "rivers.geojson", (p) => ({ name: p.name || null, scalerank: p.scalerank ?? null })],
 ];
