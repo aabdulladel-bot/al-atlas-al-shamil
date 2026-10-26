@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المكعّب الزمكاني</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="vendor/maplibre-gl.css">
+  <style>
+    :root { --bg: #f4efe6; --ink: #2a2620; --muted: #6b6356; --accent: #8a4b2a; --panel: #fffdf8; --sea: #dfe7ea; --land: #f4efe6; --river: #8fb3c4; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; }
+    }
+    :root[data-theme="dark"] { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; overflow: hidden; }
+    #map { position: absolute; inset: 0; }
+    #labels { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+    #labels span { position: absolute; transform: translate(-100%, -50%); font-size: 12px; font-weight: 700; white-space: nowrap; padding: 1px 6px; border-radius: 4px; background: color-mix(in srgb, var(--panel) 80%, transparent); }
+    #panel { position: absolute; z-index: 3; top: 12px; inset-inline-start: 12px; width: min(360px, calc(100% - 24px)); max-height: calc(100vh - 24px); overflow-y: auto; box-sizing: border-box; background: var(--panel); padding: 14px 16px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.15); font-size: 14px; }
+    #panel h1 { font-size: 19px; margin: 0; }
+    .tagline { margin: 2px 0 8px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+    details.section { border-top: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); padding: 6px 0; }
+    details.section > summary { cursor: pointer; font-weight: 700; font-size: 15px; padding: 4px 0; }
+    label.opt { display: flex; align-items: center; gap: 6px; margin: 3px 0; cursor: pointer; }
+    .sw { display: inline-block; width: 14px; height: 14px; border-radius: 3px; flex: none; }
+    .ln { display: inline-block; width: 18px; height: 3px; border-radius: 2px; flex: none; }
+    .row { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0; }
+    button { font: inherit; font-size: 13px; padding: 5px 10px; border-radius: 6px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
+    input[type=range] { width: 100%; accent-color: var(--accent); }
+    .sub { color: var(--muted); font-size: 12px; line-height: 1.6; }
+    #status { font-size: 13px; color: var(--accent); font-weight: 600; min-height: 1.2em; }
+    #focus ul { margin: 4px 0; padding-inline-start: 18px; line-height: 1.7; }
+    #focus bdi { unicode-bidi: isolate; }
+    a { color: var(--accent); }
+    @media (max-width: 600px) { #panel { max-height: 50vh; } }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="labels" aria-hidden="true"></div>
+  <aside id="panel">
+    <h1>المكعّب الزمكاني</h1>
+    <p class="tagline">الأرض في الأسفل، والزمن يصعد: كل خريطة طبقة، والخيوط بينها تتبع الأرض من كيان إلى ما صار إليه. اسحب بالزر الأيمن (أو بإصبعين) لتدوير المشهد، واضغط كياناً لتتبّع سلالته عبر الزمن.</p>
+    <p class="sub"><a href="index.html">العودة إلى الأطلس</a></p>
+    <p id="status">جارٍ التحميل...</p>
+
+    <details class="section" open>
+      <summary>التركيز</summary>
+      <div id="focus" class="sub">اضغط أي كيان على أي طبقة لترى ما سبقه وما صار إليه.</div>
+    </details>
+
+    <details class="section" open>
+      <summary>ما يُعرض</summary>
+      <label class="opt"><input type="checkbox" id="show-fill" checked> الحدود (أسطح)</label>
+      <label class="opt"><input type="checkbox" id="show-edges" checked> حواف الكيانات</label>
+      <label class="opt"><input type="checkbox" id="show-same" checked><i class="ln" style="background:#5b5146"></i> خيط: الاسم نفسه</label>
+      <label class="opt"><input type="checkbox" id="show-succ" checked><i class="ln" style="background:#2a6f6a"></i> خيط: خلفه اسم آخر على معظم أرضه</label>
+      <label class="opt"><input type="checkbox" id="show-change"><i class="ln" style="background:#c0392b"></i> خيط: انقسام أو اندماج أو دخول في أوسع</label>
+      <label class="opt"><input type="checkbox" id="show-places" checked><i class="sw" style="background:#1f4e79;border-radius:50%"></i> مواقع الحقب وأماكن الادعاءات</label>
+    </details>
+
+    <details class="section" open>
+      <summary>الطبقات الزمنية</summary>
+      <div class="row"><button type="button" id="slices-all">الكل</button><button type="button" id="slices-none">لا شيء</button></div>
+      <div id="slice-list"></div>
+    </details>
+
+    <details class="section">
+      <summary>المحور العمودي</summary>
+      <label class="opt"><input type="radio" name="axis" value="even" checked> طبقات متساوية البعد (أوضح)</label>
+      <label class="opt"><input type="radio" name="axis" value="years"> متناسب مع السنين (الحديث يتزاحم في الأعلى)</label>
+      <label for="spacing" class="sub">المسافة بين الطبقات: <span id="spacing-val"></span></label>
+      <input type="range" id="spacing" min="40" max="500" step="10" value="150">
+    </details>
+
+    <details class="section">
+      <summary>المنهج والحدود</summary>
+      <p class="sub">الحدود من Historical Basemaps (GPL-3) والدول اليوم من Natural Earth (ملك عام)، مبسّطة للعرض بنحو 2 كم. قبل 1900 تُرسم كل الحدود تقريبية (أسطح أخف)، كما في الأطلس.</p>
+      <p class="sub">الخيط يصل النقطة التمثيلية لكيان بنقطة كيان في الطبقة التالية إذا أخذ الثاني ربع أرض الأول فأكثر، أو جاء ربع أرض الثاني فأكثر من الأول. هي علاقات مكانية بين خريطتين متتاليتين من لوحة التحولات، لا أحكام بالسببية، ولا ترى ما جرى بين السنتين.</p>
+      <p class="sub">المحور العمودي ترتيب زمني لا ارتفاع جغرافي. البعد المتساوي يجعل الفجوة بين 4000 ق.م و1000 ق.م كالفجوة بين 1914 و1945.</p>
+    </details>
+  </aside>
+  <script src="vendor/maplibre-gl.js"></script>
+  <script src="vendor/deck.gl.min.js"></script>
+  <script src="stack.js"></script>
+</body>
+</html>
