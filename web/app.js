@@ -94,20 +94,50 @@ async function loadBorders(key) {
   const url = modern ? "data/borders/modern_countries.geojson" : `data/borders/borders_${key}.geojson`;
   let data;
   try { data = await getJson(url); } catch (err) { borderNoteEl.textContent = `تعذّر تحميل الحدود: ${err.message}`; return; }
+  // حكم من الأطلس لا من المصدر: قبل القرن العشرين لم تُرسم أكثر الحدود بمعاهدات، فتُرسم كلها تقريبية
+  const approxAll = !modern && Number(key) < 1900;
+  const namedFeats = data.features.filter((f) => f.properties.NAME);
+  const preciseCount = namedFeats.filter((f) => f.properties.BORDERPRECISION === 3).length;
+  const unnamedCount = data.features.length - namedFeats.length;
   borderNoteEl.textContent = modern
     ? `حدود الدول اليوم (${data.features.length} كياناً) من Natural Earth، ملك عام.`
-    : `حدود تقريبية لسنة ${yearLabel(key)} (${data.features.length} كياناً). المصدر: Historical Basemaps (GPL-3)، ولا تعكس وضعاً مؤكداً.`;
-  if (map.getSource("borders")) { map.getSource("borders").setData(data); map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]); return data; }
+    : `حدود سنة ${yearLabel(key)}: ${namedFeats.length} مضلعاً مسمّى، ` +
+      (preciseCount ? `${preciseCount} منها يصفه المصدر بأنه محدد، و${namedFeats.length - preciseCount} تقريبي` : "كلها تقريبية في المصدر") +
+      `${unnamedCount ? `، و${unnamedCount} أرضاً بلا كيان مسمّى` : ""}. المصدر: Historical Basemaps (GPL-3).` +
+      (approxAll && preciseCount ? " قبل 1900 يرسم الأطلس كل الحدود تقريبية، لأن كثيراً منها لم يكن مرسوماً بمعاهدات آنذاك، والنافذة تذكر وصف المصدر." : "");
+  const named = ["to-boolean", ["get", "NAME"]];
+  // قبل 1900 لا شيء يُرسم محدداً: شرط لا يتحقق (لا دقة سالبة في المصدر)
+  const precise = ["==", ["get", "BORDERPRECISION"], approxAll ? -1 : 3];
+  const fillOpacity = ["case", ["!", named], 0, precise, 0.16, 0.07];
+  if (map.getSource("borders")) {
+    map.getSource("borders").setData(data);
+    map.setPaintProperty("borders-fill", "fill-opacity", fillOpacity);
+    map.setFilter("borders-halo", ["all", named, ["!", precise]]);
+    map.setFilter("borders-line-approx", ["all", named, ["!", precise]]);
+    map.setFilter("borders-line", ["all", named, precise]);
+    map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
+    return data;
+  }
   map.addSource("borders", { type: "geojson", data });
   const before = map.getLayer("places") ? "places" : undefined;
-  // الدقة تحدد الشفافية وسُمك الخط: الحد التقريبي أخفّ، والمحدد بالقانون أوضح
-  map.addLayer({ id: "borders-fill", type: "fill", source: "borders", paint: { "fill-color": "#8a4b2a", "fill-opacity": ["match", ["get", "BORDERPRECISION"], 1, 0.06, 2, 0.12, 3, 0.18, 0.12] } }, before);
-  map.addLayer({ id: "borders-line", type: "line", source: "borders", paint: { "line-color": "#8a4b2a", "line-width": ["match", ["get", "BORDERPRECISION"], 3, 1.4, 1], "line-opacity": ["match", ["get", "BORDERPRECISION"], 1, 0.35, 0.7] } }, before);
+  // الدقة ترسم اليقين: الحد المحدد خط متصل، والتقريبي (أو مجهول الدقة) خط متقطع فوق هالة ضبابية
+  // تُري الحد منطقةً لا خطاً. والأرض التي لا يسمّي المصدر عليها كياناً تبقى بلا تعبئة ولا حد.
+  map.addLayer({ id: "borders-fill", type: "fill", source: "borders", paint: { "fill-color": "#8a4b2a", "fill-opacity": fillOpacity } }, before);
+  map.addLayer({
+    id: "borders-halo", type: "line", source: "borders", filter: ["all", named, ["!", precise]],
+    paint: { "line-color": "#8a4b2a", "line-opacity": 0.32, "line-width": ["interpolate", ["linear"], ["zoom"], 1, 4, 4, 10, 7, 22], "line-blur": ["interpolate", ["linear"], ["zoom"], 1, 3, 4, 8, 7, 18] },
+  }, before);
+  map.addLayer({ id: "borders-line-approx", type: "line", source: "borders", filter: ["all", named, ["!", precise]], paint: { "line-color": "#8a4b2a", "line-width": 1, "line-opacity": 0.55, "line-dasharray": [3, 3] } }, before);
+  map.addLayer({ id: "borders-line", type: "line", source: "borders", filter: ["all", named, precise], paint: { "line-color": "#8a4b2a", "line-width": 1.3, "line-opacity": 0.75 } }, before);
   map.addLayer({ id: "borders-highlight", type: "line", source: "borders", filter: ["==", ["get", "NAME"], ""], paint: { "line-color": "#c0392b", "line-width": 3 } }, before);
   map.on("click", "borders-fill", (e) => {
     const p = e.features[0].properties;
-    const prec = PRECISION_LABEL[p.BORDERPRECISION];
-    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.NAME)}</div>${p.PARTOF ? `<div class="popup-sub">ضمن: ${escapeHtml(p.PARTOF)}</div>` : ""}${prec ? `<div class="popup-sub">دقة الحد: ${escapeHtml(prec)}</div>` : ""}`).addTo(map);
+    if (!p.NAME) {
+      popup.setLngLat(e.lngLat).setHTML(`<div class="popup-sub">أرض لا يسمّي المصدر عليها كياناً في هذه السنة</div>`).addTo(map);
+      return;
+    }
+    const prec = `${PRECISION_LABEL[p.BORDERPRECISION] ?? "غير مذكورة"} (بحسب المصدر)`;
+    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.NAME)}</div>${p.PARTOF && p.PARTOF !== p.NAME ? `<div class="popup-sub">ضمن: ${escapeHtml(p.PARTOF)}</div>` : ""}<div class="popup-sub">دقة الحد: ${escapeHtml(prec)}</div>`).addTo(map);
   });
   pointerOn("borders-fill");
   return data;
@@ -160,7 +190,7 @@ async function loadEra(era) {
 const borderSelect = document.getElementById("border-select");
 const borderNoteEl = document.getElementById("border-note");
 borderSelect.innerHTML = `<option value="modern">الدول اليوم (Natural Earth)</option>` + BORDER_YEARS.map((y) => `<option value="${y}">${escapeHtml(yearLabel(y))}</option>`).join("");
-borderSelect.addEventListener("change", () => loadBorders(Number(borderSelect.value)));
+borderSelect.addEventListener("change", () => loadBorders(borderSelect.value === "modern" ? "modern" : Number(borderSelect.value)));
 for (const era of ERAS) {
   const btn = document.createElement("button");
   btn.type = "button";

@@ -38,6 +38,10 @@ try {
     const opts = await page.$$eval("#demo-select option", (os) => os.map((o) => o.value).filter(Boolean));
     counts.demo = opts.length;
     for (const v of opts) { await page.selectOption("#demo-select", v); await page.waitForTimeout(700); }
+    // قائمة الحدود: كل السنوات والدول اليوم
+    const borderOpts = await page.$$eval("#border-select option", (os) => os.map((o) => o.value));
+    counts.borders = borderOpts.length;
+    for (const v of borderOpts) { await page.selectOption("#border-select", v); await page.waitForTimeout(500); }
     // لوحة التحولات: زوجان من السنين، أحدهما معكوس الترتيب، ثم الضغط على اسم
     for (const [a, b] of [["1800", "1945"], ["modern", "1200"], ["-4000", "-1000"]]) {
       await page.selectOption("#tr-from", a); await page.selectOption("#tr-to", b); await page.waitForTimeout(800);
