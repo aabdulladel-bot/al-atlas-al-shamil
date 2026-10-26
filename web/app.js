@@ -296,7 +296,8 @@ async function ensureClaimPoints() {
       `<div class="popup-sub">الحقبة ${c.era} · ${escapeHtml(c.attributed_to)}</div>` +
       `<div class="popup-sub research-only">“${escapeHtml(c.quote)}”</div></div>`
     ).join("");
-    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.name_ar)}</div>${list}`).addTo(map);
+    const note = p.place_note ? `<div class="popup-sub">${escapeHtml(p.place_note)}</div>` : "";
+    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.name_ar)}</div>${note}${list}`).addTo(map);
   });
   pointerOn("claim-points");
   return true;

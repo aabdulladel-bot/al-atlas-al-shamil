@@ -18,6 +18,8 @@ for (const p of naturalCfg.places) {
   places.push({ type: "Feature", id: p.slug, geometry: { type: "Point", coordinates: [Math.round(lon * 1e4) / 1e4, Math.round(lat * 1e4) / 1e4] }, properties: { name_ar: p.name_ar, name_en: p.name_en, coord_status: "natural-earth-modern-city" } });
 }
 const bySlug = new Map(places.map((f) => [f.id, f]));
+// ملاحظة التحفظ على المكان (مثل: موقع تقديري لمدينة لا يُعرف موقعها بيقين)، تُعرض مع الاسم
+const notes = new Map(cfg.places.filter((p) => p.note).map((p) => [p.slug, p.note]));
 const aliasToSlug = new Map();
 for (const p of [...cfg.places, ...naturalCfg.places]) for (const a of p.aliases) aliasToSlug.set(a, p.slug);
 
@@ -44,7 +46,7 @@ for (const [slug, claims] of linked) {
     type: "Feature",
     id: slug,
     geometry: place.geometry,
-    properties: { slug, name_ar: place.properties.name_ar, name_en: place.properties.name_en, coord_status: place.properties.coord_status, count: claims.length, claim_ids: "," + claims.map((c) => c.id).join(",") + ",", claims: JSON.stringify(claims) },
+    properties: { slug, name_ar: place.properties.name_ar, name_en: place.properties.name_en, coord_status: place.properties.coord_status, place_note: notes.get(slug) ?? null, count: claims.length, claim_ids: "," + claims.map((c) => c.id).join(",") + ",", claims: JSON.stringify(claims) },
   });
 }
 const out = {
