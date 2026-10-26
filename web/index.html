@@ -36,6 +36,10 @@
     .ev.limit::before { content: "شاهد مقيِّد · "; color: var(--limit); font-weight: 700; }
     .ev.antecedent::before { content: "سابقة نصية · "; color: var(--muted); font-weight: 700; }
     .sub { color: var(--muted); font-size: 12px; }
+    .tr-h { font-size: 13px; margin: 10px 0 2px; }
+    .tr-list { margin: 4px 0; padding-inline-start: 18px; font-size: 13px; line-height: 1.8; }
+    button.ent { font: inherit; padding: 0; border: 0; background: none; color: var(--ink); text-decoration: underline dotted; cursor: pointer; unicode-bidi: isolate; }
+    .lk { unicode-bidi: isolate; white-space: nowrap; }
     .src-quote { color: var(--muted); font-style: italic; }
     body[data-mode="simple"] .research-only { display: none; }
     .claims-list { max-height: 300px; overflow-y: auto; }
@@ -75,10 +79,10 @@
 
     <details class="section">
       <summary>لوحة التحولات</summary>
-      <p>قارن سنتين: ما بقي بالاسم نفسه، وما اختفى، وما ظهر على الخريطة.</p>
+      <p>قارن خريطتين: ما بقي، وما خلفه اسم آخر، وما انقسم أو اندمج أو زال، بمطابقة الأرض لا الأسماء. اضغط اسماً لتراه على خريطة سنته.</p>
       <div class="mode">من <select id="tr-from" aria-label="السنة الأولى"></select> إلى <select id="tr-to" aria-label="السنة الثانية"></select></div>
       <div id="tr-result" class="card"></div>
-      <p class="sub">تُقارن الأسماء حرفياً، فاختلاف التسمية بين السنوات يظهر كاختفاء وظهور. الحدود نفسها تقريبية، فالمقارنة تقريبية.</p>
+      <p class="sub">المنهج: يُحسب تداخل المساحات (جيوديسياً) بين كل كيانين مسمّيين، والنسب بجانب الأسماء أنصبة من الأرض. هذه علاقات مكانية بين خريطتين، لا أحكام بالسببية أو الوراثة القانونية، ولا ترى ما جرى بين السنتين. الحدود تقريبية (≈ = تقريبية في المصدر)، والمضلعات بلا اسم لا تُعدّ كيانات.</p>
     </details>
 
     <details class="section">
