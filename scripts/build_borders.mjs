@@ -30,12 +30,21 @@ fs.mkdirSync(OUT, { recursive: true });
     features.push({ type: "Feature", properties: { NAME: p.NAME, NAME_AR: p.NAME_AR || p.NAME, PARTOF: null, BORDERPRECISION: 3 }, geometry });
   }
   fs.writeFileSync(path.join(OUT, "modern_countries.geojson"), JSON.stringify({ type: "FeatureCollection", _meta: { source: "Natural Earth (public domain)" }, features }) + "\n");
+  // تعديلات تحريرية معلنة على أولوية بعض الأسماء (scripts/config/label_overrides.json)
+  const overrides = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/label_overrides.json"), "utf8")).overrides;
   // أسماء الدول بالعربية ومواضعها: الاسم (NAME_AR) ونقطة التسمية (LABEL_X/Y) وأدنى تقريب تظهر عنده (MIN_LABEL)،
   // كلها من Natural Earth نفسه، لا ترجمة ولا مواضع مكتوبة يدوياً
   const labels = ne.features
     .filter((f) => f.properties.NAME_AR && Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y))
-    .map((f) => ({ ar: f.properties.NAME_AR, en: f.properties.NAME, x: r4(f.properties.LABEL_X), y: r4(f.properties.LABEL_Y), min: f.properties.MIN_LABEL ?? 5 }))
-    .sort((a, b) => a.min - b.min);
+    .map((f) => {
+      const o = overrides[f.properties.NAME];
+      const label = { ar: f.properties.NAME_AR, en: f.properties.NAME, x: r4(f.properties.LABEL_X), y: r4(f.properties.LABEL_Y), min: o?.min ?? f.properties.MIN_LABEL ?? 5 };
+      if (o) { label.first = Boolean(o.first); label.source_min = f.properties.MIN_LABEL ?? null; }
+      return label;
+    })
+    // الترتيب أولوية التسمية: أدنى تقريب أولاً، وما عليه first يتقدّم في التقريب نفسه
+    .sort((a, b) => a.min - b.min || Number(Boolean(b.first)) - Number(Boolean(a.first)));
+  for (const name of Object.keys(overrides)) if (!labels.some((l) => l.en === name)) throw new Error(`تعديل تسمية لاسم غير موجود في المصدر: ${name}`);
   fs.writeFileSync(path.join(OUT, "modern_labels.json"), JSON.stringify({ _meta: { source: "Natural Earth (public domain): NAME_AR, LABEL_X/Y, MIN_LABEL" }, labels }) + "\n");
   console.log(`أسماء الدول بالعربية: ${labels.length}`);
   console.log(`الدول اليوم: ${features.length} حدود`);
