@@ -1,0 +1,2381 @@
+{
+ "_meta": {
+  "fields": "qid، التسمية العربية والإنجليزية، عنوان المقالة العربية، P31، P571 (النشأة)، P576 (الزوال)",
+  "license": "CC0 1.0",
+  "priority_rule": "الكيانات التي تغطي 90% من الأرض المسمّاة في كل خريطة، وكل كيان مساحته 100 ألف كم² فأكثر",
+  "retrieved_at": "2026-10-27T13:54:46+00:00",
+  "source": "Wikidata (CC0)، wbgetentities بعناوين ويكيبيديا الإنجليزية"
+ },
+ "titles": {
+  "Aaniiih": null,
+  "Abnaki": null,
+  "Aboriginal tribes": null,
+  "Abyssinia": {
+   "ar": "الحبشة",
+   "arwiki": "الحبشة",
+   "dissolved": [],
+   "en": "Abyssinia",
+   "inception": [],
+   "p31": [
+    "Q82794"
+   ],
+   "qid": "Q4702431"
+  },
+  "Adal": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Adal",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q347087"
+  },
+  "Afghanistan": {
+   "ar": "أفغانستان",
+   "arwiki": "أفغانستان",
+   "dissolved": [],
+   "en": "Afghanistan",
+   "inception": [
+    "+1709-01-01T00:00:00Z",
+    "+1747-06-19T00:00:00Z",
+    "+1823-01-01T00:00:00Z",
+    "+1926-00-00T00:00:00Z",
+    "+1973-00-00T00:00:00Z",
+    "+1978-00-00T00:00:00Z",
+    "+1992-00-00T00:00:00Z",
+    "+1996-00-00T00:00:00Z",
+    "+2002-00-00T00:00:00Z",
+    "+2004-00-00T00:00:00Z",
+    "+2021-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "qid": "Q889"
+  },
+  "Ahmadnagar": null,
+  "Ainu": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Ainu",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q226570"
+  },
+  "Air": {
+   "ar": "هواء",
+   "arwiki": "هواء",
+   "dissolved": [],
+   "en": "air",
+   "inception": [],
+   "p31": [
+    "Q11432",
+    "Q169336",
+    "Q79529"
+   ],
+   "qid": "Q7391292"
+  },
+  "Algeria": {
+   "ar": "الجزائر",
+   "arwiki": "الجزائر",
+   "dissolved": [],
+   "en": "Algeria",
+   "inception": [
+    "+1962-07-05T00:00:00Z",
+    "+1962-07-03T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q51576574",
+    "Q6256"
+   ],
+   "qid": "Q262"
+  },
+  "Algiers": {
+   "ar": "الجزائر العاصمة",
+   "arwiki": "الجزائر (مدينة)",
+   "dissolved": [],
+   "en": "Algiers",
+   "inception": [
+    "+0944-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q486972",
+    "Q515",
+    "Q5119"
+   ],
+   "qid": "Q3561"
+  },
+  "Almohad Caliphate": {
+   "ar": "الدولة الموحدية",
+   "arwiki": "الدولة الموحدية",
+   "dissolved": [
+    "+1269-01-01T00:00:00Z"
+   ],
+   "en": "Almohad Caliphate",
+   "inception": [
+    "+1121-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q131401",
+    "Q3024240"
+   ],
+   "qid": "Q199688"
+  },
+  "Alwa": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Alwa",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q449615"
+  },
+  "Amazon hunter-gatherers": null,
+  "Andean hunter-gatherers": null,
+  "Angevin Empire": {
+   "ar": "أنجيفن",
+   "arwiki": "الإمبراطورية الأنجوية",
+   "dissolved": [
+    "+1242-00-00T00:00:00Z"
+   ],
+   "en": "Angevin Empire",
+   "inception": [
+    "+1154-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q417175",
+    "Q188800",
+    "Q130533560"
+   ],
+   "qid": "Q538677"
+  },
+  "Anglo-Egyptian Sudan": {
+   "ar": "السودان الإنجليزي المصري",
+   "arwiki": "السودان الإنجليزي المصري",
+   "dissolved": [
+    "+1956-01-01T00:00:00Z"
+   ],
+   "en": "Anglo-Egyptian Sudan",
+   "inception": [
+    "+1899-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q734818"
+   ],
+   "qid": "Q541455"
+  },
+  "Angola": {
+   "ar": "أنغولا",
+   "arwiki": "أنغولا",
+   "dissolved": [],
+   "en": "Angola",
+   "inception": [
+    "+1975-11-11T00:00:00Z",
+    "+1992-08-25T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q200464",
+    "Q6256",
+    "Q333542"
+   ],
+   "qid": "Q916"
+  },
+  "Angola (Portugal)": null,
+  "Annam": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Annam",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q564450"
+  },
+  "Apache": {
+   "ar": "أباتشي",
+   "arwiki": "أباتشي (شعب)",
+   "dissolved": [],
+   "en": "Apache",
+   "inception": [],
+   "p31": [
+    "Q103817",
+    "Q41710"
+   ],
+   "qid": "Q102090"
+  },
+  "Arabia (Nejd)": null,
+  "Arabian pastoral nomads": null,
+  "Arameans": {
+   "ar": "آراميون",
+   "arwiki": "آراميون",
+   "dissolved": [],
+   "en": "Arameans",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q175064"
+  },
+  "Arapaho": {
+   "ar": "أراباهو",
+   "arwiki": "أراباهو",
+   "dissolved": [],
+   "en": "Arapaho people",
+   "inception": [],
+   "p31": [
+    "Q133311"
+   ],
+   "qid": "Q626136"
+  },
+  "Arctic marine mammal hunters": null,
+  "Argentina": {
+   "ar": "الأرجنتين",
+   "arwiki": "الأرجنتين",
+   "dissolved": [],
+   "en": "Argentina",
+   "inception": [
+    "+1816-07-09T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q6266",
+    "Q10551526",
+    "Q140892892"
+   ],
+   "qid": "Q414"
+  },
+  "Armenia": {
+   "ar": "أرمينيا",
+   "arwiki": "أرمينيا",
+   "dissolved": [],
+   "en": "Armenia",
+   "inception": [
+    "+1991-09-23T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256",
+    "Q140892892"
+   ],
+   "qid": "Q399"
+  },
+  "Arrernte": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Arrernte",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q1209388"
+  },
+  "Asante": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Asante",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q720954"
+  },
+  "Assiniboin": null,
+  "Assyria": {
+   "ar": "آشور",
+   "arwiki": "آشور",
+   "dissolved": [
+    "-0609-00-00T00:00:00Z"
+   ],
+   "en": "Assyrian Empire",
+   "inception": [
+    "-2025-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q48349"
+   ],
+   "qid": "Q41137"
+  },
+  "Athabaskan": null,
+  "Aures": null,
+  "Australia": {
+   "ar": "أستراليا",
+   "arwiki": "أستراليا",
+   "dissolved": [],
+   "en": "Australia",
+   "inception": [
+    "+1901-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q202686",
+    "Q223832",
+    "Q3624078",
+    "Q43702",
+    "Q6256"
+   ],
+   "qid": "Q408"
+  },
+  "Australian aboriginal hunter-gatherers": null,
+  "Austrian Empire": {
+   "ar": "الإمبراطورية النمساوية",
+   "arwiki": "الإمبراطورية النمساوية",
+   "dissolved": [
+    "+1867-06-08T00:00:00Z"
+   ],
+   "en": "Austrian Empire",
+   "inception": [
+    "+1804-08-11T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q3024240"
+   ],
+   "qid": "Q131964"
+  },
+  "Austro-Asiatic rice cultures": null,
+  "Austro-Hungarian Empire": null,
+  "Austronesians": null,
+  "Avars": null,
+  "Awsa": null,
+  "Axum": {
+   "ar": "أكسوم",
+   "arwiki": "أكسوم",
+   "dissolved": [],
+   "en": "Axum",
+   "inception": [],
+   "p31": [
+    "Q515",
+    "Q690840"
+   ],
+   "qid": "Q5832"
+  },
+  "Ayutthaya": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Ayutthaya",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q793363"
+  },
+  "Babylonia": {
+   "ar": "بلاد بابل",
+   "arwiki": "بلاد بابل",
+   "dissolved": [
+    "-0539-00-00T00:00:00Z"
+   ],
+   "en": "Babylonia",
+   "inception": [
+    "-1900-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q7275",
+    "Q3024240",
+    "Q3502482",
+    "Q28171280",
+    "Q96196009"
+   ],
+   "qid": "Q47690"
+  },
+  "Bagan": {
+   "ar": "باغان",
+   "arwiki": "باغان",
+   "dissolved": [],
+   "en": "Bagan",
+   "inception": [
+    "+0200-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q7830262",
+    "Q839954",
+    "Q15661340"
+   ],
+   "qid": "Q29317"
+  },
+  "Bagirmi": null,
+  "Balts": {
+   "ar": "شعب البلطيق",
+   "arwiki": "شعوب البلطيق",
+   "dissolved": [],
+   "en": "Balts",
+   "inception": [],
+   "p31": [
+    "Q4533081"
+   ],
+   "qid": "Q207761"
+  },
+  "Bangladesh": {
+   "ar": "بنغلاديش",
+   "arwiki": "بنغلاديش",
+   "dissolved": [],
+   "en": "Bangladesh",
+   "inception": [
+    "+1971-03-26T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q465613",
+    "Q6256"
+   ],
+   "qid": "Q902"
+  },
+  "Bantu": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Bantu",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q397528"
+  }
+ },
+ "years": {
+  "Aaniiih": [
+   "1600"
+  ],
+  "Abnaki": [
+   "1600"
+  ],
+  "Aboriginal tribes": [
+   "-4000"
+  ],
+  "Abyssinia": [
+   "1914"
+  ],
+  "Adal": [
+   "1600"
+  ],
+  "Afghanistan": [
+   "1800",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Ahmadnagar": [
+   "1600"
+  ],
+  "Ainu": [
+   "-4000",
+   "-1000",
+   "-1",
+   "700",
+   "1200",
+   "1600"
+  ],
+  "Air": [
+   "1800"
+  ],
+  "Algeria": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Algiers": [
+   "1800"
+  ],
+  "Almohad Caliphate": [
+   "1200"
+  ],
+  "Alwa": [
+   "700",
+   "1200"
+  ],
+  "Amazon hunter-gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200",
+   "1600"
+  ],
+  "Andean hunter-gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200",
+   "1600"
+  ],
+  "Angevin Empire": [
+   "1200"
+  ],
+  "Anglo-Egyptian Sudan": [
+   "1914"
+  ],
+  "Angola": [
+   "1914",
+   "2010"
+  ],
+  "Angola (Portugal)": [
+   "1945"
+  ],
+  "Annam": [
+   "1945"
+  ],
+  "Apache": [
+   "1600"
+  ],
+  "Arabia (Nejd)": [
+   "1914"
+  ],
+  "Arabian pastoral nomads": [
+   "-1000"
+  ],
+  "Arameans": [
+   "-1000"
+  ],
+  "Arapaho": [
+   "1600"
+  ],
+  "Arctic marine mammal hunters": [
+   "-1000",
+   "-1",
+   "700",
+   "1200"
+  ],
+  "Argentina": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Armenia": [
+   "-1",
+   "1200"
+  ],
+  "Arrernte": [
+   "1600",
+   "1800"
+  ],
+  "Asante": [
+   "1800"
+  ],
+  "Assiniboin": [
+   "1600"
+  ],
+  "Assyria": [
+   "-1000"
+  ],
+  "Athabaskan": [
+   "1200",
+   "1600"
+  ],
+  "Aures": [
+   "700"
+  ],
+  "Australia": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Australian aboriginal hunter-gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200",
+   "1600",
+   "1800"
+  ],
+  "Austrian Empire": [
+   "1800"
+  ],
+  "Austro-Asiatic rice cultures": [
+   "-1000"
+  ],
+  "Austro-Hungarian Empire": [
+   "1914"
+  ],
+  "Austronesians": [
+   "-4000",
+   "-1000"
+  ],
+  "Avars": [
+   "700"
+  ],
+  "Awsa": [
+   "1800"
+  ],
+  "Axum": [
+   "700"
+  ],
+  "Ayutthaya": [
+   "1600"
+  ],
+  "Babylonia": [
+   "-1000"
+  ],
+  "Bagan": [
+   "1200"
+  ],
+  "Bagirmi": [
+   "1600",
+   "1800"
+  ],
+  "Balts": [
+   "700"
+  ],
+  "Bangladesh": [
+   "1945",
+   "2010"
+  ],
+  "Bantu": [
+   "-4000"
+  ],
+  "Bantu peoples": [
+   "1200"
+  ],
+  "Barghawata": [
+   "700"
+  ],
+  "Bega": [
+   "700"
+  ],
+  "Belgian Congo": [
+   "1914"
+  ],
+  "Bell-shaped burials culture": [
+   "-1"
+  ],
+  "Bengal": [
+   "1600"
+  ],
+  "Benin": [
+   "1600",
+   "1945",
+   "2010"
+  ],
+  "Beothuk": [
+   "1600"
+  ],
+  "Berber Tribes": [
+   "1200"
+  ],
+  "Berbers": [
+   "-1000"
+  ],
+  "Bidjara": [
+   "1600",
+   "1800"
+  ],
+  "Bijapur": [
+   "1600"
+  ],
+  "Blackfoot": [
+   "1600"
+  ],
+  "Blemmyes": [
+   "-1",
+   "700"
+  ],
+  "Boethuk": [
+   "1200"
+  ],
+  "Bolivia": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Botswana": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Brazil": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "British East Africa": [
+   "1914"
+  ],
+  "British Guiana": [
+   "1800"
+  ],
+  "British Protectorate": [
+   "1914"
+  ],
+  "British Raj": [
+   "1914"
+  ],
+  "British Somaliland": [
+   "1914",
+   "1945"
+  ],
+  "Brushed Pottery culture": [
+   "-1"
+  ],
+  "Bulgar Khanate": [
+   "1200"
+  ],
+  "Bulgaria": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Bulgars": [
+   "700"
+  ],
+  "Bundelkhand": [
+   "1800"
+  ],
+  "Burkina Faso": [
+   "1945",
+   "2010"
+  ],
+  "Burma": [
+   "1800",
+   "1945",
+   "2010"
+  ],
+  "Burmese": [
+   "-1000"
+  ],
+  "Burmese kingdoms": [
+   "1600"
+  ],
+  "Buwayhid Emirates": [
+   "1200"
+  ],
+  "Buyid dynasty": [
+   "1200"
+  ],
+  "Byelarus": [
+   "2010"
+  ],
+  "Byzantine Empire": [
+   "1200"
+  ],
+  "Caddo": [
+   "1600"
+  ],
+  "Cambodia": [
+   "1600",
+   "1800",
+   "1945",
+   "2010"
+  ],
+  "Cameroon": [
+   "1945",
+   "2010"
+  ],
+  "Canada": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Caribbean hunter-gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200",
+   "1600"
+  ],
+  "Catawba": [
+   "1600"
+  ],
+  "Celtiberians": [
+   "-1000"
+  ],
+  "Celtic kingdoms": [
+   "1200"
+  ],
+  "Central African Republic": [
+   "1945",
+   "2010"
+  ],
+  "Chad": [
+   "1945",
+   "2010"
+  ],
+  "Chalukyas": [
+   "700"
+  ],
+  "Champa": [
+   "700"
+  ],
+  "Champa City States": [
+   "1200"
+  ],
+  "Chen-La": [
+   "700"
+  ],
+  "Chickasaw": [
+   "1600"
+  ],
+  "Chile": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "China": [
+   "1945",
+   "2010"
+  ],
+  "Chiricahua": [
+   "1600"
+  ],
+  "Choctaw": [
+   "1600"
+  ],
+  "Chola Empire": [
+   "1200"
+  ],
+  "Chorrera": [
+   "-1000"
+  ],
+  "Chukchi": [
+   "1600"
+  ],
+  "Cimerians": [
+   "-1000"
+  ],
+  "Circars": [
+   "1800"
+  ],
+  "Coahuiltec": [
+   "1600"
+  ],
+  "Colombia": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Comanche": [
+   "1600"
+  ],
+  "Congo": [
+   "1600",
+   "1945",
+   "2010"
+  ],
+  "Cree": [
+   "1600"
+  ],
+  "Crimean Khanate": [
+   "1600"
+  ],
+  "Crow": [
+   "1600"
+  ],
+  "Cuba": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Cuba (Spain)": [
+   "1600"
+  ],
+  "Cuman Khanates": [
+   "1200"
+  ],
+  "Cyraneica (UK Lybia)": [
+   "1945"
+  ],
+  "Czechoslovakia": [
+   "1945"
+  ],
+  "Dacia": [
+   "-1"
+  ],
+  "Danube Bulgars": [
+   "700"
+  ],
+  "Darfur": [
+   "1600",
+   "1800"
+  ],
+  "Denmark": [
+   "1914",
+   "1945"
+  ],
+  "Denmark-Norway": [
+   "1600",
+   "1800"
+  ],
+  "Desert hunter-gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200"
+  ],
+  "Dorset": [
+   "1200"
+  ],
+  "Dravidians": [
+   "-4000",
+   "-1000"
+  ],
+  "Dutch East Indies": [
+   "1800"
+  ],
+  "Dutch Guinea": [
+   "1945"
+  ],
+  "Dutch settlements": [
+   "1800"
+  ],
+  "East Java": [
+   "1200"
+  ],
+  "Eastern North American hunter-gatherers": [
+   "-1000",
+   "700",
+   "1200"
+  ],
+  "Eastern Roman Empire": [
+   "700"
+  ],
+  "Ecuador": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Egypt": [
+   "-4000",
+   "-1000",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "El Paraiso": [
+   "-1000"
+  ],
+  "Elam": [
+   "-4000",
+   "-1000"
+  ],
+  "Empire of Ghana": [
+   "700"
+  ],
+  "Empire of Japan": [
+   "1914"
+  ],
+  "Enets": [
+   "1600"
+  ],
+  "England and Ireland": [
+   "1600"
+  ],
+  "Erie": [
+   "1600"
+  ],
+  "Eritrea": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Ethiopia": [
+   "1600",
+   "1800",
+   "1945",
+   "2010"
+  ],
+  "Ethiopian Highland Peoples": [
+   "700"
+  ],
+  "Ethiopian highland farmers": [
+   "-1000"
+  ],
+  "Eyaq": [
+   "1600"
+  ],
+  "Fatimid Caliphate": [
+   "1200"
+  ],
+  "Fezzan (Frech Lybia)": [
+   "1945"
+  ],
+  "Finland": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Finno-Ugric taiga hunter-gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200"
+  ],
+  "France": [
+   "1600",
+   "1800",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Frankish Kingdom": [
+   "700"
+  ],
+  "French Equatorial Africa": [
+   "1914"
+  ],
+  "French Indochina": [
+   "1914"
+  ],
+  "French West Africa": [
+   "1914"
+  ],
+  "Funj": [
+   "1800"
+  ],
+  "Gabon": [
+   "1945",
+   "2010"
+  ],
+  "Gandhara grave culture": [
+   "-1000"
+  ],
+  "German E. Africa (Tanganyika)": [
+   "1914"
+  ],
+  "German Empire": [
+   "1914"
+  ],
+  "German South-West Africa": [
+   "1914"
+  ],
+  "Germany": [
+   "2010"
+  ],
+  "Germany (Soviet)": [
+   "1945"
+  ],
+  "Germany (USA)": [
+   "1945"
+  ],
+  "Ghana": [
+   "1200",
+   "2010"
+  ],
+  "Gharra": [
+   "1600"
+  ],
+  "Ghaznavid Emirate": [
+   "1200"
+  ],
+  "Gold Coast": [
+   "1914",
+   "1945"
+  ],
+  "Golkonda": [
+   "1600"
+  ],
+  "Goryeo": [
+   "1200"
+  ],
+  "Great Zimbabwe": [
+   "1200"
+  ],
+  "Greece": [
+   "1945",
+   "2010"
+  ],
+  "Greek city-states": [
+   "-1000"
+  ],
+  "Greenland": [
+   "2010"
+  ],
+  "Guachichiles": [
+   "1600"
+  ],
+  "Guatemala": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Guinea": [
+   "1945",
+   "2010"
+  ],
+  "Guyana": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Göktürks": [
+   "700"
+  ],
+  "Hadramaut": [
+   "-1",
+   "1200",
+   "1600"
+  ],
+  "Han": [
+   "-1"
+  ],
+  "Harapunchai": [
+   "1200"
+  ],
+  "Hausa States": [
+   "1600",
+   "1800"
+  ],
+  "Hejaz": [
+   "700"
+  ],
+  "Himyarite Kingdom": [
+   "-1"
+  ],
+  "Hindu kingdoms": [
+   "-1",
+   "700"
+  ],
+  "Hindu states": [
+   "700"
+  ],
+  "Hispaniola (Spain)": [
+   "1600"
+  ],
+  "Hittites": [
+   "-1000"
+  ],
+  "Holy Roman Empire": [
+   "1200",
+   "1600"
+  ],
+  "Honduras": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Hopewell Culture": [
+   "-1"
+  ],
+  "Huari Empire": [
+   "700",
+   "1200"
+  ],
+  "Hungary": [
+   "1200"
+  ],
+  "Hunters-gatherers": [
+   "-4000"
+  ],
+  "Ibadites": [
+   "1200"
+  ],
+  "Iceland": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Ifat": [
+   "1200"
+  ],
+  "Illinois": [
+   "1600"
+  ],
+  "Illyrians": [
+   "-1000"
+  ],
+  "Imperial Japan (Fujiwara)": [
+   "1200"
+  ],
+  "Inca Empire": [
+   "1600"
+  ],
+  "India": [
+   "1945",
+   "2010"
+  ],
+  "Indonesia": [
+   "1945",
+   "2010"
+  ],
+  "Indus valley civilization": [
+   "-4000"
+  ],
+  "Iningai": [
+   "1600"
+  ],
+  "Innu": [
+   "1200"
+  ],
+  "Inupiaq": [
+   "1600",
+   "1800"
+  ],
+  "Iowa": [
+   "1600"
+  ],
+  "Iran": [
+   "1945",
+   "2010"
+  ],
+  "Iranian pastoralists": [
+   "-1000"
+  ],
+  "Iraq": [
+   "1945",
+   "2010"
+  ],
+  "Iroquois": [
+   "1600"
+  ],
+  "Islamic and Hindu states": [
+   "1600"
+  ],
+  "Islamic city-states": [
+   "1200",
+   "1600"
+  ],
+  "Italian Somaliland": [
+   "1914"
+  ],
+  "Italy": [
+   "1945",
+   "2010"
+  ],
+  "Itelmen": [
+   "1600"
+  ],
+  "Ivory Coast": [
+   "1945",
+   "2010"
+  ],
+  "Japan": [
+   "1800",
+   "2010"
+  ],
+  "Japan (USA)": [
+   "1945"
+  ],
+  "Japan (Warring States)": [
+   "1600"
+  ],
+  "Jōmon": [
+   "-4000"
+  ],
+  "Kaarta": [
+   "1800"
+  ],
+  "Kalaamaya": [
+   "1600",
+   "1800"
+  ],
+  "Kalinga": [
+   "-1"
+  ],
+  "Kamarupa": [
+   "1200"
+  ],
+  "Kamerun": [
+   "1914"
+  ],
+  "Kamilaroi": [
+   "1600",
+   "1800"
+  ],
+  "Kanauj": [
+   "700"
+  ],
+  "Kanem": [
+   "1200"
+  ],
+  "Kanem-Bornu": [
+   "1600",
+   "1800"
+  ],
+  "Kara Khitai Khaganate": [
+   "1200"
+  ],
+  "Karasuk culture": [
+   "-1000"
+  ],
+  "Karluks": [
+   "700"
+  ],
+  "Kazakhstan": [
+   "2010"
+  ],
+  "Kenya": [
+   "1945",
+   "2010"
+  ],
+  "Khazars": [
+   "700"
+  ],
+  "Khiva Khanate": [
+   "1600"
+  ],
+  "Khmer Empire": [
+   "1200"
+  ],
+  "Khoisan": [
+   "-4000",
+   "-1000",
+   "-1",
+   "700",
+   "1200"
+  ],
+  "Khwarazmian dynasty": [
+   "1200"
+  ],
+  "Kingdom of David and Solomon": [
+   "-1000"
+  ],
+  "Kingdom of France": [
+   "1200"
+  ],
+  "Kingdom of Italy": [
+   "1914"
+  ],
+  "Kingdom of Kapisa": [
+   "700"
+  ],
+  "Kingdom of Kashmir": [
+   "700"
+  ],
+  "Kingdom of Sind": [
+   "700"
+  ],
+  "Kiowa": [
+   "1600"
+  ],
+  "Koguryo": [
+   "-1",
+   "700"
+  ],
+  "Kokatha": [
+   "1600",
+   "1800"
+  ],
+  "Korea": [
+   "1600",
+   "1800"
+  ],
+  "Korea (USSR)": [
+   "1945"
+  ],
+  "Korea, Democratic People's Republic of": [
+   "2010"
+  ],
+  "Koryaks": [
+   "1600"
+  ],
+  "Kryvichs": [
+   "700"
+  ],
+  "Kush": [
+   "-1000"
+  ],
+  "Kushites": [
+   "700"
+  ],
+  "Kyrgyzstan": [
+   "2010"
+  ],
+  "Lan Na": [
+   "1600"
+  ],
+  "Laos": [
+   "1600",
+   "1945",
+   "2010"
+  ],
+  "Late Jomon culture": [
+   "-1000"
+  ],
+  "Laurel complex": [
+   "-1"
+  ],
+  "Liao": [
+   "1200"
+  ],
+  "Libya": [
+   "1914",
+   "2010"
+  ],
+  "Lombard principalities": [
+   "700"
+  ],
+  "Luba": [
+   "1600",
+   "1800"
+  ],
+  "Luisiana": [
+   "1800"
+  ],
+  "Lunda": [
+   "1600",
+   "1800"
+  ],
+  "Madagascar": [
+   "1200",
+   "1600",
+   "1800",
+   "2010"
+  ],
+  "Madagascar (France)": [
+   "1914",
+   "1945"
+  ],
+  "Mahra": [
+   "1600"
+  ],
+  "Maitraka Kingdom": [
+   "700"
+  ],
+  "Maize farmers": [
+   "-1000"
+  ],
+  "Makkura": [
+   "700",
+   "1200"
+  ],
+  "Malacca": [
+   "1600"
+  ],
+  "Malawi": [
+   "1914",
+   "2010"
+  ],
+  "Malaya": [
+   "1800",
+   "1914"
+  ],
+  "Malays": [
+   "1200"
+  ],
+  "Malaysia": [
+   "1945",
+   "2010"
+  ],
+  "Malaysian Islamic states": [
+   "1600"
+  ],
+  "Mali": [
+   "1200",
+   "1945",
+   "2010"
+  ],
+  "Manchu Empire": [
+   "1914"
+  ],
+  "Manchuria": [
+   "1945"
+  ],
+  "Manioc farmers": [
+   "-1000"
+  ],
+  "Maoris": [
+   "1600"
+  ],
+  "Maratha Confederacy": [
+   "1800"
+  ],
+  "Mardu": [
+   "1600",
+   "1800"
+  ],
+  "Marksville Culture": [
+   "-1"
+  ],
+  "Mascat": [
+   "-1"
+  ],
+  "Mauri": [
+   "700"
+  ],
+  "Mauritania": [
+   "1945",
+   "2010"
+  ],
+  "Maya chiefdoms and states": [
+   "-1"
+  ],
+  "Maya city-states": [
+   "1200"
+  ],
+  "Maya states": [
+   "700"
+  ],
+  "Mayas": [
+   "1600"
+  ],
+  "Merina Kingdom": [
+   "1200",
+   "1600",
+   "1800"
+  ],
+  "Meroe": [
+   "-1"
+  ],
+  "Mescalero": [
+   "1600"
+  ],
+  "Mesoamerican city-states and chiefdoms": [
+   "1200"
+  ],
+  "Mexico": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Mi'kma'ki": [
+   "1600"
+  ],
+  "Ming Chinese Empire": [
+   "1600"
+  ],
+  "Mirning": [
+   "1600",
+   "1800"
+  ],
+  "Mongol Empire": [
+   "1200"
+  ],
+  "Mongolia": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Montagnais Innu": [
+   "1600"
+  ],
+  "Morocco": [
+   "1800",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Mossi States": [
+   "1600",
+   "1800"
+  ],
+  "Mozambique": [
+   "1914",
+   "2010"
+  ],
+  "Mozambique (Portugal)": [
+   "1945"
+  ],
+  "Mughal Empire": [
+   "1600"
+  ],
+  "Muskogee": [
+   "1600"
+  ],
+  "Mwenemutapa": [
+   "1600"
+  ],
+  "Mysore": [
+   "1800"
+  ],
+  "Māori": [
+   "1800"
+  ],
+  "N. European Bronze Age cultures": [
+   "-1000"
+  ],
+  "Nabatean Kingdom": [
+   "-1"
+  ],
+  "Namibia": [
+   "1945",
+   "2010"
+  ],
+  "Nan Chao": [
+   "1200"
+  ],
+  "Nan-Zhao": [
+   "700"
+  ],
+  "Naskapi Innu": [
+   "1600"
+  ],
+  "Navaho": [
+   "1600"
+  ],
+  "Nejd": [
+   "1800"
+  ],
+  "Nepal": [
+   "1800",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Netherlands Indies": [
+   "1914"
+  ],
+  "Neustria": [
+   "700"
+  ],
+  "New Zealand": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Ngaanyatjarra": [
+   "1600"
+  ],
+  "Nganasan": [
+   "1600"
+  ],
+  "Ngatatjara": [
+   "1600"
+  ],
+  "Nicaragua": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Niger": [
+   "1945",
+   "2010"
+  ],
+  "Nigeria": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Nizam's Dominions": [
+   "1800"
+  ],
+  "Nobatia": [
+   "700"
+  ],
+  "Nogai Horde": [
+   "1600"
+  ],
+  "Norte Chico": [
+   "-4000"
+  ],
+  "North American Pacific foraging, hunting and fishing peoples": [
+   "-1000",
+   "-1",
+   "700",
+   "1200"
+  ],
+  "Northern Paiute": [
+   "1600"
+  ],
+  "Northern Rhodesia": [
+   "1945"
+  ],
+  "Norway": [
+   "1200",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Nyanganyatjara": [
+   "1600",
+   "1800"
+  ],
+  "Nyangumarda": [
+   "1600",
+   "1800"
+  ],
+  "Nyasaland": [
+   "1945"
+  ],
+  "Obiwa": [
+   "1600"
+  ],
+  "Oman": [
+   "1945",
+   "2010"
+  ],
+  "Oromo": [
+   "1600",
+   "1800"
+  ],
+  "Osage": [
+   "1600"
+  ],
+  "Other Rus Principalities": [
+   "1200"
+  ],
+  "Ottoman Empire": [
+   "1600",
+   "1800",
+   "1914"
+  ],
+  "Pakistan": [
+   "1945",
+   "2010"
+  ],
+  "Palas": [
+   "700"
+  ],
+  "Paleo-Inuit": [
+   "-1"
+  ],
+  "Paleo-Koreans": [
+   "-1000"
+  ],
+  "Paleo-Siberian hunter-gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200"
+  ],
+  "Pallavas": [
+   "700"
+  ],
+  "Pampas cultures": [
+   "-1000",
+   "-1",
+   "700",
+   "1200",
+   "1600",
+   "1800"
+  ],
+  "Papua New Guinea": [
+   "1800",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Papuan neolithic farmers": [
+   "-1000"
+  ],
+  "Papuans": [
+   "1200",
+   "1600"
+  ],
+  "Paraguay": [
+   "1800",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Parthian Empire": [
+   "-1"
+  ],
+  "Patagonian shellfish and marine mammal hunters": [
+   "-1000",
+   "-1",
+   "700",
+   "1200",
+   "1600",
+   "1800"
+  ],
+  "Pawnee": [
+   "1600"
+  ],
+  "Pegu": [
+   "1600"
+  ],
+  "Persia": [
+   "1800",
+   "1914"
+  ],
+  "Peru": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Philippines": [
+   "1800",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Phrygians": [
+   "-1000"
+  ],
+  "Pintupi": [
+   "1600",
+   "1800"
+  ],
+  "Plain bison hunters": [
+   "-1000",
+   "-1",
+   "700",
+   "1200"
+  ],
+  "Plain-Pottery culture": [
+   "-1"
+  ],
+  "Plateau fichers and hunter gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200"
+  ],
+  "Point Peninsula": [
+   "-1"
+  ],
+  "Poland": [
+   "1200",
+   "1945",
+   "2010"
+  ],
+  "Poland-Lithuania": [
+   "1600"
+  ],
+  "Portugal": [
+   "1600"
+  ],
+  "Potawatomi": [
+   "1600"
+  ],
+  "Principality of Galicia-Volhynia": [
+   "1200"
+  ],
+  "Principality of Kyiv": [
+   "1200"
+  ],
+  "Principality of Novgorod": [
+   "1200"
+  ],
+  "Principality of Vladimir-Suzdal": [
+   "1200"
+  ],
+  "Proto-Altaic pastoralists": [
+   "-1000"
+  ],
+  "Proto-Slavs": [
+   "700"
+  ],
+  "Prussia": [
+   "1800"
+  ],
+  "Pyu state": [
+   "1200"
+  ],
+  "Qing Empire": [
+   "1800"
+  ],
+  "Quapaw": [
+   "1600"
+  ],
+  "Quazaq Khanate": [
+   "1600"
+  ],
+  "Quebec": [
+   "1800"
+  ],
+  "Rajput kingdoms": [
+   "1200"
+  ],
+  "Rajputana": [
+   "1600"
+  ],
+  "Rajputs": [
+   "1800"
+  ],
+  "Rattanakosin Kingdom": [
+   "1800",
+   "1914"
+  ],
+  "Rhodesia": [
+   "1914",
+   "1945"
+  ],
+  "Rift Valley States": [
+   "1800"
+  ],
+  "Rio De Oro": [
+   "1914"
+  ],
+  "Roman Empire": [
+   "-1"
+  ],
+  "Romania": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Rozwi": [
+   "1800"
+  ],
+  "Rupert's Land": [
+   "1800"
+  ],
+  "Russia": [
+   "2010"
+  ],
+  "Russian Empire": [
+   "1800",
+   "1914"
+  ],
+  "Saami": [
+   "-1000",
+   "-1",
+   "700"
+  ],
+  "Saba": [
+   "-1000"
+  ],
+  "Safavid Empire": [
+   "1600"
+  ],
+  "Saharan Nomadic Tribes": [
+   "700"
+  ],
+  "Saharan pastoral nomads": [
+   "-1000"
+  ],
+  "Saka Kingdom": [
+   "-1"
+  ],
+  "Samoyèdes": [
+   "700"
+  ],
+  "Santee": [
+   "1600"
+  ],
+  "Sasanian Empire": [
+   "700"
+  ],
+  "Sasanian dependencies": [
+   "700"
+  ],
+  "Satavahanihara": [
+   "-1"
+  ],
+  "Saudi Arabia": [
+   "1945",
+   "2010"
+  ],
+  "Savanna hunter-gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200",
+   "1600"
+  ],
+  "Segu": [
+   "1800"
+  ],
+  "Semites": [
+   "-4000"
+  ],
+  "Senegal": [
+   "1600",
+   "1945",
+   "2010"
+  ],
+  "Shan states": [
+   "1600"
+  ],
+  "Shawnee": [
+   "1600"
+  ],
+  "Shellfish gatherers": [
+   "-1000",
+   "-1",
+   "700"
+  ],
+  "Shoshoni": [
+   "1600"
+  ],
+  "Sikhs": [
+   "1800"
+  ],
+  "Sindh": [
+   "1800"
+  ],
+  "Sinic": [
+   "-1000"
+  ],
+  "Somalia": [
+   "1945",
+   "2010"
+  ],
+  "Song Empire": [
+   "1200"
+  ],
+  "Songhai": [
+   "1600"
+  ],
+  "South Africa": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Southern Paiute": [
+   "1600"
+  ],
+  "Spain": [
+   "1600",
+   "1800",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Spanish Sahara": [
+   "1914"
+  ],
+  "Srivijaya Empire": [
+   "1200"
+  ],
+  "Subarctic forest hunter-gatherers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200",
+   "1600"
+  ],
+  "Sudan": [
+   "1945",
+   "2010"
+  ],
+  "Sui Empire": [
+   "700"
+  ],
+  "Sultanate of Delhi": [
+   "1200"
+  ],
+  "Suren Kingdom": [
+   "-1"
+  ],
+  "Suriname": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Suspiaq": [
+   "1600"
+  ],
+  "Sweden": [
+   "1200",
+   "1600",
+   "1800",
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Swedes": [
+   "700"
+  ],
+  "Swift Creek Culture": [
+   "-1"
+  ],
+  "Syria": [
+   "1945",
+   "2010"
+  ],
+  "Sámi": [
+   "1200"
+  ],
+  "T'atsaot'ine": [
+   "1600",
+   "1800"
+  ],
+  "Taino": [
+   "1200"
+  ],
+  "Tajikistan": [
+   "2010"
+  ],
+  "Tanzania, United Republic of": [
+   "1945",
+   "2010"
+  ],
+  "Teton": [
+   "1600"
+  ],
+  "Thai Kingdoms": [
+   "700"
+  ],
+  "Thailand": [
+   "1945",
+   "2010"
+  ],
+  "Thrace": [
+   "-1000"
+  ],
+  "Thule": [
+   "1200"
+  ],
+  "Tiahuanaco Empire": [
+   "700",
+   "1200"
+  ],
+  "Tibet": [
+   "1200",
+   "1600",
+   "1914",
+   "1945"
+  ],
+  "Tibetans": [
+   "-1000"
+  ],
+  "Togoland": [
+   "1914"
+  ],
+  "Tonkawa": [
+   "1600"
+  ],
+  "Tonkin": [
+   "1945"
+  ],
+  "Tripolitana (UK Lybia)": [
+   "1945"
+  ],
+  "Tsardom of Muscovy": [
+   "1600"
+  ],
+  "Tuareg Nomadic Tribes": [
+   "1200"
+  ],
+  "Tufan Empire": [
+   "700"
+  ],
+  "Tungus": [
+   "700"
+  ],
+  "Tungusic Tribes": [
+   "1200"
+  ],
+  "Tunisia": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Turkey": [
+   "1945",
+   "2010"
+  ],
+  "Turkmenistan": [
+   "2010"
+  ],
+  "USSR": [
+   "1945"
+  ],
+  "Uganda": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Ukraine": [
+   "2010"
+  ],
+  "Umayyad Caliphate": [
+   "700"
+  ],
+  "United Arab Emirates": [
+   "1945",
+   "2010"
+  ],
+  "United Kingdom": [
+   "1800",
+   "1945",
+   "2010"
+  ],
+  "United Kingdom of Great Britain and Ireland": [
+   "1914"
+  ],
+  "United States": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "United States of America": [
+   "1800"
+  ],
+  "Ur": [
+   "-4000"
+  ],
+  "Urartu": [
+   "-1000"
+  ],
+  "Urnfield cultures": [
+   "-1000"
+  ],
+  "Uruguay": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Ute": [
+   "1600"
+  ],
+  "Uyghurs": [
+   "700"
+  ],
+  "Uzbekistan": [
+   "2010"
+  ],
+  "Valdivia": [
+   "-4000"
+  ],
+  "Vazimba": [
+   "700"
+  ],
+  "Vedic Aryans": [
+   "-1000"
+  ],
+  "Venezuela": [
+   "1914",
+   "1945",
+   "2010"
+  ],
+  "Veracruz civilization": [
+   "700"
+  ],
+  "Viceroyalty of Brazil": [
+   "1800"
+  ],
+  "Viceroyalty of New Granada": [
+   "1800"
+  ],
+  "Viceroyalty of New Spain": [
+   "1600",
+   "1800"
+  ],
+  "Viceroyalty of Peru": [
+   "1800"
+  ],
+  "Viceroyalty of the Río de la Plata": [
+   "1800"
+  ],
+  "Vietnam": [
+   "2010"
+  ],
+  "Vijayanagara": [
+   "1600"
+  ],
+  "Volga Bulgars": [
+   "1200"
+  ],
+  "Wadai": [
+   "1600",
+   "1800"
+  ],
+  "Warlpiri": [
+   "1600",
+   "1800"
+  ],
+  "Warsenis": [
+   "700"
+  ],
+  "Warumungu": [
+   "1600"
+  ],
+  "Watassid Morocco": [
+   "1600"
+  ],
+  "Watjarri": [
+   "1600",
+   "1800"
+  ],
+  "Wawula": [
+   "1600"
+  ],
+  "West African cereal farmers": [
+   "-1000",
+   "-1",
+   "700",
+   "1200"
+  ],
+  "Western Gokturk Khaganate": [
+   "700"
+  ],
+  "Western Sahara": [
+   "1945",
+   "2010"
+  ],
+  "Wichita": [
+   "1600"
+  ],
+  "Wiradjuri": [
+   "1600",
+   "1800"
+  ],
+  "Wirangu": [
+   "1600"
+  ],
+  "Wu": [
+   "-1000"
+  ],
+  "Xinjiang": [
+   "1914",
+   "1945"
+  ],
+  "Xiongnu": [
+   "-1"
+  ],
+  "Xixia": [
+   "1200"
+  ],
+  "Yamato": [
+   "700"
+  ],
+  "Yankontai": [
+   "1600"
+  ],
+  "Yankton": [
+   "1600"
+  ],
+  "Yemen": [
+   "1200",
+   "1945",
+   "2010"
+  ],
+  "Yugoslavia": [
+   "1945"
+  ],
+  "Yup'ik & Cup'ik": [
+   "1600",
+   "1800"
+  ],
+  "Zacatecs": [
+   "1600"
+  ],
+  "Zaire": [
+   "1945",
+   "2010"
+  ],
+  "Zambia": [
+   "2010"
+  ],
+  "Zanzibar": [
+   "1800"
+  ],
+  "Zhoa": [
+   "-1000"
+  ],
+  "Zimbabwe": [
+   "2010"
+  ],
+  "Zulu": [
+   "1800"
+  ],
+  "central Asian khanates": [
+   "1600",
+   "1800"
+  ],
+  "city-states": [
+   "-4000"
+  ],
+  "minor Hindu and Buddhist states": [
+   "1200"
+  ],
+  "minor states under Indian influence": [
+   "700"
+  ],
+  "state societies and Aramaean kingdoms": [
+   "-1000"
+  ],
+  "Đại Việt": [
+   "1200",
+   "1600",
+   "1800"
+  ]
+ }
+}
