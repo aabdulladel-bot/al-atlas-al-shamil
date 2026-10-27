@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node --test pipeline/normalize.test.mjs pipeline/extract_batch.test.mjs",
     "fetch:sources": "node scripts/fetch_sources.mjs",
-    "build:places": "node scripts/build_places.mjs && node scripts/build_places.mjs scripts/config/places_era2.json data/raw/pleiades-places-latest.csv.gz web/data/places_era2.geojson && node scripts/build_places.mjs scripts/config/places_era3.json data/raw/pleiades-places-latest.csv.gz web/data/places_era3.geojson && node scripts/build_places.mjs scripts/config/places_era4.json data/raw/pleiades-places-latest.csv.gz web/data/places_era4.geojson && node scripts/build_natural_places.mjs",
+    "build:places": "node scripts/build_places.mjs && node scripts/build_places.mjs scripts/config/places_era2.json data/raw/pleiades-places-latest.csv.gz web/data/places_era2.geojson && node scripts/build_places.mjs scripts/config/places_era3.json data/raw/pleiades-places-latest.csv.gz web/data/places_era3.geojson && node scripts/build_places.mjs scripts/config/places_era4.json data/raw/pleiades-places-latest.csv.gz web/data/places_era4.geojson && node scripts/build_natural_places.mjs && node scripts/build_era_cities.mjs",
     "build:claims": "node scripts/build_claims.mjs",
     "build:claim-points": "node scripts/build_places.mjs scripts/config/claim_places.json data/raw/pleiades-places-latest.csv.gz web/data/claim_places.geojson && node scripts/build_claim_points.mjs",
     "build:basemap": "node scripts/build_basemap.mjs",

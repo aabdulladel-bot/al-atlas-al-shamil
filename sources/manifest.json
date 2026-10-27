@@ -533,6 +533,24 @@
       "attribution": "NASA Blue Marble: Next Generation, Reto Stöckli, NASA Earth Observatory; imagery via NASA GIBS (ESDIS)",
       "note": "صور الأقمار الصناعية للخريطة الثلاثية الأبعاد: مركّب صور MODIS لشهر واحد من 2004، بدقة 500 م للبكسل (المستوى 8). تُجلب في متصفح القارئ وقت العرض ولا يُخزَّن منها شيء. الصورة حديثة لا تاريخية: السواحل والغطاء النباتي اليوم. لم تُعاين من بيئة البناء لأن المضيف محجوب فيها.",
       "status": "runtime"
+    },
+    {
+      "id": "naturalearth-populated-places-50m-full",
+      "file": "data/raw/naturalearth/ne_50m_populated_places.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_populated_places.geojson",
+      "license": "ملك عام (Natural Earth)",
+      "tier": "A",
+      "landing": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "attribution": "Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com.",
+      "note": "المدن المأهولة بنسختها الكاملة، لأن فيها الاسم العربي (NAME_AR). مصدر مدن الحقب 6 و7 و8 (scripts/build_era_cities.mjs).",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/naturalearth/ne_50m_populated_places.geojson",
+          "sha256": "da4662b7bbfeb897d02f228c5839131dce27acff5717630f91ccff4f67828ee7",
+          "bytes": 3350885
+        }
+      ]
     }
   ]
 }

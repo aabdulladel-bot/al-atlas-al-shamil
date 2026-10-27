@@ -70,6 +70,8 @@ try {
     const opts = await page.$$eval("#demo-select option", (os) => os.map((o) => o.value).filter(Boolean));
     counts.demo = opts.length;
     for (const v of opts) { await page.selectOption("#demo-select", v); await page.waitForTimeout(300); await settle(); }
+    // أسماء الدول بالعربية: يجب أن يظهر بعضها على الكرة عند التحميل
+    counts.labels = await page.$$eval(".country-label", (e) => e.filter((x) => x.style.visibility !== "hidden" && x.style.opacity !== "0").length);
     step = `${name}: لوحة الطبقات`;
     // لوحة الطبقات: المسطحة ثم الكرة، والتضاريس، وتضخيمها، وكل مجموعة طبقات إطفاءً وإشعالاً
     await page.click('input[name="basemap"][value="drawn"]'); await page.waitForTimeout(400);

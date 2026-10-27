@@ -218,7 +218,7 @@ function loadScript(src) {
 }
 async function cubeLoadPlaces() {
   const out = [];
-  for (const n of [1, 2, 3, 4, 5]) {
+  for (const n of [1, 2, 3, 4, 5, 6, 7, 8]) {
     try {
       const d = await getJson(`data/places_era${n}.geojson`);
       for (const f of d.features) {

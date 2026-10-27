@@ -1,0 +1,19 @@
+{
+  "_note": "مدن الحقب 6 و7 و8. الاسم العربي (NAME_AR) والإحداثيات من Natural Earth (ملك عام، ne_50m_populated_places)، وهي مواقع المدن الحديثة لا مواقعها التاريخية. اختيار مدن الحقبتين 6 و7 تحريري: مراكز سياسية وتجارية وصناعية كبرى للحقبة، لا قائمة مستوفاة. الحقبة 8 بقاعدة من البيانات: عواصم الدول اليوم (FEATURECLA = Admin-0 capital). المطابقة بالاسم الإنجليزي والدولة اليوم، والالتباس يفشل البناء.",
+  "eras": {
+    "6": [
+      ["Istanbul", "Turkey"], ["Cairo", "Egypt"], ["Makkah", "Saudi Arabia"], ["Isfahan", "Iran"], ["Bukhara", "Uzbekistan"],
+      ["Agra", "India"], ["Delhi", "India"], ["Beijing", "China"], ["Nanjing", "China"], ["Kyoto", "Japan"],
+      ["Moscow", "Russia"], ["Venice", "Italy"], ["Lisbon", "Portugal"], ["Seville", "Spain"], ["Amsterdam", "Netherlands"],
+      ["London", "United Kingdom"], ["Fez", "Morocco"], ["Timbuktu", "Mali"], ["Mexico City", "Mexico"], ["Cusco", "Peru"]
+    ],
+    "7": [
+      ["London", "United Kingdom"], ["Manchester", "United Kingdom"], ["Paris", "France"], ["Berlin", "Germany"], ["Vienna", "Austria"],
+      ["St. Petersburg", "Russia"], ["Istanbul", "Turkey"], ["Cairo", "Egypt"], ["Algiers", "Algeria"], ["Tehran", "Iran"],
+      ["Kolkata", "India"], ["Mumbai", "India"], ["Guangzhou", "China"], ["Beijing", "China"], ["Tokyo", "Japan"],
+      ["New York", "United States of America"], ["Philadelphia", "United States of America"], ["Rio de Janeiro", "Brazil"],
+      ["Mexico City", "Mexico"], ["Cape Town", "South Africa"]
+    ],
+    "8": "admin0-capitals"
+  }
+}
