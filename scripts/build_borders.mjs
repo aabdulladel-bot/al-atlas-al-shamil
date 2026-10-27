@@ -22,24 +22,26 @@ fs.mkdirSync(OUT, { recursive: true });
 // حدود الدول اليوم من Natural Earth (ملك عام): تُعامل كالدقة الثالثة (محددة بالقانون الدولي)
 {
   const ne = JSON.parse(fs.readFileSync(path.join(ROOT, "data/raw/naturalearth/ne_50m_admin_0_countries.geojson"), "utf8"));
+  // تعديلات تحريرية معلنة على أسماء بعض الدول وأولويتها (scripts/config/label_overrides.json)
+  const overrides = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/label_overrides.json"), "utf8")).overrides;
+  const arName = (p) => overrides[p.NAME]?.ar ?? p.NAME_AR;
   const features = [];
   for (const f of ne.features) {
     const geometry = roundGeom(f.geometry);
     if (!geometry) continue;
     const p = f.properties;
-    features.push({ type: "Feature", properties: { NAME: p.NAME, NAME_AR: p.NAME_AR || p.NAME, PARTOF: null, BORDERPRECISION: 3 }, geometry });
+    features.push({ type: "Feature", properties: { NAME: p.NAME, NAME_AR: arName(p) || p.NAME, PARTOF: null, BORDERPRECISION: 3 }, geometry });
   }
   fs.writeFileSync(path.join(OUT, "modern_countries.geojson"), JSON.stringify({ type: "FeatureCollection", _meta: { source: "Natural Earth (public domain)" }, features }) + "\n");
-  // تعديلات تحريرية معلنة على أولوية بعض الأسماء (scripts/config/label_overrides.json)
-  const overrides = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/label_overrides.json"), "utf8")).overrides;
   // أسماء الدول بالعربية ومواضعها: الاسم (NAME_AR) ونقطة التسمية (LABEL_X/Y) وأدنى تقريب تظهر عنده (MIN_LABEL)،
   // كلها من Natural Earth نفسه، لا ترجمة ولا مواضع مكتوبة يدوياً
   const labels = ne.features
     .filter((f) => f.properties.NAME_AR && Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y))
     .map((f) => {
       const o = overrides[f.properties.NAME];
-      const label = { ar: f.properties.NAME_AR, en: f.properties.NAME, x: r4(f.properties.LABEL_X), y: r4(f.properties.LABEL_Y), min: o?.min ?? f.properties.MIN_LABEL ?? 5 };
-      if (o) { label.first = Boolean(o.first); label.source_min = f.properties.MIN_LABEL ?? null; }
+      const label = { ar: arName(f.properties), en: f.properties.NAME, x: r4(f.properties.LABEL_X), y: r4(f.properties.LABEL_Y), min: o?.min ?? f.properties.MIN_LABEL ?? 5 };
+      if (o?.min !== undefined) { label.first = Boolean(o.first); label.source_min = f.properties.MIN_LABEL ?? null; }
+      if (o?.ar) label.source_ar = f.properties.NAME_AR;
       return label;
     })
     // الترتيب أولوية التسمية: أدنى تقريب أولاً، وما عليه first يتقدّم في التقريب نفسه

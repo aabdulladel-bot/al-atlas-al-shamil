@@ -80,7 +80,9 @@ def load(key):
     if key == "modern":
         src = json.loads(NE.read_text(encoding="utf-8"))
         rows = [(f["properties"]["NAME"], None, 3, f["geometry"]) for f in src["features"]]
-        ar = {f["properties"]["NAME"]: f["properties"].get("NAME_AR") or f["properties"]["NAME"] for f in src["features"]}
+        # التعديلات التحريرية المعلنة على الأسماء العربية (scripts/config/label_overrides.json)
+        over = json.loads((ROOT / "scripts/config/label_overrides.json").read_text(encoding="utf-8"))["overrides"]
+        ar = {f["properties"]["NAME"]: over.get(f["properties"]["NAME"], {}).get("ar") or f["properties"].get("NAME_AR") or f["properties"]["NAME"] for f in src["features"]}
     else:
         y = int(key)
         name = f"world_bc{-y}.geojson" if y < 0 else f"world_{y}.geojson"
