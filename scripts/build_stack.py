@@ -42,9 +42,22 @@ def slim(g):
     return polys
 
 
+LABELS = ROOT / "web/data/borders"
+
+
+def label_min_zoom(area_km2):
+    # أدنى تقريب تظهر عنده تسمية الكيان على خريطة سنته: من مساحته، فالأكبر يظهر أبكر (قاعدة معلنة لا اختيار)
+    for limit, z in ((2_000_000, 1.5), (500_000, 2.5), (100_000, 3.5), (20_000, 4.5)):
+        if area_km2 >= limit:
+            return z
+    return 5.5
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     slices = []
+    hb_file = ROOT / "web/data/names/hb_names.json"
+    hb = json.loads(hb_file.read_text(encoding="utf-8"))["names"] if hb_file.exists() else {}
     for idx, key in enumerate(bt.KEYS):
         data = bt.load(key)
         ents = []
@@ -58,6 +71,19 @@ def main():
                 row["ar"] = e["name_ar"]
             ents.append(row)
         (OUT / f"slice_{key}.json").write_text(json.dumps({"key": key, "entities": ents}, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+        if key != "modern":
+            # تسميات خريطة السنة للأطلس والبطاقة: الاسم العربي إن وُجد، والإنجليزي، والموضع، والمساحة، ومصدر الاسم
+            labels = []
+            for row in sorted(ents, key=lambda r: -r["a"]):
+                info = hb.get(row["n"], {})
+                lab = {"en": row["n"], "x": row["r"][0], "y": row["r"][1], "a": row["a"], "min": label_min_zoom(row["a"])}
+                if row.get("ar"):
+                    lab["ar"] = row["ar"]
+                for src, dst in (("qid", "qid"), ("status", "st"), ("inception", "from"), ("dissolved", "to"), ("years", "years")):
+                    if info.get(src) is not None:
+                        lab[dst] = info[src]
+                labels.append(lab)
+            (LABELS / f"labels_{key}.json").write_text(json.dumps({"_meta": {"year": int(key), "name_source": "web/data/names/hb_names.json (Wikidata CC0)", "min_rule": "من المساحة: 2 مليون كم² ← 1.5، نصف مليون ← 2.5، مئة ألف ← 3.5، عشرون ألفاً ← 4.5، وما دون ← 5.5"}, "labels": labels}, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
         slices.append({"key": key, "index": idx, "entities": len(ents)})
         print(f"{key}: {len(ents)} كياناً", file=sys.stderr)
 

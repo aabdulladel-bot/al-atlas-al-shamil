@@ -88,7 +88,10 @@ def load(key):
         name = f"world_bc{-y}.geojson" if y < 0 else f"world_{y}.geojson"
         src = json.loads((RAW / name).read_text(encoding="utf-8"))
         rows = [(f["properties"].get("NAME"), f["properties"].get("PARTOF"), f["properties"].get("BORDERPRECISION"), f["geometry"]) for f in src["features"]]
-        ar = {}
+        # الأسماء العربية من web/data/names/hb_names.json (scripts/build_names.py)، إن وُجدت
+        hb = ROOT / "web/data/names/hb_names.json"
+        names = json.loads(hb.read_text(encoding="utf-8"))["names"] if hb.exists() else {}
+        ar = {n: v["ar"] for n, v in names.items() if v.get("ar")}
     groups, partof, prec, unnamed, repaired = {}, {}, {}, [], 0
     for nm, po, bp, geom in rows:
         if not geom:

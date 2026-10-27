@@ -16,6 +16,11 @@
     #map { position: absolute; inset: 0; }
     .country-label { font: 600 11px system-ui, sans-serif; color: #fff; text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000; white-space: nowrap; pointer-events: none; }
     .country-label.mid { font-size: 12.5px; }
+    .country-label.latin { font-style: italic; font-weight: 500; opacity: 0.8; }
+    .card-dl { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 6px 0 0; font-size: 12px; line-height: 1.5; }
+    .card-dl dt { color: var(--muted); white-space: nowrap; }
+    .card-dl dd { margin: 0; }
+    button.ent.latin { font-style: italic; }
     .country-label.major { font-size: 14px; font-weight: 700; }
     #map:not(.space) .country-label { color: var(--ink); text-shadow: 0 0 3px var(--panel), 0 0 2px var(--panel), 0 0 1px var(--panel); }
     #map.space { background: radial-gradient(circle at 50% 50%, #0b1730 0%, #03060d 70%); }
@@ -90,7 +95,7 @@
       <label class="opt sub"><input type="checkbox" id="terrain-auto" checked> تضخيم تلقائي بحسب التقريب</label>
       <label class="opt"><input type="checkbox" data-group="hillshade" checked> ظلال التضاريس</label>
       <label class="opt"><input type="checkbox" data-group="water" checked> الأنهار والبحيرات</label>
-      <label class="opt"><input type="checkbox" data-group="labels" checked> أسماء الدول اليوم بالعربية</label>
+      <label class="opt"><input type="checkbox" data-group="labels" checked> أسماء الدول والكيانات (تتبع سنة الحدود)</label>
       <label class="opt"><input type="checkbox" data-group="borders" checked> حدود الدول والكيانات</label>
       <label class="opt"><input type="checkbox" data-group="places" checked> مواقع الحقبة</label>
       <label class="opt"><input type="checkbox" data-group="claims" checked> أماكن الادعاءات (حين تُعرض)</label>

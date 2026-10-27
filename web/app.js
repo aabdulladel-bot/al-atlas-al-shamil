@@ -232,10 +232,16 @@ exaggerationAutoEl.addEventListener("change", () => {
   if (terrainState.on) applyTerrain();
 });
 
-// ---------- أسماء الدول اليوم بالعربية ----------
-// عناصر HTML يرسمها المتصفح، فيأتي الخط العربي سليماً بلا خطوط خارجية. الاسم والموضع وأدنى تقريب من Natural Earth.
-// تظهر الأسماء عند تقريب أدنى بدرجة مما يقترحه المصدر، لأن الكرة تعرض العالم أصغر من الخريطة المسطحة.
-const countryLabels = [];
+// ---------- أسماء الدول والكيانات على الخريطة ----------
+// عناصر HTML يرسمها المتصفح، فيأتي الخط العربي سليماً بلا خطوط خارجية. تتبع التسميات سنة الحدود المعروضة:
+// الدول اليوم (Natural Earth: الاسم والموضع وأدنى تقريب) أو كيانات السنة التاريخية (web/data/borders/labels_{سنة}.json:
+// الاسم العربي من ويكي بيانات بعد التحقق، والموضع نقطة تمثيلية داخل الكيان، وأدنى تقريب من مساحته).
+// ما لا اسم عربياً موثّقاً له يظهر باسمه الإنجليزي بخط مميّز، والتفاصيل في البطاقة.
+// تظهر الأسماء عند تقريب أدنى بدرجة مما تقترحه البيانات، لأن الكرة تعرض العالم أصغر من الخريطة المسطحة.
+let countryLabels = [];
+let labelKey = null;
+let labelInfo = new Map(); // الاسم الإنجليزي في المصدر ← بيانات تسميته، للبطاقة
+const labelCache = new Map();
 function updateLabels() {
   const on = !userOff.has("labels");
   const z = map.getZoom();
@@ -245,7 +251,7 @@ function updateLabels() {
   }
   declutterLabels();
 }
-// منع التراكب: الأسماء مرتبة بأولويتها في المصدر (أدنى تقريب أولاً)، ويُخفى كل اسم يتراكب مع اسم أعلى منه أولوية
+// منع التراكب: الأسماء مرتبة بأولويتها (أدنى تقريب أو أكبر مساحة أولاً)، ويُخفى كل اسم يتراكب مع اسم أعلى منه أولوية
 // حتى يُقرَّب. ما خلف الكرة أو التضاريس تخفيه MapLibre (opacityWhenCovered) فلا يحجز مكاناً.
 function declutterLabels() {
   const kept = [];
@@ -260,20 +266,69 @@ function declutterLabels() {
     else kept.push(box);
   }
 }
-map.on("load", async () => {
-  let data;
-  try { data = await getJson("data/borders/modern_labels.json"); } catch { return; }
-  for (const l of data.labels) {
-    const el = document.createElement("div");
-    el.className = `country-label${l.min <= 2 ? " major" : l.min <= 3 ? " mid" : ""}`;
-    el.textContent = l.ar;
-    el.title = l.en;
-    countryLabels.push({ min: l.min, added: false, marker: new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]) });
+async function showLabels(key) {
+  key = String(key);
+  if (key === labelKey) return;
+  labelKey = key;
+  const url = key === "modern" ? "data/borders/modern_labels.json" : `data/borders/labels_${key}.json`;
+  let data = labelCache.get(url);
+  if (!data) {
+    try { data = await getJson(url); } catch { return; }
+    labelCache.set(url, data);
   }
+  if (key !== labelKey) return; // تغيّرت السنة أثناء التحميل
+  for (const l of countryLabels) if (l.added) l.marker.remove();
+  labelInfo = new Map(data.labels.map((l) => [l.en, l]));
+  countryLabels = data.labels.map((l) => {
+    const el = document.createElement("div");
+    el.className = `country-label${l.min <= 2 ? " major" : l.min <= 3 ? " mid" : ""}${l.ar ? "" : " latin"}`;
+    el.textContent = l.ar ?? l.en;
+    el.title = l.ar ? l.en : "لا اسم عربي موثّق بعد";
+    return { min: l.min, added: false, marker: new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]) };
+  });
   updateLabels();
-});
+}
+map.on("load", () => { if (!labelKey) showLabels("modern"); });
 map.on("zoomend", updateLabels);
 map.on("moveend", declutterLabels);
+
+// ---------- البطاقة: الاسم العربي عنواناً، والتفاصيل كلها تحته ----------
+const fmtInt = (n) => Math.round(n).toLocaleString("ar");
+const yearText = (y) => (y === "modern" ? "اليوم" : yearLabel(Number(y)));
+function cardHtml(title, rows, foot = "") {
+  const dl = rows.filter((r) => r && r[1]).map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${v}</dd>`).join("");
+  return `<div class="popup-name">${escapeHtml(title)}</div><dl class="card-dl">${dl}</dl>${foot}`;
+}
+function nameSourceHtml(info, modern) {
+  if (modern) {
+    return info?.source_ar
+      ? `تعديل تحريري معلن لصاحب المشروع؛ الاسم في Natural Earth: «${escapeHtml(info.source_ar)}»`
+      : "Natural Earth (ملك عام)";
+  }
+  if (!info?.ar) return "لا اسم عربي موثّق بعد؛ المعروض اسم المصدر";
+  const link = info.qid ? `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(info.qid)}" target="_blank" rel="noopener">${escapeHtml(info.qid)}</a>` : "";
+  const span = [info.from != null ? `نشأ ${yearLabel(info.from)}` : "", info.to != null ? `زال ${yearLabel(info.to)}` : ""].filter(Boolean).join("، ");
+  if (info.st === "verified") return `ويكي بيانات ${link} (CC0)، متحقق زمنياً${span ? ` (${span})` : ""}`;
+  if (info.st === "undated") return `ويكي بيانات ${link} (CC0)، بلا تواريخ فيها للتحقق الزمني`;
+  if (info.st === "override") return `تعديل يدوي معلن ${link}`;
+  return `ويكي بيانات ${link}`;
+}
+function entityCard(p, key) {
+  const modern = String(key) === "modern";
+  const info = labelInfo.get(p.NAME);
+  const title = p.NAME_AR || info?.ar || p.NAME;
+  const prec = modern ? "محددة (Natural Earth)" : `${PRECISION_LABEL[p.BORDERPRECISION] ?? "غير مذكورة"} بحسب المصدر${Number(key) < 1900 ? "، ويرسمها الأطلس تقريبية" : ""}`;
+  return cardHtml(title, [
+    ["الاسم بالإنجليزية", title !== p.NAME ? escapeHtml(p.NAME) : ""],
+    ["ضمن", p.PARTOF && p.PARTOF !== p.NAME ? escapeHtml(p.PARTOF) : ""],
+    ["خريطة سنة", escapeHtml(yearText(key))],
+    ["المساحة على هذه الخريطة", info?.a ? `${fmtInt(info.a)} كم² تقريباً` : ""],
+    ["يظهر على خرائط", info?.years ? escapeHtml(info.years.map((y) => yearLabel(y)).join("، ")) : ""],
+    ["دقة الحد", escapeHtml(prec)],
+    ["مصدر الاسم العربي", nameSourceHtml(info, modern)],
+    ["مصدر الحدود", modern ? "Natural Earth (ملك عام)" : "Historical Basemaps (GPL-3)"],
+  ]);
+}
 
 function fitTo(features, maxZoom) {
   if (!features.length) return;
@@ -341,6 +396,7 @@ async function loadBorders(key) {
   // قبل 1900 لا شيء يُرسم محدداً: شرط لا يتحقق (لا دقة سالبة في المصدر)
   const precise = ["==", ["get", "BORDERPRECISION"], approxAll ? -1 : 3];
   const fillOpacity = ["case", ["!", named], 0, precise, 0.16, 0.07];
+  showLabels(key);
   if (map.getSource("borders")) {
     map.getSource("borders").setData(data);
     map.setPaintProperty("borders-fill", "fill-opacity", fillOpacity);
@@ -369,8 +425,7 @@ async function loadBorders(key) {
       popup.setLngLat(e.lngLat).setHTML(`<div class="popup-sub">أرض لا يسمّي المصدر عليها كياناً في هذه السنة</div>`).addTo(map);
       return;
     }
-    const prec = `${PRECISION_LABEL[p.BORDERPRECISION] ?? "غير مذكورة"} (بحسب المصدر)`;
-    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.NAME)}</div>${p.PARTOF && p.PARTOF !== p.NAME ? `<div class="popup-sub">ضمن: ${escapeHtml(p.PARTOF)}</div>` : ""}<div class="popup-sub">دقة الحد: ${escapeHtml(prec)}</div>`).addTo(map);
+    popup.setLngLat(e.lngLat).setHTML(entityCard(p, borderSelect.value)).addTo(map);
   });
   pointerOn("borders-fill");
   for (const id of LAYER_GROUPS.borders) setVis(id, true);
@@ -411,10 +466,14 @@ async function loadEra(era) {
     });
     map.on("click", "places", (e) => {
       const p = e.features[0].properties;
-      popup.setLngLat(e.lngLat).setHTML(
-        `<div class="popup-name">${escapeHtml(p.name_ar)}</div>` +
-        `<div class="popup-sub">${escapeHtml(p.name_en)}<span class="research-only"> · ${escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)}</span></div>`
-      ).addTo(map);
+      const era = ERAS.find((x) => x.id === Number(p.era));
+      popup.setLngLat(e.lngLat).setHTML(cardHtml(p.name_ar, [
+        ["الاسم بالإنجليزية", p.name_en && p.name_en !== p.name_ar ? escapeHtml(p.name_en) : ""],
+        ["الحقبة", era ? escapeHtml(era.label) : ""],
+        ["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)],
+        ["في Pleiades", p.pleiades_id && p.pleiades_id !== "null" ? `<a href="https://pleiades.stoa.org/places/${encodeURIComponent(p.pleiades_id)}" target="_blank" rel="noopener">${escapeHtml(p.pleiades_title || p.pleiades_id)}</a>` : ""],
+        ["في المصدر", p.source_name && p.source_name !== "null" ? escapeHtml(`${p.source_name}${p.source_country && !String(p.source_country).startsWith("wikidata") ? `، ${p.source_country}` : ""}`) : ""],
+      ])).addTo(map);
     });
     pointerOn("places");
     setVis("places", true);
@@ -563,7 +622,8 @@ async function ensureClaimPoints() {
       `<div class="popup-sub research-only">“${escapeHtml(c.quote)}”</div></div>`
     ).join("");
     const note = p.place_note ? `<div class="popup-sub">${escapeHtml(p.place_note)}</div>` : "";
-    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.name_ar)}</div>${note}${list}`).addTo(map);
+    const en = p.name_en && p.name_en !== p.name_ar ? `<div class="popup-sub">${escapeHtml(p.name_en)}</div>` : "";
+    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.name_ar)}</div>${en}${note}${list}`).addTo(map);
   });
   pointerOn("claim-points");
   return true;
@@ -660,7 +720,12 @@ trFrom.value = "1800";
 trTo.value = "1945";
 const pct = (x) => `${Math.round(x * 100)}%`;
 // زر اسم يُظهر الكيان على خريطة سنته
-const entBtn = (name, key) => `<button type="button" class="ent" data-key="${escapeHtml(key)}" data-name="${escapeHtml(name)}">${escapeHtml(name)}</button>`;
+// الأسماء العربية لكيانات السنتين المعروضتين (تُملأ في showTransition)، والإنجليزي في التلميح ومفتاح الإبراز
+let trAr = {};
+const entBtn = (name, key) => {
+  const ar = trAr[key]?.get(name);
+  return `<button type="button" class="ent${ar ? "" : " latin"}" data-key="${escapeHtml(key)}" data-name="${escapeHtml(name)}" title="${escapeHtml(name)}">${escapeHtml(ar ?? name)}</button>`;
+};
 // المصير والمنشأ: علاقات مكانية بين خريطتين، لا أحكام تاريخية بالسببية
 const FATES = [
   ["split", "انقسمت أرضه", "كيانان أو أكثر أخذ كل منهما 10% فأكثر من أرضه"],
@@ -702,7 +767,7 @@ function fateLine(r, a, b) {
 }
 function originLine(r, a, b) {
   const o = r.origin;
-  const head = `${entBtn(r.name, b)}${r.name_ar ? ` <span class="sub">${escapeHtml(r.name_ar)}</span>` : ""}`;
+  const head = entBtn(r.name, b);
   if (o.type === "assembled" || o.type === "new_land") return `<li>${head} <span class="sub research-only">تغطية الكيانات المسمّاة: ${pct(o.named_cover)}</span></li>`;
   return `<li>${head} ← ${linkText(r.links, 2, a)}</li>`;
 }
@@ -722,6 +787,7 @@ async function showTransition() {
   let d;
   try { d = await transitionData(a, b); } catch (err) { if (req === trRequest) trResultEl.textContent = `تعذّر تحميل المقارنة: ${err.message}`; return; }
   if (req !== trRequest) return; // تغيّر الاختيار أثناء التحميل
+  trAr = { [a]: new Map(d.from.filter((r) => r.name_ar).map((r) => [r.name, r.name_ar])), [b]: new Map(d.to.filter((r) => r.name_ar).map((r) => [r.name, r.name_ar])) };
   const c = d.counts;
   const n = (side, t) => c[side][t] ?? 0;
   const fates = FATES.map(([t, label, help]) => group(label, help, d.from.filter((r) => r.fate.type === t).map((r) => fateLine(r, a, b))));
