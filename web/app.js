@@ -20,7 +20,25 @@ for (const b of modeButtons) b.addEventListener("click", () => setMode(b.dataset
 try { const saved = localStorage.getItem("atlas-mode"); if (saved === "research" || saved === "simple") setMode(saved); } catch {}
 
 // ---------- الخريطة وطبقات الأساس ----------
-const DEM_TILES = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png";
+// تُطلب بلاطات الارتفاع عبر بروتوكول dem0 الذي يرفع ما تحت مستوى البحر إلى مستواه (انظر أدناه)
+const DEM_TILES = "dem0://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png";
+// بيانات الارتفاع تشمل أعماق البحار، فتبدو البحار خنادق غائرة بعد التضخيم، وترسم الظلالُ قاعَها خطوطاً فوق الماء.
+// لذلك يُرفع كل ما تحت الصفر إلى الصفر قبل أن تستعمله الخريطة، فيستوي سطح البحر.
+// الثمن: اليابسة تحت مستوى البحر (البحر الميت، ووادي الأردن، ومنخفض القطارة) تُعرض عند مستواه.
+// ترميز terrarium: الارتفاع = أحمر×256 + أخضر + أزرق/256 − 32768، فالسالب كل ما أحمره دون 128، والصفر (128، 0، 0).
+maplibregl.addProtocol("dem0", async (params, abortController) => {
+  const res = await fetch(params.url.replace("dem0://", "https://"), { signal: abortController.signal });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const bmp = await createImageBitmap(await res.blob(), { colorSpaceConversion: "none", premultiplyAlpha: "none" });
+  const canvas = new OffscreenCanvas(bmp.width, bmp.height);
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  ctx.drawImage(bmp, 0, 0);
+  const img = ctx.getImageData(0, 0, bmp.width, bmp.height);
+  const d = img.data;
+  for (let i = 0; i < d.length; i += 4) if (d[i] < 128) { d[i] = 128; d[i + 1] = 0; d[i + 2] = 0; }
+  ctx.putImageData(img, 0, 0);
+  return { data: await (await canvas.convertToBlob({ type: "image/png" })).arrayBuffer() };
+});
 const DEM_ATTRIBUTION = "التضاريس: Terrain Tiles (USGS 3DEP/SRTM/GMTED2010، NOAA ETOPO1، Copernicus EU-DEM، وغيرها)";
 // صور الأقمار الصناعية: NASA Blue Marble: Next Generation (مركّب صور MODIS الحقيقية، 500 م للبكسل) من خدمة NASA GIBS،
 // ملك عام. تُجلب وقت العرض حتى المستوى 8، وبعده تُكبَّر البلاطات.
