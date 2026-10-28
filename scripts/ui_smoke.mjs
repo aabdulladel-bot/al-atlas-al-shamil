@@ -118,7 +118,10 @@ try {
     step = `${name}: الرحلات`;
     // الرحلة: تُفتح أول رحلة، وتُجتاز خطواتها بالتالي حتى آخرها، ثم تُغلق بزر «إنهاء»
     await page.evaluate(() => { document.getElementById("journey-panel").open = true; });
+    await page.waitForSelector("#journey-list button", { timeout: 15000 });
     await page.click("#journey-list button");
+    // صندوق الخطوة يُملأ بعد تحميل ملف الرحلة، وسكون الخريطة قد يقع قبل ذلك
+    await page.waitForSelector('#journey-box button[data-act="next"]', { timeout: 15000 });
     await settle();
     let passed = 1;
     while (await page.$eval('#journey-box button[data-act="next"]', (b) => !b.disabled)) {
