@@ -65,11 +65,25 @@
     .popup-name { font-weight: 700; font-size: 15px; }
     .popup-sub { color: var(--muted); font-size: 13px; }
     .credits { font-size: 11px !important; }
-    @media (max-width: 600px) { #panel { max-height: 55vh; } }
+    @media (max-width: 600px) { #panel { max-height: 55vh; } #journey-box { bottom: 44px; } }
+    #journey-box { position: absolute; z-index: 4; bottom: 16px; left: 50%; transform: translateX(-50%); width: min(560px, calc(100% - 24px)); max-height: 46vh; overflow-y: auto; box-sizing: border-box; background: var(--panel); color: var(--ink); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 14px; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18); }
+    #journey-box[hidden] { display: none; }
+    .jb-head, .jb-nav { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .jb-head button, .jb-nav button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
+    .jb-nav button:disabled { opacity: 0.4; cursor: default; }
+    .jb-count { font-size: 13px; color: var(--muted); }
+    .jb-title { font-size: 17px; margin: 8px 0 4px; }
+    .jb-frame { font-size: 14px; color: var(--muted); margin: 0 0 8px; line-height: 1.7; }
+    .jb-item { font-size: 14px; line-height: 1.7; border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding: 6px 0; }
+    .jb-item p { margin: 2px 0; }
+    .jb-src { font-size: 12px; color: var(--muted); }
+    .jb-caution { color: var(--limit); font-weight: 600; }
+    .jb-details summary { cursor: pointer; font-size: 12px; color: var(--muted); }
   </style>
 </head>
 <body data-mode="simple">
   <div id="map"></div>
+  <div id="journey-box" class="card" hidden></div>
   <aside id="panel">
     <h1>الأطلس الشامل</h1>
     <p class="tagline">التاريخ والجغرافيا والثقافة والسكان على خريطة واحدة، والسنن فرضيات تُختبر بالشواهد.</p>
@@ -130,6 +144,12 @@
       </div>
     </details>
 
+    <details class="section" id="journey-panel" open>
+      <summary>الرحلات</summary>
+      <p>رحلة تمرّ بشواهد موثّقة خطوة خطوة، وتنتقل الخريطة معها إلى حدود السنة المناسبة.</p>
+      <div class="row" id="journey-list"></div>
+    </details>
+
     <details class="section" open>
       <summary>السنن</summary>
       <p>اختر سُنّة لترى نص ابن خلدون وشواهدها، وأماكن الشواهد على الخريطة.</p>
@@ -184,5 +204,6 @@
   <script src="vendor/maplibre-gl.js"></script>
   <script src="app.js"></script>
   <script src="cube.js"></script>
+  <script src="journey.js"></script>
 </body>
 </html>
