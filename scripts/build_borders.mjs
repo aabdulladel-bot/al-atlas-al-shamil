@@ -61,7 +61,8 @@ for (const year of YEARS) {
   for (const f of src.features) {
     const geometry = roundGeom(f.geometry);
     if (!geometry) continue;
-    const ar = hbNames[f.properties.NAME]?.ar ?? null;
+    const hn = hbNames[f.properties.NAME];
+    const ar = hn?.ar && hn.years_ar?.includes(year) ? hn.ar : null; // الاسم العربي في سنوات قيام الكيان المطابَق فقط
     features.push({ type: "Feature", properties: { NAME: f.properties.NAME, NAME_AR: ar, PARTOF: f.properties.PARTOF ?? null, BORDERPRECISION: f.properties.BORDERPRECISION ?? null }, geometry });
   }
   const out = { type: "FeatureCollection", _meta: { year, source: "Historical Basemaps (GPL-3)", note: "حدود تقريبية؛ انظر sources/manifest.json" }, features };

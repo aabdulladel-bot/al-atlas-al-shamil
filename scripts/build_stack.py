@@ -79,9 +79,14 @@ def main():
                 lab = {"en": row["n"], "x": row["r"][0], "y": row["r"][1], "a": row["a"], "min": label_min_zoom(row["a"])}
                 if row.get("ar"):
                     lab["ar"] = row["ar"]
+                elif info.get("ar"):
+                    # للاسم تسمية عربية، لكنها لكيان آخر بالاسم نفسه لم يكن قائماً في هذه السنة: تبقى للبطاقة لا للخريطة
+                    lab["ar_other"] = info["ar"]
                 for src, dst in (("qid", "qid"), ("status", "st"), ("inception", "from"), ("dissolved", "to"), ("years", "years")):
                     if info.get(src) is not None:
                         lab[dst] = info[src]
+                if lab.get("ar_other"):
+                    lab["st"] = "other_era"
                 labels.append(lab)
             (LABELS / f"labels_{key}.json").write_text(json.dumps({"_meta": {"year": int(key), "name_source": "web/data/names/hb_names.json (Wikidata CC0)", "min_rule": "من المساحة: 2 مليون كم² ← 1.5، نصف مليون ← 2.5، مئة ألف ← 3.5، عشرون ألفاً ← 4.5، وما دون ← 5.5"}, "labels": labels}, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
         slices.append({"key": key, "index": idx, "entities": len(ents)})

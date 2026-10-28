@@ -305,6 +305,10 @@ function nameSourceHtml(info, modern) {
       ? `تعديل تحريري معلن لصاحب المشروع؛ الاسم في Natural Earth: «${escapeHtml(info.source_ar)}»`
       : "Natural Earth (ملك عام)";
   }
+  if (info?.st === "other_era") {
+    const when = [info.from != null ? `قام ${yearLabel(info.from)}` : "", info.to != null ? `وزال ${yearLabel(info.to)}` : ""].filter(Boolean).join(" ");
+    return `الاسم «${escapeHtml(info.ar_other)}» في ويكي بيانات (${info.qid ? `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(info.qid)}" target="_blank" rel="noopener">${escapeHtml(info.qid)}</a>` : ""}) لكيان آخر بالاسم نفسه ${when}، لا لهذه السنة؛ المعروض اسم المصدر`;
+  }
   if (!info?.ar) return "لا اسم عربي موثّق بعد؛ المعروض اسم المصدر";
   const link = info.qid ? `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(info.qid)}" target="_blank" rel="noopener">${escapeHtml(info.qid)}</a>` : "";
   const span = [info.from != null ? `نشأ ${yearLabel(info.from)}` : "", info.to != null ? `زال ${yearLabel(info.to)}` : ""].filter(Boolean).join("، ");
