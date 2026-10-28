@@ -51,6 +51,9 @@ fs.mkdirSync(OUT, { recursive: true });
   console.log(`أسماء الدول بالعربية: ${labels.length}`);
   console.log(`الدول اليوم: ${features.length} حدود`);
 }
+// الأسماء العربية للكيانات التاريخية (scripts/build_names.py من ويكي بيانات، متحقق زمنياً)
+const hbNamesFile = path.join(ROOT, "web/data/names/hb_names.json");
+const hbNames = fs.existsSync(hbNamesFile) ? JSON.parse(fs.readFileSync(hbNamesFile, "utf8")).names : {};
 for (const year of YEARS) {
   const name = year < 0 ? `world_bc${-year}.geojson` : `world_${year}.geojson`;
   const src = JSON.parse(fs.readFileSync(path.join(RAW, name), "utf8"));
@@ -58,7 +61,9 @@ for (const year of YEARS) {
   for (const f of src.features) {
     const geometry = roundGeom(f.geometry);
     if (!geometry) continue;
-    features.push({ type: "Feature", properties: { NAME: f.properties.NAME, PARTOF: f.properties.PARTOF ?? null, BORDERPRECISION: f.properties.BORDERPRECISION ?? null }, geometry });
+    const hn = hbNames[f.properties.NAME];
+    const ar = hn?.ar && hn.years_ar?.includes(year) ? hn.ar : null; // الاسم العربي في سنوات قيام الكيان المطابَق فقط
+    features.push({ type: "Feature", properties: { NAME: f.properties.NAME, NAME_AR: ar, PARTOF: f.properties.PARTOF ?? null, BORDERPRECISION: f.properties.BORDERPRECISION ?? null }, geometry });
   }
   const out = { type: "FeatureCollection", _meta: { year, source: "Historical Basemaps (GPL-3)", note: "حدود تقريبية؛ انظر sources/manifest.json" }, features };
   fs.writeFileSync(path.join(OUT, `borders_${year}.geojson`), JSON.stringify(out) + "\n");

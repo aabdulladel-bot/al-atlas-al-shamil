@@ -551,6 +551,24 @@
           "bytes": 3350885
         }
       ]
+    },
+    {
+      "id": "wikidata-hb-names",
+      "file": "data/raw/wikidata/hb_titles.json",
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki (scripts/fetch_wikidata_names.py)",
+      "license": "CC0 1.0 (Wikidata)",
+      "tier": "A",
+      "landing": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "attribution": "Wikidata (CC0)",
+      "note": "مستخلص التسميات العربية للكيانات التاريخية في Historical Basemaps: المعرّف والتسميتان والنوع وتاريخا النشأة والزوال فقط. يُجلب على دفعات لأن ويكي بيانات تحدّ الطلبات؛ جُلب 300 من 540 اسماً ذا أولوية حتى الآن، والباقي لاحقاً.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/wikidata/hb_titles.json",
+          "sha256": "633598b2f354382709abde0513fb898a7e37cfd2fe1e80d811e6745a267dd328",
+          "bytes": 69809
+        }
+      ]
     }
   ]
 }
