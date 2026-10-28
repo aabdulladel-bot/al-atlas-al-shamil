@@ -95,6 +95,26 @@
       "pleiades_id": "981513",
       "expected_title": "Britannia (province)",
       "note": "الموقع للولاية الرومانية Britannia في Pleiades، لا لكل الجزيرة ولا لبريطانيا الحديثة. الإحداثيات تمثيلية وتقريبية."
+    },
+    {
+      "slug": "alexandria",
+      "name_ar": "الإسكندرية",
+      "name_en": "Alexandria",
+      "aliases": [
+        "الإسكندرية"
+      ],
+      "pleiades_id": "727070",
+      "expected_title": "Alexandria"
+    },
+    {
+      "slug": "trebizond",
+      "name_ar": "طرابزون",
+      "name_en": "Trapezus (Trebizond)",
+      "aliases": [
+        "طرابزون"
+      ],
+      "pleiades_id": "857359",
+      "expected_title": "Trapezus"
     }
   ]
 }

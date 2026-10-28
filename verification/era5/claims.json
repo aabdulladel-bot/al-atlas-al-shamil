@@ -79,41 +79,10 @@
     "hedge": "ملاحظة بولو عن موقع الإسكندرية وصعود طرق بديلة، ومرجعها تقديره لا إحصاء",
     "author_preference": null,
     "mentions": {
-      "places": [],
-      "persons": [],
-      "dates": []
-    },
-    "links": {},
-    "checks": {
-      "quote_match": true,
-      "meaning": {
-        "status": "independently_reviewed",
-        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
-      },
-      "pass_agreement": {
-        "status": "not_run",
-        "classification_agree": false,
-        "runs": 1,
-        "rule": "content-first-v1"
-      },
-      "verified_by": "pilot-era5"
-    },
-    "status": "verified",
-    "version": 3
-  },
-  {
-    "id": "cl_000000368",
-    "passage_id": "battuta:defremery1853:alexandria-ports",
-    "quote": "Alexandrie a un port magnifique",
-    "statement": "يصف ابن بطوطة ميناء الإسكندرية بأنه مرفأ رائع لم يرَ مثله في العالم",
-    "type": "description",
-    "layer": "contemporary_witness",
-    "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول؛ السنة غير مقروءة في الملف)",
-    "isnad": null,
-    "hedge": "سنة طبع المجلد غير مقروءة في الملف، والمرجح أنه 1853",
-    "author_preference": null,
-    "mentions": {
-      "places": [],
+      "places": [
+        "الإسكندرية",
+        "طرابزون"
+      ],
       "persons": [],
       "dates": []
     },
@@ -134,6 +103,42 @@
     },
     "status": "verified",
     "version": 4
+  },
+  {
+    "id": "cl_000000368",
+    "passage_id": "battuta:defremery1853:alexandria-ports",
+    "quote": "Alexandrie a un port magnifique",
+    "statement": "يصف ابن بطوطة ميناء الإسكندرية بأنه مرفأ رائع لم يرَ مثله في العالم",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول؛ السنة غير مقروءة في الملف)",
+    "isnad": null,
+    "hedge": "سنة طبع المجلد غير مقروءة في الملف، والمرجح أنه 1853",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "الإسكندرية"
+      ],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "independently_reviewed",
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era5"
+    },
+    "status": "verified",
+    "version": 5
   },
   {
     "id": "cl_000000369",

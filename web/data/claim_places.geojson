@@ -5,7 +5,7 @@
     "status": "pleiades-verified",
     "source": "Pleiades (pleiades.stoa.org)، ملف places-latest، ترخيص CC BY 3.0، يتطلب الإسناد",
     "raw_sha256": "aa521b916561a45560249f0bf1b9e5cd53696c5646101906b2ce431d4dd6af82",
-    "matched": "9 من 9",
+    "matched": "11 من 11",
     "generated_by": "scripts/build_places.mjs",
     "note": "الإحداثيات الممثّلة في Pleiades نقاط تمثيلية لا مواقع مساحية."
   },
@@ -188,6 +188,46 @@
         "pleiades_id": "981513",
         "pleiades_title": "Britannia (province)",
         "pleiades_location_precision": "rough"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "alexandria",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.9098,
+          31.2014
+        ]
+      },
+      "properties": {
+        "name_ar": "الإسكندرية",
+        "name_en": "Alexandria",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "727070",
+        "pleiades_title": "Alexandria",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "trebizond",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.7233,
+          41.0043
+        ]
+      },
+      "properties": {
+        "name_ar": "طرابزون",
+        "name_en": "Trapezus (Trebizond)",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "857359",
+        "pleiades_title": "Trapezus",
+        "pleiades_location_precision": "precise"
       }
     }
   ]
