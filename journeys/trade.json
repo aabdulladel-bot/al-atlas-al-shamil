@@ -1,0 +1,19 @@
+{
+  "id": "trade",
+  "sunna": "sn_trade",
+  "title": "رحلة: التجارة ومراكزها",
+  "steps": [
+    { "kind": "khaldun", "border": "modern", "camera": "world", "frame": "تبدأ الرحلة بتعريف ابن خلدون للتجارة، ثم تتبع شواهد من نصوص متباعدة في الزمان والمكان." },
+    { "kind": "evidence", "border": "-1000", "camera": "places", "claims": ["cl_000000397", "cl_000000398", "cl_000000399"], "frame": "نص نبوي يعدّد بلداناً وأقواماً كانت تتعامل مع صور." },
+    { "kind": "evidence", "border": "-1", "camera": "places", "claims": ["cl_000000385"], "frame": "مؤرخ يوناني ينقل معاهدة لاحقة تحدّ التجارة الرومانية بحدود مكانية." },
+    { "kind": "evidence", "border": "700", "camera": "world", "claims": ["cl_000000347"], "frame": "راهب صيني يذكر تجاراً من بلدان شتى يأتون إلى مملكة سيلان." },
+    { "kind": "evidence", "border": "1200", "camera": "places", "claims": ["cl_000000365", "cl_000000368"], "frame": "نصان عن الإسكندرية مرفأً، وعن طرق القوافل التي بدأت تنافسها." },
+    { "kind": "evidence", "border": "1600", "camera": "places", "claims": ["cl_000000390"], "frame": "رحالة عثماني يصف أسواق بورصة." },
+    { "kind": "evidence", "border": "1600", "camera": "places", "claims": ["cl_000000372"], "frame": "شاهد إسباني يصف سوق تلاتيلولكو الكبيرة وترتيب بضائعها." },
+    { "kind": "evidence", "border": "1600", "camera": "world", "claims": ["cl_000000375"], "frame": "يومية رحلة برتغالية تذكر سفناً محمّلة بالذهب والتوابل راسية في ميناء." },
+    { "kind": "evidence", "border": "1800", "camera": "world", "claims": ["cl_000000419", "cl_000000420"], "frame": "نص من القرن التاسع عشر يفسّر توسّع التجارة بحاجتها إلى سوق متّسعة." },
+    { "kind": "limits", "border": "-1000", "camera": "places", "frame": "ما يقيّد السُّنّة: شواهد وصفية بلا أرقام لحجم التجارة، وخبر عن سقوط صور." },
+    { "kind": "quant", "border": "modern", "camera": "world", "frame": "اختبار كمي ببيانات Seshat، وهو ارتباط لا سببية." },
+    { "kind": "end", "border": "modern", "camera": "world", "frame": "السُّنّة فرضية تختبرها الشواهد، والرحلة تعرض ما وُثّق منها حتى الآن." }
+  ]
+}

@@ -115,6 +115,22 @@ try {
     if (ent) { await ent.click(); await page.waitForTimeout(1200); } else problems.push(`[${name}] لا زر للدولة العثمانية في لوحة التحولات`);
     await page.click("#claim-map-btn"); await page.waitForTimeout(300); await settle();
     await page.screenshot({ path: path.join(ROOT, "out", `ui_${name}.png`) });
+    step = `${name}: الرحلات`;
+    // الرحلة: تُفتح أول رحلة، وتُجتاز خطواتها بالتالي حتى آخرها، ثم تُغلق بزر «إنهاء»
+    await page.evaluate(() => { document.getElementById("journey-panel").open = true; });
+    await page.click("#journey-list button");
+    await settle();
+    let passed = 1;
+    while (await page.$eval('#journey-box button[data-act="next"]', (b) => !b.disabled)) {
+      await page.click('#journey-box button[data-act="next"]');
+      await settle();
+      passed++;
+    }
+    counts.journeySteps = passed;
+    await page.screenshot({ path: path.join(ROOT, "out", `journey_${name}.png`) });
+    await page.click('#journey-box button[data-act="exit"]');
+    await page.waitForTimeout(300);
+    if (!(await page.$eval("#journey-box", (b) => b.hidden))) problems.push(`[${name}] صندوق الرحلة لم يُغلق`);
     console.log(`${name}: ${JSON.stringify(counts)}`);
     for (const [k, n] of Object.entries(counts)) if (n === 0) problems.push(`[${name}] لا أزرار في ${k}`);
     await page.close();
