@@ -334,6 +334,23 @@ function entityCard(p, key) {
   ]);
 }
 
+// شواهد الادعاءات الواقعة على أرض الكيان في هذه الخريطة (web/data/links، من scripts/build_spatial_links.py).
+// ربط مكاني محسوب على حدود المصدر، لا حكم تاريخي: الكيان يُختار بالمكان داخل مضلعه.
+const linksCache = new Map();
+let cardToken = 0; // يُبطل تحميل شواهد بطاقة فُتحت بعد ذلك
+async function loadLinks(key) {
+  if (!linksCache.has(key)) {
+    try { linksCache.set(key, await getJson(`data/links/claims_by_entity_${key}.json`)); } catch { linksCache.set(key, {}); }
+  }
+  return linksCache.get(key);
+}
+function linkedClaimsHtml(name, links) {
+  const list = links[name];
+  if (!list?.length) return "";
+  const rows = list.map((c) => `<li>${escapeHtml(c.statement)}<br><span class="card-src"><bdi>${escapeHtml(c.place_ar)}</bdi>${c.near ? "، على حدّ الكيان تقريباً" : ""} · <bdi>${escapeHtml(c.attributed_to)}</bdi>${c.sunan.length ? ` · ${c.sunan.map(escapeHtml).join("، ")}` : ""}</span></li>`).join("");
+  return `<details class="card-links"><summary>شواهد موثّقة تقع على أرضه في هذه الخريطة (${list.length})</summary><p class="card-src">ربط مكاني محسوب على حدود المصدر لهذه السنة، لا حكم تاريخي.</p><ul>${rows}</ul></details>`;
+}
+
 function fitTo(features, maxZoom) {
   if (!features.length) return;
   const bounds = new maplibregl.LngLatBounds();
@@ -429,7 +446,13 @@ async function loadBorders(key) {
       popup.setLngLat(e.lngLat).setHTML(`<div class="popup-sub">أرض لا يسمّي المصدر عليها كياناً في هذه السنة</div>`).addTo(map);
       return;
     }
-    popup.setLngLat(e.lngLat).setHTML(entityCard(p, borderSelect.value)).addTo(map);
+    const key = borderSelect.value;
+    const html = entityCard(p, key);
+    popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
+    const token = ++cardToken;
+    loadLinks(key).then((links) => {
+      if (token === cardToken && popup.isOpen()) popup.setHTML(html + linkedClaimsHtml(p.NAME, links));
+    });
   });
   pointerOn("borders-fill");
   for (const id of LAYER_GROUPS.borders) setVis(id, true);
