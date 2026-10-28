@@ -3,7 +3,7 @@
   "fields": "qid، التسمية العربية والإنجليزية، عنوان المقالة العربية، P31، P571 (النشأة)، P576 (الزوال)",
   "license": "CC0 1.0",
   "priority_rule": "الكيانات التي تغطي 90% من الأرض المسمّاة في كل خريطة، وكل كيان مساحته 100 ألف كم² فأكثر",
-  "retrieved_at": "2026-10-28T09:58:38+00:00",
+  "retrieved_at": "2026-10-28T12:18:49+00:00",
   "source": "Wikidata (CC0)، wbgetentities بعناوين ويكيبيديا الإنجليزية"
  },
  "titles": {
@@ -2644,7 +2644,2026 @@
   "Maya chiefdoms and states": null,
   "Maya city-states": null,
   "Maya states": null,
-  "Mayas": null
+  "Mayas": null,
+  "Merina Kingdom": null,
+  "Meroe": null,
+  "Mescalero": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Mescalero",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q56585"
+  },
+  "Mesoamerican city-states and chiefdoms": null,
+  "Mexico": {
+   "ar": "المكسيك",
+   "arwiki": "المكسيك",
+   "dissolved": [],
+   "en": "Mexico",
+   "inception": [
+    "+1821-08-24T00:00:00Z",
+    "+1836-12-00T00:00:00Z",
+    "+1821-09-28T00:00:00Z",
+    "+1810-09-16T00:00:00Z",
+    "+1820-00-00T00:00:00Z",
+    "+1821-09-27T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q6266"
+   ],
+   "qid": "Q96"
+  },
+  "Mi'kma'ki": null,
+  "Ming Chinese Empire": null,
+  "Mirning": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Mirning people",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q16210895"
+  },
+  "Mongol Empire": {
+   "ar": "إمبراطورية المغول",
+   "arwiki": "إمبراطورية المغول",
+   "dissolved": [
+    "+1368-01-01T00:00:00Z"
+   ],
+   "en": "Mongol Empire",
+   "inception": [
+    "+1206-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q48349",
+    "Q331644"
+   ],
+   "qid": "Q12557"
+  },
+  "Mongolia": {
+   "ar": "منغوليا",
+   "arwiki": "منغوليا",
+   "dissolved": [],
+   "en": "Mongolia",
+   "inception": [
+    "+1911-01-01T00:00:00Z",
+    "+1992-02-12T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "qid": "Q711"
+  },
+  "Montagnais Innu": null,
+  "Morocco": {
+   "ar": "المغرب",
+   "arwiki": "المغرب",
+   "dissolved": [],
+   "en": "Morocco",
+   "inception": [
+    "+1956-04-07T00:00:00Z",
+    "+1956-03-02T00:00:00Z",
+    "+1631-00-00T00:00:00Z",
+    "+1549-00-00T00:00:00Z",
+    "+0789-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q41614",
+    "Q3624078",
+    "Q51576574",
+    "Q6256"
+   ],
+   "qid": "Q1028"
+  },
+  "Mossi States": null,
+  "Mozambique": {
+   "ar": "موزمبيق",
+   "arwiki": "موزمبيق",
+   "dissolved": [],
+   "en": "Mozambique",
+   "inception": [
+    "+1975-06-25T00:00:00Z"
+   ],
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q1029"
+  },
+  "Mozambique (Portugal)": null,
+  "Mughal Empire": {
+   "ar": "سلطنة مغول الهند",
+   "arwiki": "سلطنة مغول الهند",
+   "dissolved": [
+    "+1857-09-21T00:00:00Z"
+   ],
+   "en": "Mughal Empire",
+   "inception": [
+    "+1526-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q48349",
+    "Q7275",
+    "Q3024240"
+   ],
+   "qid": "Q33296"
+  },
+  "Muskogee": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Muskogee",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q411834"
+  },
+  "Mwenemutapa": null,
+  "Mysore": {
+   "ar": "ميسور",
+   "arwiki": "ميسور (الهند)",
+   "dissolved": [],
+   "en": "Mysore",
+   "inception": [],
+   "p31": [
+    "Q515",
+    "Q1549591"
+   ],
+   "qid": "Q10086"
+  },
+  "Māori": {
+   "ar": "ماوري",
+   "arwiki": "ماوري (توضيح)",
+   "dissolved": [],
+   "en": "Maori",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q397777"
+  },
+  "N. European Bronze Age cultures": null,
+  "Nabatean Kingdom": null,
+  "Namibia": {
+   "ar": "ناميبيا",
+   "arwiki": "ناميبيا",
+   "dissolved": [],
+   "en": "Namibia",
+   "inception": [
+    "+1990-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q1030"
+  },
+  "Nan Chao": null,
+  "Nan-Zhao": null,
+  "Naskapi Innu": null,
+  "Navaho": null,
+  "Nejd": null,
+  "Nepal": {
+   "ar": "نيبال",
+   "arwiki": "نيبال",
+   "dissolved": [],
+   "en": "Nepal",
+   "inception": [
+    "+1768-09-25T00:00:00Z",
+    "+2008-05-28T00:00:00Z"
+   ],
+   "p31": [
+    "Q123480",
+    "Q3624078",
+    "Q82794",
+    "Q6256",
+    "Q842112"
+   ],
+   "qid": "Q837"
+  },
+  "Netherlands Indies": null,
+  "Neustria": {
+   "ar": "نيوستريا",
+   "arwiki": "نيوستريا",
+   "dissolved": [
+    "+0977-00-00T00:00:00Z",
+    "+0751-00-00T00:00:00Z"
+   ],
+   "en": "Neustria",
+   "inception": [
+    "+0511-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240"
+   ],
+   "qid": "Q106577"
+  },
+  "New Zealand": {
+   "ar": "نيوزيلندا",
+   "arwiki": "نيوزيلندا",
+   "dissolved": [],
+   "en": "New Zealand",
+   "inception": [
+    "+1986-12-13T00:00:00Z",
+    "+1907-09-26T00:00:00Z",
+    "+1841-05-03T00:00:00Z",
+    "+1947-11-25T00:00:00Z"
+   ],
+   "p31": [
+    "Q202686",
+    "Q223832",
+    "Q3624078",
+    "Q6256",
+    "Q112099",
+    "Q1351282",
+    "Q140892892"
+   ],
+   "qid": "Q664"
+  },
+  "Ngaanyatjarra": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Ngaanyatjarra",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q5767417"
+  },
+  "Nganasan": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Nganasan",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q7021970"
+  },
+  "Ngatatjara": null,
+  "Nicaragua": {
+   "ar": "نيكاراغوا",
+   "arwiki": "نيكاراغوا",
+   "dissolved": [],
+   "en": "Nicaragua",
+   "inception": [
+    "+1821-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q811"
+  },
+  "Niger": {
+   "ar": "النيجر",
+   "arwiki": "النيجر",
+   "dissolved": [],
+   "en": "Niger",
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "qid": "Q1032"
+  },
+  "Nigeria": {
+   "ar": "نيجيريا",
+   "arwiki": "نيجيريا",
+   "dissolved": [],
+   "en": "Nigeria",
+   "inception": [
+    "+1963-10-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q512187",
+    "Q6256"
+   ],
+   "qid": "Q1033"
+  },
+  "Nizam's Dominions": null,
+  "Nobatia": {
+   "ar": "نوباتيا",
+   "arwiki": "نوباتيا",
+   "dissolved": [
+    "+0650-00-00T00:00:00Z"
+   ],
+   "en": "Nobatia",
+   "inception": [
+    "+0400-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q417175"
+   ],
+   "qid": "Q568523"
+  },
+  "Nogai Horde": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [
+    "+1634-01-01T00:00:00Z"
+   ],
+   "en": "Nogai Horde",
+   "inception": [
+    "+1440-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q1345055"
+   ],
+   "qid": "Q631210"
+  },
+  "Norte Chico": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Norte Chico",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q1180689"
+  },
+  "North American Pacific foraging, hunting and fishing peoples": null,
+  "Northern Paiute": null,
+  "Northern Rhodesia": {
+   "ar": "رودسيا الشمالية",
+   "arwiki": "رودسيا الشمالية",
+   "dissolved": [
+    "+1964-10-24T00:00:00Z"
+   ],
+   "en": "Northern Rhodesia",
+   "inception": [
+    "+1924-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q164142",
+    "Q21479969"
+   ],
+   "qid": "Q953903"
+  },
+  "Norway": {
+   "ar": "النرويج",
+   "arwiki": "النرويج",
+   "dissolved": [],
+   "en": "Norway",
+   "inception": [
+    "+1905-10-26T00:00:00Z",
+    "+1814-05-17T00:00:00Z",
+    "+0900-00-00T00:00:00Z",
+    "+1905-06-07T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q20"
+  },
+  "Nyanganyatjara": null,
+  "Nyangumarda": null,
+  "Nyasaland": {
+   "ar": "نياسالند",
+   "arwiki": "نياسالند",
+   "dissolved": [
+    "+1964-01-01T00:00:00Z"
+   ],
+   "en": "Nyasaland",
+   "inception": [
+    "+1907-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q21479969"
+   ],
+   "qid": "Q1649306"
+  },
+  "Obiwa": null,
+  "Oman": {
+   "ar": "سلطنة عمان",
+   "arwiki": "سلطنة عمان",
+   "dissolved": [],
+   "en": "Oman",
+   "inception": [
+    "+1970-07-23T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q12759805"
+   ],
+   "qid": "Q842"
+  },
+  "Oromo": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Oromo",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q264942"
+  },
+  "Osage": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Osage",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q155431"
+  },
+  "Other Rus Principalities": null,
+  "Ottoman Empire": {
+   "ar": "الدولة العثمانية",
+   "arwiki": "الدولة العثمانية",
+   "dissolved": [
+    "+1922-11-17T00:00:00Z"
+   ],
+   "en": "Ottoman Empire",
+   "inception": [
+    "+1302-07-27T00:00:00Z",
+    "+1299-07-29T00:00:00Z",
+    "+1300-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q48349",
+    "Q3024240",
+    "Q12759805"
+   ],
+   "qid": "Q12560"
+  },
+  "Pakistan": {
+   "ar": "باكستان",
+   "arwiki": "باكستان",
+   "dissolved": [],
+   "en": "Pakistan",
+   "inception": [
+    "+1947-08-14T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q843"
+  },
+  "Palas": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "palas",
+   "inception": [],
+   "p31": [],
+   "qid": "Q829300"
+  },
+  "Paleo-Inuit": null,
+  "Paleo-Koreans": null,
+  "Paleo-Siberian hunter-gatherers": null,
+  "Pallavas": null,
+  "Pampas cultures": null,
+  "Papua New Guinea": {
+   "ar": "بابوا غينيا الجديدة",
+   "arwiki": "بابوا غينيا الجديدة",
+   "dissolved": [],
+   "en": "Papua New Guinea",
+   "inception": [
+    "+1975-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q202686",
+    "Q112099",
+    "Q6256",
+    "Q3624078",
+    "Q11815167",
+    "Q41614"
+   ],
+   "qid": "Q691"
+  },
+  "Papuan neolithic farmers": null,
+  "Papuans": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Papuans",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q131727273"
+  },
+  "Paraguay": {
+   "ar": "باراغواي",
+   "arwiki": "باراغواي",
+   "dissolved": [],
+   "en": "Paraguay",
+   "inception": [
+    "+1811-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "qid": "Q733"
+  },
+  "Parthian Empire": {
+   "ar": "الإمبراطورية الفرثية",
+   "arwiki": "الإمبراطورية الفرثية",
+   "dissolved": [
+    "+0224-00-00T00:00:00Z"
+   ],
+   "en": "Parthian Empire",
+   "inception": [
+    "-0247-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q48349",
+    "Q816829"
+   ],
+   "qid": "Q1986139"
+  },
+  "Patagonian shellfish and marine mammal hunters": null,
+  "Pawnee": {
+   "ar": "باوني",
+   "arwiki": "باوني (توضيح)",
+   "dissolved": [],
+   "en": "Pawnee",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q408474"
+  },
+  "Pegu": null,
+  "Persia": null,
+  "Peru": {
+   "ar": "بيرو",
+   "arwiki": "بيرو",
+   "dissolved": [],
+   "en": "Peru",
+   "inception": [
+    "+1821-07-28T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q419"
+  },
+  "Philippines": {
+   "ar": "الفلبين",
+   "arwiki": "الفلبين",
+   "dissolved": [],
+   "en": "Philippines",
+   "inception": [
+    "+1565-00-00T00:00:00Z",
+    "+1901-07-04T00:00:00Z",
+    "+1935-11-15T00:00:00Z",
+    "+1946-07-04T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q11815167",
+    "Q6256",
+    "Q112099"
+   ],
+   "qid": "Q928"
+  },
+  "Phrygians": {
+   "ar": "فريغيون",
+   "arwiki": "فريغيون",
+   "dissolved": [],
+   "en": "Phrygians",
+   "inception": [],
+   "p31": [
+    "Q4204501"
+   ],
+   "qid": "Q149386"
+  },
+  "Pintupi": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Pintupi",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q1820260"
+  },
+  "Plain bison hunters": null,
+  "Plain-Pottery culture": null,
+  "Plateau fichers and hunter gatherers": null,
+  "Point Peninsula": null,
+  "Poland": {
+   "ar": "بولندا",
+   "arwiki": "بولندا",
+   "dissolved": [],
+   "en": "Poland",
+   "inception": [
+    "+1000-00-00T00:00:00Z",
+    "+1918-11-11T00:00:00Z",
+    "+0960-00-00T00:00:00Z",
+    "+1025-00-00T00:00:00Z",
+    "+1807-00-00T00:00:00Z",
+    "+1815-00-00T00:00:00Z",
+    "+1917-01-14T00:00:00Z",
+    "+1918-11-00T00:00:00Z",
+    "+1947-07-22T00:00:00Z",
+    "+1989-12-31T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q63791824",
+    "Q127693126"
+   ],
+   "qid": "Q36"
+  },
+  "Poland-Lithuania": null,
+  "Portugal": {
+   "ar": "البرتغال",
+   "arwiki": "البرتغال",
+   "dissolved": [],
+   "en": "Portugal",
+   "inception": [
+    "+1139-07-25T00:00:00Z",
+    "+1143-10-05T00:00:00Z",
+    "+1128-06-24T00:00:00Z",
+    "+1179-05-23T00:00:00Z",
+    "+0868-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q20181813",
+    "Q140892892"
+   ],
+   "qid": "Q45"
+  },
+  "Potawatomi": {
+   "ar": "بوتاواتومي",
+   "arwiki": "بوتاواتومي",
+   "dissolved": [],
+   "en": "Potawatomi",
+   "inception": [],
+   "p31": [
+    "Q41710",
+    "Q36747"
+   ],
+   "qid": "Q1065583"
+  },
+  "Principality of Galicia-Volhynia": null,
+  "Principality of Kyiv": null,
+  "Principality of Novgorod": null,
+  "Principality of Vladimir-Suzdal": null,
+  "Proto-Altaic pastoralists": null,
+  "Proto-Slavs": null,
+  "Prussia": {
+   "ar": "بروسيا",
+   "arwiki": "بروسيا",
+   "dissolved": [
+    "+1947-02-25T00:00:00Z",
+    "+1933-00-00T00:00:00Z"
+   ],
+   "en": "Prussia",
+   "inception": [
+    "+1525-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q3624078",
+    "Q113136497"
+   ],
+   "qid": "Q38872"
+  },
+  "Pyu state": null,
+  "Qing Empire": null,
+  "Quapaw": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Quapaw",
+   "inception": [],
+   "p31": [
+    "Q41710",
+    "Q7840353"
+   ],
+   "qid": "Q1268882"
+  },
+  "Quazaq Khanate": null,
+  "Quebec": {
+   "ar": "كبك",
+   "arwiki": "كيبك",
+   "dissolved": [],
+   "en": "Quebec",
+   "inception": [
+    "+1867-07-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q11828004"
+   ],
+   "qid": "Q176"
+  },
+  "Rajput kingdoms": null,
+  "Rajputana": {
+   "ar": "راجفوتانة",
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Rajputana",
+   "inception": [],
+   "p31": [
+    "Q4835091"
+   ],
+   "qid": "Q3929733"
+  },
+  "Rajputs": null,
+  "Rattanakosin Kingdom": null,
+  "Rhodesia": {
+   "ar": "رودسيا",
+   "arwiki": "رودسيا",
+   "dissolved": [
+    "+1979-06-01T00:00:00Z"
+   ],
+   "en": "Rhodesia",
+   "inception": [
+    "+1965-11-11T00:00:00Z"
+   ],
+   "p31": [
+    "Q99541706",
+    "Q10711424"
+   ],
+   "qid": "Q217169"
+  },
+  "Rift Valley States": null,
+  "Rio De Oro": null,
+  "Roman Empire": {
+   "ar": "الإمبراطورية الرومانية",
+   "arwiki": "الإمبراطورية الرومانية",
+   "dissolved": [
+    "+0476-10-04T00:00:00Z",
+    "+1453-00-00T00:00:00Z",
+    "+0395-01-17T00:00:00Z"
+   ],
+   "en": "Roman Empire",
+   "inception": [],
+   "p31": [
+    "Q48349",
+    "Q11514315",
+    "Q3024240"
+   ],
+   "qid": "Q2277"
+  },
+  "Romania": {
+   "ar": "رومانيا",
+   "arwiki": "رومانيا",
+   "dissolved": [],
+   "en": "Romania",
+   "inception": [
+    "+1330-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q179671"
+   ],
+   "qid": "Q218"
+  },
+  "Rozwi": null,
+  "Rupert's Land": {
+   "ar": "روبرتس لاند",
+   "arwiki": "روبرتس لاند",
+   "dissolved": [
+    "+1870-07-15T00:00:00Z"
+   ],
+   "en": "Rupert's Land",
+   "inception": [
+    "+1670-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q183366"
+   ],
+   "qid": "Q738395"
+  },
+  "Russia": {
+   "ar": "روسيا",
+   "arwiki": "روسيا",
+   "dissolved": [],
+   "en": "Russia",
+   "inception": [
+    "+1991-12-25T00:00:00Z",
+    "+0880-00-00T00:00:00Z",
+    "+1125-00-00T00:00:00Z",
+    "+1263-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q859563",
+    "Q6256",
+    "Q1323642",
+    "Q127693126"
+   ],
+   "qid": "Q159"
+  },
+  "Russian Empire": {
+   "ar": "الإمبراطورية الروسية",
+   "arwiki": "الإمبراطورية الروسية",
+   "dissolved": [
+    "+1917-09-01T00:00:00Z"
+   ],
+   "en": "Russian Empire",
+   "inception": [
+    "+1721-10-22T00:00:00Z"
+   ],
+   "p31": [
+    "Q48349",
+    "Q3624078",
+    "Q3024240",
+    "Q1323642",
+    "Q6256"
+   ],
+   "qid": "Q34266"
+  },
+  "Saami": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Saami",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q1801538"
+  },
+  "Saba": {
+   "ar": "سابا",
+   "arwiki": "سابا (توضيح)",
+   "dissolved": [],
+   "en": "Saba",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q251075"
+  },
+  "Safavid Empire": null,
+  "Saharan Nomadic Tribes": null,
+  "Saharan pastoral nomads": null,
+  "Saka Kingdom": null,
+  "Samoyèdes": null,
+  "Santee": {
+   "ar": "سانتي",
+   "arwiki": "سانتي (توضيح)",
+   "dissolved": [],
+   "en": "Santee",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q404350"
+  },
+  "Sasanian Empire": {
+   "ar": "الإمبراطورية الساسانية",
+   "arwiki": "الإمبراطورية الساسانية",
+   "dissolved": [
+    "+0651-01-01T00:00:00Z"
+   ],
+   "en": "Sasanian Empire",
+   "inception": [
+    "+0224-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q83311",
+    "Q3024240",
+    "Q816829"
+   ],
+   "qid": "Q83891"
+  },
+  "Sasanian dependencies": null,
+  "Satavahanihara": null,
+  "Saudi Arabia": {
+   "ar": "السعودية",
+   "arwiki": "السعودية",
+   "dissolved": [],
+   "en": "Saudi Arabia",
+   "inception": [
+    "+1727-00-00T00:00:00Z",
+    "+1447-00-00T00:00:00Z",
+    "+0622-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q417175",
+    "Q6256"
+   ],
+   "qid": "Q851"
+  },
+  "Savanna hunter-gatherers": null,
+  "Segu": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Segu",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q2205751"
+  },
+  "Semites": null,
+  "Senegal": {
+   "ar": "السنغال",
+   "arwiki": "السنغال",
+   "dissolved": [],
+   "en": "Senegal",
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q7270",
+    "Q4209223",
+    "Q6256"
+   ],
+   "qid": "Q1041"
+  },
+  "Shan states": null,
+  "Shawnee": {
+   "ar": "شاوني",
+   "arwiki": "شاوني",
+   "dissolved": [],
+   "en": "Shawnee",
+   "inception": [],
+   "p31": [
+    "Q3117863",
+    "Q41710",
+    "Q7840353"
+   ],
+   "qid": "Q253436"
+  },
+  "Shellfish gatherers": null,
+  "Shoshoni": null,
+  "Sikhs": {
+   "ar": "سيخ",
+   "arwiki": "سيخ",
+   "dissolved": [],
+   "en": "Sikh",
+   "inception": [],
+   "p31": [
+    "Q11197007"
+   ],
+   "qid": "Q582779"
+  },
+  "Sindh": {
+   "ar": "السند",
+   "arwiki": "السند (باكستان)",
+   "dissolved": [],
+   "en": "Sindh",
+   "inception": [
+    "+1947-08-14T00:00:00Z"
+   ],
+   "p31": [
+    "Q15058985"
+   ],
+   "qid": "Q37211"
+  },
+  "Sinic": null,
+  "Somalia": {
+   "ar": "الصومال",
+   "arwiki": "الصومال",
+   "dissolved": [],
+   "en": "Somalia",
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q512187",
+    "Q6256"
+   ],
+   "qid": "Q1045"
+  },
+  "Song Empire": null,
+  "Songhai": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Songhai",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q399871"
+  },
+  "South Africa": {
+   "ar": "جنوب إفريقيا",
+   "arwiki": "جنوب إفريقيا",
+   "dissolved": [],
+   "en": "South Africa",
+   "inception": [
+    "+1910-05-31T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q258"
+  },
+  "Southern Paiute": null,
+  "Spain": {
+   "ar": "إسبانيا",
+   "arwiki": "إسبانيا",
+   "dissolved": [],
+   "en": "Spain",
+   "inception": [
+    "+1715-00-00T00:00:00Z",
+    "+1812-03-19T00:00:00Z",
+    "+1931-12-09T00:00:00Z",
+    "+1978-12-29T00:00:00Z",
+    "+1516-03-14T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q1250464",
+    "Q6256",
+    "Q51576574",
+    "Q179671"
+   ],
+   "qid": "Q29"
+  },
+  "Spanish Sahara": {
+   "ar": "أملاك إسبانيا في الصحراء",
+   "arwiki": "الصحراء الإسبانية",
+   "dissolved": [
+    "+1976-02-06T00:00:00Z"
+   ],
+   "en": "Spanish Sahara",
+   "inception": [
+    "+1884-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q183366",
+    "Q3024240",
+    "Q41792036",
+    "Q17259945"
+   ],
+   "qid": "Q689837"
+  },
+  "Srivijaya Empire": null,
+  "Subarctic forest hunter-gatherers": null,
+  "Sudan": {
+   "ar": "السودان",
+   "arwiki": "السودان",
+   "dissolved": [],
+   "en": "Sudan",
+   "inception": [
+    "+1956-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q6256",
+    "Q1088391"
+   ],
+   "qid": "Q1049"
+  },
+  "Sui Empire": null,
+  "Sultanate of Delhi": null,
+  "Suren Kingdom": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Suren Kingdom",
+   "inception": [],
+   "p31": [
+    "Q417175"
+   ],
+   "qid": "Q24969823"
+  },
+  "Suriname": {
+   "ar": "سورينام",
+   "arwiki": "سورينام",
+   "dissolved": [],
+   "en": "Suriname",
+   "inception": [
+    "+1975-11-25T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q116052725"
+   ],
+   "qid": "Q730"
+  },
+  "Suspiaq": null,
+  "Sweden": {
+   "ar": "السويد",
+   "arwiki": "السويد",
+   "dissolved": [],
+   "en": "Sweden",
+   "inception": [
+    "+0900-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q179164",
+    "Q63791824",
+    "Q41614"
+   ],
+   "qid": "Q34"
+  },
+  "Swedes": {
+   "ar": "سويديون",
+   "arwiki": "سويديون",
+   "dissolved": [],
+   "en": "Swedes",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q165192"
+  },
+  "Swift Creek Culture": null,
+  "Syria": {
+   "ar": "سوريا",
+   "arwiki": "سوريا",
+   "dissolved": [],
+   "en": "Syria",
+   "inception": [
+    "+1920-03-08T00:00:00Z"
+   ],
+   "p31": [
+    "Q6256",
+    "Q3624078",
+    "Q51576574"
+   ],
+   "qid": "Q858"
+  },
+  "Sámi": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Sámi",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q135013626"
+  },
+  "T'atsaot'ine": null,
+  "Taino": null,
+  "Tajikistan": {
+   "ar": "طاجيكستان",
+   "arwiki": "طاجيكستان",
+   "dissolved": [],
+   "en": "Tajikistan",
+   "inception": [
+    "+1991-09-09T00:00:00Z",
+    "+1929-10-16T00:00:00Z",
+    "+1924-10-27T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q179164",
+    "Q6256"
+   ],
+   "qid": "Q863"
+  },
+  "Tanzania, United Republic of": null,
+  "Teton": {
+   "ar": "تيتون",
+   "arwiki": "تيتون (توضيح)",
+   "dissolved": [],
+   "en": "Teton",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q1220720"
+  },
+  "Thai Kingdoms": null,
+  "Thailand": {
+   "ar": "تايلاند",
+   "arwiki": "تايلاند",
+   "dissolved": [],
+   "en": "Thailand",
+   "inception": [
+    "+1768-12-28T00:00:00Z",
+    "+1238-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q41614",
+    "Q3624078",
+    "Q6256",
+    "Q179164"
+   ],
+   "qid": "Q869"
+  },
+  "Thrace": {
+   "ar": "تراقيا",
+   "arwiki": "تراقيا",
+   "dissolved": [],
+   "en": "Thrace",
+   "inception": [],
+   "p31": [
+    "Q1620908",
+    "Q28171280"
+   ],
+   "qid": "Q41741"
+  },
+  "Thule": {
+   "ar": "ثولي",
+   "arwiki": "ثولي",
+   "dissolved": [],
+   "en": "Thule",
+   "inception": [],
+   "p31": [
+    "Q129264"
+   ],
+   "qid": "Q671008"
+  },
+  "Tiahuanaco Empire": null,
+  "Tibet": {
+   "ar": "التبت",
+   "arwiki": "التبت",
+   "dissolved": [],
+   "en": "Tibet",
+   "inception": [],
+   "p31": [
+    "Q82794",
+    "Q878223",
+    "Q3502482",
+    "Q15239622"
+   ],
+   "qid": "Q17252"
+  },
+  "Tibetans": {
+   "ar": "شعب التبت",
+   "arwiki": "شعب التبت",
+   "dissolved": [],
+   "en": "Tibetan people",
+   "inception": [],
+   "p31": [
+    "Q41710",
+    "Q858804"
+   ],
+   "qid": "Q187985"
+  },
+  "Togoland": {
+   "ar": "توغولاند",
+   "arwiki": "توغولاند",
+   "dissolved": [
+    "+1914-01-01T00:00:00Z"
+   ],
+   "en": "Togoland",
+   "inception": [
+    "+1884-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q164142"
+   ],
+   "qid": "Q161062"
+  },
+  "Tonkawa": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Tonkawa",
+   "inception": [],
+   "p31": [
+    "Q7840353",
+    "Q41710"
+   ],
+   "qid": "Q1493185"
+  },
+  "Tonkin": {
+   "ar": "تونكين",
+   "arwiki": "تونكين (مدينة)",
+   "dissolved": [],
+   "en": "Tonkin",
+   "inception": [],
+   "p31": [
+    "Q82794",
+    "Q56061"
+   ],
+   "qid": "Q622778"
+  },
+  "Tripolitana (UK Lybia)": null,
+  "Tsardom of Muscovy": null,
+  "Tuareg Nomadic Tribes": null,
+  "Tufan Empire": null,
+  "Tungus": null,
+  "Tungusic Tribes": null,
+  "Tunisia": {
+   "ar": "تونس",
+   "arwiki": "تونس",
+   "dissolved": [],
+   "en": "Tunisia",
+   "inception": [
+    "+1956-03-20T00:00:00Z"
+   ],
+   "p31": [
+    "Q6256",
+    "Q3624078",
+    "Q7270",
+    "Q51576574"
+   ],
+   "qid": "Q948"
+  },
+  "Turkey": {
+   "ar": "تركيا",
+   "arwiki": "تركيا",
+   "dissolved": [],
+   "en": "Turkey",
+   "inception": [
+    "+1923-10-29T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q1323642",
+    "Q51576574",
+    "Q6256",
+    "Q619610",
+    "Q339834",
+    "Q859563",
+    "Q127693126"
+   ],
+   "qid": "Q43"
+  },
+  "Turkmenistan": {
+   "ar": "تركمانستان",
+   "arwiki": "تركمانستان",
+   "dissolved": [],
+   "en": "Turkmenistan",
+   "inception": [
+    "+1991-10-27T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "qid": "Q874"
+  },
+  "USSR": null,
+  "Uganda": {
+   "ar": "أوغندا",
+   "arwiki": "أوغندا",
+   "dissolved": [],
+   "en": "Uganda",
+   "inception": [
+    "+1962-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q7270",
+    "Q123480",
+    "Q6256"
+   ],
+   "qid": "Q1036"
+  },
+  "Ukraine": {
+   "ar": "أوكرانيا",
+   "arwiki": "أوكرانيا",
+   "dissolved": [],
+   "en": "Ukraine",
+   "inception": [
+    "+1991-08-24T00:00:00Z",
+    "+1917-11-07T00:00:00Z",
+    "+1919-03-10T00:00:00Z",
+    "+1648-00-00T00:00:00Z",
+    "+0900-00-00T00:00:00Z",
+    "+1199-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q179164",
+    "Q7270",
+    "Q619610",
+    "Q4209223",
+    "Q4835091"
+   ],
+   "qid": "Q212"
+  },
+  "Umayyad Caliphate": {
+   "ar": "الدولة الأموية",
+   "arwiki": "الدولة الأموية",
+   "dissolved": [
+    "+0750-07-00T00:00:00Z"
+   ],
+   "en": "Umayyad Caliphate",
+   "inception": [
+    "+0661-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q1323642",
+    "Q131401",
+    "Q3024240",
+    "Q3624078",
+    "Q4204060",
+    "Q12759805"
+   ],
+   "qid": "Q8575586"
+  },
+  "United Arab Emirates": {
+   "ar": "الإمارات العربية المتحدة",
+   "arwiki": "الإمارات العربية المتحدة",
+   "dissolved": [],
+   "en": "United Arab Emirates",
+   "inception": [
+    "+1971-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q878"
+  },
+  "United Kingdom": {
+   "ar": "المملكة المتحدة",
+   "arwiki": "المملكة المتحدة",
+   "dissolved": [],
+   "en": "United Kingdom",
+   "inception": [
+    "+1921-12-06T00:00:00Z",
+    "+1927-04-12T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q20181813",
+    "Q112099"
+   ],
+   "qid": "Q145"
+  },
+  "United Kingdom of Great Britain and Ireland": {
+   "ar": "المملكة المتحدة لبريطانيا العظمى وأيرلندا",
+   "arwiki": "المملكة المتحدة لبريطانيا العظمى وأيرلندا",
+   "dissolved": [
+    "+1927-04-12T00:00:00Z"
+   ],
+   "en": "United Kingdom of Great Britain and Ireland",
+   "inception": [
+    "+1801-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q3024240",
+    "Q20181813"
+   ],
+   "qid": "Q174193"
+  },
+  "United States": {
+   "ar": "الولايات المتحدة",
+   "arwiki": "الولايات المتحدة",
+   "dissolved": [],
+   "en": "United States",
+   "inception": [
+    "+1776-07-04T00:00:00Z",
+    "+1784-05-12T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q1489259",
+    "Q6256",
+    "Q99541706",
+    "Q1520223",
+    "Q5035794"
+   ],
+   "qid": "Q30"
+  },
+  "United States of America": null,
+  "Ur": {
+   "ar": "أور",
+   "arwiki": "أور",
+   "dissolved": [
+    "-0500-00-00T00:00:00Z"
+   ],
+   "en": "Ur",
+   "inception": [
+    "-3800-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q15661340",
+    "Q839954"
+   ],
+   "qid": "Q5699"
+  },
+  "Urartu": {
+   "ar": "أورارتو",
+   "arwiki": "أورارتو",
+   "dissolved": [
+    "-0590-00-00T00:00:00Z"
+   ],
+   "en": "Urartu",
+   "inception": [
+    "-0860-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q28171280"
+   ],
+   "qid": "Q185068"
+  },
+  "Urnfield cultures": null,
+  "Uruguay": {
+   "ar": "الأوروغواي",
+   "arwiki": "أوروغواي",
+   "dissolved": [],
+   "en": "Uruguay",
+   "inception": [
+    "+1825-08-25T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q859563",
+    "Q6256",
+    "Q1520223"
+   ],
+   "qid": "Q77"
+  },
+  "Ute": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "UTE",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q298683"
+  },
+  "Uyghurs": {
+   "ar": "أويغور",
+   "arwiki": "أويغور",
+   "dissolved": [],
+   "en": "Uyghurs",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q46118"
+  },
+  "Uzbekistan": {
+   "ar": "أوزبكستان",
+   "arwiki": "أوزبكستان",
+   "dissolved": [],
+   "en": "Uzbekistan",
+   "inception": [
+    "+1991-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q136361597",
+    "Q6256"
+   ],
+   "qid": "Q265"
+  },
+  "Valdivia": {
+   "ar": "فالديفيا",
+   "arwiki": "فالديفيا",
+   "dissolved": [],
+   "en": "Valdivia",
+   "inception": [
+    "+1552-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q25412763",
+    "Q1549591"
+   ],
+   "qid": "Q160687"
+  },
+  "Vazimba": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Vazimba",
+   "inception": [],
+   "p31": [
+    "Q41710",
+    "Q27863646"
+   ],
+   "qid": "Q3123073"
+  },
+  "Vedic Aryans": null,
+  "Venezuela": {
+   "ar": "فنزويلا",
+   "arwiki": "فنزويلا",
+   "dissolved": [],
+   "en": "Venezuela",
+   "inception": [
+    "+1811-07-05T00:00:00Z",
+    "+1845-03-30T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q717"
+  },
+  "Veracruz civilization": null,
+  "Viceroyalty of Brazil": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [
+    "+1808-00-00T00:00:00Z"
+   ],
+   "en": "Viceroyalty of Brazil",
+   "inception": [
+    "+1763-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q12356456"
+   ],
+   "qid": "Q2920081"
+  },
+  "Viceroyalty of New Granada": {
+   "ar": "النيابة الملكية على غرناطة الجديدة",
+   "arwiki": "النيابة الملكية على غرناطة الجديدة",
+   "dissolved": [
+    "+1819-09-27T00:00:00Z"
+   ],
+   "en": "Viceroyalty of New Granada",
+   "inception": [
+    "+1717-10-12T00:00:00Z"
+   ],
+   "p31": [
+    "Q20203507",
+    "Q15893266"
+   ],
+   "qid": "Q8965"
+  },
+  "Viceroyalty of New Spain": null,
+  "Viceroyalty of Peru": {
+   "ar": "النيابة الملكية على بيرو",
+   "arwiki": "النيابة الملكية على بيرو",
+   "dissolved": [
+    "+1824-01-01T00:00:00Z"
+   ],
+   "en": "Viceroyalty of Peru",
+   "inception": [
+    "+1542-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q20203507"
+   ],
+   "qid": "Q211435"
+  },
+  "Viceroyalty of the Río de la Plata": {
+   "ar": "النيابة الملكية على ريو دي لا بلاتا",
+   "arwiki": "النيابة الملكية على ريو دي لا بلاتا",
+   "dissolved": [
+    "+1810-00-00T00:00:00Z"
+   ],
+   "en": "Viceroyalty of the Río de la Plata",
+   "inception": [
+    "+1776-08-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q20203507"
+   ],
+   "qid": "Q210551"
+  },
+  "Vietnam": {
+   "ar": "فيتنام",
+   "arwiki": "فيتنام",
+   "dissolved": [],
+   "en": "Vietnam",
+   "inception": [
+    "+1976-07-02T00:00:00Z",
+    "+1945-09-02T00:00:00Z",
+    "+1804-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q849866",
+    "Q6256"
+   ],
+   "qid": "Q881"
+  },
+  "Vijayanagara": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Vijayanagara",
+   "inception": [],
+   "p31": [
+    "Q839954",
+    "Q11514315"
+   ],
+   "qid": "Q1611788"
+  },
+  "Volga Bulgars": null,
+  "Wadai": null,
+  "Warlpiri": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Warlpiri",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q4018210"
+  },
+  "Warsenis": null,
+  "Warumungu": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Warumungu people",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q3245102"
+  },
+  "Watassid Morocco": null,
+  "Watjarri": null,
+  "Wawula": null,
+  "West African cereal farmers": null,
+  "Western Gokturk Khaganate": null,
+  "Western Sahara": {
+   "ar": "الصحراء الغربية",
+   "arwiki": "الصحراء الغربية",
+   "dissolved": [],
+   "en": "Western Sahara",
+   "inception": [],
+   "p31": [
+    "Q15239622",
+    "Q900119",
+    "Q2577883"
+   ],
+   "qid": "Q6250"
+  },
+  "Wichita": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Wichita",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q249598"
+  },
+  "Wiradjuri": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Wiradjuri",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q957298"
+  },
+  "Wirangu": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Wirangu",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q61413166"
+  },
+  "Wu": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Wu",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q2135412"
+  },
+  "Xinjiang": {
+   "ar": "سنجان",
+   "arwiki": "شينجيانغ",
+   "dissolved": [],
+   "en": "Xinjiang",
+   "inception": [
+    "+1955-10-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q57362"
+   ],
+   "qid": "Q34800"
+  },
+  "Xiongnu": {
+   "ar": "شيونغنو",
+   "arwiki": "شيونغنو",
+   "dissolved": [
+    "+0500-00-00T00:00:00Z"
+   ],
+   "en": "Xiongnu",
+   "inception": [
+    "-0300-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q4204501"
+   ],
+   "qid": "Q188836"
+  },
+  "Xixia": null,
+  "Yamato": {
+   "ar": "ياماتو",
+   "arwiki": "ياماتو (توضيح)",
+   "dissolved": [],
+   "en": "Yamato",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q217499"
+  },
+  "Yankontai": null,
+  "Yankton": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Yankton",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q1220215"
+  },
+  "Yemen": {
+   "ar": "اليمن",
+   "arwiki": "اليمن",
+   "dissolved": [],
+   "en": "Yemen",
+   "inception": [
+    "+1990-05-22T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "qid": "Q805"
+  },
+  "Yugoslavia": {
+   "ar": "يوغوسلافيا",
+   "arwiki": "يوغسلافيا",
+   "dissolved": [
+    "+1992-04-27T00:00:00Z"
+   ],
+   "en": "Yugoslavia",
+   "inception": [
+    "+1918-12-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q3624078",
+    "Q51576574"
+   ],
+   "qid": "Q36704"
+  },
+  "Yup'ik & Cup'ik": null,
+  "Zacatecs": null,
+  "Zaire": {
+   "ar": "زائير",
+   "arwiki": "زائير",
+   "dissolved": [
+    "+1997-05-16T00:00:00Z"
+   ],
+   "en": "Zaire",
+   "inception": [
+    "+1971-10-27T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q3624078",
+    "Q17524420",
+    "Q6256"
+   ],
+   "qid": "Q6500954"
+  },
+  "Zambia": {
+   "ar": "زامبيا",
+   "arwiki": "زامبيا",
+   "dissolved": [],
+   "en": "Zambia",
+   "inception": [
+    "+1964-10-24T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q7270",
+    "Q123480",
+    "Q6256"
+   ],
+   "qid": "Q953"
+  },
+  "Zanzibar": {
+   "ar": "زنجبار",
+   "arwiki": "زنجبار",
+   "dissolved": [],
+   "en": "Zanzibar Islands",
+   "inception": [
+    "+1964-04-26T00:00:00Z"
+   ],
+   "p31": [
+    "Q107390",
+    "Q56061"
+   ],
+   "qid": "Q1774"
+  },
+  "Zhoa": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Zhoa",
+   "inception": [],
+   "p31": [
+    "Q3076994"
+   ],
+   "qid": "Q8070884"
+  },
+  "Zimbabwe": {
+   "ar": "زيمبابوي",
+   "arwiki": "زيمبابوي",
+   "dissolved": [],
+   "en": "Zimbabwe",
+   "inception": [
+    "+1980-04-18T00:00:00Z"
+   ],
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "qid": "Q954"
+  },
+  "Zulu": {
+   "ar": "زولو",
+   "arwiki": "زولو (توضيح)",
+   "dissolved": [],
+   "en": "Zulu",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q228591"
+  },
+  "central Asian khanates": null,
+  "city-states": null,
+  "minor Hindu and Buddhist states": null,
+  "minor states under Indian influence": null,
+  "state societies and Aramaean kingdoms": null,
+  "Đại Việt": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [
+    "+1400-00-00T00:00:00Z",
+    "+1805-00-00T00:00:00Z"
+   ],
+   "en": "Dai Viet",
+   "inception": [
+    "+1054-00-00T00:00:00Z",
+    "+1428-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q417175",
+    "Q3024240"
+   ],
+   "qid": "Q430309"
+  }
  },
  "years": {
   "Aaniiih": [
