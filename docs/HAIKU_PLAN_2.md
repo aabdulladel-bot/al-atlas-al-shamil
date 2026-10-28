@@ -1,0 +1,598 @@
+# خطة تنفيذ: الجولة الثانية (الأسماء، والرحلات، والربط المكاني)
+
+هذه تعليمات لوكيل منفِّذ. نفّذ المهام **بالترتيب**، ولا تنتقل إلى مهمة قبل أن تتحقق شروط قبول التي قبلها، إلا حيث تقول المهمة إنها مستقلة. كل ما تحتاجه من معرّفات وأوامر ونصوص مكتوب هنا ومُتحقَّق منه في المستودع عند كتابة الخطة (الفرع `main` عند `57c545e`). فلا تخمّن، ولا تبحث عن بدائل، ولا توسّع النطاق.
+
+اقرأ `CLAUDE.md` و`README.md` قبل البدء. قواعد `CLAUDE.md` تعلو على أي شيء هنا.
+
+---
+
+## الحال عند كتابة الخطة
+
+- **الواجهة:** كرة أرضية بصور NASA Blue Marble، وتضاريس مجسّمة، وتسميات عربية تتبع سنة الحدود، وبطاقة تفاصيل لكل كيان ومكان، ولوحة تحولات، ومكعّب زمكاني.
+- **الأسماء العربية للكيانات التاريخية:** جُلب 300 من 540 اسماً ذا أولوية من ويكي بيانات (`data/raw/wikidata/hb_titles.json`)، وقُبل منها 129. الباقي لم يُجلب لأن ويكي بيانات ترد 429 بعد دفعتين أو ثلاث.
+- **السنن السبع في `sunan/sunan.json`:** أغناها شواهد «التجارة ومراكزها» (`sn_trade`):
+  - 12 شاهداً مؤيداً، وشاهد مقيِّد، وتحفّظ.
+  - 3 اختبارات كمية من Seshat، كلها «يؤيد (ارتباطاً)».
+  - شواهد في الحقب 2 و3 و4 و5 و6 و7.
+  - 7 أماكن مرتبطة على الخريطة.
+- **«العصبية والملك» (`sn_asabiyya`):** 4 شواهد مؤيدة، ثلاثة منها من ابن خلدون نفسه، ومكان واحد على الخريطة، ولا اختبار كمي. **لذلك تبدأ الرحلات بالتجارة لا بالعصبية.**
+
+---
+
+## القواعد الحاكمة (في كل مهمة)
+
+1. **لا تكتب اقتباساً ولا رقماً ولا إحداثية بيدك.**
+   - الأعداد من مخرجات الأوامر.
+   - الإحداثيات من Pleiades أو Natural Earth عبر سكربتات البناء.
+   - النصوص التاريخية من الادعاءات الموثّقة.
+2. **لا تترجم أسماء.** الاسم العربي من مصدره (Natural Earth `NAME_AR`، أو ويكي بيانات بعد التحقق)، وإلا يبقى اسم المصدر.
+3. **لا تعدّل ملفات محددة إلا حيث تقول الخطة:**
+   - `sunan/sunan.json`
+   - `scripts/config/label_overrides.json`، ففيه قرارات تحريرية لصاحب المشروع: «فلسطين» و«الكيان الإسرائيلي». لا تلمسه أبداً.
+   - نصوص الادعاءات (`statement` و`quote` و`hedge`).
+4. **الشبكة:**
+   - `curl` فقط، بترويسة `User-Agent` المستعملة في `scripts/fetch_wikidata_names.py`.
+   - لا تتجاوز حجباً ولا رفضاً. مثلاً: روابط `archive.org/download` تُوجَّه إلى خوادم تخزين محجوبة، ومحاولة الوصول إليها مباشرة تُرفض. سجّل الحجب وتوقف عند تلك الخطوة.
+5. **قبل كل commit:** `npm run check:all` برمز 0. وإن مسّ التغيير `web/` فشغّل اختبار الدخان أيضاً (القاعدة 9).
+6. **رسائل commit:**
+   - تنتهي بسطر `Claude-Session:` الذي تحدده بيئتك.
+   - **لا تكتب اسم نموذج ولا معرّفه** في commit ولا في طلب دمج.
+7. **طلبات الدمج:**
+   - مسودة دائماً.
+   - **لا تدمج أبداً** إلا إن قال صاحب المشروع «ادمج» صراحة.
+   - إن طلب الدمج: `POST repos/{o}/{r}/pulls/{n}/ccr/ready_for_review` ثم `PUT .../merge` مع `sha` رأس الفرع.
+8. **الصدق:**
+   - لا تقل «تحققت» عن شيء لم تشغّل أمره.
+   - انسخ المخرجات الفعلية.
+   - قل صراحة ما لم تره بعينك. مثلاً: صور الأقمار إن كان مضيفها محجوباً.
+9. **اختبار الدخان (`node scripts/ui_smoke.mjs`):**
+   - يستغرق 7–11 دقيقة، فشغّله في الخلفية (`run_in_background`) وانتظر الإشعار.
+   - **لا تعدّل أي ملف تحت `web/` أثناء تشغيله**، فهو يعيد تحميل الصفحة للجوال.
+   - **لا تستعمل `git stash` أثناء أي اختبار جارٍ.**
+   - لا تستعمل `pkill -f` بنمط يطابق سطر أمرك نفسه، فيقتل الصدفة. استعمل `pkill -f "[h]ttp.server 87"`.
+10. **قاعدة التوقف:**
+    - إذا فشلت خطوة مرتين بالسبب نفسه، توقف عن تلك المهمة.
+    - اكتب السبب ومخرجاته في التقرير.
+    - انتقل إلى التالية إن كانت مستقلة.
+
+### دروس البيئة (مجرّبة، لا تعِد اكتشافها)
+
+- **ويكي بيانات:**
+  - ترد 429 بعد دفعتين أو ثلاث، ثم تحظر نحو ساعة.
+  - الجالب يحفظ بعد كل دفعة ويستأنف من حيث توقف.
+  - **لا تشغّل نسختين منه معاً.**
+  - خدمة SPARQL محجوبة.
+- **Playwright:**
+  - الإطلاق دائماً: `chromium.launch({ executablePath: "/opt/pw-browsers/chromium", args: ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"] })`. بدون هذه الوسائط يكون العرض مع التضاريس أبطأ بعشرة أضعاف (383 مقابل 33 م.ث للإطار)، فتنتهي مهلة النقرات.
+  - `map` معرّفة بـ `const` في `app.js`، فلا تصل إليها `page.evaluate`. حرّك الكاميرا بوسم سكربت: `await page.addScriptTag({ content: "map.jumpTo({...})" })`. والدوال المعرّفة بـ `function` (مثل `cubeSetFocus`) تصل إليها كذلك.
+  - **انتظار سكون الخريطة بعد كل نقرة**، لا مهلة ثابتة:
+    ```js
+    await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 60000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
+    const settle = () => page.evaluate(() => window.__settle());
+    ```
+  - المتصفح لا يمر بوكيل البيئة. لمعاينة الصور والتضاريس **الحقيقية** في لقطة، اجلب البلاطات بـ `curl` وقدّمها للصفحة:
+    ```js
+    const { execFile } = require("child_process");
+    const viaCurl = (ct) => (route) => execFile("curl", ["-sSf", "-m", "30", "-A", UA, route.request().url()], { encoding: "buffer", maxBuffer: 1 << 22 },
+      (err, body) => err ? route.fulfill({ status: 502, body: "" }) : route.fulfill({ status: 200, contentType: ct, body, headers: { "access-control-allow-origin": "*" } }));
+    await page.route("**/gibs.earthdata.nasa.gov/**", viaCurl("image/jpeg"));
+    await page.route("**/elevation-tiles-prod/**", viaCurl("image/png"));
+    ```
+    اختبار الدخان نفسه لا يستعمل الشبكة: يقدّم بلاطات بديلة بلون واحد (`solidPng` في `scripts/ui_smoke.mjs`).
+- **العربية في HTML:** اعزل كل اسم لاتيني داخل نص عربي (`<bdi>` أو `unicode-bidi: isolate`)، وإلا تتبعثر علامات الترقيم.
+- **ملفات اللقطات** في مجلد المسودة (scratchpad) لا في المستودع.
+
+---
+
+## T0. التهيئة وخط الأساس
+
+```bash
+cd /home/user/al-atlas-al-shamil
+git fetch origin && git checkout main && git pull
+pip install -r requirements.txt   # shapely وغيرها، إن لم تكن مثبتة
+npm ci
+npm run check:all
+python3 -I -c "import json; d=json.load(open('data/raw/wikidata/hb_titles.json')); print('أسماء مجلوبة:', len(d['titles']))"
+```
+
+**القبول:**
+- `check:all` برمز 0، وآخر سطر فيه «لوحة التحولات سليمة».
+- طُبع عدد الأسماء المجلوبة؛ كان 300 عند كتابة الخطة.
+
+**توقف إن:** فشل `check:all` قبل أي تعديل منك. أبلغ بالمخرجات ولا تصلح.
+
+---
+
+## T1. إكمال الأسماء العربية للكيانات التاريخية (مستقلة)
+
+**الفرع:** `names/remaining`
+
+### الخطوة 1: الجلب على جولات (في الخلفية)
+
+```bash
+for i in 1 2 3 4 5 6 7 8; do
+  echo "== جولة $i $(date -u +%H:%M)"
+  python3 -I scripts/fetch_wikidata_names.py 2>&1 | grep -E "دفعة|انتهى|تعذّر"
+  python3 -I -c "import json,sys; d=json.load(open('data/raw/wikidata/hb_titles.json')); n=len(d['titles']); print('مجلوب', n); sys.exit(0 if n>=540 else 1)" && break
+  sleep 900
+done
+```
+
+- شغّله بـ `run_in_background` ومهلة 7200000.
+- **انتقل إلى T2 أثناء الجلب**، فهي مستقلة. لكن لا تعمل commit لملف المستخلص وهو يُكتب.
+
+### الخطوة 2: التحقق وإعادة البناء (بعد انتهاء الجلب، أو بعد آخر جولة)
+
+```bash
+python3 -I scripts/build_names.py          # يطبع العدّ لكل حال
+node scripts/build_borders.mjs
+python3 -I scripts/build_transitions.py
+python3 -I scripts/build_stack.py
+```
+
+### الخطوة 3: المراجعة اليدوية (إلزامية قبل commit)
+
+اطبع المقبول حديثاً مع أنواعه:
+
+```bash
+python3 -I - <<'EOF'
+import json
+d=json.load(open("web/data/names/hb_names.json"))["names"]; raw=json.load(open("data/raw/wikidata/hb_titles.json"))["titles"]
+for n,v in sorted(d.items()):
+    if v["status"] in ("verified","undated"):
+        print(v["status"][0], n, "→", v["ar"], v.get("inception"), v.get("dissolved"), "سنوات العرض", v.get("years_ar"), (raw.get(n) or {}).get("p31",[])[:3])
+EOF
+```
+
+ابحث عن الأنماط الثلاثة التي ظهرت من قبل. **لا تصلحها بالترجمة.** أضف الحالة إلى قائمة «يحتاج قراراً» في التقرير.
+
+| النمط | مثال سابق |
+|---|---|
+| عنوان طابق شيئاً غير الكيان | «Air» ← «هواء» |
+| مدينة بدل دولتها | «Algiers» ← «الجزائر العاصمة» |
+| كيان آخر بالاسم نفسه | «Ghana» 1200 ← غانا الحديثة |
+
+- إن ظهر نوع جديد يعني غير الكيان المرسوم (P31 لمدينة أو مادة أو مقاطعة إدارية حديثة…)، أضفه إلى `REJECT_P31` في `scripts/build_names.py` مع وصف عربي، وأعد الخطوة 2.
+- إن رُفض كيان سياسي أو شعب صريح لأن نوعه بلا تواريخ ليس في `UNDATED_OK`، أضف نوعه بعد التأكد من معناه. اطبع تسمية النوع من المستخلص إن وُجدت، وإلا اذكره في التقرير ولا تضفه.
+
+### الخطوة 4: البيان
+
+حدّث تجزئة المستخلص وحجمه وملاحظته في `sources/manifest.json` (المعرّف `wikidata-hb-names`):
+
+```bash
+python3 -I - <<'EOF'
+import json, hashlib
+from pathlib import Path
+f=Path("data/raw/wikidata/hb_titles.json"); raw=f.read_bytes(); d=json.loads(raw)
+mp=Path("sources/manifest.json"); m=json.loads(mp.read_text(encoding="utf-8"))
+for s in m["sources"]:
+    if s["id"]=="wikidata-hb-names":
+        s["files"]=[{"file":"data/raw/wikidata/hb_titles.json","sha256":hashlib.sha256(raw).hexdigest(),"bytes":len(raw)}]
+        s["note"]=s["note"].split(" يُجلب")[0]+f" يُجلب على دفعات لأن ويكي بيانات تحدّ الطلبات؛ جُلب {len(d['titles'])} من 540 اسماً ذا أولوية."
+mp.write_text(json.dumps(m,ensure_ascii=False,indent=2),encoding="utf-8")
+EOF
+```
+
+### الخطوة 5: التحقق والرفع
+
+- `npm run check:all` برمز 0، ثم اختبار الدخان في الخلفية حتى «الواجهة سليمة».
+- لقطة لخريطة سنة 1600 بالصور الحقيقية (درس البيئة) فيها أسماء عربية.
+- commit، ثم push، ثم طلب دمج مسودة عنوانه «إكمال الأسماء العربية للكيانات التاريخية». في متنه:
+  - العدّ لكل حال، من مخرجات `build_names.py`.
+  - أمثلة مقبولة.
+  - أمثلة مرفوضة وسببها.
+
+**القبول:**
+- الأسماء المجلوبة 540، أو أقل مع ذكر الحجب في التقرير.
+- لا اسم مقبول من الأنماط الثلاثة.
+- الاختباران ناجحان.
+
+**توقف إن:** بقيت ويكي بيانات ترد 429 بعد ثماني جولات. اعمل commit لما جُلب مع البيان محدّثاً، واذكر العدد في التقرير.
+
+---
+
+## T2. ربط شواهد «التجارة» بأماكنها
+
+**الفرع:** `journeys/trade` (تستمر فيه T3 وT4).
+
+**ما يُربط وما لا يُربط (متحقق منه عند كتابة الخطة):**
+
+| الادعاء | المكان في النص | القرار |
+|---|---|---|
+| `cl_000000368` ابن بطوطة | الإسكندرية | يُربط: Pleiades `727070`، العنوان `Alexandria` (31.2014، 29.9098) |
+| `cl_000000365` ماركو بولو | الإسكندرية، وطرابزون، وموانئ أرمينيا الكيليكية | يُربط بالإسكندرية (`727070`) وطرابزون: Pleiades `857359`، العنوان `Trapezus` (41.0043، 39.7233؛ وصفه في Pleiades: «Modern Trabzon»). أما «موانئ أرمينيا الكيليكية» فجمع لا مكان واحد، فلا يُربط |
+| `cl_000000372` برنال دياز | سوق تلاتيلولكو (في المقطع: «Tlaltelolco») | يُربط بموقع مدينة مكسيكو الحديثة من Natural Earth، مع ملاحظة تحفظ |
+| `cl_000000347` فاهيان | مملكة سيلان | **لا يُربط:** النص عن الجزيرة كلها، والقاعدة ألا تُمثَّل منطقة كاملة بنقطة (كالصين والولايات المتحدة) |
+| `cl_000000375` يومية دا غاما | ميناء (جزيرة موزمبيق) | **لا يُربط:** لا مدخل له في Pleiades ولا Natural Earth |
+
+### الخطوة 1: افحص كل مقطع قبل الربط
+
+```bash
+node -e '
+const fs=require("fs");
+for (const [era,id] of [[5,"cl_000000365"],[5,"cl_000000368"],[6,"cl_000000372"]]) {
+  const c=JSON.parse(fs.readFileSync(`verification/era${era}/claims.json`,"utf8")).find(x=>x.id===id);
+  const p=JSON.parse(fs.readFileSync(`verification/era${era}/passages.json`,"utf8")).find(x=>x.id===c.passage_id);
+  console.log(id, "|", c.passage_id, "\n", p.text.replace(/\s+/g," ").slice(0,900), "\n");
+}'
+```
+
+- اربط مكاناً **فقط إن ورد اسمه في المقطع**. هذا متحقق منه عند كتابة الخطة للأماكن الأربعة في الجدول، فالفحص هنا تأكيد لا اكتشاف.
+- في مقطع بولو جاء الاسم مقسوماً على سطرين («Alex- andria»)، فلا تبحث عنه بنمط حرفي ثم تحكم بغيابه.
+- إن لم يطابق ما تراه الجدولَ، فتوقف عن T2 وأبلغ.
+
+### الخطوة 2: أضف المكانين إلى الإعداد
+
+**أولاً،** في `scripts/config/claim_places.json`، أضف إلى `places`:
+
+```json
+{ "slug": "alexandria", "name_ar": "الإسكندرية", "name_en": "Alexandria", "aliases": ["الإسكندرية"], "pleiades_id": "727070", "expected_title": "Alexandria" },
+{ "slug": "trebizond", "name_ar": "طرابزون", "name_en": "Trapezus (Trebizond)", "aliases": ["طرابزون"], "pleiades_id": "857359", "expected_title": "Trapezus" }
+```
+
+الاسمان العربيان كما وردا في `statement` الادعاءين. `build_places.mjs` يفشل إن لم يطابق العنوان `expected_title`، وهذا هو الحارس.
+
+**ثانياً،** في `scripts/config/claim_natural_places.json`، أضف إلى `places`. البنّاء يطابق `ne_name` و`ne_adm0` حرفياً في `data/raw/naturalearth/ne_50m_populated_places_simple.geojson` (حقلا `name` و`adm0name`)، وفيه مطابقة واحدة لـ «Mexico City» في «Mexico»:
+
+```json
+{ "slug": "tlatelolco", "name_ar": "تلاتيلولكو", "name_en": "Tlatelolco (Mexico City)", "aliases": ["تلاتيلولكو"], "ne_name": "Mexico City", "ne_adm0": "Mexico", "note": "سوق تلاتيلولكو اليوم داخل مدينة مكسيكو؛ النقطة موقع المدينة الحديثة من Natural Earth، لا موقع السوق." }
+```
+
+**ثالثاً،** `scripts/build_claim_points.mjs` يقرأ `note` من `claim_places.json` وحده (السطر 22). عدّل السطر ليقرأ الملفين:
+
+```js
+const notes = new Map([...cfg.places, ...naturalCfg.places].filter((p) => p.note).map((p) => [p.slug, p.note]));
+```
+
+### الخطوة 3: أضف الأماكن إلى `mentions.places` في الادعاءات
+
+هذا التعديل الوحيد المسموح على ادعاءات قائمة: حقل `mentions.places`، ورفع `version` بواحد. أنشئ `scripts/set_claim_places.mjs` بهذا النص حرفياً:
+
+```js
+// يضيف أماكن إلى mentions.places في ادعاء قائم ويرفع version، ولا يمس غيرهما.
+// الاستعمال: node scripts/set_claim_places.mjs <era> <claim_id> <اسم المكان كما في aliases>...
+import fs from "node:fs";
+const [era, id, ...names] = process.argv.slice(2);
+if (!era || !id || !names.length) { console.error("الاستعمال: node scripts/set_claim_places.mjs <era> <claim_id> <مكان>..."); process.exit(2); }
+const file = `verification/era${era}/claims.json`;
+const claims = JSON.parse(fs.readFileSync(file, "utf8"));
+const c = claims.find((x) => x.id === id);
+if (!c) { console.error(`لا ادعاء ${id} في ${file}`); process.exit(1); }
+c.mentions = c.mentions ?? { places: [], persons: [], dates: [] };
+const before = new Set(c.mentions.places);
+for (const n of names) c.mentions.places.includes(n) || c.mentions.places.push(n);
+if (c.mentions.places.length === before.size) { console.log(`${id}: لا تغيير`); process.exit(0); }
+c.version = (c.version ?? 1) + 1;
+fs.writeFileSync(file, JSON.stringify(claims, null, 2) + "\n");
+console.log(`${id}: الأماكن الآن ${JSON.stringify(c.mentions.places)}، النسخة ${c.version}`);
+```
+
+ثم:
+
+```bash
+node scripts/set_claim_places.mjs 5 cl_000000368 الإسكندرية
+node scripts/set_claim_places.mjs 5 cl_000000365 الإسكندرية طرابزون
+node scripts/set_claim_places.mjs 6 cl_000000372 تلاتيلولكو
+npm run build:all
+npm run check:all
+```
+
+**القبول:**
+- `build:claim-points` يطبع «الإسكندرية» و«طرابزون» و«تلاتيلولكو» ضمن الأماكن المرتبطة.
+- `_meta.unlinked_mentions` في `web/data/claim_points.geojson` بقي كما كان: `{"أوفير":2,"الصين":2,"الولايات المتحدة":1}`.
+- `check:all` برمز 0.
+
+**وثّق في README** (قسم «ربط الادعاءات بالخريطة»): ما رُبط، وما لم يُربط وسببه، كما في الجدول أعلاه.
+
+---
+
+## T3. محرّك الرحلات السردية
+
+**الفكرة:** الرحلة سلسلة خطوات تتقدّم بزر «التالي». في كل خطوة:
+- تتحرك الكاميرا إلى مكان وحقبة.
+- تُعرض حدود السنة والشواهد المعنية.
+- يظهر نص قصير.
+
+**كل نص تاريخي في الرحلة يُولَّد من البيانات:**
+- نص ابن خلدون والفرضية من السُّنّة.
+- نص الشاهد والمصدر والتحفظ من الادعاء.
+- الاختبار الكمي من `quantitative`.
+- الإحداثيات من أماكن الادعاءات أو من نقاط تسمية الكيانات.
+
+الكاتب يضيف فقط «جملة ربط» قصيرة بلا أرقام ولا أحكام.
+
+### الخطوة 1: ملف المواصفات (يكتبه الإنسان، تقرؤه الأداة)
+
+`journeys/{id}.json` في جذر المستودع (لا في `web/`). البنية:
+
+```json
+{
+  "id": "trade",
+  "sunna": "sn_trade",
+  "title": "رحلة: التجارة ومراكزها",
+  "steps": [
+    { "kind": "khaldun", "frame": "جملة ربط" },
+    { "kind": "evidence", "claims": ["cl_000000397"], "border": "-1000", "camera": "places", "frame": "جملة ربط" },
+    { "kind": "evidence", "claims": ["cl_000000419"], "border": "1800", "camera": "world", "frame": "جملة ربط" },
+    { "kind": "limits", "frame": "جملة ربط" },
+    { "kind": "quant", "frame": "جملة ربط" },
+    { "kind": "end", "frame": "جملة ربط" }
+  ]
+}
+```
+
+- `kind`: واحد من `khaldun`، `evidence`، `limits`، `quant`، `end`.
+- `border`: مفتاح من مفاتيح `BORDER_YEARS` في `web/app.js` أو `"modern"`.
+- `camera`:
+  - `places`: يقرّب على أماكن ادعاءات الخطوة، من `web/data/claim_points.geojson`.
+  - `entity:<NAME كما في المصدر>`: يقرّب على نقطة تسمية الكيان في `web/data/borders/labels_{border}.json`.
+  - `world`: منظر الكرة كاملة، للشواهد بلا مكان.
+- `frame`: جملة ربط عربية، 25 كلمة على الأكثر، **بلا أي رقم** (لا أرقام عربية ولا هندية)، وبلا حكم تاريخي لا يرد في شاهد.
+
+### الخطوة 2: البنّاء والمدقق `scripts/build_journeys.mjs`
+
+**المدخلات:**
+- `journeys/*.json`
+- `web/data/sunan.json`
+- `verification/era*/claims.json` (عبر `claimEras` من `scripts/lib/eras.mjs`)
+- `web/data/claim_points.geojson`
+- `web/data/borders/labels_*.json` و`modern_labels.json`
+
+**المخرج:** `web/data/journeys/{id}.json`، وفهرس `web/data/journeys/index.json` فيه `[{id, title, sunna, steps}]`.
+
+لكل خطوة يكتب:
+- `kind`
+- `border`
+- `frame`
+- `title`: يُولَّد. للخطوة `evidence`: اسم المكان الأول بالعربية، أو «شاهد بلا مكان محدد»، ثم الحقبة من `ERAS` (انسخ تسمياتها إلى السكربت من `web/app.js`).
+- `items`: نصوص الشواهد. لكل ادعاء: `id`، و`statement`، و`attributed_to`، و`hedge`، و`quote`، و`era`.
+- `bbox`: `[minLon, minLat, maxLon, maxLat]`، أو `point`، أو `world: true`.
+
+**يفشل البناء كله (`process.exit(1)`) إن:**
+- الادعاء ليس في `supporting` أو `limiting` للسُّنّة المذكورة. لا تُستعمل في رحلة سُنّة شواهدُ سُنّة أخرى.
+- الادعاء `checks.quote_match !== true`، أو `status === "rejected"`.
+- `camera: places` لادعاءات لا مكان لأي منها.
+- `entity:` لاسم غير موجود في `labels_{border}.json`.
+- `border` غير معروف.
+- `frame` فيها رقم (`/[0-9٠-٩۰-۹]/`) أو أطول من 25 كلمة.
+- **لم تُغطَّ كل الشواهد:** بقي شاهد مؤيد أو مقيِّد ذو معرّف لم يظهر في أي خطوة. اطبع المفقود. التغطية الكاملة شرط، فلا تُنتقى الشواهد المريحة.
+
+خطوة `limits` تأخذ تلقائياً كل `limiting` (الادعاءات والتحفظات). وخطوة `quant` تأخذ كل `quantitative` كما هي (`scope` و`verdict` و`text`).
+
+أضفه إلى `package.json`:
+
+```json
+"build:journeys": "node scripts/build_journeys.mjs",
+```
+
+- ضعه في `build:all` بعد `build:sunan`.
+- أضف `node scripts/build_journeys.mjs --check` إلى `check:all`. وضع `--check` يتحقق بالقواعد نفسها ولا يكتب.
+
+### الخطوة 3: مشغّل الرحلات في الواجهة `web/journey.js`
+
+ملف جديد يُحمَّل في `web/index.html` بعد `cube.js`. يستعمل ما في `app.js`:
+- `map`
+- `loadBorders(key)`: يعيد البيانات، ويبدّل التسميات تلقائياً.
+- `ensureClaimPoints()`
+- `showClaimPoints(show, filter)`
+- `fitPadding()`
+- `escapeHtml`
+- `getJson`
+- `popup`
+
+**في اللوحة،** قسم جديد قبل «السنن»:
+
+```html
+<details class="section" id="journey-panel" open>
+  <summary>الرحلات</summary>
+  <div id="journey-list" class="row"></div>
+</details>
+```
+
+يملؤه `journey.js` من `data/journeys/index.json`: زر لكل رحلة.
+
+**المشغّل** صندوق ثابت أسفل الخريطة (`#journey-box`):
+- على الحاسوب: عرضه `min(560px, 100% - 24px)`، أسفل الوسط.
+- على الجوال: فوق شريط الإسناد.
+
+يحتوي:
+- عنوان الخطوة.
+- `frame` بخط أصغر.
+- لكل شاهد: `statement`، و`attributed_to` بخط مكتوم، و`hedge` و`quote` داخل `<span class="research-only">`.
+- `«٣ من ٩»`: مولّد من `index+1` و`steps.length`، والأرقام بـ `toLocaleString("ar")`.
+- أزرار «السابق» و«التالي» و«إنهاء».
+- أسهم لوحة المفاتيح: `ArrowLeft` = التالي (اتجاه عربي)، `ArrowRight` = السابق، `Escape` = إنهاء.
+
+**عند كل خطوة:**
+1. `await loadBorders(step.border)`
+2. للخطوات ذات الشواهد: `await ensureClaimPoints()` ثم `showClaimPoints(true, ["any", ...ids.map((id) => ["in", \`,${id},\`, ["get", "claim_ids"]])])`، كما في `selectSunna`.
+3. الكاميرا:
+   - `bbox`: `map.fitBounds(bbox, { padding: fitPadding(), maxZoom: 5.5, pitch: 40, duration: 1800 })`.
+   - `point`: `map.flyTo({ center, zoom: 4.5, pitch: 40, duration: 1800 })`.
+   - `world`: `map.flyTo({ center: [30, 20], zoom: 1.6, pitch: 0, duration: 1800 })`.
+4. خطوة `quant` و`khaldun` و`end`: `world` إن لم يُحدَّد غيره.
+
+**عند الإنهاء:** `showClaimPoints(false)`، وإعادة الصندوق مخفياً.
+
+**الأسلوب:** في `web/index.html`، بمتغيرات الألوان الموجودة.
+- `#journey-box`: خلفية `var(--panel)`، وحدود `var(--accent)`، و`z-index: 4`.
+- اعزل الأسماء اللاتينية بـ `<bdi>`.
+
+### الخطوة 4: اختبار الدخان
+
+في `scripts/ui_smoke.mjs`، بعد خطوة لوحة الطبقات، أضف خطوة `step = \`${name}: الرحلات\``:
+- اضغط أول زر في `#journey-list`.
+- اضغط «التالي» حتى آخر خطوة، مع `settle()` بعد كل ضغطة.
+- اقرأ العداد، واجعل `counts.journeySteps` = عدد الخطوات التي مرّ بها.
+- اضغط «إنهاء».
+- إن كان `counts.journeySteps === 0` فهي مشكلة (الحلقة الموجودة تفحص الأصفار).
+
+**القبول:**
+- `build:journeys` يكتب `web/data/journeys/trade.json` بلا خطأ.
+- `--check` يفشل فعلاً على مواصفات خاطئة. جرّب مؤقتاً، في نسخة تحت مجلد المسودة، ثلاث حالات:
+  - رقم في `frame`
+  - ادعاء من سُنّة أخرى
+  - حذف شاهد
+  
+  وانسخ رسائل الفشل إلى التقرير. لا تحفظ النسخ الخاطئة في المستودع.
+- اختبار الدخان ناجح، و`journeySteps` يساوي عدد خطوات الرحلة.
+
+---
+
+## T4. رحلة «التجارة ومراكزها» (المحتوى)
+
+أنشئ `journeys/trade.json` بهذه الخطوات **بهذا الترتيب** (زمنياً). جمل الربط مكتوبة هنا، فانسخها حرفياً:
+
+| # | kind | claims | border | camera | frame |
+|---|---|---|---|---|---|
+| 1 | khaldun | | `"modern"` | world | تبدأ الرحلة بتعريف ابن خلدون للتجارة، ثم تتبع شواهد من نصوص متباعدة في الزمان والمكان. |
+| 2 | evidence | `cl_000000397`، `cl_000000398`، `cl_000000399` | `"-1000"` | places | نص نبوي يصف صور مركزاً تقصده تجارات البلدان المجاورة. |
+| 3 | evidence | `cl_000000385` | `"-1"` | places | معاهدة ينقلها مؤرخ يوناني، تقسم البحر بين قوتين تجاريتين. |
+| 4 | evidence | `cl_000000347` | `"700"` | world | راهب صيني يذكر تجاراً من بلدان شتى في مملكة سيلان. |
+| 5 | evidence | `cl_000000365`، `cl_000000368` | `"1200"` | places | نصان عن الإسكندرية مرفأً، وعن طرق القوافل التي صارت تنافسها. |
+| 6 | evidence | `cl_000000390` | `"1600"` | places | رحالة عثماني يصف أسواق بورصة. |
+| 7 | evidence | `cl_000000372` | `"1600"` | places | شاهد إسباني يصف سوقاً كبيرة في عاصمة الأزتك. |
+| 8 | evidence | `cl_000000375` | `"1600"` | world | يومية رحلة برتغالية تذكر سفناً محمّلة بالذهب والتوابل راسية في ميناء. |
+| 9 | evidence | `cl_000000419`، `cl_000000420` | `"1800"` | world | نص من القرن التاسع عشر يرى السوق قد صارت عالمية. |
+| 10 | limits | | `"-1000"` | places | ما يقيّد السُّنّة: شواهد وصفية بلا أرقام، وسقوط صور نفسها. |
+| 11 | quant | | `"modern"` | world | اختبار كمي ببيانات Seshat، وهو ارتباط لا سببية. |
+| 12 | end | | `"modern"` | world | السُّنّة فرضية تختبرها الشواهد، والرحلة تعرض ما وُثّق منها حتى الآن. |
+
+**ملاحظات:**
+- الخطوة 10: `camera: places` تحتاج مكاناً لادعاءات `limiting`. الشاهد `cl_000000218` مرتبط بصور، فالبنّاء يجده. إن جعلت الخطوة `limits` تأخذ إحداثياتها من ادعاءاتها كالـ `evidence` فهذا هو المطلوب.
+- جمل الربط لا تضيف ما ليس في الشاهد. مثلاً: الخطوة 8 لا تسمّي الميناء ولا ساحله لأن المقطع لا يسمّيه، والخطوة 5 لا تقول «رحالتان» لأن نسبة مقطع بولو موضع مراجعة (T6).
+- شواهد `sn_trade` في `web/data/sunan.json` تحمل `id` و`era` و`statement` و`quote` و`attributed_to` و`hedge`. والتحفظ في `limiting` عنصر `kind: "caution"` بلا `id`، فلا يدخل في شرط التغطية.
+- إن تغيّر عدد شواهد `sn_trade` عمّا في الخطة (12 مؤيداً وواحد مقيِّد ذو معرّف)، فالمدقق سيخبرك بالمفقود. **لا تحذف شاهداً لتمرّ.** أضف خطوة له، أو أبلغ.
+
+### اللقطات
+
+بالصور الحقيقية إن كان المضيف متاحاً، وإلا بالأساس المرسوم مع ذكر ذلك:
+- لكل خطوة لقطة على الحاسوب.
+- ولقطتان على الجوال (الخطوة 2 والخطوة 9).
+- أرسل أربعاً منها إلى صاحب المشروع.
+
+**القبول:**
+- الرحلة تمر بالخطوات الاثنتي عشرة.
+- كل شاهد مؤيد ومقيِّد ذي معرّف لـ `sn_trade` يظهر مرة على الأقل.
+- لا رقم في أي `frame`.
+- الاختباران ناجحان.
+
+### التوثيق والرفع
+
+- **README**، قسم جديد «الرحلات السردية»:
+  - المواصفات
+  - قواعد المدقق
+  - أن النصوص التاريخية من البيانات وجمل الربط وحدها مكتوبة
+  - أن التغطية الكاملة للشواهد شرط
+- طلب دمج مسودة واحد للمهام T2–T4.
+
+---
+
+## T5. الربط المكاني: «شواهد على أرضه» في البطاقة (بعد T4)
+
+**الفرع:** `links/spatial`
+
+**الفكرة:** بطاقة الكيان تذكر الادعاءات الموثّقة التي يقع مكانها داخل أرضه على خريطة حقبتها، والسنن التي تشهد لها.
+- هذا ربط مكاني محسوب، لا حكم تاريخي.
+- العنوان في البطاقة: «شواهد موثّقة تقع على أرضه في هذه الخريطة».
+
+### الخطوة 1: `scripts/build_spatial_links.py`
+
+1. لكل نقطة في `web/data/claim_points.geojson`، ولكل ادعاء فيها (`claims` بحقل `era`)، خذ سنة حدود الحقبة. الجدول من `ERAS` في `web/app.js`:
+
+   | الحقبة | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+   |---|---|---|---|---|---|---|---|---|
+   | سنة الحدود | -4000 | -1000 | -1 | 700 | 1200 | 1600 | 1800 | modern |
+
+2. حمّل الكيانات بـ `load(key)` من `scripts/build_transitions.py` (عبر `importlib`، كما في `scripts/build_stack.py`).
+3. ابحث عن الكيان الذي يحوي النقطة (`geom.contains(Point)`).
+   - **إن لم يحوها أي كيان** (المدن الساحلية تقع خارج المضلعات لتبسيط السواحل)، فخذ أقرب كيان على مسافة ≤ 0.2 درجة. علّم الربط بـ `"near": true`، وتقول البطاقة «على حدّه تقريباً».
+   - **أبعد من ذلك:** لا ربط، ويُذكر في `_meta.unlinked`.
+4. **المخرج:** `web/data/links/claims_by_entity_{key}.json` بالبنية `{ "<NAME>": [{"id", "era", "statement", "attributed_to", "place_ar", "near", "sunan": [أسماء السنن التي يرد فيها الادعاء من sunan.json]}] }`، و`_meta` فيه القاعدة والعدّ والمستبعد.
+5. أضف `build:links` إلى `package.json` بعد `build:sunan` في `build:all`.
+
+### الخطوة 2: البطاقة
+
+في `entityCard` في `web/app.js`:
+- حمّل `data/links/claims_by_entity_${key}.json` مرة لكل سنة (ذاكرة كما في `labelCache`).
+- إن وُجدت ادعاءات للكيان، أضف تحت الجدول قسماً `<details>` عنوانه «شواهد موثّقة تقع على أرضه في هذه الخريطة (N)»، وN من طول المصفوفة. لكل شاهد:
+  - `statement`
+  - المكان
+  - «على حدّه تقريباً» إن كان `near`
+  - `attributed_to`
+  - السنن بأسمائها
+- `entityCard` متزامنة الآن. اجعلها تُعيد HTML بلا القسم، ثم حدّث محتوى النافذة بعد التحميل: `popup.setHTML(...)` مرة ثانية.
+
+### الخطوة 3: التحقق
+
+- `python3 -I scripts/build_spatial_links.py` يطبع:
+  - عدد الادعاءات المربوطة
+  - عدد القريبة
+  - عدد غير المربوطة وأسماءها
+- لقطة لبطاقة كيان فيه شواهد. مرشّح: الدولة التي تحوي صور في خريطة -1000.
+- `check:all` واختبار الدخان ناجحان.
+- طلب دمج مسودة.
+
+**توقف إن:** لم يُربط أكثر من نصف الادعاءات ذات الأماكن. أبلغ بالأرقام ولا تغيّر عتبة 0.2 بنفسك.
+
+---
+
+## T6. تجهيز ما يحتاج قراراً بشرياً (لا تنفّذ القرار)
+
+### 1. ورقة مراجعة لشواهد رحلة التجارة
+
+أنشئ `review/journey_trade_review.csv` بالأعمدة نفسها التي يكتبها `scripts/build_review_sheet.mjs`، لادعاءات `sn_trade` فقط. انسخ صيغة الأعمدة من `review/sunan_evidence_review.csv`، وأبقِ عمودَي الحكم والملاحظات فارغين.
+
+**لا تستورد أحكاماً.** صاحب المشروع يملؤها ثم يُشغَّل `npm run review:import -- --reviewer "<اسمه>"`.
+
+### 2. مسودة مراجعة الحقوق للنشر العام
+
+أنشئ `docs/RIGHTS_REVIEW.md` **مولّداً** من `sources/manifest.json` بسكربت صغير، لا بكتابة يدوية. لكل مصدر:
+- المعرّف
+- الرخصة
+- الطبقة
+- هل يُجلب وقت العرض (`runtime`)
+- الإسناد
+
+ثم قسم «التزامات قبل النشر» بثلاثة بنود، يُكتب كل منها **سؤالاً لصاحب المشروع لا قراراً**:
+- **Historical Basemaps (GPL-3):** نشر ما يُبنى منها يقتضي الرخصة نفسها لتلك البيانات.
+- **Seshat (CC BY-NC-SA):** استعمال غير تجاري.
+- **Terrain Tiles:** إسناد إلزامي، وهو موجود في التذييل.
+
+### 3. القرارات المعلّقة في التقرير
+
+**مسألتا نسبة في شاهدين من رحلة التجارة**، ظهرتا عند كتابة الخطة. لا تعدّل أياً منهما، واذكرهما في التقرير وفي متن طلب الدمج:
+- **`cl_000000372`:** `attributed_to` و`statement` يقولان «برناردينو دياز». ترجمة Maudslay هي لكتاب برنال دياز دل كاستييو (Bernal Díaz del Castillo)، و«برناردينو» اسم شخص آخر. القرار لصاحب المشروع.
+- **`cl_000000365`:** المقطع (`polo:yule1871:caravan-ports`) بصياغة شارح يصف عصر بولو، وقد يكون من مقدمة Yule لا من نص بولو. والادعاء ينسبه إلى «ماركو بولو وروستيكيلو». يحتاج مراجعة الصفحة في المصدر.
+
+- أوفير: لا معرّف، ولا موقع يقيني.
+- سيلان: جزيرة كاملة.
+- ميناء دا غاما: لا مدخل.
+- الأسماء المرفوضة التي تبدو كيانات حقيقية تحتاج معرّفاً يدوياً في `scripts/config/hb_name_overrides.json`. الملف غير موجود بعد. بنيته `{ "overrides": { "<NAME>": { "qid": "Q…", "ar": "…", "why": "…" } } }`، والتسمية العربية تُنسخ من ويكي بيانات لذلك المعرّف، لا تُكتب.
+
+---
+
+## T7. التقرير النهائي (إلزامي)
+
+اكتبه في رسالتك الأخيرة، وفي `docs/HAIKU_PLAN_2.md` تحت قسم «تقرير التنفيذ».
+
+```
+## تقرير التنفيذ
+### ما نُفِّذ (لكل مهمة: الفرع، وطلب الدمج، والقبول المتحقق بأمره)
+### ما لم يُنفَّذ ولماذا (مع المخرجات الحرفية)
+### ما يحتاج قراراً بشرياً (من T1 وT2 وT6)
+### آخر مخرجات check:all (آخر 10 أسطر حرفياً)
+### نتيجة اختبار الدخان الأخيرة (السطران الأخيران حرفياً)
+### ما لم أره بعيني (مثل صور الأقمار إن كان مضيفها محجوباً)
+```
+
+---
+
+## خارج نطاق هذه الجولة (لا تلمسه)
+
+- **رحلة «العصبية والملك»:** شواهدها لا تكفي لرحلة على الخريطة (مكان واحد، ولا اختبار كمي)، وتنتظر شواهد جديدة.
+- **صور Sentinel-2 الأدق:** تحتاج فتح مضيف ومراجعة رخصة.
+- **النشر العام:** بعد قرار صاحب المشروع في T6.
+- **`scripts/config/label_overrides.json`** وأي اسم دولة اليوم.
+- **ربط كيانات Seshat بكيانات الخرائط:** يحتاج قرار منهج.
+- **السكان قبل 1800:** المصدر غير متاح.
