@@ -2,6 +2,7 @@
   "_note": "أماكن حديثة تُربط بها الادعاءات، من Natural Earth (ملك عام). المواقع مدن حديثة لا أثرية، وتُوسم كذلك. الاسم والدولة يُطابقان حرفياً، والالتباس يفشل البناء.",
   "places": [
     { "slug": "beijing", "name_ar": "بكين", "name_en": "Beijing", "aliases": ["بكين"], "ne_name": "Beijing", "ne_adm0": "China" },
-    { "slug": "nanjing", "name_ar": "نانجينغ", "name_en": "Nanjing", "aliases": ["نانجينغ"], "ne_name": "Nanjing", "ne_adm0": "China" }
+    { "slug": "nanjing", "name_ar": "نانجينغ", "name_en": "Nanjing", "aliases": ["نانجينغ"], "ne_name": "Nanjing", "ne_adm0": "China" },
+    { "slug": "tlatelolco", "name_ar": "تلاتيلولكو", "name_en": "Tlatelolco (Mexico City)", "aliases": ["تلاتيلولكو"], "ne_name": "Mexico City", "ne_adm0": "Mexico", "note": "سوق تلاتيلولكو اليوم داخل مدينة مكسيكو؛ النقطة موقع المدينة الحديثة من Natural Earth، لا موقع السوق." }
   ]
 }

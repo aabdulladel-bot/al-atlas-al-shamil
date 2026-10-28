@@ -19,7 +19,7 @@ for (const p of naturalCfg.places) {
 }
 const bySlug = new Map(places.map((f) => [f.id, f]));
 // ملاحظة التحفظ على المكان (مثل: موقع تقديري لمدينة لا يُعرف موقعها بيقين)، تُعرض مع الاسم
-const notes = new Map(cfg.places.filter((p) => p.note).map((p) => [p.slug, p.note]));
+const notes = new Map([...cfg.places, ...naturalCfg.places].filter((p) => p.note).map((p) => [p.slug, p.note]));
 const aliasToSlug = new Map();
 for (const p of [...cfg.places, ...naturalCfg.places]) for (const a of p.aliases) aliasToSlug.set(a, p.slug);
 

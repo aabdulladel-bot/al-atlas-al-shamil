@@ -79,7 +79,9 @@
     "hedge": "شهادة عيان من حملة كورتيس (1519)، ووصف النظام السوقي لا إحصاء للكميات",
     "author_preference": null,
     "mentions": {
-      "places": [],
+      "places": [
+        "تلاتيلولكو"
+      ],
       "persons": [],
       "dates": []
     },
@@ -99,7 +101,7 @@
       "verified_by": "pilot-era6"
     },
     "status": "verified",
-    "version": 4
+    "version": 5
   },
   {
     "id": "cl_000000373",
