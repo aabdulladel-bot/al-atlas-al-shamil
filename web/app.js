@@ -355,8 +355,8 @@ async function loadLinks(key) {
 function linkedClaimsHtml(name, links) {
   const list = links[name];
   if (!list?.length) return "";
-  const rows = list.map((c) => `<li>${escapeHtml(c.statement)}<br><span class="card-src"><bdi>${escapeHtml(c.place_ar)}</bdi>${c.near ? "، على حدّ الكيان تقريباً" : ""} · <bdi>${escapeHtml(c.attributed_to)}</bdi>${c.sunan.length ? ` · ${c.sunan.map(escapeHtml).join("، ")}` : ""}</span></li>`).join("");
-  return `<details class="card-links"><summary>شواهد موثّقة تقع على أرضه في هذه الخريطة (${list.length})</summary><p class="card-src">ربط مكاني محسوب على حدود المصدر لهذه السنة، لا حكم تاريخي.</p><ul>${rows}</ul></details>`;
+  const rows = list.map((c) => `<li>${escapeHtml(c.statement)}<br><span class="card-src"><span class="card-tier">${escapeHtml(c.tier)}</span> · ${escapeHtml(c.tier_reason)}<br><bdi>${escapeHtml(c.place_ar)}</bdi>${c.place_note ? ` (${escapeHtml(c.place_note)})` : ""} · <bdi>${escapeHtml(c.attributed_to)}</bdi>${c.sunan.length ? ` · ${c.sunan.map(escapeHtml).join("، ")}` : ""}</span></li>`).join("");
+  return `<details class="card-links"><summary>شواهد موثّقة تقع على أرضه في هذه الخريطة (${list.length})</summary><p class="card-src">ربط مكاني محسوب على حدود المصدر، يُصنَّف كل شاهد بمستواه وسببه، ولا يُعدّ حكماً تاريخياً.</p><ul>${rows}</ul></details>`;
 }
 
 function fitTo(features, maxZoom) {
