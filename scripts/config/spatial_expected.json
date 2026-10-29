@@ -1,0 +1,19 @@
+{
+  "_note": "حالات مرجعية للربط المكاني الصارم. كل حالة تحدد المستوى المتوقع وفق scripts/config/spatial_rules.json. تغيير حالة يتطلب سبباً مكتوباً هنا.",
+  "links": [
+    {"claim": "cl_000000397", "year": "-1000", "place": "صور", "entity": "Kingdom of David and Solomon", "tier": "محل خلاف"},
+    {"claim": "cl_000000397", "year": "-1000", "place": "ترشيش", "entity": "Celtiberians", "tier": "شعب"},
+    {"claim": "cl_000000365", "year": "1200", "place": "الإسكندرية", "entity": "Fatimid Caliphate", "tier": "قريب من الحد", "why": "الإسكندرية خارج مضلع الدولة الفاطمية في خريطة 1200م على مسافة قريبة، فليست داخلها كما ظُنّ سابقاً"},
+    {"claim": "cl_000000365", "year": "1200", "place": "طرابزون", "entity": "Byzantine Empire", "tier": "قريب من الحد"},
+    {"claim": "cl_000000390", "year": "1600", "place": "بورصة", "entity": "Ottoman Empire", "tier": "متحقق"},
+    {"claim": "cl_000000347", "year": "700", "place": "أنورادهابورا", "entity": "Simhala", "tier": "غير متحقق", "why": "نوع الكيان غير معروف في ويكي بيانات"},
+    {"claim": "cl_000000388", "year": "1600", "place": "نانجينغ", "entity": "Ming Chinese Empire", "tier": "غير متحقق", "why": "لا مدخل للكيان في ويكي بيانات"}
+  ],
+  "rules": [
+    {"name": "Fatimid Caliphate", "year": 1200, "place_approx": false, "tier": "محل خلاف", "why": "ويكي بيانات تؤرّخها 909 إلى 1171، فالسنة 1200 خارج مدتها"},
+    {"name": "Fatimid Caliphate", "year": 1000, "place_approx": false, "tier": "متحقق", "why": "السنة داخل المدة"},
+    {"name": "Fatimid Caliphate", "year": 1000, "place_approx": true, "tier": "تمثيلي", "why": "المكان تقريبي"},
+    {"name": "Celtiberians", "year": 1000, "place_approx": false, "tier": "شعب", "why": "P31 قوم قديم"},
+    {"name": "Kingdom of David and Solomon", "year": 1000, "place_approx": false, "tier": "محل خلاف", "why": "خلاف مكتوب في القواعد"}
+  ]
+}

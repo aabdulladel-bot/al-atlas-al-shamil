@@ -22,6 +22,8 @@ EXTRACT = ROOT / "data/raw/wikidata/hb_titles.json"
 OVERRIDES = ROOT / "scripts/config/hb_name_overrides.json"
 OUT = ROOT / "web/data/names/hb_names.json"
 ARABIZED = ROOT / "scripts/config/hb_arabized.json"
+# أسباب الرفض التي يُعرَّب فيها الاسم، لأن المضلع كيان سياسي والعنوان في ويكي بيانات صفحة موقع أو مدينة
+ARABIZED_REASONS = {"صفحة توضيح", "موقع أثري", "مدينة", "مدينة كبرى", "مستوطنة بشرية"}
 YEARS = [-4000, -1000, -1, 700, 1200, 1600, 1800, 1914, 1945, 2010]
 TOL = 50
 # أنواع (P31) تعني أن العنوان طابق شيئاً غير الكيان السياسي أو البشري المرسوم على الخريطة:
@@ -99,11 +101,16 @@ def main():
         names[n] = {**names.get(n, {}), "years_ar": present[n], **o, "status": "override", "years": present[n]}
     # أسماء رُفضت لأنها صفحات توضيح في ويكي بيانات، ولا اسم عربي موثّق لها: تُعرَّب تقديرياً من الاسم الإنجليزي.
     # التعريب لا يحمل تحققاً زمنياً، فيُعرض في كل سنة يظهر فيها الاسم الإنجليزي نفسه، كما في الأسماء بلا تواريخ.
-    arabized = json.loads(ARABIZED.read_text(encoding="utf-8"))["names"] if ARABIZED.exists() else {}
-    for n, ar in arabized.items():
+    cfg = json.loads(ARABIZED.read_text(encoding="utf-8")) if ARABIZED.exists() else {}
+    for n, ar in cfg.get("names", {}).items():
         v = names.get(n)
-        if v and v["status"] == "rejected" and v.get("reason") == "صفحة توضيح":
+        if v and v["status"] == "rejected" and v.get("reason") in ARABIZED_REASONS:
             names[n] = {k: x for k, x in v.items() if k != "reason"} | {"status": "arabized", "ar": ar, "years_ar": present[n]}
+    # أسماء بلا تواريخ لشعوب وأقاليم، والعربي فيها اسم ويكي بيانات نفسه لا ترجمة: تُقبل بالقائمة المعلنة
+    for n in cfg.get("wikidata_accepted", []):
+        v = names.get(n)
+        if v and v["status"] == "rejected" and v.get("ar_rejected"):
+            names[n] = {k: x for k, x in v.items() if k not in ("reason", "ar_rejected")} | {"status": "undated", "ar": v["ar_rejected"], "years_ar": present[n]}
     counts = {}
     for v in names.values():
         counts[v["status"]] = counts.get(v["status"], 0) + 1
