@@ -1,5 +1,6 @@
 // يبني ورقة المراجعة البشرية: كل ادعاء تعتمد عليه السنن (مؤيداً أو مقيِّداً)، مع نص الفقرة.
 // المخرج CSV بترميز UTF-8 مع BOM ليفتح بالعربية في Excel.
+// الاستعمال: node scripts/build_review_sheet.mjs [--sunna <id>] [--out <مسار>]   (بلا خيارات: كل السنن إلى review/sunan_evidence_review.csv)
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -7,7 +8,10 @@ import { parse } from "csv-parse/sync";
 import { claimEras } from "./lib/eras.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const sunan = JSON.parse(fs.readFileSync(path.join(ROOT, "sunan/sunan.json"), "utf8")).sunan;
+const arg = (name) => { const i = process.argv.indexOf(name); return i >= 0 ? process.argv[i + 1] : null; };
+const onlySunna = arg("--sunna");
+const reviewPath = path.resolve(ROOT, arg("--out") ?? "review/sunan_evidence_review.csv");
+const sunan = JSON.parse(fs.readFileSync(path.join(ROOT, "sunan/sunan.json"), "utf8")).sunan.filter((s) => !onlySunna || s.id === onlySunna);
 const claims = new Map(), passages = new Map();
 for (const era of claimEras(ROOT)) {
   const dir = path.join(ROOT, "verification", `era${era}`);
@@ -21,7 +25,6 @@ for (const s of sunan) {
   for (const x of s.antecedents || []) uses.set(x.claim, [...(uses.get(x.claim) || []), `${s.name} (سابقة نصية)`]);
 }
 // الأحكام والملاحظات السابقة تُحفظ عند إعادة البناء، فلا تضيع قرارات المراجعة
-const reviewPath = path.join(ROOT, "review/sunan_evidence_review.csv");
 const previous = new Map();
 if (fs.existsSync(reviewPath)) {
   const VERDICT = "حكم المراجع (صحيح / يحتاج تعديلاً / خطأ)";
