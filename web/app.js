@@ -282,8 +282,15 @@ async function showLabels(key) {
   countryLabels = data.labels.map((l) => {
     const el = document.createElement("div");
     el.className = `country-label${l.min <= 2 ? " major" : l.min <= 3 ? " mid" : ""}${l.ar ? "" : " latin"}`;
-    el.textContent = l.ar ?? l.en;
-    el.title = l.ar ? l.en : "لا اسم عربي موثّق بعد";
+    if (l.st === "arabized") {
+      // تعريب تقديري: العربي هو الأساس، والإنجليزي تحته بخط صغير
+      el.classList.add("arabized");
+      el.append(l.ar, Object.assign(document.createElement("small"), { textContent: l.en }));
+      el.title = `تعريب تقديري من الاسم الإنجليزي «${l.en}»، يحتاج مراجعة لغوية`;
+    } else {
+      el.textContent = l.ar ?? l.en;
+      el.title = l.ar ? l.en : "لا اسم عربي موثّق بعد";
+    }
     return { min: l.min, added: false, marker: new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]) };
   });
   updateLabels();
@@ -309,6 +316,7 @@ function nameSourceHtml(info, modern) {
     const when = [info.from != null ? `قام ${yearLabel(info.from)}` : "", info.to != null ? `وزال ${yearLabel(info.to)}` : ""].filter(Boolean).join(" ");
     return `الاسم «${escapeHtml(info.ar_other)}» في ويكي بيانات (${info.qid ? `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(info.qid)}" target="_blank" rel="noopener">${escapeHtml(info.qid)}</a>` : ""}) لكيان آخر بالاسم نفسه ${when}، لا لهذه السنة؛ المعروض اسم المصدر`;
   }
+  if (info?.st === "arabized") return "تعريب تقديري من الاسم الإنجليزي، لا اسم عربي موثّق؛ يحتاج مراجعة لغوية";
   if (!info?.ar) return "لا اسم عربي موثّق بعد؛ المعروض اسم المصدر";
   const link = info.qid ? `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(info.qid)}" target="_blank" rel="noopener">${escapeHtml(info.qid)}</a>` : "";
   const span = [info.from != null ? `نشأ ${yearLabel(info.from)}` : "", info.to != null ? `زال ${yearLabel(info.to)}` : ""].filter(Boolean).join("، ");

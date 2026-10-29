@@ -21,6 +21,7 @@ RAW = ROOT / "data/raw/historical-basemaps"
 EXTRACT = ROOT / "data/raw/wikidata/hb_titles.json"
 OVERRIDES = ROOT / "scripts/config/hb_name_overrides.json"
 OUT = ROOT / "web/data/names/hb_names.json"
+ARABIZED = ROOT / "scripts/config/hb_arabized.json"
 YEARS = [-4000, -1000, -1, 700, 1200, 1600, 1800, 1914, 1945, 2010]
 TOL = 50
 # أنواع (P31) تعني أن العنوان طابق شيئاً غير الكيان السياسي أو البشري المرسوم على الخريطة:
@@ -96,6 +97,13 @@ def main():
         if n not in present:
             sys.exit(f"تعديل لاسم غير موجود في المصدر: {n}")
         names[n] = {**names.get(n, {}), "years_ar": present[n], **o, "status": "override", "years": present[n]}
+    # أسماء رُفضت لأنها صفحات توضيح في ويكي بيانات، ولا اسم عربي موثّق لها: تُعرَّب تقديرياً من الاسم الإنجليزي.
+    # التعريب لا يحمل تحققاً زمنياً، فيُعرض في كل سنة يظهر فيها الاسم الإنجليزي نفسه، كما في الأسماء بلا تواريخ.
+    arabized = json.loads(ARABIZED.read_text(encoding="utf-8"))["names"] if ARABIZED.exists() else {}
+    for n, ar in arabized.items():
+        v = names.get(n)
+        if v and v["status"] == "rejected" and v.get("reason") == "صفحة توضيح":
+            names[n] = {k: x for k, x in v.items() if k != "reason"} | {"status": "arabized", "ar": ar, "years_ar": present[n]}
     counts = {}
     for v in names.values():
         counts[v["status"]] = counts.get(v["status"], 0) + 1
@@ -104,7 +112,7 @@ def main():
         "_meta": {
             "source": "Wikidata (CC0)، بمستخلص data/raw/wikidata/hb_titles.json",
             "rules": f"رفض صفحات التوضيح والقوائم؛ تحقق زمني بسماحة {TOL} سنة؛ بلا تواريخ يُقبل موسوماً؛ التعديلات اليدوية معلنة",
-            "statuses": {"verified": "اسم عربي متحقق زمنياً", "undated": "اسم عربي بلا تواريخ للتحقق", "override": "تعديل يدوي معلن",
+            "statuses": {"verified": "اسم عربي متحقق زمنياً", "undated": "اسم عربي بلا تواريخ للتحقق", "override": "تعديل يدوي معلن", "arabized": "تعريب تقديري من الاسم الإنجليزي؛ لا اسم عربي موثّق، ويحتاج مراجعة لغوية",
                          "date_mismatch": "رُفض: كيان آخر بالاسم نفسه", "rejected": "رُفض: نوع غير الكيان المرسوم (توضيح، قائمة، مدينة، موقع، مادة) أو بلا تواريخ ولا نوع صريح",
                          "no_arabic": "لا تسمية عربية في ويكي بيانات", "no_match": "لا مقالة بهذا العنوان"},
             "counts": counts,
