@@ -5,7 +5,7 @@
     "status": "pleiades-verified",
     "source": "Pleiades (pleiades.stoa.org)، ملف places-latest، ترخيص CC BY 3.0، يتطلب الإسناد",
     "raw_sha256": "aa521b916561a45560249f0bf1b9e5cd53696c5646101906b2ce431d4dd6af82",
-    "matched": "11 من 11",
+    "matched": "13 من 13",
     "generated_by": "scripts/build_places.mjs",
     "note": "الإحداثيات الممثّلة في Pleiades نقاط تمثيلية لا مواقع مساحية."
   },
@@ -227,6 +227,46 @@
         "coord_status": "pleiades-representative",
         "pleiades_id": "857359",
         "pleiades_title": "Trapezus",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ophir",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.9856,
+          26.193
+        ]
+      },
+      "properties": {
+        "name_ar": "أوفير",
+        "name_en": "Ophir (Pleiades: Sofera)",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "60057",
+        "pleiades_title": "Sofera",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "anuradhapura",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.4128,
+          8.3244
+        ]
+      },
+      "properties": {
+        "name_ar": "أنورادهابورا",
+        "name_en": "Anuradhapura (ancient capital of Ceylon)",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "49863",
+        "pleiades_title": "Anurādhapura",
         "pleiades_location_precision": "precise"
       }
     }

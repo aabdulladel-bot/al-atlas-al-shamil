@@ -79,7 +79,9 @@
     "hedge": "الرواية تتضمن عناصر أسطورية (الشياطين تعرض السلع)، فالتجارة هي المعتمد منها",
     "author_preference": null,
     "mentions": {
-      "places": [],
+      "places": [
+        "عاصمة سيلان"
+      ],
       "persons": [],
       "dates": []
     },
@@ -99,7 +101,7 @@
       "verified_by": "pilot-era4"
     },
     "status": "verified",
-    "version": 3
+    "version": 4
   },
   {
     "id": "cl_000000348",
