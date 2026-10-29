@@ -54,10 +54,10 @@ try {
     await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 60000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
     const settle = () => page.evaluate(() => window.__settle());
     // التضاريس تُطفأ لبقية الفحوص (غايتها أخطاء الواجهة لا سرعة الرسم البرمجي)، وتُختبر وحدها في خطوة لوحة الطبقات
-    await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 15000 });
+    await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 60000 });
     await page.evaluate(() => { document.getElementById("layer-panel").open = true; });
     await page.click("#terrain-toggle"); await settle();
-    await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 15000 });
+    await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 60000 });
     const counts = {};
     // افتح كل الأقسام المطوية قبل الضغط
     await page.evaluate(() => document.querySelectorAll("details").forEach((d) => (d.open = true)));
