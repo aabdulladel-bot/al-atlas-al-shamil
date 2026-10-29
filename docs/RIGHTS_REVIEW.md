@@ -7,15 +7,15 @@
 - **A:** ملك عام أو ترخيص مفتوح يسمح بالنشر مع الإسناد. عددها 17.
 - **B:** مرخّص أو بإذن موثّق، يُراجع شرطه قبل النشر. عددها 11.
 - **C:** مرجع فقط بلا استخراج. عددها 0.
-- **بلا إسناد مسجّل في المانيفست:** 5 مصدراً: pleiades-places، pleiades-names، pleiades-locations، hyde-3.3، cdli-text. يُكمَل إسناد كل منها قبل النشر.
+- **بلا إسناد مسجّل في المانيفست:** 2 مصدراً: hyde-3.3، cdli-text. يُكمَل إسناد كل منها قبل النشر.
 
 ## المصادر
 
 | المعرّف | الطبقة | الرخصة | يُجلب وقت العرض | الإسناد |
 |---|---|---|---|---|
-| pleiades-places | A | CC BY 3.0 (بحسب سجل Zenodo للإصدار 4.1؛ يُتحقق من ملف الداتا نفسه) | لا | — |
-| pleiades-names | A | CC BY 3.0 (يُتحقق كما أعلاه) | لا | — |
-| pleiades-locations | A | CC BY 3.0 (يُتحقق كما أعلاه) | لا | — |
+| pleiades-places | A | CC BY 3.0 (بحسب سجل Zenodo للإصدار 4.1؛ يُتحقق من ملف الداتا نفسه) | لا | Pleiades (pleiades.stoa.org)، CC BY 3.0 بحسب سجل الإصدار؛ صفحة الموقع تذكر أن المحتوى كله بترخيص Creative Commons Attribution |
+| pleiades-names | A | CC BY 3.0 (يُتحقق كما أعلاه) | لا | Pleiades (pleiades.stoa.org)، CC BY 3.0 بحسب سجل الإصدار؛ صفحة الموقع تذكر أن المحتوى كله بترخيص Creative Commons Attribution |
+| pleiades-locations | A | CC BY 3.0 (يُتحقق كما أعلاه) | لا | Pleiades (pleiades.stoa.org)، CC BY 3.0 بحسب سجل الإصدار؛ صفحة الموقع تذكر أن المحتوى كله بترخيص Creative Commons Attribution |
 | hyde-3.3 | A | CC BY 4.0 (بحسب صفحة الجامعة) | لا | — |
 | cdli-text | A | CC BY 4.0 (الصفحة الرسمية؛ الصور لها شروطها) | لا | — |
 | seshat-equinox | B | CC BY-NC-SA بحسب README الأرشيف ومستودع Seshat. الاستخدام غير تجاري مسموح بإسناد وبنفس الترخيص للمشتق. ملف LICENSE المرفق (CC0) وسجل Zenodo (cc-by) متعارضان، والاعتماد على الأشد. المالك: الأطلس غير تجاري. | لا | This research employed data from the Seshat Databank (seshatdatabank.info) under Creative Commons Attribution Non-Commercial (CC By-NC SA) licensing. |

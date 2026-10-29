@@ -11,7 +11,8 @@
       "status": "ok",
       "sha256": "aa521b916561a45560249f0bf1b9e5cd53696c5646101906b2ce431d4dd6af82",
       "bytes": 6823937,
-      "retrieved_at": "2026-10-20T22:43:57.434Z"
+      "retrieved_at": "2026-10-20T22:43:57.434Z",
+      "attribution": "Pleiades (pleiades.stoa.org)، CC BY 3.0 بحسب سجل الإصدار؛ صفحة الموقع تذكر أن المحتوى كله بترخيص Creative Commons Attribution"
     },
     {
       "id": "pleiades-names",
@@ -23,7 +24,8 @@
       "status": "ok",
       "sha256": "045ab366b3414563d7f0391c21fe8c9781280ca15fc460689ed72f1b1d39891f",
       "bytes": 3829110,
-      "retrieved_at": "2026-10-20T22:43:58.121Z"
+      "retrieved_at": "2026-10-20T22:43:58.121Z",
+      "attribution": "Pleiades (pleiades.stoa.org)، CC BY 3.0 بحسب سجل الإصدار؛ صفحة الموقع تذكر أن المحتوى كله بترخيص Creative Commons Attribution"
     },
     {
       "id": "pleiades-locations",
@@ -35,7 +37,8 @@
       "status": "ok",
       "sha256": "6c5ab9e2c60959b1130e1bb279e9c07b10722f508ee033b241b24f08b88876a3",
       "bytes": 39385908,
-      "retrieved_at": "2026-10-20T22:43:58.881Z"
+      "retrieved_at": "2026-10-20T22:43:58.881Z",
+      "attribution": "Pleiades (pleiades.stoa.org)، CC BY 3.0 بحسب سجل الإصدار؛ صفحة الموقع تذكر أن المحتوى كله بترخيص Creative Commons Attribution"
     },
     {
       "id": "hyde-3.3",
