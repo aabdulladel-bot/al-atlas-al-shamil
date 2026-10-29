@@ -115,6 +115,28 @@
       ],
       "pleiades_id": "857359",
       "expected_title": "Trapezus"
+    },
+    {
+      "slug": "ophir",
+      "name_ar": "أوفير",
+      "name_en": "Ophir (Pleiades: Sofera)",
+      "aliases": [
+        "أوفير"
+      ],
+      "pleiades_id": "60057",
+      "expected_title": "Sofera",
+      "note": "موقع أوفير غير معلوم بيقين، والنص التوراتي لا يحدده. Pleiades يربط الاسم بـ Sofera في إقليم السند. وهذا أحد مرشحات عدة يذكرها الدارسون: الجزيرة العربية، والساحل الشرقي لأفريقيا، والهند (سوبارا)، وسيلان. النقطة تمثيل من Pleiades لا تحديد."
+    },
+    {
+      "slug": "anuradhapura",
+      "name_ar": "أنورادهابورا",
+      "name_en": "Anuradhapura (ancient capital of Ceylon)",
+      "aliases": [
+        "عاصمة سيلان"
+      ],
+      "pleiades_id": "49863",
+      "expected_title": "Anurādhapura",
+      "note": "النص يذكر مملكة سيلان كلها لا عاصمتها. أنورادهابورا عاصمتها القديمة من القرن الرابع ق.م إلى القرن الحادي عشر م، فهي تمثيل للمملكة لا موقع للشاهد، والجزيرة كلها لا تُمثَّل بنقطة."
     }
   ]
 }
