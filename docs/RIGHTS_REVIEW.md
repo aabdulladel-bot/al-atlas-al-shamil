@@ -7,7 +7,7 @@
 - **A:** ملك عام أو ترخيص مفتوح يسمح بالنشر مع الإسناد. عددها 17.
 - **B:** مرخّص أو بإذن موثّق، يُراجع شرطه قبل النشر. عددها 11.
 - **C:** مرجع فقط بلا استخراج. عددها 0.
-- **بلا إسناد مسجّل في المانيفست:** 2 مصدراً: hyde-3.3، cdli-text. يُكمَل إسناد كل منها قبل النشر.
+- **بلا إسناد مسجّل في المانيفست:** 1 مصدراً: hyde-3.3. يُكمَل إسناد كل منها قبل النشر.
 
 ## المصادر
 
@@ -17,7 +17,7 @@
 | pleiades-names | A | CC BY 3.0 (يُتحقق كما أعلاه) | لا | Pleiades (pleiades.stoa.org)، CC BY 3.0 بحسب سجل الإصدار؛ صفحة الموقع تذكر أن المحتوى كله بترخيص Creative Commons Attribution |
 | pleiades-locations | A | CC BY 3.0 (يُتحقق كما أعلاه) | لا | Pleiades (pleiades.stoa.org)، CC BY 3.0 بحسب سجل الإصدار؛ صفحة الموقع تذكر أن المحتوى كله بترخيص Creative Commons Attribution |
 | hyde-3.3 | A | CC BY 4.0 (بحسب صفحة الجامعة) | لا | — |
-| cdli-text | A | CC BY 4.0 (الصفحة الرسمية؛ الصور لها شروطها) | لا | — |
+| cdli-text | A | شروط استخدام CDLI (cdli.earth/terms-of-use، اطّلعنا عليها في 2026/10/30): النصوص والترجمات قابلة للنسخ وإعادة الاستعمال وفق الأعراف الأكاديمية، مع طلب الإشارة إلى CDLI وعنوانه عند إعادة استعمال قدر كبير منها. الصور للاستعمال غير التجاري فقط، ولأصحابها شروط. | لا | Cuneiform Digital Library Initiative (cdli.earth)، بحسب شروط الاستخدام |
 | seshat-equinox | B | CC BY-NC-SA بحسب README الأرشيف ومستودع Seshat. الاستخدام غير تجاري مسموح بإسناد وبنفس الترخيص للمشتق. ملف LICENSE المرفق (CC0) وسجل Zenodo (cc-by) متعارضان، والاعتماد على الأشد. المالك: الأطلس غير تجاري. | لا | This research employed data from the Seshat Databank (seshatdatabank.info) under Creative Commons Attribution Non-Commercial (CC By-NC SA) licensing. |
 | gapminder-total-population | B | CC BY 4.0 (بحسب README المستودع: Gapminder created this dataset and provides it under CC BY 4.0) | لا | Population data from Gapminder (Systema Globalis, CC BY 4.0). https://www.gapminder.org |
 | gapminder-country-entities | B | CC BY 4.0 (بحسب README المستودع نفسه) | لا | Country entities from Gapminder (Systema Globalis, CC BY 4.0). |
