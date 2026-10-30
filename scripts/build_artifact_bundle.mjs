@@ -12,7 +12,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = path.join(ROOT, "out/artifact");
 const CACHE = path.join(ROOT, "out/tile-cache");
-const SAT_MAX = 4;
+const SAT_MAX = 5;
 const DEM_MAX = 3;
 const MAX_FILE = 15 * 1024 * 1024; // حدّ الملف الثنائي في النشر
 const UA = "al-atlas-al-shamil/1.0 (artifact bundle)";
