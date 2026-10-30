@@ -76,7 +76,7 @@ function soloScenes() {
         scBasemap("drawn");
         scTerrain(false);
         scFly({ center: [31, 24], zoom: 3.4, pitch: 35, bearing: 0 }, SC_MS);
-        return "الأنهار والبحيرات من Natural Earth، وهي ما قامت عليه أكثر مواقع الاستقرار الأولى.";
+        return "الأنهار والبحيرات من Natural Earth.";
       },
     },
     {
@@ -92,7 +92,7 @@ function soloScenes() {
           if (token !== show.token) return;
           const data = await loadBorders(y);
           const named = data ? data.features.filter((f) => f.properties.NAME).length : 0;
-          set(`الحدود تتبدّل عبر الزمن: ${y === "modern" ? "اليوم" : yearLabel(y)}، ${scNum(named)} كياناً مسمّى. المصدر: Historical Basemaps وNatural Earth.`);
+          set(`الحدود تتبدّل عبر الزمن: ${y === "modern" ? "اليوم" : yearLabel(y)}. الكيانات المسمّاة: ${scNum(named)}. المصدر: Historical Basemaps وNatural Earth.`);
           await scWait(1300);
         }
       },
@@ -105,8 +105,9 @@ function soloScenes() {
         scTerrain(false);
         await loadBorders(1600);
         scFly({ center: [40, 32], zoom: 2.7, pitch: 30, bearing: 0 }, SC_MS);
-        const ar = countryLabels.length;
-        return `أسماء الكيانات على خريطة سنة 1600م بالعربية أولاً: ${scNum(ar)} تسمية، من ويكي بيانات أو تعريب معلن، والإنجليزي في البطاقة.`;
+        const all = [...labelInfo.values()];
+        const ar = all.filter((l) => l.ar).length;
+        return `أسماء الكيانات على خريطة سنة 1600م، والعربي أولاً من ويكي بيانات أو تعريب معلن، والإنجليزي في البطاقة. الأسماء العربية: ${scNum(ar)} من ${scNum(all.length)}.`;
       },
     },
     {
@@ -119,7 +120,7 @@ function soloScenes() {
         let n = 0;
         try { n = (await getJson("data/borders/peoples_1600.geojson")).features.length; } catch {}
         scFly({ center: [-100, 40], zoom: 3, pitch: 40, bearing: 0 }, SC_MS);
-        return `طبقة مستقلة عن الدول: ${scNum(n)} مضلعاً لشعوب وقبائل على خريطة 1600م، بحدود تقريبية كما في المصدر.`;
+        return `طبقة مستقلة عن الدول على خريطة 1600م، بحدود تقريبية كما في المصدر. المضلعات: ${scNum(n)}.`;
       },
     },
     {
@@ -133,7 +134,7 @@ function soloScenes() {
         let feats = [];
         try { feats = (await getJson(era.file)).features; } catch {}
         if (!scFitFeatures(feats, 5)) scFly({ center: [20, 38], zoom: 3.4, pitch: 40, bearing: 0 }, SC_MS);
-        return `${scNum(feats.length)} موقعاً لحقبة «${era.label}»، بإحداثيات Pleiades أو Natural Earth.`;
+        return `مواقع حقبة «${era.label}» بإحداثيات Pleiades أو Natural Earth. عدد المواقع: ${scNum(feats.length)}.`;
       },
     },
     {
@@ -146,7 +147,7 @@ function soloScenes() {
         const feats = claimPoints?.features ?? [];
         const total = feats.reduce((s, f) => s + (Number(f.properties.count) || 0), 0);
         if (!scFitFeatures(feats, 4, 30)) scFly({ center: [30, 30], zoom: 2, pitch: 30, bearing: 0 }, SC_MS);
-        return `${scNum(feats.length)} مكاناً تحمل ${scNum(total)} ربطاً لادعاءات اقتباسها مطابق لنص المصدر.`;
+        return `أماكن ادعاءات اقتباسها مطابق لنص المصدر. الأماكن: ${scNum(feats.length)}، والروابط: ${scNum(total)}.`;
       },
     },
     {
@@ -159,7 +160,7 @@ function soloScenes() {
         let meta = {};
         try { meta = (await getJson("data/demography_era8.geojson"))._meta ?? {}; } catch {}
         scFly({ center: [20, 20], zoom: 1.6, pitch: 0, bearing: 0 }, SC_MS);
-        return `السكان بحسب الدولة سنة ${meta.year ?? ""}، ${meta.countries ? `${scNum(meta.countries)} دولة` : ""}، من Gapminder.`;
+        return `السكان بحسب الدولة سنة ${meta.year ?? ""}، من Gapminder.${meta.countries ? ` الدول: ${scNum(meta.countries)}.` : ""}`;
       },
     },
     {
@@ -172,7 +173,7 @@ function soloScenes() {
         if (s) await selectSunna(s);
         const n = claimPoints ? claimPoints.features.filter((f) => [...(s?.supporting ?? []), ...(s?.limiting ?? [])].some((c) => c.id && f.properties.claim_ids.includes(`,${c.id},`))).length : 0;
         scFly({ center: [25, 33], zoom: 2.6, pitch: 35, bearing: 0 }, SC_MS);
-        return s ? `«${s.name}»: شواهدها المرتبطة بأماكن تظهر وحدها، ${scNum(n)} مكاناً.` : "لم تُحمَّل السنن بعد.";
+        return s ? `«${s.name}»: شواهدها المرتبطة بأماكن تظهر وحدها. الأماكن: ${scNum(n)}.` : "لم تُحمَّل السنن بعد.";
       },
     },
     {
@@ -201,7 +202,7 @@ function fusionScenes() {
     { title: "+ الشعوب", groups: ["hillshade", "water", "borders", "labels", "peoples"], text: "تُضاف طبقة الشعوب والقبائل." },
     { title: "+ المواقع", groups: ["hillshade", "water", "borders", "labels", "peoples", "places"], text: "تُضاف مواقع الحقبة." },
     { title: "+ الادعاءات", groups: ["hillshade", "water", "borders", "labels", "peoples", "places", "claims"], text: "تُضاف أماكن الادعاءات الموثّقة." },
-    { title: "+ السكان", groups: ["hillshade", "water", "borders", "labels", "peoples", "places", "claims", "demography"], text: "وتُضاف كثافة السكان: الطبقات كلها معاً." },
+    { title: "+ السكان", groups: ["hillshade", "water", "borders", "labels", "peoples", "places", "claims", "demography"], text: "ويُضاف السكان: الطبقات كلها معاً." },
   ].map((b, i) => ({
     title: b.title,
     duration: 5200,
@@ -229,7 +230,7 @@ function fusionScenes() {
       let feats = [];
       if (era.file) { try { feats = (await getJson(era.file)).features; } catch {} }
       if (!scFitFeatures(feats, 4.5, 50)) scFly({ center: [30, 30], zoom: 2, pitch: 40, bearing: 0 }, SC_MS);
-      return `${era.desc} ${feats.length ? `(${scNum(feats.length)} موقعاً)` : ""}`;
+      return `${era.desc}${feats.length ? ` عدد المواقع: ${scNum(feats.length)}.` : ""}`;
     },
   }));
   const finale = {
@@ -240,7 +241,7 @@ function fusionScenes() {
       await loadBorders("modern");
       scFly({ center: [30, 20], zoom: 1.7, pitch: 0, bearing: 0 }, SC_MS + 2000);
       const sunanCount = sunanData?.sunan?.length ?? 0;
-      return `${scNum(ERAS.length)} حقب، و${scNum(sunanCount)} سنن، وكل طبقة يمكن إخفاؤها أو عرضها وحدها من «الطبقات».`;
+      return `الحقب: ${scNum(ERAS.length)}، والسنن: ${scNum(sunanCount)}. وكل طبقة يمكن إخفاؤها أو عرضها وحدها من «الطبقات».`;
     },
   };
   return [...build, ...eras, finale];
