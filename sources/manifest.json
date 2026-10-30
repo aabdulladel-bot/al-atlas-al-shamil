@@ -54,11 +54,12 @@
       "id": "cdli-text",
       "file": "cdli-text.csv",
       "url": null,
-      "license": "CC BY 4.0 (الصفحة الرسمية؛ الصور لها شروطها)",
+      "license": "شروط استخدام CDLI (cdli.earth/terms-of-use، اطّلعنا عليها في 2026/10/30): النصوص والترجمات قابلة للنسخ وإعادة الاستعمال وفق الأعراف الأكاديمية، مع طلب الإشارة إلى CDLI وعنوانه عند إعادة استعمال قدر كبير منها. الصور للاستعمال غير التجاري فقط، ولأصحابها شروط.",
       "tier": "A",
       "landing": "https://cdli.earth/",
       "note": "بيانات CDLI على GitHub عبر Git LFS، وآخر تحديث أغسطس 2022، وأسماء الملفات غير مؤكدة (cdli_catalogue_*.csv غير موجودة على الفرع الرئيسي).",
-      "status": "skipped: لا يوجد رابط ملف مؤكد بعد (بيانات CDLI على GitHub (cdli-gh)، وGitHub محجوب للجلسة.)"
+      "status": "skipped: لا يوجد رابط ملف مؤكد بعد (بيانات CDLI على GitHub (cdli-gh)، وGitHub محجوب للجلسة.)",
+      "attribution": "Cuneiform Digital Library Initiative (cdli.earth)، بحسب شروط الاستخدام"
     },
     {
       "id": "seshat-equinox",
