@@ -25,11 +25,21 @@ try { const saved = localStorage.getItem("atlas-mode"); if (saved === "research"
 // (scripts/build_artifact_bundle.mjs): ملف ثنائي لكل مستوى تقريب وفهرس بإزاحات بلاطاته. وبغيرها تُجلب البلاطات من الشبكة.
 const PACKS = window.TILE_PACKS ?? null;
 const packCache = new Map();
+// الحزمة قد تُنشر نصاً بترميز base64 لأن منصة النشر لا تقدّم الملفات الثنائية العامة
+function base64Buffer(text) {
+  const bin = atob(text);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out.buffer;
+}
 async function packTile(tilePath) {
   const [layer, z, x, y] = tilePath.split("/");
   const file = PACKS?.[layer]?.files?.[z];
   if (!file) throw new Error(`لا بلاطة محزومة: ${tilePath}`);
-  if (!packCache.has(file)) packCache.set(file, Promise.all([fetch(`${file}.json`).then((r) => r.json()), fetch(file).then((r) => r.arrayBuffer())]));
+  if (!packCache.has(file)) {
+    const body = PACKS[layer].encoding === "base64" ? fetch(file).then((r) => r.text()).then(base64Buffer) : fetch(file).then((r) => r.arrayBuffer());
+    packCache.set(file, Promise.all([fetch(`${file}.json`).then((r) => r.json()), body]));
+  }
   const [index, buf] = await packCache.get(file);
   const entry = index[`${x}/${y}`];
   if (!entry) throw new Error(`لا بلاطة محزومة: ${tilePath}`);

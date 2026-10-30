@@ -1,6 +1,6 @@
 // يبني نسخة الأطلس المنشورة صفحةً على claude.ai (Artifact) في out/artifact/.
 // الصفحة المنشورة لا تصل إلى أي مضيف خارجي، فتُحزم معها بلاطات صور NASA Blue Marble (حتى المستوى SAT_MAX)
-// وبلاطات التضاريس (حتى DEM_MAX) في ملفات ثنائية لكل مستوى تقريب مع فهرس بإزاحاتها. يقرؤها بروتوكول pack في app.js
+// وبلاطات التضاريس (حتى DEM_MAX) في ملف لكل مستوى تقريب مع فهرس بإزاحاتها. يقرؤها بروتوكول pack في app.js
 // حين يُعرِّف tilepacks.js المتغيّر TILE_PACKS، وبغيره يبقى الأطلس يجلب البلاطات من الشبكة كالمعتاد.
 // والصفحة تُغلَّف عند النشر بهيكل HTML خاص بالمنصة، فتُنزع منها وسوم المستند، وتُضبط اللغة والاتجاه بسكربت.
 // الاستعمال: node scripts/build_artifact_bundle.mjs   (يحتاج curl ووصولاً إلى GIBS وTerrain Tiles؛ البلاطات تُخبَّأ في out/tile-cache)
@@ -14,7 +14,8 @@ const OUT = path.join(ROOT, "out/artifact");
 const CACHE = path.join(ROOT, "out/tile-cache");
 const SAT_MAX = 5;
 const DEM_MAX = 3;
-const MAX_FILE = 15 * 1024 * 1024; // حدّ الملف الثنائي في النشر
+// المنصة لا تقدّم ملفات ثنائية عامة، فتُكتب الحزمة نصاً بترميز base64، وحدّ الملف النصي 16 م.ب
+const MAX_FILE = 16 * 1024 * 1024;
 const UA = "al-atlas-al-shamil/1.0 (artifact bundle)";
 const SAT_URL = (z, x, y) => `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/${z}/${y}/${x}.jpeg`;
 const DEM_URL = (z, x, y) => `https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${z}/${x}/${y}.png`;
@@ -42,14 +43,15 @@ function pack(layer, urlOf, maxz, ext) {
         offset += buf.length;
       }
     }
-    if (offset > MAX_FILE) throw new Error(`${layer} z${z}: ${offset} بايت يتجاوز حدّ الملف`);
-    const bin = `tiles/${layer}_z${z}.bin`;
-    fs.writeFileSync(path.join(OUT, bin), Buffer.concat(parts));
+    const b64 = Buffer.concat(parts).toString("base64");
+    if (b64.length > MAX_FILE) throw new Error(`${layer} z${z}: ${b64.length} بايت يتجاوز حدّ الملف`);
+    const bin = `tiles/${layer}_z${z}.txt`;
+    fs.writeFileSync(path.join(OUT, bin), b64);
     fs.writeFileSync(path.join(OUT, `${bin}.json`), JSON.stringify(index));
     files[z] = bin;
     console.log(`${layer} z${z}: ${n * n} بلاطة، ${(offset / 1048576).toFixed(1)} م.ب`);
   }
-  return { maxzoom: maxz, files };
+  return { maxzoom: maxz, encoding: "base64", files };
 }
 
 fs.rmSync(OUT, { recursive: true, force: true });
