@@ -21,13 +21,40 @@ try { const saved = localStorage.getItem("atlas-mode"); if (saved === "research"
 
 // ---------- الخريطة وطبقات الأساس ----------
 // تُطلب بلاطات الارتفاع عبر بروتوكول dem0 الذي يرفع ما تحت مستوى البحر إلى مستواه (انظر أدناه)
-const DEM_TILES = "dem0://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png";
+// النسخة المنشورة صفحةً على claude.ai لا تصل إلى أي مضيف خارجي، فتأتي ببلاطات محزومة يعرّفها tilepacks.js
+// (scripts/build_artifact_bundle.mjs): ملف ثنائي لكل مستوى تقريب وفهرس بإزاحات بلاطاته. وبغيرها تُجلب البلاطات من الشبكة.
+const PACKS = window.TILE_PACKS ?? null;
+const packCache = new Map();
+// الحزمة قد تُنشر نصاً بترميز base64 لأن منصة النشر لا تقدّم الملفات الثنائية العامة
+function base64Buffer(text) {
+  const bin = atob(text);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out.buffer;
+}
+async function packTile(tilePath) {
+  const [layer, z, x, y] = tilePath.split("/");
+  const file = PACKS?.[layer]?.files?.[z];
+  if (!file) throw new Error(`لا بلاطة محزومة: ${tilePath}`);
+  if (!packCache.has(file)) {
+    const body = PACKS[layer].encoding === "base64" ? fetch(file).then((r) => r.text()).then(base64Buffer) : fetch(file).then((r) => r.arrayBuffer());
+    packCache.set(file, Promise.all([fetch(`${file}.json`).then((r) => r.json()), body]));
+  }
+  const [index, buf] = await packCache.get(file);
+  const entry = index[`${x}/${y}`];
+  if (!entry) throw new Error(`لا بلاطة محزومة: ${tilePath}`);
+  return buf.slice(entry[0], entry[0] + entry[1]);
+}
+maplibregl.addProtocol("pack", async (params) => ({ data: await packTile(params.url.slice("pack://".length)) }));
+const DEM_TILES = PACKS?.dem ? "dem0://pack/dem/{z}/{x}/{y}" : "dem0://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png";
 // بيانات الارتفاع تشمل أعماق البحار، فتبدو البحار خنادق غائرة بعد التضخيم، وترسم الظلالُ قاعَها خطوطاً فوق الماء.
 // لذلك يُرفع كل ما تحت الصفر إلى الصفر قبل أن تستعمله الخريطة، فيستوي سطح البحر.
 // الثمن: اليابسة تحت مستوى البحر (البحر الميت، ووادي الأردن، ومنخفض القطارة) تُعرض عند مستواه.
 // ترميز terrarium: الارتفاع = أحمر×256 + أخضر + أزرق/256 − 32768، فالسالب كل ما أحمره دون 128، والصفر (128، 0، 0).
 maplibregl.addProtocol("dem0", async (params, abortController) => {
-  const res = await fetch(params.url.replace("dem0://", "https://"), { signal: abortController.signal });
+  const res = params.url.startsWith("dem0://pack/")
+    ? new Response(await packTile(params.url.slice("dem0://pack/".length)))
+    : await fetch(params.url.replace("dem0://", "https://"), { signal: abortController.signal });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const bmp = await createImageBitmap(await res.blob(), { colorSpaceConversion: "none", premultiplyAlpha: "none" });
   const canvas = new OffscreenCanvas(bmp.width, bmp.height);
@@ -42,7 +69,7 @@ maplibregl.addProtocol("dem0", async (params, abortController) => {
 const DEM_ATTRIBUTION = "التضاريس: Terrain Tiles (USGS 3DEP/SRTM/GMTED2010، NOAA ETOPO1، Copernicus EU-DEM، وغيرها)";
 // صور الأقمار الصناعية: NASA Blue Marble: Next Generation (مركّب صور MODIS الحقيقية، 500 م للبكسل) من خدمة NASA GIBS،
 // ملك عام. تُجلب وقت العرض حتى المستوى 8، وبعده تُكبَّر البلاطات.
-const SAT_TILES = "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg";
+const SAT_TILES = PACKS?.sat ? "pack://sat/{z}/{x}/{y}" : "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg";
 const SAT_ATTRIBUTION = "صور الأقمار الصناعية: NASA Blue Marble: Next Generation (Reto Stöckli، NASA Earth Observatory) عبر NASA GIBS";
 // لكل أساس ألوانه: الظلال والسماء والحدود. صور الأقمار داكنة، فتُرسم الحدود فوقها بلون فاتح.
 const HILLSHADE = {
@@ -69,10 +96,10 @@ const map = new maplibregl.Map({
       rivers: { type: "geojson", data: "data/base/rivers.geojson" },
       // التضاريس: بلاطات الارتفاعات المفتوحة (Terrain Tiles على AWS)، تُجلب وقت العرض ولا تُخزَّن.
       // مصدران منفصلان للتجسيم وللظلال، كما توصي MapLibre، حتى لا تتنازعا دقة البلاطات.
-      dem: { type: "raster-dem", tiles: [DEM_TILES], encoding: "terrarium", tileSize: 256, maxzoom: 12, attribution: DEM_ATTRIBUTION },
-      "dem-hs": { type: "raster-dem", tiles: [DEM_TILES], encoding: "terrarium", tileSize: 256, maxzoom: 12, attribution: DEM_ATTRIBUTION },
+      dem: { type: "raster-dem", tiles: [DEM_TILES], encoding: "terrarium", tileSize: 256, maxzoom: PACKS?.dem?.maxzoom ?? 12, attribution: DEM_ATTRIBUTION },
+      "dem-hs": { type: "raster-dem", tiles: [DEM_TILES], encoding: "terrarium", tileSize: 256, maxzoom: PACKS?.dem?.maxzoom ?? 12, attribution: DEM_ATTRIBUTION },
       ocean: { type: "geojson", data: "data/base/ocean.geojson" },
-      satellite: { type: "raster", tiles: [SAT_TILES], tileSize: 256, maxzoom: 8, attribution: SAT_ATTRIBUTION },
+      satellite: { type: "raster", tiles: [SAT_TILES], tileSize: 256, maxzoom: PACKS?.sat?.maxzoom ?? 8, attribution: SAT_ATTRIBUTION },
     },
     layers: [
       { id: "sea", type: "background", paint: { "background-color": cssVar("--sea") } },

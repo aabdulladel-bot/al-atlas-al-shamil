@@ -68,6 +68,20 @@
     @media (max-width: 600px) { #panel { max-height: 55vh; } #journey-box { bottom: 44px; } }
     #journey-box { position: absolute; z-index: 4; bottom: 16px; left: 50%; transform: translateX(-50%); width: min(560px, calc(100% - 24px)); max-height: 46vh; overflow-y: auto; box-sizing: border-box; background: var(--panel); color: var(--ink); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 14px; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18); }
     #journey-box[hidden] { display: none; }
+    #showcase-box { position: absolute; z-index: 5; bottom: 22px; left: 50%; transform: translateX(-50%); width: min(660px, calc(100% - 24px)); box-sizing: border-box; padding: 14px 18px 12px; border-radius: 14px; color: #f6efe3; background: linear-gradient(160deg, rgba(20, 16, 12, 0.86), rgba(42, 30, 20, 0.78)); border: 1px solid rgba(216, 154, 114, 0.55); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45); backdrop-filter: blur(6px); }
+    #showcase-box[hidden] { display: none; }
+    .sc-head { display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 0.02em; color: #d8b89a; }
+    #sc-title { font-size: 22px; margin: 6px 0 4px; font-weight: 700; }
+    #sc-text { font-size: 15px; line-height: 1.75; margin: 0 0 10px; color: #efe6d8; min-height: 1.75em; }
+    .sc-progress { height: 3px; border-radius: 2px; background: rgba(255, 255, 255, 0.15); overflow: hidden; margin-bottom: 10px; }
+    #sc-bar { height: 100%; width: 0%; background: linear-gradient(90deg, #d89a72, #f3d6a4); }
+    .sc-nav { display: flex; gap: 8px; justify-content: flex-start; flex-wrap: wrap; }
+    .sc-nav button { font: inherit; font-size: 13px; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(216, 154, 114, 0.7); background: transparent; color: #f6efe3; cursor: pointer; }
+    .sc-nav button:disabled { opacity: 0.35; cursor: default; }
+    .sc-nav button[data-sc="exit"] { margin-inline-start: auto; }
+    body.showcasing #panel, body.showcasing #journey-box { display: none; }
+    #showcase-solo, #showcase-fusion { font-weight: 700; }
+    @media (max-width: 600px) { #showcase-box { bottom: 44px; padding: 12px 14px 10px; } #sc-title { font-size: 18px; } #sc-text { font-size: 14px; } }
     .jb-head, .jb-nav { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
     .jb-head button, .jb-nav button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
     .jb-nav button:disabled { opacity: 0.4; cursor: default; }
@@ -89,6 +103,13 @@
 <body data-mode="simple">
   <div id="map"></div>
   <div id="journey-box" class="card" hidden></div>
+  <div id="showcase-box" hidden>
+    <div class="sc-head"><span id="sc-mode"></span><span id="sc-count"></span></div>
+    <h2 id="sc-title"></h2>
+    <p id="sc-text"></p>
+    <div class="sc-progress"><div id="sc-bar"></div></div>
+    <div class="sc-nav"><button type="button" data-sc="prev">السابق</button><button type="button" data-sc="pause">إيقاف مؤقت</button><button type="button" data-sc="next">التالي</button><button type="button" data-sc="exit">إنهاء</button></div>
+  </div>
   <aside id="panel">
     <h1>الأطلس الشامل</h1>
     <p class="tagline">التاريخ والجغرافيا والثقافة والسكان على خريطة واحدة، والسنن فرضيات تُختبر بالشواهد.</p>
@@ -96,6 +117,12 @@
       <button type="button" data-mode="simple" aria-pressed="true">مبسّط</button>
       <button type="button" data-mode="research" aria-pressed="false">باحث</button>
     </div>
+
+    <details class="section" id="showcase-panel" open>
+      <summary>العرض الشامل</summary>
+      <p>جولة سينمائية: كل طبقة وحدها، ثم تُصهر الطبقات طبقةً فوق طبقة وتعبر الحقب الثماني.</p>
+      <div class="row"><button type="button" id="showcase-solo">كل طبقة وحدها</button><button type="button" id="showcase-fusion">صهر الطبقات</button></div>
+    </details>
 
     <details class="section" id="layer-panel" open>
       <summary>الطبقات</summary>
@@ -211,5 +238,6 @@
   <script src="app.js"></script>
   <script src="cube.js"></script>
   <script src="journey.js"></script>
+  <script src="showcase.js"></script>
 </body>
 </html>

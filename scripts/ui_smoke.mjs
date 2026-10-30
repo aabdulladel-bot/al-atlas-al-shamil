@@ -134,6 +134,24 @@ try {
     await page.click('#journey-box button[data-act="exit"]');
     await page.waitForTimeout(300);
     if (!(await page.$eval("#journey-box", (b) => b.hidden))) problems.push(`[${name}] صندوق الرحلة لم يُغلق`);
+    step = `${name}: العرض الشامل`;
+    // العرض الشامل: كل نمط يبدأ، ويتقدّم مشهدين، ثم يُغلق ويعيد اللوحة
+    for (const [btn, key] of [["#showcase-solo", "showcaseSolo"], ["#showcase-fusion", "showcaseFusion"]]) {
+      await page.evaluate(() => { document.getElementById("showcase-panel").open = true; });
+      await page.click(btn);
+      await page.waitForSelector("#showcase-box:not([hidden])", { timeout: 15000 });
+      await page.click('#showcase-box [data-sc="pause"]');
+      counts[key] = await page.evaluate(() => show.scenes.length);
+      for (let i = 0; i < 2; i++) {
+        await page.click('#showcase-box [data-sc="next"]');
+        await page.waitForTimeout(1500);
+        await settle();
+      }
+      await page.click('#showcase-box [data-sc="exit"]');
+      await page.waitForTimeout(1500);
+      if (!(await page.$eval("#showcase-box", (b) => b.hidden))) problems.push(`[${name}] العرض الشامل لم يُغلق`);
+      if (await page.$eval("#panel", (p) => getComputedStyle(p).display === "none")) problems.push(`[${name}] اللوحة لم تعد بعد العرض`);
+    }
     console.log(`${name}: ${JSON.stringify(counts)}`);
     for (const [k, n] of Object.entries(counts)) if (n === 0) problems.push(`[${name}] لا أزرار في ${k}`);
     await page.close();
