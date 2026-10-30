@@ -100,6 +100,7 @@ const LAYER_GROUPS = {
   hillshade: ["hillshade"],
   water: ["lakes", "rivers"],
   borders: ["borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-highlight"],
+  peoples: ["peoples-fill", "peoples-line"],
   places: ["places"],
   claims: ["claim-points"],
   demography: ["demography"],
@@ -404,6 +405,33 @@ function markEra(id) {
   for (const btn of erasEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(Number(btn.dataset.era) === id));
 }
 const PRECISION_LABEL = { 1: "تقريبية", 2: "دقة متوسطة", 3: "محددة بالقانون الدولي" };
+// طبقة الشعوب والقبائل: مضلعات يصنّفها ويكي بيانات شعوباً لا دولاً، ترسمها فوق الحدود بلون ونقط مختلفين.
+// تقريبية كما في المصدر، ولا تُعدّ دولاً في الإحصاء ولا في الشواهد السياسية.
+const PEOPLE_COLOR = "#7d4f8f";
+async function loadPeoples(key) {
+  let data;
+  try { data = await getJson(`data/borders/peoples_${key}.geojson`); } catch { data = { type: "FeatureCollection", features: [] }; }
+  if (map.getSource("peoples")) {
+    map.getSource("peoples").setData(data);
+  } else {
+    map.addSource("peoples", { type: "geojson", data });
+    map.addLayer({ id: "peoples-fill", type: "fill", source: "peoples", paint: { "fill-color": PEOPLE_COLOR, "fill-opacity": 0.22 } });
+    map.addLayer({ id: "peoples-line", type: "line", source: "peoples", paint: { "line-color": PEOPLE_COLOR, "line-width": 1.2, "line-dasharray": [2, 2], "line-opacity": 0.85 } });
+    map.on("click", "peoples-fill", (e) => {
+      const p = e.features[0].properties;
+      const k = borderSelect.value;
+      const html = entityCard(p, k) + `<p class="card-src">شعب أو قبيلة أو مجموعة إثنية، وحدودها تقريبية في المصدر، وليست دولة.</p>`;
+      popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
+      const token = ++cardToken;
+      loadLinks(k).then((links) => {
+        if (token === cardToken && popup.isOpen()) popup.setHTML(html + linkedClaimsHtml(p.NAME, links));
+      });
+    });
+    pointerOn("peoples-fill");
+  }
+  for (const id of LAYER_GROUPS.peoples) setVis(id, true);
+}
+
 async function loadBorders(key) {
   borderSelect.value = String(key);
   const modern = key === "modern";
@@ -428,6 +456,7 @@ async function loadBorders(key) {
   showLabels(key);
   if (map.getSource("borders")) {
     map.getSource("borders").setData(data);
+    await loadPeoples(key);
     map.setPaintProperty("borders-fill", "fill-opacity", fillOpacity);
     map.setFilter("borders-halo", ["all", named, ["!", precise]]);
     map.setFilter("borders-line-approx", ["all", named, ["!", precise]]);
@@ -449,6 +478,7 @@ async function loadBorders(key) {
   map.addLayer({ id: "borders-line", type: "line", source: "borders", filter: ["all", named, precise], paint: { "line-color": bc, "line-width": 1.3, "line-opacity": 0.75 } }, before);
   map.addLayer({ id: "borders-highlight", type: "line", source: "borders", filter: ["==", ["get", "NAME"], ""], paint: { "line-color": HIGHLIGHT_COLOR[basemap.mode], "line-width": 3 } }, before);
   map.on("click", "borders-fill", (e) => {
+    if (map.getLayer("peoples-fill") && map.queryRenderedFeatures(e.point, { layers: ["peoples-fill"] }).length) return;
     const p = e.features[0].properties;
     if (!p.NAME) {
       popup.setLngLat(e.lngLat).setHTML(`<div class="popup-sub">أرض لا يسمّي المصدر عليها كياناً في هذه السنة</div>`).addTo(map);
@@ -464,6 +494,7 @@ async function loadBorders(key) {
   });
   pointerOn("borders-fill");
   for (const id of LAYER_GROUPS.borders) setVis(id, true);
+  await loadPeoples(key);
   return data;
 }
 async function loadEra(era) {
