@@ -16,7 +16,8 @@
     #map { position: absolute; inset: 0; }
     .country-label { font: 600 11px system-ui, sans-serif; color: #fff; text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000; white-space: nowrap; pointer-events: none; }
     .country-label.mid { font-size: 12.5px; }
-    .country-label.latin { font-style: italic; font-weight: 500; opacity: 0.8; }
+    /* اسم بلا عربي موثّق: أصغر وأخفت، بلا ميل، فلا ينافس الأسماء العربية */
+    .country-label.latin { font-size: 10px !important; font-weight: 400 !important; opacity: 0.62; direction: ltr; unicode-bidi: isolate; }
     .card-dl { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 6px 0 0; font-size: 12px; line-height: 1.5; }
     .card-dl dt { color: var(--muted); white-space: nowrap; }
     .card-dl dd { margin: 0; }
@@ -24,7 +25,113 @@
     .country-label.major { font-size: 14px; font-weight: 700; }
     #map:not(.space) .country-label { color: var(--ink); text-shadow: 0 0 3px var(--panel), 0 0 2px var(--panel), 0 0 1px var(--panel); }
     #map.space { background: radial-gradient(circle at 50% 50%, #0b1730 0%, #03060d 70%); }
-    #panel { position: absolute; top: 12px; inset-inline-start: 12px; width: min(380px, calc(100% - 24px)); max-height: calc(100vh - 24px); overflow-y: auto; box-sizing: border-box; background: var(--panel); padding: 14px 16px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+    :root { --tb-h: 68px; }
+    #panel { position: absolute; z-index: 3; top: 12px; inset-inline-start: 12px; width: min(380px, calc(100% - 24px)); max-height: calc(100vh - var(--tb-h) - 24px); overflow-y: auto; box-sizing: border-box; background: var(--panel); padding: 14px 16px; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,.18); }
+    .ph-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    #panel-toggle { display: none; font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
+    #panel.collapsed #panel-body, #panel.collapsed .tagline, #panel.collapsed .mode { display: none; }
+    body.card-open #panel { visibility: hidden; }
+    /* الزمن الحالي */
+    #now { margin: 10px 0 4px; padding: 10px 12px; border-radius: 10px; background: color-mix(in srgb, var(--accent) 9%, transparent); }
+    .now-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+    #now-year { font-size: 26px; font-weight: 800; color: var(--accent); }
+    #now-era { font-size: 14px; font-weight: 700; }
+    #now-desc { font-size: 13px !important; margin: 4px 0 6px !important; }
+    .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .chip { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; line-height: 1.4; padding: 2px 9px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 14%, transparent); color: var(--ink); border: 0; font-family: inherit; }
+    button.chip { cursor: pointer; text-decoration: none; }
+    button.chip:hover { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+    .chip.tier-v { background: color-mix(in srgb, var(--evidence) 22%, transparent); }
+    .chip.tier-r { background: color-mix(in srgb, #c9a227 26%, transparent); }
+    .chip.tier-x { background: color-mix(in srgb, var(--limit) 24%, transparent); }
+    .chip.support { background: color-mix(in srgb, var(--evidence) 22%, transparent); }
+    .chip.limit { background: color-mix(in srgb, var(--limit) 24%, transparent); }
+    /* الطبقات: أساس مجزّأ وبطاقات */
+    .seg-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 6px 0; }
+    .seg { display: inline-flex; border: 1px solid var(--accent); border-radius: 999px; overflow: hidden; }
+    .seg label { position: relative; cursor: pointer; }
+    .seg input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+    .seg span { display: block; font-size: 12.5px; padding: 4px 11px; }
+    .seg input:checked + span { background: var(--accent); color: var(--panel); }
+    .seg input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: -3px; }
+    .layer-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 8px 0; }
+    .lc { display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; align-items: center; column-gap: 7px; padding: 7px 8px; border-radius: 9px; border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); cursor: pointer; font-size: 13px; }
+    .lc:has(input:checked) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, transparent); }
+    .lc input { grid-row: 1 / 3; grid-column: 3; margin: 0; accent-color: var(--accent); }
+    .lc-sw { grid-row: 1 / 3; width: 22px; height: 22px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; font-style: normal; font-weight: 800; font-size: 13px; }
+    .lc-name { font-weight: 600; }
+    .lc-count { font-size: 11px; color: var(--muted); grid-column: 2; }
+    .lc-borders { background: conic-gradient(from 30deg, hsl(10 70% 62%), hsl(130 55% 55%), hsl(210 65% 62%), hsl(290 55% 62%), hsl(10 70% 62%)); opacity: 0.85; }
+    .lc-labels { background: color-mix(in srgb, var(--ink) 12%, transparent); color: var(--ink); }
+    .lc-peoples { background: repeating-linear-gradient(45deg, #7d4f8f 0 2px, transparent 2px 6px); border: 1px dashed #7d4f8f; }
+    .lc-places { background: radial-gradient(circle, #8a4b2a 0 5px, #fffdf8 5px 7px, transparent 7px); }
+    .lc-claims { background: radial-gradient(circle, var(--evidence) 0 7px, transparent 7px 8px, color-mix(in srgb, var(--evidence) 35%, transparent) 8px 11px, transparent 11px); }
+    .lc-demography { background: radial-gradient(circle, color-mix(in srgb, #e0913f 70%, transparent) 0 10px, transparent 10px); }
+    details.advanced { margin-top: 4px; }
+    .credits-box > summary { font-size: 13px !important; color: var(--muted); font-weight: 600 !important; }
+    /* البطاقة: درج جانبي على المكتب، وورقة سفلية على الجوال */
+    #card { position: absolute; z-index: 4; top: 12px; inset-inline-start: 12px; width: min(380px, calc(100% - 24px)); max-height: calc(100vh - var(--tb-h) - 24px); overflow-y: auto; box-sizing: border-box; background: var(--panel); color: var(--ink); border-radius: 12px; box-shadow: 0 6px 26px rgba(0,0,0,.25); padding: 16px 18px 18px; }
+    #card[hidden] { display: none; }
+    .card-close { position: absolute; top: 8px; inset-inline-end: 10px; font: inherit; font-size: 22px; line-height: 1; width: 32px; height: 32px; border-radius: 50%; border: 0; background: color-mix(in srgb, var(--muted) 14%, transparent); color: var(--ink); cursor: pointer; }
+    .card-grip { display: none; }
+    .ch { padding-inline-end: 34px; }
+    .ch-row { display: flex; align-items: center; gap: 9px; }
+    .ch-sw { flex: none; width: 16px; height: 16px; border-radius: 4px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.18); }
+    .ch h2 { font-size: 21px; margin: 0; line-height: 1.35; }
+    .ch-en { font-size: 12.5px; color: var(--muted); margin-top: 1px; }
+    .ch .chips { margin-top: 8px; }
+    .ch-note { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; line-height: 1.6; }
+    .stats { display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0 2px; }
+    .stat b { display: block; font-size: 19px; }
+    .stat span { font-size: 11.5px; color: var(--muted); }
+    .life { margin: 12px 0 4px; }
+    .life-title { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+    .life-track { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 0 2px; }
+    .life-track::before { content: ""; position: absolute; inset-inline: 6px; top: 50%; height: 2px; background: color-mix(in srgb, var(--muted) 30%, transparent); }
+    .life-dot { position: relative; width: 12px; height: 12px; border-radius: 50%; padding: 0; border: 2px solid color-mix(in srgb, var(--muted) 45%, transparent); background: var(--panel); cursor: default; }
+    .life-dot.on { background: var(--sw, var(--accent)); border-color: var(--sw, var(--accent)); cursor: pointer; }
+    .life-dot.now { outline: 2px solid var(--ink); outline-offset: 2px; }
+    .life-labels { display: flex; justify-content: space-between; font-size: 9.5px; color: var(--muted); margin-top: 4px; direction: rtl; }
+    .card-sec { margin-top: 14px; border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding-top: 10px; }
+    .card-sec h3 { font-size: 14px; margin: 0 0 6px; }
+    .ev-card { padding: 9px 0; border-bottom: 1px dashed color-mix(in srgb, var(--muted) 35%, transparent); font-size: 13.5px; line-height: 1.7; }
+    .ev-card:last-child { border-bottom: 0; }
+    .ev-st { font-weight: 600; }
+    .ev-q { margin: 6px 0; padding: 4px 10px; border-inline-start: 3px solid var(--evidence); font-family: "Amiri", Georgia, serif; font-size: 14px; color: var(--ink); background: color-mix(in srgb, var(--evidence) 6%, transparent); border-radius: 0 6px 6px 0; }
+    .ev-by { font-size: 12px; color: var(--muted); }
+    .ev-hedge { font-size: 12px; color: var(--limit); margin-top: 2px; }
+    .ev-card .chips { margin-top: 6px; }
+    .card-about { margin-top: 14px; font-size: 12.5px; }
+    .card-about summary { cursor: pointer; color: var(--muted); font-weight: 600; }
+    .card-also { margin-top: 14px; font-size: 12.5px; color: var(--muted); }
+    /* شريط الزمن */
+    #timebar { position: absolute; z-index: 3; inset-inline: 0; bottom: 0; height: var(--tb-h); box-sizing: border-box; display: flex; align-items: center; gap: 12px; padding: 8px 16px; color: #f3ebdd; background: linear-gradient(0deg, rgba(10, 8, 6, 0.88), rgba(18, 14, 10, 0.72)); backdrop-filter: blur(6px); border-top: 1px solid rgba(216, 154, 114, 0.35); }
+    #tb-play { flex: none; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(216, 154, 114, 0.8); background: transparent; color: #f3d6a4; font-size: 15px; cursor: pointer; }
+    #tb-play[aria-pressed="true"] { background: rgba(216, 154, 114, 0.25); }
+    #tb-now { flex: none; width: 150px; display: flex; flex-direction: column; line-height: 1.25; }
+    #tb-year { font-size: 20px; color: #f3d6a4; }
+    #tb-era { font-size: 11px; color: #d8c5ab; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    #tb-track { position: relative; flex: 1; height: 46px; cursor: pointer; touch-action: none; outline: none; border-radius: 8px; }
+    #tb-track:focus-visible { box-shadow: 0 0 0 2px #d89a72; }
+    #tb-bands { position: absolute; inset: 0; display: flex; }
+    .tb-band { position: relative; flex: 1; border-inline-start: 1px solid rgba(255, 255, 255, 0.12); overflow: hidden; }
+    .tb-band:first-child { border-inline-start: 0; }
+    .tb-band.cur { background: rgba(216, 154, 114, 0.14); }
+    .tb-band-label { position: absolute; top: 2px; inset-inline: 5px; font-size: 10.5px; color: #cdb99d; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .tb-band.cur .tb-band-label { color: #f3d6a4; font-weight: 700; }
+    .tb-density { position: absolute; bottom: 20px; inset-inline: 22%; border-radius: 2px 2px 0 0; background: rgba(95, 179, 170, 0.45); }
+    #tb-stops { position: absolute; inset: 0; }
+    .tb-stop { position: absolute; bottom: 0; transform: translateX(50%); display: flex; flex-direction: column; align-items: center; font-size: 10px; color: #cdb99d; pointer-events: none; white-space: nowrap; }
+    .tb-stop.first { transform: none; align-items: flex-start; }
+    .tb-stop.last { transform: translateX(100%); align-items: flex-end; }
+    .tb-stop i { width: 2px; height: 9px; background: #cdb99d; margin-bottom: 2px; border-radius: 1px; }
+    .tb-stop.cur { color: #fff; font-weight: 700; }
+    .tb-stop.cur i { background: #f3d6a4; }
+    #tb-thumb { position: absolute; bottom: 12px; width: 14px; height: 14px; margin-inline-start: -7px; border-radius: 50%; background: #f3d6a4; box-shadow: 0 0 0 4px rgba(243, 214, 164, 0.25), 0 0 12px rgba(243, 214, 164, 0.7); transition: inset-inline-start 0.35s ease; pointer-events: none; }
+    #tb-track.dragging #tb-thumb { transition: none; }
+    body.showcasing #timebar { pointer-events: none; }
+    body.showcasing #tb-play { opacity: 0.4; }
+    .maplibregl-ctrl-bottom-left, .maplibregl-ctrl-bottom-right { bottom: var(--tb-h); }
     #panel h1 { font-size: 20px; margin: 0; }
     .tagline { margin: 2px 0 8px; font-size: 13px; color: var(--muted); }
     #panel p { margin: 4px 0; font-size: 14px; color: var(--muted); line-height: 1.6; }
@@ -65,10 +172,27 @@
     .popup-name { font-weight: 700; font-size: 15px; }
     .popup-sub { color: var(--muted); font-size: 13px; }
     .credits { font-size: 11px !important; }
-    @media (max-width: 600px) { #panel { max-height: 55vh; } #journey-box { bottom: 44px; } }
-    #journey-box { position: absolute; z-index: 4; bottom: 16px; left: 50%; transform: translateX(-50%); width: min(560px, calc(100% - 24px)); max-height: 46vh; overflow-y: auto; box-sizing: border-box; background: var(--panel); color: var(--ink); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 14px; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18); }
+    @media (max-width: 600px) {
+      :root { --tb-h: 58px; }
+      #panel { top: 8px; inset-inline-start: 8px; width: calc(100% - 16px); padding: 10px 14px; max-height: calc(100vh - var(--tb-h) - 16px); }
+      #panel h1 { font-size: 18px; }
+      #panel-toggle { display: inline-block; }
+      #card { top: auto; bottom: var(--tb-h); inset-inline-start: 0; width: 100%; max-height: 46vh; border-radius: 16px 16px 0 0; padding-top: 20px; transition: max-height 0.25s ease; }
+      #card.full { max-height: calc(100vh - var(--tb-h) - 40px); }
+      body.card-open #panel { visibility: visible; }
+      .card-grip { display: block; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 44px; height: 6px; padding: 0; border: 0; border-radius: 3px; background: color-mix(in srgb, var(--muted) 45%, transparent); cursor: pointer; }
+      #timebar { gap: 8px; padding: 6px 10px; }
+      #tb-now { width: 92px; }
+      #tb-era { font-size: 10px; }
+      #tb-year { font-size: 17px; }
+      .tb-band-label, .tb-stop span { display: none; }
+      .tb-density { bottom: 12px; }
+      #tb-thumb { bottom: 6px; }
+      #journey-box { bottom: calc(var(--tb-h) + 8px); }
+    }
+    #journey-box { position: absolute; z-index: 4; bottom: calc(var(--tb-h) + 14px); left: 50%; transform: translateX(-50%); width: min(560px, calc(100% - 24px)); max-height: 46vh; overflow-y: auto; box-sizing: border-box; background: var(--panel); color: var(--ink); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 14px; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18); }
     #journey-box[hidden] { display: none; }
-    #showcase-box { position: absolute; z-index: 5; bottom: 22px; left: 50%; transform: translateX(-50%); width: min(660px, calc(100% - 24px)); box-sizing: border-box; padding: 14px 18px 12px; border-radius: 14px; color: #f6efe3; background: linear-gradient(160deg, rgba(20, 16, 12, 0.86), rgba(42, 30, 20, 0.78)); border: 1px solid rgba(216, 154, 114, 0.55); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45); backdrop-filter: blur(6px); }
+    #showcase-box { position: absolute; z-index: 5; bottom: calc(var(--tb-h) + 16px); left: 50%; transform: translateX(-50%); width: min(660px, calc(100% - 24px)); box-sizing: border-box; padding: 14px 18px 12px; border-radius: 14px; color: #f6efe3; background: linear-gradient(160deg, rgba(20, 16, 12, 0.86), rgba(42, 30, 20, 0.78)); border: 1px solid rgba(216, 154, 114, 0.55); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45); backdrop-filter: blur(6px); }
     #showcase-box[hidden] { display: none; }
     .sc-head { display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 0.02em; color: #d8b89a; }
     #sc-title { font-size: 22px; margin: 6px 0 4px; font-weight: 700; }
@@ -79,9 +203,9 @@
     .sc-nav button { font: inherit; font-size: 13px; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(216, 154, 114, 0.7); background: transparent; color: #f6efe3; cursor: pointer; }
     .sc-nav button:disabled { opacity: 0.35; cursor: default; }
     .sc-nav button[data-sc="exit"] { margin-inline-start: auto; }
-    body.showcasing #panel, body.showcasing #journey-box { display: none; }
+    body.showcasing #panel, body.showcasing #journey-box, body.showcasing #card { display: none; }
     #showcase-solo, #showcase-fusion { font-weight: 700; }
-    @media (max-width: 600px) { #showcase-box { bottom: 44px; padding: 12px 14px 10px; } #sc-title { font-size: 18px; } #sc-text { font-size: 14px; } }
+    @media (max-width: 600px) { #showcase-box { bottom: calc(var(--tb-h) + 8px); padding: 12px 14px 10px; } #sc-title { font-size: 18px; } #sc-text { font-size: 14px; } }
     .jb-head, .jb-nav { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
     .jb-head button, .jb-nav button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
     .jb-nav button:disabled { opacity: 0.4; cursor: default; }
@@ -111,44 +235,79 @@
     <div class="sc-nav"><button type="button" data-sc="prev">السابق</button><button type="button" data-sc="pause">إيقاف مؤقت</button><button type="button" data-sc="next">التالي</button><button type="button" data-sc="exit">إنهاء</button></div>
   </div>
   <aside id="panel">
-    <h1>الأطلس الشامل</h1>
-    <p class="tagline">التاريخ والجغرافيا والثقافة والسكان على خريطة واحدة، والسنن فرضيات تُختبر بالشواهد.</p>
-    <div class="mode">طريقة العرض:
-      <button type="button" data-mode="simple" aria-pressed="true">مبسّط</button>
-      <button type="button" data-mode="research" aria-pressed="false">باحث</button>
-    </div>
+    <header class="ph">
+      <div class="ph-top">
+        <h1>الأطلس الشامل</h1>
+        <button type="button" id="panel-toggle" aria-expanded="true" aria-controls="panel-body">القائمة</button>
+      </div>
+      <p class="tagline">التاريخ والجغرافيا والثقافة والسكان على خريطة واحدة، والسنن فرضيات تُختبر بالشواهد.</p>
+      <div class="mode">طريقة العرض:
+        <button type="button" data-mode="simple" aria-pressed="true">مبسّط</button>
+        <button type="button" data-mode="research" aria-pressed="false">باحث</button>
+      </div>
+    </header>
+    <div id="panel-body">
+
+    <section id="now" aria-live="polite">
+      <div class="now-head"><span id="now-year"></span><span id="now-era"></span></div>
+      <p id="now-desc"></p>
+      <div id="now-stats" class="chips"></div>
+    </section>
 
     <details class="section" id="showcase-panel" open>
-      <summary>العرض الشامل</summary>
-      <p>جولة سينمائية: كل طبقة وحدها، ثم تُصهر الطبقات طبقةً فوق طبقة وتعبر الحقب الثماني.</p>
+      <summary>جولات</summary>
+      <p>العرض الشامل جولة سينمائية: كل طبقة وحدها، ثم تُصهر الطبقات وتعبر الحقب الثماني.</p>
       <div class="row"><button type="button" id="showcase-solo">كل طبقة وحدها</button><button type="button" id="showcase-fusion">صهر الطبقات</button></div>
+      <div id="journey-panel">
+        <p>والرحلة تمرّ بشواهد موثّقة خطوة خطوة، وتنتقل الخريطة معها إلى زمنها.</p>
+        <div class="row" id="journey-list"></div>
+      </div>
     </details>
 
     <details class="section" id="layer-panel" open>
       <summary>الطبقات</summary>
-      <div class="mode">
-        <label><input type="radio" name="basemap" value="satellite" checked> صور الأقمار الصناعية</label>
-        <label><input type="radio" name="basemap" value="drawn"> خريطة مرسومة</label>
+      <div class="seg-row">
+        <div class="seg" role="radiogroup" aria-label="الأساس">
+          <label><input type="radio" name="basemap" value="satellite" checked><span>صور فضائية</span></label>
+          <label><input type="radio" name="basemap" value="drawn"><span>خريطة مرسومة</span></label>
+        </div>
+        <div class="seg" role="radiogroup" aria-label="الإسقاط">
+          <label><input type="radio" name="projection" value="globe" checked><span>كرة</span></label>
+          <label><input type="radio" name="projection" value="mercator"><span>مسطّحة</span></label>
+        </div>
+        <label class="opt"><input type="checkbox" id="terrain-toggle" checked> تضاريس مجسّمة</label>
       </div>
       <p class="sub warn" id="basemap-note"></p>
-      <div class="mode">
-        <label><input type="radio" name="projection" value="globe" checked> كرة أرضية</label>
-        <label><input type="radio" name="projection" value="mercator"> خريطة مسطحة</label>
+      <div class="layer-cards">
+        <label class="lc"><input type="checkbox" data-group="borders" checked><i class="lc-sw lc-borders"></i><span class="lc-name">الدول والكيانات</span><span class="lc-count" id="lc-borders"></span></label>
+        <label class="lc"><input type="checkbox" data-group="labels" checked><i class="lc-sw lc-labels">ع</i><span class="lc-name">الأسماء</span><span class="lc-count" id="lc-labels"></span></label>
+        <label class="lc"><input type="checkbox" data-group="peoples" checked><i class="lc-sw lc-peoples"></i><span class="lc-name">الشعوب والقبائل</span><span class="lc-count" id="lc-peoples"></span></label>
+        <label class="lc"><input type="checkbox" data-group="places" checked><i class="lc-sw lc-places"></i><span class="lc-name">مواقع الحقبة</span><span class="lc-count" id="lc-places"></span></label>
+        <label class="lc"><input type="checkbox" data-group="claims" checked><i class="lc-sw lc-claims"></i><span class="lc-name">الشواهد الموثّقة</span><span class="lc-count" id="lc-claims"></span></label>
+        <label class="lc"><input type="checkbox" data-group="demography"><i class="lc-sw lc-demography"></i><span class="lc-name">السكان</span><span class="lc-count" id="lc-demography"></span></label>
       </div>
-      <label class="opt"><input type="checkbox" id="terrain-toggle" checked> التضاريس المجسّمة</label>
-      <label for="terrain-exaggeration" class="sub">تضخيم الارتفاع: <span id="terrain-exaggeration-val"></span></label>
-      <input type="range" id="terrain-exaggeration" min="1" max="30" step="0.5" value="15">
-      <label class="opt sub"><input type="checkbox" id="terrain-auto" checked> تضخيم تلقائي بحسب التقريب</label>
-      <label class="opt"><input type="checkbox" data-group="hillshade" checked> ظلال التضاريس</label>
-      <label class="opt"><input type="checkbox" data-group="water" checked> الأنهار والبحيرات</label>
-      <label class="opt"><input type="checkbox" data-group="labels" checked> أسماء الدول والكيانات (تتبع سنة الحدود)</label>
-      <label class="opt"><input type="checkbox" data-group="borders" checked> حدود الدول والكيانات</label>
-      <label class="opt"><input type="checkbox" data-group="peoples" checked> الشعوب والقبائل (حدود تقريبية)</label>
-      <label class="opt"><input type="checkbox" data-group="places" checked> مواقع الحقبة</label>
-      <label class="opt"><input type="checkbox" data-group="claims" checked> أماكن الادعاءات (حين تُعرض)</label>
-      <label class="opt"><input type="checkbox" data-group="demography" checked> السكان (حين تُختار طبقة)</label>
-      <p class="sub">اسحب بالزر الأيمن، أو بإصبعين على الجوال، لإمالة الخريطة وتدويرها ورؤية التضاريس. التضخيم يجعل الجبال مرئية على مستوى القارات، فالارتفاع ليس بمقياس الأرض.</p>
       <p class="sub warn" id="relief-note"></p>
+      <details class="advanced research-only">
+        <summary class="sub">إعدادات متقدمة</summary>
+        <label for="terrain-exaggeration" class="sub">تضخيم الارتفاع: <span id="terrain-exaggeration-val"></span></label>
+        <input type="range" id="terrain-exaggeration" min="1" max="30" step="0.5" value="15">
+        <label class="opt sub"><input type="checkbox" id="terrain-auto" checked> تضخيم تلقائي بحسب التقريب</label>
+        <label class="opt"><input type="checkbox" data-group="hillshade" checked> ظلال التضاريس</label>
+        <label class="opt"><input type="checkbox" data-group="water" checked> الأنهار والبحيرات</label>
+        <p class="sub">اسحب بالزر الأيمن، أو بإصبعين على الجوال، لإمالة الخريطة وتدويرها. التضخيم يجعل الجبال مرئية على مستوى القارات، فالارتفاع ليس بمقياس الأرض.</p>
+        <div class="legend sub" aria-label="مفتاح الحدود">
+          <span><i class="sw sw-precise"></i>حد محدد</span>
+          <span><i class="sw sw-approx"></i>حد تقريبي: منطقة لا خط</span>
+          <span><i class="sw sw-none"></i>أرض بلا كيان مسمّى</span>
+        </div>
+      </details>
+    </details>
+
+    <details class="section" open>
+      <summary>السنن</summary>
+      <p>اختر سُنّة لترى نص ابن خلدون وشواهدها، وأماكن الشواهد على الخريطة.</p>
+      <div class="row" id="sunan-list"></div>
+      <div id="sunan-detail" class="card"></div>
     </details>
 
     <details class="section" id="cube-panel">
@@ -177,36 +336,19 @@
       </div>
     </details>
 
-    <details class="section" id="journey-panel" open>
-      <summary>الرحلات</summary>
-      <p>رحلة تمرّ بشواهد موثّقة خطوة خطوة، وتنتقل الخريطة معها إلى حدود السنة المناسبة.</p>
-      <div class="row" id="journey-list"></div>
-    </details>
-
-    <details class="section" open>
-      <summary>السنن</summary>
-      <p>اختر سُنّة لترى نص ابن خلدون وشواهدها، وأماكن الشواهد على الخريطة.</p>
-      <div class="row" id="sunan-list"></div>
-      <div id="sunan-detail" class="card"></div>
-    </details>
-
-    <details class="section">
+    <details class="section research-only">
       <summary>الحقب والمواقع</summary>
+      <p class="sub">شريط الزمن أسفل الشاشة يغيّر الحدود والمواقع والسكان والشواهد معاً. وهنا تفاصيل المصدر.</p>
       <div class="row" id="eras"></div>
       <p id="era-desc"></p>
-      <p class="warn research-only" id="era-warn"></p>
+      <p class="warn" id="era-warn"></p>
       <p id="count"></p>
       <label class="sub" for="border-select">حدود الدول في سنة:</label>
       <select id="border-select" aria-label="سنة حدود الدول"></select>
       <p id="border-note" class="sub"></p>
-      <div class="legend sub" aria-label="مفتاح الحدود">
-        <span><i class="sw sw-precise"></i>حد محدد</span>
-        <span><i class="sw sw-approx"></i>حد تقريبي: منطقة لا خط</span>
-        <span><i class="sw sw-none"></i>أرض بلا كيان مسمّى</span>
-      </div>
     </details>
 
-    <details class="section">
+    <details class="section research-only">
       <summary>لوحة التحولات</summary>
       <p>قارن خريطتين: ما بقي، وما خلفه اسم آخر، وما انقسم أو اندمج أو زال، بمطابقة الأرض لا الأسماء. اضغط اسماً لتراه على خريطة سنته.</p>
       <div class="mode">من <select id="tr-from" aria-label="السنة الأولى"></select> إلى <select id="tr-to" aria-label="السنة الثانية"></select></div>
@@ -214,26 +356,45 @@
       <p class="sub">المنهج: يُحسب تداخل المساحات (جيوديسياً) بين كل كيانين مسمّيين، والنسب بجانب الأسماء أنصبة من الأرض. هذه علاقات مكانية بين خريطتين، لا أحكام بالسببية أو الوراثة القانونية، ولا ترى ما جرى بين السنتين. الحدود تقريبية (≈ = تقريبية في المصدر)، والمضلعات بلا اسم لا تُعدّ كيانات.</p>
     </details>
 
-    <details class="section">
+    <details class="section research-only">
       <summary>السكان</summary>
+      <p class="sub">تتبع طبقة السكان الزمن تلقائياً، ويمكن اختيار غيرها هنا حتى يتغيّر الزمن.</p>
       <select id="demo-select" aria-label="طبقة السكان"></select>
       <p id="demo-note"></p>
     </details>
 
-    <details class="section">
+    <details class="section research-only">
       <summary>الادعاءات بحسب الحقبة</summary>
       <div class="row" id="claims-eras"></div>
       <div id="claims-list" class="claims-list card"></div>
-      <div class="row"><button type="button" id="claim-map-btn" aria-pressed="false">عرض أماكن الادعاءات على الخريطة</button></div>
+      <div class="row"><button type="button" id="claim-map-btn" aria-pressed="false">عرض أماكن الادعاءات كلها على الخريطة</button></div>
     </details>
 
-    <p class="credits">المصادر: Pleiades (CC BY 3.0)، Gapminder وHYDE عبر OWID (CC BY 4.0)، Natural Earth (ملك عام)، حدود الحقب التاريخية من Historical Basemaps (GPL-3، تقريبية وغير مؤكدة)، نص المقدمة من ويكي مصدر (CC BY-SA)، الاختبارات الكمية من بيانات Seshat (CC BY-NC-SA، استعمال غير تجاري). الادعاءات مسودات قيد المراجعة.</p>
-    <details class="credits sub">
-      <summary>إسناد صور الأقمار الصناعية وبيانات التضاريس</summary>
-      <p class="credits" dir="ltr">Satellite imagery: NASA Blue Marble: Next Generation, Reto Stöckli, NASA Earth Observatory (public domain). We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).</p>
-      <p class="credits" dir="ltr">ArcticDEM terrain data DEM(s) were created from DigitalGlobe, Inc., imagery and funded under National Science Foundation awards 1043681, 1559691, and 1542736; Australia terrain data © Commonwealth of Australia (Geoscience Australia) 2017; Austria terrain data © offene Daten Österreichs – Digitales Geländemodell (DGM) Österreich; Canada terrain data contains information licensed under the Open Government Licence – Canada; Europe terrain data produced using Copernicus data and information funded by the European Union - EU-DEM layers; Global ETOPO1 terrain data U.S. National Oceanic and Atmospheric Administration; Mexico terrain data source: INEGI, Continental relief, 2016; New Zealand terrain data Copyright 2011 Crown copyright (c) Land Information New Zealand and the New Zealand Government (All rights reserved); Norway terrain data © Kartverket; United Kingdom terrain data © Environment Agency copyright and/or database right 2015. All rights reserved; United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.</p>
+    <details class="section credits-box">
+      <summary>المصادر والتراخيص</summary>
+      <p class="credits">المصادر: Pleiades (CC BY 3.0)، Gapminder وHYDE عبر OWID (CC BY 4.0)، Natural Earth (ملك عام)، حدود الحقب التاريخية من Historical Basemaps (GPL-3، تقريبية وغير مؤكدة)، نص المقدمة من ويكي مصدر (CC BY-SA)، الاختبارات الكمية من بيانات Seshat (CC BY-NC-SA، استعمال غير تجاري). الادعاءات مسودات قيد المراجعة.</p>
+      <details class="credits sub">
+        <summary>إسناد صور الأقمار الصناعية وبيانات التضاريس</summary>
+        <p class="credits" dir="ltr">Satellite imagery: NASA Blue Marble: Next Generation, Reto Stöckli, NASA Earth Observatory (public domain). We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).</p>
+        <p class="credits" dir="ltr">ArcticDEM terrain data DEM(s) were created from DigitalGlobe, Inc., imagery and funded under National Science Foundation awards 1043681, 1559691, and 1542736; Australia terrain data © Commonwealth of Australia (Geoscience Australia) 2017; Austria terrain data © offene Daten Österreichs – Digitales Geländemodell (DGM) Österreich; Canada terrain data contains information licensed under the Open Government Licence – Canada; Europe terrain data produced using Copernicus data and information funded by the European Union - EU-DEM layers; Global ETOPO1 terrain data U.S. National Oceanic and Atmospheric Administration; Mexico terrain data source: INEGI, Continental relief, 2016; New Zealand terrain data Copyright 2011 Crown copyright (c) Land Information New Zealand and the New Zealand Government (All rights reserved); Norway terrain data © Kartverket; United Kingdom terrain data © Environment Agency copyright and/or database right 2015. All rights reserved; United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.</p>
+      </details>
     </details>
+    </div>
   </aside>
+  <aside id="card" hidden aria-label="بطاقة">
+    <button type="button" class="card-grip" aria-label="تكبير البطاقة أو تصغيرها"></button>
+    <button type="button" class="card-close" aria-label="إغلاق">×</button>
+    <div id="card-body"></div>
+  </aside>
+  <div id="timebar" role="group" aria-label="الزمن">
+    <button type="button" id="tb-play" aria-pressed="false" aria-label="تشغيل الزمن">▶</button>
+    <div id="tb-now"><b id="tb-year"></b><span id="tb-era"></span></div>
+    <div id="tb-track" role="slider" tabindex="0" aria-label="سنة الخريطة" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+      <div id="tb-bands"></div>
+      <div id="tb-stops"></div>
+      <div id="tb-thumb"></div>
+    </div>
+  </div>
   <script src="vendor/maplibre-gl.js"></script>
   <script src="app.js"></script>
   <script src="cube.js"></script>

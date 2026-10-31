@@ -6,8 +6,9 @@ function escapeHtml(text) {
 }
 const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const isNarrow = () => window.innerWidth < 600;
-// على الشاشات الضيقة تشغل اللوحة أعلى الشاشة (حتى 55%)، فتوضع النقاط تحتها.
-const fitPadding = () => (isNarrow() ? { top: Math.round(window.innerHeight * 0.55) + 20, bottom: 30, left: 30, right: 30 } : { top: 40, bottom: 40, left: 40, right: 420 });
+// اللوحة على يمين الشاشة (أو شريط مطويّ أعلاها على الجوال)، وشريط الزمن أسفلها، فتوضع النقاط في المساحة الحرة بينهما.
+const timebarHeight = () => document.getElementById("timebar")?.offsetHeight ?? 0;
+const fitPadding = () => (isNarrow() ? { top: 90, bottom: timebarHeight() + 30, left: 30, right: 30 } : { top: 40, bottom: timebarHeight() + 30, left: 40, right: 420 });
 
 // ---------- طريقة العرض: مبسّط أو باحث ----------
 const modeButtons = document.querySelectorAll(".mode button");
@@ -81,8 +82,17 @@ const SKY = {
   satellite: { "sky-color": "#0b1d3a", "horizon-color": "#9cc3ef", "fog-color": "#9cc3ef", "fog-ground-blend": 0.9, "horizon-fog-blend": 0.4, "sky-horizon-blend": 0.6, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 3, 0.8, 5, 0] },
   drawn: { "sky-color": cssVar("--sea"), "horizon-color": cssVar("--bg"), "fog-color": cssVar("--bg"), "fog-ground-blend": 0.9, "horizon-fog-blend": 0.4, "sky-horizon-blend": 0.6, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 3, 0.8, 5, 0] },
 };
-const BORDER_COLOR = { satellite: "#ffe2b0", drawn: "#8a4b2a" };
-const HIGHLIGHT_COLOR = { satellite: "#ff5a36", drawn: "#c0392b" };
+// لون ثابت لكل كيان عبر السنوات: درجة لون تُشتق من معرّفه في ويكي بيانات إن تحقق، وإلا من اسمه في المصدر،
+// فيبقى الكيان نفسه بلونه نفسه من خريطة إلى أخرى. اللون تمييز بصري فقط، ولا يحمل معنى تاريخياً.
+function hueOf(key) {
+  let h = 2166136261;
+  for (const ch of String(key)) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619); }
+  return (h >>> 0) % 360;
+}
+const ENTITY_SL = { satellite: "78%, 66%", drawn: "48%, 46%" };
+const entityColor = (mode) => ["to-color", ["concat", "hsl(", ["to-string", ["get", "_h"]], `, ${ENTITY_SL[mode]})`]];
+const swatchColor = (h) => `hsl(${h}, ${ENTITY_SL[basemap.mode]})`;
+const HIGHLIGHT_COLOR = { satellite: "#ffffff", drawn: "#2a2620" };
 const basemap = { mode: "satellite" };
 const map = new maplibregl.Map({
   container: "map",
@@ -116,10 +126,10 @@ const map = new maplibregl.Map({
   zoom: 3,
   pitch: 35,
   maxPitch: 85,
-  attributionControl: { customAttribution: "Natural Earth · Pleiades · OWID/HYDE · Gapminder" },
+  // الإسناد مطويّ خلف زر ⓘ فلا يركب على أزرار الخريطة، ونصّه الكامل في «المصادر والتراخيص»
+  attributionControl: { compact: true, customAttribution: "Natural Earth · Pleiades · OWID/HYDE · Gapminder" },
 });
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-left");
-const popup = new maplibregl.Popup({ closeButton: true, closeOnClick: true, maxWidth: "320px" });
 
 // ---------- لوحة الطبقات: ما يختاره القارئ يعلو على ما تفتحه الأقسام ----------
 // كل قسم يطلب إظهار طبقته أو إخفاءها عبر setVis، والطبقة لا تظهر إلا إذا طلبها القسم ولم يطفئها القارئ.
@@ -135,7 +145,7 @@ const LAYER_GROUPS = {
 };
 const groupOf = (id) => Object.keys(LAYER_GROUPS).find((g) => LAYER_GROUPS[g].includes(id));
 const wanted = new Map(["hillshade", "lakes", "rivers"].map((id) => [id, true])); // طبقات الأساس ظاهرة ابتداءً
-const userOff = new Set();
+const userOff = new Set(["demography"]); // السكان مطفأة ابتداءً، ويشعلها القارئ من بطاقات الطبقات
 function setVis(id, on) {
   wanted.set(id, on);
   if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", on && !userOff.has(groupOf(id)) ? "visible" : "none");
@@ -198,8 +208,8 @@ function applyBasemap(mode) {
   if (map.getLayer("hillshade")) for (const [k, v] of Object.entries(HILLSHADE[mode])) map.setPaintProperty("hillshade", k, v);
   map.setSky(SKY[mode]);
   if (map.getLayer("borders-fill")) {
-    map.setPaintProperty("borders-fill", "fill-color", BORDER_COLOR[mode]);
-    for (const id of ["borders-halo", "borders-line-approx", "borders-line"]) map.setPaintProperty(id, "line-color", BORDER_COLOR[mode]);
+    map.setPaintProperty("borders-fill", "fill-color", entityColor(mode));
+    for (const id of ["borders-halo", "borders-line-approx", "borders-line"]) map.setPaintProperty(id, "line-color", entityColor(mode));
     map.setPaintProperty("borders-highlight", "line-color", HIGHLIGHT_COLOR[mode]);
   }
 }
@@ -218,10 +228,26 @@ function stopSatellite() {
   applyBasemap("drawn");
   basemapNoteEl.textContent = "تعذّر الوصول إلى صور الأقمار الصناعية (NASA GIBS)، فعُرضت الخريطة المرسومة.";
 }
-// على الشاشات الضيقة: قسم الطبقات مطويّ، والإسناد مطويّ خلف زر ⓘ، لتبقى الخريطة مرئية
-if (isNarrow()) {
-  document.getElementById("layer-panel").open = false;
-  map.on("load", () => document.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show"));
+// الإسناد مطويّ خلف زر ⓘ. وعلى الشاشات الضيقة تُطوى اللوحة إلى شريط عنوان، لتبقى الخريطة مرئية
+map.on("load", () => document.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show"));
+const panelEl = document.getElementById("panel");
+const panelToggle = document.getElementById("panel-toggle");
+function setPanelCollapsed(c) {
+  panelEl.classList.toggle("collapsed", c);
+  panelToggle.setAttribute("aria-expanded", String(!c));
+  panelToggle.textContent = c ? "القائمة" : "إخفاء";
+}
+panelToggle.addEventListener("click", () => {
+  const open = panelEl.classList.contains("collapsed");
+  if (open && !cardEl.hidden) closeCard();
+  setPanelCollapsed(!open);
+});
+if (isNarrow()) setPanelCollapsed(true);
+// يعيد مربعات الطبقات وظهورها إلى ما في userOff (بعد أن يغيّره العرض أو قائمة السكان)
+function syncLayerInputs() {
+  for (const cb of document.querySelectorAll("#layer-panel input[data-group]")) cb.checked = !userOff.has(cb.dataset.group);
+  for (const g of Object.keys(LAYER_GROUPS)) for (const id of LAYER_GROUPS[g]) if (wanted.has(id)) setVis(id, wanted.get(id));
+  updateLabels();
 }
 document.getElementById("layer-panel").addEventListener("change", (e) => {
   const t = e.target;
@@ -274,7 +300,8 @@ function updateLabels() {
   const on = !userOff.has("labels");
   const z = map.getZoom();
   for (const l of countryLabels) {
-    const show = on && z >= l.min - 1;
+    // ما لا اسم عربياً موثّقاً له لا يظهر في المستويات البعيدة، فلا تزدحم الكرة بأسماء إنجليزية
+    const show = on && z >= (l.latin ? Math.max(l.min, 3.5) : l.min - 1);
     if (show && !l.added) { l.marker.addTo(map); l.added = true; } else if (!show && l.added) { l.marker.remove(); l.added = false; }
   }
   declutterLabels();
@@ -294,16 +321,18 @@ function declutterLabels() {
     else kept.push(box);
   }
 }
+// بيانات أسماء سنة (أو null إن تعذّرت)، تُحمَّل مرة واحدة وتستعملها الأسماء والألوان والبطاقة
+function labelData(key) {
+  const url = String(key) === "modern" ? "data/borders/modern_labels.json" : `data/borders/labels_${key}.json`;
+  if (!labelCache.has(url)) labelCache.set(url, getJson(url).catch(() => null));
+  return labelCache.get(url);
+}
 async function showLabels(key) {
   key = String(key);
   if (key === labelKey) return;
   labelKey = key;
-  const url = key === "modern" ? "data/borders/modern_labels.json" : `data/borders/labels_${key}.json`;
-  let data = labelCache.get(url);
-  if (!data) {
-    try { data = await getJson(url); } catch { return; }
-    labelCache.set(url, data);
-  }
+  const data = await labelData(key);
+  if (!data) return;
   if (key !== labelKey) return; // تغيّرت السنة أثناء التحميل
   for (const l of countryLabels) if (l.added) l.marker.remove();
   labelInfo = new Map(data.labels.map((l) => [l.en, l]));
@@ -319,20 +348,92 @@ async function showLabels(key) {
       el.textContent = l.ar ?? l.en;
       el.title = l.ar ? l.en : "لا اسم عربي موثّق بعد";
     }
-    return { min: l.min, added: false, marker: new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]) };
+    return { min: l.min, latin: !l.ar, added: false, marker: new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]) };
   });
+  // الأسماء العربية أولاً في منع التراكب، ثم ما لا عربي له، مع حفظ ترتيب الأهمية داخل كلٍّ منهما
+  countryLabels.sort((a, b) => a.latin - b.latin);
   updateLabels();
 }
-map.on("load", () => { if (!labelKey) showLabels("modern"); });
 map.on("zoomend", updateLabels);
 map.on("moveend", declutterLabels);
 
-// ---------- البطاقة: الاسم العربي عنواناً، والتفاصيل كلها تحته ----------
-const fmtInt = (n) => Math.round(n).toLocaleString("ar");
-const yearText = (y) => (y === "modern" ? "اليوم" : yearLabel(Number(y)));
-function cardHtml(title, rows, foot = "") {
+// ---------- البطاقة: درج جانبي على المكتب، وورقة سفلية على الجوال ----------
+// النقر على الخريطة يمرّ بحَكَم واحد (آخر الملف) يختار أعلى ما تحت المؤشر أولوية ويفتح بطاقته هنا،
+// ويذكر ما تحته أيضاً. الاسم العربي عنوان، والشواهد قبل التفاصيل، ومصدر البيانات في تذييل مطويّ.
+const fmtInt = (n) => Math.round(n).toLocaleString("ar-u-nu-latn");
+// رقم كبير مقروء («5.3 مليون») والدقيق في التلميح
+function fmtBig(n) {
+  const f = (x, d) => x.toLocaleString("ar-u-nu-latn", { maximumFractionDigits: d });
+  if (n >= 1e9) return `${f(n / 1e9, 2)} مليار`;
+  if (n >= 1e6) return `${f(n / 1e6, 1)} مليون`;
+  if (n >= 1e4) return `${f(n / 1e3, 0)} ألف`;
+  return fmtInt(n);
+}
+const yearText = (y) => (String(y) === "modern" ? "اليوم" : yearLabel(Number(y)));
+const cardEl = document.getElementById("card");
+const cardBody = document.getElementById("card-body");
+let cardToken = 0; // يُبطل تحميلاً متأخراً لبطاقة فُتحت بعدها أخرى
+let cardCurrent = null; // { c, f }: المعروض الآن
+let cardAlso = []; // ما تحت المؤشر غير المعروض، لروابط «وهنا أيضاً»
+let cardEntity = null; // { name, kind }: الكيان المعروض، لتتبّعه عبر الزمن
+function openCard(html) {
+  if (isNarrow()) setPanelCollapsed(true); // على الجوال: البطاقة أو القائمة، لا الاثنتان
+  cardBody.innerHTML = html;
+  cardEl.hidden = false;
+  cardEl.scrollTop = 0;
+  document.body.classList.add("card-open");
+  return ++cardToken;
+}
+function updateCard(token, html) {
+  if (token === cardToken && !cardEl.hidden) cardBody.innerHTML = html;
+}
+function closeCard() {
+  cardToken++;
+  cardCurrent = null;
+  cardEntity = null;
+  cardEl.hidden = true;
+  cardEl.classList.remove("full");
+  document.body.classList.remove("card-open");
+  if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
+  markPoint(null);
+}
+cardEl.querySelector(".card-close").addEventListener("click", closeCard);
+cardEl.querySelector(".card-grip").addEventListener("click", () => cardEl.classList.toggle("full"));
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape" || cardEl.hidden) return;
+  e.stopImmediatePropagation(); // يغلق البطاقة وحدها، لا الرحلة أو العرض تحتها
+  closeCard();
+});
+// حلقة حول النقطة المختارة
+function markPoint(coords) {
+  const data = { type: "FeatureCollection", features: coords ? [{ type: "Feature", properties: {}, geometry: { type: "Point", coordinates: coords } }] : [] };
+  if (map.getSource("selected")) { map.getSource("selected").setData(data); return; }
+  if (!coords) return;
+  map.addSource("selected", { type: "geojson", data });
+  map.addLayer({ id: "selected", type: "circle", source: "selected", paint: { "circle-radius": 16, "circle-opacity": 0, "circle-stroke-width": 2.5, "circle-stroke-color": HIGHLIGHT_COLOR[basemap.mode] } });
+}
+
+const chip = (text, cls = "", attrs = "") => (attrs
+  ? `<button type="button" class="chip ${cls}" ${attrs}>${escapeHtml(text)}</button>`
+  : `<span class="chip ${cls}">${escapeHtml(text)}</span>`);
+function cardHead({ title, en = "", swatch = "", chips = [], note = "" }) {
+  return `<header class="ch"><div class="ch-row">${swatch ? `<i class="ch-sw" style="background:${swatch}"></i>` : ""}<h2>${escapeHtml(title)}</h2></div>` +
+    (en && en !== title ? `<div class="ch-en" dir="ltr">${escapeHtml(en)}</div>` : "") +
+    (chips.length ? `<div class="chips">${chips.join("")}</div>` : "") +
+    (note ? `<p class="ch-note">${note}</p>` : "") + `</header>`;
+}
+// items: [التسمية، القيمة المقروءة، القيمة الدقيقة للتلميح]
+function statsHtml(items) {
+  const list = items.filter((x) => x && x[1]);
+  return list.length ? `<div class="stats">${list.map(([k, v, t]) => `<div class="stat"${t ? ` title="${escapeHtml(t)}"` : ""}><b>${escapeHtml(v)}</b><span>${escapeHtml(k)}</span></div>`).join("")}</div>` : "";
+}
+function aboutHtml(rows) {
   const dl = rows.filter((r) => r && r[1]).map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${v}</dd>`).join("");
-  return `<div class="popup-name">${escapeHtml(title)}</div><dl class="card-dl">${dl}</dl>${foot}`;
+  return dl ? `<details class="card-about"><summary>عن هذه البيانات</summary><dl class="card-dl">${dl}</dl></details>` : "";
+}
+function alsoHtml() {
+  if (!cardAlso.length) return "";
+  return `<div class="card-also">وهنا أيضاً: <span class="chips">${cardAlso.map((h, i) => chip(`${h.c.kind}: ${h.c.label(h.f.properties)}`, "", `data-also="${i}"`)).join("")}</span></div>`;
 }
 function nameSourceHtml(info, modern) {
   if (modern) {
@@ -353,38 +454,153 @@ function nameSourceHtml(info, modern) {
   if (info.st === "override") return `تعديل يدوي معلن ${link}`;
   return `ويكي بيانات ${link}`;
 }
-function entityCard(p, key) {
-  const modern = String(key) === "modern";
-  const info = labelInfo.get(p.NAME);
-  const title = p.NAME_AR || info?.ar || p.NAME;
-  const prec = modern ? "محددة (Natural Earth)" : `${PRECISION_LABEL[p.BORDERPRECISION] ?? "غير مذكورة"} بحسب المصدر${Number(key) < 1900 ? "، ويرسمها الأطلس تقريبية" : ""}`;
-  return cardHtml(title, [
-    ["الاسم بالإنجليزية", title !== p.NAME ? escapeHtml(p.NAME) : ""],
-    ["ضمن", p.PARTOF && p.PARTOF !== p.NAME ? escapeHtml(p.PARTOF) : ""],
-    ["خريطة سنة", escapeHtml(yearText(key))],
-    ["المساحة على هذه الخريطة", info?.a ? `${fmtInt(info.a)} كم² تقريباً` : ""],
-    ["يظهر على خرائط", info?.years ? escapeHtml(info.years.map((y) => yearLabel(y)).join("، ")) : ""],
-    ["دقة الحد", escapeHtml(prec)],
-    ["مصدر الاسم العربي", nameSourceHtml(info, modern)],
-    ["مصدر الحدود", modern ? "Natural Earth (ملك عام)" : "Historical Basemaps (GPL-3)"],
-  ]);
+
+// شريط حياة الكيان: سنوات الخرائط التي يظهر فيها اسمه، والضغط على سنة ينقل الزمن إليها ويتبعه
+function lifeHtml(years, key, swatch) {
+  const on = new Set([...(years ?? []).map(String), String(key)]);
+  const dots = TIME_STOPS.map((k) => {
+    const has = on.has(String(k));
+    const now = String(k) === String(key);
+    return `<button type="button" class="life-dot${has ? " on" : ""}${now ? " now" : ""}" title="${escapeHtml(yearText(k))}"${has && !now ? ` data-follow="${k}"` : " disabled"}></button>`;
+  }).join("");
+  const list = TIME_STOPS.filter((k) => on.has(String(k))).map(yearText).join("، ");
+  return `<div class="life" style="--sw:${swatch}"><div class="life-title">يظهر على خرائط: ${escapeHtml(list)}</div>` +
+    `<div class="life-track">${dots}</div><div class="life-labels"><span>${escapeHtml(yearText(TIME_STOPS[0]))}</span><span>اليوم</span></div></div>`;
 }
 
 // شواهد الادعاءات الواقعة على أرض الكيان في هذه الخريطة (web/data/links، من scripts/build_spatial_links.py).
 // ربط مكاني محسوب على حدود المصدر، لا حكم تاريخي: الكيان يُختار بالمكان داخل مضلعه.
 const linksCache = new Map();
-let cardToken = 0; // يُبطل تحميل شواهد بطاقة فُتحت بعد ذلك
 async function loadLinks(key) {
   if (!linksCache.has(key)) {
     try { linksCache.set(key, await getJson(`data/links/claims_by_entity_${key}.json`)); } catch { linksCache.set(key, {}); }
   }
   return linksCache.get(key);
 }
-function linkedClaimsHtml(name, links) {
-  const list = links[name];
-  if (!list?.length) return "";
-  const rows = list.map((c) => `<li>${escapeHtml(c.statement)}<br><span class="card-src"><span class="card-tier">${escapeHtml(c.tier)}</span> · ${escapeHtml(c.tier_reason)}<br><bdi>${escapeHtml(c.place_ar)}</bdi>${c.place_note ? ` (${escapeHtml(c.place_note)})` : ""} · <bdi>${escapeHtml(c.attributed_to)}</bdi>${c.sunan.length ? ` · ${c.sunan.map(escapeHtml).join("، ")}` : ""}</span></li>`).join("");
-  return `<details class="card-links"><summary>شواهد موثّقة تقع على أرضه في هذه الخريطة (${list.length})</summary><p class="card-src">ربط مكاني محسوب على حدود المصدر، يُصنَّف كل شاهد بمستواه وسببه، ولا يُعدّ حكماً تاريخياً.</p><ul>${rows}</ul></details>`;
+const TIER_CLASS = { "متحقق": "tier-v", "قريب من الحد": "tier-r", "شعب": "tier-r", "محل خلاف": "tier-x", "غير متحقق": "tier-x" };
+function linkedEvidenceHtml(name, links) {
+  const list = links?.[name] ?? [];
+  if (!list.length) return `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">لا شاهد موثّقاً يقع على أرضه في هذه الخريطة بعد.</p></section>`;
+  const rows = list.map((c) => `<article class="ev-card"><div class="ev-st">${escapeHtml(c.statement)}</div>` +
+    `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi> · <bdi>${escapeHtml(c.place_ar)}</bdi>${c.place_note ? ` (${escapeHtml(c.place_note)})` : ""}</div>` +
+    `<div class="chips">${chip(c.tier, TIER_CLASS[c.tier] ?? "")}${c.sunan.map((s) => chip(s)).join("")}</div>` +
+    `<div class="ev-by">${escapeHtml(c.tier_reason)}</div></article>`).join("");
+  return `<section class="card-sec"><h3>الشواهد على أرضه (${fmtInt(list.length)})</h3><p class="sub">ربط مكاني محسوب على حدود المصدر، يُصنَّف كل شاهد بمستواه وسببه، ولا يُعدّ حكماً تاريخياً.</p>${rows}</section>`;
+}
+
+const entityTitle = (p) => p.NAME_AR || labelInfo.get(p.NAME)?.ar || p.NAME || "أرض بلا كيان مسمّى";
+function openEntityCard(f, kind) {
+  const p = f.properties;
+  const key = time.key;
+  markPoint(null);
+  if (!p.NAME) {
+    cardEntity = null;
+    openCard(cardHead({ title: "أرض بلا كيان مسمّى", note: `لا يسمّي المصدر كياناً على هذه الأرض في خريطة ${escapeHtml(yearText(key))}.` }) + alsoHtml());
+    return;
+  }
+  const people = kind === "people";
+  cardEntity = { name: p.NAME, kind };
+  if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], people ? "" : p.NAME]);
+  const modern = String(key) === "modern";
+  const info = labelInfo.get(p.NAME);
+  const title = entityTitle(p);
+  const swatch = people ? PEOPLE_COLOR : swatchColor(p._h ?? hueOf(info?.qid ?? p.NAME));
+  const approxAll = !modern && Number(key) < 1900;
+  const preciseBorder = modern || (!approxAll && Number(p.BORDERPRECISION) === 3);
+  const chips = [chip(`خريطة ${yearText(key)}`), chip(people ? "شعب أو قبيلة" : "كيان سياسي"), chip(preciseBorder ? "حد محدد" : "حد تقريبي")];
+  if (info?.st === "arabized") chips.push(chip("تعريب تقديري", "tier-r"));
+  else if (!p.NAME_AR && !info?.ar) chips.push(chip("لا اسم عربي موثّق", "tier-x"));
+  const notes = [];
+  if (people) notes.push("مجموعة بشرية لا دولة، وحدودها تقريبية في المصدر، ولا تُعدّ في إحصاء الدول.");
+  if (p.PARTOF && p.PARTOF !== p.NAME) notes.push(`ضمن: <bdi>${escapeHtml(labelInfo.get(p.PARTOF)?.ar ?? p.PARTOF)}</bdi>`);
+  const span = info?.st === "verified" && (info.from != null || info.to != null)
+    ? `${info.from != null ? yearLabel(info.from) : "؟"} – ${info.to != null ? yearLabel(info.to) : "؟"}` : "";
+  const top = cardHead({ title, en: p.NAME, swatch, chips, note: notes.join("<br>") }) +
+    statsHtml([["المساحة على هذه الخريطة (كم²)", info?.a ? fmtBig(info.a) : "", info?.a ? `${fmtInt(info.a)} كم² تقريباً` : ""], ["مدته في ويكي بيانات", span]]) +
+    lifeHtml(info?.years, key, swatch);
+  const prec = modern ? "محددة (Natural Earth)" : `${PRECISION_LABEL[p.BORDERPRECISION] ?? "غير مذكورة"} بحسب المصدر${approxAll ? "، ويرسمها الأطلس تقريبية" : ""}`;
+  const about = aboutHtml([
+    ["الاسم في المصدر", escapeHtml(p.NAME)],
+    ["دقة الحد", escapeHtml(prec)],
+    ["مصدر الاسم العربي", nameSourceHtml(info, modern)],
+    ["مصدر الحدود", modern ? "Natural Earth (ملك عام)" : "Historical Basemaps (GPL-3)"],
+  ]);
+  const token = openCard(top + `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>` + about + alsoHtml());
+  loadLinks(key).then((links) => updateCard(token, top + linkedEvidenceHtml(p.NAME, links) + about + alsoHtml()));
+}
+// تتبّع الكيان المعروض إلى سنة أخرى: ينتقل الزمن، ثم تُفتح بطاقته في تلك السنة إن وُجد فيها
+async function followEntity(k) {
+  if (!cardEntity) return;
+  const { name, kind } = cardEntity;
+  const data = await loadBorders(k);
+  const src = kind === "people" ? peoplesData : data;
+  const f = src?.features.find((x) => x.properties.NAME === name);
+  cardAlso = [];
+  if (f) { cardCurrent = { c: CLICKABLE.find((c) => c.layer === (kind === "people" ? "peoples-fill" : "borders-fill")), f }; openEntityCard(f, kind); } else closeCard();
+}
+
+// دور كل ادعاء في السنن: مؤيد أو مقيِّد (يُملأ عند تحميل السنن)
+const claimRoles = new Map();
+const COORD_SHORT = {
+  "pleiades-representative": "نقطة تمثيلية من Pleiades",
+  approximate: "موقع تقديري",
+  "natural-earth-modern-city": "موقع المدينة الحديثة",
+  "wikidata-modern-city": "موقع المدينة الحديثة",
+};
+function openClaimCard(f) {
+  const p = f.properties;
+  markPoint(f.geometry.coordinates);
+  if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
+  cardEntity = null;
+  const only = activeSunna ? new Set(activeSunna.ids) : null;
+  const claims = JSON.parse(p.claims).filter((c) => !only || only.has(c.id));
+  const rows = claims.map((c) => {
+    const era = ERAS.find((x) => x.id === Number(c.era));
+    const roles = (claimRoles.get(c.id) ?? []).map((r) => chip(`${r.role === "limit" ? "يقيّد" : "يؤيد"}: ${r.name}`, r.role));
+    return `<article class="ev-card"><div class="ev-st">${escapeHtml(c.statement)}</div>` +
+      `<blockquote class="ev-q" dir="auto">“${escapeHtml(c.quote)}”</blockquote>` +
+      `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi></div>` +
+      (c.hedge ? `<div class="ev-hedge">تحفّظ: ${escapeHtml(c.hedge)}</div>` : "") +
+      `<div class="chips">${era ? chip(`الحقبة ${era.id}: ${era.label}`, "", `data-time="${era.border}" title="انقل الخريطة إلى زمنه"`) : ""}${roles.join("")}</div></article>`;
+  }).join("");
+  openCard(cardHead({
+    title: p.name_ar, en: p.name_en,
+    chips: [chip(COORD_SHORT[p.coord_status] ?? p.coord_status), chip(`الشواهد هنا: ${fmtInt(claims.length)}`, "tier-v")],
+    note: p.place_note && p.place_note !== "null" ? escapeHtml(p.place_note) : "",
+  }) + `<section class="card-sec"><h3>ما تقوله المصادر عن هذا المكان</h3><p class="sub">كل اقتباس مطابق لنص مصدره، ومعه قائله وتحفّظه.</p>${rows}</section>` +
+    aboutHtml([["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)]]) + alsoHtml());
+}
+function openPlaceCard(f) {
+  const p = f.properties;
+  markPoint(f.geometry.coordinates);
+  if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
+  cardEntity = null;
+  const era = ERAS.find((x) => x.id === Number(p.era));
+  openCard(cardHead({
+    title: p.name_ar, en: p.name_en,
+    chips: [era ? chip(`الحقبة ${era.id}: ${era.label}`) : "", chip(COORD_SHORT[p.coord_status] ?? p.coord_status)].filter(Boolean),
+  }) + aboutHtml([
+    ["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)],
+    ["في Pleiades", p.pleiades_id && p.pleiades_id !== "null" ? `<a href="https://pleiades.stoa.org/places/${encodeURIComponent(p.pleiades_id)}" target="_blank" rel="noopener">${escapeHtml(p.pleiades_title || p.pleiades_id)}</a>` : ""],
+    ["في المصدر", p.source_name && p.source_name !== "null" ? escapeHtml(`${p.source_name}${p.source_country && !String(p.source_country).startsWith("wikidata") ? `، ${p.source_country}` : ""}`) : ""],
+  ]) + alsoHtml());
+}
+// أسماء الأقاليم الستة في سلسلة السكان الإقليمية، وأسماء الدول من أسماء Natural Earth العربية إن طابقت
+const REGION_AR = { Africa: "أفريقيا", Asia: "آسيا", Europe: "أوروبا", "North and Central America": "أمريكا الشمالية والوسطى", "South America": "أمريكا الجنوبية", Oceania: "أوقيانوسيا" };
+let modernAr = new Map();
+const demoTitle = (p) => REGION_AR[p.name_en] ?? modernAr.get(p.name_en) ?? p.name_en;
+function openDemoCard(f) {
+  const p = f.properties;
+  markPoint(f.geometry.coordinates);
+  if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
+  cardEntity = null;
+  const region = p.level === "region";
+  openCard(cardHead({
+    title: demoTitle(p), en: p.name_en,
+    chips: [chip(`سنة ${yearLabel(Number(p.year))}`), chip(region ? "إقليم حديث التقسيم" : "دولة بحدودها الحديثة")],
+    note: region ? "الرقم لإقليم حديث التقسيم، وليس لحدود الحقبة." : "الرقم لأرض الدولة بحدودها الحديثة، لا لكيانات الحقبة.",
+  }) + statsHtml([["نسمة", fmtBig(Number(p.population)), `${formatPop(p.population)} نسمة`]]) +
+    aboutHtml([["المصدر", escapeHtml(demoMeta?.attribution ?? "")], ["ملاحظة", escapeHtml(demoMeta?.note ?? "")]]) + alsoHtml());
 }
 
 function fitTo(features, maxZoom) {
@@ -404,15 +620,16 @@ async function getJson(url) {
 }
 
 // ---------- الحقب ومواقعها ----------
+// from وto مدة الحقبة كما في وصفها، ويُرسم بها شريط الزمن وتُعرف بها حقبة كل سنة حدود
 const ERAS = [
-  { id: 1, border: -4000, label: "الماء والاستقرار", file: "data/places_era1.geojson", desc: "الحقبة الأولى: وادي الرافدين ومصر القديمة (4000-1200 ق.م)." },
-  { id: 2, border: -1000, label: "الطرق والممالك", file: "data/places_era2.geojson", desc: "الحقبة الثانية: الطرق والممالك الأولى (1200-500 ق.م)." },
-  { id: 3, border: -1, label: "الإمبراطوريات الكبرى", file: "data/places_era3.geojson", desc: "الحقبة الثالثة: الإمبراطوريات الكبرى (500 ق.م-300م)." },
-  { id: 4, border: 700, label: "الأديان الكبرى", file: "data/places_era4.geojson", desc: "الحقبة الرابعة: الأديان الكبرى وتشكّل العالم القديم المتأخر (300-1000م). مدن العصر الإسلامي (بغداد والبصرة وسامراء والقيروان والفسطاط) مواقع مدن حديثة، لا مواقع أثرية." },
-  { id: 5, border: 1200, label: "التبادل العابر للقارات", file: "data/places_era5.geojson", desc: "الحقبة الخامسة: التبادل العابر للقارات (1000-1450م). مدن العالم الإسلامي (القاهرة وتونس وفاس وأصفهان وسمرقند وحلب ودلهي) مواقع مدن حديثة من Natural Earth، لا مواقع أثرية." },
-  { id: 6, border: 1600, label: "الكشوف وتبادل العالم", file: "data/places_era6.geojson", desc: "الحقبة السادسة: الكشوف وتبادل العالم (1450-1760م). الحدود تقريبية لسنة 1600. المدن مراكز كبرى مختارة للحقبة، ومواقعها وأسماؤها من Natural Earth، وهي مواقع المدن الحديثة." },
-  { id: 7, border: 1800, label: "الصناعة والمدينة", file: "data/places_era7.geojson", desc: "الحقبة السابعة: الصناعة والمدينة (1760-1914م). الحدود تقريبية لسنة 1800. المدن مراكز كبرى مختارة للحقبة، ومواقعها وأسماؤها من Natural Earth، وهي مواقع المدن الحديثة." },
-  { id: 8, border: "modern", label: "الحروب العالمية والدولة الحديثة", file: "data/places_era8.geojson", desc: "الحقبة الثامنة: الحروب العالمية والدولة الحديثة (1914-2025م). الخريطة هنا حدود الدول اليوم من Natural Earth (ملك عام)، ويمكن اختيار حدود 1945 من القائمة. المواقع عواصم الدول اليوم من المصدر نفسه." },
+  { id: 1, from: -4000, to: -1200, border: -4000, label: "الماء والاستقرار", file: "data/places_era1.geojson", desc: "الحقبة الأولى: وادي الرافدين ومصر القديمة (4000-1200 ق.م)." },
+  { id: 2, from: -1200, to: -500, border: -1000, label: "الطرق والممالك", file: "data/places_era2.geojson", desc: "الحقبة الثانية: الطرق والممالك الأولى (1200-500 ق.م)." },
+  { id: 3, from: -500, to: 300, border: -1, label: "الإمبراطوريات الكبرى", file: "data/places_era3.geojson", desc: "الحقبة الثالثة: الإمبراطوريات الكبرى (500 ق.م-300م)." },
+  { id: 4, from: 300, to: 1000, border: 700, label: "الأديان الكبرى", file: "data/places_era4.geojson", desc: "الحقبة الرابعة: الأديان الكبرى وتشكّل العالم القديم المتأخر (300-1000م). مدن العصر الإسلامي (بغداد والبصرة وسامراء والقيروان والفسطاط) مواقع مدن حديثة، لا مواقع أثرية." },
+  { id: 5, from: 1000, to: 1450, border: 1200, label: "التبادل العابر للقارات", file: "data/places_era5.geojson", desc: "الحقبة الخامسة: التبادل العابر للقارات (1000-1450م). مدن العالم الإسلامي (القاهرة وتونس وفاس وأصفهان وسمرقند وحلب ودلهي) مواقع مدن حديثة من Natural Earth، لا مواقع أثرية." },
+  { id: 6, from: 1450, to: 1760, border: 1600, label: "الكشوف وتبادل العالم", file: "data/places_era6.geojson", desc: "الحقبة السادسة: الكشوف وتبادل العالم (1450-1760م). الحدود تقريبية لسنة 1600. المدن مراكز كبرى مختارة للحقبة، ومواقعها وأسماؤها من Natural Earth، وهي مواقع المدن الحديثة." },
+  { id: 7, from: 1760, to: 1914, border: 1800, label: "الصناعة والمدينة", file: "data/places_era7.geojson", desc: "الحقبة السابعة: الصناعة والمدينة (1760-1914م). الحدود تقريبية لسنة 1800. المدن مراكز كبرى مختارة للحقبة، ومواقعها وأسماؤها من Natural Earth، وهي مواقع المدن الحديثة." },
+  { id: 8, from: 1914, to: 2025, border: "modern", label: "الحروب العالمية والدولة الحديثة", file: "data/places_era8.geojson", desc: "الحقبة الثامنة: الحروب العالمية والدولة الحديثة (1914-2025م). الخريطة هنا حدود الدول اليوم من Natural Earth (ملك عام)، ويمكن اختيار حدود 1945 من القائمة. المواقع عواصم الدول اليوم من المصدر نفسه." },
 ];
 // سنوات طبقة الحدود المتاحة (web/data/borders)، وتُختار بها الحقبة أو يدوياً من القائمة
 const BORDER_YEARS = [-4000, -1000, -1, 700, 1200, 1600, 1800, 1914, 1945, 2010];
@@ -435,36 +652,66 @@ const PRECISION_LABEL = { 1: "تقريبية", 2: "دقة متوسطة", 3: "م�
 // طبقة الشعوب والقبائل: مضلعات يصنّفها ويكي بيانات شعوباً لا دولاً، ترسمها فوق الحدود بلون ونقط مختلفين.
 // تقريبية كما في المصدر، ولا تُعدّ دولاً في الإحصاء ولا في الشواهد السياسية.
 const PEOPLE_COLOR = "#7d4f8f";
+let peoplesData = null;
+// تهشير مائل للشعوب: انتماء بشري لا سيادة، فلا تُملأ مثل الدول
+function peoplePattern() {
+  if (map.hasImage("people-hatch")) return;
+  const n = 12;
+  const c = document.createElement("canvas");
+  c.width = c.height = n;
+  const ctx = c.getContext("2d");
+  ctx.strokeStyle = PEOPLE_COLOR;
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  for (const d of [-n, 0, n]) { ctx.moveTo(d, n); ctx.lineTo(d + n, 0); }
+  ctx.stroke();
+  map.addImage("people-hatch", ctx.getImageData(0, 0, n, n));
+}
 async function loadPeoples(key) {
   let data;
   try { data = await getJson(`data/borders/peoples_${key}.geojson`); } catch { data = { type: "FeatureCollection", features: [] }; }
+  peoplesData = data;
+  setLayerCount("peoples", data.features.length ? `المضلعات: ${fmtInt(data.features.length)}` : "لا شيء في هذه السنة");
   if (map.getSource("peoples")) {
     map.getSource("peoples").setData(data);
   } else {
+    peoplePattern();
     map.addSource("peoples", { type: "geojson", data });
-    map.addLayer({ id: "peoples-fill", type: "fill", source: "peoples", paint: { "fill-color": PEOPLE_COLOR, "fill-opacity": 0.22 } });
+    map.addLayer({ id: "peoples-fill", type: "fill", source: "peoples", paint: { "fill-pattern": "people-hatch", "fill-opacity": 0.8 } });
     map.addLayer({ id: "peoples-line", type: "line", source: "peoples", paint: { "line-color": PEOPLE_COLOR, "line-width": 1.2, "line-dasharray": [2, 2], "line-opacity": 0.85 } });
-    map.on("click", "peoples-fill", (e) => {
-      const p = e.features[0].properties;
-      const k = borderSelect.value;
-      const html = entityCard(p, k) + `<p class="card-src">شعب أو قبيلة أو مجموعة إثنية، وحدودها تقريبية في المصدر، وليست دولة.</p>`;
-      popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
-      const token = ++cardToken;
-      loadLinks(k).then((links) => {
-        if (token === cardToken && popup.isOpen()) popup.setHTML(html + linkedClaimsHtml(p.NAME, links));
-      });
-    });
     pointerOn("peoples-fill");
   }
   for (const id of LAYER_GROUPS.peoples) setVis(id, true);
 }
 
+// ---------- الزمن: سنة واحدة تقود الحدود والأسماء والشعوب والمواقع والسكان والشواهد ----------
+// سنوات الحدود المتاحة هي محطات الزمن، و«اليوم» آخرها. شريط الزمن وقائمة الحدود وأزرار الحقب والرحلات والعرض
+// كلها تمرّ بـ loadBorders، فلا تجتمع حدود سنة مع مواقع حقبة أخرى أو سكانها.
+const TIME_STOPS = [...BORDER_YEARS, "modern"];
+const MODERN_YEAR = 2025; // موضع «اليوم» على الشريط، كما في scripts/config/spatial_rules.json
+const time = { key: null, token: 0 };
+const timeKey = (v) => (String(v) === "modern" ? "modern" : Number(v));
+const yearOf = (k) => (String(k) === "modern" ? MODERN_YEAR : Number(k));
+const eraOf = (k) => { const y = yearOf(k); return ERAS.find((e) => y >= e.from && y < e.to) ?? ERAS[ERAS.length - 1]; };
+// طبقة السكان الأقرب إلى كل سنة حدود (r: الأقاليم الستة، c: الدول). 1914 و1945 لا طبقة قريبة منهما،
+// فلا يُعرض لهما سكان بدل عرض أرقام سنة بعيدة. والسنة الفعلية للبيانات تُذكر في بطاقة الطبقة والبطاقة.
+const DEMO_FOR_TIME = { "-4000": "r1", "-1000": "r2", "-1": "r3", 700: "r4", 1200: "r5", 1600: "r6", 1800: "r7", 2010: "c8", modern: "c8" };
+const setLayerCount = (g, text) => { const el = document.getElementById(`lc-${g}`); if (el) el.textContent = text; };
+
 async function loadBorders(key) {
+  key = timeKey(key);
+  const token = ++time.token;
+  time.key = key;
   borderSelect.value = String(key);
+  renderTime();
   const modern = key === "modern";
   const url = modern ? "data/borders/modern_countries.geojson" : `data/borders/borders_${key}.geojson`;
-  let data;
-  try { data = await getJson(url); } catch (err) { borderNoteEl.textContent = `تعذّر تحميل الحدود: ${err.message}`; return; }
+  let data, labels;
+  try { [data, labels] = await Promise.all([getJson(url), labelData(key)]); } catch (err) { borderNoteEl.textContent = `تعذّر تحميل الحدود: ${err.message}`; return; }
+  if (token !== time.token) return data; // طُلبت سنة أخرى أثناء التحميل
+  // لون كل كيان من معرّفه في ويكي بيانات إن تحقق، وإلا من اسمه في المصدر
+  const qids = new Map((labels?.labels ?? []).filter((l) => l.qid).map((l) => [l.en, l.qid]));
+  for (const f of data.features) if (f.properties.NAME) f.properties._h = hueOf(qids.get(f.properties.NAME) ?? f.properties.NAME);
   // حكم من الأطلس لا من المصدر: قبل القرن العشرين لم تُرسم أكثر الحدود بمعاهدات، فتُرسم كلها تقريبية
   const approxAll = !modern && Number(key) < 1900;
   const namedFeats = data.features.filter((f) => f.properties.NAME);
@@ -475,75 +722,71 @@ async function loadBorders(key) {
     : `حدود سنة ${yearLabel(key)}: ${namedFeats.length} مضلعاً مسمّى، ` +
       (preciseCount ? `${preciseCount} منها يصفه المصدر بأنه محدد، و${namedFeats.length - preciseCount} تقريبي` : "كلها تقريبية في المصدر") +
       `${unnamedCount ? `، و${unnamedCount} أرضاً بلا كيان مسمّى` : ""}. المصدر: Historical Basemaps (GPL-3).` +
-      (approxAll && preciseCount ? " قبل 1900 يرسم الأطلس كل الحدود تقريبية، لأن كثيراً منها لم يكن مرسوماً بمعاهدات آنذاك، والنافذة تذكر وصف المصدر." : "");
+      (approxAll && preciseCount ? " قبل 1900 يرسم الأطلس كل الحدود تقريبية، لأن كثيراً منها لم يكن مرسوماً بمعاهدات آنذاك، والبطاقة تذكر وصف المصدر." : "");
   const named = ["to-boolean", ["get", "NAME"]];
   // قبل 1900 لا شيء يُرسم محدداً: شرط لا يتحقق (لا دقة سالبة في المصدر)
   const precise = ["==", ["get", "BORDERPRECISION"], approxAll ? -1 : 3];
-  const fillOpacity = ["case", ["!", named], 0, precise, 0.16, 0.07];
+  const fillOpacity = ["case", ["!", named], 0, precise, 0.3, 0.2];
   showLabels(key);
   if (map.getSource("borders")) {
     map.getSource("borders").setData(data);
-    await loadPeoples(key);
     map.setPaintProperty("borders-fill", "fill-opacity", fillOpacity);
     map.setFilter("borders-halo", ["all", named, ["!", precise]]);
     map.setFilter("borders-line-approx", ["all", named, ["!", precise]]);
     map.setFilter("borders-line", ["all", named, precise]);
-    map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
-    return data;
+    map.setFilter("borders-highlight", ["==", ["get", "NAME"], cardEntity?.kind === "state" ? cardEntity.name : ""]);
+  } else {
+    map.addSource("borders", { type: "geojson", data });
+    const before = map.getLayer("places") ? "places" : undefined;
+    // الدقة ترسم اليقين: الحد المحدد خط متصل، والتقريبي (أو مجهول الدقة) خط متقطع فوق هالة ضبابية
+    // تُري الحد منطقةً لا خطاً. والأرض التي لا يسمّي المصدر عليها كياناً تبقى بلا تعبئة ولا حد.
+    const ec = entityColor(basemap.mode);
+    map.addLayer({ id: "borders-fill", type: "fill", source: "borders", paint: { "fill-color": ec, "fill-opacity": fillOpacity } }, before);
+    map.addLayer({
+      id: "borders-halo", type: "line", source: "borders", filter: ["all", named, ["!", precise]],
+      paint: { "line-color": ec, "line-opacity": 0.28, "line-width": ["interpolate", ["linear"], ["zoom"], 1, 4, 4, 10, 7, 22], "line-blur": ["interpolate", ["linear"], ["zoom"], 1, 3, 4, 8, 7, 18] },
+    }, before);
+    map.addLayer({ id: "borders-line-approx", type: "line", source: "borders", filter: ["all", named, ["!", precise]], paint: { "line-color": ec, "line-width": 1.1, "line-opacity": 0.7, "line-dasharray": [3, 3] } }, before);
+    map.addLayer({ id: "borders-line", type: "line", source: "borders", filter: ["all", named, precise], paint: { "line-color": ec, "line-width": 1.4, "line-opacity": 0.85 } }, before);
+    map.addLayer({ id: "borders-highlight", type: "line", source: "borders", filter: ["==", ["get", "NAME"], ""], paint: { "line-color": HIGHLIGHT_COLOR[basemap.mode], "line-width": 3 } }, before);
+    pointerOn("borders-fill");
+    for (const id of LAYER_GROUPS.borders) setVis(id, true);
   }
-  map.addSource("borders", { type: "geojson", data });
-  const before = map.getLayer("places") ? "places" : undefined;
-  // الدقة ترسم اليقين: الحد المحدد خط متصل، والتقريبي (أو مجهول الدقة) خط متقطع فوق هالة ضبابية
-  // تُري الحد منطقةً لا خطاً. والأرض التي لا يسمّي المصدر عليها كياناً تبقى بلا تعبئة ولا حد.
-  const bc = BORDER_COLOR[basemap.mode];
-  map.addLayer({ id: "borders-fill", type: "fill", source: "borders", paint: { "fill-color": bc, "fill-opacity": fillOpacity } }, before);
-  map.addLayer({
-    id: "borders-halo", type: "line", source: "borders", filter: ["all", named, ["!", precise]],
-    paint: { "line-color": bc, "line-opacity": 0.32, "line-width": ["interpolate", ["linear"], ["zoom"], 1, 4, 4, 10, 7, 22], "line-blur": ["interpolate", ["linear"], ["zoom"], 1, 3, 4, 8, 7, 18] },
-  }, before);
-  map.addLayer({ id: "borders-line-approx", type: "line", source: "borders", filter: ["all", named, ["!", precise]], paint: { "line-color": bc, "line-width": 1, "line-opacity": 0.55, "line-dasharray": [3, 3] } }, before);
-  map.addLayer({ id: "borders-line", type: "line", source: "borders", filter: ["all", named, precise], paint: { "line-color": bc, "line-width": 1.3, "line-opacity": 0.75 } }, before);
-  map.addLayer({ id: "borders-highlight", type: "line", source: "borders", filter: ["==", ["get", "NAME"], ""], paint: { "line-color": HIGHLIGHT_COLOR[basemap.mode], "line-width": 3 } }, before);
-  map.on("click", "borders-fill", (e) => {
-    if (map.getLayer("peoples-fill") && map.queryRenderedFeatures(e.point, { layers: ["peoples-fill"] }).length) return;
-    const p = e.features[0].properties;
-    if (!p.NAME) {
-      popup.setLngLat(e.lngLat).setHTML(`<div class="popup-sub">أرض لا يسمّي المصدر عليها كياناً في هذه السنة</div>`).addTo(map);
-      return;
-    }
-    const key = borderSelect.value;
-    const html = entityCard(p, key);
-    popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
-    const token = ++cardToken;
-    loadLinks(key).then((links) => {
-      if (token === cardToken && popup.isOpen()) popup.setHTML(html + linkedClaimsHtml(p.NAME, links));
-    });
-  });
-  pointerOn("borders-fill");
-  for (const id of LAYER_GROUPS.borders) setVis(id, true);
+  const names = new Set(namedFeats.map((f) => f.properties.NAME)).size;
+  setLayerCount("borders", `الكيانات: ${fmtInt(names)}`);
   await loadPeoples(key);
-  return data;
-}
-async function loadEra(era) {
+  if (token !== time.token) return data;
+  const era = eraOf(key);
   markEra(era.id);
   descEl.textContent = era.desc;
-  loadBorders(era.border);
+  const places = await loadPlaces(era);
+  if (token !== time.token) return data;
+  loadDemography(DEMO_FOR_TIME[key] ?? "", { fit: false });
+  ensureClaimPoints().then(() => { if (token === time.token) applyClaimView(); });
+  renderNow({ names, labels, places, era });
+  return data;
+}
+const placesCache = new Map();
+let placesData = null;
+async function loadPlaces(era) {
   if (!era.file) {
     setVis("places", false);
     countEl.textContent = "لا مواقع موثّقة لهذه الحقبة بعد.";
     warnEl.textContent = "";
-    return;
+    setLayerCount("places", "لا مواقع لهذه الحقبة");
+    return null;
   }
-  countEl.textContent = "جارٍ التحميل...";
+  if (!placesCache.has(era.file)) placesCache.set(era.file, getJson(era.file));
   let data;
-  try { data = await getJson(era.file); } catch (err) { countEl.textContent = `تعذّر تحميل المواقع: ${err.message}`; return; }
+  try { data = await placesCache.get(era.file); } catch (err) { placesCache.delete(era.file); countEl.textContent = `تعذّر تحميل المواقع: ${err.message}`; return null; }
+  placesData = data;
   const matched = data._meta?.matched ?? "";
   warnEl.textContent = matched ? `طابق Pleiades: ${matched}. المواقع التقديرية بلون أفتح.` : "";
   countEl.textContent = `عدد المواقع: ${data.features.length}`;
+  setLayerCount("places", `المواقع: ${fmtInt(data.features.length)}`);
   const source = map.getSource("places");
   if (source) {
     source.setData(data);
-    setVis("places", true);
   } else {
     map.addSource("places", { type: "geojson", data });
     map.addLayer({
@@ -551,33 +794,28 @@ async function loadEra(era) {
       type: "circle",
       source: "places",
       paint: {
-        "circle-radius": 6,
+        "circle-radius": ["interpolate", ["linear"], ["zoom"], 2, 4, 6, 7],
         "circle-color": ["match", ["get", "coord_status"], "approximate", "#b59a7a", "#8a4b2a"],
         "circle-stroke-color": "#fffdf8",
-        "circle-stroke-width": 2,
+        "circle-stroke-width": 1.8,
       },
-    });
-    map.on("click", "places", (e) => {
-      const p = e.features[0].properties;
-      const era = ERAS.find((x) => x.id === Number(p.era));
-      popup.setLngLat(e.lngLat).setHTML(cardHtml(p.name_ar, [
-        ["الاسم بالإنجليزية", p.name_en && p.name_en !== p.name_ar ? escapeHtml(p.name_en) : ""],
-        ["الحقبة", era ? escapeHtml(era.label) : ""],
-        ["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)],
-        ["في Pleiades", p.pleiades_id && p.pleiades_id !== "null" ? `<a href="https://pleiades.stoa.org/places/${encodeURIComponent(p.pleiades_id)}" target="_blank" rel="noopener">${escapeHtml(p.pleiades_title || p.pleiades_id)}</a>` : ""],
-        ["في المصدر", p.source_name && p.source_name !== "null" ? escapeHtml(`${p.source_name}${p.source_country && !String(p.source_country).startsWith("wikidata") ? `، ${p.source_country}` : ""}`) : ""],
-      ])).addTo(map);
-    });
+    }, map.getLayer("demography") ? "demography" : map.getLayer("claim-points") ? "claim-points" : undefined);
     pointerOn("places");
-    setVis("places", true);
   }
-  fitTo(data.features, 6);
-  for (const btn of erasEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(Number(btn.dataset.era) === era.id));
+  setVis("places", true);
+  return data;
+}
+// الحقبة من أزرارها: زمنها، ثم تقريب إلى مواقعها
+async function loadEra(era) {
+  await loadBorders(era.border);
+  if (era.file && placesCache.has(era.file)) {
+    try { fitTo((await placesCache.get(era.file)).features, 6); } catch {}
+  }
 }
 const borderSelect = document.getElementById("border-select");
 const borderNoteEl = document.getElementById("border-note");
 borderSelect.innerHTML = `<option value="modern">الدول اليوم (Natural Earth)</option>` + BORDER_YEARS.map((y) => `<option value="${y}">${escapeHtml(yearLabel(y))}</option>`).join("");
-borderSelect.addEventListener("change", () => loadBorders(borderSelect.value === "modern" ? "modern" : Number(borderSelect.value)));
+borderSelect.addEventListener("change", () => loadBorders(borderSelect.value));
 for (const era of ERAS) {
   const btn = document.createElement("button");
   btn.type = "button";
@@ -606,22 +844,31 @@ const demoNoteEl = document.getElementById("demo-note");
 demoSelect.innerHTML = `<option value="">بدون طبقة سكان</option>` + DEMO.map((d) => `<option value="${d.key}">${escapeHtml(d.label)}</option>`).join("");
 const formatPop = (n) => Number(n).toLocaleString("ar-u-nu-latn");
 
-async function loadDemography(key) {
+let demoMeta = null;
+let demoRequest = 0;
+// fit: تقريب إلى نقاط الطبقة حين يختارها القارئ من القائمة، لا حين تتبع الزمن
+async function loadDemography(key, { fit = true } = {}) {
+  const req = ++demoRequest;
+  demoSelect.value = key || "";
   if (!key) {
     setVis("demography", false);
     demoNoteEl.textContent = "";
+    demoMeta = null;
+    setLayerCount("demography", "لا طبقة قريبة من هذه السنة");
     return;
   }
   const demo = DEMO.find((d) => d.key === key);
   let data;
   try { data = await getJson(demo.file); } catch (err) { demoNoteEl.textContent = `تعذّر تحميل طبقة السكان: ${err.message}`; return; }
+  if (req !== demoRequest) return;
   const m = data._meta;
+  demoMeta = m;
   const unit = m.countries ? `${m.countries} دولة` : "6 أقاليم";
   demoNoteEl.innerHTML = `سنة ${escapeHtml(m.year)}، ${unit}.<span class="research-only"> ${escapeHtml(m.note)}</span>`;
+  setLayerCount("demography", `بيانات سنة ${yearLabel(Number(m.year))}`);
   const source = map.getSource("demography");
   if (source) {
     source.setData(data);
-    setVis("demography", true);
   } else {
     map.addSource("demography", { type: "geojson", data });
     map.addLayer({
@@ -630,26 +877,21 @@ async function loadDemography(key) {
       source: "demography",
       paint: {
         "circle-radius": ["interpolate", ["linear"], ["get", "population"], 0, 3, 1000000, 8, 100000000, 22, 1000000000, 40],
-        "circle-color": "#8a4b2a",
-        "circle-opacity": 0.4,
-        "circle-stroke-color": "#fffdf8",
+        "circle-color": "#e0913f",
+        "circle-opacity": 0.42,
+        "circle-stroke-color": "#fff3e0",
         "circle-stroke-width": 1,
       },
     }, map.getLayer("claim-points") ? "claim-points" : undefined);
-    map.on("click", "demography", (e) => {
-      const p = e.features[0].properties;
-      popup.setLngLat(e.lngLat).setHTML(
-        `<div class="popup-name">${escapeHtml(p.name_en)}</div>` +
-        `<div class="popup-sub">${formatPop(p.population)} نسمة، سنة ${escapeHtml(p.year)}</div>` +
-        `<div class="popup-sub">${p.level === "region" ? "إقليم تقريبي، وليس حدود الحقبة" : "حدود الدولة الحديثة، وليست كيانات الحقبة"}</div>`
-      ).addTo(map);
-    });
     pointerOn("demography");
-    setVis("demography", true);
   }
-  fitTo(data.features, 3);
+  setVis("demography", true);
+  if (fit) fitTo(data.features, 3);
 }
-demoSelect.addEventListener("change", () => loadDemography(demoSelect.value));
+demoSelect.addEventListener("change", () => {
+  if (demoSelect.value) { userOff.delete("demography"); syncLayerInputs(); }
+  loadDemography(demoSelect.value);
+});
 
 // ---------- الادعاءات بحسب الحقبة ----------
 const claimsEl = document.getElementById("claims-eras");
@@ -688,50 +930,55 @@ getJson("data/claims_index.json").then((index) => {
 // ---------- أماكن الادعاءات ----------
 const claimMapBtn = document.getElementById("claim-map-btn");
 let claimPoints = null;
+let claimPointsReady = null;
+// ما يُعرض من أماكن الادعاءات: ادعاءات حقبة الزمن الحالي، إلا إذا اختارت سُنّة أو رحلة أو زرّ «كلها» غير ذلك
+const claimView = { override: false, filter: null };
 
-async function ensureClaimPoints() {
-  if (claimPoints) return true;
-  try { claimPoints = await getJson("data/claim_points.geojson"); } catch { return false; }
-  map.addSource("claim-points", { type: "geojson", data: claimPoints });
-  map.addLayer({
-    id: "claim-points",
-    type: "circle",
-    source: "claim-points",
-    layout: { visibility: "none" },
-    paint: {
-      "circle-radius": ["+", 9, ["*", 2.5, ["get", "count"]]],
-      "circle-color": cssVar("--evidence"),
-      "circle-opacity": 0.7,
-      "circle-stroke-color": "#fffdf8",
-      "circle-stroke-width": 2,
-    },
-  });
-  map.on("click", "claim-points", (e) => {
-    const p = e.features[0].properties;
-    const only = activeSunna ? new Set(activeSunna.ids) : null;
-    const list = JSON.parse(p.claims).filter((c) => !only || only.has(c.id)).map((c) =>
-      `<div style="margin-top:6px">${escapeHtml(c.statement)}` +
-      `<div class="popup-sub">الحقبة ${c.era} · ${escapeHtml(c.attributed_to)}</div>` +
-      `<div class="popup-sub research-only">“${escapeHtml(c.quote)}”</div></div>`
-    ).join("");
-    const note = p.place_note ? `<div class="popup-sub">${escapeHtml(p.place_note)}</div>` : "";
-    const en = p.name_en && p.name_en !== p.name_ar ? `<div class="popup-sub">${escapeHtml(p.name_en)}</div>` : "";
-    popup.setLngLat(e.lngLat).setHTML(`<div class="popup-name">${escapeHtml(p.name_ar)}</div>${en}${note}${list}`).addTo(map);
-  });
-  pointerOn("claim-points");
-  return true;
+function ensureClaimPoints() {
+  claimPointsReady ??= (async () => {
+    try { claimPoints = await getJson("data/claim_points.geojson"); } catch { claimPointsReady = null; return false; }
+    // حقب ادعاءات كل مكان، ليُصفّى بها بحسب الزمن
+    for (const f of claimPoints.features) f.properties.eras = `,${[...new Set(JSON.parse(f.properties.claims).map((c) => c.era))].join(",")},`;
+    map.addSource("claim-points", { type: "geojson", data: claimPoints });
+    map.addLayer({
+      id: "claim-points",
+      type: "circle",
+      source: "claim-points",
+      layout: { visibility: "none" },
+      paint: {
+        "circle-radius": ["+", 8, ["*", 1.8, ["get", "count"]]],
+        "circle-color": cssVar("--evidence"),
+        "circle-opacity": 0.78,
+        "circle-stroke-color": "#fffdf8",
+        "circle-stroke-width": 2,
+      },
+    });
+    pointerOn("claim-points");
+    return true;
+  })();
+  return claimPointsReady;
 }
-function showClaimPoints(show, filter = null) {
+const eraClaimFilter = () => ["in", `,${eraOf(time.key ?? "modern").id},`, ["get", "eras"]];
+function applyClaimView() {
   if (!map.getLayer("claim-points")) return;
-  map.setFilter("claim-points", filter);
-  setVis("claim-points", show);
+  map.setFilter("claim-points", claimView.override ? claimView.filter : eraClaimFilter());
+  setVis("claim-points", true);
+  if (claimView.override) { setLayerCount("claims", claimView.filter ? "مختارة" : "كلها"); return; }
+  const id = `,${eraOf(time.key ?? "modern").id},`;
+  const n = claimPoints.features.filter((f) => f.properties.eras.includes(id)).length;
+  setLayerCount("claims", n ? `الأماكن في الحقبة: ${fmtInt(n)}` : "لا أماكن في هذه الحقبة");
+}
+// show=false يعيد العرض إلى ادعاءات الحقبة الحالية
+function showClaimPoints(show, filter = null) {
+  claimView.override = show;
+  claimView.filter = show ? filter : null;
+  applyClaimView();
   claimMapBtn.setAttribute("aria-pressed", String(show && !filter));
 }
 claimMapBtn.addEventListener("click", async () => {
   if (!(await ensureClaimPoints())) return;
   const show = claimMapBtn.getAttribute("aria-pressed") !== "true";
-  activeSunna = null;
-  for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", "false");
+  clearSunna();
   showClaimPoints(show);
   if (show) fitTo(claimPoints.features, 4);
 });
@@ -769,6 +1016,10 @@ function renderSunna(s, placesLinked) {
     `<span class="badge">${escapeHtml(s.strength)}: ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>` +
     khaldun + quant + mapNote + support + limits + antecedents + modern;
 }
+function clearSunna() {
+  activeSunna = null;
+  for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", "false");
+}
 async function selectSunna(s) {
   for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.sunna === s.id));
   const ids = [...s.supporting, ...s.limiting].filter((x) => x.id).map((x) => x.id);
@@ -787,13 +1038,19 @@ async function selectSunna(s) {
 async function loadSunan() {
   try { sunanData = await getJson("data/sunan.json"); } catch (err) { sunanDetailEl.textContent = `تعذّر تحميل السنن: ${err.message}`; return; }
   for (const s of sunanData.sunan) {
+    for (const c of s.supporting) if (c.id) claimRoles.set(c.id, [...(claimRoles.get(c.id) ?? []), { name: s.name, role: "support" }]);
+    for (const c of s.limiting) if (c.id) claimRoles.set(c.id, [...(claimRoles.get(c.id) ?? []), { name: s.name, role: "limit" }]);
     const btn = document.createElement("button");
     btn.type = "button";
     btn.textContent = s.name.replace("سُنّة ", "");
     btn.title = s.name;
     btn.dataset.sunna = s.id;
     btn.setAttribute("aria-pressed", "false");
-    btn.addEventListener("click", () => selectSunna(s));
+    // الضغط على السُّنّة المختارة يلغي اختيارها ويعيد أماكن الشواهد إلى حقبة الزمن الحالي
+    btn.addEventListener("click", () => {
+      if (activeSunna?.id === s.id) { clearSunna(); showClaimPoints(false); sunanDetailEl.textContent = ""; return; }
+      selectSunna(s);
+    });
     sunanListEl.appendChild(btn);
   }
 }
@@ -911,3 +1168,200 @@ trResultEl.addEventListener("click", async (e) => {
 trFrom.addEventListener("change", showTransition);
 trTo.addEventListener("change", showTransition);
 showTransition();
+
+// ---------- حَكَم النقر: أعلى ما تحت المؤشر أولوية يفتح بطاقته، وما تحته يُذكر فيها ----------
+// الشاهد أولاً، ثم الموقع، ثم السكان، ثم الشعب، ثم الكيان؛ والأرض بلا كيان مسمّى لا تُعرض إلا إن لم يكن تحت المؤشر غيرها.
+const CLICKABLE = [
+  { layer: "claim-points", kind: "شواهد", label: (p) => p.name_ar, open: openClaimCard },
+  { layer: "places", kind: "موقع", label: (p) => p.name_ar, open: openPlaceCard },
+  { layer: "demography", kind: "سكان", label: demoTitle, open: openDemoCard },
+  { layer: "peoples-fill", kind: "شعب", label: entityTitle, open: (f) => openEntityCard(f, "people") },
+  { layer: "borders-fill", kind: "كيان", label: entityTitle, open: (f) => openEntityCard(f, "state") },
+];
+function showHit(hit) {
+  cardCurrent = hit;
+  hit.c.open(hit.f);
+}
+map.on("click", (e) => {
+  const layers = CLICKABLE.map((c) => c.layer).filter((id) => map.getLayer(id));
+  const feats = layers.length ? map.queryRenderedFeatures(e.point, { layers }) : [];
+  const hits = [];
+  for (const c of CLICKABLE) {
+    const f = feats.find((x) => x.layer.id === c.layer && (c.layer !== "borders-fill" || x.properties.NAME));
+    if (f) hits.push({ c, f });
+  }
+  if (!hits.length) {
+    const blank = feats.find((x) => x.layer.id === "borders-fill");
+    if (blank) hits.push({ c: CLICKABLE[CLICKABLE.length - 1], f: blank });
+  }
+  if (!hits.length) { if (!cardEl.hidden) closeCard(); return; }
+  cardAlso = hits.slice(1);
+  showHit(hits[0]);
+});
+cardBody.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-also], [data-follow], [data-time]");
+  if (!t) return;
+  if (t.dataset.also != null) {
+    const i = Number(t.dataset.also);
+    const next = cardAlso[i];
+    cardAlso = [cardCurrent, ...cardAlso.filter((_, j) => j !== i)];
+    showHit(next);
+  } else if (t.dataset.follow) {
+    followEntity(timeKey(t.dataset.follow));
+  } else {
+    loadBorders(t.dataset.time);
+  }
+});
+
+// ---------- الزمن الحالي في اللوحة ----------
+const nowYearEl = document.getElementById("now-year");
+const nowEraEl = document.getElementById("now-era");
+const nowDescEl = document.getElementById("now-desc");
+const nowStatsEl = document.getElementById("now-stats");
+let claimsIndex = null;
+getJson("data/claims_index.json").then((idx) => { claimsIndex = idx; renderBands(); if (time.key != null) renderNow(); }).catch(() => {});
+let nowParts = {};
+function renderNow(parts) {
+  if (parts) nowParts = parts;
+  const { names, labels, places, era } = nowParts;
+  if (!era) return;
+  nowYearEl.textContent = yearText(time.key);
+  nowEraEl.textContent = `الحقبة ${era.id}: ${era.label}`;
+  nowDescEl.textContent = era.desc;
+  const all = labels?.labels ?? [];
+  const ar = all.filter((l) => l.ar).length;
+  const claims = claimsIndex?.find((c) => c.era === era.id)?.count;
+  nowStatsEl.innerHTML = [
+    names != null ? chip(`الكيانات المسمّاة: ${fmtInt(names)}`) : "",
+    all.length ? chip(`الأسماء العربية: ${fmtInt(ar)} من ${fmtInt(all.length)}`) : "",
+    places ? chip(`مواقع الحقبة: ${fmtInt(places.features.length)}`) : "",
+    claims != null ? chip(`ادعاءات الحقبة: ${fmtInt(claims)}`, "tier-v") : "",
+  ].join("");
+  setLayerCount("labels", all.length ? `العربية: ${fmtInt(ar)} من ${fmtInt(all.length)}` : "");
+}
+labelData("modern").then((d) => { if (d) modernAr = new Map(d.labels.filter((l) => l.ar).map((l) => [l.en, l.ar])); });
+
+// ---------- شريط الزمن ----------
+// لكل حقبة شريحة متساوية العرض، والسنة داخلها بنسبة موقعها من مدتها، فلا تبتلع الحقب الطويلة الشريط.
+// الماضي على اليمين والحاضر على اليسار، كاتجاه الكتابة. المحطات سنوات الحدود المتاحة فقط.
+const tbTrack = document.getElementById("tb-track");
+const tbBands = document.getElementById("tb-bands");
+const tbStops = document.getElementById("tb-stops");
+const tbThumb = document.getElementById("tb-thumb");
+const tbYear = document.getElementById("tb-year");
+const tbEra = document.getElementById("tb-era");
+const tbPlay = document.getElementById("tb-play");
+function tbPos(k) {
+  const y = yearOf(k);
+  let i = ERAS.findIndex((e) => y >= e.from && y < e.to);
+  if (i < 0) i = ERAS.length - 1;
+  const e = ERAS[i];
+  return (i + Math.min(1, Math.max(0, (y - e.from) / (e.to - e.from)))) / ERAS.length;
+}
+// ارتفاع عمود الكثافة في كل حقبة من عدد ادعاءاتها (claims_index.json)
+function renderBands() {
+  const max = Math.max(1, ...(claimsIndex ?? []).map((c) => c.count));
+  tbBands.innerHTML = ERAS.map((e) => {
+    const n = claimsIndex?.find((c) => c.era === e.id)?.count ?? 0;
+    return `<div class="tb-band" data-era="${e.id}" title="الحقبة ${e.id}: ${escapeHtml(e.label)}${claimsIndex ? ` · ادعاءاتها: ${n}` : ""}"><span class="tb-band-label">${escapeHtml(e.label)}</span>` +
+      (n ? `<i class="tb-density" style="height:${Math.round(3 + 14 * n / max)}px"></i>` : "") + `</div>`;
+  }).join("");
+  renderTime();
+}
+const stopLabel = (k) => (String(k) === "modern" ? "اليوم" : Number(k) < 0 ? `${-k} ق.م` : String(k));
+tbStops.innerHTML = TIME_STOPS.map((k, i) => {
+  const edge = i === 0 ? " first" : i === TIME_STOPS.length - 1 ? " last" : "";
+  return `<div class="tb-stop${edge}" data-k="${k}" style="inset-inline-start:${(tbPos(k) * 100).toFixed(2)}%"><i></i><span>${escapeHtml(stopLabel(k))}</span></div>`;
+}).join("");
+let tbPreview = null; // المحطة أثناء السحب، قبل الإفلات
+function renderTime() {
+  const k = tbPreview ?? time.key;
+  if (k == null) return;
+  const era = eraOf(k);
+  tbThumb.style.insetInlineStart = `${(tbPos(k) * 100).toFixed(2)}%`;
+  tbYear.textContent = yearText(k);
+  tbEra.textContent = `الحقبة ${era.id}: ${era.label}`;
+  for (const el of tbStops.children) el.classList.toggle("cur", el.dataset.k === String(k));
+  for (const el of tbBands.children) el.classList.toggle("cur", Number(el.dataset.era) === era.id);
+  declutterStops();
+  const i = TIME_STOPS.findIndex((s) => String(s) === String(k));
+  tbTrack.setAttribute("aria-valuenow", String(i));
+  tbTrack.setAttribute("aria-valuetext", `${yearText(k)}، الحقبة ${era.id}: ${era.label}`);
+}
+// تسميات المحطات المتقاربة (1914 و1945 و2010 واليوم) قد تتراكب: تبقى تسمية المحطة الحالية، ثم كل تسمية لا تتراكب مع ما بقي
+function declutterStops() {
+  const els = [...tbStops.children].sort((a, b) => b.classList.contains("cur") - a.classList.contains("cur"));
+  const kept = [];
+  for (const el of els) {
+    const span = el.querySelector("span");
+    span.style.visibility = "";
+    const r = span.getBoundingClientRect();
+    if (!r.width) continue;
+    if (kept.some((k) => r.left < k.right + 4 && r.right > k.left - 4)) span.style.visibility = "hidden";
+    else kept.push(r);
+  }
+}
+window.addEventListener("resize", declutterStops);
+renderBands();
+function stopAt(clientX) {
+  const r = tbTrack.getBoundingClientRect();
+  const frac = (r.right - clientX) / r.width;
+  let best = TIME_STOPS[0];
+  for (const k of TIME_STOPS) if (Math.abs(tbPos(k) - frac) < Math.abs(tbPos(best) - frac)) best = k;
+  return best;
+}
+tbTrack.addEventListener("pointerdown", (e) => {
+  stopPlay();
+  tbTrack.setPointerCapture(e.pointerId);
+  tbTrack.classList.add("dragging");
+  tbPreview = stopAt(e.clientX);
+  renderTime();
+});
+tbTrack.addEventListener("pointermove", (e) => {
+  if (tbPreview == null) return;
+  const k = stopAt(e.clientX);
+  if (k !== tbPreview) { tbPreview = k; renderTime(); }
+});
+function endDrag() {
+  if (tbPreview == null) return;
+  const k = tbPreview;
+  tbPreview = null;
+  tbTrack.classList.remove("dragging");
+  if (String(k) !== String(time.key)) loadBorders(k); else renderTime();
+}
+tbTrack.addEventListener("pointerup", endDrag);
+tbTrack.addEventListener("pointercancel", endDrag);
+function stepTime(d) {
+  const i = TIME_STOPS.findIndex((s) => String(s) === String(time.key));
+  const j = Math.max(0, Math.min(TIME_STOPS.length - 1, i + d));
+  if (j !== i) loadBorders(TIME_STOPS[j]);
+  return j !== i;
+}
+tbTrack.addEventListener("keydown", (e) => {
+  // اتجاه الصفحة عربي: السهم الأيسر يتقدّم في الزمن
+  const d = { ArrowLeft: 1, ArrowRight: -1, ArrowUp: 1, ArrowDown: -1 }[e.key];
+  if (d) { e.preventDefault(); stopPlay(); stepTime(d); }
+  else if (e.key === "Home") { e.preventDefault(); stopPlay(); loadBorders(TIME_STOPS[0]); }
+  else if (e.key === "End") { e.preventDefault(); stopPlay(); loadBorders(TIME_STOPS[TIME_STOPS.length - 1]); }
+});
+// التشغيل: يعبر المحطات واحدة واحدة حتى اليوم
+let playTimer = null;
+function stopPlay() {
+  clearInterval(playTimer);
+  playTimer = null;
+  tbPlay.setAttribute("aria-pressed", "false");
+  tbPlay.textContent = "▶";
+  tbPlay.setAttribute("aria-label", "تشغيل الزمن");
+}
+tbPlay.addEventListener("click", () => {
+  if (playTimer) return stopPlay();
+  if (String(time.key) === String(TIME_STOPS[TIME_STOPS.length - 1])) loadBorders(TIME_STOPS[0]);
+  tbPlay.setAttribute("aria-pressed", "true");
+  tbPlay.textContent = "❚❚";
+  tbPlay.setAttribute("aria-label", "إيقاف الزمن");
+  playTimer = setInterval(() => { if (!stepTime(1)) stopPlay(); }, 2800);
+});
+
+// البداية: سنة 1200م، حقبة التبادل العابر للقارات، فيرى الزائر الكيانات بألوانها والشواهد في مكانها
+const START_TIME = 1200;
+map.on("load", () => loadBorders(START_TIME));
