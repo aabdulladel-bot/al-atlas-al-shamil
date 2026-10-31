@@ -1,6 +1,8 @@
 // اختبار دخان للواجهة: يشغّل خادماً محلياً، ويفتح الصفحة بمتصفح Chromium، ويضغط كل زر سُنّة وحقبة
 // وطبقة سكان وحقبة ادعاءات، ويفشل إن ظهر خطأ في وحدة التحكم أو فشل تحميل ملف بيانات.
 // الاستعمال: node scripts/ui_smoke.mjs   (الصور في out/ui_desktop.png وout/ui_mobile.png)
+// ويقارن لقطات ثابتة بلقطات مرجعية في scripts/visual_ref/ (انظر visualCheck). لتحديث المرجع بعد تغيير بصري مقصود:
+// UPDATE_VISUAL=1 node scripts/ui_smoke.mjs   (وVISUAL_ONLY=1 يقتصر على اللقطات المرجعية)
 import { spawn } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
@@ -33,6 +35,67 @@ const FLAT_TILE = solidPng([128, 0, 0]);
 const SAT_STANDIN = solidPng([12, 28, 64]);
 const server = spawn("python3", ["-m", "http.server", String(PORT), "--bind", "127.0.0.1"], { cwd: path.join(ROOT, "web"), stdio: "ignore" });
 const problems = [];
+// ---------- اللقطات المرجعية ----------
+// حالات ثابتة بلا حركة (تقليل الحركة، والافتتاحية مُتجاوزة، والكاميرا محددة، والبلاطات البديلة نفسها)، تُقارن بالمرجع
+// بكسلاً بكسلاً في المتصفح. البكسل مختلف إن تجاوز فرق إحدى قنواته 40، والفشل إن اختلف أكثر من 2% من البكسلات.
+// المرجع مأخوذ في بيئة هذا الاختبار (Chromium وSwiftShader وخطوطها)، فلا يُقارن بلقطات من جهاز آخر.
+const VISUAL_DIR = path.join(ROOT, "scripts/visual_ref");
+const VISUAL_MAX = 0.02;
+const counts_visual = {};
+async function visualCheck(browser, name, viewport) {
+  const page = await browser.newPage({ viewport, reducedMotion: "reduce" });
+  await page.addInitScript(() => { try { localStorage.setItem("atlas-intro-seen", "1"); } catch {} });
+  await page.route("**/elevation-tiles-prod/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: FLAT_TILE, headers: { "access-control-allow-origin": "*" } }));
+  await page.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
+  await page.goto(URL, { waitUntil: "networkidle" });
+  await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 60000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
+  await page.waitForFunction(() => typeof time !== "undefined" && time.key === 1200 && document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 90000 });
+  const settle = async () => { await page.evaluate(() => window.__settle()); await page.waitForTimeout(400); await page.evaluate(() => window.__settle()); };
+  await page.evaluate(() => { terrainState.on = false; applyTerrain(); });
+  const states = [
+    ["landing", async () => { await page.evaluate(() => map.jumpTo({ center: [35, 32], zoom: 2.8, pitch: 30, bearing: 0 })); }],
+    ["card", async () => {
+      await page.evaluate(() => loadBorders(1600));
+      await page.evaluate(() => map.jumpTo({ center: [32, 39.5], zoom: 4.2, pitch: 0, bearing: 0 }));
+      await settle();
+      const xy = await page.evaluate(() => { const q = map.project([32, 39.5]); return [q.x, q.y]; });
+      await page.mouse.click(xy[0], xy[1]);
+      await page.waitForFunction(() => !document.getElementById("card").hidden && !document.getElementById("card-body").textContent.includes("جارٍ التحميل"), null, { timeout: 20000 });
+    }],
+    ["drawn", async () => {
+      await page.evaluate(() => closeCard());
+      // اللوحة مطويّة على الجوال، فيُبدَّل الأساس مباشرة (زرّه مختبر في خطوة لوحة الطبقات)
+      await page.evaluate(() => { document.querySelector('input[name="basemap"][value="drawn"]').checked = true; applyBasemap("drawn"); map.jumpTo({ center: [40, 33], zoom: 3.4, pitch: 20, bearing: 0 }); });
+    }],
+  ];
+  for (const [state, setup] of states) {
+    step = `${name}: لقطة ${state}`;
+    await setup();
+    await settle();
+    const shot = await page.screenshot();
+    const ref = path.join(VISUAL_DIR, `${state}_${name}.png`);
+    if (process.env.UPDATE_VISUAL || !fs.existsSync(ref)) {
+      fs.mkdirSync(VISUAL_DIR, { recursive: true });
+      fs.writeFileSync(ref, shot);
+      counts_visual[`${state}_${name}`] = "مرجع جديد";
+      continue;
+    }
+    fs.writeFileSync(path.join(ROOT, "out", `visual_${state}_${name}.png`), shot);
+    const ratio = await page.evaluate(async ([a, b]) => {
+      const load = (src) => new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = src; });
+      const [ia, ib] = await Promise.all([load(a), load(b)]);
+      if (ia.width !== ib.width || ia.height !== ib.height) return 1;
+      const px = (im) => { const c = document.createElement("canvas"); c.width = im.width; c.height = im.height; const x = c.getContext("2d"); x.drawImage(im, 0, 0); return x.getImageData(0, 0, im.width, im.height).data; };
+      const da = px(ia), db = px(ib);
+      let diff = 0;
+      for (let i = 0; i < da.length; i += 4) if (Math.abs(da[i] - db[i]) > 40 || Math.abs(da[i + 1] - db[i + 1]) > 40 || Math.abs(da[i + 2] - db[i + 2]) > 40) diff++;
+      return diff / (da.length / 4);
+    }, [`data:image/png;base64,${fs.readFileSync(ref).toString("base64")}`, `data:image/png;base64,${shot.toString("base64")}`]);
+    counts_visual[`${state}_${name}`] = `${(ratio * 100).toFixed(2)}%`;
+    if (ratio > VISUAL_MAX) problems.push(`[${name}] لقطة «${state}» تختلف عن المرجع بنسبة ${(ratio * 100).toFixed(1)}% (out/visual_${state}_${name}.png مقابل ${path.relative(ROOT, ref)})`);
+  }
+  await page.close();
+}
 let step = "البداية"; // آخر خطوة بدأت، تُذكر عند الفشل
 let browser;
 try {
@@ -41,6 +104,11 @@ try {
   // فتنتهي مهلة النقرات قبل أن يفرغ المتصفح (383 مقابل 33 م.ث للإطار)
   browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium", args: ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"] });
   for (const [name, viewport] of [["desktop", { width: 1366, height: 860 }], ["mobile", { width: 390, height: 844 }]]) {
+    if (process.env.VISUAL_ONLY) {
+      await visualCheck(browser, name, viewport);
+      console.log(`${name} لقطات: ${JSON.stringify(counts_visual)}`);
+      continue;
+    }
     const page = await browser.newPage({ viewport });
     await page.route("**/elevation-tiles-prod/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: FLAT_TILE, headers: { "access-control-allow-origin": "*" } }));
     await page.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
@@ -205,6 +273,8 @@ try {
     console.log(`${name}: ${JSON.stringify(counts)}`);
     for (const [k, n] of Object.entries(counts)) if (n === 0) problems.push(`[${name}] لا أزرار في ${k}`);
     await page.close();
+    await visualCheck(browser, name, viewport);
+    console.log(`${name} لقطات: ${JSON.stringify(counts_visual)}`);
   }
 } catch (e) {
   problems.push(`exception في «${step}»: ${e.message.split("\n")[0]}`);

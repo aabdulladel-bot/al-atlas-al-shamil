@@ -77,6 +77,7 @@ def clean(geom):
 
 
 def load(key):
+    shown = {}  # الاسم الإنجليزي المعروض بدل اسم المصدر (scripts/config/hb_name_overrides.json عبر hb_names.json)
     if key == "modern":
         src = json.loads(NE.read_text(encoding="utf-8"))
         rows = [(f["properties"]["NAME"], None, 3, f["geometry"]) for f in src["features"]]
@@ -92,6 +93,7 @@ def load(key):
         hb = ROOT / "web/data/names/hb_names.json"
         names = json.loads(hb.read_text(encoding="utf-8"))["names"] if hb.exists() else {}
         ar = {n: v["ar"] for n, v in names.items() if v.get("ar") and y in v.get("years_ar", [])}
+        shown = {n: v["en_shown"] for n, v in names.items() if v.get("en_shown")}
     groups, partof, prec, unnamed, repaired = {}, {}, {}, [], 0
     for nm, po, bp, geom in rows:
         if not geom:
@@ -116,6 +118,7 @@ def load(key):
         ents.append({
             "name": n,
             "name_ar": ar.get(n),
+            "name_shown": shown.get(n),
             "partof": sorted(partof.get(n, [])) or None,
             "precision": prec.get(n),
             "area_km2": area_km2(g),
@@ -210,6 +213,8 @@ def compare(ka, kb, A, B):
         r = {"name": e["name"]}
         if e["name_ar"] and e["name_ar"] != e["name"]:
             r["name_ar"] = e["name_ar"]
+        if e.get("name_shown"):
+            r["name_shown"] = e["name_shown"]
         if e["partof"]:
             r["partof"] = e["partof"]
         r["precision"] = e["precision"]

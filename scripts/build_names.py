@@ -86,6 +86,27 @@ def decide(name, hit, present):
     return {**base, "status": "verified", "years_ar": alive}
 
 
+REVIEW = ROOT / "review/arabized_review.csv"
+NE_FILE = ROOT / "data/raw/naturalearth/ne_50m_admin_0_countries.geojson"
+LABEL_OVERRIDES = ROOT / "scripts/config/label_overrides.json"
+KIND_AR = {"k": "اسم متداول", "t": "تعريب صوتي", "d": "ترجمة وصفية"}
+
+
+def write_review(cfg, names):
+    """ورقة المراجعة اللغوية لكل تعريب تقديري: الاسم في المصدر، والتعريب، ونوعه، وسنواته، وخانتان للمراجع."""
+    import csv
+    REVIEW.parent.mkdir(parents=True, exist_ok=True)
+    kinds = {n: x["kind"] for n, x in cfg.get("unmatched", {}).items()}
+    with REVIEW.open("w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["الاسم في المصدر", "التعريب", "النوع", "السنوات", "القرار (يُقبل/يُعدَّل)", "التعريب المقترح من المراجع"])
+        for n, v in sorted(names.items(), key=lambda kv: kv[0].lower()):
+            if v.get("status") != "arabized":
+                continue
+            kind = KIND_AR.get(kinds.get(n), "تعريب صفحة مرفوضة")
+            w.writerow([n, v["ar"], kind, " ".join(str(y) for y in v.get("years", [])), "", ""])
+
+
 def main():
     present = years_by_name()
     extract = json.loads(EXTRACT.read_text(encoding="utf-8")) if EXTRACT.exists() else {"titles": {}}
@@ -106,6 +127,21 @@ def main():
         v = names.get(n)
         if v and v["status"] == "rejected" and v.get("reason") in ARABIZED_REASONS:
             names[n] = {k: x for k, x in v.items() if k != "reason"} | {"status": "arabized", "ar": ar, "years_ar": present[n]}
+    # أسماء لم يطابقها ويكي بيانات أو طابقها بلا عربي: تعريب تقديري معلن بنوعه (متداول، صوتي، وصفي)، ويحتاج مراجعة لغوية
+    for n, x in cfg.get("unmatched", {}).items():
+        v = names.get(n)
+        if v and v["status"] in ("no_match", "no_arabic"):
+            names[n] = {**v, "status": "arabized", "ar": x["ar"], "arabized_kind": x["kind"], "years_ar": present[n]}
+    # أسماء لم تمرّ بويكي بيانات أصلاً، وتطابق بالإنجليزية اسم دولة حديثة في Natural Earth (ملك عام): يؤخذ اسمها العربي
+    # منه. مطابقة بالاسم لا بالهوية. والأسماء ذات التعديل التحريري المعلن (label_overrides.json) لا تُمسّ هنا،
+    # لأن نطاق ذلك التعديل خريطة الدول اليوم، وتوسيعه إلى الخرائط التاريخية قرار لصاحب المشروع.
+    ne = json.loads(NE_FILE.read_text(encoding="utf-8"))
+    editorial = set(json.loads(LABEL_OVERRIDES.read_text(encoding="utf-8")).get("overrides", {}))
+    ne_ar = {f["properties"]["NAME"]: f["properties"]["NAME_AR"] for f in ne["features"] if f["properties"].get("NAME_AR")}
+    for n, years in present.items():
+        if n not in names and n in ne_ar and n not in editorial:
+            names[n] = {"status": "ne_name", "ar": ne_ar[n], "years": years, "years_ar": years}
+    write_review(cfg, names)
     # أسماء بلا تواريخ لشعوب وأقاليم، والعربي فيها اسم ويكي بيانات نفسه لا ترجمة: تُقبل بالقائمة المعلنة
     for n in cfg.get("wikidata_accepted", []):
         v = names.get(n)
@@ -119,7 +155,7 @@ def main():
         "_meta": {
             "source": "Wikidata (CC0)، بمستخلص data/raw/wikidata/hb_titles.json",
             "rules": f"رفض صفحات التوضيح والقوائم؛ تحقق زمني بسماحة {TOL} سنة؛ بلا تواريخ يُقبل موسوماً؛ التعديلات اليدوية معلنة",
-            "statuses": {"verified": "اسم عربي متحقق زمنياً", "undated": "اسم عربي بلا تواريخ للتحقق", "override": "تعديل يدوي معلن", "arabized": "تعريب تقديري من الاسم الإنجليزي؛ لا اسم عربي موثّق، ويحتاج مراجعة لغوية",
+            "statuses": {"verified": "اسم عربي متحقق زمنياً", "undated": "اسم عربي بلا تواريخ للتحقق", "override": "تعديل يدوي معلن", "arabized": "تعريب تقديري من الاسم الإنجليزي؛ لا اسم عربي موثّق، ويحتاج مراجعة لغوية", "ne_name": "الاسم العربي لدولة حديثة بالاسم الإنجليزي نفسه في Natural Earth (مطابقة بالاسم لا بالهوية)",
                          "date_mismatch": "رُفض: كيان آخر بالاسم نفسه", "rejected": "رُفض: نوع غير الكيان المرسوم (توضيح، قائمة، مدينة، موقع، مادة) أو بلا تواريخ ولا نوع صريح",
                          "no_arabic": "لا تسمية عربية في ويكي بيانات", "no_match": "لا مقالة بهذا العنوان"},
             "counts": counts,

@@ -66,5 +66,1052 @@
     "Sikhs",
     "Thule",
     "Western Sahara"
-  ]
+  ],
+  "_note_unmatched": "تعريب تقديري لأسماء لم يطابقها ويكي بيانات (no_match) أو طابقها بلا اسم عربي (no_arabic). النوع: k اسم عربي متداول لكيان معروف (ترجمة شائعة لا اسم موثّق في ويكي بيانات)، t تعريب صوتي لاسم علم، d ترجمة وصفية لتسمية المصدر (ثقافات وجماعات صيد وجمع). يُعرض كالتعريب التقديري: العربي أساساً والإنجليزي تحته، ويحتاج مراجعة لغوية (review/arabized_review.csv). لا يحمل تحققاً زمنياً.",
+  "unmatched": {
+    "USSR": {
+      "ar": "الاتحاد السوفيتي",
+      "kind": "k"
+    },
+    "Australian aboriginal hunter-gatherers": {
+      "ar": "صيادو أستراليا الأصليون وجامعو الثمار",
+      "kind": "d"
+    },
+    "central Asian khanates": {
+      "ar": "خانيات آسيا الوسطى",
+      "kind": "d"
+    },
+    "Paleo-Siberian hunter-gatherers": {
+      "ar": "صيادو سيبيريا القدماء وجامعو الثمار",
+      "kind": "d"
+    },
+    "Qing Empire": {
+      "ar": "إمبراطورية تشينغ",
+      "kind": "k"
+    },
+    "West African cereal farmers": {
+      "ar": "مزارعو الحبوب في غرب أفريقيا",
+      "kind": "d"
+    },
+    "Arctic marine mammal hunters": {
+      "ar": "صيادو الثدييات البحرية في القطب الشمالي",
+      "kind": "d"
+    },
+    "Savanna hunter-gatherers": {
+      "ar": "صيادو السافانا وجامعو الثمار",
+      "kind": "d"
+    },
+    "Saharan pastoral nomads": {
+      "ar": "الرعاة الرحّل في الصحراء الكبرى",
+      "kind": "d"
+    },
+    "Subarctic forest hunter-gatherers": {
+      "ar": "صيادو غابات شبه القطب الشمالي وجامعو الثمار",
+      "kind": "d"
+    },
+    "Amazon hunter-gatherers": {
+      "ar": "صيادو الأمازون وجامعو الثمار",
+      "kind": "d"
+    },
+    "Saharan Nomadic Tribes": {
+      "ar": "قبائل الصحراء الكبرى الرحّل",
+      "kind": "d"
+    },
+    "Viceroyalty of Brazil": {
+      "ar": "نيابة الملك في البرازيل",
+      "kind": "k"
+    },
+    "Aboriginal tribes": {
+      "ar": "قبائل السكان الأصليين",
+      "kind": "d"
+    },
+    "Tsardom of Muscovy": {
+      "ar": "قيصرية موسكو",
+      "kind": "k"
+    },
+    "Finno-Ugric taiga hunter-gatherers": {
+      "ar": "صيادو التايغا الفنلنديون الأوغريون وجامعو الثمار",
+      "kind": "d"
+    },
+    "Ming Chinese Empire": {
+      "ar": "إمبراطورية مينغ الصينية",
+      "kind": "k"
+    },
+    "Tuareg Nomadic Tribes": {
+      "ar": "قبائل الطوارق الرحّل",
+      "kind": "k"
+    },
+    "Eastern North American hunter-gatherers": {
+      "ar": "صيادو شرق أمريكا الشمالية وجامعو الثمار",
+      "kind": "d"
+    },
+    "Plain bison hunters": {
+      "ar": "صيادو البيسون في السهول",
+      "kind": "d"
+    },
+    "Viceroyalty of New Spain": {
+      "ar": "نيابة الملك في إسبانيا الجديدة",
+      "kind": "k"
+    },
+    "Proto-Altaic pastoralists": {
+      "ar": "الرعاة الألطائيون الأوائل",
+      "kind": "d"
+    },
+    "Manioc farmers": {
+      "ar": "مزارعو المنيهوت",
+      "kind": "d"
+    },
+    "Pampas cultures": {
+      "ar": "ثقافات البامبا",
+      "kind": "d"
+    },
+    "Desert hunter-gatherers": {
+      "ar": "صيادو الصحارى وجامعو الثمار",
+      "kind": "d"
+    },
+    "Karasuk culture": {
+      "ar": "ثقافة كاراسوك",
+      "kind": "t"
+    },
+    "Kara Khitai Khaganate": {
+      "ar": "خانية قراخطاي",
+      "kind": "k"
+    },
+    "Sui Empire": {
+      "ar": "إمبراطورية سوي",
+      "kind": "k"
+    },
+    "Dravidians": {
+      "ar": "الدرافيديون",
+      "kind": "k"
+    },
+    "Denmark-Norway": {
+      "ar": "الدنمارك والنرويج",
+      "kind": "k"
+    },
+    "Luisiana": {
+      "ar": "لويزيانا",
+      "kind": "k"
+    },
+    "Semites": {
+      "ar": "الساميون",
+      "kind": "k"
+    },
+    "Song Empire": {
+      "ar": "إمبراطورية سونغ",
+      "kind": "k"
+    },
+    "Iranian pastoralists": {
+      "ar": "الرعاة الإيرانيون",
+      "kind": "d"
+    },
+    "Berber Tribes": {
+      "ar": "القبائل الأمازيغية",
+      "kind": "k"
+    },
+    "Arabian pastoral nomads": {
+      "ar": "الرعاة الرحّل في جزيرة العرب",
+      "kind": "d"
+    },
+    "Cuman Khanates": {
+      "ar": "خانيات القبجاق",
+      "kind": "k"
+    },
+    "Tufan Empire": {
+      "ar": "إمبراطورية التبت",
+      "kind": "k"
+    },
+    "United States of America": {
+      "ar": "الولايات المتحدة الأمريكية",
+      "kind": "k"
+    },
+    "T'atsaot'ine": {
+      "ar": "تاتساوتينه",
+      "kind": "t"
+    },
+    "Athabaskan": {
+      "ar": "الأثاباسكان",
+      "kind": "t"
+    },
+    "Austro-Asiatic rice cultures": {
+      "ar": "ثقافات الأرز الأسترو آسيوية",
+      "kind": "d"
+    },
+    "Cimerians": {
+      "ar": "الكيميريون",
+      "kind": "k"
+    },
+    "Persia": {
+      "ar": "فارس",
+      "kind": "k"
+    },
+    "Buwayhid Emirates": {
+      "ar": "الإمارات البويهية",
+      "kind": "k"
+    },
+    "Tungus": {
+      "ar": "التونغوس",
+      "kind": "t"
+    },
+    "Islamic and Hindu states": {
+      "ar": "دول إسلامية وهندوسية",
+      "kind": "d"
+    },
+    "Quazaq Khanate": {
+      "ar": "خانية القازاق",
+      "kind": "k"
+    },
+    "N. European Bronze Age cultures": {
+      "ar": "ثقافات العصر البرونزي في شمال أوروبا",
+      "kind": "d"
+    },
+    "Austronesians": {
+      "ar": "الأسترونيزيون",
+      "kind": "k"
+    },
+    "Urnfield cultures": {
+      "ar": "ثقافات حقول الجِرار",
+      "kind": "d"
+    },
+    "Rajput kingdoms": {
+      "ar": "ممالك الراجبوت",
+      "kind": "k"
+    },
+    "Arabia (Nejd)": {
+      "ar": "جزيرة العرب (نجد)",
+      "kind": "k"
+    },
+    "Sinic": {
+      "ar": "الثقافة الصينية",
+      "kind": "d"
+    },
+    "Netherlands Indies": {
+      "ar": "جزر الهند الشرقية الهولندية",
+      "kind": "k"
+    },
+    "Western Gokturk Khaganate": {
+      "ar": "خاقانية الترك الغربية",
+      "kind": "k"
+    },
+    "Andean hunter-gatherers": {
+      "ar": "صيادو الأنديز وجامعو الثمار",
+      "kind": "d"
+    },
+    "Safavid Empire": {
+      "ar": "الدولة الصفوية",
+      "kind": "k"
+    },
+    "Maize farmers": {
+      "ar": "مزارعو الذرة",
+      "kind": "d"
+    },
+    "Hindu kingdoms": {
+      "ar": "ممالك هندوسية",
+      "kind": "d"
+    },
+    "Plateau fichers and hunter gatherers": {
+      "ar": "صيادو الأسماك والطرائد في الهضبة وجامعو الثمار",
+      "kind": "d"
+    },
+    "Malaysian Islamic states": {
+      "ar": "الدول الإسلامية الملايوية",
+      "kind": "d"
+    },
+    "Eastern Roman Empire": {
+      "ar": "الإمبراطورية الرومانية الشرقية",
+      "kind": "k"
+    },
+    "Samoyèdes": {
+      "ar": "السامويد",
+      "kind": "t"
+    },
+    "Angola (Portugal)": {
+      "ar": "أنغولا (البرتغالية)",
+      "kind": "k"
+    },
+    "Tanzania, United Republic of": {
+      "ar": "تنزانيا",
+      "kind": "k"
+    },
+    "Saka Kingdom": {
+      "ar": "مملكة الساكا",
+      "kind": "k"
+    },
+    "Zhoa": {
+      "ar": "تشو",
+      "kind": "t"
+    },
+    "Ghaznavid Emirate": {
+      "ar": "الدولة الغزنوية",
+      "kind": "k"
+    },
+    "Sultanate of Delhi": {
+      "ar": "سلطنة دلهي",
+      "kind": "k"
+    },
+    "Caribbean hunter-gatherers": {
+      "ar": "صيادو الكاريبي وجامعو الثمار",
+      "kind": "d"
+    },
+    "Rattanakosin Kingdom": {
+      "ar": "مملكة راتاناكوسين",
+      "kind": "t"
+    },
+    "Burma": {
+      "ar": "بورما",
+      "kind": "k"
+    },
+    "Papuan neolithic farmers": {
+      "ar": "المزارعون البابويون في العصر الحجري الحديث",
+      "kind": "d"
+    },
+    "Maratha Confederacy": {
+      "ar": "اتحاد المراثا",
+      "kind": "k"
+    },
+    "North American Pacific foraging, hunting and fishing peoples": {
+      "ar": "شعوب الصيد والجمع على ساحل المحيط الهادئ في أمريكا الشمالية",
+      "kind": "d"
+    },
+    "German E. Africa (Tanganyika)": {
+      "ar": "شرق أفريقيا الألماني (تنجانيقا)",
+      "kind": "k"
+    },
+    "Vedic Aryans": {
+      "ar": "الآريون الفيديون",
+      "kind": "k"
+    },
+    "Tungusic Tribes": {
+      "ar": "القبائل التونغوسية",
+      "kind": "t"
+    },
+    "Khiva Khanate": {
+      "ar": "خانية خيوة",
+      "kind": "k"
+    },
+    "Suren Kingdom": {
+      "ar": "مملكة سورين",
+      "kind": "t"
+    },
+    "Poland-Lithuania": {
+      "ar": "بولندا وليتوانيا",
+      "kind": "k"
+    },
+    "Cyraneica (UK Lybia)": {
+      "ar": "برقة (ليبيا البريطانية)",
+      "kind": "k"
+    },
+    "Makkura": {
+      "ar": "المقرة",
+      "kind": "k"
+    },
+    "German South-West Africa": {
+      "ar": "جنوب غرب أفريقيا الألماني",
+      "kind": "k"
+    },
+    "Mozambique (Portugal)": {
+      "ar": "موزمبيق (البرتغالية)",
+      "kind": "k"
+    },
+    "Hopewell Culture": {
+      "ar": "ثقافة هوبويل",
+      "kind": "t"
+    },
+    "Indus valley civilization": {
+      "ar": "حضارة وادي السند",
+      "kind": "k"
+    },
+    "Madagascar (France)": {
+      "ar": "مدغشقر (الفرنسية)",
+      "kind": "k"
+    },
+    "Xixia": {
+      "ar": "شيا الغربية",
+      "kind": "k"
+    },
+    "Inupiaq": {
+      "ar": "الإنوبياك",
+      "kind": "t"
+    },
+    "Kushites": {
+      "ar": "الكوشيون",
+      "kind": "k"
+    },
+    "British Protectorate": {
+      "ar": "محمية بريطانية",
+      "kind": "d"
+    },
+    "British East Africa": {
+      "ar": "شرق أفريقيا البريطاني",
+      "kind": "k"
+    },
+    "Nejd": {
+      "ar": "نجد",
+      "kind": "k"
+    },
+    "Austro-Hungarian Empire": {
+      "ar": "الإمبراطورية النمساوية المجرية",
+      "kind": "k"
+    },
+    "Tiahuanaco Empire": {
+      "ar": "إمبراطورية تياواناكو",
+      "kind": "t"
+    },
+    "Patagonian shellfish and marine mammal hunters": {
+      "ar": "جامعو المحار وصيادو الثدييات البحرية في باتاغونيا",
+      "kind": "d"
+    },
+    "Satavahanihara": {
+      "ar": "الساتافاهانا",
+      "kind": "t"
+    },
+    "Kanem-Bornu": {
+      "ar": "كانم-برنو",
+      "kind": "k"
+    },
+    "Srivijaya Empire": {
+      "ar": "إمبراطورية سريفيجايا",
+      "kind": "t"
+    },
+    "Frankish Kingdom": {
+      "ar": "مملكة الفرنجة",
+      "kind": "k"
+    },
+    "Meroe": {
+      "ar": "مروي",
+      "kind": "k"
+    },
+    "Hunters-gatherers": {
+      "ar": "صيادون وجامعو ثمار",
+      "kind": "d"
+    },
+    "Chalukyas": {
+      "ar": "الشالوكيا",
+      "kind": "t"
+    },
+    "Vazimba": {
+      "ar": "الفازيمبا",
+      "kind": "t"
+    },
+    "Obiwa": {
+      "ar": "أوبيوا",
+      "kind": "t"
+    },
+    "Rajputs": {
+      "ar": "الراجبوت",
+      "kind": "k"
+    },
+    "Huari Empire": {
+      "ar": "إمبراطورية واري",
+      "kind": "t"
+    },
+    "Proto-Slavs": {
+      "ar": "السلاف الأوائل",
+      "kind": "d"
+    },
+    "Other Rus Principalities": {
+      "ar": "إمارات الروس الأخرى",
+      "kind": "d"
+    },
+    "Fezzan (Frech Lybia)": {
+      "ar": "فزان (ليبيا الفرنسية)",
+      "kind": "k"
+    },
+    "Shoshoni": {
+      "ar": "الشوشوني",
+      "kind": "t"
+    },
+    "Kanauj": {
+      "ar": "قنوج",
+      "kind": "k"
+    },
+    "Volga Bulgars": {
+      "ar": "بلغار الفولغا",
+      "kind": "k"
+    },
+    "Kingdom of Sind": {
+      "ar": "مملكة السند",
+      "kind": "k"
+    },
+    "Himyarite Kingdom": {
+      "ar": "مملكة حمير",
+      "kind": "k"
+    },
+    "Đại Việt": {
+      "ar": "داي فيت",
+      "kind": "t"
+    },
+    "Hausa States": {
+      "ar": "دول الهوسا",
+      "kind": "k"
+    },
+    "Islamic city-states": {
+      "ar": "دول المدن الإسلامية",
+      "kind": "d"
+    },
+    "Nan Chao": {
+      "ar": "نانتشاو",
+      "kind": "t"
+    },
+    "Mesoamerican city-states and chiefdoms": {
+      "ar": "دول المدن والمشيخات في أمريكا الوسطى",
+      "kind": "d"
+    },
+    "Koguryo": {
+      "ar": "كوغوريو",
+      "kind": "t"
+    },
+    "Dutch Guinea": {
+      "ar": "غينيا الهولندية",
+      "kind": "k"
+    },
+    "Ethiopian highland farmers": {
+      "ar": "مزارعو المرتفعات الإثيوبية",
+      "kind": "d"
+    },
+    "Khwarazmian dynasty": {
+      "ar": "الدولة الخوارزمية",
+      "kind": "k"
+    },
+    "minor states under Indian influence": {
+      "ar": "دول صغيرة تحت التأثير الهندي",
+      "kind": "d"
+    },
+    "state societies and Aramaean kingdoms": {
+      "ar": "مجتمعات الدول والممالك الآرامية",
+      "kind": "d"
+    },
+    "Harapunchai": {
+      "ar": "هاريبونتشاي",
+      "kind": "t"
+    },
+    "Watassid Morocco": {
+      "ar": "المغرب الوطاسي",
+      "kind": "k"
+    },
+    "Nogai Horde": {
+      "ar": "الأوردا النوغائية",
+      "kind": "k"
+    },
+    "Maya chiefdoms and states": {
+      "ar": "مشيخات المايا ودولها",
+      "kind": "d"
+    },
+    "Eyaq": {
+      "ar": "الإياك",
+      "kind": "t"
+    },
+    "Naskapi Innu": {
+      "ar": "الناسكابي (إينو)",
+      "kind": "t"
+    },
+    "Japan (USA)": {
+      "ar": "اليابان (احتلال أمريكي)",
+      "kind": "d"
+    },
+    "Principality of Novgorod": {
+      "ar": "إمارة نوفغورود",
+      "kind": "k"
+    },
+    "Funj": {
+      "ar": "الفونج",
+      "kind": "k"
+    },
+    "Hadramaut": {
+      "ar": "حضرموت",
+      "kind": "k"
+    },
+    "Maya states": {
+      "ar": "دول المايا",
+      "kind": "d"
+    },
+    "Palas": {
+      "ar": "أسرة بالا",
+      "kind": "t"
+    },
+    "Assiniboin": {
+      "ar": "الأسينيبوين",
+      "kind": "t"
+    },
+    "Sasanian dependencies": {
+      "ar": "توابع الدولة الساسانية",
+      "kind": "d"
+    },
+    "Empire of Ghana": {
+      "ar": "مملكة غانة",
+      "kind": "k"
+    },
+    "Maitraka Kingdom": {
+      "ar": "مملكة مايتراكا",
+      "kind": "t"
+    },
+    "Principality of Vladimir-Suzdal": {
+      "ar": "إمارة فلاديمير-سوزدال",
+      "kind": "k"
+    },
+    "Chola Empire": {
+      "ar": "إمبراطورية تشولا",
+      "kind": "t"
+    },
+    "Bulgar Khanate": {
+      "ar": "خانية البلغار",
+      "kind": "k"
+    },
+    "Thai Kingdoms": {
+      "ar": "الممالك التايلندية",
+      "kind": "d"
+    },
+    "Ethiopian Highland Peoples": {
+      "ar": "شعوب المرتفعات الإثيوبية",
+      "kind": "d"
+    },
+    "Shan states": {
+      "ar": "ولايات الشان",
+      "kind": "k"
+    },
+    "Kaarta": {
+      "ar": "كارتا",
+      "kind": "t"
+    },
+    "Imperial Japan (Fujiwara)": {
+      "ar": "اليابان الإمبراطورية (عهد فوجيوارا)",
+      "kind": "d"
+    },
+    "Japan (Warring States)": {
+      "ar": "اليابان (عصر الدول المتحاربة)",
+      "kind": "k"
+    },
+    "Late Jomon culture": {
+      "ar": "ثقافة جومون المتأخرة",
+      "kind": "t"
+    },
+    "Yup'ik & Cup'ik": {
+      "ar": "اليوبيك والكوبيك",
+      "kind": "t"
+    },
+    "Mascat": {
+      "ar": "مسقط",
+      "kind": "k"
+    },
+    "Chorrera": {
+      "ar": "ثقافة تشوريرا",
+      "kind": "t"
+    },
+    "Plain-Pottery culture": {
+      "ar": "ثقافة الفخار غير المزخرف",
+      "kind": "d"
+    },
+    "Maoris": {
+      "ar": "الماوري",
+      "kind": "k"
+    },
+    "Point Peninsula": {
+      "ar": "ثقافة بوينت بنينسولا",
+      "kind": "t"
+    },
+    "Avars": {
+      "ar": "الآفار",
+      "kind": "k"
+    },
+    "Merina Kingdom": {
+      "ar": "مملكة ميرينا",
+      "kind": "t"
+    },
+    "Shellfish gatherers": {
+      "ar": "جامعو المحار",
+      "kind": "d"
+    },
+    "Pallavas": {
+      "ar": "البالافا",
+      "kind": "t"
+    },
+    "Wiradjuri": {
+      "ar": "الويراجوري",
+      "kind": "t"
+    },
+    "Ahmadnagar": {
+      "ar": "أحمد نكر",
+      "kind": "k"
+    },
+    "Montagnais Innu": {
+      "ar": "المونتانيي (إينو)",
+      "kind": "t"
+    },
+    "Northern Paiute": {
+      "ar": "البايوت الشماليون",
+      "kind": "t"
+    },
+    "city-states": {
+      "ar": "دول المدن",
+      "kind": "d"
+    },
+    "Principality of Galicia-Volhynia": {
+      "ar": "إمارة غاليسيا-فولينيا",
+      "kind": "k"
+    },
+    "Kryvichs": {
+      "ar": "الكريفيتشي",
+      "kind": "t"
+    },
+    "Tripolitana (UK Lybia)": {
+      "ar": "طرابلس الغرب (ليبيا البريطانية)",
+      "kind": "k"
+    },
+    "England and Ireland": {
+      "ar": "إنجلترا وأيرلندا",
+      "kind": "k"
+    },
+    "Nan-Zhao": {
+      "ar": "نانتشاو",
+      "kind": "t"
+    },
+    "Swift Creek Culture": {
+      "ar": "ثقافة سويفت كريك",
+      "kind": "t"
+    },
+    "Bagirmi": {
+      "ar": "باقرمي",
+      "kind": "k"
+    },
+    "Kokatha": {
+      "ar": "الكوكاثا",
+      "kind": "t"
+    },
+    "Pintupi": {
+      "ar": "البنتوبي",
+      "kind": "t"
+    },
+    "Mescalero": {
+      "ar": "الميسكاليرو",
+      "kind": "t"
+    },
+    "Byelarus": {
+      "ar": "بيلاروس",
+      "kind": "k"
+    },
+    "Mwenemutapa": {
+      "ar": "مونوموتابا",
+      "kind": "t"
+    },
+    "Burmese kingdoms": {
+      "ar": "الممالك البورمية",
+      "kind": "d"
+    },
+    "Koryaks": {
+      "ar": "الكورياك",
+      "kind": "t"
+    },
+    "Nizam's Dominions": {
+      "ar": "ممالك النظام (حيدر آباد)",
+      "kind": "k"
+    },
+    "Watjarri": {
+      "ar": "الواجاري",
+      "kind": "t"
+    },
+    "Brushed Pottery culture": {
+      "ar": "ثقافة الفخار الممشّط",
+      "kind": "d"
+    },
+    "Jōmon": {
+      "ar": "جومون",
+      "kind": "t"
+    },
+    "Taino": {
+      "ar": "التاينو",
+      "kind": "t"
+    },
+    "Rift Valley States": {
+      "ar": "دول الوادي المتصدّع",
+      "kind": "d"
+    },
+    "Nabatean Kingdom": {
+      "ar": "مملكة الأنباط",
+      "kind": "k"
+    },
+    "Warsenis": {
+      "ar": "الونشريس",
+      "kind": "k"
+    },
+    "Rio De Oro": {
+      "ar": "وادي الذهب",
+      "kind": "k"
+    },
+    "Kingdom of Kapisa": {
+      "ar": "مملكة كابيسا",
+      "kind": "t"
+    },
+    "Itelmen": {
+      "ar": "الإيتلمن",
+      "kind": "t"
+    },
+    "Chen-La": {
+      "ar": "تشنلا",
+      "kind": "t"
+    },
+    "Nyanganyatjara": {
+      "ar": "النيانغانياتجارا",
+      "kind": "t"
+    },
+    "Rozwi": {
+      "ar": "الروزوي",
+      "kind": "t"
+    },
+    "Danube Bulgars": {
+      "ar": "بلغار الدانوب",
+      "kind": "k"
+    },
+    "El Paraiso": {
+      "ar": "إل بارايسو",
+      "kind": "t"
+    },
+    "Mossi States": {
+      "ar": "ممالك الموسي",
+      "kind": "t"
+    },
+    "minor Hindu and Buddhist states": {
+      "ar": "دول هندوسية وبوذية صغيرة",
+      "kind": "d"
+    },
+    "Hindu states": {
+      "ar": "دول هندوسية",
+      "kind": "d"
+    },
+    "Bell-shaped burials culture": {
+      "ar": "ثقافة المدافن الجرسية",
+      "kind": "d"
+    },
+    "Kingdom of David and Solomon": {
+      "ar": "مملكة داود وسليمان",
+      "kind": "k"
+    },
+    "Innu": {
+      "ar": "الإينو",
+      "kind": "t"
+    },
+    "Paleo-Koreans": {
+      "ar": "الكوريون القدماء",
+      "kind": "d"
+    },
+    "Mirning": {
+      "ar": "الميرنينغ",
+      "kind": "t"
+    },
+    "Marksville Culture": {
+      "ar": "ثقافة ماركسفيل",
+      "kind": "t"
+    },
+    "Awsa": {
+      "ar": "أوسا",
+      "kind": "t"
+    },
+    "Wadai": {
+      "ar": "وداي",
+      "kind": "k"
+    },
+    "Greek city-states": {
+      "ar": "دول المدن الإغريقية",
+      "kind": "k"
+    },
+    "Lombard principalities": {
+      "ar": "إمارات اللومبارد",
+      "kind": "k"
+    },
+    "Dutch settlements": {
+      "ar": "مستوطنات هولندية",
+      "kind": "d"
+    },
+    "Lan Na": {
+      "ar": "لان نا",
+      "kind": "t"
+    },
+    "Korea (USSR)": {
+      "ar": "كوريا (احتلال سوفيتي)",
+      "kind": "d"
+    },
+    "Circars": {
+      "ar": "السركارات",
+      "kind": "t"
+    },
+    "Kalaamaya": {
+      "ar": "الكالامايا",
+      "kind": "t"
+    },
+    "Coahuiltec": {
+      "ar": "الكواويلتيك",
+      "kind": "t"
+    },
+    "Blemmyes": {
+      "ar": "البليميون",
+      "kind": "k"
+    },
+    "Nyangumarda": {
+      "ar": "النيانغومردا",
+      "kind": "t"
+    },
+    "Maya city-states": {
+      "ar": "دول مدن المايا",
+      "kind": "d"
+    },
+    "Kamilaroi": {
+      "ar": "الكاميلاروي",
+      "kind": "t"
+    },
+    "Aures": {
+      "ar": "الأوراس",
+      "kind": "k"
+    },
+    "Korea, Democratic People's Republic of": {
+      "ar": "كوريا الشمالية",
+      "kind": "k"
+    },
+    "Mi'kma'ki": {
+      "ar": "ميكماكي",
+      "kind": "t"
+    },
+    "Southern Paiute": {
+      "ar": "البايوت الجنوبيون",
+      "kind": "t"
+    },
+    "Erie": {
+      "ar": "الإيري",
+      "kind": "t"
+    },
+    "Blackfoot": {
+      "ar": "القدم السوداء",
+      "kind": "k"
+    },
+    "Ibadites": {
+      "ar": "الإباضية",
+      "kind": "k"
+    },
+    "Warumungu": {
+      "ar": "الوارومونغو",
+      "kind": "t"
+    },
+    "Kingdom of Kashmir": {
+      "ar": "مملكة كشمير",
+      "kind": "k"
+    },
+    "Germany (Soviet)": {
+      "ar": "ألمانيا (احتلال سوفيتي)",
+      "kind": "d"
+    },
+    "Wawula": {
+      "ar": "الواوولا",
+      "kind": "t"
+    },
+    "Champa City States": {
+      "ar": "دول مدن تشامبا",
+      "kind": "d"
+    },
+    "Pegu": {
+      "ar": "بيغو",
+      "kind": "t"
+    },
+    "Pyu state": {
+      "ar": "دولة البيو",
+      "kind": "t"
+    },
+    "Celtic kingdoms": {
+      "ar": "الممالك الكلتية",
+      "kind": "k"
+    },
+    "Boethuk": {
+      "ar": "البيوثوك",
+      "kind": "t"
+    },
+    "Paleo-Inuit": {
+      "ar": "الإنويت القدماء",
+      "kind": "d"
+    },
+    "Veracruz civilization": {
+      "ar": "حضارة فيراكروز",
+      "kind": "t"
+    },
+    "Principality of Kyiv": {
+      "ar": "إمارة كييف",
+      "kind": "k"
+    },
+    "Suspiaq": {
+      "ar": "سوسبياك",
+      "kind": "t"
+    },
+    "Germany (USA)": {
+      "ar": "ألمانيا (احتلال أمريكي)",
+      "kind": "d"
+    },
+    "Cuba (Spain)": {
+      "ar": "كوبا (الإسبانية)",
+      "kind": "k"
+    },
+    "Ngatatjara": {
+      "ar": "النغاتاتجارا",
+      "kind": "t"
+    },
+    "Guachichiles": {
+      "ar": "الغواتشيتشيليس",
+      "kind": "t"
+    },
+    "Iningai": {
+      "ar": "الإيننغاي",
+      "kind": "t"
+    },
+    "Ngaanyatjarra": {
+      "ar": "النغانياتجارا",
+      "kind": "t"
+    },
+    "Yankontai": {
+      "ar": "اليانكتوناي",
+      "kind": "t"
+    },
+    "Gharra": {
+      "ar": "غارا",
+      "kind": "t"
+    },
+    "Zacatecs": {
+      "ar": "الزاكاتيك",
+      "kind": "t"
+    },
+    "Enets": {
+      "ar": "الإينتس",
+      "kind": "t"
+    },
+    "Hispaniola (Spain)": {
+      "ar": "هيسبانيولا (الإسبانية)",
+      "kind": "k"
+    },
+    "Navaho": {
+      "ar": "النافاهو",
+      "kind": "k"
+    },
+    "Mayas": {
+      "ar": "المايا",
+      "kind": "k"
+    },
+    "Tonkawa": {
+      "ar": "التونكاوا",
+      "kind": "t"
+    },
+    "Quapaw": {
+      "ar": "الكوابو",
+      "kind": "t"
+    },
+    "Iroquois": {
+      "ar": "الإيروكوا",
+      "kind": "k"
+    },
+    "Abnaki": {
+      "ar": "الأبيناكي",
+      "kind": "t"
+    },
+    "Golkonda": {
+      "ar": "جولكندا",
+      "kind": "k"
+    },
+    "Aaniiih": {
+      "ar": "الآنيي",
+      "kind": "t"
+    }
+  }
 }
