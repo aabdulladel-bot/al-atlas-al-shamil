@@ -519,8 +519,8 @@ function markPoint(coords) {
 const chip = (text, cls = "", attrs = "") => (attrs
   ? `<button type="button" class="chip ${cls}" ${attrs}>${escapeHtml(text)}</button>`
   : `<span class="chip ${cls}">${escapeHtml(text)}</span>`);
-function cardHead({ title, en = "", swatch = "", chips = [], note = "" }) {
-  return `<header class="ch"><div class="ch-row">${swatch ? `<i class="ch-sw" style="background:${swatch}"></i>` : ""}<h2>${escapeHtml(title)}</h2></div>` +
+function cardHead({ title, en = "", swatch = "", chips = [], note = "", icon = "" }) {
+  return `<header class="ch"><div class="ch-row">${icon ? `<span class="ch-ic" aria-hidden="true">${CARD_ICON[icon]}</span>` : ""}${swatch ? `<i class="ch-sw" style="background:${swatch}"></i>` : ""}<h2>${escapeHtml(title)}</h2></div>` +
     (en && en !== title ? `<div class="ch-en" dir="ltr">${escapeHtml(en)}</div>` : "") +
     (chips.length ? `<div class="chips">${chips.join("")}</div>` : "") +
     (note ? `<p class="ch-note">${note}</p>` : "") + `</header>`;
@@ -581,7 +581,16 @@ async function loadLinks(key) {
   }
   return linksCache.get(key);
 }
-const TIER_CLASS = { "متحقق": "tier-v", "قريب من الحد": "tier-r", "شعب": "tier-r", "محل خلاف": "tier-x", "غير متحقق": "tier-x" };
+// الشارة بشكلها ولونها معاً: متحقق ● قريب من الحد ▲ محل خلاف ◆ غير متحقق ○، والشعب بلا حكم
+const TIER_CLASS = { "متحقق": "tier-v", "قريب من الحد": "tier-r", "شعب": "", "محل خلاف": "tier-x", "غير متحقق": "tier-u" };
+// أيقونة نوع البطاقة بجانب عنوانها
+const CARD_ICON = {
+  state: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>',
+  people: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.4 1.2-4.4 4-4.6"/></svg>',
+  place: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+  claim: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 17h5l2-5V5H4v7h3l-3 5zm9 0h5l2-5V5h-7v7h3l-3 5z"/></svg>',
+  demo: '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="11" width="4" height="9" rx="1"/><rect x="10" y="5" width="4" height="15" rx="1"/><rect x="16" y="9" width="4" height="11" rx="1"/></svg>',
+};
 function linkedEvidenceHtml(name, links) {
   const list = links?.[name] ?? [];
   if (!list.length) return `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">لا شاهد موثّقاً يقع على أرضه في هذه الخريطة بعد.</p></section>`;
@@ -614,13 +623,14 @@ function openEntityCard(f, kind) {
   const preciseBorder = modern || (!approxAll && Number(p.BORDERPRECISION) === 3);
   const chips = [chip(`خريطة ${yearText(key)}`), chip(people ? "شعب أو قبيلة" : "كيان سياسي"), chip(preciseBorder ? "حد محدد" : "حد تقريبي")];
   if (info?.st === "arabized") chips.push(chip("تعريب تقديري", "tier-r"));
-  else if (!p.NAME_AR && !info?.ar) chips.push(chip("لا اسم عربي موثّق", "tier-x"));
+  else if (!p.NAME_AR && !info?.ar) chips.push(chip("لا اسم عربي موثّق", "tier-u"));
   const notes = [];
   if (people) notes.push("مجموعة بشرية لا دولة، وحدودها تقريبية في المصدر، ولا تُعدّ في إحصاء الدول.");
   if (p.PARTOF && p.PARTOF !== p.NAME) notes.push(`ضمن: <bdi>${escapeHtml(labelInfo.get(p.PARTOF)?.ar ?? p.PARTOF)}</bdi>`);
   const span = info?.st === "verified" && (info.from != null || info.to != null)
     ? `${info.from != null ? yearLabel(info.from) : "؟"} – ${info.to != null ? yearLabel(info.to) : "؟"}` : "";
-  const top = cardHead({ title, en: info?.en_shown ?? p.NAME, swatch, chips, note: notes.join("<br>") }) +
+  if (typeof passportNote === "function") passportNote("entity", p.NAME);
+  const top = cardHead({ title, en: info?.en_shown ?? p.NAME, swatch, chips, note: notes.join("<br>"), icon: people ? "people" : "state" }) +
     statsHtml([["المساحة على هذه الخريطة (كم²)", info?.a ? fmtBig(info.a) : "", info?.a ? `${fmtInt(info.a)} كم² تقريباً` : ""], ["مدته في ويكي بيانات", span]]) +
     lifeHtml(info?.years, key, swatch);
   const prec = modern ? "محددة (Natural Earth)" : `${PRECISION_LABEL[p.BORDERPRECISION] ?? "غير مذكورة"} بحسب المصدر${approxAll ? "، ويرسمها الأطلس تقريبية" : ""}`;
@@ -687,10 +697,11 @@ function openClaimCard(f) {
       `<blockquote class="ev-q" dir="auto">“${escapeHtml(c.quote)}”</blockquote>` +
       `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi></div>` +
       (c.hedge ? `<div class="ev-hedge">تحفّظ: ${escapeHtml(c.hedge)}</div>` : "") +
-      `<div class="chips">${era ? chip(`الحقبة ${era.id}: ${era.label}`, "", `data-time="${era.border}" title="انقل الخريطة إلى زمنه"`) : ""}${roles.join("")}</div></article>`;
+      `<div class="chips">${era ? chip(`الحقبة ${era.id}: ${era.label}${era.id === eraOf(time.key).id ? " (الحقبة المعروضة)" : ""}`, era.id === eraOf(time.key).id ? "now-era" : "", `data-time="${era.border}" title="انقل الخريطة إلى زمنه"`) : ""}${roles.join("")}</div></article>`;
   }).join("");
+  if (typeof passportNote === "function") for (const c of claims) passportNote("claim", c.id);
   openCard(cardHead({
-    title: p.name_ar, en: p.name_en,
+    title: p.name_ar, en: p.name_en, icon: "claim",
     chips: [chip(COORD_SHORT[p.coord_status] ?? p.coord_status), chip(`الشواهد هنا: ${fmtInt(claims.length)}`, "tier-v")],
     note: p.place_note && p.place_note !== "null" ? escapeHtml(p.place_note) : "",
   }) + `<section class="card-sec"><h3>ما تقوله المصادر عن هذا المكان</h3><p class="sub">كل اقتباس مطابق لنص مصدره، ومعه قائله وتحفّظه.</p>${rows}</section>` +
@@ -702,8 +713,9 @@ function openPlaceCard(f) {
   if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
   cardEntity = null;
   const era = ERAS.find((x) => x.id === Number(p.era));
+  if (typeof passportNote === "function") passportNote("place", `${p.era}|${p.name_ar}`);
   openCard(cardHead({
-    title: p.name_ar, en: p.name_en,
+    title: p.name_ar, en: p.name_en, icon: "place",
     chips: [era ? chip(`الحقبة ${era.id}: ${era.label}`) : "", chip(COORD_SHORT[p.coord_status] ?? p.coord_status)].filter(Boolean),
   }) + aboutHtml([
     ["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)],
@@ -722,7 +734,7 @@ function openDemoCard(f) {
   cardEntity = null;
   const region = p.level === "region";
   openCard(cardHead({
-    title: demoTitle(p), en: p.name_en,
+    title: demoTitle(p), en: p.name_en, icon: "demo",
     chips: [chip(`سنة ${yearLabel(Number(p.year))}`), chip(region ? "إقليم حديث التقسيم" : "دولة بحدودها الحديثة")],
     note: (region ? "الرقم لإقليم حديث التقسيم، وليس لحدود الحقبة." : "الرقم لأرض الدولة بحدودها الحديثة، لا لكيانات الحقبة.") + " ارتفاع العمود بالجذر التربيعي للسكان، بمقياس واحد لكل السنين.",
   }) + statsHtml([["نسمة", fmtBig(Number(p.population)), `${formatPop(p.population)} نسمة`]]) +
@@ -1233,6 +1245,7 @@ function clearSunna() {
   for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", "false");
 }
 async function selectSunna(s) {
+  if (typeof passportNote === "function") passportNote("sunna", s.id);
   for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.sunna === s.id));
   const ids = [...s.supporting, ...s.limiting].filter((x) => x.id).map((x) => x.id);
   activeSunna = { id: s.id, ids };
@@ -1456,6 +1469,7 @@ function renderNow(parts) {
     claims != null ? chip(`ادعاءات الحقبة: ${fmtInt(claims)}`, "tier-v") : "",
   ].join("");
   setLayerCount("labels", all.length ? `العربية: ${fmtInt(ar)} من ${fmtInt(all.length)}` : "");
+  if (parts) document.dispatchEvent(new CustomEvent("atlas:time"));
 }
 labelData("modern").then((d) => { if (d) modernAr = new Map(d.labels.filter((l) => l.ar).map((l) => [l.en, l.ar])); });
 
