@@ -8,7 +8,12 @@ const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyV
 const isNarrow = () => window.innerWidth < 600;
 // اللوحة على يمين الشاشة (أو شريط مطويّ أعلاها على الجوال)، وشريط الزمن أسفلها، فتوضع النقاط في المساحة الحرة بينهما.
 const timebarHeight = () => document.getElementById("timebar")?.offsetHeight ?? 0;
-const fitPadding = () => (isNarrow() ? { top: 90, bottom: timebarHeight() + 30, left: 30, right: 30 } : { top: 40, bottom: timebarHeight() + 30, left: 40, right: 420 });
+// حشوة الخريطة نفسها (viewPadding أدناه) تحجز مكان اللوحة وشريط الزمن، وMapLibre تضيفها إلى حشوة كل تقريب،
+// فيكفي هنا هامش حول المعالم
+const fitPadding = () => (isNarrow() ? { top: 30, bottom: 30, left: 30, right: 30 } : { top: 40, bottom: 40, left: 40, right: 40 });
+// الافتتاحية: الكرة تبدأ بعيدة ثم تقترب، إلا لمن طلب من نظامه تقليل الحركة
+const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+const FIRST_VIEW = { center: [35, 32], zoom: 2.8, pitch: 30, bearing: 0 };
 
 // ---------- طريقة العرض: مبسّط أو باحث ----------
 const modeButtons = document.querySelectorAll(".mode button");
@@ -25,46 +30,86 @@ try { const saved = localStorage.getItem("atlas-mode"); if (saved === "research"
 // النسخة المنشورة صفحةً على claude.ai لا تصل إلى أي مضيف خارجي، فتأتي ببلاطات محزومة يعرّفها tilepacks.js
 // (scripts/build_artifact_bundle.mjs): ملف ثنائي لكل مستوى تقريب وفهرس بإزاحات بلاطاته. وبغيرها تُجلب البلاطات من الشبكة.
 const PACKS = window.TILE_PACKS ?? null;
-const packCache = new Map();
-// الحزمة قد تُنشر نصاً بترميز base64 لأن منصة النشر لا تقدّم الملفات الثنائية العامة
+// الحزمة نص بترميز base64 لأن منصة النشر لا تقدّم الملفات الثنائية العامة. لكل مستوى فهرس (x/y ← [قطعة، إزاحة، طول])
+// وقطع لا تتجاوز حدّ الملف. المستويات العميقة محزومة لإقليم العالم القديم فقط، وما خارجه يُشتق من أقرب سلف محزوم.
 function base64Buffer(text) {
   const bin = atob(text);
   const out = new Uint8Array(bin.length);
   for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
   return out.buffer;
 }
-async function packTile(tilePath) {
-  const [layer, z, x, y] = tilePath.split("/");
-  const file = PACKS?.[layer]?.files?.[z];
-  if (!file) throw new Error(`لا بلاطة محزومة: ${tilePath}`);
-  if (!packCache.has(file)) {
-    const body = PACKS[layer].encoding === "base64" ? fetch(file).then((r) => r.text()).then(base64Buffer) : fetch(file).then((r) => r.arrayBuffer());
-    packCache.set(file, Promise.all([fetch(`${file}.json`).then((r) => r.json()), body]));
-  }
-  const [index, buf] = await packCache.get(file);
-  const entry = index[`${x}/${y}`];
-  if (!entry) throw new Error(`لا بلاطة محزومة: ${tilePath}`);
-  return buf.slice(entry[0], entry[0] + entry[1]);
+const packCache = new Map();
+const packFetch = (file, read) => { if (!packCache.has(file)) packCache.set(file, fetch(file).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return read(r); })); return packCache.get(file); };
+async function packTile(layer, z, x, y) {
+  const lvl = PACKS?.[layer]?.files?.[z];
+  if (!lvl) return null;
+  const entry = (await packFetch(lvl.index, (r) => r.json()))[`${x}/${y}`];
+  if (!entry) return null;
+  const buf = await packFetch(lvl.chunks[entry[0]], (r) => r.text().then(base64Buffer));
+  return buf.slice(entry[1], entry[1] + entry[2]);
 }
-maplibregl.addProtocol("pack", async (params) => ({ data: await packTile(params.url.slice("pack://".length)) }));
+// أقرب بلاطة محزومة: البلاطة نفسها أو أحد أسلافها، ومعها فرق المستوى لاقتطاع موضعها منه
+async function packOrAncestor(layer, z, x, y) {
+  for (let dz = 0; dz <= z; dz++) {
+    const buf = await packTile(layer, z - dz, x >> dz, y >> dz);
+    if (buf) return { buf, dz };
+  }
+  throw new Error(`لا بلاطة محزومة: ${layer}/${z}/${x}/${y}`);
+}
+const tileBitmap = (buf) => createImageBitmap(new Blob([buf]), { colorSpaceConversion: "none", premultiplyAlpha: "none" });
+// صورة: يُقتطع موضع البلاطة من سلفها ويُكبَّر بتنعيم
+maplibregl.addProtocol("pack", async (params) => {
+  const [layer, z, x, y] = params.url.slice("pack://".length).split("/").map((v, i) => (i ? Number(v) : v));
+  const { buf, dz } = await packOrAncestor(layer, z, x, y);
+  if (!dz) return { data: buf };
+  const n = 1 << dz, size = 256 / n;
+  const canvas = new OffscreenCanvas(256, 256);
+  const ctx = canvas.getContext("2d");
+  ctx.imageSmoothingQuality = "high";
+  ctx.drawImage(await tileBitmap(buf), (x % n) * size, (y % n) * size, size, size, 0, 0, 256, 256);
+  return { data: await (await canvas.convertToBlob({ type: "image/jpeg", quality: 0.9 })).arrayBuffer() };
+});
 const DEM_TILES = PACKS?.dem ? "dem0://pack/dem/{z}/{x}/{y}" : "dem0://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png";
 // بيانات الارتفاع تشمل أعماق البحار، فتبدو البحار خنادق غائرة بعد التضخيم، وترسم الظلالُ قاعَها خطوطاً فوق الماء.
 // لذلك يُرفع كل ما تحت الصفر إلى الصفر قبل أن تستعمله الخريطة، فيستوي سطح البحر.
 // الثمن: اليابسة تحت مستوى البحر (البحر الميت، ووادي الأردن، ومنخفض القطارة) تُعرض عند مستواه.
-// ترميز terrarium: الارتفاع = أحمر×256 + أخضر + أزرق/256 − 32768، فالسالب كل ما أحمره دون 128، والصفر (128، 0، 0).
+// ترميز terrarium: الارتفاع = أحمر×256 + أخضر + أزرق/256 − 32768. والبلاطة المشتقة من سلف تُكبَّر بالاستيفاء في الارتفاع نفسه
+// لا في الألوان، لأن خلط قنوات الترميز يعطي ارتفاعات خاطئة.
 maplibregl.addProtocol("dem0", async (params, abortController) => {
-  const res = params.url.startsWith("dem0://pack/")
-    ? new Response(await packTile(params.url.slice("dem0://pack/".length)))
-    : await fetch(params.url.replace("dem0://", "https://"), { signal: abortController.signal });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const bmp = await createImageBitmap(await res.blob(), { colorSpaceConversion: "none", premultiplyAlpha: "none" });
-  const canvas = new OffscreenCanvas(bmp.width, bmp.height);
+  let buf, dz = 0, x = 0, y = 0;
+  if (params.url.startsWith("dem0://pack/")) {
+    let z;
+    [, z, x, y] = params.url.slice("dem0://pack/".length).split("/").map((v, i) => (i ? Number(v) : v));
+    ({ buf, dz } = await packOrAncestor("dem", z, x, y));
+  } else {
+    const res = await fetch(params.url.replace("dem0://", "https://"), { signal: abortController.signal });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    buf = await res.arrayBuffer();
+  }
+  const bmp = await tileBitmap(buf);
+  const canvas = new OffscreenCanvas(256, 256);
   const ctx = canvas.getContext("2d", { willReadFrequently: true });
-  ctx.drawImage(bmp, 0, 0);
-  const img = ctx.getImageData(0, 0, bmp.width, bmp.height);
-  const d = img.data;
-  for (let i = 0; i < d.length; i += 4) if (d[i] < 128) { d[i] = 128; d[i + 1] = 0; d[i + 2] = 0; }
-  ctx.putImageData(img, 0, 0);
+  ctx.drawImage(bmp, 0, 0, 256, 256);
+  const src = ctx.getImageData(0, 0, 256, 256);
+  const s = src.data;
+  const height = (i) => Math.max(0, s[i] * 256 + s[i + 1] + s[i + 2] / 256 - 32768);
+  const out = ctx.createImageData(256, 256);
+  const d = out.data;
+  const n = 1 << dz, step = 1 / n, ox = (x % n) * (256 / n), oy = (y % n) * (256 / n);
+  for (let py = 0; py < 256; py++) {
+    const sy = Math.min(255, Math.max(0, oy + (py + 0.5) * step - 0.5));
+    const y0 = Math.floor(sy), y1 = Math.min(255, y0 + 1), fy = sy - y0;
+    for (let px = 0; px < 256; px++) {
+      const sx = Math.min(255, Math.max(0, ox + (px + 0.5) * step - 0.5));
+      const x0 = Math.floor(sx), x1 = Math.min(255, x0 + 1), fx = sx - x0;
+      const h = dz
+        ? (height((y0 * 256 + x0) * 4) * (1 - fx) + height((y0 * 256 + x1) * 4) * fx) * (1 - fy) + (height((y1 * 256 + x0) * 4) * (1 - fx) + height((y1 * 256 + x1) * 4) * fx) * fy
+        : height((py * 256 + px) * 4);
+      const v = h + 32768, o = (py * 256 + px) * 4;
+      d[o] = Math.floor(v / 256); d[o + 1] = Math.floor(v) % 256; d[o + 2] = Math.floor((v - Math.floor(v)) * 256); d[o + 3] = 255;
+    }
+  }
+  ctx.putImageData(out, 0, 0);
   return { data: await (await canvas.convertToBlob({ type: "image/png" })).arrayBuffer() };
 });
 const DEM_ATTRIBUTION = "التضاريس: Terrain Tiles (USGS 3DEP/SRTM/GMTED2010، NOAA ETOPO1، Copernicus EU-DEM، وغيرها)";
@@ -79,7 +124,7 @@ const HILLSHADE = {
 };
 // هالة الغلاف الجوي حول الكرة تخفت مع التقريب، والضباب عند الأفق فقط
 const SKY = {
-  satellite: { "sky-color": "#0b1d3a", "horizon-color": "#9cc3ef", "fog-color": "#9cc3ef", "fog-ground-blend": 0.9, "horizon-fog-blend": 0.4, "sky-horizon-blend": 0.6, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 3, 0.8, 5, 0] },
+  satellite: { "sky-color": "#0b1d3a", "horizon-color": "#9cc3ef", "fog-color": "#9cc3ef", "fog-ground-blend": 0.9, "horizon-fog-blend": 0.4, "sky-horizon-blend": 0.6, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 4, 0.9, 6, 0] },
   drawn: { "sky-color": cssVar("--sea"), "horizon-color": cssVar("--bg"), "fog-color": cssVar("--bg"), "fog-ground-blend": 0.9, "horizon-fog-blend": 0.4, "sky-horizon-blend": 0.6, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 3, 0.8, 5, 0] },
 };
 // لون ثابت لكل كيان عبر السنوات: درجة لون تُشتق من معرّفه في ويكي بيانات إن تحقق، وإلا من اسمه في المصدر،
@@ -115,6 +160,8 @@ const map = new maplibregl.Map({
       { id: "sea", type: "background", paint: { "background-color": cssVar("--sea") } },
       { id: "satellite", type: "raster", source: "satellite", paint: { "raster-fade-duration": 200 } },
       { id: "land", type: "fill", source: "land", layout: { visibility: "none" }, paint: { "fill-color": cssVar("--land") } },
+      // الخريطة المرسومة ملوّنة بالارتفاع من بيانات التضاريس نفسها، بألوان الأطالس الورقية (البحر تغطيه طبقة ocean)
+      { id: "relief", type: "color-relief", source: "dem-hs", layout: { visibility: "none" }, paint: { "color-relief-opacity": 0.9, "color-relief-color": ["interpolate", ["linear"], ["elevation"], 0, cssVar("--relief-0"), 300, cssVar("--relief-1"), 800, cssVar("--relief-2"), 1500, cssVar("--relief-3"), 2500, cssVar("--relief-4"), 4000, cssVar("--relief-5")] } },
       { id: "hillshade", type: "hillshade", source: "dem-hs", paint: HILLSHADE.satellite },
       { id: "ocean", type: "fill", source: "ocean", layout: { visibility: "none" }, paint: { "fill-color": cssVar("--sea") } },
       { id: "lakes", type: "fill", source: "lakes", layout: { visibility: "none" }, paint: { "fill-color": cssVar("--sea") } },
@@ -122,9 +169,7 @@ const map = new maplibregl.Map({
     ],
     sky: SKY.satellite,
   },
-  center: [35, 32],
-  zoom: 3,
-  pitch: 35,
+  ...(reduceMotion ? FIRST_VIEW : { center: [-10, 18], zoom: 0.9, pitch: 0, bearing: 25 }),
   maxPitch: 85,
   // الإسناد مطويّ خلف زر ⓘ فلا يركب على أزرار الخريطة، ونصّه الكامل في «المصادر والتراخيص»
   attributionControl: { compact: true, customAttribution: "Natural Earth · Pleiades · OWID/HYDE · Gapminder" },
@@ -134,7 +179,7 @@ map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bott
 // ---------- لوحة الطبقات: ما يختاره القارئ يعلو على ما تفتحه الأقسام ----------
 // كل قسم يطلب إظهار طبقته أو إخفاءها عبر setVis، والطبقة لا تظهر إلا إذا طلبها القسم ولم يطفئها القارئ.
 const LAYER_GROUPS = {
-  hillshade: ["hillshade"],
+  hillshade: ["hillshade", "relief"],
   water: ["lakes", "rivers"],
   borders: ["borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-highlight"],
   peoples: ["peoples-fill", "peoples-line"],
@@ -173,7 +218,7 @@ map.on("data", (e) => { if (e.dataType === "source" && (e.sourceId === "dem" || 
 function stopRelief() {
   dem.stopped = true;
   map.setTerrain(null);
-  if (map.getLayer("hillshade")) map.removeLayer("hillshade");
+  for (const id of ["hillshade", "relief"]) if (map.getLayer(id)) map.removeLayer(id);
   for (const id of ["dem", "dem-hs"]) if (map.getSource(id)) map.removeSource(id);
   for (const id of ["terrain-toggle", "terrain-exaggeration", "terrain-auto"]) document.getElementById(id).disabled = true;
   document.querySelector('#layer-panel input[data-group="hillshade"]').disabled = true;
@@ -205,6 +250,7 @@ function applyBasemap(mode) {
   if (map.getLayer("satellite")) map.setLayoutProperty("satellite", "visibility", sat ? "visible" : "none");
   for (const id of ["land", "ocean"]) map.setLayoutProperty(id, "visibility", sat ? "none" : "visible");
   setVis("lakes", !sat); // البحيرات ظاهرة في الصور نفسها
+  setVis("relief", !sat);
   if (map.getLayer("hillshade")) for (const [k, v] of Object.entries(HILLSHADE[mode])) map.setPaintProperty("hillshade", k, v);
   map.setSky(SKY[mode]);
   if (map.getLayer("borders-fill")) {
@@ -214,6 +260,7 @@ function applyBasemap(mode) {
   }
 }
 wanted.set("lakes", false);
+wanted.set("relief", false);
 document.getElementById("map").classList.add("space");
 // إن فشلت أولى بلاطات الصور كلها (لا شبكة أو حجب) يُحذف مصدرها فتكفّ الطلبات، ويُعرض الأساس المرسوم مع ذكر السبب
 const sat = { ok: 0, failed: 0, stopped: false };
@@ -243,6 +290,43 @@ panelToggle.addEventListener("click", () => {
   setPanelCollapsed(!open);
 });
 if (isNarrow()) setPanelCollapsed(true);
+// الكرة في وسط المساحة الحرة: حشوة الخريطة تحجز مكان اللوحة (يمين المكتب، أو شريط عنوانها على الجوال) وشريط الزمن،
+// فيتوسّط مركزُ الخريطة ما بقي مرئياً، وتبني عليها كل حركات الكاميرا والتقريب
+function viewPadding() {
+  const bottom = timebarHeight();
+  if (document.body.classList.contains("showcasing")) return { top: 0, bottom, left: 0, right: 0 };
+  if (isNarrow()) return { top: 64, bottom, left: 0, right: 0 };
+  return { top: 0, bottom, left: 0, right: panelEl.offsetWidth + 12 };
+}
+function applyPadding() { map.setPadding(viewPadding()); }
+window.addEventListener("resize", applyPadding);
+applyPadding();
+
+// ---------- الفضاء: نجوم تُولَّد في المتصفح بلا ملفات خارجية، وتنزاح قليلاً مع حركة الكرة ----------
+(function starfield() {
+  const w = 1024, c = document.createElement("canvas");
+  c.width = c.height = w;
+  const ctx = c.getContext("2d");
+  let seed = 20260;
+  const rnd = () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  for (let i = 0; i < 1100; i++) {
+    const big = rnd() > 0.94;
+    const r = big ? 0.9 + rnd() * 1.1 : 0.25 + rnd() * 0.7;
+    const a = (big ? 0.7 : 0.3) + rnd() * 0.3;
+    const tint = rnd();
+    ctx.fillStyle = tint < 0.12 ? `rgba(255,214,170,${a})` : tint < 0.26 ? `rgba(185,208,255,${a})` : `rgba(255,255,255,${a})`;
+    ctx.beginPath();
+    ctx.arc(rnd() * w, rnd() * w, r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  const el = document.getElementById("map");
+  el.style.setProperty("--stars", `url(${c.toDataURL("image/png")})`);
+  map.on("move", () => {
+    const p = map.getCenter();
+    el.style.setProperty("--sx", `${(-p.lng * 3 - map.getBearing() * 2).toFixed(1)}px`);
+    el.style.setProperty("--sy", `${(p.lat * 3).toFixed(1)}px`);
+  });
+})();
 // يعيد مربعات الطبقات وظهورها إلى ما في userOff (بعد أن يغيّره العرض أو قائمة السكان)
 function syncLayerInputs() {
   for (const cb of document.querySelectorAll("#layer-panel input[data-group]")) cb.checked = !userOff.has(cb.dataset.group);
@@ -1364,4 +1448,43 @@ tbPlay.addEventListener("click", () => {
 
 // البداية: سنة 1200م، حقبة التبادل العابر للقارات، فيرى الزائر الكيانات بألوانها والشواهد في مكانها
 const START_TIME = 1200;
-map.on("load", () => loadBorders(START_TIME));
+map.on("load", async () => {
+  await loadBorders(START_TIME);
+  if (!reduceMotion && !document.body.classList.contains("showcasing")) map.flyTo({ ...FIRST_VIEW, duration: 5200, curve: 1.3, essential: false });
+});
+
+// ---------- الافتتاحية: العنوان وثلاثة أبواب، في الزيارة الأولى فقط ----------
+const introEl = document.getElementById("intro");
+let introSeen = false;
+try { introSeen = localStorage.getItem("atlas-intro-seen") === "1"; } catch {}
+document.getElementById("intro-span").textContent = `من ${yearText(TIME_STOPS[0])} إلى اليوم: الدول والشعوب ومواقع الحقب والسكان، والشواهد الموثّقة في أماكنها، على كرة واحدة. والسنن فرضيات تُختبر بها.`;
+function dismissIntro() {
+  if (introEl.hidden) return;
+  introEl.classList.remove("on");
+  setTimeout(() => (introEl.hidden = true), 600);
+  try { localStorage.setItem("atlas-intro-seen", "1"); } catch {}
+}
+function hint(el) {
+  el.classList.remove("hint");
+  void el.offsetWidth;
+  el.classList.add("hint");
+}
+if (!introSeen) {
+  introEl.hidden = false;
+  requestAnimationFrame(() => requestAnimationFrame(() => introEl.classList.add("on")));
+  map.on("dragstart", dismissIntro);
+}
+introEl.addEventListener("click", (e) => {
+  const door = e.target.closest("[data-door]")?.dataset.door;
+  if (!door) return;
+  dismissIntro();
+  if (door === "show") scStart("fusion");
+  else if (door === "time") { tbTrack.focus(); hint(document.getElementById("timebar")); }
+  else if (door === "sunan") {
+    setPanelCollapsed(false);
+    const sec = sunanListEl.closest("details");
+    sec.open = true;
+    sec.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    hint(sec);
+  }
+});
