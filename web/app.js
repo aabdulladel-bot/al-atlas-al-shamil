@@ -92,6 +92,13 @@ maplibregl.addProtocol("dem0", async (params, abortController) => {
   ctx.drawImage(bmp, 0, 0, 256, 256);
   const src = ctx.getImageData(0, 0, 256, 256);
   const s = src.data;
+  // البلاطة بدقتها: يكفي رفع ما تحت الصفر إلى الصفر في مكانه (السالب كل ما أحمره دون 128، والصفر 128، 0، 0)
+  if (!dz) {
+    for (let i = 0; i < s.length; i += 4) if (s[i] < 128) { s[i] = 128; s[i + 1] = 0; s[i + 2] = 0; }
+    ctx.putImageData(src, 0, 0);
+    return { data: await (await canvas.convertToBlob({ type: "image/png" })).arrayBuffer() };
+  }
+  // المشتقة من سلف: استيفاء ثنائي في الارتفاع نفسه
   const height = (i) => Math.max(0, s[i] * 256 + s[i + 1] + s[i + 2] / 256 - 32768);
   const out = ctx.createImageData(256, 256);
   const d = out.data;
@@ -102,9 +109,7 @@ maplibregl.addProtocol("dem0", async (params, abortController) => {
     for (let px = 0; px < 256; px++) {
       const sx = Math.min(255, Math.max(0, ox + (px + 0.5) * step - 0.5));
       const x0 = Math.floor(sx), x1 = Math.min(255, x0 + 1), fx = sx - x0;
-      const h = dz
-        ? (height((y0 * 256 + x0) * 4) * (1 - fx) + height((y0 * 256 + x1) * 4) * fx) * (1 - fy) + (height((y1 * 256 + x0) * 4) * (1 - fx) + height((y1 * 256 + x1) * 4) * fx) * fy
-        : height((py * 256 + px) * 4);
+      const h = (height((y0 * 256 + x0) * 4) * (1 - fx) + height((y0 * 256 + x1) * 4) * fx) * (1 - fy) + (height((y1 * 256 + x0) * 4) * (1 - fx) + height((y1 * 256 + x1) * 4) * fx) * fy;
       const v = h + 32768, o = (py * 256 + px) * 4;
       d[o] = Math.floor(v / 256); d[o + 1] = Math.floor(v) % 256; d[o + 2] = Math.floor((v - Math.floor(v)) * 256); d[o + 3] = 255;
     }
@@ -181,7 +186,7 @@ map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bott
 const LAYER_GROUPS = {
   hillshade: ["hillshade", "relief"],
   water: ["lakes", "rivers"],
-  borders: ["borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-highlight"],
+  borders: ["borders-prev-fill", "borders-prev-line", "borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-highlight"],
   peoples: ["peoples-fill", "peoples-line"],
   places: ["places"],
   claims: ["claim-points"],
@@ -256,6 +261,7 @@ function applyBasemap(mode) {
   if (map.getLayer("borders-fill")) {
     map.setPaintProperty("borders-fill", "fill-color", entityColor(mode));
     for (const id of ["borders-halo", "borders-line-approx", "borders-line"]) map.setPaintProperty(id, "line-color", entityColor(mode));
+    if (map.getLayer("borders-prev-fill")) { map.setPaintProperty("borders-prev-fill", "fill-color", entityColor(mode)); map.setPaintProperty("borders-prev-line", "line-color", entityColor(mode)); }
     map.setPaintProperty("borders-highlight", "line-color", HIGHLIGHT_COLOR[mode]);
   }
 }
@@ -294,7 +300,8 @@ if (isNarrow()) setPanelCollapsed(true);
 // فيتوسّط مركزُ الخريطة ما بقي مرئياً، وتبني عليها كل حركات الكاميرا والتقريب
 function viewPadding() {
   const bottom = timebarHeight();
-  if (document.body.classList.contains("showcasing")) return { top: 0, bottom, left: 0, right: 0 };
+  // أثناء العرض: صندوقه على اليمين (أو أسفل الجوال)
+  if (document.body.classList.contains("showcasing")) return isNarrow() ? { top: 0, bottom: bottom + Math.round(window.innerHeight * 0.42), left: 0, right: 0 } : { top: 0, bottom, left: 0, right: 432 };
   if (isNarrow()) return { top: 64, bottom, left: 0, right: 0 };
   return { top: 0, bottom, left: 0, right: panelEl.offsetWidth + 12 };
 }
@@ -782,6 +789,43 @@ const eraOf = (k) => { const y = yearOf(k); return ERAS.find((e) => y >= e.from 
 const DEMO_FOR_TIME = { "-4000": "r1", "-1000": "r2", "-1": "r3", 700: "r4", 1200: "r5", 1600: "r6", 1800: "r7", 2010: "c8", modern: "c8" };
 const setLayerCount = (g, text) => { const el = document.getElementById(`lc-${g}`); if (el) el.textContent = text; };
 
+// الانتقال بين سنتين تلاشٍ متقاطع: الخريطة السابقة تخفت والجديدة تظهر. ولا تُحرَّك الحدود من شكل إلى شكل،
+// لأن الحدود الوسيطة تكون مختلَقة؛ والتلاشي يُري الفجوة بين الخريطتين ولا يملؤها بالتخمين.
+const FADE_MS = 900;
+const EMPTY_FC = { type: "FeatureCollection", features: [] };
+let bordersShown = null;
+let fadeRaf = 0;
+// t من 0 إلى 1 يُضرب في عتامة كل طبقات الحدود
+function bordersOpacity(t, fillOpacity) {
+  map.setPaintProperty("borders-fill", "fill-opacity", t === 1 ? fillOpacity : ["*", t, fillOpacity]);
+  map.setPaintProperty("borders-halo", "line-opacity", 0.28 * t);
+  map.setPaintProperty("borders-line-approx", "line-opacity", 0.7 * t);
+  map.setPaintProperty("borders-line", "line-opacity", 0.85 * t);
+}
+function crossfade(prev, fillOpacity) {
+  cancelAnimationFrame(fadeRaf);
+  if (!map.getSource("borders-prev")) {
+    map.addSource("borders-prev", { type: "geojson", data: EMPTY_FC });
+    const ec = entityColor(basemap.mode);
+    map.addLayer({ id: "borders-prev-fill", type: "fill", source: "borders-prev", paint: { "fill-color": ec, "fill-opacity": 0 } }, "borders-fill");
+    map.addLayer({ id: "borders-prev-line", type: "line", source: "borders-prev", paint: { "line-color": ec, "line-width": 1.1, "line-opacity": 0 } }, "borders-fill");
+    setVis("borders-prev-fill", true);
+    setVis("borders-prev-line", true);
+  }
+  map.getSource("borders-prev").setData(prev);
+  const named = ["case", ["to-boolean", ["get", "NAME"]], 0.22, 0];
+  const t0 = performance.now();
+  const step = (now) => {
+    const t = Math.min(1, (now - t0) / FADE_MS);
+    const e = t * t * (3 - 2 * t);
+    bordersOpacity(e, fillOpacity);
+    map.setPaintProperty("borders-prev-fill", "fill-opacity", ["*", 1 - e, named]);
+    map.setPaintProperty("borders-prev-line", "line-opacity", 0.6 * (1 - e));
+    if (t < 1) fadeRaf = requestAnimationFrame(step);
+    else map.getSource("borders-prev").setData(EMPTY_FC);
+  };
+  fadeRaf = requestAnimationFrame(step);
+}
 async function loadBorders(key) {
   key = timeKey(key);
   const token = ++time.token;
@@ -813,8 +857,9 @@ async function loadBorders(key) {
   const fillOpacity = ["case", ["!", named], 0, precise, 0.3, 0.2];
   showLabels(key);
   if (map.getSource("borders")) {
+    const prev = bordersShown;
     map.getSource("borders").setData(data);
-    map.setPaintProperty("borders-fill", "fill-opacity", fillOpacity);
+    if (prev && prev !== data && !reduceMotion) crossfade(prev, fillOpacity); else bordersOpacity(1, fillOpacity);
     map.setFilter("borders-halo", ["all", named, ["!", precise]]);
     map.setFilter("borders-line-approx", ["all", named, ["!", precise]]);
     map.setFilter("borders-line", ["all", named, precise]);
@@ -836,6 +881,7 @@ async function loadBorders(key) {
     pointerOn("borders-fill");
     for (const id of LAYER_GROUPS.borders) setVis(id, true);
   }
+  bordersShown = data;
   const names = new Set(namedFeats.map((f) => f.properties.NAME)).size;
   setLayerCount("borders", `الكيانات: ${fmtInt(names)}`);
   await loadPeoples(key);
@@ -929,6 +975,7 @@ demoSelect.innerHTML = `<option value="">بدون طبقة سكان</option>` + 
 const formatPop = (n) => Number(n).toLocaleString("ar-u-nu-latn");
 
 let demoMeta = null;
+let demoData = null;
 let demoRequest = 0;
 // fit: تقريب إلى نقاط الطبقة حين يختارها القارئ من القائمة، لا حين تتبع الزمن
 async function loadDemography(key, { fit = true } = {}) {
@@ -947,6 +994,7 @@ async function loadDemography(key, { fit = true } = {}) {
   if (req !== demoRequest) return;
   const m = data._meta;
   demoMeta = m;
+  demoData = data;
   const unit = m.countries ? `${m.countries} دولة` : "6 أقاليم";
   demoNoteEl.innerHTML = `سنة ${escapeHtml(m.year)}، ${unit}.<span class="research-only"> ${escapeHtml(m.note)}</span>`;
   setLayerCount("demography", `بيانات سنة ${yearLabel(Number(m.year))}`);
