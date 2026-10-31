@@ -82,7 +82,7 @@ def main():
                 elif info.get("ar"):
                     # للاسم تسمية عربية، لكنها لكيان آخر بالاسم نفسه لم يكن قائماً في هذه السنة: تبقى للبطاقة لا للخريطة
                     lab["ar_other"] = info["ar"]
-                for src, dst in (("qid", "qid"), ("status", "st"), ("inception", "from"), ("dissolved", "to"), ("years", "years")):
+                for src, dst in (("qid", "qid"), ("status", "st"), ("inception", "from"), ("dissolved", "to"), ("years", "years"), ("en_shown", "en_shown")):
                     if info.get(src) is not None:
                         lab[dst] = info[src]
                 if lab.get("ar_other"):

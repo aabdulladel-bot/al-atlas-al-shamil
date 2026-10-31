@@ -443,6 +443,10 @@ async function showLabels(key) {
       el.classList.add("arabized");
       el.append(l.ar, Object.assign(document.createElement("small"), { textContent: l.en }));
       el.title = `تعريب تقديري من الاسم الإنجليزي «${l.en}»، يحتاج مراجعة لغوية`;
+    } else if (l.en_shown) {
+      // تعديل تحريري معلن (scripts/config/hb_name_overrides.json): العربي والإنجليزي المعروضان بقرار صاحب المشروع
+      el.textContent = l.ar ?? l.en_shown;
+      el.title = l.en_shown;
     } else {
       el.textContent = l.ar ?? l.en;
       el.title = l.ar ? l.en : "لا اسم عربي موثّق بعد";
@@ -551,7 +555,7 @@ function nameSourceHtml(info, modern) {
   const span = [info.from != null ? `نشأ ${yearLabel(info.from)}` : "", info.to != null ? `زال ${yearLabel(info.to)}` : ""].filter(Boolean).join("، ");
   if (info.st === "verified") return `ويكي بيانات ${link} (CC0)، متحقق زمنياً${span ? ` (${span})` : ""}`;
   if (info.st === "undated") return `ويكي بيانات ${link} (CC0)، بلا تواريخ فيها للتحقق الزمني`;
-  if (info.st === "override") return `تعديل يدوي معلن ${link}`;
+  if (info.st === "override") return info.en_shown ? "تعديل تحريري معلن لصاحب المشروع (scripts/config/hb_name_overrides.json)" : `تعديل يدوي معلن ${link}`;
   return `ويكي بيانات ${link}`;
 }
 
@@ -616,12 +620,12 @@ function openEntityCard(f, kind) {
   if (p.PARTOF && p.PARTOF !== p.NAME) notes.push(`ضمن: <bdi>${escapeHtml(labelInfo.get(p.PARTOF)?.ar ?? p.PARTOF)}</bdi>`);
   const span = info?.st === "verified" && (info.from != null || info.to != null)
     ? `${info.from != null ? yearLabel(info.from) : "؟"} – ${info.to != null ? yearLabel(info.to) : "؟"}` : "";
-  const top = cardHead({ title, en: p.NAME, swatch, chips, note: notes.join("<br>") }) +
+  const top = cardHead({ title, en: info?.en_shown ?? p.NAME, swatch, chips, note: notes.join("<br>") }) +
     statsHtml([["المساحة على هذه الخريطة (كم²)", info?.a ? fmtBig(info.a) : "", info?.a ? `${fmtInt(info.a)} كم² تقريباً` : ""], ["مدته في ويكي بيانات", span]]) +
     lifeHtml(info?.years, key, swatch);
   const prec = modern ? "محددة (Natural Earth)" : `${PRECISION_LABEL[p.BORDERPRECISION] ?? "غير مذكورة"} بحسب المصدر${approxAll ? "، ويرسمها الأطلس تقريبية" : ""}`;
   const about = aboutHtml([
-    ["الاسم في المصدر", escapeHtml(p.NAME)],
+    ["الاسم في المصدر", info?.en_shown ? "معدّل تحريرياً بقرار صاحب المشروع" : escapeHtml(p.NAME)],
     ["دقة الحد", escapeHtml(prec)],
     ["مصدر الاسم العربي", nameSourceHtml(info, modern)],
     ["مصدر الحدود", modern ? "Natural Earth (ملك عام)" : "Historical Basemaps (GPL-3)"],
@@ -1280,9 +1284,11 @@ const pct = (x) => `${Math.round(x * 100)}%`;
 // زر اسم يُظهر الكيان على خريطة سنته
 // الأسماء العربية لكيانات السنتين المعروضتين (تُملأ في showTransition)، والإنجليزي في التلميح ومفتاح الإبراز
 let trAr = {};
+let trShown = {};
 const entBtn = (name, key) => {
   const ar = trAr[key]?.get(name);
-  return `<button type="button" class="ent${ar ? "" : " latin"}" data-key="${escapeHtml(key)}" data-name="${escapeHtml(name)}" title="${escapeHtml(name)}">${escapeHtml(ar ?? name)}</button>`;
+  const shown = trShown[key]?.get(name) ?? name;
+  return `<button type="button" class="ent${ar ? "" : " latin"}" data-key="${escapeHtml(key)}" data-name="${escapeHtml(name)}" title="${escapeHtml(shown)}">${escapeHtml(ar ?? shown)}</button>`;
 };
 // المصير والمنشأ: علاقات مكانية بين خريطتين، لا أحكام تاريخية بالسببية
 const FATES = [
@@ -1346,6 +1352,7 @@ async function showTransition() {
   try { d = await transitionData(a, b); } catch (err) { if (req === trRequest) trResultEl.textContent = `تعذّر تحميل المقارنة: ${err.message}`; return; }
   if (req !== trRequest) return; // تغيّر الاختيار أثناء التحميل
   trAr = { [a]: new Map(d.from.filter((r) => r.name_ar).map((r) => [r.name, r.name_ar])), [b]: new Map(d.to.filter((r) => r.name_ar).map((r) => [r.name, r.name_ar])) };
+  trShown = { [a]: new Map(d.from.filter((r) => r.name_shown).map((r) => [r.name, r.name_shown])), [b]: new Map(d.to.filter((r) => r.name_shown).map((r) => [r.name, r.name_shown])) };
   const c = d.counts;
   const n = (side, t) => c[side][t] ?? 0;
   const fates = FATES.map(([t, label, help]) => group(label, help, d.from.filter((r) => r.fate.type === t).map((r) => fateLine(r, a, b))));
