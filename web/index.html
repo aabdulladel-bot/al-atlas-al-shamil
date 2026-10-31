@@ -16,6 +16,10 @@
     #map { position: absolute; inset: 0; }
     .country-label { font: 600 11px system-ui, sans-serif; color: #fff; text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000; white-space: nowrap; pointer-events: none; }
     .country-label.mid { font-size: 12.5px; }
+    /* الأسماء تظهر مع الخريطة الجديدة بتلاشٍ من الضبابية (لا بالعتامة، فهي لـ MapLibre تُخفي بها ما خلف الكرة) */
+    .country-label { animation: label-in 0.8s ease; }
+    @keyframes label-in { from { filter: blur(4px); } }
+    @media (prefers-reduced-motion: reduce) { .country-label { animation: none; } }
     /* اسم بلا عربي موثّق: أصغر وأخفت، بلا ميل، فلا ينافس الأسماء العربية */
     .country-label.latin { font-size: 10px !important; font-weight: 400 !important; opacity: 0.62; direction: ltr; unicode-bidi: isolate; }
     .card-dl { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 6px 0 0; font-size: 12px; line-height: 1.5; }
@@ -212,7 +216,17 @@
     }
     #journey-box { position: absolute; z-index: 4; bottom: calc(var(--tb-h) + 14px); left: 50%; transform: translateX(-50%); width: min(560px, calc(100% - 24px)); max-height: 46vh; overflow-y: auto; box-sizing: border-box; background: var(--panel); color: var(--ink); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 14px; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18); }
     #journey-box[hidden] { display: none; }
-    #showcase-box { position: absolute; z-index: 5; bottom: calc(var(--tb-h) + 16px); left: 50%; transform: translateX(-50%); width: min(660px, calc(100% - 24px)); box-sizing: border-box; padding: 14px 18px 12px; border-radius: 14px; color: #f6efe3; background: linear-gradient(160deg, rgba(20, 16, 12, 0.86), rgba(42, 30, 20, 0.78)); border: 1px solid rgba(216, 154, 114, 0.55); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45); backdrop-filter: blur(6px); }
+    /* صندوق العرض على جانب الشاشة بخلفية زجاجية، والكرة تتوسّط ما بقي (viewPadding في app.js) */
+    #showcase-box { position: absolute; z-index: 5; bottom: calc(var(--tb-h) + 16px); inset-inline-start: 16px; width: min(400px, calc(100% - 32px)); max-height: calc(100vh - var(--tb-h) - 32px); overflow-y: auto; box-sizing: border-box; padding: 16px 18px 12px; border-radius: 16px; color: #f6efe3; background: linear-gradient(160deg, rgba(14, 11, 8, 0.72), rgba(36, 26, 18, 0.6)); border: 1px solid rgba(216, 154, 114, 0.45); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45); backdrop-filter: blur(10px) saturate(1.2); }
+    #sc-facts { margin: 0 0 10px; }
+    #sc-facts .chip { background: rgba(243, 214, 164, 0.14); color: #f3e6d0; }
+    #sc-quote { margin: 0 0 12px; padding: 10px 12px; border-radius: 10px; background: rgba(95, 179, 170, 0.12); border-inline-start: 3px solid #5fb3aa; font-size: 13.5px; line-height: 1.7; }
+    #sc-quote[hidden] { display: none; }
+    .sc-q-st { font-weight: 600; }
+    #sc-quote blockquote { margin: 6px 0; font-family: "Amiri", Georgia, serif; font-size: 15px; color: #fff; }
+    .sc-q-by { font-size: 12px; color: #d8c5ab; }
+    .sc-q-hedge { font-size: 12px; color: #e8a57d; margin-top: 2px; }
+    .sc-nav button[data-sc="explore"] { background: rgba(216, 154, 114, 0.22); }
     #showcase-box[hidden] { display: none; }
     .sc-head { display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 0.02em; color: #d8b89a; }
     #sc-title { font-size: 22px; margin: 6px 0 4px; font-weight: 700; }
@@ -222,10 +236,10 @@
     .sc-nav { display: flex; gap: 8px; justify-content: flex-start; flex-wrap: wrap; }
     .sc-nav button { font: inherit; font-size: 13px; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(216, 154, 114, 0.7); background: transparent; color: #f6efe3; cursor: pointer; }
     .sc-nav button:disabled { opacity: 0.35; cursor: default; }
-    .sc-nav button[data-sc="exit"] { margin-inline-start: auto; }
+    .sc-nav button[data-sc="explore"] { margin-inline-start: auto; }
     body.showcasing #panel, body.showcasing #journey-box, body.showcasing #card { display: none; }
     #showcase-solo, #showcase-fusion { font-weight: 700; }
-    @media (max-width: 600px) { #showcase-box { bottom: calc(var(--tb-h) + 8px); padding: 12px 14px 10px; } #sc-title { font-size: 18px; } #sc-text { font-size: 14px; } }
+    @media (max-width: 600px) { #showcase-box { bottom: calc(var(--tb-h) + 8px); inset-inline-start: 8px; width: calc(100% - 16px); max-height: 42vh; padding: 12px 14px 10px; } #sc-title { font-size: 18px; } #sc-text { font-size: 14px; } }
     .jb-head, .jb-nav { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
     .jb-head button, .jb-nav button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
     .jb-nav button:disabled { opacity: 0.4; cursor: default; }
@@ -261,8 +275,10 @@
     <div class="sc-head"><span id="sc-mode"></span><span id="sc-count"></span></div>
     <h2 id="sc-title"></h2>
     <p id="sc-text"></p>
+    <div id="sc-facts" class="chips"></div>
+    <div id="sc-quote" hidden></div>
     <div class="sc-progress"><div id="sc-bar"></div></div>
-    <div class="sc-nav"><button type="button" data-sc="prev">السابق</button><button type="button" data-sc="pause">إيقاف مؤقت</button><button type="button" data-sc="next">التالي</button><button type="button" data-sc="exit">إنهاء</button></div>
+    <div class="sc-nav"><button type="button" data-sc="prev">السابق</button><button type="button" data-sc="pause">إيقاف مؤقت</button><button type="button" data-sc="next">التالي</button><button type="button" data-sc="explore">استكشف من هنا</button><button type="button" data-sc="exit">إنهاء</button></div>
   </div>
   <aside id="panel">
     <header class="ph">
