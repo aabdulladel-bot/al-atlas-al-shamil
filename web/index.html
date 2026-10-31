@@ -6,15 +6,22 @@
   <title>الأطلس الشامل</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="vendor/maplibre-gl.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --bg: #f4efe6; --ink: #2a2620; --muted: #6b6356; --accent: #8a4b2a; --panel: #fffdf8; --sea: #dfe7ea; --land: #f4efe6; --river: #8fb3c4; --evidence: #2a6f6a; --limit: #a0522d; --relief-shadow: #5c4a36; --relief-light: #fffaf0; --relief-0: #eee6cc; --relief-1: #e3d7b2; --relief-2: #d6c393; --relief-3: #c6aa7c; --relief-4: #b39478; --relief-5: #efe9e0; }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; --evidence: #5fb3aa; --limit: #d08a5c; --relief-shadow: #0b0907; --relief-light: #6b6050; --relief-0: #2c2923; --relief-1: #34302a; --relief-2: #3e372c; --relief-3: #4a3f31; --relief-4: #564838; --relief-5: #7a7062; }
-    }
-    :root[data-theme="dark"] { --bg: #1d1a16; --ink: #ece6da; --muted: #a79d8c; --accent: #d89a72; --panel: #26221d; --sea: #171c1f; --land: #2b2722; --river: #4d6b78; --evidence: #5fb3aa; --limit: #d08a5c; --relief-shadow: #0b0907; --relief-light: #6b6050; --relief-0: #2c2923; --relief-1: #34302a; --relief-2: #3e372c; --relief-3: #4a3f31; --relief-4: #564838; --relief-5: #7a7062; }
-    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; }
+    /* الواجهة بهوية ليلية واحدة (كحلي وذهبي)، والخريطة المرسومة ورقية فاتحة دائماً. رموز الواجهة غير رموز الخريطة. */
+    :root { color-scheme: dark;
+      --bg: #060B18; --ink: #EAF1FF; --muted: #A8B7D4; --accent: #E9B44C; --sky: #5BB8FF; --panel: #0B1630; --card: #101F3E; --card2: #15264A; --line: rgba(150, 185, 255, 0.17);
+      --evidence: #4CC9A0; --limit: #F2A65A;
+      --font-d: "Noto Kufi Arabic", "IBM Plex Sans Arabic", system-ui, sans-serif; --font-b: "IBM Plex Sans Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+      --sea: #dfe7ea; --land: #f4efe6; --river: #8fb3c4; --relief-shadow: #5c4a36; --relief-light: #fffaf0;
+      --relief-0: #eee6cc; --relief-1: #e3d7b2; --relief-2: #d6c393; --relief-3: #c6aa7c; --relief-4: #b39478; --relief-5: #efe9e0; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: var(--font-b); }
+    button, input, select { font-family: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     #map { position: absolute; inset: 0; }
-    .country-label { font: 600 11px system-ui, sans-serif; color: #fff; text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000; white-space: nowrap; pointer-events: none; }
+    .country-label { font: 600 11px var(--font-b); color: #fff; text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000; white-space: nowrap; pointer-events: none; }
     .country-label.mid { font-size: 12.5px; }
     /* الأسماء تظهر مع الخريطة الجديدة بتلاشٍ من الضبابية (لا بالعتامة، فهي لـ MapLibre تُخفي بها ما خلف الكرة) */
     .country-label { animation: label-in 0.8s ease; }
@@ -27,7 +34,7 @@
     .card-dl dd { margin: 0; }
     button.ent.latin { font-style: italic; }
     .country-label.major { font-size: 14px; font-weight: 700; }
-    #map:not(.space) .country-label { color: var(--ink); text-shadow: 0 0 3px var(--panel), 0 0 2px var(--panel), 0 0 1px var(--panel); }
+    #map:not(.space) .country-label { color: #2a2620; text-shadow: 0 0 3px #fffdf8, 0 0 2px #fffdf8, 0 0 1px #fffdf8; }
     /* الفضاء: نجوم مولّدة (--stars من app.js) تنزاح مع الكرة، فوق تدرّج داكن */
     #map.space { background-color: #02040a; background-image: var(--stars, none), radial-gradient(ellipse at 45% 40%, #0d1c38 0%, #050a16 55%, #02040a 100%); background-size: 1024px 1024px, cover; background-position: var(--sx, 0) var(--sy, 0), center; }
     /* الافتتاحية */
@@ -263,6 +270,140 @@
     .card-links ul { padding-inline-start: 18px; margin: 4px 0; }
     .card-src { font-size: 12px; color: var(--muted); }
     .country-label.arabized small { display: block; font-size: 0.72em; font-weight: 400; opacity: 0.8; direction: ltr; unicode-bidi: isolate; }
+
+    /* ---------- الهوية الليلية (مستلهمة من «رحّال»): لوحات كحلية زجاجية، وذهبي للاختيار، وأزرق للتمرير ---------- */
+    #panel, #card { background: rgba(11, 22, 48, 0.94); border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45); backdrop-filter: blur(10px); }
+    #panel h1, details.section > summary, .ch h2, #now-era, .card-sec h3, .sheet h2, #sc-title, .jb-title, #intro h2 { font-family: var(--font-d); }
+    #panel h1 { font-size: 22px; }
+    #panel p, .sub { color: var(--muted); }
+    details.section { border-top: 1px solid var(--line); }
+    details.section[open] > :not(summary) { animation: fade-in 0.25s ease; }
+    @keyframes fade-in { from { opacity: 0; transform: translateY(-3px); } }
+    #now { background: linear-gradient(160deg, rgba(21, 38, 74, 0.9), rgba(16, 31, 62, 0.7)); border: 1px solid var(--line); border-radius: 16px; }
+    #now-year { color: var(--accent); font-family: var(--font-d); }
+    .row button, .mode button, #panel-toggle, #passport-btn, .jb-head button, .jb-nav button { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 6px 13px; transition: border-color 0.2s, background 0.2s, color 0.2s; }
+    .row button:hover, .mode button:hover, #panel-toggle:hover, #passport-btn:hover, .lc:hover, button.chip:hover, .jb-nav button:hover { border-color: var(--sky); }
+    .row button[aria-pressed="true"], .mode button[aria-pressed="true"] { border-color: var(--accent); background: var(--card2); color: var(--ink); box-shadow: inset 0 0 0 1px var(--accent); }
+    #passport-btn { font-size: 12.5px; margin-inline-start: auto; }
+    select { background: var(--card); border: 1px solid var(--line); border-radius: 10px; color: var(--ink); }
+    .seg { border-color: var(--line); background: var(--card); }
+    .seg input:checked + span { background: var(--accent); color: #0B1630; font-weight: 600; }
+    .lc { background: var(--card); border-color: var(--line); border-radius: 14px; transition: border-color 0.2s, background 0.2s; }
+    .lc:has(input:checked) { border-color: var(--accent); background: var(--card2); }
+    .chip { background: rgba(168, 183, 212, 0.13); }
+    .card-close { background: var(--card2); color: var(--ink); }
+    .ev-q { background: rgba(76, 201, 160, 0.08); }
+    #journey-box { background: rgba(11, 22, 48, 0.94); border-color: var(--line); border-radius: 18px; }
+    .khaldun { border-inline-start-color: var(--accent); }
+    /* البطاقة: تنزلق إلى مكانها، وأيقونة نوعها بجانب العنوان */
+    #card:not([hidden]) { animation: card-in 0.28s ease; }
+    @keyframes card-in { from { opacity: 0; transform: translateX(18px); } }
+    .ch-ic { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: rgba(91, 184, 255, 0.14); color: var(--sky); }
+    .ch-ic svg { width: 20px; height: 20px; }
+    /* الشارات بأشكال لا بألوان وحدها: متحقق ● قريب ▲ محل خلاف ◆ غير متحقق ○ */
+    .chip.tier-v::before, .chip.tier-r::before, .chip.tier-x::before, .chip.tier-u::before, .chip.support::before, .chip.limit::before { content: ""; flex: none; width: 7px; height: 7px; background: currentColor; }
+    .chip.tier-v, .chip.support { color: #7fe0bf; } .chip.tier-v::before, .chip.support::before { border-radius: 50%; }
+    .chip.tier-r { color: #f5c06f; } .chip.tier-r::before { clip-path: polygon(50% 0, 100% 100%, 0 100%); width: 8px; }
+    .chip.tier-x, .chip.limit { color: #ff9aa8; } .chip.tier-x::before, .chip.limit::before { transform: rotate(45deg); width: 6px; height: 6px; }
+    .chip.tier-u { color: var(--muted); } .chip.tier-u::before { border-radius: 50%; background: none; box-shadow: inset 0 0 0 1.5px currentColor; }
+    .chip.now-era { color: #8fd0ff; }
+    /* البحث الموحّد */
+    #search-box { position: absolute; z-index: 5; top: 12px; left: 200px; right: 412px; max-width: 560px; margin: 0 auto; }
+    #q { width: 100%; box-sizing: border-box; background: rgba(16, 31, 62, 0.92); border: 1px solid var(--line); border-radius: 999px; padding: 10px 44px 10px 16px; color: var(--ink); font-size: 14.5px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); backdrop-filter: blur(8px); transition: border-color 0.2s; }
+    #q::placeholder { color: #8EA0C2; }
+    #q:focus { border-color: var(--sky); outline: none; }
+    #search-box .sico { position: absolute; z-index: 1; right: 15px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--muted); pointer-events: none; }
+    #q-results { position: absolute; top: calc(100% + 6px); inset-inline: 0; max-height: min(62vh, 520px); overflow-y: auto; background: var(--card2); border: 1px solid var(--line); border-radius: 16px; padding: 6px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5); animation: drop-in 0.18s ease; }
+    @keyframes drop-in { from { opacity: 0; transform: translateY(-6px); } }
+    .qr-group { font-size: 11.5px; color: var(--muted); padding: 8px 10px 2px; font-weight: 600; }
+    .qr { display: flex; align-items: center; gap: 10px; width: 100%; text-align: start; background: none; border: 0; padding: 7px 10px; border-radius: 10px; color: var(--ink); cursor: pointer; }
+    .qr:hover, .qr[aria-selected="true"] { background: rgba(91, 184, 255, 0.14); }
+    .qr-ic { flex: none; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-size: 13px; background: rgba(233, 180, 76, 0.14); color: var(--accent); }
+    .qr-t { display: flex; flex-direction: column; min-width: 0; line-height: 1.35; }
+    .qr-t b { font-weight: 600; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .qr-t span { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    #q-results p { padding: 8px 12px; margin: 0; color: var(--muted); font-size: 13.5px; }
+    mark { background: rgba(233, 180, 76, 0.28); color: inherit; border-radius: 3px; }
+    /* شريط القارات */
+    #rail { position: absolute; z-index: 4; top: 12px; left: 12px; width: 178px; display: flex; flex-direction: column; gap: 6px; }
+    #rail button { display: flex; align-items: center; gap: 8px; background: rgba(10, 20, 42, 0.8); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px 5px 6px; font-size: 13px; font-weight: 500; color: var(--ink); cursor: pointer; backdrop-filter: blur(6px); transition: border-color 0.2s, background 0.2s; text-align: start; }
+    #rail button:hover { border-color: var(--sky); }
+    #rail button[aria-pressed="true"] { border-color: var(--sky); background: rgba(21, 101, 216, 0.42); }
+    #rail .mini { width: 22px; height: 22px; flex: none; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #3d82c9, #0b2a55); box-shadow: inset -3px -3px 6px rgba(0, 0, 0, 0.35); }
+    #rail button[data-region="world"] .mini { background: radial-gradient(circle at 35% 30%, #4cc9a0, #0b3a55); }
+    body.showcasing #search-box, body.showcasing #rail { display: none; }
+    /* التبويبات والقائمة والتحدي */
+    .tabs { display: flex; gap: 2px; margin: 8px 0 6px; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+    .tabs button { background: none; border: 0; border-bottom: 2px solid transparent; padding: 6px 10px; color: var(--muted); font-weight: 600; font-size: 13px; white-space: nowrap; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
+    .tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+    [role="tabpanel"]:not([hidden]) { animation: fade-in 0.22s ease; }
+    .filt { margin: 4px 0 6px; }
+    .filt button { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 3px 10px; font-size: 12.5px; cursor: pointer; }
+    .filt button[aria-pressed="true"] { border-color: var(--accent); background: var(--card2); }
+    #list-body { max-height: 46vh; overflow-y: auto; }
+    .li-h { font-size: 12.5px; color: var(--muted); margin: 10px 0 4px; font-weight: 600; }
+    .li { display: flex; align-items: center; gap: 9px; width: 100%; text-align: start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 7px 10px; margin: 5px 0; color: var(--ink); cursor: pointer; transition: border-color 0.2s; }
+    .li:hover { border-color: var(--sky); }
+    .li i { flex: none; width: 10px; height: 10px; border-radius: 3px; }
+    .li span { display: flex; flex-direction: column; min-width: 0; line-height: 1.4; }
+    .li b { font-weight: 600; font-size: 13.5px; }
+    .li small { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .qz-q { font-weight: 600; font-size: 15px; line-height: 1.7; margin: 6px 0 8px; }
+    .qz-o { display: block; width: 100%; text-align: start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; margin: 6px 0; color: var(--ink); cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    .qz-o:hover:not(:disabled) { border-color: var(--sky); }
+    .qz-o.ok { border-color: var(--evidence); background: rgba(76, 201, 160, 0.14); }
+    .qz-o.no { border-color: #ff8595; background: rgba(255, 133, 149, 0.12); }
+    .qz-o:disabled { cursor: default; }
+    .qz-why { font-size: 13px; color: var(--muted); line-height: 1.7; margin: 6px 0; }
+    .qz-foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+    .qz-foot button { border: 1px solid var(--accent); background: var(--card2); color: var(--ink); border-radius: 999px; padding: 5px 14px; cursor: pointer; }
+    /* جواز المستكشف */
+    #modal { position: fixed; inset: 0; z-index: 50; background: rgba(2, 6, 16, 0.72); display: grid; place-items: center; padding: 16px; }
+    #modal[hidden] { display: none; }
+    .sheet { width: min(560px, 100%); max-height: 100%; overflow: auto; box-sizing: border-box; background: var(--panel); border: 1px solid var(--line); border-radius: 22px; padding: 18px 20px 22px; color: var(--ink); animation: pop-in 0.22s ease; }
+    @keyframes pop-in { from { opacity: 0; transform: scale(0.97); } }
+    .sheet-hd { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .sheet h2 { font-size: 21px; margin: 0; }
+    .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+    .tile { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px 8px; text-align: center; }
+    .tile b { display: block; font-size: 24px; color: var(--accent); font-family: var(--font-d); }
+    .tile span { font-size: 12px; color: var(--muted); }
+    .prog { margin: 10px 0; font-size: 13px; }
+    .prog-bar { height: 7px; border-radius: 4px; background: rgba(168, 183, 212, 0.15); overflow: hidden; margin-top: 4px; }
+    .prog-bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), #f3d6a4); border-radius: 4px; }
+    .sheet .note { font-size: 12.5px; color: var(--muted); border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; margin-top: 12px; }
+    .sheet .reset { width: 100%; margin-top: 10px; border: 1px solid #ff8595; color: #ff8595; background: transparent; border-radius: 12px; padding: 8px; cursor: pointer; }
+    /* الشريط الزمني وصندوق العرض والافتتاحية بالهوية نفسها */
+    #timebar { background: linear-gradient(0deg, rgba(6, 11, 24, 0.95), rgba(11, 22, 48, 0.82)); border-top: 1px solid var(--line); }
+    #tb-year { color: var(--accent); font-family: var(--font-d); }
+    #tb-thumb { background: var(--accent); box-shadow: 0 0 0 4px rgba(233, 180, 76, 0.25), 0 0 12px rgba(233, 180, 76, 0.7); }
+    #tb-play { border-color: var(--accent); color: var(--accent); }
+    .tb-band.cur { background: rgba(233, 180, 76, 0.12); }
+    .tb-band.cur .tb-band-label { color: var(--accent); }
+    #showcase-box { background: linear-gradient(160deg, rgba(11, 22, 48, 0.84), rgba(16, 31, 62, 0.72)); border-color: var(--line); }
+    .sc-nav button { border-color: var(--line); }
+    .sc-nav button:hover { border-color: var(--sky); }
+    .intro-doors button:first-child { background: var(--accent); border-color: var(--accent); color: #0B1630; }
+    .intro-doors button { background: rgba(11, 22, 48, 0.7); border-color: var(--line); }
+    /* أزرار الخريطة بالهوية نفسها */
+    .maplibregl-ctrl-group { background: rgba(10, 20, 42, 0.85) !important; border: 1px solid var(--line); border-radius: 14px !important; box-shadow: none !important; backdrop-filter: blur(6px); }
+    .maplibregl-ctrl-group button + button { border-top-color: var(--line) !important; }
+    .maplibregl-ctrl-group .maplibregl-ctrl-icon { filter: invert(1) brightness(0.9); }
+    .maplibregl-ctrl-attrib.maplibregl-compact { background: rgba(10, 20, 42, 0.85); color: var(--muted); }
+    .maplibregl-ctrl-attrib.maplibregl-compact a { color: var(--sky); }
+    .maplibregl-ctrl-attrib-button { filter: invert(1); }
+    @media (max-width: 600px) {
+      #search-box { top: 74px; left: 8px; right: 8px; max-width: none; }
+      #rail { top: 122px; left: 8px; right: 8px; width: auto; flex-direction: row; overflow-x: auto; scrollbar-width: none; }
+      #rail button { flex: none; }
+      #panel:not(.collapsed) ~ #search-box, #panel:not(.collapsed) ~ #rail, body.card-open #rail { display: none; }
+      #passport-btn { display: none; }
+      .tiles { grid-template-columns: repeat(2, 1fr); }
+      @keyframes card-in { from { opacity: 0; transform: translateY(24px); } }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #card:not([hidden]), #q-results, .sheet, details.section[open] > :not(summary), [role="tabpanel"]:not([hidden]) { animation: none; }
+    }
   </style>
 </head>
 <body data-mode="simple">
@@ -291,6 +432,7 @@
     <header class="ph">
       <div class="ph-top">
         <h1>الأطلس الشامل</h1>
+        <button type="button" id="passport-btn" aria-haspopup="dialog">جواز المستكشف</button>
         <button type="button" id="panel-toggle" aria-expanded="true" aria-controls="panel-body">القائمة</button>
       </div>
       <p class="tagline">التاريخ والجغرافيا والثقافة والسكان على خريطة واحدة، والسنن فرضيات تُختبر بالشواهد.</p>
@@ -303,8 +445,23 @@
 
     <section id="now" aria-live="polite">
       <div class="now-head"><span id="now-year"></span><span id="now-era"></span></div>
-      <p id="now-desc"></p>
-      <div id="now-stats" class="chips"></div>
+      <div class="tabs" role="tablist" aria-label="الزمن الحالي">
+        <button type="button" role="tab" id="tab-over" aria-selected="true" aria-controls="pane-over">نظرة</button>
+        <button type="button" role="tab" id="tab-list" aria-selected="false" aria-controls="pane-list">العالم في هذه الحقبة</button>
+        <button type="button" role="tab" id="tab-quiz" aria-selected="false" aria-controls="pane-quiz">التحدي</button>
+      </div>
+      <div role="tabpanel" id="pane-over" aria-labelledby="tab-over">
+        <p id="now-desc"></p>
+        <div id="now-stats" class="chips"></div>
+      </div>
+      <div role="tabpanel" id="pane-list" aria-labelledby="tab-list" hidden>
+        <div class="chips filt" id="list-types" aria-label="النوع"></div>
+        <p class="sub" id="list-note"></p>
+        <div id="list-body"></div>
+      </div>
+      <div role="tabpanel" id="pane-quiz" aria-labelledby="tab-quiz" hidden>
+        <div id="quiz-body"></div>
+      </div>
     </section>
 
     <details class="section" id="showcase-panel" open>
@@ -440,6 +597,13 @@
     <button type="button" class="card-close" aria-label="إغلاق">×</button>
     <div id="card-body"></div>
   </aside>
+  <div id="search-box" role="search">
+    <svg class="sico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    <input id="q" type="search" autocomplete="off" placeholder="ابحث عن دولة أو مكان أو شاهد أو سُنّة أو سنة" aria-label="بحث" aria-controls="q-results" aria-expanded="false">
+    <div id="q-results" role="listbox" hidden></div>
+  </div>
+  <nav id="rail" aria-label="القارات"></nav>
+  <div id="modal" hidden><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" id="sheet"></div></div>
   <div id="timebar" role="group" aria-label="الزمن">
     <button type="button" id="tb-play" aria-pressed="false" aria-label="تشغيل الزمن">▶</button>
     <div id="tb-now"><b id="tb-year"></b><span id="tb-era"></span></div>
@@ -454,5 +618,6 @@
   <script src="cube.js"></script>
   <script src="journey.js"></script>
   <script src="showcase.js"></script>
+  <script src="explore.js"></script>
 </body>
 </html>
