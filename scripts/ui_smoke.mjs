@@ -55,6 +55,13 @@ try {
     const settle = () => page.evaluate(() => window.__settle());
     // التضاريس تُطفأ لبقية الفحوص (غايتها أخطاء الواجهة لا سرعة الرسم البرمجي)، وتُختبر وحدها في خطوة لوحة الطبقات
     await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 60000 });
+    // اللوحة مطويّة على الجوال؛ والفحص يمرّ بأقسام الباحث كلها
+    const togglePanel = async (open) => {
+      if (!(await page.isVisible("#panel-toggle"))) return; // على المكتب لا تُطوى اللوحة
+      if ((await page.$eval("#panel", (p) => p.classList.contains("collapsed"))) === open) await page.click("#panel-toggle");
+    };
+    await togglePanel(true);
+    await page.click('.mode button[data-mode="research"]');
     await page.evaluate(() => { document.getElementById("layer-panel").open = true; });
     await page.click("#terrain-toggle"); await settle();
     await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 60000 });
@@ -114,7 +121,46 @@ try {
     const ent = await page.$('#tr-result button.ent[data-name="Ottoman Empire"]');
     if (ent) { await ent.click(); await page.waitForTimeout(1200); } else problems.push(`[${name}] لا زر للدولة العثمانية في لوحة التحولات`);
     await page.click("#claim-map-btn"); await page.waitForTimeout(300); await settle();
+    await page.click("#claim-map-btn"); await page.waitForTimeout(300);
     await page.screenshot({ path: path.join(ROOT, "out", `ui_${name}.png`) });
+    step = `${name}: شريط الزمن`;
+    // كل محطات الزمن، ثم لوحة المفاتيح ونقرة على الشريط
+    counts.timeStops = await page.evaluate(async () => { let n = 0; for (const k of TIME_STOPS) { await loadBorders(k); n++; } return n; });
+    await page.focus("#tb-track"); await page.keyboard.press("Home"); await page.keyboard.press("ArrowLeft"); await page.waitForTimeout(600);
+    const track = await page.$eval("#tb-track", (e) => { const r = e.getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2]; });
+    await page.mouse.click(track[0], track[1]); await page.waitForTimeout(600); await settle();
+    step = `${name}: البطاقات`;
+    // البطاقات: حَكَم النقر يفتح بطاقة الشاهد قبل بطاقة الكيان تحته، ثم بطاقة كيان وتتبّعه إلى سنة أخرى
+    await togglePanel(false);
+    const clickAt = async (lngLat) => {
+      const xy = await page.evaluate((c) => { const q = map.project(c); return [q.x, q.y]; }, lngLat);
+      await page.mouse.click(xy[0], xy[1]);
+      await page.waitForSelector("#card:not([hidden]) #card-body h2", { timeout: 15000 });
+    };
+    await page.evaluate(() => loadBorders(1200)); await settle();
+    const claimAt = await page.evaluate(async () => {
+      await ensureClaimPoints(); applyClaimView();
+      const f = claimPoints.features.find((x) => x.properties.eras.includes(",5,"));
+      map.jumpTo({ center: f.geometry.coordinates, zoom: 5, pitch: 0, bearing: 0 });
+      return f.geometry.coordinates;
+    });
+    await settle();
+    await clickAt(claimAt);
+    counts.claimCard = await page.$$eval("#card-body .ev-card", (e) => e.length);
+    await page.keyboard.press("Escape"); await page.waitForTimeout(300);
+    if (!(await page.$eval("#card", (c) => c.hidden))) problems.push(`[${name}] البطاقة لم تُغلق بالهروب`);
+    await page.evaluate(() => loadBorders(1600)); await page.evaluate(() => map.jumpTo({ center: [32, 39.5], zoom: 4.5, pitch: 0, bearing: 0 })); await settle();
+    await clickAt([32, 39.5]);
+    // الشواهد تُحمَّل بعد فتح البطاقة وتعيد رسمها
+    await page.waitForFunction(() => !document.getElementById("card-body").textContent.includes("جارٍ التحميل"), null, { timeout: 15000 });
+    counts.entityLife = await page.$$eval("#card-body .life-dot.on", (e) => e.length);
+    const follow = await page.$("#card-body [data-follow]");
+    counts.follow = follow ? 1 : 0;
+    if (follow) { await follow.click(); await page.waitForTimeout(800); await settle(); }
+    await page.screenshot({ path: path.join(ROOT, "out", `card_${name}.png`) });
+    await page.click("#card .card-close"); await page.waitForTimeout(300);
+    if (!(await page.$eval("#card", (c) => c.hidden))) problems.push(`[${name}] البطاقة لم تُغلق بزرها`);
+    await togglePanel(true);
     step = `${name}: الرحلات`;
     // الرحلة: تُفتح أول رحلة، وتُجتاز خطواتها بالتالي حتى آخرها، ثم تُغلق بزر «إنهاء»
     await page.evaluate(() => { document.getElementById("journey-panel").open = true; });

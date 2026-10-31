@@ -7,7 +7,8 @@ const SC_MS = 9000;
 const show = { scenes: null, mode: "", index: 0, timer: null, paused: false, token: 0, saved: null, leave: null };
 const scNum = (n) => Number(n).toLocaleString("ar");
 const scNarrow = () => window.innerWidth < 600;
-const scPad = () => (scNarrow() ? { top: 40, bottom: 300, left: 20, right: 20 } : { top: 60, bottom: 230, left: 60, right: 60 });
+// صندوق العرض وشريط الزمن أسفل الشاشة، فتُترك لهما مساحتهما
+const scPad = () => (scNarrow() ? { top: 40, bottom: 300 + timebarHeight(), left: 20, right: 20 } : { top: 60, bottom: 230 + timebarHeight(), left: 60, right: 60 });
 
 // ---------- التحكم في الطبقات ----------
 function scGroups(on) {
@@ -289,6 +290,8 @@ function scSchedule() {
 function scStart(mode) {
   if (show.scenes) return;
   if (typeof journeyState !== "undefined" && journeyState) endJourney();
+  closeCard();
+  stopPlay();
   show.saved = {
     userOff: new Set(userOff), basemap: basemap.mode, terrain: terrainState.on, border: borderSelect.value, demo: demoSelect.value,
     camera: { center: map.getCenter(), zoom: map.getZoom(), pitch: map.getPitch(), bearing: map.getBearing() },
@@ -311,7 +314,7 @@ async function scEnd() {
   document.body.classList.remove("showcasing");
   userOff.clear();
   for (const g of s.userOff) userOff.add(g);
-  for (const cb of document.querySelectorAll("#layer-panel input[data-group]")) cb.checked = !userOff.has(cb.dataset.group);
+  syncLayerInputs();
   scBasemap(s.basemap);
   scTerrain(s.terrain);
   await loadBorders(s.border === "modern" ? "modern" : Number(s.border));
