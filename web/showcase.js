@@ -7,8 +7,8 @@ const SC_MS = 9000;
 const show = { scenes: null, mode: "", index: 0, timer: null, paused: false, token: 0, saved: null, leave: null };
 const scNum = (n) => Number(n).toLocaleString("ar");
 const scNarrow = () => window.innerWidth < 600;
-// صندوق العرض وشريط الزمن أسفل الشاشة، فتُترك لهما مساحتهما
-const scPad = () => (scNarrow() ? { top: 40, bottom: 300 + timebarHeight(), left: 20, right: 20 } : { top: 60, bottom: 230 + timebarHeight(), left: 60, right: 60 });
+// صندوق العرض أسفل الشاشة فوق شريط الزمن (وشريط الزمن محجوز في حشوة الخريطة نفسها)
+const scPad = () => (scNarrow() ? { top: 40, bottom: 300, left: 20, right: 20 } : { top: 60, bottom: 230, left: 60, right: 60 });
 
 // ---------- التحكم في الطبقات ----------
 function scGroups(on) {
@@ -300,6 +300,8 @@ function scStart(mode) {
   show.scenes = mode === "solo" ? soloScenes() : fusionScenes();
   show.paused = false;
   document.body.classList.add("showcasing");
+  dismissIntro();
+  applyPadding();
   showcaseBox.hidden = false;
   scGo(0);
 }
@@ -312,6 +314,7 @@ async function scEnd() {
   show.scenes = null;
   showcaseBox.hidden = true;
   document.body.classList.remove("showcasing");
+  applyPadding();
   userOff.clear();
   for (const g of s.userOff) userOff.add(g);
   syncLayerInputs();

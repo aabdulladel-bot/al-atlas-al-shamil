@@ -60,12 +60,16 @@ try {
       if (!(await page.isVisible("#panel-toggle"))) return; // على المكتب لا تُطوى اللوحة
       if ((await page.$eval("#panel", (p) => p.classList.contains("collapsed"))) === open) await page.click("#panel-toggle");
     };
+    // الافتتاحية تظهر في الزيارة الأولى: أبوابها الثلاثة وزر الدخول، ثم تُغلق
+    await page.waitForSelector("#intro.on", { timeout: 15000 });
+    const counts = { intro: await page.$$eval("#intro .intro-doors [data-door]", (b) => b.length) };
+    await page.click('#intro [data-door="skip"]');
+    await page.waitForSelector("#intro", { state: "hidden", timeout: 5000 });
     await togglePanel(true);
     await page.click('.mode button[data-mode="research"]');
     await page.evaluate(() => { document.getElementById("layer-panel").open = true; });
     await page.click("#terrain-toggle"); await settle();
     await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 60000 });
-    const counts = {};
     // افتح كل الأقسام المطوية قبل الضغط
     await page.evaluate(() => document.querySelectorAll("details").forEach((d) => (d.open = true)));
     for (const [sel, key] of [["#sunan-list button", "sunan"], ["#eras button", "eras"], ["#claims-eras button", "claimEras"]]) {
