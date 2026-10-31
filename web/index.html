@@ -90,7 +90,14 @@
     .lc-peoples { background: repeating-linear-gradient(45deg, #7d4f8f 0 2px, transparent 2px 6px); border: 1px dashed #7d4f8f; }
     .lc-places { background: radial-gradient(circle, #8a4b2a 0 5px, #fffdf8 5px 7px, transparent 7px); }
     .lc-claims { background: radial-gradient(circle, var(--evidence) 0 7px, transparent 7px 8px, color-mix(in srgb, var(--evidence) 35%, transparent) 8px 11px, transparent 11px); }
-    .lc-demography { background: radial-gradient(circle, color-mix(in srgb, #e0913f 70%, transparent) 0 10px, transparent 10px); }
+    .lc-demography { background: linear-gradient(90deg, #f1c27d 0 30%, transparent 30% 35%, #c4572a 35% 65%, transparent 65% 70%, #e0913f 70%); clip-path: polygon(0 50%, 30% 50%, 30% 100%, 35% 100%, 35% 8%, 65% 8%, 65% 100%, 70% 100%, 70% 32%, 100% 32%, 100% 100%, 0 100%); border-radius: 0; }
+    .lc-lights { background: radial-gradient(circle at 30% 40%, #ffd98a 0 1.5px, transparent 2px), radial-gradient(circle at 65% 55%, #ffe9b8 0 1.2px, transparent 1.8px), radial-gradient(circle at 45% 75%, #ffcf70 0 1px, transparent 1.6px), #0b1020; }
+    .card-actions { margin: 10px 0 0; }
+    .card-actions .chip { border: 1px solid var(--accent); background: transparent; }
+    table.cmp { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+    table.cmp th { text-align: start; color: var(--muted); font-weight: 500; padding: 4px 6px 4px 0; white-space: nowrap; }
+    table.cmp td { padding: 4px 6px; border-top: 1px solid color-mix(in srgb, var(--muted) 20%, transparent); }
+    table.cmp .ch-sw { display: inline-block; width: 10px; height: 10px; vertical-align: middle; }
     details.advanced { margin-top: 4px; }
     .credits-box > summary { font-size: 13px !important; color: var(--muted); font-weight: 600 !important; }
     /* البطاقة: درج جانبي على المكتب، وورقة سفلية على الجوال */
@@ -330,7 +337,8 @@
         <label class="lc"><input type="checkbox" data-group="peoples" checked><i class="lc-sw lc-peoples"></i><span class="lc-name">الشعوب والقبائل</span><span class="lc-count" id="lc-peoples"></span></label>
         <label class="lc"><input type="checkbox" data-group="places" checked><i class="lc-sw lc-places"></i><span class="lc-name">مواقع الحقبة</span><span class="lc-count" id="lc-places"></span></label>
         <label class="lc"><input type="checkbox" data-group="claims" checked><i class="lc-sw lc-claims"></i><span class="lc-name">الشواهد الموثّقة</span><span class="lc-count" id="lc-claims"></span></label>
-        <label class="lc"><input type="checkbox" data-group="demography"><i class="lc-sw lc-demography"></i><span class="lc-name">السكان</span><span class="lc-count" id="lc-demography"></span></label>
+        <label class="lc"><input type="checkbox" data-group="demography"><i class="lc-sw lc-demography"></i><span class="lc-name">السكان (أعمدة)</span><span class="lc-count" id="lc-demography"></span></label>
+        <label class="lc"><input type="checkbox" data-group="lights"><i class="lc-sw lc-lights"></i><span class="lc-name">أضواء الليل</span><span class="lc-count" id="lc-lights"></span></label>
       </div>
       <p class="sub warn" id="relief-note"></p>
       <details class="advanced research-only">
@@ -418,7 +426,7 @@
 
     <details class="section credits-box">
       <summary>المصادر والتراخيص</summary>
-      <p class="credits">المصادر: Pleiades (CC BY 3.0)، Gapminder وHYDE عبر OWID (CC BY 4.0)، Natural Earth (ملك عام)، حدود الحقب التاريخية من Historical Basemaps (GPL-3، تقريبية وغير مؤكدة)، نص المقدمة من ويكي مصدر (CC BY-SA)، الاختبارات الكمية من بيانات Seshat (CC BY-NC-SA، استعمال غير تجاري). الادعاءات مسودات قيد المراجعة.</p>
+      <p class="credits">المصادر: Pleiades (CC BY 3.0)، Gapminder وHYDE عبر OWID (CC BY 4.0)، Natural Earth (ملك عام)، حدود الحقب التاريخية من Historical Basemaps (GPL-3، تقريبية وغير مؤكدة)، نص المقدمة من ويكي مصدر (CC BY-SA)، الاختبارات الكمية من بيانات Seshat (CC BY-NC-SA، استعمال غير تجاري)، أضواء الليل من NASA Black Marble 2016 (ملك عام). الادعاءات مسودات قيد المراجعة.</p>
       <details class="credits sub">
         <summary>إسناد صور الأقمار الصناعية وبيانات التضاريس</summary>
         <p class="credits" dir="ltr">Satellite imagery: NASA Blue Marble: Next Generation, Reto Stöckli, NASA Earth Observatory (public domain). We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).</p>

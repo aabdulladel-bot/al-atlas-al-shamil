@@ -122,6 +122,10 @@ const DEM_ATTRIBUTION = "التضاريس: Terrain Tiles (USGS 3DEP/SRTM/GMTED20
 // ملك عام. تُجلب وقت العرض حتى المستوى 8، وبعده تُكبَّر البلاطات.
 const SAT_TILES = PACKS?.sat ? "pack://sat/{z}/{x}/{y}" : "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg";
 const SAT_ATTRIBUTION = "صور الأقمار الصناعية: NASA Blue Marble: Next Generation (Reto Stöckli، NASA Earth Observatory) عبر NASA GIBS";
+// أضواء الليل: مركّب NASA Black Marble لسنة 2016 (VIIRS)، ملك عام. صورة حديثة للعمران، فلا تُعرض إلا عند محطتي 2010 واليوم
+const LIGHTS_TILES = PACKS?.lights ? "pack://lights/{z}/{x}/{y}" : "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2016-01-01/GoogleMapsCompatible_Level8/{z}/{y}/{x}.png";
+const LIGHTS_ATTRIBUTION = "أضواء الليل: NASA Black Marble 2016 (VIIRS، Suomi NPP) عبر NASA GIBS";
+const LIGHTS_TIMES = new Set(["2010", "modern"]);
 // لكل أساس ألوانه: الظلال والسماء والحدود. صور الأقمار داكنة، فتُرسم الحدود فوقها بلون فاتح.
 const HILLSHADE = {
   satellite: { "hillshade-exaggeration": 0.3, "hillshade-shadow-color": "#000000", "hillshade-highlight-color": "#ffffff", "hillshade-accent-color": "#000000" },
@@ -160,10 +164,12 @@ const map = new maplibregl.Map({
       "dem-hs": { type: "raster-dem", tiles: [DEM_TILES], encoding: "terrarium", tileSize: 256, maxzoom: PACKS?.dem?.maxzoom ?? 12, attribution: DEM_ATTRIBUTION },
       ocean: { type: "geojson", data: "data/base/ocean.geojson" },
       satellite: { type: "raster", tiles: [SAT_TILES], tileSize: 256, maxzoom: PACKS?.sat?.maxzoom ?? 8, attribution: SAT_ATTRIBUTION },
+      lights: { type: "raster", tiles: [LIGHTS_TILES], tileSize: 256, maxzoom: PACKS?.lights?.maxzoom ?? 8, attribution: LIGHTS_ATTRIBUTION },
     },
     layers: [
       { id: "sea", type: "background", paint: { "background-color": cssVar("--sea") } },
       { id: "satellite", type: "raster", source: "satellite", paint: { "raster-fade-duration": 200 } },
+      { id: "lights", type: "raster", source: "lights", layout: { visibility: "none" }, paint: { "raster-opacity": 0.92, "raster-fade-duration": 300 } },
       { id: "land", type: "fill", source: "land", layout: { visibility: "none" }, paint: { "fill-color": cssVar("--land") } },
       // الخريطة المرسومة ملوّنة بالارتفاع من بيانات التضاريس نفسها، بألوان الأطالس الورقية (البحر تغطيه طبقة ocean)
       { id: "relief", type: "color-relief", source: "dem-hs", layout: { visibility: "none" }, paint: { "color-relief-opacity": 0.9, "color-relief-color": ["interpolate", ["linear"], ["elevation"], 0, cssVar("--relief-0"), 300, cssVar("--relief-1"), 800, cssVar("--relief-2"), 1500, cssVar("--relief-3"), 2500, cssVar("--relief-4"), 4000, cssVar("--relief-5")] } },
@@ -191,11 +197,12 @@ const LAYER_GROUPS = {
   places: ["places"],
   claims: ["claim-points"],
   demography: ["demography"],
+  lights: ["lights"],
   labels: [], // أسماء الدول: عناصر HTML لا طبقات خريطة، تُدار في updateLabels
 };
 const groupOf = (id) => Object.keys(LAYER_GROUPS).find((g) => LAYER_GROUPS[g].includes(id));
 const wanted = new Map(["hillshade", "lakes", "rivers"].map((id) => [id, true])); // طبقات الأساس ظاهرة ابتداءً
-const userOff = new Set(["demography"]); // السكان مطفأة ابتداءً، ويشعلها القارئ من بطاقات الطبقات
+const userOff = new Set(["demography", "lights"]); // السكان وأضواء الليل مطفأة ابتداءً، ويشعلها القارئ من بطاقات الطبقات
 function setVis(id, on) {
   wanted.set(id, on);
   if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", on && !userOff.has(groupOf(id)) ? "visible" : "none");
@@ -230,6 +237,7 @@ function stopRelief() {
   reliefNoteEl.textContent = "تعذّر الوصول إلى بلاطات التضاريس، فعُرضت الخريطة بلا تضاريس. بقية الطبقات تعمل.";
 }
 map.on("error", (e) => {
+  if (e.sourceId === "lights") return; // بلاطة أضواء متعذّرة لا تُعطّل شيئاً
   if (e.sourceId === "satellite") {
     sat.failed++;
     if (!sat.stopped && sat.ok === 0 && sat.failed >= 8) stopSatellite();
@@ -537,6 +545,7 @@ function nameSourceHtml(info, modern) {
     return `الاسم «${escapeHtml(info.ar_other)}» في ويكي بيانات (${info.qid ? `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(info.qid)}" target="_blank" rel="noopener">${escapeHtml(info.qid)}</a>` : ""}) لكيان آخر بالاسم نفسه ${when}، لا لهذه السنة؛ المعروض اسم المصدر`;
   }
   if (info?.st === "arabized") return "تعريب تقديري من الاسم الإنجليزي، لا اسم عربي موثّق؛ يحتاج مراجعة لغوية";
+  if (info?.st === "ne_name") return "الاسم العربي لدولة حديثة بالاسم الإنجليزي نفسه في Natural Earth (ملك عام)؛ مطابقة بالاسم لا بالهوية";
   if (!info?.ar) return "لا اسم عربي موثّق بعد؛ المعروض اسم المصدر";
   const link = info.qid ? `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(info.qid)}" target="_blank" rel="noopener">${escapeHtml(info.qid)}</a>` : "";
   const span = [info.from != null ? `نشأ ${yearLabel(info.from)}` : "", info.to != null ? `زال ${yearLabel(info.to)}` : ""].filter(Boolean).join("، ");
@@ -591,6 +600,7 @@ function openEntityCard(f, kind) {
   }
   const people = kind === "people";
   cardEntity = { name: p.NAME, kind };
+  const pinnedHere = pinned && pinned.name === p.NAME && String(pinned.key) === String(key);
   if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], people ? "" : p.NAME]);
   const modern = String(key) === "modern";
   const info = labelInfo.get(p.NAME);
@@ -616,8 +626,29 @@ function openEntityCard(f, kind) {
     ["مصدر الاسم العربي", nameSourceHtml(info, modern)],
     ["مصدر الحدود", modern ? "Natural Earth (ملك عام)" : "Historical Basemaps (GPL-3)"],
   ]);
-  const token = openCard(top + `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>` + about + alsoHtml());
-  loadLinks(key).then((links) => updateCard(token, top + linkedEvidenceHtml(p.NAME, links) + about + alsoHtml()));
+  const facts = (links) => ({ name: p.NAME, kind, key, title, swatch, area: info?.a, span, years: info?.years ?? [String(key)], evidence: (links?.[p.NAME] ?? []).length });
+  const pinBtn = `<div class="card-actions"><button type="button" class="chip" data-pin="${pinnedHere ? "off" : "on"}">${pinnedHere ? "إلغاء التثبيت" : pinned ? "ثبّت هذا بدلاً منه" : "ثبّت للمقارنة"}</button></div>`;
+  const render = (links) => {
+    cardEntity.facts = facts(links);
+    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + about + alsoHtml();
+  };
+  const token = openCard(render(null));
+  loadLinks(key).then((links) => updateCard(token, render(links)));
+}
+// المقارنة: كيان مثبّت يُقارن بكل كيان تُفتح بطاقته بعده، في أي سنة. الأرقام من بيانات البطاقتين نفسيهما.
+let pinned = null;
+function compareHtml(a, b) {
+  const cell = (v) => `<td>${v ? escapeHtml(v) : "—"}</td>`;
+  const row = (label, f) => `<tr><th>${escapeHtml(label)}</th>${cell(f(a))}${cell(f(b))}</tr>`;
+  const head = (x) => `<td><i class="ch-sw" style="background:${x.swatch}"></i> <b>${escapeHtml(x.title)}</b></td>`;
+  return `<section class="card-sec compare"><h3>مقارنة بالمثبّت</h3><table class="cmp"><tr><th></th>${head(a)}${head(b)}</tr>` +
+    row("خريطة سنة", (x) => yearText(x.key)) +
+    row("النوع", (x) => (x.kind === "people" ? "شعب أو قبيلة" : "كيان سياسي")) +
+    row("المساحة (كم²)", (x) => (x.area ? fmtBig(x.area) : "")) +
+    row("مدته في ويكي بيانات", (x) => x.span) +
+    row("خرائط يظهر عليها", (x) => fmtInt(x.years.length)) +
+    row("شواهد على أرضه", (x) => fmtInt(x.evidence)) +
+    `</table><p class="sub">المساحة على خريطة سنته من حدود المصدر التقريبية، والشواهد ربط مكاني لا حكم تاريخي.</p></section>`;
 }
 // تتبّع الكيان المعروض إلى سنة أخرى: ينتقل الزمن، ثم تُفتح بطاقته في تلك السنة إن وُجد فيها
 async function followEntity(k) {
@@ -682,14 +713,14 @@ let modernAr = new Map();
 const demoTitle = (p) => REGION_AR[p.name_en] ?? modernAr.get(p.name_en) ?? p.name_en;
 function openDemoCard(f) {
   const p = f.properties;
-  markPoint(f.geometry.coordinates);
+  markPoint([Number(p._lon), Number(p._lat)]);
   if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
   cardEntity = null;
   const region = p.level === "region";
   openCard(cardHead({
     title: demoTitle(p), en: p.name_en,
     chips: [chip(`سنة ${yearLabel(Number(p.year))}`), chip(region ? "إقليم حديث التقسيم" : "دولة بحدودها الحديثة")],
-    note: region ? "الرقم لإقليم حديث التقسيم، وليس لحدود الحقبة." : "الرقم لأرض الدولة بحدودها الحديثة، لا لكيانات الحقبة.",
+    note: (region ? "الرقم لإقليم حديث التقسيم، وليس لحدود الحقبة." : "الرقم لأرض الدولة بحدودها الحديثة، لا لكيانات الحقبة.") + " ارتفاع العمود بالجذر التربيعي للسكان، بمقياس واحد لكل السنين.",
   }) + statsHtml([["نسمة", fmtBig(Number(p.population)), `${formatPop(p.population)} نسمة`]]) +
     aboutHtml([["المصدر", escapeHtml(demoMeta?.attribution ?? "")], ["ملاحظة", escapeHtml(demoMeta?.note ?? "")]]) + alsoHtml());
 }
@@ -893,6 +924,9 @@ async function loadBorders(key) {
   if (token !== time.token) return data;
   loadDemography(DEMO_FOR_TIME[key] ?? "", { fit: false });
   ensureClaimPoints().then(() => { if (token === time.token) applyClaimView(); });
+  const lit = LIGHTS_TIMES.has(String(key));
+  setVis("lights", lit);
+  setLayerCount("lights", lit ? "صورة سنة 2016" : "تُعرض عند 2010 واليوم");
   renderNow({ names, labels, places, era });
   return data;
 }
@@ -974,7 +1008,48 @@ const demoNoteEl = document.getElementById("demo-note");
 demoSelect.innerHTML = `<option value="">بدون طبقة سكان</option>` + DEMO.map((d) => `<option value="${d.key}">${escapeHtml(d.label)}</option>`).join("");
 const formatPop = (n) => Number(n).toLocaleString("ar-u-nu-latn");
 
+// السكان أعمدة: قاعدة ثابتة لكل نقطة (أعرض للأقاليم الستة من الدول)، وارتفاع بالجذر التربيعي للسكان بمقياس واحد لكل السنين،
+// فتُقارن السنوات ببعضها ولا تُضخَّم أرقام الحقب الأولى. والرقم الدقيق في البطاقة.
+const DEMO_M_PER_ROOT = 25; // متر لكل جذر نسمة: مليون ← 25 كم، مئة مليون ← 250 كم، مليار ← 790 كم
+function demoColumns(data) {
+  const ring = (lon, lat, km) => {
+    const pts = [];
+    for (let i = 0; i <= 16; i++) {
+      const a = (i / 16) * Math.PI * 2;
+      pts.push([lon + (km / (111.32 * Math.cos((lat * Math.PI) / 180))) * Math.cos(a), lat + (km / 110.57) * Math.sin(a)]);
+    }
+    return [pts];
+  };
+  return {
+    type: "FeatureCollection",
+    features: data.features.map((f) => {
+      const [lon, lat] = f.geometry.coordinates;
+      const km = f.properties.level === "region" ? 420 : 110;
+      return { type: "Feature", properties: { ...f.properties, _lon: lon, _lat: lat, _h: Math.round(Math.sqrt(Number(f.properties.population)) * DEMO_M_PER_ROOT) }, geometry: { type: "Polygon", coordinates: ring(lon, lat, km) } };
+    }),
+  };
+}
 let demoMeta = null;
+let demoColumnsData = null;
+// MapLibre لا تُرجع أعمدة fill-extrusion في queryRenderedFeatures على الكرة، فيُختبر النقر هندسياً: قاعدة العمود على الشاشة
+// ونصف قطرها المسقط (ولا يقلّ عن 12 بكسلاً)، ويُستبعد ما خلف الكرة (أبعد من 85° عن مركز النظر)
+function demoHitAt(point) {
+  if (!demoColumnsData || !map.getLayer("demography") || map.getLayoutProperty("demography", "visibility") !== "visible") return null;
+  const c = map.getCenter();
+  const rad = Math.PI / 180;
+  let best = null;
+  for (const f of demoColumnsData.features) {
+    const lon = Number(f.properties._lon), lat = Number(f.properties._lat);
+    const cosD = Math.sin(lat * rad) * Math.sin(c.lat * rad) + Math.cos(lat * rad) * Math.cos(c.lat * rad) * Math.cos((lon - c.lng) * rad);
+    if (cosD < Math.cos(85 * rad)) continue;
+    const q = map.project([lon, lat]);
+    const edge = map.project(f.geometry.coordinates[0][0]);
+    const r = Math.max(12, Math.hypot(edge.x - q.x, edge.y - q.y));
+    const d = Math.hypot(q.x - point.x, q.y - point.y);
+    if (d <= r && (!best || d < best.d)) best = { d, f };
+  }
+  return best?.f ?? null;
+}
 let demoData = null;
 let demoRequest = 0;
 // fit: تقريب إلى نقاط الطبقة حين يختارها القارئ من القائمة، لا حين تتبع الزمن
@@ -998,21 +1073,22 @@ async function loadDemography(key, { fit = true } = {}) {
   const unit = m.countries ? `${m.countries} دولة` : "6 أقاليم";
   demoNoteEl.innerHTML = `سنة ${escapeHtml(m.year)}، ${unit}.<span class="research-only"> ${escapeHtml(m.note)}</span>`;
   setLayerCount("demography", `بيانات سنة ${yearLabel(Number(m.year))}`);
+  const columns = demoColumns(data);
+  demoColumnsData = columns;
   const source = map.getSource("demography");
   if (source) {
-    source.setData(data);
+    source.setData(columns);
   } else {
-    map.addSource("demography", { type: "geojson", data });
+    map.addSource("demography", { type: "geojson", data: columns });
     map.addLayer({
       id: "demography",
-      type: "circle",
+      type: "fill-extrusion",
       source: "demography",
       paint: {
-        "circle-radius": ["interpolate", ["linear"], ["get", "population"], 0, 3, 1000000, 8, 100000000, 22, 1000000000, 40],
-        "circle-color": "#e0913f",
-        "circle-opacity": 0.42,
-        "circle-stroke-color": "#fff3e0",
-        "circle-stroke-width": 1,
+        "fill-extrusion-color": ["interpolate", ["linear"], ["get", "_h"], 0, "#f1c27d", 300000, "#e0913f", 900000, "#c4572a"],
+        "fill-extrusion-height": ["get", "_h"],
+        "fill-extrusion-base": 0,
+        "fill-extrusion-opacity": 0.88,
       },
     }, map.getLayer("claim-points") ? "claim-points" : undefined);
     pointerOn("demography");
@@ -1319,7 +1395,7 @@ map.on("click", (e) => {
   const feats = layers.length ? map.queryRenderedFeatures(e.point, { layers }) : [];
   const hits = [];
   for (const c of CLICKABLE) {
-    const f = feats.find((x) => x.layer.id === c.layer && (c.layer !== "borders-fill" || x.properties.NAME));
+    const f = feats.find((x) => x.layer.id === c.layer && (c.layer !== "borders-fill" || x.properties.NAME)) ?? (c.layer === "demography" ? demoHitAt(e.point) : null);
     if (f) hits.push({ c, f });
   }
   if (!hits.length) {
@@ -1331,9 +1407,12 @@ map.on("click", (e) => {
   showHit(hits[0]);
 });
 cardBody.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-also], [data-follow], [data-time]");
+  const t = e.target.closest("[data-also], [data-follow], [data-time], [data-pin]");
   if (!t) return;
-  if (t.dataset.also != null) {
+  if (t.dataset.pin) {
+    pinned = t.dataset.pin === "on" ? cardEntity?.facts ?? null : null;
+    showHit(cardCurrent);
+  } else if (t.dataset.also != null) {
     const i = Number(t.dataset.also);
     const next = cardAlso[i];
     cardAlso = [cardCurrent, ...cardAlso.filter((_, j) => j !== i)];

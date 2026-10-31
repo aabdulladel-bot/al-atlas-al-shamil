@@ -115,6 +115,10 @@ def main():
         "شعب": "شعب أو قبيلة أو مجموعة إثنية، لا تُعامل كدولة",
         "قريب من الحد": "المكان خارج المضلع على مسافة لا تتجاوز 0.2 درجة",
     }
+    # ملف لكل سنة حدود، ولو بلا شواهد، فلا تطلب الواجهة ملفاً مفقوداً. السنوات من ملفات الحدود نفسها
+    keys = sorted(p.name[len("borders_"):-len(".geojson")] for p in (ROOT / "web/data/borders").glob("borders_*.geojson")) + ["modern"]
+    for key in keys:
+        rows.setdefault(key, {})
     for key, out in rows.items():
         meta = {"year": key, "rules": meta_rule, "source": "web/data/claim_points.geojson وخرائط الحدود من Historical Basemaps وNatural Earth، ونوع الكيان وتواريخه من ويكي بيانات"}
         (OUT / f"claims_by_entity_{key}.json").write_text(json.dumps({"_meta": meta, **out}, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")

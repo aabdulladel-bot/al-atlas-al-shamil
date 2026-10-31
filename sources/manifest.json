@@ -539,6 +539,17 @@
       "status": "runtime"
     },
     {
+      "id": "nasa-gibs-blackmarble",
+      "runtime": true,
+      "tile_url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2016-01-01/GoogleMapsCompatible_Level8/{z}/{y}/{x}.png",
+      "license": "ملك عام (صور NASA)، مع طلب الإسناد لـ NASA وخدمة GIBS",
+      "tier": "A",
+      "landing": "https://nasa-gibs.github.io/gibs-api-docs/",
+      "attribution": "NASA Black Marble 2016 (VIIRS, Suomi NPP); imagery via NASA GIBS (ESDIS)",
+      "note": "أضواء الليل: مركّب سنوي لسنة 2016 من مستشعر VIIRS (طبقة VIIRS_Black_Marble في GIBS، وفيها أيضاً 2012). تُعرض عند محطتي 2010 واليوم فقط، وتُذكر سنتها 2016، لأنها صورة حديثة للعمران لا تاريخية. تُجلب في متصفح القارئ وقت العرض، والنسخة المنشورة تحزم المستويات 0–5 محوّلة إلى JPEG. تحقّقتُ من الطبقة في وصف خدمة GIBS (GetCapabilities) ومن بلاطة منها.",
+      "status": "runtime"
+    },
+    {
       "id": "naturalearth-populated-places-50m-full",
       "file": "data/raw/naturalearth/ne_50m_populated_places.geojson",
       "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_populated_places.geojson",

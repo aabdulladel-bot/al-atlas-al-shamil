@@ -22,13 +22,19 @@ const CHUNK_RAW = Math.floor((MAX_FILE * 3) / 4) - 65536; // ما يتّسع ل�
 const UA = "al-atlas-al-shamil/1.0 (artifact bundle)";
 const SAT_URL = (z, x, y) => `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/${z}/${y}/${x}.jpeg`;
 const DEM_URL = (z, x, y) => `https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${z}/${x}/${y}.png`;
+const LIGHTS_URL = (z, x, y) => `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2016-01-01/GoogleMapsCompatible_Level8/${z}/${y}/${x}.png`;
+// أضواء الليل (NASA Black Marble 2016): العالم حتى 4 والإقليم في 5، وتُحوَّل PNG إلى JPEG لأن أكثرها سواد
+const LIGHTS_LEVELS = { 0: "global", 1: "global", 2: "global", 3: "global", 4: "global", 5: [-20, -5, 80, 60] };
 
-function tile(url, file) {
+function tile(url, file, toJpeg = false) {
   if (!fs.existsSync(file)) {
     fs.mkdirSync(path.dirname(file), { recursive: true });
     execFileSync("curl", ["-sSf", "-m", "60", "-A", UA, "-o", file, url]);
   }
-  return fs.readFileSync(file);
+  if (!toJpeg) return fs.readFileSync(file);
+  const jpg = file.replace(/\.png$/, ".jpg");
+  if (!fs.existsSync(jpg)) execFileSync("convert", [file, "-background", "black", "-flatten", "-quality", "82", jpg]);
+  return fs.readFileSync(jpg);
 }
 
 // نطاق البلاطات في مستوى: العالم كله أو ما يغطي المستطيل
@@ -41,7 +47,7 @@ function tileRange(z, area) {
   return { x0: tx(w), x1: tx(e), y0: ty(nn), y1: ty(s) };
 }
 
-function pack(layer, urlOf, levels, ext) {
+function pack(layer, urlOf, levels, ext, toJpeg = false) {
   const files = {};
   for (const [zs, area] of Object.entries(levels)) {
     const z = Number(zs);
@@ -61,7 +67,7 @@ function pack(layer, urlOf, levels, ext) {
     };
     for (let x = x0; x <= x1; x++) {
       for (let y = y0; y <= y1; y++) {
-        const buf = tile(urlOf(z, x, y), path.join(CACHE, layer, String(z), String(x), `${y}.${ext}`));
+        const buf = tile(urlOf(z, x, y), path.join(CACHE, layer, String(z), String(x), `${y}.${ext}`), toJpeg);
         if (offset + buf.length > CHUNK_RAW) flush();
         index[`${x}/${y}`] = [chunks.length, offset, buf.length];
         parts.push(buf);
@@ -83,7 +89,7 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.cpSync(path.join(ROOT, "web"), OUT, { recursive: true });
 fs.mkdirSync(path.join(OUT, "tiles"), { recursive: true });
 
-const packs = { sat: pack("sat", SAT_URL, SAT_LEVELS, "jpeg"), dem: pack("dem", DEM_URL, DEM_LEVELS, "png") };
+const packs = { sat: pack("sat", SAT_URL, SAT_LEVELS, "jpeg"), dem: pack("dem", DEM_URL, DEM_LEVELS, "png"), lights: pack("lights", LIGHTS_URL, LIGHTS_LEVELS, "png", true) };
 fs.writeFileSync(path.join(OUT, "tilepacks.js"), `// بلاطات محزومة مع النسخة المنشورة (scripts/build_artifact_bundle.mjs)\nwindow.TILE_PACKS = ${JSON.stringify(packs)};\n`);
 
 let html = fs.readFileSync(path.join(ROOT, "web/index.html"), "utf8");
