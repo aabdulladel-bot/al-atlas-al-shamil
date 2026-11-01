@@ -275,6 +275,7 @@ function setRegion(id) {
     if (region.token === cardToken) closeCard();
   }
   renderList();
+  writeHash();
 }
 getJson("data/base/regions.json").then((d) => {
   regions = d.regions;
@@ -461,6 +462,9 @@ quizBody.addEventListener("click", (e) => {
 
 // الزمن تغيّر: تُحدَّث القائمة، ويُبدأ سؤال جديد إن كان التحدي مفتوحاً
 document.addEventListener("atlas:time", () => {
+  writeHash();
+  announce(`الخريطة الآن: ${yearText(time.key)}، الحقبة ${eraOf(time.key).id}: ${eraOf(time.key).label}`);
+  applyInitialView();
   passportNote("era", eraOf(time.key).id);
   renderList();
   railCounts();
@@ -585,4 +589,60 @@ cardBody.addEventListener("click", (e) => {
   // العرض الزمني للمنطقة: الكاميرا ثابتة عليها، والزمن يعبر المحطات من أولها
   if (playTimer) { stopPlay(); syncPlayLabel(); return; }
   loadBorders(TIME_STOPS[0]).then(() => { tbPlay.click(); syncPlayLabel(); });
+});
+
+// ---------- المشاركة: المنظر في عنوان الصفحة ----------
+// المنظر المشارَك (#t1200-rmena-strade) يُطبَّق بعد أول خريطة: المنطقة حين تُحمَّل المناطق، والسُّنّة حين تُحمَّل السنن
+let initialApplied = false;
+function applyInitialView() {
+  if (initialApplied) return;
+  initialApplied = true;
+  const { r, s } = initialView;
+  const until = (ok, run, tries = 40) => (ok() ? run() : tries > 0 && setTimeout(() => until(ok, run, tries - 1), 250));
+  if (r) until(() => regions.length, () => { if (regions.some((x) => x.id === r)) setRegion(r); });
+  if (s) until(() => sunanData?.sunan, () => { const x = sunanData.sunan.find((y) => sunnaSlug(y.id) === s); if (x) selectSunna(x); });
+}
+// إشعار قصير يُقرأ ويُرى
+const toastEl = document.getElementById("toast");
+let toastTimer = 0;
+function toast(text) {
+  toastEl.textContent = text;
+  toastEl.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => (toastEl.hidden = true), 4200);
+}
+// ما يقرؤه قارئ الشاشة عند تغيّر الزمن (بلا عرض)
+const liveEl = document.getElementById("sr-live");
+function announce(text) { liveEl.textContent = text; }
+// زرّ المشاركة: خارج إطار النشر يُنسخ الرابط، وداخله (صفحة claude.ai) يحمل عنوانُ الصفحة المنظرَ نفسه،
+// فيُنسخ من شريط العنوان أو من «مشاركة» في المنصة، لأن عنوان الإطار ليس رابط الصفحة
+document.getElementById("share-btn").addEventListener("click", async () => {
+  writeHash();
+  const framed = window.top !== window;
+  if (!framed) {
+    try { await navigator.clipboard.writeText(location.href); toast("نُسخ رابط هذا المنظر."); return; } catch {}
+  }
+  toast(`صار عنوان الصفحة يحمل هذا المنظر (${location.hash}). انسخه من شريط العنوان أو من زرّ المشاركة في الصفحة.`);
+});
+
+// ---------- اختصارات لوحة المفاتيح ----------
+const SHORTCUTS = [
+  ["/", "البحث"],
+  ["← →", "التنقل في الزمن (وشريط الزمن محدد)، والمشاهد في العرض والرحلات"],
+  ["Home / End", "أول الزمن وآخره (وشريط الزمن محدد)"],
+  ["↑ ↓ ثم Enter", "اختيار نتيجة البحث"],
+  ["مسافة", "إيقاف العرض الشامل مؤقتاً"],
+  ["Esc", "إغلاق البطاقة أو النتائج أو النافذة"],
+  ["?", "هذه القائمة"],
+];
+function openShortcuts() {
+  sheetEl.innerHTML = `<div class="sheet-hd"><h2 id="sheet-title">اختصارات لوحة المفاتيح</h2><button type="button" class="card-close" data-close aria-label="إغلاق">×</button></div>` +
+    `<table class="cmp keys">${SHORTCUTS.map(([k, v]) => `<tr><th><kbd>${escapeHtml(k)}</kbd></th><td>${escapeHtml(v)}</td></tr>`).join("")}</table>`;
+  lastFocus = document.activeElement;
+  modalEl.hidden = false;
+  sheetEl.querySelector("[data-close]").focus();
+}
+document.getElementById("keys-btn").addEventListener("click", openShortcuts);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "?" && !e.target.closest("input, textarea, select") && modalEl.hidden) { e.preventDefault(); openShortcuts(); }
 });

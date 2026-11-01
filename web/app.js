@@ -481,12 +481,17 @@ let cardToken = 0; // يُبطل تحميلاً متأخراً لبطاقة فُ
 let cardCurrent = null; // { c, f }: المعروض الآن
 let cardAlso = []; // ما تحت المؤشر غير المعروض، لروابط «وهنا أيضاً»
 let cardEntity = null; // { name, kind }: الكيان المعروض، لتتبّعه عبر الزمن
+// التركيز ينتقل إلى عنوان البطاقة عند فتحها، ويعود إلى حيث كان عند إغلاقها
+let cardReturnFocus = null;
 function openCard(html) {
   if (isNarrow()) setPanelCollapsed(true); // على الجوال: البطاقة أو القائمة، لا الاثنتان
+  if (cardEl.hidden) cardReturnFocus = document.activeElement;
   cardBody.innerHTML = html;
   cardEl.hidden = false;
   cardEl.scrollTop = 0;
   document.body.classList.add("card-open");
+  const h = cardBody.querySelector("h2");
+  if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); }
   return ++cardToken;
 }
 function updateCard(token, html) {
@@ -496,9 +501,12 @@ function closeCard() {
   cardToken++;
   cardCurrent = null;
   cardEntity = null;
+  const hadFocus = cardEl.contains(document.activeElement);
   cardEl.hidden = true;
   cardEl.classList.remove("full");
   document.body.classList.remove("card-open");
+  if (hadFocus && cardReturnFocus?.isConnected) cardReturnFocus.focus({ preventScroll: true });
+  cardReturnFocus = null;
   if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
   markPoint(null);
 }
@@ -1245,12 +1253,14 @@ function renderSunna(s, placesLinked) {
 function clearSunna() {
   activeSunna = null;
   for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", "false");
+  writeHash();
 }
 async function selectSunna(s) {
   if (typeof passportNote === "function") passportNote("sunna", s.id);
   for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.sunna === s.id));
   const ids = [...s.supporting, ...s.limiting].filter((x) => x.id).map((x) => x.id);
   activeSunna = { id: s.id, ids };
+  writeHash();
   const ready = await ensureClaimPoints();
   let linked = [];
   if (ready && ids.length) {
@@ -1598,10 +1608,36 @@ tbPlay.addEventListener("click", () => {
 });
 
 // البداية: سنة 1200م، حقبة التبادل العابر للقارات، فيرى الزائر الكيانات بألوانها والشواهد في مكانها
-const START_TIME = 1200;
+// منظر قابل للمشاركة في عنوان الصفحة: #t1200-rmena-strade = السنة، والمنطقة، والسُّنّة (بلا sn_ ولا شرطات سفلية).
+// قبل الميلاد بحرف b (tb4000)، واليوم tnow. ولا يقبل العنوان إلا حروفاً لاتينية وأرقاماً وشرطات.
+const sunnaSlug = (id) => id.replace(/^sn_/, "").replace(/_/g, "");
+function viewFromHash() {
+  const out = {};
+  let raw = "";
+  try { raw = decodeURIComponent(location.hash.slice(1)); } catch {}
+  for (const part of raw.split("-")) {
+    if (/^t(b\d+|\d+|now)$/.test(part)) {
+      const k = part === "tnow" ? "modern" : part[1] === "b" ? -Number(part.slice(2)) : Number(part.slice(1));
+      if (TIME_STOPS.some((x) => String(x) === String(k))) out.t = k;
+    } else if (/^r[a-z]+$/.test(part)) out.r = part.slice(1);
+    else if (/^s[a-z]+$/.test(part)) out.s = part.slice(1);
+  }
+  return out;
+}
+const initialView = viewFromHash();
+function writeHash() {
+  if (time.key == null) return;
+  const t = String(time.key) === "modern" ? "tnow" : Number(time.key) < 0 ? `tb${-Number(time.key)}` : `t${time.key}`;
+  const parts = [t];
+  if (typeof activeRegion !== "undefined" && activeRegion) parts.push(`r${activeRegion.id}`);
+  if (activeSunna) parts.push(`s${sunnaSlug(activeSunna.id)}`);
+  try { history.replaceState(null, "", `#${parts.join("-")}`); } catch {}
+}
+const START_TIME = initialView.t ?? 1200;
 map.on("load", async () => {
   await loadBorders(START_TIME);
-  if (!reduceMotion && !document.body.classList.contains("showcasing")) map.flyTo({ ...FIRST_VIEW, duration: 5200, curve: 1.3, essential: false });
+  // المنظر المشارَك بمنطقة يضبط الكاميرا بنفسه، فلا افتتاحية
+  if (!reduceMotion && !initialView.r && !document.body.classList.contains("showcasing")) map.flyTo({ ...FIRST_VIEW, duration: 5200, curve: 1.3, essential: false });
 });
 
 // ---------- الافتتاحية: العنوان وثلاثة أبواب، في الزيارة الأولى فقط ----------
