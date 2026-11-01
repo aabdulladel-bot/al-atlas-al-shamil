@@ -5,10 +5,12 @@ const journeyBox = document.getElementById("journey-box");
 const journeyListEl = document.getElementById("journey-list");
 let journeyState = null; // { journey, index }
 let journeyToken = 0; // يُبطل أي خطوة متأخرة إن نُقر زر آخر قبل انتهاء التحميل
+let journeyIndex = []; // { id, title, sunna, steps } لكل رحلة، لربط السُّنّة برحلتها
 
 async function loadJourneyIndex() {
   let list;
   try { list = await getJson("data/journeys/index.json"); } catch (err) { journeyListEl.textContent = `تعذّر تحميل الرحلات: ${err.message}`; return; }
+  journeyIndex = list;
   journeyListEl.replaceChildren(...list.map((j) => {
     const b = document.createElement("button");
     b.type = "button";
@@ -112,3 +114,9 @@ document.addEventListener("keydown", (e) => {
 });
 
 loadJourneyIndex();
+
+// زرّ «ابدأ رحلة هذه السُّنّة» في تفاصيل السُّنّة
+sunanDetailEl.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-start-journey]");
+  if (b) startJourney(b.dataset.startJourney);
+});
