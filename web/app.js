@@ -183,6 +183,8 @@ const map = new maplibregl.Map({
   ...(reduceMotion ? FIRST_VIEW : { center: [-10, 18], zoom: 0.9, pitch: 0, bearing: 25 }),
   maxPitch: 85,
   // الإسناد مطويّ خلف زر ⓘ فلا يركب على أزرار الخريطة، ونصّه الكامل في «المصادر والتراخيص»
+  // النسخة المنشورة تقدّم ملفات GeoJSON بلاحقة .json (منصة النشر لا تقدّم .geojson)، فتُعدَّل طلبات MapLibre إليها
+  transformRequest: (url) => (PACKS?.geojsonSuffix && /\.geojson$/.test(url) ? { url: url + PACKS.geojsonSuffix } : { url }),
   attributionControl: { compact: true, customAttribution: "Natural Earth · Pleiades · OWID/HYDE · Gapminder" },
 });
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-left");
