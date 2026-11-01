@@ -1,5 +1,41 @@
 [
   {
+    "id": "asabiyya",
+    "title": "رحلة: العصبية والملك",
+    "sunna": "sn_asabiyya",
+    "steps": 6
+  },
+  {
+    "id": "dynasty",
+    "title": "رحلة: أعمار الدول",
+    "sunna": "sn_dynasty_age",
+    "steps": 6
+  },
+  {
+    "id": "imitation",
+    "title": "رحلة: اقتداء المغلوب بالغالب",
+    "sunna": "sn_imitation",
+    "steps": 4
+  },
+  {
+    "id": "knowledge",
+    "title": "رحلة: الصنائع وانتقال المعرفة",
+    "sunna": "sn_knowledge",
+    "steps": 6
+  },
+  {
+    "id": "luxury",
+    "title": "رحلة: الترف والهرم",
+    "sunna": "sn_luxury",
+    "steps": 6
+  },
+  {
+    "id": "security",
+    "title": "رحلة: الأمن على الأموال وعمران الأسواق",
+    "sunna": "sn_security",
+    "steps": 8
+  },
+  {
     "id": "trade",
     "title": "رحلة: التجارة ومراكزها",
     "sunna": "sn_trade",

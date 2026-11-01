@@ -1245,7 +1245,9 @@ function renderSunna(s, placesLinked) {
       `</div>`
     : "";
   const mapNote = placesLinked ? `<p class="sub">أماكن الشواهد معروضة على الخريطة باللون الأخضر.</p>` : `<p class="sub">لا أماكن موثّقة الإحداثيات لشواهد هذه السُنّة بعد.</p>`;
+  const journey = (typeof journeyIndex !== "undefined" ? journeyIndex : []).find((j) => j.sunna === s.id);
   sunanDetailEl.innerHTML =
+    (journey ? `<div class="row"><button type="button" data-start-journey="${escapeHtml(journey.id)}">ابدأ رحلة هذه السُّنّة (${journey.steps} خطوات)</button></div>` : "") +
     `<div class="hyp">${escapeHtml(s.hypothesis)}</div>` +
     `<span class="badge">${escapeHtml(s.strength)}: ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>` +
     khaldun + quant + mapNote + support + limits + antecedents + modern;

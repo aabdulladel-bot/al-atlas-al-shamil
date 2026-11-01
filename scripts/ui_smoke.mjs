@@ -321,6 +321,17 @@ try {
     await page.click('#journey-box button[data-act="exit"]');
     await page.waitForTimeout(300);
     if (!(await page.$eval("#journey-box", (b) => b.hidden))) problems.push(`[${name}] صندوق الرحلة لم يُغلق`);
+    // لكل سُنّة رحلة، وزرّها في تفاصيل السُّنّة يبدؤها
+    counts.journeys = await page.$$eval("#journey-list button", (b) => b.length);
+    await page.evaluate(() => { clearSunna(); document.getElementById("sunan-list").closest("details").open = true; });
+    await page.click('#sunan-list button[data-sunna="sn_luxury"]');
+    await page.waitForSelector("#sunan-detail [data-start-journey]", { timeout: 30000 });
+    await page.click("#sunan-detail [data-start-journey]");
+    await page.waitForSelector('#journey-box button[data-act="next"]', { timeout: 15000 });
+    counts.sunnaJourney = (await page.evaluate(() => journeyState?.journey.id)) === "luxury" ? 1 : 0;
+    await settle();
+    await page.click('#journey-box button[data-act="exit"]');
+    await page.waitForTimeout(300);
     step = `${name}: العرض الشامل`;
     // العرض الشامل: كل نمط يبدأ، ويتقدّم مشهدين، ثم يُغلق ويعيد اللوحة
     for (const [btn, key] of [["#showcase-solo", "showcaseSolo"], ["#showcase-fusion", "showcaseFusion"]]) {
