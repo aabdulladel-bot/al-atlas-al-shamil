@@ -75,6 +75,8 @@ def main():
             # تسميات خريطة السنة للأطلس والبطاقة: الاسم العربي إن وُجد، والإنجليزي، والموضع، والمساحة، ومصدر الاسم
             labels = []
             for row in sorted(ents, key=lambda r: -r["a"]):
+                if not row["n"].strip():
+                    continue  # اسم فارغ في المصدر (مسافات فقط): لا تسمية له على الخريطة
                 info = hb.get(row["n"], {})
                 lab = {"en": row["n"], "x": row["r"][0], "y": row["r"][1], "a": row["a"], "min": label_min_zoom(row["a"])}
                 if row.get("ar"):
@@ -87,6 +89,10 @@ def main():
                         lab[dst] = info[src]
                 if lab.get("ar_other"):
                     lab["st"] = "other_era"
+                elif int(key) in info.get("fill", {}).get("years", []):
+                    # تعريب تقديري لسنة خارج مدة الكيان المتحقق؛ الاسم الموثّق لكيان سنوات أخرى يبقى للبطاقة
+                    lab["st"] = "arabized"
+                    lab["ar_other"] = info["ar"]
                 labels.append(lab)
             (LABELS / f"labels_{key}.json").write_text(json.dumps({"_meta": {"year": int(key), "name_source": "web/data/names/hb_names.json (Wikidata CC0)", "min_rule": "من المساحة: 2 مليون كم² ← 1.5، نصف مليون ← 2.5، مئة ألف ← 3.5، عشرون ألفاً ← 4.5، وما دون ← 5.5"}, "labels": labels}, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
         slices.append({"key": key, "index": idx, "entities": len(ents)})

@@ -585,6 +585,10 @@ function nameSourceHtml(info, modern) {
     const when = [info.from != null ? `قام ${yearLabel(info.from)}` : "", info.to != null ? `وزال ${yearLabel(info.to)}` : ""].filter(Boolean).join(" ");
     return `الاسم «${escapeHtml(info.ar_other)}» في ويكي بيانات (${info.qid ? `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(info.qid)}" target="_blank" rel="noopener">${escapeHtml(info.qid)}</a>` : ""}) لكيان آخر بالاسم نفسه ${when}، لا لهذه السنة؛ المعروض اسم المصدر`;
   }
+  if (info?.st === "arabized" && info.ar_other) {
+    const span = [info.from != null ? `قام ${yearLabel(info.from)}` : "", info.to != null ? `وزال ${yearLabel(info.to)}` : ""].filter(Boolean).join(" ");
+    return `تعريب تقديري لهذه السنة؛ الاسم الموثّق «${escapeHtml(info.ar_other)}» في ويكي بيانات لكيان بالاسم نفسه ${span}`.trim() + "؛ يحتاج مراجعة لغوية";
+  }
   if (info?.st === "arabized") return "تعريب تقديري من الاسم الإنجليزي، لا اسم عربي موثّق؛ يحتاج مراجعة لغوية";
   if (info?.st === "ne_name") return "الاسم العربي لدولة حديثة بالاسم الإنجليزي نفسه في Natural Earth (ملك عام)؛ مطابقة بالاسم لا بالهوية";
   if (!info?.ar) return "لا اسم عربي موثّق بعد؛ المعروض اسم المصدر";

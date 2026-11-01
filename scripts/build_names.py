@@ -101,10 +101,13 @@ def write_review(cfg, names):
         w = csv.writer(f)
         w.writerow(["الاسم في المصدر", "التعريب", "النوع", "السنوات", "القرار (يُقبل/يُعدَّل)", "التعريب المقترح من المراجع"])
         for n, v in sorted(names.items(), key=lambda kv: kv[0].lower()):
-            if v.get("status") != "arabized":
-                continue
-            kind = KIND_AR.get(kinds.get(n), "تعريب صفحة مرفوضة")
-            w.writerow([n, v["ar"], kind, " ".join(str(y) for y in v.get("years", [])), "", ""])
+            if v.get("status") == "arabized":
+                kind = KIND_AR.get(kinds.get(n), "تعريب صفحة مرفوضة")
+                w.writerow([n, v["ar"], kind, " ".join(str(y) for y in v.get("years_ar", v.get("years", []))), "", ""])
+            elif v.get("fill"):
+                f = v["fill"]
+                kind = KIND_AR.get(f["kind"], "") + f" (والاسم الموثّق «{v['ar']}» لسنوات أخرى)"
+                w.writerow([n, f["ar"], kind, " ".join(str(y) for y in f["years"]), "", ""])
 
 
 def main():
@@ -128,10 +131,21 @@ def main():
         if v and v["status"] == "rejected" and v.get("reason") in ARABIZED_REASONS:
             names[n] = {k: x for k, x in v.items() if k != "reason"} | {"status": "arabized", "ar": ar, "years_ar": present[n]}
     # أسماء لم يطابقها ويكي بيانات أو طابقها بلا عربي: تعريب تقديري معلن بنوعه (متداول، صوتي، وصفي)، ويحتاج مراجعة لغوية
+    # وتشمل أيضاً: أسماء لم تمرّ بويكي بيانات أصلاً، وأسماء رُفض عربيّها (لكيان آخر بالاسم نفسه أو لنوع غير المرسوم) فيبقى
+    # المرفوض في ar_rejected للشفافية، وسنوات خارج مدة الكيان المتحقق تُملأ بـ fill ويبقى الاسم الموثّق لسنواته.
     for n, x in cfg.get("unmatched", {}).items():
+        if n not in present:
+            continue
         v = names.get(n)
-        if v and v["status"] in ("no_match", "no_arabic"):
-            names[n] = {**v, "status": "arabized", "ar": x["ar"], "arabized_kind": x["kind"], "years_ar": present[n]}
+        base = {"status": "arabized", "ar": x["ar"], "arabized_kind": x["kind"], "years_ar": present[n]}
+        if v is None:
+            names[n] = {**base, "years": present[n]}
+        elif v["status"] in ("no_match", "no_arabic", "rejected", "date_mismatch"):
+            names[n] = {**v, **base}
+        elif v.get("ar"):
+            gap = [y for y in present[n] if y not in v.get("years_ar", [])]
+            if gap:
+                names[n] = {**v, "fill": {"ar": x["ar"], "kind": x["kind"], "years": gap}}
     # أسماء لم تمرّ بويكي بيانات أصلاً، وتطابق بالإنجليزية اسم دولة حديثة في Natural Earth (ملك عام): يؤخذ اسمها العربي
     # منه. مطابقة بالاسم لا بالهوية. والأسماء ذات التعديل التحريري المعلن (label_overrides.json) لا تُمسّ هنا،
     # لأن نطاق ذلك التعديل خريطة الدول اليوم، وتوسيعه إلى الخرائط التاريخية قرار لصاحب المشروع.
@@ -155,7 +169,7 @@ def main():
         "_meta": {
             "source": "Wikidata (CC0)، بمستخلص data/raw/wikidata/hb_titles.json",
             "rules": f"رفض صفحات التوضيح والقوائم؛ تحقق زمني بسماحة {TOL} سنة؛ بلا تواريخ يُقبل موسوماً؛ التعديلات اليدوية معلنة",
-            "statuses": {"verified": "اسم عربي متحقق زمنياً", "undated": "اسم عربي بلا تواريخ للتحقق", "override": "تعديل يدوي معلن", "arabized": "تعريب تقديري من الاسم الإنجليزي؛ لا اسم عربي موثّق، ويحتاج مراجعة لغوية", "ne_name": "الاسم العربي لدولة حديثة بالاسم الإنجليزي نفسه في Natural Earth (مطابقة بالاسم لا بالهوية)",
+            "statuses": {"verified": "اسم عربي متحقق زمنياً", "undated": "اسم عربي بلا تواريخ للتحقق", "override": "تعديل يدوي معلن", "arabized": "تعريب تقديري من الاسم الإنجليزي؛ لا اسم عربي موثّق، ويحتاج مراجعة لغوية", "fill": "حقل لا حالة: تعريب تقديري لسنوات خارج مدة الكيان المتحقق (fill.years)، والاسم الموثّق لسنواته (years_ar)", "ne_name": "الاسم العربي لدولة حديثة بالاسم الإنجليزي نفسه في Natural Earth (مطابقة بالاسم لا بالهوية)",
                          "date_mismatch": "رُفض: كيان آخر بالاسم نفسه", "rejected": "رُفض: نوع غير الكيان المرسوم (توضيح، قائمة، مدينة، موقع، مادة) أو بلا تواريخ ولا نوع صريح",
                          "no_arabic": "لا تسمية عربية في ويكي بيانات", "no_match": "لا مقالة بهذا العنوان"},
             "counts": counts,

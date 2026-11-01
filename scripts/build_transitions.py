@@ -93,6 +93,7 @@ def load(key):
         hb = ROOT / "web/data/names/hb_names.json"
         names = json.loads(hb.read_text(encoding="utf-8"))["names"] if hb.exists() else {}
         ar = {n: v["ar"] for n, v in names.items() if v.get("ar") and y in v.get("years_ar", [])}
+        ar |= {n: v["fill"]["ar"] for n, v in names.items() if v.get("fill") and y in v["fill"]["years"]}
         shown = {n: v["en_shown"] for n, v in names.items() if v.get("en_shown")}
     groups, partof, prec, unnamed, repaired = {}, {}, {}, [], 0
     for nm, po, bp, geom in rows:

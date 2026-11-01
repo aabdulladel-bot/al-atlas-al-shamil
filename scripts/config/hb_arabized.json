@@ -67,7 +67,7 @@
     "Thule",
     "Western Sahara"
   ],
-  "_note_unmatched": "تعريب تقديري لأسماء لم يطابقها ويكي بيانات (no_match) أو طابقها بلا اسم عربي (no_arabic). النوع: k اسم عربي متداول لكيان معروف (ترجمة شائعة لا اسم موثّق في ويكي بيانات)، t تعريب صوتي لاسم علم، d ترجمة وصفية لتسمية المصدر (ثقافات وجماعات صيد وجمع). يُعرض كالتعريب التقديري: العربي أساساً والإنجليزي تحته، ويحتاج مراجعة لغوية (review/arabized_review.csv). لا يحمل تحققاً زمنياً.",
+  "_note_unmatched": "تعريب تقديري لكل اسم يُرسم على الخرائط التاريخية بلا اسم عربي موثّق في سنته: أسماء لم يطابقها ويكي بيانات (no_match) أو طابقها بلا اسم عربي (no_arabic)، وأسماء لم تمرّ بويكي بيانات أصلاً، وأسماء رُفض عربيّها لأنه لكيان آخر بالاسم نفسه (date_mismatch) أو لنوع غير الكيان المرسوم (rejected)، وسنوات خارج مدة الكيان المتحقق (يُملأ بها ما لا يغطيه years_ar، والاسم الموثّق يبقى لسنواته). النوع: k اسم عربي متداول لكيان معروف (ترجمة شائعة لا اسم موثّق في ويكي بيانات)، t تعريب صوتي لاسم علم، d ترجمة وصفية لتسمية المصدر (ثقافات وجماعات صيد وجمع). يُعرض كالتعريب التقديري: العربي أساساً والإنجليزي تحته، ويحتاج مراجعة لغوية (review/arabized_review.csv). لا يحمل تحققاً زمنياً.",
   "unmatched": {
     "USSR": {
       "ar": "الاتحاد السوفيتي",
@@ -1112,6 +1112,2862 @@
     "Aaniiih": {
       "ar": "الآنيي",
       "kind": "t"
+    },
+    "Angola": {
+      "ar": "أنغولا",
+      "kind": "k"
+    },
+    "Rhodesia": {
+      "ar": "روديسيا",
+      "kind": "k"
+    },
+    "Quebec": {
+      "ar": "كيبك",
+      "kind": "k"
+    },
+    "Mozambique": {
+      "ar": "موزمبيق",
+      "kind": "k"
+    },
+    "Botswana": {
+      "ar": "بوتسوانا",
+      "kind": "k"
+    },
+    "Ethiopia": {
+      "ar": "إثيوبيا",
+      "kind": "k"
+    },
+    "Algiers": {
+      "ar": "الجزائر",
+      "kind": "k"
+    },
+    "Madagascar": {
+      "ar": "مدغشقر",
+      "kind": "k"
+    },
+    "Papua New Guinea": {
+      "ar": "بابوا غينيا الجديدة",
+      "kind": "k"
+    },
+    "Air": {
+      "ar": "آير",
+      "kind": "t"
+    },
+    "Ur": {
+      "ar": "أور",
+      "kind": "k"
+    },
+    "Senegal": {
+      "ar": "السنغال",
+      "kind": "k"
+    },
+    "Egypt": {
+      "ar": "مصر",
+      "kind": "k"
+    },
+    "Urartu": {
+      "ar": "أورارتو",
+      "kind": "k"
+    },
+    "Elam": {
+      "ar": "عيلام",
+      "kind": "k"
+    },
+    "United Kingdom": {
+      "ar": "المملكة المتحدة",
+      "kind": "k"
+    },
+    "Zanzibar": {
+      "ar": "زنجبار",
+      "kind": "k"
+    },
+    "Illinois": {
+      "ar": "إلينوي",
+      "kind": "t"
+    },
+    "Yemen": {
+      "ar": "اليمن",
+      "kind": "k"
+    },
+    "Guyana": {
+      "ar": "غيانا",
+      "kind": "k"
+    },
+    "Buyid dynasty": {
+      "ar": "الدولة البويهية",
+      "kind": "k"
+    },
+    "Ghana": {
+      "ar": "غانا",
+      "kind": "k"
+    },
+    "Armenia": {
+      "ar": "أرمينيا",
+      "kind": "k"
+    },
+    "East Java": {
+      "ar": "جاوة الشرقية",
+      "kind": "k"
+    },
+    "Malacca": {
+      "ar": "ملقا",
+      "kind": "k"
+    },
+    "Cambodia": {
+      "ar": "كمبوديا",
+      "kind": "k"
+    },
+    "Mardu": {
+      "ar": "ماردو",
+      "kind": "t"
+    },
+    "Valdivia": {
+      "ar": "ثقافة فالديفيا",
+      "kind": "t"
+    },
+    "Suriname": {
+      "ar": "سورينام",
+      "kind": "k"
+    },
+    "Laos": {
+      "ar": "لاوس",
+      "kind": "k"
+    },
+    "Kamarupa": {
+      "ar": "كاماروبا",
+      "kind": "t"
+    },
+    "Sindh": {
+      "ar": "السند",
+      "kind": "k"
+    },
+    "Eritrea": {
+      "ar": "إريتريا",
+      "kind": "k"
+    },
+    "Mali": {
+      "ar": "مالي",
+      "kind": "k"
+    },
+    "Germany (UK)": {
+      "ar": "ألمانيا (احتلال بريطاني)",
+      "kind": "d"
+    },
+    "Korea, Republic of": {
+      "ar": "كوريا الجنوبية",
+      "kind": "k"
+    },
+    "Moche": {
+      "ar": "ثقافة موتشي",
+      "kind": "t"
+    },
+    "Mon state": {
+      "ar": "دولة المون",
+      "kind": "t"
+    },
+    "Milograd culture": {
+      "ar": "ثقافة ميلوغراد",
+      "kind": "t"
+    },
+    "Nepal": {
+      "ar": "نيبال",
+      "kind": "k"
+    },
+    "Kong Empire": {
+      "ar": "إمبراطورية كونغ",
+      "kind": "t"
+    },
+    "Carnatic": {
+      "ar": "كارناتيك",
+      "kind": "t"
+    },
+    "Tunis": {
+      "ar": "تونس",
+      "kind": "k"
+    },
+    "Magyars": {
+      "ar": "المجريون",
+      "kind": "k"
+    },
+    "Kingdom of the Two Sicilies": {
+      "ar": "مملكة الصقليتين",
+      "kind": "k"
+    },
+    "Korea (USA)": {
+      "ar": "كوريا (احتلال أمريكي)",
+      "kind": "d"
+    },
+    "Comté de Toulouse": {
+      "ar": "كونتية تولوز",
+      "kind": "k"
+    },
+    "Benin": {
+      "ar": "بنين",
+      "kind": "k"
+    },
+    "Bijapur": {
+      "ar": "بيجابور",
+      "kind": "k"
+    },
+    "Kingdom of Zunbil": {
+      "ar": "مملكة زنبيل",
+      "kind": "k"
+    },
+    "Kerma": {
+      "ar": "كرمة",
+      "kind": "k"
+    },
+    "Swabia": {
+      "ar": "شوابيا",
+      "kind": "k"
+    },
+    "Dahomey": {
+      "ar": "داهومي",
+      "kind": "k"
+    },
+    "Toltec Empire": {
+      "ar": "إمبراطورية التولتيك",
+      "kind": "t"
+    },
+    "Kingdom of Ireland": {
+      "ar": "مملكة أيرلندا",
+      "kind": "k"
+    },
+    "Chavin": {
+      "ar": "ثقافة شافين",
+      "kind": "t"
+    },
+    "French Guiana": {
+      "ar": "غويانا الفرنسية",
+      "kind": "k"
+    },
+    "León": {
+      "ar": "ليون",
+      "kind": "k"
+    },
+    "Oman": {
+      "ar": "عُمان",
+      "kind": "k"
+    },
+    "Silla": {
+      "ar": "شيلا",
+      "kind": "t"
+    },
+    "Lozi": {
+      "ar": "اللوزي",
+      "kind": "t"
+    },
+    "Czech Republic": {
+      "ar": "التشيك",
+      "kind": "k"
+    },
+    "Iowa": {
+      "ar": "آيوا",
+      "kind": "t"
+    },
+    "Cape Colony": {
+      "ar": "مستعمرة الكاب",
+      "kind": "k"
+    },
+    "Oyo": {
+      "ar": "أويو",
+      "kind": "t"
+    },
+    "Kwarezm": {
+      "ar": "خوارزم",
+      "kind": "k"
+    },
+    "Muscat": {
+      "ar": "مسقط",
+      "kind": "k"
+    },
+    "Namazga": {
+      "ar": "ثقافة نمازغا",
+      "kind": "t"
+    },
+    "Hurrian Kingdoms": {
+      "ar": "الممالك الحورية",
+      "kind": "k"
+    },
+    "Eastern Masurian culture": {
+      "ar": "ثقافة مازوريا الشرقية",
+      "kind": "d"
+    },
+    "Polanes": {
+      "ar": "البولانيون",
+      "kind": "t"
+    },
+    "Caucasian Albania": {
+      "ar": "ألبانيا القوقازية",
+      "kind": "k"
+    },
+    "Mandjindja": {
+      "ar": "مانجيندجا",
+      "kind": "t"
+    },
+    "Dvaravati": {
+      "ar": "دفارافاتي",
+      "kind": "t"
+    },
+    "Fourche Maline Culture": {
+      "ar": "ثقافة فورش مالين",
+      "kind": "t"
+    },
+    "Alans": {
+      "ar": "اللان",
+      "kind": "k"
+    },
+    "Takrur": {
+      "ar": "التكرور",
+      "kind": "k"
+    },
+    "Cochimí": {
+      "ar": "الكوتشيمي",
+      "kind": "t"
+    },
+    "Wangkangurru": {
+      "ar": "وانغكانغورو",
+      "kind": "t"
+    },
+    "Yukagir": {
+      "ar": "اليوكاغير",
+      "kind": "t"
+    },
+    "Naples": {
+      "ar": "نابولي",
+      "kind": "k"
+    },
+    "Cantia": {
+      "ar": "كانتيا",
+      "kind": "t"
+    },
+    "Caloosahatchee culture": {
+      "ar": "ثقافة كالوساهاتشي",
+      "kind": "t"
+    },
+    "Mataram": {
+      "ar": "ماتارام",
+      "kind": "t"
+    },
+    "Tripolitania": {
+      "ar": "طرابلس الغرب",
+      "kind": "k"
+    },
+    "Luritja": {
+      "ar": "لوريتجا",
+      "kind": "t"
+    },
+    "Burgandy": {
+      "ar": "بورغونيا",
+      "kind": "k"
+    },
+    "Odrysian Kingdom": {
+      "ar": "المملكة الأودريسية",
+      "kind": "t"
+    },
+    "Kingdom of Sardinia": {
+      "ar": "مملكة سردينيا",
+      "kind": "k"
+    },
+    "Wangkathaa": {
+      "ar": "وانغكاثا",
+      "kind": "t"
+    },
+    "Yankuntjatjara": {
+      "ar": "يانكونتجاتجارا",
+      "kind": "t"
+    },
+    "Cherokee": {
+      "ar": "الشيروكي",
+      "kind": "k"
+    },
+    "Cheyenne": {
+      "ar": "الشايان",
+      "kind": "k"
+    },
+    "Boihaenum": {
+      "ar": "بويهايموم",
+      "kind": "t"
+    },
+    "Pitjantjatjara": {
+      "ar": "بيتجانتجاتجارا",
+      "kind": "t"
+    },
+    "Nakako": {
+      "ar": "ناكاكو",
+      "kind": "t"
+    },
+    "Kalaako/Malpa": {
+      "ar": "كالاكو (مالبا)",
+      "kind": "t"
+    },
+    "Monte Albán": {
+      "ar": "مونتي ألبان",
+      "kind": "t"
+    },
+    "Cochin China": {
+      "ar": "كوشينشينا",
+      "kind": "k"
+    },
+    "Susquehanna": {
+      "ar": "السسكويهانا",
+      "kind": "t"
+    },
+    "Chauhans": {
+      "ar": "الشوهان",
+      "kind": "t"
+    },
+    "Scotland": {
+      "ar": "اسكتلندا",
+      "kind": "k"
+    },
+    "Gugu-Badhun": {
+      "ar": "غوغو-بادهون",
+      "kind": "t"
+    },
+    "Simhala": {
+      "ar": "سنهالا",
+      "kind": "t"
+    },
+    "Saylan": {
+      "ar": "سيلان",
+      "kind": "k"
+    },
+    "Ceylon": {
+      "ar": "سيلان",
+      "kind": "k"
+    },
+    "Akan": {
+      "ar": "الأكان",
+      "kind": "t"
+    },
+    "Sabirs": {
+      "ar": "الصابير",
+      "kind": "t"
+    },
+    "Arakan": {
+      "ar": "أراكان",
+      "kind": "k"
+    },
+    "Alyawarre": {
+      "ar": "أليواري",
+      "kind": "t"
+    },
+    "Tepehuane": {
+      "ar": "التيبيوانه",
+      "kind": "t"
+    },
+    "Portuguese East Africa": {
+      "ar": "شرق أفريقيا البرتغالي",
+      "kind": "k"
+    },
+    "Hitchiti": {
+      "ar": "الهيتشيتي",
+      "kind": "t"
+    },
+    "Flathead": {
+      "ar": "الرؤوس المسطحة",
+      "kind": "k"
+    },
+    "Kaytej": {
+      "ar": "كايتيج",
+      "kind": "t"
+    },
+    "Tasmanian hunter-gatherers": {
+      "ar": "صيادو تسمانيا وجامعو الثمار",
+      "kind": "d"
+    },
+    "Aboriginal Tasmanians": {
+      "ar": "سكان تسمانيا الأصليون",
+      "kind": "d"
+    },
+    "Severians": {
+      "ar": "السيفيريون",
+      "kind": "t"
+    },
+    "Lipan": {
+      "ar": "الليبان",
+      "kind": "t"
+    },
+    "Mazun": {
+      "ar": "مزون",
+      "kind": "k"
+    },
+    "Glades Culture": {
+      "ar": "ثقافة غليدز",
+      "kind": "t"
+    },
+    "Wakaya": {
+      "ar": "واكايا",
+      "kind": "t"
+    },
+    "Cahitas": {
+      "ar": "الكاهيتا",
+      "kind": "t"
+    },
+    "Guachimis": {
+      "ar": "الغواتشيميس",
+      "kind": "t"
+    },
+    "Visigothic Kingdom": {
+      "ar": "مملكة القوط الغربيين",
+      "kind": "k"
+    },
+    "Sotho": {
+      "ar": "السوتو",
+      "kind": "t"
+    },
+    "Arabana": {
+      "ar": "أرابانا",
+      "kind": "t"
+    },
+    "Xhosa": {
+      "ar": "الخوسا",
+      "kind": "t"
+    },
+    "Banggarla": {
+      "ar": "بانغارلا",
+      "kind": "t"
+    },
+    "Dharawala": {
+      "ar": "دهاراوالا",
+      "kind": "t"
+    },
+    "Yulparitja": {
+      "ar": "يولباريتجا",
+      "kind": "t"
+    },
+    "Tamalipueca": {
+      "ar": "تاماليبويكا",
+      "kind": "t"
+    },
+    "Ngarinyin": {
+      "ar": "نغارينيين",
+      "kind": "t"
+    },
+    "Antakarinja": {
+      "ar": "أنتاكارينجا",
+      "kind": "t"
+    },
+    "Timucua": {
+      "ar": "التيموكوا",
+      "kind": "t"
+    },
+    "Cyrenaica": {
+      "ar": "برقة",
+      "kind": "k"
+    },
+    "Wudjari": {
+      "ar": "وودجاري",
+      "kind": "t"
+    },
+    "Wongaibon": {
+      "ar": "وونغايبون",
+      "kind": "t"
+    },
+    "Barundji": {
+      "ar": "باروندجي",
+      "kind": "t"
+    },
+    "Saxons": {
+      "ar": "الساكسون",
+      "kind": "k"
+    },
+    "Delaware": {
+      "ar": "الديلاوير",
+      "kind": "t"
+    },
+    "Couture Complex": {
+      "ar": "مجمع كوتور",
+      "kind": "t"
+    },
+    "Cheras": {
+      "ar": "التشيرا",
+      "kind": "t"
+    },
+    "Bosnia and Herzegovina": {
+      "ar": "البوسنة والهرسك",
+      "kind": "k"
+    },
+    "Nayarit": {
+      "ar": "ناياريت",
+      "kind": "t"
+    },
+    "Porter": {
+      "ar": "بورتر",
+      "kind": "t"
+    },
+    "Oudh": {
+      "ar": "أوده",
+      "kind": "k"
+    },
+    "Bahawalpur": {
+      "ar": "بهاولبور",
+      "kind": "k"
+    },
+    "Goodall Focus": {
+      "ar": "مركز غودال",
+      "kind": "t"
+    },
+    "Tutelo": {
+      "ar": "التوتيلو",
+      "kind": "t"
+    },
+    "Maiawali": {
+      "ar": "مايوالي",
+      "kind": "t"
+    },
+    "Orissa": {
+      "ar": "أوريسا",
+      "kind": "k"
+    },
+    "Missouri": {
+      "ar": "الميزوري",
+      "kind": "t"
+    },
+    "Judea": {
+      "ar": "يهودا",
+      "kind": "k"
+    },
+    "Yirandali": {
+      "ar": "ييرانداللي",
+      "kind": "t"
+    },
+    "Papago": {
+      "ar": "الباباغو",
+      "kind": "t"
+    },
+    "Southern Cameroon": {
+      "ar": "الكاميرون الجنوبية",
+      "kind": "k"
+    },
+    "Olmec": {
+      "ar": "الأولمك",
+      "kind": "k"
+    },
+    "Czechs": {
+      "ar": "التشيك",
+      "kind": "k"
+    },
+    "Kuwarra": {
+      "ar": "كووارا",
+      "kind": "t"
+    },
+    "Kija": {
+      "ar": "كيجا",
+      "kind": "t"
+    },
+    "Nez Perce": {
+      "ar": "النيز بيرس",
+      "kind": "t"
+    },
+    "Atakapa": {
+      "ar": "الأتاكابا",
+      "kind": "t"
+    },
+    "Kunjen": {
+      "ar": "كونجين",
+      "kind": "t"
+    },
+    "Duchy of Benevento": {
+      "ar": "دوقية بنفنتو",
+      "kind": "k"
+    },
+    "Miami": {
+      "ar": "الميامي",
+      "kind": "t"
+    },
+    "Copena": {
+      "ar": "كوبينا",
+      "kind": "t"
+    },
+    "Tjupany": {
+      "ar": "تجوباني",
+      "kind": "t"
+    },
+    "Yokuts": {
+      "ar": "اليوكوتس",
+      "kind": "t"
+    },
+    "Chinchoros": {
+      "ar": "ثقافة تشينتشورو",
+      "kind": "t"
+    },
+    "Nyamal": {
+      "ar": "نيامال",
+      "kind": "t"
+    },
+    "Dominican Republic": {
+      "ar": "جمهورية الدومينيكان",
+      "kind": "k"
+    },
+    "Ngarti": {
+      "ar": "نغارتي",
+      "kind": "t"
+    },
+    "Habsburg Netherlands": {
+      "ar": "هولندا الهابسبورغية",
+      "kind": "k"
+    },
+    "Nyaki-nyaki": {
+      "ar": "نياكي-نياكي",
+      "kind": "t"
+    },
+    "Yavapai": {
+      "ar": "اليافاباي",
+      "kind": "t"
+    },
+    "Barunggam": {
+      "ar": "بارونغام",
+      "kind": "t"
+    },
+    "Miller": {
+      "ar": "ميلر",
+      "kind": "t"
+    },
+    "Pomeranian culture ": {
+      "ar": "ثقافة بوميرانيا",
+      "kind": "d"
+    },
+    "Acadian Peninsula (UK)": {
+      "ar": "شبه جزيرة أكاديا (بريطانية)",
+      "kind": "d"
+    },
+    "Pitta-Pitta": {
+      "ar": "بيتا-بيتا",
+      "kind": "t"
+    },
+    "Ngalea": {
+      "ar": "نغاليا",
+      "kind": "t"
+    },
+    "Papal States": {
+      "ar": "الولايات البابوية",
+      "kind": "k"
+    },
+    "Wergaia": {
+      "ar": "ويرغايا",
+      "kind": "t"
+    },
+    "Wunumara": {
+      "ar": "وونومارا",
+      "kind": "t"
+    },
+    "Birria": {
+      "ar": "بيريا",
+      "kind": "t"
+    },
+    "Wangkumara": {
+      "ar": "وانغكومارا",
+      "kind": "t"
+    },
+    "Nazca": {
+      "ar": "ثقافة نازكا",
+      "kind": "t"
+    },
+    "Gunggari": {
+      "ar": "غونغاري",
+      "kind": "t"
+    },
+    "Mangala": {
+      "ar": "مانغالا",
+      "kind": "t"
+    },
+    "Wailwan": {
+      "ar": "وايلوان",
+      "kind": "t"
+    },
+    "Paekche": {
+      "ar": "بيكجي",
+      "kind": "t"
+    },
+    "Teotihuacan": {
+      "ar": "تيوتيهواكان",
+      "kind": "t"
+    },
+    "Castilla": {
+      "ar": "قشتالة",
+      "kind": "k"
+    },
+    "Pima": {
+      "ar": "البيما",
+      "kind": "t"
+    },
+    "Jaru": {
+      "ar": "جارو",
+      "kind": "t"
+    },
+    "West Getaes": {
+      "ar": "الغيتيون الغربيون",
+      "kind": "d"
+    },
+    "Ceylon (Dutch)": {
+      "ar": "سيلان (الهولندية)",
+      "kind": "k"
+    },
+    "Mecklenburg-Strelitz": {
+      "ar": "مكلنبورغ-شتريليتز",
+      "kind": "k"
+    },
+    "Jicarilla": {
+      "ar": "الهيكاريا",
+      "kind": "t"
+    },
+    "Saxony": {
+      "ar": "ساكسونيا",
+      "kind": "k"
+    },
+    "Frisians": {
+      "ar": "الفريزيون",
+      "kind": "k"
+    },
+    "Alawa": {
+      "ar": "ألاوا",
+      "kind": "t"
+    },
+    "Huns": {
+      "ar": "الهون",
+      "kind": "k"
+    },
+    "Venice": {
+      "ar": "البندقية",
+      "kind": "k"
+    },
+    "Wangkamana": {
+      "ar": "وانغكامانا",
+      "kind": "t"
+    },
+    "Kansa": {
+      "ar": "الكانسا",
+      "kind": "t"
+    },
+    "Helvetic Republic": {
+      "ar": "الجمهورية الهلفيتية",
+      "kind": "k"
+    },
+    "Tjalkanti": {
+      "ar": "تجالكانتي",
+      "kind": "t"
+    },
+    "Agwarmin": {
+      "ar": "أغوارمين",
+      "kind": "t"
+    },
+    "Moravians": {
+      "ar": "المورافيون",
+      "kind": "k"
+    },
+    "Meru": {
+      "ar": "ميرو",
+      "kind": "t"
+    },
+    "Kukatja": {
+      "ar": "كوكاتجا",
+      "kind": "t"
+    },
+    "Warlmanpa": {
+      "ar": "وارلمانبا",
+      "kind": "t"
+    },
+    "Spanish Morocco": {
+      "ar": "المغرب الإسباني",
+      "kind": "k"
+    },
+    "Mudburra": {
+      "ar": "مودبورا",
+      "kind": "t"
+    },
+    "Swiss Confederation": {
+      "ar": "الاتحاد السويسري",
+      "kind": "k"
+    },
+    "Andyamathanha": {
+      "ar": "أنديامثانها",
+      "kind": "t"
+    },
+    "Batavian Republic": {
+      "ar": "الجمهورية الباتافية",
+      "kind": "k"
+    },
+    "Florence": {
+      "ar": "فلورنسا",
+      "kind": "k"
+    },
+    "Taiwanese Tribes": {
+      "ar": "قبائل تايوان",
+      "kind": "d"
+    },
+    "Bavaria": {
+      "ar": "بافاريا",
+      "kind": "k"
+    },
+    "Georgian Kingdom": {
+      "ar": "المملكة الجورجية",
+      "kind": "k"
+    },
+    "Danggali": {
+      "ar": "دانغالي",
+      "kind": "t"
+    },
+    "Bigambul": {
+      "ar": "بيغامبول",
+      "kind": "t"
+    },
+    "Cholas": {
+      "ar": "التشولا",
+      "kind": "t"
+    },
+    "Walmatjarri": {
+      "ar": "والماتجاري",
+      "kind": "t"
+    },
+    "Germany (France)": {
+      "ar": "ألمانيا (احتلال فرنسي)",
+      "kind": "d"
+    },
+    "Malyangaba": {
+      "ar": "ماليانغابا",
+      "kind": "t"
+    },
+    "Dhirari": {
+      "ar": "دهيراري",
+      "kind": "t"
+    },
+    "Aragón": {
+      "ar": "أراغون",
+      "kind": "k"
+    },
+    "Nana": {
+      "ar": "نانا",
+      "kind": "t"
+    },
+    "Kooma": {
+      "ar": "كوما",
+      "kind": "t"
+    },
+    "Pennacook": {
+      "ar": "البيناكوك",
+      "kind": "t"
+    },
+    "Dutch Republic": {
+      "ar": "الجمهورية الهولندية",
+      "kind": "k"
+    },
+    "Sakhalin (RU)": {
+      "ar": "سخالين (روسية)",
+      "kind": "k"
+    },
+    "Dapenkeng culture": {
+      "ar": "ثقافة دابنكنغ",
+      "kind": "t"
+    },
+    "Dieri": {
+      "ar": "ديري",
+      "kind": "t"
+    },
+    "Pandyas": {
+      "ar": "البانديا",
+      "kind": "t"
+    },
+    "Gurindji": {
+      "ar": "غوريندجي",
+      "kind": "t"
+    },
+    "Western Masurian culture": {
+      "ar": "ثقافة مازوريا الغربية",
+      "kind": "d"
+    },
+    "Navarre": {
+      "ar": "نافارا",
+      "kind": "k"
+    },
+    "Saugeen Complex": {
+      "ar": "مجمع سوغين",
+      "kind": "t"
+    },
+    "Karuwali": {
+      "ar": "كاروالي",
+      "kind": "t"
+    },
+    "Kuyani": {
+      "ar": "كوياني",
+      "kind": "t"
+    },
+    "Palyku": {
+      "ar": "باليكو",
+      "kind": "t"
+    },
+    "Western Gangas": {
+      "ar": "الغانغا الغربيون",
+      "kind": "t"
+    },
+    "Slavs": {
+      "ar": "السلاف",
+      "kind": "k"
+    },
+    "Kuungkari": {
+      "ar": "كوونغكاري",
+      "kind": "t"
+    },
+    "Ngarigo": {
+      "ar": "نغاريغو",
+      "kind": "t"
+    },
+    "Menomini": {
+      "ar": "المينوميني",
+      "kind": "t"
+    },
+    "Ngatjumay": {
+      "ar": "نغاتجوماي",
+      "kind": "t"
+    },
+    "Nyikina": {
+      "ar": "نيكينا",
+      "kind": "t"
+    },
+    "Savoy": {
+      "ar": "سافوا",
+      "kind": "k"
+    },
+    "Badimaya": {
+      "ar": "باديمايا",
+      "kind": "t"
+    },
+    "East Getaes": {
+      "ar": "الغيتيون الشرقيون",
+      "kind": "d"
+    },
+    "Knucati": {
+      "ar": "كنوكاتي",
+      "kind": "t"
+    },
+    "Serano": {
+      "ar": "السيرانو",
+      "kind": "t"
+    },
+    "Austrian Netherlands": {
+      "ar": "هولندا النمساوية",
+      "kind": "k"
+    },
+    "Nawu": {
+      "ar": "ناوو",
+      "kind": "t"
+    },
+    "Finnmark": {
+      "ar": "فينمارك",
+      "kind": "k"
+    },
+    "Yandruwandha": {
+      "ar": "ياندروواندها",
+      "kind": "t"
+    },
+    "Wakabunga": {
+      "ar": "واكابونغا",
+      "kind": "t"
+    },
+    "Ponca": {
+      "ar": "البونكا",
+      "kind": "t"
+    },
+    "Hainan": {
+      "ar": "هاينان",
+      "kind": "k"
+    },
+    "Guamar / Pecchichitane": {
+      "ar": "الغوامار (بيتشيتشيتاني)",
+      "kind": "t"
+    },
+    "Barkindji": {
+      "ar": "باركيندجي",
+      "kind": "t"
+    },
+    "Barindji": {
+      "ar": "باريندجي",
+      "kind": "t"
+    },
+    "Ambur": {
+      "ar": "أمبور",
+      "kind": "t"
+    },
+    "Ngargad": {
+      "ar": "نغارغاد",
+      "kind": "t"
+    },
+    "Kwakwaka'wakw": {
+      "ar": "الكواكواكاواك",
+      "kind": "t"
+    },
+    "Andegerebenha": {
+      "ar": "أنديغيريبينها",
+      "kind": "t"
+    },
+    "Amangu": {
+      "ar": "أمانغو",
+      "kind": "t"
+    },
+    "Ngadjuri": {
+      "ar": "نغادجوري",
+      "kind": "t"
+    },
+    "Portuguese Guinea": {
+      "ar": "غينيا البرتغالية",
+      "kind": "k"
+    },
+    "Guinea-Bissau (Portugal)": {
+      "ar": "غينيا بيساو (برتغالية)",
+      "kind": "k"
+    },
+    "Chisos": {
+      "ar": "التشيسوس",
+      "kind": "t"
+    },
+    "Bidar": {
+      "ar": "بيدار",
+      "kind": "k"
+    },
+    "Venetia": {
+      "ar": "فينيتو",
+      "kind": "k"
+    },
+    "Margany": {
+      "ar": "مارغاني",
+      "kind": "t"
+    },
+    "Milan": {
+      "ar": "ميلانو",
+      "kind": "k"
+    },
+    "Guwa": {
+      "ar": "غوا",
+      "kind": "t"
+    },
+    "Bularnu": {
+      "ar": "بولارنو",
+      "kind": "t"
+    },
+    "Kurnai": {
+      "ar": "كورناي",
+      "kind": "t"
+    },
+    "Bandjigali": {
+      "ar": "باندجيغالي",
+      "kind": "t"
+    },
+    "Bundjalung": {
+      "ar": "بوندجالونغ",
+      "kind": "t"
+    },
+    "Macedonia": {
+      "ar": "مقدونيا",
+      "kind": "k"
+    },
+    "Yawarawarka": {
+      "ar": "ياواراواركا",
+      "kind": "t"
+    },
+    "Mahican": {
+      "ar": "الماهيكان",
+      "kind": "t"
+    },
+    "Banjima": {
+      "ar": "بانجيما",
+      "kind": "t"
+    },
+    "Ngamini": {
+      "ar": "نغاميني",
+      "kind": "t"
+    },
+    "Mill Creek Culture": {
+      "ar": "ثقافة ميل كريك",
+      "kind": "t"
+    },
+    "Acaxea": {
+      "ar": "الأكاشيه",
+      "kind": "t"
+    },
+    "Kurrama": {
+      "ar": "كوراما",
+      "kind": "t"
+    },
+    "Ballardong": {
+      "ar": "بالاردونغ",
+      "kind": "t"
+    },
+    "Natchez": {
+      "ar": "الناتشيز",
+      "kind": "t"
+    },
+    "Gangulu": {
+      "ar": "غانغولو",
+      "kind": "t"
+    },
+    "Wiljali": {
+      "ar": "ويلجالي",
+      "kind": "t"
+    },
+    "Equatorial Guinea": {
+      "ar": "غينيا الاستوائية",
+      "kind": "k"
+    },
+    "Naniaho": {
+      "ar": "نانياهو",
+      "kind": "t"
+    },
+    "Tuscany": {
+      "ar": "توسكانا",
+      "kind": "k"
+    },
+    "Kalkadoon": {
+      "ar": "كالكادون",
+      "kind": "t"
+    },
+    "Jawoyn": {
+      "ar": "جاوين",
+      "kind": "t"
+    },
+    "Anmatyerre": {
+      "ar": "أنماتييري",
+      "kind": "t"
+    },
+    "Sicily": {
+      "ar": "صقلية",
+      "kind": "k"
+    },
+    "Yuchi": {
+      "ar": "اليوتشي",
+      "kind": "t"
+    },
+    "Tuʻi Tonga Empire": {
+      "ar": "إمبراطورية تويتونغا",
+      "kind": "t"
+    },
+    "Chimú Empire": {
+      "ar": "إمبراطورية تشيمو",
+      "kind": "t"
+    },
+    "Yangman": {
+      "ar": "يانغمان",
+      "kind": "t"
+    },
+    "Biri": {
+      "ar": "بيري",
+      "kind": "t"
+    },
+    "Mayi-Kulan": {
+      "ar": "مايي-كولان",
+      "kind": "t"
+    },
+    "Yolngu": {
+      "ar": "يولنغو",
+      "kind": "t"
+    },
+    "Chatot": {
+      "ar": "التشاتوت",
+      "kind": "t"
+    },
+    "Ngawun": {
+      "ar": "نغاوون",
+      "kind": "t"
+    },
+    "Nhanta": {
+      "ar": "نهانتا",
+      "kind": "t"
+    },
+    "Kuku-yalanji": {
+      "ar": "كوكو-يالانجي",
+      "kind": "t"
+    },
+    "Karankawa": {
+      "ar": "الكارانكاوا",
+      "kind": "t"
+    },
+    "Ngarinman": {
+      "ar": "نغارينمان",
+      "kind": "t"
+    },
+    "Britany": {
+      "ar": "بريتاني",
+      "kind": "k"
+    },
+    "Sardinia": {
+      "ar": "سردينيا",
+      "kind": "k"
+    },
+    "Gayiri": {
+      "ar": "غاييري",
+      "kind": "t"
+    },
+    "Jingili": {
+      "ar": "جينغيلي",
+      "kind": "t"
+    },
+    "Kandy": {
+      "ar": "كاندي",
+      "kind": "k"
+    },
+    "Ngarabal": {
+      "ar": "نغارابال",
+      "kind": "t"
+    },
+    "Curonians": {
+      "ar": "الكورونيون",
+      "kind": "t"
+    },
+    "Muruwari": {
+      "ar": "موروواري",
+      "kind": "t"
+    },
+    "Lombardy": {
+      "ar": "لومبارديا",
+      "kind": "k"
+    },
+    "Worla": {
+      "ar": "وورلا",
+      "kind": "t"
+    },
+    "Chumash": {
+      "ar": "التشوماش",
+      "kind": "t"
+    },
+    "Garawa": {
+      "ar": "غاراوا",
+      "kind": "t"
+    },
+    "Guanahatabeyes": {
+      "ar": "الغواناهاتابي",
+      "kind": "t"
+    },
+    "Mandandanji": {
+      "ar": "ماندانداني",
+      "kind": "t"
+    },
+    "Yinggarda": {
+      "ar": "يينغاردا",
+      "kind": "t"
+    },
+    "Wiilman": {
+      "ar": "ويلمان",
+      "kind": "t"
+    },
+    "Mbara": {
+      "ar": "مبارا",
+      "kind": "t"
+    },
+    "Wik": {
+      "ar": "ويك",
+      "kind": "t"
+    },
+    "Kurtjar": {
+      "ar": "كورتجار",
+      "kind": "t"
+    },
+    "Waka Waka": {
+      "ar": "واكا واكا",
+      "kind": "t"
+    },
+    "Xecora": {
+      "ar": "شيكورا",
+      "kind": "t"
+    },
+    "Yuat": {
+      "ar": "يوات",
+      "kind": "t"
+    },
+    "Wambaya": {
+      "ar": "وامبايا",
+      "kind": "t"
+    },
+    "Mayi-Yapi": {
+      "ar": "مايي-يابي",
+      "kind": "t"
+    },
+    "Taungurung": {
+      "ar": "تاونغورونغ",
+      "kind": "t"
+    },
+    "Minang": {
+      "ar": "مينانغ",
+      "kind": "t"
+    },
+    "Jardwadjali": {
+      "ar": "جاردواجالي",
+      "kind": "t"
+    },
+    "Gureng Gureng": {
+      "ar": "غورينغ غورينغ",
+      "kind": "t"
+    },
+    "Kokowarra": {
+      "ar": "كوكووارا",
+      "kind": "t"
+    },
+    "Miwok": {
+      "ar": "الميووك",
+      "kind": "t"
+    },
+    "Waanyi": {
+      "ar": "واني",
+      "kind": "t"
+    },
+    "Yakima": {
+      "ar": "الياكيما",
+      "kind": "t"
+    },
+    "Goths": {
+      "ar": "القوط",
+      "kind": "k"
+    },
+    "Walapai": {
+      "ar": "الوالاباي",
+      "kind": "t"
+    },
+    "Omaha": {
+      "ar": "الأوماها",
+      "kind": "t"
+    },
+    "Ngalawangka": {
+      "ar": "نغالاوانغكا",
+      "kind": "t"
+    },
+    "Mayi-Kutuna": {
+      "ar": "مايي-كوتونا",
+      "kind": "t"
+    },
+    "Wadigali": {
+      "ar": "واديغالي",
+      "kind": "t"
+    },
+    "Doolboong/Miriwoong": {
+      "ar": "دولبونغ (ميريوونغ)",
+      "kind": "t"
+    },
+    "Conoy": {
+      "ar": "الكونوي",
+      "kind": "t"
+    },
+    "Kanara": {
+      "ar": "كنارا",
+      "kind": "k"
+    },
+    "Gumbainggir": {
+      "ar": "غومباينغير",
+      "kind": "t"
+    },
+    "Yarluyandi": {
+      "ar": "يارلوياندي",
+      "kind": "t"
+    },
+    "Mecklenburg-Schwerin": {
+      "ar": "مكلنبورغ-شفيرين",
+      "kind": "k"
+    },
+    "Kalapuya": {
+      "ar": "الكالابويا",
+      "kind": "t"
+    },
+    "Toboso": {
+      "ar": "التوبوسو",
+      "kind": "t"
+    },
+    "Bosporian Kingdom": {
+      "ar": "مملكة البوسفور",
+      "kind": "k"
+    },
+    "Dja Dja Wurrung": {
+      "ar": "دجا دجا وورونغ",
+      "kind": "t"
+    },
+    "Darumbal": {
+      "ar": "داروبال",
+      "kind": "t"
+    },
+    "Yilba": {
+      "ar": "ييلبا",
+      "kind": "t"
+    },
+    "Maya": {
+      "ar": "المايا",
+      "kind": "k"
+    },
+    "Ngandji": {
+      "ar": "نغاندجي",
+      "kind": "t"
+    },
+    "Wurundjeri": {
+      "ar": "وورونجيري",
+      "kind": "t"
+    },
+    "Swaziland": {
+      "ar": "سوازيلاند",
+      "kind": "k"
+    },
+    "Yagalingu": {
+      "ar": "ياغالينغو",
+      "kind": "t"
+    },
+    "Wardaman": {
+      "ar": "واردامان",
+      "kind": "t"
+    },
+    "Dyungungoo (Gubbi Gubbi)": {
+      "ar": "دجونغونغو (غوبي غوبي)",
+      "kind": "t"
+    },
+    "Tenimo": {
+      "ar": "تينيمو",
+      "kind": "t"
+    },
+    "Havasupai": {
+      "ar": "الهافاسوباي",
+      "kind": "t"
+    },
+    "Fox": {
+      "ar": "الفوكس",
+      "kind": "t"
+    },
+    "Maiou": {
+      "ar": "مايو",
+      "kind": "t"
+    },
+    "Kaniyang": {
+      "ar": "كانيانغ",
+      "kind": "t"
+    },
+    "Yindjibarndi": {
+      "ar": "ييندجيبارندي",
+      "kind": "t"
+    },
+    "Karenggapa": {
+      "ar": "كارينغابا",
+      "kind": "t"
+    },
+    "Yuma": {
+      "ar": "اليوما",
+      "kind": "t"
+    },
+    "Alabama": {
+      "ar": "الألاباما",
+      "kind": "t"
+    },
+    "Shuar": {
+      "ar": "الشوار",
+      "kind": "t"
+    },
+    "Danes": {
+      "ar": "الدنماركيون",
+      "kind": "k"
+    },
+    "Yangga": {
+      "ar": "يانغا",
+      "kind": "t"
+    },
+    "Thiin": {
+      "ar": "ثيين",
+      "kind": "t"
+    },
+    "Chtimacha": {
+      "ar": "التشيتيماشا",
+      "kind": "t"
+    },
+    "Aceh": {
+      "ar": "آتشيه",
+      "kind": "k"
+    },
+    "Yuin": {
+      "ar": "يوين",
+      "kind": "t"
+    },
+    "Wagiman": {
+      "ar": "واغيمان",
+      "kind": "t"
+    },
+    "Vasconia": {
+      "ar": "بلاد الباسك",
+      "kind": "k"
+    },
+    "Cayuse": {
+      "ar": "الكايوس",
+      "kind": "t"
+    },
+    "Binbinga": {
+      "ar": "بينبينغا",
+      "kind": "t"
+    },
+    "Gundungurra": {
+      "ar": "غوندونغورا",
+      "kind": "t"
+    },
+    "Nguburinji": {
+      "ar": "نغوبورينجي",
+      "kind": "t"
+    },
+    "Tecuexe": {
+      "ar": "التيكويشه",
+      "kind": "t"
+    },
+    "Spokane": {
+      "ar": "السبوكين",
+      "kind": "t"
+    },
+    "Dharug": {
+      "ar": "دهاروغ",
+      "kind": "t"
+    },
+    "Kamia": {
+      "ar": "الكاميا",
+      "kind": "t"
+    },
+    "Africa": {
+      "ar": "أفريقيا",
+      "kind": "k"
+    },
+    "Kunja": {
+      "ar": "كونجا",
+      "kind": "t"
+    },
+    "Broërec": {
+      "ar": "بروإيريك",
+      "kind": "t"
+    },
+    "Walangama": {
+      "ar": "والانغاما",
+      "kind": "t"
+    },
+    "Costanoan": {
+      "ar": "الكوستانوان",
+      "kind": "t"
+    },
+    "Tunica": {
+      "ar": "التونيكا",
+      "kind": "t"
+    },
+    "Polynesians": {
+      "ar": "البولينيزيون",
+      "kind": "k"
+    },
+    "Kawahsu": {
+      "ar": "كاواسو",
+      "kind": "t"
+    },
+    "Pirlatapa": {
+      "ar": "بيرلاتابا",
+      "kind": "t"
+    },
+    "Kalispel": {
+      "ar": "الكاليسبيل",
+      "kind": "t"
+    },
+    "Biripi": {
+      "ar": "بيريبي",
+      "kind": "t"
+    },
+    "Patwin": {
+      "ar": "الباتوين",
+      "kind": "t"
+    },
+    "Baden": {
+      "ar": "بادن",
+      "kind": "k"
+    },
+    "Arikara": {
+      "ar": "الأريكارا",
+      "kind": "t"
+    },
+    "Oto": {
+      "ar": "الأوتو",
+      "kind": "t"
+    },
+    "Nhuwala": {
+      "ar": "نهووالا",
+      "kind": "t"
+    },
+    "Goreng": {
+      "ar": "غورينغ",
+      "kind": "t"
+    },
+    "Jaitmatang": {
+      "ar": "جايتماتانغ",
+      "kind": "t"
+    },
+    "Yinhawangka": {
+      "ar": "ييناوانغكا",
+      "kind": "t"
+    },
+    "Unggumi": {
+      "ar": "أونغومي",
+      "kind": "t"
+    },
+    "Cochin": {
+      "ar": "كوتشي",
+      "kind": "k"
+    },
+    "Tharrgari": {
+      "ar": "ثارغاري",
+      "kind": "t"
+    },
+    "Yitha Yitha": {
+      "ar": "ييثا ييثا",
+      "kind": "t"
+    },
+    "Payungu": {
+      "ar": "بايونغو",
+      "kind": "t"
+    },
+    "Ganggalida": {
+      "ar": "غانغاليدا",
+      "kind": "t"
+    },
+    "Wathaurong": {
+      "ar": "واثاورونغ",
+      "kind": "t"
+    },
+    "Geawegal": {
+      "ar": "غياويغال",
+      "kind": "t"
+    },
+    "Travancore": {
+      "ar": "ترافنكور",
+      "kind": "k"
+    },
+    "Nganyaywana": {
+      "ar": "نغانيايوانا",
+      "kind": "t"
+    },
+    "Gunindiri": {
+      "ar": "غونينديري",
+      "kind": "t"
+    },
+    "Cusabo": {
+      "ar": "الكوسابو",
+      "kind": "t"
+    },
+    "Württemberg": {
+      "ar": "فورتمبيرغ",
+      "kind": "k"
+    },
+    "Irritilas": {
+      "ar": "الإيريتيلا",
+      "kind": "t"
+    },
+    "Ngarrindjeri": {
+      "ar": "نغاريندجيري",
+      "kind": "t"
+    },
+    "Yiman": {
+      "ar": "ييمان",
+      "kind": "t"
+    },
+    "Kariyarra": {
+      "ar": "كاريارا",
+      "kind": "t"
+    },
+    "Warluwarra": {
+      "ar": "وارلووارا",
+      "kind": "t"
+    },
+    "Mithaka": {
+      "ar": "ميثاكا",
+      "kind": "t"
+    },
+    "Winebago": {
+      "ar": "الوينيباغو",
+      "kind": "t"
+    },
+    "Warriyangga": {
+      "ar": "واريانغا",
+      "kind": "t"
+    },
+    "Lagunero": {
+      "ar": "اللاغونيرو",
+      "kind": "t"
+    },
+    "Cahulia": {
+      "ar": "الكاويا",
+      "kind": "t"
+    },
+    "Waveroo": {
+      "ar": "وافيرو",
+      "kind": "t"
+    },
+    "Gabalbara": {
+      "ar": "غابالبارا",
+      "kind": "t"
+    },
+    "Baraba Baraba": {
+      "ar": "بارابا بارابا",
+      "kind": "t"
+    },
+    "Jaminjung": {
+      "ar": "جامينجونغ",
+      "kind": "t"
+    },
+    "Ngunawal": {
+      "ar": "نغوناوال",
+      "kind": "t"
+    },
+    "Dumnonia": {
+      "ar": "دومنونيا",
+      "kind": "t"
+    },
+    "Mayi-Thakurti": {
+      "ar": "مايي-ثاكورتي",
+      "kind": "t"
+    },
+    "Nguri": {
+      "ar": "نغوري",
+      "kind": "t"
+    },
+    "Caxcane": {
+      "ar": "الكاشكان",
+      "kind": "t"
+    },
+    "Ngalakan": {
+      "ar": "نغالاكان",
+      "kind": "t"
+    },
+    "Dumonii": {
+      "ar": "الدومنونيون",
+      "kind": "t"
+    },
+    "Kullilla": {
+      "ar": "كوليلا",
+      "kind": "t"
+    },
+    "Thalanyji": {
+      "ar": "ثالانجي",
+      "kind": "t"
+    },
+    "Takalak": {
+      "ar": "تاكالاك",
+      "kind": "t"
+    },
+    "Miyan": {
+      "ar": "ميان",
+      "kind": "t"
+    },
+    "Gooniyandi": {
+      "ar": "غونياندي",
+      "kind": "t"
+    },
+    "Malabar": {
+      "ar": "مليبار",
+      "kind": "k"
+    },
+    "Wadjigu": {
+      "ar": "وادجيغو",
+      "kind": "t"
+    },
+    "Bidwell": {
+      "ar": "بيدويل",
+      "kind": "t"
+    },
+    "Saunan": {
+      "ar": "ساونان",
+      "kind": "t"
+    },
+    "Janabres": {
+      "ar": "الخانابريس",
+      "kind": "t"
+    },
+    "Bakanh": {
+      "ar": "باكان",
+      "kind": "t"
+    },
+    "Luiseno": {
+      "ar": "اللويسينيو",
+      "kind": "t"
+    },
+    "Budjari": {
+      "ar": "بودجاري",
+      "kind": "t"
+    },
+    "Yanga": {
+      "ar": "يانغا",
+      "kind": "t"
+    },
+    "Bibbulman": {
+      "ar": "بيبولمان",
+      "kind": "t"
+    },
+    "Ninticoy": {
+      "ar": "نينتيكوي",
+      "kind": "t"
+    },
+    "Wonnarua": {
+      "ar": "وونارووا",
+      "kind": "t"
+    },
+    "Pomo": {
+      "ar": "البومو",
+      "kind": "t"
+    },
+    "Gambia, The": {
+      "ar": "غامبيا",
+      "kind": "k"
+    },
+    "Kukatj": {
+      "ar": "كوكاتج",
+      "kind": "t"
+    },
+    "Kijkitat": {
+      "ar": "الكليكيتات",
+      "kind": "t"
+    },
+    "Pocumtuk": {
+      "ar": "البوكومتوك",
+      "kind": "t"
+    },
+    "Purduna": {
+      "ar": "بوردونا",
+      "kind": "t"
+    },
+    "Wajuk": {
+      "ar": "واجوك",
+      "kind": "t"
+    },
+    "Gunditjmara": {
+      "ar": "غونديتجمارا",
+      "kind": "t"
+    },
+    "Mara": {
+      "ar": "مارا",
+      "kind": "t"
+    },
+    "Gunu": {
+      "ar": "غونو",
+      "kind": "t"
+    },
+    "Barna": {
+      "ar": "بارنا",
+      "kind": "t"
+    },
+    "Worora": {
+      "ar": "ورورا",
+      "kind": "t"
+    },
+    "Riro": {
+      "ar": "ريرو",
+      "kind": "t"
+    },
+    "Malkana": {
+      "ar": "مالكانا",
+      "kind": "t"
+    },
+    "Modoc": {
+      "ar": "المودوك",
+      "kind": "t"
+    },
+    "Ngambri": {
+      "ar": "نغامبري",
+      "kind": "t"
+    },
+    "Madi Madi": {
+      "ar": "مادي مادي",
+      "kind": "t"
+    },
+    "Modena": {
+      "ar": "مودينا",
+      "kind": "k"
+    },
+    "Jamaica (UK)": {
+      "ar": "جامايكا (بريطانية)",
+      "kind": "k"
+    },
+    "Gungabula": {
+      "ar": "غونغابولا",
+      "kind": "t"
+    },
+    "Rembarnga": {
+      "ar": "ريمبارنغا",
+      "kind": "t"
+    },
+    "Karangpurru": {
+      "ar": "كارانغبورو",
+      "kind": "t"
+    },
+    "Boonwurrung": {
+      "ar": "بونوورونغ",
+      "kind": "t"
+    },
+    "Karajarri": {
+      "ar": "كاراجاري",
+      "kind": "t"
+    },
+    "Guanches": {
+      "ar": "الغوانش",
+      "kind": "k"
+    },
+    "Corsica": {
+      "ar": "كورسيكا",
+      "kind": "k"
+    },
+    "Garingbal": {
+      "ar": "غارينغبال",
+      "kind": "t"
+    },
+    "Yambina": {
+      "ar": "يامبينا",
+      "kind": "t"
+    },
+    "Dainggatti": {
+      "ar": "داينغاتي",
+      "kind": "t"
+    },
+    "Bilinara": {
+      "ar": "بيليناارا",
+      "kind": "t"
+    },
+    "Kokomini": {
+      "ar": "كوكوميني",
+      "kind": "t"
+    },
+    "Darkinung": {
+      "ar": "داركينونغ",
+      "kind": "t"
+    },
+    "Holstein": {
+      "ar": "هولشتاين",
+      "kind": "k"
+    },
+    "Kureinji": {
+      "ar": "كوريينجي",
+      "kind": "t"
+    },
+    "Hopie": {
+      "ar": "الهوبي",
+      "kind": "k"
+    },
+    "Kaantju": {
+      "ar": "كانتجو",
+      "kind": "t"
+    },
+    "Sambian-Nothangian culture": {
+      "ar": "ثقافة سامبيا-ناتانغيا",
+      "kind": "d"
+    },
+    "Wunambul": {
+      "ar": "وونامبول",
+      "kind": "t"
+    },
+    "Minoan": {
+      "ar": "الحضارة المينوية",
+      "kind": "k"
+    },
+    "Warray": {
+      "ar": "واراي",
+      "kind": "t"
+    },
+    "Ngalkbun": {
+      "ar": "نغالكبون",
+      "kind": "t"
+    },
+    "Wemba Wemba": {
+      "ar": "ويمبا ويمبا",
+      "kind": "t"
+    },
+    "Yalarrnga": {
+      "ar": "يالارنغا",
+      "kind": "t"
+    },
+    "Genoa": {
+      "ar": "جنوة",
+      "kind": "k"
+    },
+    "Jiwarli": {
+      "ar": "جيوارلي",
+      "kind": "t"
+    },
+    "Wuli-wuli": {
+      "ar": "وولي-وولي",
+      "kind": "t"
+    },
+    "Wappynger": {
+      "ar": "الوابينغر",
+      "kind": "t"
+    },
+    "Yorta Yorta": {
+      "ar": "يورتا يورتا",
+      "kind": "t"
+    },
+    "Kaurna Pangkarra": {
+      "ar": "كاورنا بانغكارا",
+      "kind": "t"
+    },
+    "Zuni": {
+      "ar": "الزوني",
+      "kind": "k"
+    },
+    "Delagoa Bay": {
+      "ar": "خليج ديلاغوا",
+      "kind": "k"
+    },
+    "Wangan": {
+      "ar": "وانغان",
+      "kind": "t"
+    },
+    "Djabwurung": {
+      "ar": "دجابوورونغ",
+      "kind": "t"
+    },
+    "Umatilla": {
+      "ar": "الأوماتيلا",
+      "kind": "t"
+    },
+    "Gunwinggu": {
+      "ar": "غونوينغو",
+      "kind": "t"
+    },
+    "Anggamudi": {
+      "ar": "أنغامودي",
+      "kind": "t"
+    },
+    "Latje Latje": {
+      "ar": "لاتجي لاتجي",
+      "kind": "t"
+    },
+    "Djirbalngan": {
+      "ar": "دجيربالنغان",
+      "kind": "t"
+    },
+    "Pewa": {
+      "ar": "بيوا",
+      "kind": "t"
+    },
+    "Baradha": {
+      "ar": "بارادها",
+      "kind": "t"
+    },
+    "Dangbon": {
+      "ar": "دانغبون",
+      "kind": "t"
+    },
+    "Otomies": {
+      "ar": "الأوتومي",
+      "kind": "k"
+    },
+    "Yanda": {
+      "ar": "ياندا",
+      "kind": "t"
+    },
+    "Kungarakany": {
+      "ar": "كونغاراكاني",
+      "kind": "t"
+    },
+    "Narangga": {
+      "ar": "نارانغا",
+      "kind": "t"
+    },
+    "Kwini": {
+      "ar": "كويني",
+      "kind": "t"
+    },
+    "Worimi": {
+      "ar": "وريمي",
+      "kind": "t"
+    },
+    "Jurruru": {
+      "ar": "جورورو",
+      "kind": "t"
+    },
+    "Buandig": {
+      "ar": "بوانديغ",
+      "kind": "t"
+    },
+    "Yugambeh": {
+      "ar": "يوغامبيه",
+      "kind": "t"
+    },
+    "Parma": {
+      "ar": "بارما",
+      "kind": "k"
+    },
+    "Apalachee": {
+      "ar": "الأبالاتشي",
+      "kind": "t"
+    },
+    "Guwinmal": {
+      "ar": "غووينمال",
+      "kind": "t"
+    },
+    "Gooty": {
+      "ar": "غوتي",
+      "kind": "t"
+    },
+    "Ngan’giwumirri": {
+      "ar": "نغانغيوميري",
+      "kind": "t"
+    },
+    "Nukunu": {
+      "ar": "نوكونو",
+      "kind": "t"
+    },
+    "Kadjerong": {
+      "ar": "كادجيرونغ",
+      "kind": "t"
+    },
+    "Wandjiwalgu": {
+      "ar": "واندجيوالغو",
+      "kind": "t"
+    },
+    "Punuba": {
+      "ar": "بونوبا",
+      "kind": "t"
+    },
+    "Pisones": {
+      "ar": "البيسونيس",
+      "kind": "t"
+    },
+    "Nari Nari": {
+      "ar": "ناري ناري",
+      "kind": "t"
+    },
+    "Pinikura": {
+      "ar": "بينيكورا",
+      "kind": "t"
+    },
+    "Houma": {
+      "ar": "الهوما",
+      "kind": "t"
+    },
+    "Koknar": {
+      "ar": "كوكنار",
+      "kind": "t"
+    },
+    "Bindjali": {
+      "ar": "بيندجالي",
+      "kind": "t"
+    },
+    "Nimanburu": {
+      "ar": "نيمانبورو",
+      "kind": "t"
+    },
+    "Kuril Islands": {
+      "ar": "جزر الكوريل",
+      "kind": "k"
+    },
+    "Luthigh": {
+      "ar": "لوثيغ",
+      "kind": "t"
+    },
+    "Tharawal": {
+      "ar": "ثاراوال",
+      "kind": "t"
+    },
+    "Nyawaygi": {
+      "ar": "نياوايغي",
+      "kind": "t"
+    },
+    "Ngandi": {
+      "ar": "نغاندي",
+      "kind": "t"
+    },
+    "Mangarayi": {
+      "ar": "مانغاراي",
+      "kind": "t"
+    },
+    "Yanyuwa": {
+      "ar": "يانيووا",
+      "kind": "t"
+    },
+    "Wadi Wadi": {
+      "ar": "وادي وادي",
+      "kind": "t"
+    },
+    "Wuningangk": {
+      "ar": "وونينغانغك",
+      "kind": "t"
+    },
+    "Karangura": {
+      "ar": "كارانغورا",
+      "kind": "t"
+    },
+    "Mandan": {
+      "ar": "الماندان",
+      "kind": "t"
+    },
+    "Guugu-Yimidhirr": {
+      "ar": "غوغو-ييميديير",
+      "kind": "t"
+    },
+    "Ngarluma": {
+      "ar": "نغارلوما",
+      "kind": "t"
+    },
+    "Ngurraiillam": {
+      "ar": "نغوراييلام",
+      "kind": "t"
+    },
+    "Lamalama": {
+      "ar": "لامالاما",
+      "kind": "t"
+    },
+    "Trinidad": {
+      "ar": "ترينيداد",
+      "kind": "k"
+    },
+    "Oldenburg": {
+      "ar": "أولدنبورغ",
+      "kind": "k"
+    },
+    "Madras": {
+      "ar": "مدراس",
+      "kind": "k"
+    },
+    "Martuthunira": {
+      "ar": "مارتوثونيرا",
+      "kind": "t"
+    },
+    "Barranbinya": {
+      "ar": "بارانبينيا",
+      "kind": "t"
+    },
+    "Nunggubuyu": {
+      "ar": "نونغوبويو",
+      "kind": "t"
+    },
+    "Giraiwurung": {
+      "ar": "غيرايوورونغ",
+      "kind": "t"
+    },
+    "Warwa": {
+      "ar": "واروا",
+      "kind": "t"
+    },
+    "Malak malak": {
+      "ar": "مالاك مالاك",
+      "kind": "t"
+    },
+    "Yawuru": {
+      "ar": "ياوورو",
+      "kind": "t"
+    },
+    "Ngaliwuru": {
+      "ar": "نغاليوورو",
+      "kind": "t"
+    },
+    "Republic of the Seven Zenden": {
+      "ar": "جمهورية الزندن السبعة",
+      "kind": "k"
+    },
+    "Limilngan": {
+      "ar": "ليميلنغان",
+      "kind": "t"
+    },
+    "Tano": {
+      "ar": "التانو",
+      "kind": "t"
+    },
+    "Peramangk": {
+      "ar": "بيرامانغك",
+      "kind": "t"
+    },
+    "Woolna": {
+      "ar": "وولنا",
+      "kind": "t"
+    },
+    "Miwa": {
+      "ar": "ميوا",
+      "kind": "t"
+    },
+    "Cycladic": {
+      "ar": "الحضارة السيكلادية",
+      "kind": "k"
+    },
+    "Yuggera": {
+      "ar": "يوغيرا",
+      "kind": "t"
+    },
+    "Ngumbarl": {
+      "ar": "نغومبارل",
+      "kind": "t"
+    },
+    "Wardandi": {
+      "ar": "واردندي",
+      "kind": "t"
+    },
+    "Massachusett": {
+      "ar": "الماساتشوست",
+      "kind": "t"
+    },
+    "Tancalba": {
+      "ar": "تانكالبا",
+      "kind": "t"
+    },
+    "Turkish Cypriot-administered area": {
+      "ar": "المنطقة الخاضعة للإدارة القبرصية التركية",
+      "kind": "k"
+    },
+    "Nungali": {
+      "ar": "نونغالي",
+      "kind": "t"
+    },
+    "Wargamaygan": {
+      "ar": "وارغامايغان",
+      "kind": "t"
+    },
+    "Gamberre": {
+      "ar": "غاميري",
+      "kind": "t"
+    },
+    "Larrakia": {
+      "ar": "لاراكيا",
+      "kind": "t"
+    },
+    "Montana": {
+      "ar": "مونتانا",
+      "kind": "t"
+    },
+    "Murrinh-patha": {
+      "ar": "مورين-باثا",
+      "kind": "t"
+    },
+    "Mpalitjanh": {
+      "ar": "مباليتجان",
+      "kind": "t"
+    },
+    "Arawaks": {
+      "ar": "الأراواك",
+      "kind": "k"
+    },
+    "Thaayorre": {
+      "ar": "ثايوري",
+      "kind": "t"
+    },
+    "Ngarla": {
+      "ar": "نغارلا",
+      "kind": "t"
+    },
+    "Gulidjan": {
+      "ar": "غوليدجان",
+      "kind": "t"
+    },
+    "Umida": {
+      "ar": "أوميدا",
+      "kind": "t"
+    },
+    "Guta": {
+      "ar": "غوتا",
+      "kind": "t"
+    },
+    "Yuwi": {
+      "ar": "يووي",
+      "kind": "t"
+    },
+    "Thuringia": {
+      "ar": "تورينغن",
+      "kind": "k"
+    },
+    "Winda Winda": {
+      "ar": "ويندا ويندا",
+      "kind": "t"
+    },
+    "Jabirrjabirr": {
+      "ar": "جابيرجابير",
+      "kind": "t"
+    },
+    "Gadubanud": {
+      "ar": "غادوبانود",
+      "kind": "t"
+    },
+    "Anhalt": {
+      "ar": "أنهالت",
+      "kind": "k"
+    },
+    "Yiiji": {
+      "ar": "ييجي",
+      "kind": "t"
+    },
+    "Djabuganjdji": {
+      "ar": "دجابوغانجدجي",
+      "kind": "t"
+    },
+    "Bayali": {
+      "ar": "بايالي",
+      "kind": "t"
+    },
+    "Thul Garrie Waja (Bindal)": {
+      "ar": "ثول غاري واجا (بيندال)",
+      "kind": "t"
+    },
+    "Djargurdwurung": {
+      "ar": "دجارغوردوورونغ",
+      "kind": "t"
+    },
+    "Yinwum": {
+      "ar": "يينووم",
+      "kind": "t"
+    },
+    "Giya": {
+      "ar": "غيا",
+      "kind": "t"
+    },
+    "Biloxi": {
+      "ar": "البيلوكسي",
+      "kind": "t"
+    },
+    "Iwaidja": {
+      "ar": "إوايدجا",
+      "kind": "t"
+    },
+    "Mutumui": {
+      "ar": "موتوموي",
+      "kind": "t"
+    },
+    "Guringai": {
+      "ar": "غورينغاي",
+      "kind": "t"
+    },
+    "Saar Protectorate": {
+      "ar": "محمية السار",
+      "kind": "k"
+    },
+    "Kuuku-ya’u": {
+      "ar": "كوكو-ياو",
+      "kind": "t"
+    },
+    "Maratines": {
+      "ar": "الماراتين",
+      "kind": "t"
+    },
+    "Amarak": {
+      "ar": "أماراك",
+      "kind": "t"
+    },
+    "Badtjala": {
+      "ar": "بادتجالا",
+      "kind": "t"
+    },
+    "Unggarangi": {
+      "ar": "أونغارانغي",
+      "kind": "t"
+    },
+    "Wuthathi": {
+      "ar": "ووثاثي",
+      "kind": "t"
+    },
+    "Marrithiyel": {
+      "ar": "ماريثيل",
+      "kind": "t"
+    },
+    "Pinjarup": {
+      "ar": "بينجاروب",
+      "kind": "t"
+    },
+    "Jukun": {
+      "ar": "الجوكون",
+      "kind": "t"
+    },
+    "Gagudju": {
+      "ar": "غاغودجو",
+      "kind": "t"
+    },
+    "Koko-bera": {
+      "ar": "كوكو-بيرا",
+      "kind": "t"
+    },
+    "Wulgurukaba": {
+      "ar": "وولغوروكابا",
+      "kind": "t"
+    },
+    "Awabakal": {
+      "ar": "أواباكال",
+      "kind": "t"
+    },
+    "Guadeloupe": {
+      "ar": "غوادلوب",
+      "kind": "k"
+    },
+    "Thompson": {
+      "ar": "الثومبسون (نلاكابموكس)",
+      "kind": "t"
+    },
+    "Kundjey’mi": {
+      "ar": "كوندجيمي",
+      "kind": "t"
+    },
+    "Anguthimri": {
+      "ar": "أنغوثيمري",
+      "kind": "t"
+    },
+    "Lucca": {
+      "ar": "لوكا",
+      "kind": "k"
+    },
+    "Mbeiwum": {
+      "ar": "مبيووم",
+      "kind": "t"
+    },
+    "Goa": {
+      "ar": "غوا",
+      "kind": "k"
+    },
+    "Mbabaram": {
+      "ar": "مبابارام",
+      "kind": "t"
+    },
+    "Hanover": {
+      "ar": "هانوفر",
+      "kind": "k"
+    },
+    "Nyul Nyul": {
+      "ar": "نيول نيول",
+      "kind": "t"
+    },
+    "Mingin": {
+      "ar": "مينغين",
+      "kind": "t"
+    },
+    "Lake Vygozero": {
+      "ar": "بحيرة فيغوزيرو",
+      "kind": "k"
+    },
+    "Marringarr": {
+      "ar": "مارينغار",
+      "kind": "t"
+    },
+    "Konbudj": {
+      "ar": "كونبودج",
+      "kind": "t"
+    },
+    "Yidinjdji": {
+      "ar": "ييديندجي",
+      "kind": "t"
+    },
+    "Lippe-Detmold": {
+      "ar": "ليبه-ديتمولد",
+      "kind": "k"
+    },
+    "Uutaalnganu": {
+      "ar": "أوتالنغانو",
+      "kind": "t"
+    },
+    "Brunswick": {
+      "ar": "براونشفايغ",
+      "kind": "k"
+    },
+    "Dadi Dadi": {
+      "ar": "دادي دادي",
+      "kind": "t"
+    },
+    "Mbukarla": {
+      "ar": "مبوكارلا",
+      "kind": "t"
+    },
+    "Awngthim": {
+      "ar": "أونغثيم",
+      "kind": "t"
+    },
+    "Kuthant": {
+      "ar": "كوثانت",
+      "kind": "t"
+    },
+    "Ngombur": {
+      "ar": "نغومبور",
+      "kind": "t"
+    },
+    "Martinique": {
+      "ar": "مارتينيك",
+      "kind": "k"
+    },
+    "Martinique (France)": {
+      "ar": "مارتينيك (فرنسية)",
+      "kind": "k"
+    },
+    "Yuru": {
+      "ar": "يورو",
+      "kind": "t"
+    },
+    "Yadhaigana": {
+      "ar": "يادهايغانا",
+      "kind": "t"
+    },
+    "Waldeck": {
+      "ar": "فالديك",
+      "kind": "k"
+    },
+    "Lake Segozerskoye": {
+      "ar": "بحيرة سيغوزيرو",
+      "kind": "k"
+    },
+    "Umbindhamu": {
+      "ar": "أومبيندهامو",
+      "kind": "t"
+    },
+    "Netherlands Antilles": {
+      "ar": "جزر الأنتيل الهولندية",
+      "kind": "k"
+    },
+    "Kuuku-yani": {
+      "ar": "كوكو-ياني",
+      "kind": "t"
+    },
+    "Eora": {
+      "ar": "إيورا",
+      "kind": "t"
+    },
+    "Maranunggu": {
+      "ar": "مارانونغو",
+      "kind": "t"
+    },
+    "Ngan’gikurunggurr": {
+      "ar": "نغانغيكورونغور",
+      "kind": "t"
+    },
+    "Umpila": {
+      "ar": "أومبيلا",
+      "kind": "t"
+    },
+    "Pontremoli": {
+      "ar": "بونتريمولي",
+      "kind": "k"
+    },
+    "Turrbal": {
+      "ar": "توربال",
+      "kind": "t"
+    },
+    "Gunbalang": {
+      "ar": "غونبالانغ",
+      "kind": "t"
+    },
+    "Gungurugoni": {
+      "ar": "غونغوروغوني",
+      "kind": "t"
+    },
+    "Teppathiggi": {
+      "ar": "تيباثيغي",
+      "kind": "t"
+    },
+    "Antigua and Barbuda": {
+      "ar": "أنتيغوا وباربودا",
+      "kind": "k"
+    },
+    "Hohenzollern": {
+      "ar": "هوهنتسولرن",
+      "kind": "k"
+    },
+    "Maung": {
+      "ar": "ماونغ",
+      "kind": "t"
+    },
+    "Siam": {
+      "ar": "سيام",
+      "kind": "k"
+    },
+    "Turks and Caicos Islands": {
+      "ar": "جزر تركس وكايكوس",
+      "kind": "k"
+    },
+    "Bukurnidja": {
+      "ar": "بوكورنيدجا",
+      "kind": "t"
+    },
+    "Marramaninjsji": {
+      "ar": "مارامانينجسجي",
+      "kind": "t"
+    },
+    "Gunibidji": {
+      "ar": "غونيبيدجي",
+      "kind": "t"
+    },
+    "Saint Vincent and the Grenadines": {
+      "ar": "سانت فنسنت والغرينادين",
+      "kind": "k"
+    },
+    "United States Virgin Islands": {
+      "ar": "جزر العذراء الأمريكية",
+      "kind": "k"
+    },
+    "Kuwema": {
+      "ar": "كويما",
+      "kind": "t"
+    },
+    "Saint Kitts and Nevis": {
+      "ar": "سانت كيتس ونيفيس",
+      "kind": "k"
+    },
+    "Hamburg": {
+      "ar": "هامبورغ",
+      "kind": "k"
+    },
+    "Bardi": {
+      "ar": "باردي",
+      "kind": "t"
+    },
+    "Massa": {
+      "ar": "ماسا",
+      "kind": "k"
+    },
+    "Rapa Nui": {
+      "ar": "رابا نوي",
+      "kind": "k"
+    },
+    "Lübeck": {
+      "ar": "لوبيك",
+      "kind": "k"
+    },
+    "Wallis and Futuna Islands": {
+      "ar": "جزر واليس وفوتونا",
+      "kind": "k"
+    },
+    "Yir Yoront": {
+      "ar": "يير يورونت",
+      "kind": "t"
+    },
+    "Fivizzano": {
+      "ar": "فيفيتسانو",
+      "kind": "k"
+    },
+    "Schaumburg-Lippe": {
+      "ar": "شاومبورغ-ليبه",
+      "kind": "k"
+    },
+    "Burarra": {
+      "ar": "بورارا",
+      "kind": "t"
+    },
+    "Bremen": {
+      "ar": "بريمن",
+      "kind": "k"
+    },
+    "Yupangathi": {
+      "ar": "يوبانغاثي",
+      "kind": "t"
+    },
+    "Nakara": {
+      "ar": "ناكارا",
+      "kind": "t"
+    },
+    "Tjerratj": {
+      "ar": "تجيراتج",
+      "kind": "t"
+    },
+    "Saint Martin": {
+      "ar": "سان مارتن",
+      "kind": "k"
+    },
+    "Saint Barthelemy": {
+      "ar": "سان بارتيلمي",
+      "kind": "k"
+    },
+    "Tjungundji": {
+      "ar": "تجونغوندجي",
+      "kind": "t"
+    },
+    "Gananggalinda": {
+      "ar": "غانانغاليندا",
+      "kind": "t"
+    },
+    "Cuxhaven": {
+      "ar": "كوكسهافن",
+      "kind": "k"
+    },
+    "Jaburrara": {
+      "ar": "جابورارا",
+      "kind": "t"
+    },
+    "Athabascan": {
+      "ar": "الأثاباسكيون",
+      "kind": "k"
     }
   }
 }
