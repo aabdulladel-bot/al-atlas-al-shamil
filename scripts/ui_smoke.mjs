@@ -262,6 +262,8 @@ try {
     await page.click("#card [data-rplay]");
     if (await page.evaluate(() => playTimer !== null)) problems.push(`[${name}] العرض الزمني للمنطقة لم يتوقف`);
     await settle();
+    // على الجوال يختفي الشريط والبطاقة مفتوحة (مكان الورقة السفلية)، فتُغلق أولاً كما يفعل القارئ
+    await page.click("#card .card-close"); await page.waitForTimeout(300);
     await page.click('#rail button[data-region="world"]'); await page.waitForTimeout(800); await settle();
     await togglePanel(true);
     step = `${name}: العالم في هذه الحقبة`;
