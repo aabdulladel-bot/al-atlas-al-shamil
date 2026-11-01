@@ -199,7 +199,7 @@ const LAYER_GROUPS = {
   borders: ["borders-prev-fill", "borders-prev-line", "borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-highlight"],
   peoples: ["peoples-fill", "peoples-line"],
   places: ["places"],
-  claims: ["claim-points"],
+  claims: ["claim-halo", "claim-points"],
   demography: ["demography"],
   lights: ["lights"],
   labels: [], // أسماء الدول: عناصر HTML لا طبقات خريطة، تُدار في updateLabels
@@ -210,7 +210,10 @@ const userOff = new Set(["demography", "lights"]); // السكان وأضواء 
 function setVis(id, on) {
   wanted.set(id, on);
   if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", on && !userOff.has(groupOf(id)) ? "visible" : "none");
+  scheduleLegend();
 }
+// هل تظهر مجموعة طبقات على الخريطة الآن: طلبها قسم ولم يطفئها القارئ، وطبقتها موجودة
+const groupShown = (g) => !userOff.has(g) && LAYER_GROUPS[g].some((id) => wanted.get(id) && map.getLayer(id));
 // التضخيم التلقائي: قوي على مستوى القارات حيث الجبال لا تُرى بمقياسها، وخفيف عند الاقتراب من الأرض
 const autoExaggeration = (z) => Math.round(Math.max(1.5, Math.min(15, 15 * Math.pow(0.6, z - 3))) * 2) / 2;
 const terrainState = { on: true, auto: true, exaggeration: autoExaggeration(3) };
@@ -1002,7 +1005,7 @@ async function loadPlaces(era) {
   try { data = await placesCache.get(era.file); } catch (err) { placesCache.delete(era.file); countEl.textContent = `تعذّر تحميل المواقع: ${err.message}`; return null; }
   placesData = data;
   const matched = data._meta?.matched ?? "";
-  warnEl.textContent = matched ? `طابق Pleiades: ${matched}. المواقع التقديرية بلون أفتح.` : "";
+  warnEl.textContent = matched ? `طابق Pleiades: ${matched}. المواقع التقديرية بمعيّن مفرّغ.` : "";
   countEl.textContent = `عدد المواقع: ${data.features.length}`;
   setLayerCount("places", `المواقع: ${fmtInt(data.features.length)}`);
   const source = map.getSource("places");
@@ -1010,21 +1013,44 @@ async function loadPlaces(era) {
     source.setData(data);
   } else {
     map.addSource("places", { type: "geojson", data });
+    ensurePlaceIcons();
     map.addLayer({
       id: "places",
-      type: "circle",
+      type: "symbol",
       source: "places",
-      paint: {
-        "circle-radius": ["interpolate", ["linear"], ["zoom"], 2, 4, 6, 7],
-        "circle-color": ["match", ["get", "coord_status"], "approximate", "#b59a7a", "#8a4b2a"],
-        "circle-stroke-color": "#fffdf8",
-        "circle-stroke-width": 1.8,
+      layout: {
+        "icon-image": ["concat", "pl-", PLACE_KIND_EXPR],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 2, 0.62, 6, 1],
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true,
       },
-    }, map.getLayer("demography") ? "demography" : map.getLayer("claim-points") ? "claim-points" : undefined);
+    }, map.getLayer("demography") ? "demography" : map.getLayer("claim-halo") ? "claim-halo" : undefined);
     pointerOn("places");
   }
   setVis("places", true);
   return data;
+}
+// رمز الموقع بحسب نوعه من مصدر إحداثياته: موقع تاريخي في Pleiades (معيّن)، أو تقديري (معيّن مفرّغ)، أو مدينة قائمة اليوم
+// من Natural Earth أو ويكي بيانات (دائرة بمركز). النوع من البيانات نفسها لا تصنيف يدوي.
+const placeKind = (status) => (status === "approximate" ? "approx" : status === "pleiades-representative" ? "site" : "city");
+const PLACE_KIND_EXPR = ["match", ["get", "coord_status"], "approximate", "approx", "pleiades-representative", "site", "city"];
+const PLACE_KIND_LABEL = { site: "موقع تاريخي (Pleiades)", approx: "موقع تقديري الإحداثيات", city: "مدينة قائمة اليوم" };
+function ensurePlaceIcons() {
+  const draw = (name, fn) => {
+    if (map.hasImage(`pl-${name}`)) return;
+    const c = document.createElement("canvas");
+    c.width = c.height = 36;
+    const g = c.getContext("2d");
+    fn(g);
+    map.addImage(`pl-${name}`, g.getImageData(0, 0, 36, 36), { pixelRatio: 2 });
+  };
+  const diamond = (g) => { g.beginPath(); g.moveTo(18, 4); g.lineTo(32, 18); g.lineTo(18, 32); g.lineTo(4, 18); g.closePath(); };
+  draw("site", (g) => { diamond(g); g.fillStyle = "#8a4b2a"; g.fill(); g.lineWidth = 4; g.strokeStyle = "#fffdf8"; g.stroke(); });
+  draw("approx", (g) => { diamond(g); g.fillStyle = "rgba(255, 253, 248, 0.82)"; g.fill(); g.setLineDash([5, 3]); g.lineWidth = 3.5; g.strokeStyle = "#8a4b2a"; g.stroke(); });
+  draw("city", (g) => {
+    g.beginPath(); g.arc(18, 18, 12, 0, 2 * Math.PI); g.fillStyle = "#fffdf8"; g.fill(); g.lineWidth = 4; g.strokeStyle = "#2f4b7c"; g.stroke();
+    g.beginPath(); g.arc(18, 18, 4.5, 0, 2 * Math.PI); g.fillStyle = "#2f4b7c"; g.fill();
+  });
 }
 // الحقبة من أزرارها: زمنها، ثم تقريب إلى مواقعها
 async function loadEra(era) {
@@ -1147,7 +1173,7 @@ async function loadDemography(key, { fit = true } = {}) {
         "fill-extrusion-base": 0,
         "fill-extrusion-opacity": 0.88,
       },
-    }, map.getLayer("claim-points") ? "claim-points" : undefined);
+    }, map.getLayer("claim-halo") ? "claim-halo" : undefined);
     pointerOn("demography");
   }
   setVis("demography", true);
@@ -1197,46 +1223,92 @@ const claimMapBtn = document.getElementById("claim-map-btn");
 let claimPoints = null;
 let claimPointsReady = null;
 // ما يُعرض من أماكن الادعاءات: ادعاءات حقبة الزمن الحالي، إلا إذا اختارت سُنّة أو رحلة أو زرّ «كلها» غير ذلك
-const claimView = { override: false, filter: null };
+const claimView = { override: false, filter: null, sunna: null };
+// دور كل ادعاء في السنن: claimId ← { sup: [معرّفات السنن التي يؤيدها], lim: [التي يقيّدها] }، من data/sunan.json
+const claimSunnaRoles = new Map();
+let sunanReady = null;
 
 function ensureClaimPoints() {
   claimPointsReady ??= (async () => {
     try { claimPoints = await getJson("data/claim_points.geojson"); } catch { claimPointsReady = null; return false; }
-    // حقب ادعاءات كل مكان، ليُصفّى بها بحسب الزمن
-    for (const f of claimPoints.features) f.properties.eras = `,${[...new Set(JSON.parse(f.properties.claims).map((c) => c.era))].join(",")},`;
+    await loadSunan(); // أدوار الادعاءات في السنن قبل تلوين أماكنها
+    // حقب ادعاءات كل مكان، ليُصفّى بها بحسب الزمن، والسنن التي تؤيدها ادعاؤه أو تقيّدها، ليُلوَّن بدوره في السُّنّة المختارة
+    for (const f of claimPoints.features) {
+      const cs = JSON.parse(f.properties.claims);
+      f.properties.eras = `,${[...new Set(cs.map((c) => c.era))].join(",")},`;
+      const roles = cs.map((c) => claimSunnaRoles.get(c.id) ?? { sup: [], lim: [] });
+      f.properties.sup = `,${[...new Set(roles.flatMap((r) => r.sup))].join(",")},`;
+      f.properties.lim = `,${[...new Set(roles.flatMap((r) => r.lim))].join(",")},`;
+    }
     map.addSource("claim-points", { type: "geojson", data: claimPoints });
+    const radius = ["+", 8, ["*", 1.8, ["get", "count"]]];
+    // هالة تنبض حول أماكن الشواهد لتُميَّز عن المواقع؛ ساكنة لمن يفضّل تقليل الحركة
+    map.addLayer({ id: "claim-halo", type: "circle", source: "claim-points", layout: { visibility: "none" }, paint: { "circle-radius": ["+", radius, 4], "circle-color": cssVar("--evidence"), "circle-opacity": reduceMotion ? 0.22 : 0.4, "circle-blur": 0.35 } });
     map.addLayer({
       id: "claim-points",
       type: "circle",
       source: "claim-points",
       layout: { visibility: "none" },
       paint: {
-        "circle-radius": ["+", 8, ["*", 1.8, ["get", "count"]]],
+        "circle-radius": radius,
         "circle-color": cssVar("--evidence"),
-        "circle-opacity": 0.78,
+        "circle-opacity": 0.82,
         "circle-stroke-color": "#fffdf8",
         "circle-stroke-width": 2,
       },
     });
     pointerOn("claim-points");
+    if (!reduceMotion) pulseClaims(radius);
     return true;
   })();
   return claimPointsReady;
 }
+// النبض: تتسع الهالة وتخفت ثم تعود، بانتقالات MapLibre نفسها لا بإطار كل لحظة، وتتوقف والصفحة مخفية
+function pulseClaims(radius) {
+  const big = ["+", radius, 16], small = ["+", radius, 3];
+  setInterval(() => {
+    if (document.hidden || map.getLayoutProperty("claim-halo", "visibility") !== "visible") return;
+    map.setPaintProperty("claim-halo", "circle-radius-transition", { duration: 0, delay: 0 });
+    map.setPaintProperty("claim-halo", "circle-opacity-transition", { duration: 0, delay: 0 });
+    map.setPaintProperty("claim-halo", "circle-radius", small);
+    map.setPaintProperty("claim-halo", "circle-opacity", 0.45);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      map.setPaintProperty("claim-halo", "circle-radius-transition", { duration: 1500, delay: 0 });
+      map.setPaintProperty("claim-halo", "circle-opacity-transition", { duration: 1500, delay: 0 });
+      map.setPaintProperty("claim-halo", "circle-radius", big);
+      map.setPaintProperty("claim-halo", "circle-opacity", 0);
+    }));
+  }, 2200);
+}
+// لون مكان الشاهد: محايد في عرض الحقبة، وفي السُّنّة المختارة (أو رحلتها) بدوره فيها: مؤيد، أو مقيِّد، أو الاثنان معاً
+// (تعبئة المؤيد وحلقة المقيِّد)، لأن المكان الواحد قد يحمل ادعاءات بدورين
+function claimRolePaint(sunna) {
+  const ev = cssVar("--evidence"), lim = cssVar("--limit");
+  if (!sunna) return { color: ev, stroke: "#fffdf8", width: 2 };
+  const S = ["in", `,${sunna},`, ["get", "sup"]], L = ["in", `,${sunna},`, ["get", "lim"]];
+  return { color: ["case", S, ev, L, lim, ev], stroke: ["case", ["all", S, L], lim, "#fffdf8"], width: ["case", ["all", S, L], 4, 2] };
+}
 const eraClaimFilter = () => ["in", `,${eraOf(time.key ?? "modern").id},`, ["get", "eras"]];
 function applyClaimView() {
   if (!map.getLayer("claim-points")) return;
-  map.setFilter("claim-points", claimView.override ? claimView.filter : eraClaimFilter());
-  setVis("claim-points", true);
+  const filter = claimView.override ? claimView.filter : eraClaimFilter();
+  for (const id of LAYER_GROUPS.claims) map.setFilter(id, filter);
+  const paint = claimRolePaint(claimView.override ? claimView.sunna : null);
+  map.setPaintProperty("claim-points", "circle-color", paint.color);
+  map.setPaintProperty("claim-points", "circle-stroke-color", paint.stroke);
+  map.setPaintProperty("claim-points", "circle-stroke-width", paint.width);
+  map.setPaintProperty("claim-halo", "circle-color", paint.color);
+  for (const id of LAYER_GROUPS.claims) setVis(id, true);
   if (claimView.override) { setLayerCount("claims", claimView.filter ? "مختارة" : "كلها"); return; }
   const id = `,${eraOf(time.key ?? "modern").id},`;
   const n = claimPoints.features.filter((f) => f.properties.eras.includes(id)).length;
   setLayerCount("claims", n ? `الأماكن في الحقبة: ${fmtInt(n)}` : "لا أماكن في هذه الحقبة");
 }
-// show=false يعيد العرض إلى ادعاءات الحقبة الحالية
-function showClaimPoints(show, filter = null) {
+// show=false يعيد العرض إلى ادعاءات الحقبة الحالية. وsunna تلوّن الأماكن بدورها في تلك السُّنّة
+function showClaimPoints(show, filter = null, sunna = null) {
   claimView.override = show;
   claimView.filter = show ? filter : null;
+  claimView.sunna = show ? sunna : null;
   applyClaimView();
   claimMapBtn.setAttribute("aria-pressed", String(show && !filter));
 }
@@ -1247,6 +1319,43 @@ claimMapBtn.addEventListener("click", async () => {
   showClaimPoints(show);
   if (show) fitTo(claimPoints.features, 4);
 });
+
+// ---------- المفتاح الحيّ ----------
+// صفوف للطبقات الظاهرة على الخريطة الآن فقط، بالرمز المرسوم عليها. أنواع المواقع من مواقع الحقبة المحمّلة، وأدوار
+// الشواهد لا تظهر إلا حين تختار سُنّة أو رحلة، لأن عرض الحقبة يلوّنها لوناً واحداً.
+const legendEl = document.getElementById("legend");
+const legendBody = document.getElementById("legend-body");
+const legendToggle = document.getElementById("legend-toggle");
+try { if (localStorage.getItem("atlas-legend") === "closed" || (localStorage.getItem("atlas-legend") === null && matchMedia("(max-width: 600px)").matches)) legendToggle.setAttribute("aria-expanded", "false"); } catch {}
+legendToggle.addEventListener("click", () => {
+  const open = legendToggle.getAttribute("aria-expanded") !== "true";
+  legendToggle.setAttribute("aria-expanded", String(open));
+  try { localStorage.setItem("atlas-legend", open ? "open" : "closed"); } catch {}
+});
+function scheduleLegend() {
+  if (scheduleLegend.queued) return;
+  scheduleLegend.queued = true;
+  // بعد المهمة الجارية لا في الإطار التالي: يُجمع ما تغيّر معاً ولا يتأخر المفتاح ببطء الرسم
+  queueMicrotask(() => { scheduleLegend.queued = false; renderLegend(); });
+}
+function renderLegend() {
+  const row = (sw, text, sub = "") => `<div class="lg-row"><i class="lg-sw lg-${sw}"></i><span>${text}${sub ? ` <span class="sub">${sub}</span>` : ""}</span></div>`;
+  const rows = [];
+  if (groupShown("borders")) rows.push(row("borders", "دول وكيانات", "لون ثابت لكل كيان عبر الزمن"), row("approx", "حد تقريبي", "منطقة لا خط"));
+  if (groupShown("peoples")) rows.push(row("peoples", "شعوب وقبائل", "انتماء لا سيادة"));
+  if (groupShown("places") && placesData) {
+    const kinds = new Set(placesData.features.map((f) => placeKind(f.properties.coord_status)));
+    for (const k of ["site", "approx", "city"]) if (kinds.has(k)) rows.push(row(k === "approx" ? "approxsite" : k, PLACE_KIND_LABEL[k]));
+  }
+  if (groupShown("claims")) {
+    if (claimView.override && claimView.sunna) rows.push(row("ev", "شاهد مؤيد للسُّنّة"), row("lim", "شاهد مقيِّد لها"), row("both", "مكان فيه الدوران"));
+    else rows.push(row("ev", "مكان شاهد موثّق", "الحجم بعدد شواهده"));
+  }
+  if (groupShown("demography")) rows.push(row("demo", "السكان", "ارتفاع العمود بالجذر التربيعي للعدد"));
+  if (groupShown("lights")) rows.push(row("lights", "أضواء الليل اليوم", "NASA Black Marble"));
+  legendEl.hidden = rows.length === 0;
+  legendBody.innerHTML = rows.join("");
+}
 
 // ---------- السنن ----------
 const sunanListEl = document.getElementById("sunan-list");
@@ -1275,7 +1384,7 @@ function renderSunna(s, placesLinked) {
       s.quantitative.map((q) => `<div class="ev"><span class="badge">${escapeHtml(q.verdict)}</span> ${escapeHtml(q.scope)}<div class="sub research-only">${escapeHtml(q.text)}</div></div>`).join("") +
       `</div>`
     : "";
-  const mapNote = placesLinked ? `<p class="sub">أماكن الشواهد معروضة على الخريطة باللون الأخضر.</p>` : `<p class="sub">لا أماكن موثّقة الإحداثيات لشواهد هذه السُنّة بعد.</p>`;
+  const mapNote = placesLinked ? `<p class="sub">أماكن الشواهد على الخريطة بدورها في السُّنّة: <span class="role-dot sup"></span>المؤيدة، و<span class="role-dot lim"></span>المقيِّدة، وما فيه الاثنان بحلقة.</p>` : `<p class="sub">لا أماكن موثّقة الإحداثيات لشواهد هذه السُنّة بعد.</p>`;
   const journey = (typeof journeyIndex !== "undefined" ? journeyIndex : []).find((j) => j.sunna === s.id);
   sunanDetailEl.innerHTML =
     (journey ? `<div class="row"><button type="button" data-start-journey="${escapeHtml(journey.id)}">ابدأ رحلة هذه السُّنّة (${journey.steps} خطوات)</button></div>` : "") +
@@ -1298,16 +1407,22 @@ async function selectSunna(s) {
   let linked = [];
   if (ready && ids.length) {
     linked = claimPoints.features.filter((f) => ids.some((id) => f.properties.claim_ids.includes(`,${id},`)));
-    showClaimPoints(linked.length > 0, ["any", ...ids.map((id) => ["in", `,${id},`, ["get", "claim_ids"]])]);
+    showClaimPoints(linked.length > 0, ["any", ...ids.map((id) => ["in", `,${id},`, ["get", "claim_ids"]])], s.id);
     fitTo(linked, 4);
   } else if (ready) {
     showClaimPoints(false);
   }
   renderSunna(s, linked.length > 0);
 }
-async function loadSunan() {
+function loadSunan() {
+  sunanReady ??= loadSunanNow();
+  return sunanReady;
+}
+async function loadSunanNow() {
   try { sunanData = await getJson("data/sunan.json"); } catch (err) { sunanDetailEl.textContent = `تعذّر تحميل السنن: ${err.message}`; return; }
   for (const s of sunanData.sunan) {
+    for (const c of s.supporting) if (c.id) { const r = claimSunnaRoles.get(c.id) ?? { sup: [], lim: [] }; r.sup.push(s.id); claimSunnaRoles.set(c.id, r); }
+    for (const c of s.limiting) if (c.id) { const r = claimSunnaRoles.get(c.id) ?? { sup: [], lim: [] }; r.lim.push(s.id); claimSunnaRoles.set(c.id, r); }
     for (const c of s.supporting) if (c.id) claimRoles.set(c.id, [...(claimRoles.get(c.id) ?? []), { name: s.name, role: "support" }]);
     for (const c of s.limiting) if (c.id) claimRoles.set(c.id, [...(claimRoles.get(c.id) ?? []), { name: s.name, role: "limit" }]);
     const btn = document.createElement("button");
