@@ -254,6 +254,14 @@ try {
     step = `${name}: القارات`;
     await page.click('#rail button[data-region="africa"]'); await page.waitForTimeout(800); await settle();
     counts.rail = await page.$$eval("#rail button", (b) => b.length);
+    // بطاقة المنطقة: رسم الكيانات عبر الزمن، وتشغيل المنطقة عبر الزمن ثم إيقافه
+    await page.waitForSelector("#card:not([hidden]) .rg-bar", { timeout: 30000 });
+    counts.regionBars = await page.$$eval("#card .rg-bar", (b) => b.length);
+    await page.click("#card [data-rplay]");
+    await page.waitForFunction(() => playTimer && String(time.key) !== "-4000", null, { timeout: 30000 });
+    await page.click("#card [data-rplay]");
+    if (await page.evaluate(() => playTimer !== null)) problems.push(`[${name}] العرض الزمني للمنطقة لم يتوقف`);
+    await settle();
     await page.click('#rail button[data-region="world"]'); await page.waitForTimeout(800); await settle();
     await togglePanel(true);
     step = `${name}: العالم في هذه الحقبة`;

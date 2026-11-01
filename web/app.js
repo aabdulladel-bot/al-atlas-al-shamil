@@ -1583,6 +1583,7 @@ let playTimer = null;
 function stopPlay() {
   clearInterval(playTimer);
   playTimer = null;
+  document.dispatchEvent(new CustomEvent("atlas:play", { detail: false }));
   tbPlay.setAttribute("aria-pressed", "false");
   tbPlay.textContent = "▶";
   tbPlay.setAttribute("aria-label", "تشغيل الزمن");

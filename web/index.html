@@ -332,6 +332,16 @@
     #rail .mini { width: 22px; height: 22px; flex: none; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #3d82c9, #0b2a55); box-shadow: inset -3px -3px 6px rgba(0, 0, 0, 0.35); }
     #rail button[data-region="world"] .mini { background: radial-gradient(circle at 35% 30%, #4cc9a0, #0b3a55); }
     body.showcasing #search-box, body.showcasing #rail { display: none; }
+    /* بطاقة المنطقة وعدّاد الشريط */
+    #rail .rg-n { margin-inline-start: auto; font-size: 11px; color: var(--muted); background: rgba(168, 183, 212, 0.12); border-radius: 999px; padding: 0 7px; }
+    #rail .rg-n:empty { display: none; }
+    .rg-chart { display: flex; align-items: flex-end; gap: 4px; height: 96px; padding: 6px 2px 0; border-bottom: 1px solid var(--line); }
+    .rg-bar { flex: 1; height: var(--h); min-height: 3px; padding: 0; border: 0; border-radius: 4px 4px 0 0; background: rgba(91, 184, 255, 0.45); cursor: pointer; transition: background 0.2s, height 0.35s ease; }
+    .rg-bar:hover { background: var(--sky); }
+    .rg-bar.cur { background: var(--accent); }
+    .rg-yrs { display: flex; gap: 4px; margin-top: 3px; }
+    .rg-yrs span { flex: 1; text-align: center; font-size: 9px; color: var(--muted); overflow: hidden; white-space: nowrap; }
+    @media (max-width: 600px) { .rg-yrs span:nth-child(even) { visibility: hidden; } }
     /* التبويبات والقائمة والتحدي */
     .tabs { display: flex; gap: 2px; margin: 8px 0 6px; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
     .tabs button { background: none; border: 0; border-bottom: 2px solid transparent; padding: 6px 10px; color: var(--muted); font-weight: 600; font-size: 13px; white-space: nowrap; cursor: pointer; transition: color 0.2s, border-color 0.2s; }

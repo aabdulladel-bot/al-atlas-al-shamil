@@ -167,7 +167,10 @@ function score(it, toks) {
     else if (rest.some((r) => r.includes(t))) s += 0.5;
     else return 0;
   }
-  return s + it.weight / 10;
+  // ما في المنطقة المختارة يتقدّم
+  const at = it.coords ?? (it.x != null ? [it.x, it.y] : null);
+  const boost = activeRegion && at && inBox(activeRegion.bbox, at[0], at[1]) ? 1.5 : 0;
+  return s + it.weight / 10 + boost;
 }
 const PER_TYPE = 5;
 async function search(q) {
@@ -255,28 +258,40 @@ document.addEventListener("keydown", (e) => {
 const railEl = document.getElementById("rail");
 let regions = [];
 let activeRegion = null;
-function inRegion(lon, lat) {
-  if (!activeRegion) return true;
-  const [w, s, e, n] = activeRegion.bbox;
+function inBox([w, s, e, n], lon, lat) {
   const x = e > 180 && lon < 0 ? lon + 360 : lon;
   return x >= w && x <= e && lat >= s && lat <= n;
 }
+const inRegion = (lon, lat) => !activeRegion || inBox(activeRegion.bbox, lon, lat);
 function setRegion(id) {
   activeRegion = regions.find((r) => r.id === id) ?? null;
   for (const b of railEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.region === (activeRegion?.id ?? "world")));
   if (activeRegion) {
     const [w, s, e, n] = activeRegion.bbox;
     map.fitBounds([[w, s], [e, n]], { padding: fitPadding(), pitch: 25, bearing: 0, duration: reduceMotion ? 0 : 2400, essential: true });
+    openRegionCard(activeRegion);
   } else {
     map.flyTo({ center: [30, 22], zoom: isNarrow() ? 0.9 : 1.6, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 2400, essential: true });
+    if (region.token === cardToken) closeCard();
   }
   renderList();
 }
 getJson("data/base/regions.json").then((d) => {
   regions = d.regions;
   railEl.innerHTML = [{ id: "world", ar: "العالم" }, ...regions].map((r) =>
-    `<button type="button" data-region="${r.id}" aria-pressed="${r.id === "world"}"><span class="mini" aria-hidden="true"></span>${escapeHtml(r.ar)}</button>`).join("");
+    `<button type="button" data-region="${r.id}" aria-pressed="${r.id === "world"}"><span class="mini" aria-hidden="true"></span>${escapeHtml(r.ar)}<span class="rg-n" aria-label="كيانات هذه السنة"></span></button>`).join("");
+  railCounts();
 }).catch(() => { railEl.hidden = true; });
+// عدد الكيانات المسمّاة على خريطة السنة الحالية في كل منطقة، بجانب اسمها
+function railCounts() {
+  const labs = [...labelInfo.values()].filter((l) => l.en?.trim());
+  for (const b of railEl.querySelectorAll("button[data-region]")) {
+    const r = regions.find((x) => x.id === b.dataset.region);
+    const n = r ? labs.filter((l) => inBox(r.bbox, l.x, l.y)).length : labs.length;
+    const el = b.querySelector(".rg-n");
+    if (el) { el.textContent = labs.length ? fmtInt(n) : ""; el.title = `الكيانات المسمّاة على خريطة ${yearText(time.key)}: ${fmtInt(n)}`; }
+  }
+}
 railEl.addEventListener("click", (e) => { const b = e.target.closest("button[data-region]"); if (b) setRegion(b.dataset.region === "world" ? null : b.dataset.region); });
 
 // ---------- التبويبات: نظرة، والعالم في هذه الحقبة، والتحدي ----------
@@ -448,6 +463,8 @@ quizBody.addEventListener("click", (e) => {
 document.addEventListener("atlas:time", () => {
   passportNote("era", eraOf(time.key).id);
   renderList();
+  railCounts();
+  if (region.r && region.token === cardToken && !cardEl.hidden) renderRegionCard(region.r, true);
   if (!document.getElementById("pane-quiz").hidden) nextQuestion(); else quiz.q = null;
 });
 
@@ -485,3 +502,87 @@ modalEl.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !modalEl.hidden) { e.stopImmediatePropagation(); closeModal(); }
 }, true);
+
+// ---------- بطاقة المنطقة: القارة عبر الزمن ----------
+// كل ما فيها محسوب من البيانات: الكيانات المسمّاة في المنطقة في كل محطة زمنية (نقاط تسميتها داخل مستطيلها)،
+// وأكبرها الآن، وشواهدها بحسب الحقبة، وتحوّل كياناتها إلى الخريطة التالية (من لوحة التحولات).
+const region = { r: null, token: -1, items: [] };
+const regionStatsCache = new Map();
+function regionStats(r) {
+  if (!regionStatsCache.has(r.id)) {
+    regionStatsCache.set(r.id, Promise.all(TIME_STOPS.map(async (k) => {
+      const labs = ((await labelData(k))?.labels ?? []).filter((l) => l.en?.trim() && inBox(r.bbox, l.x, l.y));
+      return { k, n: labs.length, ar: labs.filter((l) => l.ar).length };
+    })));
+  }
+  return regionStatsCache.get(r.id);
+}
+async function regionChange(r) {
+  const i = TIME_STOPS.findIndex((k) => String(k) === String(time.key));
+  const next = TIME_STOPS[i + 1];
+  if (next == null) return null;
+  let d;
+  try { d = await getJson(`data/transitions/${time.key}__${next}.json`); } catch { return null; }
+  const pos = new Map(((await labelData(time.key))?.labels ?? []).map((l) => [l.en, [l.x, l.y]]));
+  const here = d.from.filter((x) => pos.has(x.name) && inBox(r.bbox, ...pos.get(x.name)));
+  const counts = {};
+  for (const x of here) counts[x.fate.type] = (counts[x.fate.type] ?? 0) + 1;
+  return { next, total: here.length, counts };
+}
+async function renderRegionCard(r, refresh = false) {
+  const stats = await regionStats(r);
+  const max = Math.max(1, ...stats.map((x) => x.n));
+  const bars = stats.map((x) => `<button type="button" class="rg-bar${String(x.k) === String(time.key) ? " cur" : ""}" data-time="${x.k}" style="--h:${Math.max(3, Math.round((100 * x.n) / max))}%" title="${escapeHtml(`${yearText(x.k)}: ${fmtInt(x.n)} كياناً مسمّى، منها ${fmtInt(x.ar)} بالعربية`)}" aria-label="${escapeHtml(`${yearText(x.k)}: ${fmtInt(x.n)} كياناً`)}"></button>`).join("");
+  const yrs = stats.map((x) => `<span>${escapeHtml(stopLabel(x.k))}</span>`).join("");
+  const labs = [...labelInfo.values()].filter((l) => l.en?.trim() && inBox(r.bbox, l.x, l.y)).sort((a, b) => (b.a ?? 0) - (a.a ?? 0)).slice(0, 6);
+  region.items = labs.map((l) => ({ type: "entity", en: l.en, keys: [time.key], x: l.x, y: l.y, min: l.min }));
+  const top = labs.map((l, i) => `<button type="button" class="li" data-rg="${i}"><i style="background:${swatchColor(hueOf(l.qid ?? l.en))}"></i><span><b>${escapeHtml(l.ar ?? l.en_shown ?? l.en)}</b><small>${l.a ? `${fmtBig(l.a)} كم²` : ""}</small></span></button>`).join("");
+  // الشواهد في المنطقة بحسب الحقبة
+  const byEra = new Map();
+  for (const f of claimPoints?.features ?? []) {
+    if (!inBox(r.bbox, ...f.geometry.coordinates)) continue;
+    for (const c of JSON.parse(f.properties.claims)) {
+      const e = byEra.get(c.era) ?? { claims: 0, places: new Set() };
+      e.claims++; e.places.add(f.properties.slug); byEra.set(c.era, e);
+    }
+  }
+  const eras = ERAS.filter((e) => byEra.has(e.id)).map((e) => `<button type="button" class="li" data-time="${e.border}"><i style="background:var(--evidence)"></i><span><b>الحقبة ${e.id}: ${escapeHtml(e.label)}</b><small>${fmtInt(byEra.get(e.id).claims)} شواهد في ${fmtInt(byEra.get(e.id).places.size)} أماكن</small></span></button>`).join("");
+  const ch = await regionChange(r);
+  const change = ch && ch.total ? `<section class="card-sec"><h3>من ${escapeHtml(yearText(time.key))} إلى ${escapeHtml(yearText(ch.next))}</h3><p class="sub">مصير كيانات المنطقة على الخريطة التالية، بمطابقة الأرض لا الأسماء (لوحة التحولات).</p><div class="chips">${FATES.filter(([t]) => ch.counts[t]).map(([t, label]) => chip(`${label}: ${fmtInt(ch.counts[t])}`)).join("")}</div></section>` : "";
+  const cur = stats.find((x) => String(x.k) === String(time.key));
+  // الجزء الحي يُعاد رسمه مع كل تغيّر في الزمن، وزرّ العرض خارجه فيبقى في مكانه أثناء التشغيل
+  const live = cardHead({ title: r.ar, chips: [chip(`خريطة ${yearText(time.key)}`), chip(`الكيانات المسمّاة: ${fmtInt(cur?.n ?? 0)}`), chip(`دول اليوم في المصدر: ${fmtInt(r.countries)}`)], note: "المنطقة مستطيل محسوب من Natural Earth، فيدخل فيه ما حول حدوده." }) +
+    `<section class="card-sec"><h3>عدد الكيانات المسمّاة عبر الزمن</h3><div class="rg-chart" role="group" aria-label="الكيانات في كل محطة زمنية">${bars}</div><div class="rg-yrs" aria-hidden="true">${yrs}</div></section>`;
+  const rest = (top ? `<section class="card-sec"><h3>أكبر كياناتها على هذه الخريطة</h3>${top}</section>` : "") +
+    change +
+    (eras ? `<section class="card-sec"><h3>شواهدها الموثّقة بحسب الحقبة</h3>${eras}</section>` : `<section class="card-sec"><h3>شواهدها الموثّقة</h3><p class="sub">لا شاهد له مكان في هذه المنطقة بعد.</p></section>`) +
+    aboutHtml([["المنطقة", "Natural Earth (ملك عام): نقاط تسمية الدول بين المئين 5 و95 وهامش 4 درجات (scripts/build_regions.mjs)"], ["الكيانات", "نقاط تسمية الكيانات داخل المستطيل، من خرائط Historical Basemaps وNatural Earth"]]);
+  if (refresh) {
+    if (region.token !== cardToken || cardEl.hidden) return;
+    cardBody.querySelector(".rg-live").innerHTML = live;
+    cardBody.querySelector(".rg-rest").innerHTML = rest;
+    syncPlayLabel();
+    return;
+  }
+  if (isNarrow()) setPanelCollapsed(true);
+  region.r = r;
+  region.token = openCard(`<div class="rg-live">${live}</div><div class="card-actions"><button type="button" class="chip" data-rplay></button></div><div class="rg-rest">${rest}</div>`);
+  syncPlayLabel();
+  cardEntity = null;
+  markPoint(null);
+}
+function openRegionCard(r) { renderRegionCard(r); }
+document.addEventListener("atlas:play", () => syncPlayLabel());
+function syncPlayLabel() {
+  const b = cardBody.querySelector("[data-rplay]");
+  if (b) b.textContent = playTimer ? "إيقاف العرض الزمني" : "شغّل المنطقة عبر الزمن";
+}
+cardBody.addEventListener("click", (e) => {
+  if (region.token !== cardToken) return;
+  const t = e.target.closest("[data-rg], [data-rplay]");
+  if (!t) return;
+  if (t.dataset.rg != null) return goItem(region.items[Number(t.dataset.rg)]);
+  // العرض الزمني للمنطقة: الكاميرا ثابتة عليها، والزمن يعبر المحطات من أولها
+  if (playTimer) { stopPlay(); syncPlayLabel(); return; }
+  loadBorders(TIME_STOPS[0]).then(() => { tbPlay.click(); syncPlayLabel(); });
+});
