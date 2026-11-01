@@ -150,6 +150,8 @@ const HIGHLIGHT_COLOR = { satellite: "#ffffff", drawn: "#2a2620" };
 const basemap = { mode: "satellite" };
 const map = new maplibregl.Map({
   container: "map",
+  // شاشات الجوال عالية الكثافة: نسبة البكسل حتى 2، فلا يتضاعف عبء الرسم بلا فرق مرئي
+  pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
   style: {
     version: 8,
     // كرة أرضية افتراضياً، ويمكن التبديل إلى الخريطة المسطحة من لوحة الطبقات
@@ -312,10 +314,16 @@ function viewPadding() {
   const bottom = timebarHeight();
   // أثناء العرض: صندوقه على اليمين (أو أسفل الجوال)
   if (document.body.classList.contains("showcasing")) return isNarrow() ? { top: 0, bottom: bottom + Math.round(window.innerHeight * 0.42), left: 0, right: 0 } : { top: 0, bottom, left: 0, right: 432 };
-  if (isNarrow()) return { top: 64, bottom, left: 0, right: 0 };
+  // على الجوال: والبطاقة مفتوحة تُحجز مساحة ورقتها السفلية، فيبقى المختار فوقها
+  if (isNarrow()) return { top: 64, bottom: bottom + (document.body.classList.contains("card-open") ? cardEl.offsetHeight : 0), left: 0, right: 0 };
   return { top: 0, bottom, left: 0, right: panelEl.offsetWidth + 12 };
 }
 function applyPadding() { map.setPadding(viewPadding()); }
+// تغيّر الحشوة بانسياب، وبعد انتهاء أي حركة جارية للكاميرا حتى لا يقطعها
+function easePadding(center) {
+  const go = () => map.easeTo({ padding: viewPadding(), ...(center ? { center } : {}), duration: reduceMotion ? 0 : 420 });
+  if (map.isMoving()) map.once("moveend", go); else go();
+}
 window.addEventListener("resize", applyPadding);
 applyPadding();
 
@@ -492,6 +500,7 @@ function openCard(html) {
   document.body.classList.add("card-open");
   const h = cardBody.querySelector("h2");
   if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); }
+  if (isNarrow()) easePadding();
   return ++cardToken;
 }
 function updateCard(token, html) {
@@ -507,11 +516,29 @@ function closeCard() {
   document.body.classList.remove("card-open");
   if (hadFocus && cardReturnFocus?.isConnected) cardReturnFocus.focus({ preventScroll: true });
   cardReturnFocus = null;
+  if (isNarrow()) easePadding();
   if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
   markPoint(null);
 }
 cardEl.querySelector(".card-close").addEventListener("click", closeCard);
-cardEl.querySelector(".card-grip").addEventListener("click", () => cardEl.classList.toggle("full"));
+cardEl.querySelector(".card-grip").addEventListener("click", () => { cardEl.classList.toggle("full"); easePadding(); });
+// سحب الورقة السفلية على الجوال: إلى الأعلى تتسع، وإلى الأسفل تضيق ثم تُغلق. يبدأ السحب من مقبضها أو رأس البطاقة
+let sheetDrag = null;
+cardEl.addEventListener("pointerdown", (e) => {
+  if (!isNarrow() || e.pointerType === "mouse") return;
+  if (!e.target.closest(".card-grip, .ch")) return;
+  sheetDrag = { y: e.clientY, id: e.pointerId };
+});
+cardEl.addEventListener("pointerup", (e) => {
+  if (!sheetDrag || e.pointerId !== sheetDrag.id) return;
+  const dy = e.clientY - sheetDrag.y;
+  sheetDrag = null;
+  if (dy < -40) cardEl.classList.add("full");
+  else if (dy > 60) { if (cardEl.classList.contains("full")) cardEl.classList.remove("full"); else closeCard(); }
+  else return;
+  easePadding();
+});
+cardEl.addEventListener("pointercancel", () => { sheetDrag = null; });
 document.addEventListener("keydown", (e) => {
   if (e.key !== "Escape" || cardEl.hidden) return;
   e.stopImmediatePropagation(); // يغلق البطاقة وحدها، لا الرحلة أو العرض تحتها
@@ -1439,6 +1466,8 @@ map.on("click", (e) => {
   if (!hits.length) { if (!cardEl.hidden) closeCard(); return; }
   cardAlso = hits.slice(1);
   showHit(hits[0]);
+  // على الجوال تغطي الورقة السفلية نصف الشاشة: يُنقل المختار إلى ما فوقها
+  if (isNarrow()) easePadding(e.lngLat);
 });
 cardBody.addEventListener("click", (e) => {
   const t = e.target.closest("[data-also], [data-follow], [data-time], [data-pin]");

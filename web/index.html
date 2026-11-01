@@ -419,6 +419,13 @@
       #rail button { flex: none; }
       #panel:not(.collapsed) ~ #search-box, #panel:not(.collapsed) ~ #rail, body.card-open #rail { display: none; }
       #passport-btn, #keys-btn { display: none; }
+      #q-results { max-height: 50vh; }
+      /* مقبض شريط الزمن أكبر للمس، ومنطقة الضغط حوله أوسع */
+      #tb-thumb { width: 20px; height: 20px; margin-inline-start: -10px; bottom: 4px; }
+      #tb-track { height: 50px; }
+      .card-grip { width: 56px; height: 7px; }
+      /* السحب من المقبض ورأس البطاقة للورقة نفسها، والتمرير لبقية محتواها */
+      .card-grip, #card .ch { touch-action: none; }
       #share-btn { margin-inline-start: auto; }
       .tiles { grid-template-columns: repeat(2, 1fr); }
       @keyframes card-in { from { opacity: 0; transform: translateY(24px); } }
