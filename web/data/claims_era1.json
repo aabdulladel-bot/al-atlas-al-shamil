@@ -13,7 +13,14 @@
       "layer": "material",
       "type": "rule",
       "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
-      "chapter": "قوانين العقود والزراعة"
+      "chapter": "قوانين العقود والزراعة",
+      "domains": [
+        "agriculture",
+        "economy",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000102",
@@ -23,7 +30,15 @@
       "layer": "material",
       "type": "rule",
       "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
-      "chapter": "قوانين العقود والزراعة"
+      "chapter": "قوانين العقود والزراعة",
+      "domains": [
+        "agriculture",
+        "economy",
+        "institutions",
+        "environment"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000103",
@@ -33,7 +48,15 @@
       "layer": "material",
       "type": "rule",
       "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
-      "chapter": "قوانين الديون والفيضان"
+      "chapter": "قوانين الديون والفيضان",
+      "domains": [
+        "agriculture",
+        "economy",
+        "institutions",
+        "environment"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000104",
@@ -43,7 +66,14 @@
       "layer": "material",
       "type": "rule",
       "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
-      "chapter": "قوانين السدود والري"
+      "chapter": "قوانين السدود والري",
+      "domains": [
+        "agriculture",
+        "environment",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000105",
@@ -53,7 +83,14 @@
       "layer": "material",
       "type": "rule",
       "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
-      "chapter": "قوانين السدود والري"
+      "chapter": "قوانين السدود والري",
+      "domains": [
+        "agriculture",
+        "environment",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000106",
@@ -63,7 +100,13 @@
       "layer": "tradition",
       "type": "judgment",
       "hedge": "أدب حكمة يقدّم توجيهاً أخلاقياً، لا وصفاً لواقع مُثبت",
-      "chapter": "التعليم الأول"
+      "chapter": "التعليم الأول",
+      "domains": [
+        "culture",
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000107",
@@ -73,7 +116,13 @@
       "layer": "tradition",
       "type": "judgment",
       "hedge": "أدب حكمة يقدّم توجيهاً أخلاقياً، لا وصفاً لواقع مُثبت",
-      "chapter": "التعليم الأول"
+      "chapter": "التعليم الأول",
+      "domains": [
+        "industry",
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000108",
@@ -83,7 +132,13 @@
       "layer": "modern_scholarship",
       "type": "description",
       "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
-      "chapter": "مقدمة الترجمة"
+      "chapter": "مقدمة الترجمة",
+      "domains": [
+        "culture",
+        "religion"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000109",
@@ -93,7 +148,13 @@
       "layer": "modern_scholarship",
       "type": "event",
       "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
-      "chapter": "مقدمة الترجمة"
+      "chapter": "مقدمة الترجمة",
+      "domains": [
+        "culture",
+        "religion"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000110",
@@ -103,7 +164,13 @@
       "layer": "tradition",
       "type": "event",
       "hedge": "من فهرس المحرر للوح الحادي عشر، لا من نص الملحمة",
-      "chapter": "فهرس اللوح الحادي عشر"
+      "chapter": "فهرس اللوح الحادي عشر",
+      "domains": [
+        "culture",
+        "religion"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000111",
@@ -113,7 +180,12 @@
       "layer": "tradition",
       "type": "description",
       "hedge": "أدب حكمة يقدّم توجيهاً أخلاقياً، لا وصفاً لواقع مُثبت",
-      "chapter": "التعليم الأول"
+      "chapter": "التعليم الأول",
+      "domains": [
+        "culture"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000112",
@@ -123,7 +195,14 @@
       "layer": "material",
       "type": "quantity",
       "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
-      "chapter": "قوانين السدود والري"
+      "chapter": "قوانين السدود والري",
+      "domains": [
+        "agriculture",
+        "institutions",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000113",
@@ -133,7 +212,13 @@
       "layer": "modern_scholarship",
       "type": "quantity",
       "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
-      "chapter": "مقدمة الترجمة"
+      "chapter": "مقدمة الترجمة",
+      "domains": [
+        "knowledge",
+        "culture"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000114",
@@ -143,7 +228,13 @@
       "layer": "modern_scholarship",
       "type": "judgment",
       "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
-      "chapter": "مقدمة الترجمة"
+      "chapter": "مقدمة الترجمة",
+      "domains": [
+        "knowledge",
+        "culture"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     }
   ]
 }

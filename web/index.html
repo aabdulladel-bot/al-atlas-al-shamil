@@ -78,6 +78,8 @@
     .lg-both { border: 3px solid var(--limit); }
     .lg-demo { background: linear-gradient(90deg, #f1c27d 0 30%, transparent 30% 35%, #c4572a 35% 65%, transparent 65% 70%, #e0913f 70%); clip-path: polygon(0 50%, 30% 50%, 30% 100%, 35% 100%, 35% 8%, 65% 8%, 65% 100%, 70% 100%, 70% 32%, 100% 32%, 100% 100%, 0 100%); }
     .lg-lights { border-radius: 4px; background: radial-gradient(circle at 30% 40%, #ffd98a 0 1.5px, transparent 2px), radial-gradient(circle at 65% 55%, #ffe9b8 0 1.2px, transparent 1.8px), radial-gradient(circle at 45% 75%, #ffcf70 0 1px, transparent 1.6px), #0b1020; }
+    .dom-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .chip.dom { background: color-mix(in srgb, var(--sky) 16%, transparent); color: var(--ink); font-size: 11px; }
     .role-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-inline-end: 3px; vertical-align: middle; }
     .role-dot.sup { background: var(--evidence); } .role-dot.lim { background: var(--limit); }
     body.showcasing #legend, body:has(#intro.on) #legend { display: none; }
@@ -640,8 +642,10 @@
     </details>
 
     <details class="section research-only">
-      <summary>الادعاءات بحسب الحقبة</summary>
+      <summary>الادعاءات بحسب الحقبة والمجال</summary>
       <div class="row" id="claims-eras"></div>
+      <p class="sub">أو بحسب المجال، في كل الحقب (تصنيف مسودة يحتاج مراجعة):</p>
+      <div class="row" id="claims-domains"></div>
       <div id="claims-list" class="claims-list card"></div>
       <div class="row"><button type="button" id="claim-map-btn" aria-pressed="false">عرض أماكن الادعاءات كلها على الخريطة</button></div>
     </details>

@@ -741,6 +741,7 @@ function openClaimCard(f) {
       `<blockquote class="ev-q" dir="auto">“${escapeHtml(c.quote)}”</blockquote>` +
       `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi></div>` +
       (c.hedge ? `<div class="ev-hedge">تحفّظ: ${escapeHtml(c.hedge)}</div>` : "") +
+      domainChips(c.id) +
       `<div class="chips">${era ? chip(`الحقبة ${era.id}: ${era.label}${era.id === eraOf(time.key).id ? " (الحقبة المعروضة)" : ""}`, era.id === eraOf(time.key).id ? "now-era" : "", `data-time="${era.border}" title="انقل الخريطة إلى زمنه"`) : ""}${roles.join("")}</div></article>`;
   }).join("");
   if (typeof passportNote === "function") for (const c of claims) passportNote("claim", c.id);
@@ -1188,13 +1189,49 @@ demoSelect.addEventListener("change", () => {
 const claimsEl = document.getElementById("claims-eras");
 const claimsListEl = document.getElementById("claims-list");
 
+// المجالات (web/data/domains.json): مجال كل ادعاء، ويُعرض شارةً في بطاقات الشواهد
+let domainData = null;
+const domainsReady = getJson("data/domains.json").then((d) => { domainData = d; renderDomainButtons(); return d; }).catch(() => null);
+const domainName = (id) => domainData?.domains.find((d) => d.id === id)?.ar ?? id;
+function domainChips(id) {
+  const ds = domainData?.claims[id];
+  return ds?.length ? `<span class="chips dom-chips">${ds.map((d) => chip(domainName(d), "dom")).join("")}</span>` : "";
+}
 function claimHtml(c, extra = "") {
-  return `<div class="ev ${extra}">${escapeHtml(c.statement)}` +
+  return `<div class="ev ${extra}">${escapeHtml(c.statement)}${domainChips(c.id)}` +
     `<div class="sub">${escapeHtml(c.attributed_to)}</div>` +
     `<details class="research-only"><summary class="sub">الاقتباس والتحفّظ</summary>` +
     `<div class="src-quote">“${escapeHtml(c.quote)}”</div><div class="sub">تحفّظ: ${escapeHtml(c.hedge)}</div></details></div>`;
 }
+// تصفّح المجالات: ادعاءات مجال واحد في كل الحقب
+const claimsDomainsEl = document.getElementById("claims-domains");
+function renderDomainButtons() {
+  if (!claimsDomainsEl || !domainData) return;
+  claimsDomainsEl.replaceChildren(...domainData.domains.map((d) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.dataset.domain = d.id;
+    b.title = d.hint;
+    b.textContent = `${d.ar} (${fmtInt(domainData.counts[d.id] ?? 0)})`;
+    b.addEventListener("click", () => loadDomainClaims(d.id));
+    return b;
+  }));
+}
+async function loadDomainClaims(dom) {
+  for (const b of claimsDomainsEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.domain === dom));
+  claimsListEl.textContent = "جارٍ التحميل...";
+  try {
+    const index = await getJson("data/claims_index.json");
+    const all = (await Promise.all(index.map((x) => getJson(`data/claims_era${x.era}.json`).then((d) => d.claims.map((c) => ({ ...c, era: x.era })))))).flat();
+    const hit = all.filter((c) => (domainData?.claims[c.id] ?? []).includes(dom));
+    claimsListEl.innerHTML = `<p class="sub">مجال «${escapeHtml(domainName(dom))}»: ${fmtInt(hit.length)} ادعاءً في كل الحقب. ${escapeHtml(domainData._meta.status)}.</p>` +
+      (hit.length ? hit.map((c) => claimHtml(c)).join("") : "<p>لا ادعاءات موثّقة في هذا المجال بعد.</p>");
+  } catch (err) {
+    claimsListEl.textContent = `تعذّر تحميل الادعاءات: ${err.message}`;
+  }
+}
 async function loadClaims(n) {
+  for (const b of claimsDomainsEl?.querySelectorAll("button") ?? []) b.setAttribute("aria-pressed", "false");
   claimsListEl.textContent = "جارٍ التحميل...";
   try {
     const data = await getJson(`data/claims_era${n}.json`);

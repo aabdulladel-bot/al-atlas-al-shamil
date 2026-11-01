@@ -1,0 +1,1169 @@
+{
+ "_meta": {
+  "taxonomy": "scripts/config/domains.json",
+  "status": {
+   "model_draft": "تصنيف مقترح من النموذج بقراءة نص الادعاء، لم يراجعه صاحب المشروع",
+   "reviewed": "اعتمده صاحب المشروع أو عدّله"
+  },
+  "rule": "المجال صفة لمضمون الادعاء لا لمصدره: ادعاء من نص ديني عن السوق مجاله التجارة. وقد يحمل الادعاء أكثر من مجال، والأول أقربها."
+ },
+ "claims": {
+  "cl_000000101": {
+   "domains": [
+    "agriculture",
+    "economy",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000102": {
+   "domains": [
+    "agriculture",
+    "economy",
+    "institutions",
+    "environment"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000103": {
+   "domains": [
+    "agriculture",
+    "economy",
+    "institutions",
+    "environment"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000104": {
+   "domains": [
+    "agriculture",
+    "environment",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000105": {
+   "domains": [
+    "agriculture",
+    "environment",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000106": {
+   "domains": [
+    "culture",
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000107": {
+   "domains": [
+    "industry",
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000108": {
+   "domains": [
+    "culture",
+    "religion"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000109": {
+   "domains": [
+    "culture",
+    "religion"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000110": {
+   "domains": [
+    "culture",
+    "religion"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000111": {
+   "domains": [
+    "culture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000112": {
+   "domains": [
+    "agriculture",
+    "institutions",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000113": {
+   "domains": [
+    "knowledge",
+    "culture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000114": {
+   "domains": [
+    "knowledge",
+    "culture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000201": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000202": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000203": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000204": {
+   "domains": [
+    "politics",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000205": {
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000206": {
+   "domains": [
+    "trade",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000207": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000208": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000209": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000210": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000211": {
+   "domains": [
+    "trade",
+    "religion"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000212": {
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000213": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000214": {
+   "domains": [
+    "knowledge",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000215": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000216": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000217": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000218": {
+   "domains": [
+    "economy",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000301": {
+   "domains": [
+    "trade",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000302": {
+   "domains": [
+    "politics",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000303": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000304": {
+   "domains": [
+    "knowledge",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000305": {
+   "domains": [
+    "politics",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000306": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000307": {
+   "domains": [
+    "population",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000308": {
+   "domains": [
+    "agriculture",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000309": {
+   "domains": [
+    "politics",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000310": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000311": {
+   "domains": [
+    "politics",
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000312": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000313": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000314": {
+   "domains": [
+    "trade",
+    "industry"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000315": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000316": {
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000317": {
+   "domains": [
+    "politics",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000318": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000319": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000320": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000321": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000322": {
+   "domains": [
+    "agriculture",
+    "trade",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000323": {
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000324": {
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000325": {
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000326": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000327": {
+   "domains": [
+    "economy",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000328": {
+   "domains": [
+    "economy",
+    "institutions",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000329": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000330": {
+   "domains": [
+    "society",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000331": {
+   "domains": [
+    "health"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000332": {
+   "domains": [
+    "health",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000333": {
+   "domains": [
+    "health",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000334": {
+   "domains": [
+    "politics",
+    "trade",
+    "agriculture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000335": {
+   "domains": [
+    "politics",
+    "trade",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000336": {
+   "domains": [
+    "politics",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000337": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000338": {
+   "domains": [
+    "trade",
+    "institutions",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000339": {
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000340": {
+   "domains": [
+    "society",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000341": {
+   "domains": [
+    "economy",
+    "institutions",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000342": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000343": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000344": {
+   "domains": [
+    "environment"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000345": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000346": {
+   "domains": [
+    "trade",
+    "environment"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000347": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000348": {
+   "domains": [
+    "environment",
+    "agriculture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000349": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000350": {
+   "domains": [
+    "economy",
+    "health"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000351": {
+   "domains": [
+    "trade",
+    "religion"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000352": {
+   "domains": [
+    "religion",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000353": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000354": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000355": {
+   "domains": [
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000356": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000357": {
+   "domains": [
+    "trade",
+    "religion"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000358": {
+   "domains": [
+    "industry",
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000359": {
+   "domains": [
+    "industry",
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000360": {
+   "domains": [
+    "industry",
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000361": {
+   "domains": [
+    "industry",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000362": {
+   "domains": [
+    "industry",
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000363": {
+   "domains": [
+    "trade",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000364": {
+   "domains": [
+    "trade",
+    "war",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000365": {
+   "domains": [
+    "trade",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000366": {
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000367": {
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000368": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000369": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000370": {
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000371": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000372": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000373": {
+   "domains": [
+    "trade",
+    "agriculture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000374": {
+   "domains": [
+    "trade",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000375": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000376": {
+   "domains": [
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000377": {
+   "domains": [
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000378": {
+   "domains": [
+    "society",
+    "culture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000379": {
+   "domains": [
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000380": {
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000381": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000382": {
+   "domains": [
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000383": {
+   "domains": [
+    "trade",
+    "politics",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000384": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000385": {
+   "domains": [
+    "politics",
+    "trade",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000386": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000387": {
+   "domains": [
+    "trade",
+    "religion"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000388": {
+   "domains": [
+    "politics",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000389": {
+   "domains": [
+    "population",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000390": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000391": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000392": {
+   "domains": [
+    "society",
+    "war",
+    "culture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000393": {
+   "domains": [
+    "war",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000394": {
+   "domains": [
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000395": {
+   "domains": [
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000396": {
+   "domains": [
+    "politics",
+    "culture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000397": {
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000398": {
+   "domains": [
+    "trade",
+    "agriculture",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000399": {
+   "domains": [
+    "trade",
+    "agriculture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000400": {
+   "domains": [
+    "culture",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000401": {
+   "domains": [
+    "culture",
+    "society",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000402": {
+   "domains": [
+    "culture",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000403": {
+   "domains": [
+    "culture",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000404": {
+   "domains": [
+    "economy",
+    "politics",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000405": {
+   "domains": [
+    "society",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000406": {
+   "domains": [
+    "society",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000407": {
+   "domains": [
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000408": {
+   "domains": [
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000409": {
+   "domains": [
+    "society",
+    "culture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000410": {
+   "domains": [
+    "industry",
+    "society",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000411": {
+   "domains": [
+    "society",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000412": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000413": {
+   "domains": [
+    "knowledge",
+    "population"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000414": {
+   "domains": [
+    "knowledge"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000415": {
+   "domains": [
+    "knowledge",
+    "population"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000416": {
+   "domains": [
+    "society",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000417": {
+   "domains": [
+    "economy",
+    "industry"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000418": {
+   "domains": [
+    "society",
+    "culture"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000419": {
+   "domains": [
+    "economy",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000420": {
+   "domains": [
+    "economy",
+    "trade"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000421": {
+   "domains": [
+    "politics",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000422": {
+   "domains": [
+    "politics",
+    "religion"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000423": {
+   "domains": [
+    "economy",
+    "institutions",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000424": {
+   "domains": [
+    "war",
+    "agriculture",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000425": {
+   "domains": [
+    "politics",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000426": {
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000427": {
+   "domains": [
+    "politics",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000428": {
+   "domains": [
+    "politics",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000429": {
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000430": {
+   "domains": [
+    "politics",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000431": {
+   "domains": [
+    "politics",
+    "war"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000432": {
+   "domains": [
+    "economy",
+    "trade",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000433": {
+   "domains": [
+    "trade",
+    "economy",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000434": {
+   "domains": [
+    "economy",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000435": {
+   "domains": [
+    "industry",
+    "society",
+    "economy"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000436": {
+   "domains": [
+    "economy",
+    "politics"
+   ],
+   "status": "model_draft"
+  }
+ }
+}

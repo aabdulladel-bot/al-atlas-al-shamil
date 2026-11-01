@@ -4,7 +4,7 @@
 
 ## الطبقات
 
-- **A:** ملك عام أو ترخيص مفتوح يسمح بالنشر مع الإسناد. عددها 17.
+- **A:** ملك عام أو ترخيص مفتوح يسمح بالنشر مع الإسناد. عددها 20.
 - **B:** مرخّص أو بإذن موثّق، يُراجع شرطه قبل النشر. عددها 11.
 - **C:** مرجع فقط بلا استخراج. عددها 0.
 - **بلا إسناد مسجّل في المانيفست:** 1 مصدراً: hyde-3.3. يُكمَل إسناد كل منها قبل النشر.
@@ -39,8 +39,11 @@
 | naturalearth-countries-50m | A | ملك عام (Natural Earth) | لا | Natural Earth (public domain): admin-0 countries |
 | aws-terrain-tiles | B | بيانات مفتوحة مع إسناد إلزامي: أغلبها ملك عام (USGS 3DEP وSRTM وGMTED2010، وNOAA ETOPO1)، وبعضها مرخّص بشرط الإسناد (Copernicus EU-DEM، وأستراليا، وكندا OGL، وبريطانيا، والنمسا، والنرويج، ونيوزيلندا، والمكسيك، وArcticDEM) | نعم | https://github.com/tilezen/joerd/blob/master/docs/attribution.md (النص الكامل منقول في تذييل الواجهة) |
 | nasa-gibs-bluemarble | A | ملك عام (صور NASA)، مع طلب الإسناد لـ NASA وخدمة GIBS | نعم | NASA Blue Marble: Next Generation, Reto Stöckli, NASA Earth Observatory; imagery via NASA GIBS (ESDIS) |
+| nasa-gibs-blackmarble | A | ملك عام (صور NASA)، مع طلب الإسناد لـ NASA وخدمة GIBS | نعم | NASA Black Marble 2016 (VIIRS, Suomi NPP); imagery via NASA GIBS (ESDIS) |
 | naturalearth-populated-places-50m-full | A | ملك عام (Natural Earth) | لا | Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com. |
 | wikidata-hb-names | A | CC0 1.0 (Wikidata) | لا | Wikidata (CC0) |
+| smith-wealth-oup1904-vol1 | A | ملك عام: نص آدم سميث (ت. 1790)، طبعة Oxford University Press، لندن 1904 (منشورة قبل 1929). | لا | Adam Smith, An Inquiry into the Nature and Causes of the Wealth of Nations, vol. 1 (London: Oxford University Press, 1904); scan by UNC Chapel Hill via Internet Archive |
+| smith-wealth-cannan1904-vol2 | A | ملك عام: نص آدم سميث (ت. 1790)، تحرير Edwin Cannan (ت. 1935)، Methuen وPutnam، 1904 (منشورة قبل 1929). الأرشيف يصنّفها NOT_IN_COPYRIGHT. | لا | Adam Smith, The Wealth of Nations, ed. Edwin Cannan, vol. 2 (London: Methuen; New York: Putnam, 1904); scan by University of Toronto via Internet Archive |
 
 ## التزامات قبل النشر (أسئلة لصاحب المشروع، لا قرارات)
 

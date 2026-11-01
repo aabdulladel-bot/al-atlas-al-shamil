@@ -1,0 +1,35 @@
+{
+  "era": 7,
+  "source": {
+    "source_id": "smith-wealth-cannan1904-vol2",
+    "file": "verification/era7/smith_cannan1904_vol2.txt",
+    "attributed_to": "آدم سميث، ثروة الأمم (1776)، تحرير Edwin Cannan، 1904، المجلد الثاني",
+    "chapter": "Book V, Chapter II: Of the Sources of the general or public Revenue of the Society"
+  },
+  "items": [
+    {
+      "slug": "trader-and-sovereign",
+      "quote": "No two characters seem more inconsistent than those of trader and sovereign.",
+      "statement": "يقرر سميث أنه لا صفتين أشد تنافراً من صفة التاجر وصفة صاحب السيادة",
+      "type": "rule",
+      "layer": "contemporary_witness",
+      "hedge": "حكم نظري عام من اقتصادي يدعو إلى الحرية التجارية، فموقفه من تدخل الدولة معلن"
+    },
+    {
+      "slug": "eic-bad-traders",
+      "quote": "the spirit of sovereignty seems to have rendered them equally bad traders.",
+      "statement": "يرى سميث أن روح السيادة جعلت شركة الهند الشرقية الإنجليزية تاجراً سيئاً، كما جعلتها روح التجارة صاحب سيادة سيئاً",
+      "type": "judgment",
+      "layer": "contemporary_witness",
+      "hedge": "تقدير معاصر لأداء الشركة من خصم لاحتكارها، وليس قياساً لأرباحها"
+    },
+    {
+      "slug": "high-taxes-smaller-revenue",
+      "quote": "afford a smaller revenue to government than what might be drawn",
+      "statement": "يقرر سميث أن الضرائب العالية كثيراً ما تدرّ على الحكومة دخلاً أقل مما تدرّه ضرائب معتدلة، بتقليل استهلاك السلع المضروبة أو بتشجيع التهريب",
+      "type": "rule",
+      "layer": "contemporary_witness",
+      "hedge": "قاعدة استنتجها سميث من رسوم الجمارك البريطانية في عصره؛ سببها عنده نقص الاستهلاك والتهريب، لا نشاط الرعايا كما عند ابن خلدون"
+    }
+  ]
+}
