@@ -326,6 +326,20 @@ try {
     await page.evaluate(() => { clearSunna(); document.getElementById("sunan-list").closest("details").open = true; });
     await page.click('#sunan-list button[data-sunna="sn_luxury"]');
     await page.waitForSelector("#sunan-detail [data-start-journey]", { timeout: 30000 });
+    // لغة الطبقات: أماكن الشواهد بدورها في السُّنّة المختارة، والمفتاح الحيّ يذكر الأدوار، والمواقع رموز بحسب نوعها
+    await page.waitForTimeout(400);
+    const lg = await page.evaluate(() => ({
+      rows: [...document.querySelectorAll("#legend-body .lg-row")].map((r) => r.textContent),
+      color: JSON.stringify(map.getPaintProperty("claim-points", "circle-color")),
+      places: map.getLayer("places")?.type ?? null,
+      limited: claimPoints.features.filter((f) => f.properties.lim.length > 2).length,
+    }));
+    if (!lg.rows.some((t) => t.includes("مقيِّد"))) problems.push(`[${name}] المفتاح لا يذكر الشاهد المقيِّد في السُّنّة المختارة: ${lg.rows.join(" | ")}`);
+    if (!lg.color.includes("sn_luxury")) problems.push(`[${name}] أماكن الشواهد لم تُلوَّن بدورها في السُّنّة المختارة`);
+    if (lg.places && lg.places !== "symbol") problems.push(`[${name}] المواقع ليست رموزاً بحسب نوعها: ${lg.places}`);
+    if (!lg.limited) problems.push(`[${name}] لا مكان شاهد يحمل دوراً مقيِّداً لأي سُنّة`);
+    counts.legend = lg.rows.length;
+    counts.limitedPlaces = lg.limited;
     await page.click("#sunan-detail [data-start-journey]");
     await page.waitForSelector('#journey-box button[data-act="next"]', { timeout: 15000 });
     counts.sunnaJourney = (await page.evaluate(() => journeyState?.journey.id)) === "luxury" ? 1 : 0;

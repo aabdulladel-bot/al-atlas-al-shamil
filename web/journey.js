@@ -50,7 +50,7 @@ async function showJourneyStep() {
   const ids = st.items.filter((it) => it.id).map((it) => it.id);
   if (ids.length && await ensureClaimPoints()) {
     if (token !== journeyToken) return;
-    showClaimPoints(true, ["any", ...ids.map((id) => ["in", `,${id},`, ["get", "claim_ids"]])]);
+    showClaimPoints(true, ["any", ...ids.map((id) => ["in", `,${id},`, ["get", "claim_ids"]])], journey.sunna); // تُلوَّن الأماكن بدورها في سُنّة الرحلة
   } else if (claimPoints) {
     showClaimPoints(false);
   }
