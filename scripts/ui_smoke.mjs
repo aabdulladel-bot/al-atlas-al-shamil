@@ -135,7 +135,7 @@ try {
     await page.waitForSelector("#intro.on", { timeout: 15000 });
     const counts = { intro: await page.$$eval("#intro .intro-doors [data-door]", (b) => b.length) };
     await page.click('#intro [data-door="skip"]');
-    await page.waitForSelector("#intro", { state: "hidden", timeout: 5000 });
+    await page.waitForSelector("#intro", { state: "hidden", timeout: 15000 }); // الإخفاء بمؤقّت قد يتأخر تحت العرض البرمجي
     await togglePanel(true);
     await page.click('.mode button[data-mode="research"]');
     await page.evaluate(() => { document.getElementById("layer-panel").open = true; });
