@@ -5,7 +5,7 @@
       "verified": "الترخيص مقروء من صفحة رسمية أو سجل رسمي، أو المصدر مسجّل في المانيفست",
       "unverified": "لم يُقرأ الترخيص من مصدره؛ license_reported إن وُجد هو المتداول عنه من معرفة سابقة، لا يُعتمد"
     },
-    "date": "2026-11-01",
+    "date": "2026-11-01 (حُدّث بعد فتح المضيفات)",
     "domains": "scripts/config/domains.json"
   },
   "sources": [
@@ -229,10 +229,11 @@
         "population"
       ],
       "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/",
-      "license": null,
-      "license_status": "unverified",
-      "license_reported": "CC BY 4.0",
-      "note": "المرجع العالمي للناتج التاريخي؛ المضيف محجوب"
+      "license": "CC BY 4.0",
+      "license_status": "verified",
+      "note": "المرجع العالمي للناتج التاريخي",
+      "verified_via": "الصفحة الرسمية https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023، قُرئت 2026-11-01",
+      "license_quote": "Maddison Project Database, version 2023 by Jutta Bolt and Jan Luiten van Zanden is licensed under a Creative Commons Attribution 4.0 International License"
     },
     {
       "id": "clio-infra",
@@ -247,7 +248,7 @@
       "url": "https://clio-infra.eu/",
       "license": null,
       "license_status": "unverified",
-      "note": "المضيف محجوب"
+      "note": "المضيف متاح؛ لم يُعثر على نص ترخيص في صفحاته الرئيسة، فيبقى غير متحقق"
     },
     {
       "id": "allen-unger",
@@ -354,7 +355,7 @@
       "license": null,
       "license_status": "unverified",
       "license_reported": "CC BY 4.0 (وبيانات NOAA ملك عام)",
-      "note": "المضيف محجوب"
+      "note": "المضيف متاح؛ صفحة NOAA تُولَّد بالسكربت فلم يُقرأ نص سياسة البيانات بعد"
     },
     {
       "id": "owda",
@@ -368,7 +369,7 @@
       "license": null,
       "license_status": "unverified",
       "license_reported": "ملك عام (NOAA)",
-      "note": "أطلس الجفاف لأوروبا والمتوسط منذ ألفي عام؛ المضيف محجوب"
+      "note": "المضيف متاح؛ صفحة NOAA تُولَّد بالسكربت فلم يُقرأ نص سياسة البيانات بعد"
     },
     {
       "id": "faostat",
@@ -409,10 +410,11 @@
         "politics"
       ],
       "url": "https://ucdp.uu.se/downloads/",
-      "license": null,
-      "license_status": "unverified",
-      "license_reported": "CC BY 4.0",
-      "note": "للمرصد الحديث؛ المضيف محجوب"
+      "license": "CC BY 4.0",
+      "license_status": "verified",
+      "note": "للمرصد الحديث",
+      "verified_via": "الصفحة الرسمية https://ucdp.uu.se/downloads/، قُرئت 2026-11-01",
+      "license_quote": "All datasets are free of charge and licensed under CC BY 4.0"
     },
     {
       "id": "cow",
@@ -480,10 +482,11 @@
         "knowledge"
       ],
       "url": "https://ourworldindata.org/",
-      "license": null,
-      "license_status": "unverified",
-      "license_reported": "CC BY 4.0 لما ينشره OWID، وتراخيص مصادره الأصلية تبقى",
-      "note": "المضيف محجوب، ومستودعه على GitHub يُجلب بـ git"
+      "license": "CC BY 4.0 لما ينشره OWID، وتراخيص مصادره الأصلية تبقى",
+      "license_status": "verified",
+      "note": "مستودعه على GitHub يُجلب بـ git",
+      "verified_via": "الصفحة الرسمية https://ourworldindata.org/faqs، قُرئت 2026-11-01",
+      "license_quote": "Note that some of the charts on our site were produced by third parties and are subject to their license terms."
     },
     {
       "id": "maqrizi-ighatha",
