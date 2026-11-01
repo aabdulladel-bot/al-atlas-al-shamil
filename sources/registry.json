@@ -1,0 +1,582 @@
+{
+  "_meta": {
+    "purpose": "سجل المصادر المرجعية العالمية لكل مجال (VISION.md). مرجع للتخطيط لا إذن بالجلب: الجلب يشترط تسجيل المصدر في sources/manifest.json بترخيص متحقق من صفحته الرسمية.",
+    "license_status": {
+      "verified": "الترخيص مقروء من صفحة رسمية أو سجل رسمي، أو المصدر مسجّل في المانيفست",
+      "unverified": "لم يُقرأ الترخيص من مصدره؛ license_reported إن وُجد هو المتداول عنه من معرفة سابقة، لا يُعتمد"
+    },
+    "date": "2026-11-01",
+    "domains": "scripts/config/domains.json"
+  },
+  "sources": [
+    {
+      "id": "muqaddima",
+      "name": "مقدمة ابن خلدون (ويكي مصدر)",
+      "kind": "text",
+      "domains": [
+        "economy",
+        "society",
+        "politics",
+        "knowledge",
+        "health",
+        "industry"
+      ],
+      "url": "https://ar.wikisource.org/wiki/مقدمة_ابن_خلدون",
+      "license": "انظر المانيفست",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "wikisource-muqaddima-ar",
+      "note": "المرجع الحاكم للسنن، وفيه نظرية في الاقتصاد والصحة والتعليم والصنائع لم تُستثمر كلها بعد"
+    },
+    {
+      "id": "seshat-equinox",
+      "name": "Seshat: Equinox-2020",
+      "kind": "dataset",
+      "domains": [
+        "politics",
+        "institutions",
+        "society",
+        "economy",
+        "war",
+        "religion",
+        "knowledge"
+      ],
+      "url": "https://seshat-db.com/",
+      "license": "CC BY-NC-SA",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "seshat-equinox",
+      "note": "غير تجاري؛ الاختبار الكمي للسنن"
+    },
+    {
+      "id": "hyde",
+      "name": "HYDE 3.3 (السكان واستخدام الأرض)",
+      "kind": "dataset",
+      "domains": [
+        "population",
+        "agriculture",
+        "environment"
+      ],
+      "url": "https://doi.org/10.24416/UU01-AEZZIT",
+      "license": "انظر المانيفست",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "hyde-3.3",
+      "note": "طبقة استخدام الأرض والمحاصيل لم تُستعمل بعد"
+    },
+    {
+      "id": "gapminder",
+      "name": "Gapminder: إجمالي السكان",
+      "kind": "dataset",
+      "domains": [
+        "population"
+      ],
+      "url": "https://github.com/open-numbers/ddf--gapminder--systema_globalis",
+      "license": "CC BY 4.0",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "gapminder-total-population"
+    },
+    {
+      "id": "historical-basemaps",
+      "name": "Historical Basemaps",
+      "kind": "dataset",
+      "domains": [
+        "politics"
+      ],
+      "url": "https://github.com/aourednik/historical-basemaps",
+      "license": "GPL-3.0",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "historical-basemaps"
+    },
+    {
+      "id": "naturalearth",
+      "name": "Natural Earth",
+      "kind": "dataset",
+      "domains": [
+        "politics",
+        "environment",
+        "population"
+      ],
+      "url": "https://www.naturalearthdata.com/",
+      "license": "ملك عام",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "naturalearth-50m"
+    },
+    {
+      "id": "pleiades",
+      "name": "Pleiades (المواقع القديمة)",
+      "kind": "dataset",
+      "domains": [
+        "politics",
+        "society",
+        "trade"
+      ],
+      "url": "https://pleiades.stoa.org/",
+      "license": "CC BY",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "pleiades-places"
+    },
+    {
+      "id": "smith-wealth",
+      "name": "آدم سميث، ثروة الأمم (طبعتا 1904)",
+      "kind": "text",
+      "domains": [
+        "economy",
+        "trade",
+        "industry"
+      ],
+      "url": "https://archive.org/details/inquirynature02smituoft",
+      "license": "ملك عام",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "smith-wealth-cannan1904-vol2"
+    },
+    {
+      "id": "tocqueville",
+      "name": "توكفيل، الديمقراطية في أمريكا (ترجمة Reeve 1840)",
+      "kind": "text",
+      "domains": [
+        "society",
+        "politics"
+      ],
+      "url": "https://archive.org/details/democracyinamer09tocqgoog",
+      "license": "ملك عام",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "tocqueville-reeve-1840-vol3"
+    },
+    {
+      "id": "nasa-gibs",
+      "name": "NASA GIBS: Blue Marble وBlack Marble",
+      "kind": "dataset",
+      "domains": [
+        "environment",
+        "population"
+      ],
+      "url": "https://earthdata.nasa.gov/gibs",
+      "license": "ملك عام",
+      "license_status": "verified",
+      "verified_via": "مسجّل في sources/manifest.json",
+      "manifest_id": "nasa-gibs-blackmarble"
+    },
+    {
+      "id": "cliopatria",
+      "name": "Seshat Cliopatria: حدود الكيانات السياسية 3400 ق.م–2024",
+      "kind": "dataset",
+      "domains": [
+        "politics",
+        "war"
+      ],
+      "url": "https://zenodo.org/records/23128623",
+      "license": "CC BY 4.0",
+      "license_status": "verified",
+      "verified_via": "سجل Zenodo الرسمي للمشروع (حقل license في واجهة zenodo.org/api)، 2026-11-01",
+      "note": "بديل محتمل لـ Historical Basemaps (GPL-3) بترخيص أيسر وبتغطية أطول؛ يحتاج تقييماً لدقة الحدود"
+    },
+    {
+      "id": "glottolog",
+      "name": "Glottolog 5.3 (لغات العالم وأسرها)",
+      "kind": "dataset",
+      "domains": [
+        "culture"
+      ],
+      "url": "https://zenodo.org/records/18840935",
+      "license": "CC BY 4.0",
+      "license_status": "verified",
+      "verified_via": "سجل Zenodo الرسمي للمشروع (حقل license في واجهة zenodo.org/api)، 2026-11-01"
+    },
+    {
+      "id": "dplace",
+      "name": "D-PLACE: البيانات المجمّعة (الأطلس الإثنوغرافي وغيره)",
+      "kind": "dataset",
+      "domains": [
+        "society",
+        "culture",
+        "agriculture",
+        "religion",
+        "environment"
+      ],
+      "url": "https://zenodo.org/records/18229037",
+      "license": "CC BY-NC 4.0",
+      "license_status": "verified",
+      "verified_via": "سجل Zenodo الرسمي للمشروع (حقل license في واجهة zenodo.org/api)، 2026-11-01",
+      "note": "غير تجاري، كبيانات Seshat"
+    },
+    {
+      "id": "plague-schmid2015",
+      "name": "موجات الطاعون في أوروبا الوسيطة وصلتها بالمناخ (Schmid، Büntgen وآخرون 2015)",
+      "kind": "dataset",
+      "domains": [
+        "health",
+        "environment"
+      ],
+      "url": "https://zenodo.org/records/14973",
+      "license": "Eclipse Public License 1.0",
+      "license_status": "verified",
+      "verified_via": "سجل Zenodo الرسمي للمشروع (حقل license في واجهة zenodo.org/api)، 2026-11-01",
+      "note": "بيانات وشيفرة دراسة PNAS 2015؛ يلزم فحص ملفاتها ومصدر سجل الأوبئة الأصلي قبل الاستعمال"
+    },
+    {
+      "id": "maddison",
+      "name": "Maddison Project Database 2023 (الناتج والسكان التاريخيان)",
+      "kind": "dataset",
+      "domains": [
+        "economy",
+        "population"
+      ],
+      "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY 4.0",
+      "note": "المرجع العالمي للناتج التاريخي؛ المضيف محجوب"
+    },
+    {
+      "id": "clio-infra",
+      "name": "Clio Infra (أجور، أسعار، تعليم، صحة، لامساواة)",
+      "kind": "dataset",
+      "domains": [
+        "economy",
+        "health",
+        "knowledge",
+        "society"
+      ],
+      "url": "https://clio-infra.eu/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "allen-unger",
+      "name": "Allen–Unger Global Commodity Prices Database",
+      "kind": "dataset",
+      "domains": [
+        "economy",
+        "trade",
+        "agriculture"
+      ],
+      "url": "https://www.gcpdb.info/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "أسعار السلع منذ العصور الوسطى؛ المضيف لم يُختبر"
+    },
+    {
+      "id": "gpih",
+      "name": "Global Price and Income History Group",
+      "kind": "dataset",
+      "domains": [
+        "economy"
+      ],
+      "url": "https://gpih.ucdavis.edu/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "boe-millennium",
+      "name": "Bank of England: A millennium of macroeconomic data",
+      "kind": "dataset",
+      "domains": [
+        "economy"
+      ],
+      "url": "https://www.bankofengland.co.uk/statistics/research-datasets",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "Open Government Licence",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "slavevoyages",
+      "name": "SlaveVoyages (تجارة الرقيق عبر الأطلسي وداخل الأمريكتين)",
+      "kind": "dataset",
+      "domains": [
+        "trade",
+        "society",
+        "population"
+      ],
+      "url": "https://www.slavevoyages.org/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "orbis",
+      "name": "ORBIS: شبكة طرق العالم الروماني (ستانفورد)",
+      "kind": "dataset",
+      "domains": [
+        "trade",
+        "war"
+      ],
+      "url": "https://orbis.stanford.edu/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "urban-pop-reba2016",
+      "name": "السكان الحضريون 3700 ق.م–2000م (Reba، Reitsma وSeto 2016)",
+      "kind": "dataset",
+      "domains": [
+        "population",
+        "society"
+      ],
+      "url": "https://sedac.ciesin.columbia.edu/data/set/urbanspatial-hist-urban-pop-3700bc-ad2000",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY 4.0",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "hmd",
+      "name": "Human Mortality Database",
+      "kind": "dataset",
+      "domains": [
+        "health",
+        "population"
+      ],
+      "url": "https://www.mortality.org/",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY 4.0",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "pages2k",
+      "name": "PAGES 2k: إعادة بناء الحرارة لألفي سنة",
+      "kind": "dataset",
+      "domains": [
+        "environment"
+      ],
+      "url": "https://www.ncei.noaa.gov/access/paleo-search/study/21171",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY 4.0 (وبيانات NOAA ملك عام)",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "owda",
+      "name": "Old World Drought Atlas (Cook وآخرون 2015)",
+      "kind": "dataset",
+      "domains": [
+        "environment",
+        "agriculture"
+      ],
+      "url": "https://www.ncei.noaa.gov/access/paleo-search/study/19419",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "ملك عام (NOAA)",
+      "note": "أطلس الجفاف لأوروبا والمتوسط منذ ألفي عام؛ المضيف محجوب"
+    },
+    {
+      "id": "faostat",
+      "name": "FAOSTAT",
+      "kind": "dataset",
+      "domains": [
+        "agriculture",
+        "economy"
+      ],
+      "url": "https://www.fao.org/faostat/",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY 4.0",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "wdi",
+      "name": "World Bank World Development Indicators",
+      "kind": "dataset",
+      "domains": [
+        "economy",
+        "population",
+        "health",
+        "knowledge"
+      ],
+      "url": "https://datacatalog.worldbank.org/",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY 4.0",
+      "note": "للمرصد الحديث؛ المضيف محجوب"
+    },
+    {
+      "id": "ucdp",
+      "name": "UCDP (نزاعات العالم)",
+      "kind": "dataset",
+      "domains": [
+        "war",
+        "politics"
+      ],
+      "url": "https://ucdp.uu.se/downloads/",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY 4.0",
+      "note": "للمرصد الحديث؛ المضيف محجوب"
+    },
+    {
+      "id": "cow",
+      "name": "Correlates of War",
+      "kind": "dataset",
+      "domains": [
+        "war",
+        "politics",
+        "trade"
+      ],
+      "url": "https://correlatesofwar.org/data-sets/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "vdem",
+      "name": "V-Dem (أنظمة الحكم منذ 1789)",
+      "kind": "dataset",
+      "domains": [
+        "politics",
+        "institutions"
+      ],
+      "url": "https://v-dem.net/data/the-v-dem-dataset/",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY-SA 4.0",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "polity5",
+      "name": "Polity5",
+      "kind": "dataset",
+      "domains": [
+        "politics",
+        "institutions"
+      ],
+      "url": "https://www.systemicpeace.org/inscrdata.html",
+      "license": null,
+      "license_status": "unverified",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "wals",
+      "name": "WALS Online (بنى لغات العالم)",
+      "kind": "dataset",
+      "domains": [
+        "culture"
+      ],
+      "url": "https://wals.info/",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY 4.0",
+      "note": "المضيف محجوب"
+    },
+    {
+      "id": "owid",
+      "name": "Our World in Data",
+      "kind": "dataset",
+      "domains": [
+        "economy",
+        "population",
+        "health",
+        "environment",
+        "knowledge"
+      ],
+      "url": "https://ourworldindata.org/",
+      "license": null,
+      "license_status": "unverified",
+      "license_reported": "CC BY 4.0 لما ينشره OWID، وتراخيص مصادره الأصلية تبقى",
+      "note": "المضيف محجوب، ومستودعه على GitHub يُجلب بـ git"
+    },
+    {
+      "id": "maqrizi-ighatha",
+      "name": "المقريزي، إغاثة الأمة بكشف الغمة (تاريخ المجاعات والنقد في مصر)",
+      "kind": "text",
+      "domains": [
+        "economy",
+        "health",
+        "agriculture",
+        "environment"
+      ],
+      "url": "https://archive.org/details/AAlexandrina-190294",
+      "license": null,
+      "license_status": "unverified",
+      "note": "المتن الوسيط ملك عام؛ حقوق التحقيق الحديث (1956) تحتاج تحققاً، ويُقتبس المتن وحده. الأولوية الأولى للموجة الثانية"
+    },
+    {
+      "id": "ibn-khatib-plague",
+      "name": "ابن الخطيب، مقنعة السائل عن المرض الهائل",
+      "kind": "text",
+      "domains": [
+        "health"
+      ],
+      "url": "https://archive.org/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "رسالة في الطاعون الأسود من غرناطة القرن الثامن الهجري؛ لم يُبحث عن طبعة بعد"
+    },
+    {
+      "id": "malthus",
+      "name": "مالثوس، مقالة في مبدأ السكان (طبعات القرن التاسع عشر)",
+      "kind": "text",
+      "domains": [
+        "population",
+        "economy",
+        "health"
+      ],
+      "url": "https://archive.org/details/essayonprinciple00maltuoft",
+      "license": null,
+      "license_status": "unverified",
+      "note": "ملك عام؛ للموجة الثالثة"
+    },
+    {
+      "id": "dimashqi",
+      "name": "أبو الفضل الدمشقي، الإشارة إلى محاسن التجارة",
+      "kind": "text",
+      "domains": [
+        "economy",
+        "trade"
+      ],
+      "url": "https://archive.org/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "لم يُبحث عن طبعة بعد"
+    },
+    {
+      "id": "mawardi",
+      "name": "الماوردي، الأحكام السلطانية",
+      "kind": "text",
+      "domains": [
+        "institutions",
+        "politics",
+        "economy"
+      ],
+      "url": "https://archive.org/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "الجباية والدواوين؛ لم يُبحث عن طبعة بعد"
+    },
+    {
+      "id": "clausewitz",
+      "name": "كلاوزفيتس، في الحرب (ترجمة Graham 1873)",
+      "kind": "text",
+      "domains": [
+        "war",
+        "politics"
+      ],
+      "url": "https://archive.org/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "ملك عام؛ للموجة الخامسة"
+    },
+    {
+      "id": "periplus",
+      "name": "الطواف حول البحر الإريتري (ترجمة Schoff 1912)",
+      "kind": "text",
+      "domains": [
+        "trade"
+      ],
+      "url": "https://archive.org/",
+      "license": null,
+      "license_status": "unverified",
+      "note": "ملك عام؛ تجارة المحيط الهندي في القرن الأول"
+    }
+  ]
+}

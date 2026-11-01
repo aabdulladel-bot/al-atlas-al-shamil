@@ -13,7 +13,12 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "الرواية عن فاهيان منقولة في مقدمة بيل، وليست من نص فاهيان الكامل",
-      "chapter": "فاهيان: الإبحار من البلد الذي أقام فيه إلى سيمهالا"
+      "chapter": "فاهيان: الإبحار من البلد الذي أقام فيه إلى سيمهالا",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000346",
@@ -23,7 +28,13 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "المسافة المذكورة 700 يوجانا تقدير، والمدة هي الموثوق منها",
-      "chapter": "فاهيان: مدة الإبحار"
+      "chapter": "فاهيان: مدة الإبحار",
+      "domains": [
+        "trade",
+        "environment"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000347",
@@ -33,7 +44,12 @@
       "layer": "contemporary_witness",
       "type": "description",
       "hedge": "الرواية تتضمن عناصر أسطورية (الشياطين تعرض السلع)، فالتجارة هي المعتمد منها",
-      "chapter": "فاهيان: تجارة سيلان"
+      "chapter": "فاهيان: تجارة سيلان",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000348",
@@ -43,7 +59,13 @@
       "layer": "contemporary_witness",
       "type": "description",
       "hedge": "اللي وحدة صينية، والرقم تقريبي كما ترجمه بيل",
-      "chapter": "شوانزانغ: فرغانة (Fei-han)"
+      "chapter": "شوانزانغ: فرغانة (Fei-han)",
+      "domains": [
+        "environment",
+        "agriculture"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000349",
@@ -53,7 +75,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "سرد غريغوريوس لحادثة بعينها، وليس وصفاً عاماً للتجارة",
-      "chapter": "غريغوريوس: ليوداست يتجول بين بيوت التجار في الساحة (الكتاب Sixth، تقريبي)"
+      "chapter": "غريغوريوس: ليوداست يتجول بين بيوت التجار في الساحة (الكتاب Sixth، تقريبي)",
+      "domains": [
+        "trade",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000350",
@@ -63,7 +91,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "الفقرة نفسها تذكر أسعار الحبوب والخمر، وهي خارج الاقتباس المعتمد",
-      "chapter": "غريغوريوس: التجار ينهبون الناس في المجاعة (الكتاب Seventh، تقريبي)"
+      "chapter": "غريغوريوس: التجار ينهبون الناس في المجاعة (الكتاب Seventh، تقريبي)",
+      "domains": [
+        "economy",
+        "health"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000351",
@@ -73,7 +107,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "تفصيل في سيرة ناسك، وليس وصفاً تجارياً مباشراً",
-      "chapter": "غريغوريوس: أعشاب مصرية يحضرها التجار لناسك (الكتاب Sixth، تقريبي)"
+      "chapter": "غريغوريوس: أعشاب مصرية يحضرها التجار لناسك (الكتاب Sixth، تقريبي)",
+      "domains": [
+        "trade",
+        "religion"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000352",
@@ -83,7 +123,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "مكيدة سياسية في الرواية، وليست وصفاً لتجارة الخمر",
-      "chapter": "غريغوريوس: الخمر الإيطالي والسوري في فخ كلوديوس (الكتاب Tenth، تقريبي)"
+      "chapter": "غريغوريوس: الخمر الإيطالي والسوري في فخ كلوديوس (الكتاب Tenth، تقريبي)",
+      "domains": [
+        "religion",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000353",
@@ -93,7 +139,12 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "الاسم الإنجليزي لدى بيدا Reptacastir، ويُعرف اليوم بموقع Richborough",
-      "chapter": "الكتاب الأول، الفصل 1 (تقريبي): وصف بريطانيا والمعبر"
+      "chapter": "الكتاب الأول، الفصل 1 (تقريبي): وصف بريطانيا والمعبر",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000354",
@@ -103,7 +154,12 @@
       "layer": "later_historian",
       "type": "quantity",
       "hedge": "الأرقام كما وردت عند بيدا، والوحدات رومانية (ميل) وإغريقية (ستاديون)",
-      "chapter": "الكتاب الأول، الفصل 1 (تقريبي): المسافة إلى البر الغالي"
+      "chapter": "الكتاب الأول، الفصل 1 (تقريبي): المسافة إلى البر الغالي",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000355",
@@ -113,7 +169,12 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "رواية بيدا عن قيصر، ينقلها من كتاب آخر، وليست تقريراً مباشراً من بيدا",
-      "chapter": "الكتاب الأول، الفصل 2 (تقريبي): أسطول قيصر"
+      "chapter": "الكتاب الأول، الفصل 2 (تقريبي): أسطول قيصر",
+      "domains": [
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000356",
@@ -123,7 +184,12 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "الحكاية تقليدية (traditio maiorum) نقلها بيدا، ولم يشهدها بنفسه",
-      "chapter": "الكتاب الثاني، الفصل 1 (تقريبي): تجار في سوق روما"
+      "chapter": "الكتاب الثاني، الفصل 1 (تقريبي): تجار في سوق روما",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000357",
@@ -133,7 +199,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "رواية بيدا، وترقيم الفصل تقريبي في هذه الطبعة",
-      "chapter": "الكتاب الرابع، الفصل 1 (تقريبي): ميناء كوينتافيك"
+      "chapter": "الكتاب الرابع، الفصل 1 (تقريبي): ميناء كوينتافيك",
+      "domains": [
+        "trade",
+        "religion"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000358",
@@ -143,7 +215,13 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
-      "chapter": "بروكوبيوس: رهبان من الهند ومن سيرِندا (الكتاب الثامن، الفصل 17 تقريباً)"
+      "chapter": "بروكوبيوس: رهبان من الهند ومن سيرِندا (الكتاب الثامن، الفصل 17 تقريباً)",
+      "domains": [
+        "industry",
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000359",
@@ -153,7 +231,13 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
-      "chapter": "بروكوبيوس: بيض دودة القز (الكتاب الثامن، الفصل 17 تقريباً)"
+      "chapter": "بروكوبيوس: بيض دودة القز (الكتاب الثامن، الفصل 17 تقريباً)",
+      "domains": [
+        "industry",
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000360",
@@ -163,7 +247,14 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "رغبة الرهبان كما يرويها بروكوبيوس، وليست سياسة للإمبراطور مثبتة من مصدر آخر",
-      "chapter": "بروكوبيوس: وقف شراء الحرير من الفرس (الكتاب الثامن، الفصل 17 تقريباً)"
+      "chapter": "بروكوبيوس: وقف شراء الحرير من الفرس (الكتاب الثامن، الفصل 17 تقريباً)",
+      "domains": [
+        "industry",
+        "trade",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000361",
@@ -173,7 +264,13 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
-      "chapter": "بروكوبيوس: إنتاج الحرير في أرض الرومان (الكتاب الثامن، الفصل 17 تقريباً)"
+      "chapter": "بروكوبيوس: إنتاج الحرير في أرض الرومان (الكتاب الثامن، الفصل 17 تقريباً)",
+      "domains": [
+        "industry",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000362",
@@ -183,7 +280,13 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
-      "chapter": "بروكوبيوس: نقل بيض الدودة (الكتاب الثامن، الفصل 17 تقريباً)"
+      "chapter": "بروكوبيوس: نقل بيض الدودة (الكتاب الثامن، الفصل 17 تقريباً)",
+      "domains": [
+        "industry",
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000366",
@@ -193,7 +296,13 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "ذكر أحداث سنة 220هـ عند الطبري، وصف لنظام الحراسة في الطريق بين أردبيل وعسكر الأفشين",
-      "chapter": "الطبري (تراث 9783، ط المعارف): حراسة القوافل من أردبيل، سنة 220هـ"
+      "chapter": "الطبري (تراث 9783، ط المعارف): حراسة القوافل من أردبيل، سنة 220هـ",
+      "domains": [
+        "trade",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000367",
@@ -203,7 +312,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "رواية الطبري عن أحداث الزنج أواخر القرن الثالث الهجري، والتاريخ الدقيق للحادثة لم يُتحقق منه بمصدر آخر",
-      "chapter": "الطبري (تراث 9783، ط المعارف): قنطرة الأهواز وانقطاع الميرة"
+      "chapter": "الطبري (تراث 9783، ط المعارف): قنطرة الأهواز وانقطاع الميرة",
+      "domains": [
+        "war",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     }
   ]
 }

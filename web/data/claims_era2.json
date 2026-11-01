@@ -13,7 +13,12 @@
       "layer": "material",
       "type": "description",
       "hedge": "نقش ملكي يعرض رواية داريوس عن نفسه",
-      "chapter": "العمود الأول: ألقاب داريوس"
+      "chapter": "العمود الأول: ألقاب داريوس",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000202",
@@ -23,7 +28,12 @@
       "layer": "material",
       "type": "description",
       "hedge": "نقش ملكي يعرض رواية داريوس عن نفسه",
-      "chapter": "العمود الأول: البلدان التي صارت في يده"
+      "chapter": "العمود الأول: البلدان التي صارت في يده",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000203",
@@ -33,7 +43,12 @@
       "layer": "material",
       "type": "quantity",
       "hedge": "القراءة في الطبعة مشكوك فيها (21 أو 23)",
-      "chapter": "العمود الأول: البلدان التي صارت في يده"
+      "chapter": "العمود الأول: البلدان التي صارت في يده",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000204",
@@ -43,7 +58,13 @@
       "layer": "material",
       "type": "event",
       "hedge": "نقش ملكي يعرض رواية داريوس عن نفسه",
-      "chapter": "العمود الثاني: البلدان التي ثارت"
+      "chapter": "العمود الثاني: البلدان التي ثارت",
+      "domains": [
+        "politics",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000205",
@@ -53,7 +74,13 @@
       "layer": "material",
       "type": "rule",
       "hedge": "علامة استفهام في الطبعة على \"road regulations\"، والنص مضطرب في أجزاء كثيرة",
-      "chapter": "إسارحدون: لوائح الطرق لبعل ملك صور"
+      "chapter": "إسارحدون: لوائح الطرق لبعل ملك صور",
+      "domains": [
+        "trade",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000206",
@@ -63,7 +90,13 @@
       "layer": "material",
       "type": "description",
       "hedge": "النص مضطرب، والأسماء بين أقواس في الطبعة",
-      "chapter": "إسارحدون: لوائح الطرق لبعل ملك صور"
+      "chapter": "إسارحدون: لوائح الطرق لبعل ملك صور",
+      "domains": [
+        "trade",
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000207",
@@ -73,7 +106,12 @@
       "layer": "material",
       "type": "quantity",
       "hedge": "حولية ملكية يروي فيها الملك إنجازاته",
-      "chapter": "إسارحدون: ترميم قصر نينوى"
+      "chapter": "إسارحدون: ترميم قصر نينوى",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000208",
@@ -83,7 +121,12 @@
       "layer": "material",
       "type": "event",
       "hedge": "عبارة great beams وغرضها غير مذكور صراحة في الفقرة",
-      "chapter": "إسارحدون: ترميم قصر نينوى"
+      "chapter": "إسارحدون: ترميم قصر نينوى",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000209",
@@ -93,7 +136,12 @@
       "layer": "material",
       "type": "event",
       "hedge": "الهدايا وصفت بـ rich (heavy) وهو وصف مترجم",
-      "chapter": "إسارحدون: تسوية المسألة العربية"
+      "chapter": "إسارحدون: تسوية المسألة العربية",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000210",
@@ -103,7 +151,13 @@
       "layer": "tradition",
       "type": "event",
       "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ ومسار أسطول سليمان إلى أوفير موضع خلاف تاريخي",
-      "chapter": "ملخص إصحاح الملوك الأول 9 (طبعة 1611، تحريري؛ يظهر في المسح تحت CHAP. X)"
+      "chapter": "ملخص إصحاح الملوك الأول 9 (طبعة 1611، تحريري؛ يظهر في المسح تحت CHAP. X)",
+      "domains": [
+        "trade",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000211",
@@ -113,7 +167,13 @@
       "layer": "tradition",
       "type": "event",
       "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ ومسار أسطول سليمان إلى أوفير موضع خلاف تاريخي",
-      "chapter": "ملخص إصحاح الملوك الأول 5 (طبعة 1611، تحريري)"
+      "chapter": "ملخص إصحاح الملوك الأول 5 (طبعة 1611، تحريري)",
+      "domains": [
+        "trade",
+        "religion"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000212",
@@ -123,7 +183,13 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "وصف هيرودوت كما بلغه، وليس مسحاً مباشراً",
-      "chapter": "الكتاب الخامس 52: الطريق المؤدي إلى الملك"
+      "chapter": "الكتاب الخامس 52: الطريق المؤدي إلى الملك",
+      "domains": [
+        "trade",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000213",
@@ -133,7 +199,12 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "وصف هيرودوت كما بلغه، وليس مسحاً مباشراً",
-      "chapter": "الكتاب الخامس 52: الطريق المؤدي إلى الملك"
+      "chapter": "الكتاب الخامس 52: الطريق المؤدي إلى الملك",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000214",
@@ -143,7 +214,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "الرواية في هيرودوت، وقد لا تكون موثقة بالكامل",
-      "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو"
+      "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو",
+      "domains": [
+        "knowledge",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000215",
@@ -153,7 +230,12 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "رواية هيرودوت، وقد لا تكون موثقة بالكامل",
-      "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو"
+      "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو",
+      "domains": [
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000216",
@@ -163,7 +245,12 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "هيرودوت يصرّح بعدم تصديقه: \"I for my part do not believe them\"",
-      "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو"
+      "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو",
+      "domains": [
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000217",
@@ -173,7 +260,13 @@
       "layer": "scripture",
       "type": "description",
       "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ حروف OCR مشوّهة في العنوان",
-      "chapter": "ملخص حزقيال 27 (طبعة 1611، تحريري)"
+      "chapter": "ملخص حزقيال 27 (طبعة 1611، تحريري)",
+      "domains": [
+        "trade",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000218",
@@ -183,7 +276,13 @@
       "layer": "scripture",
       "type": "description",
       "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ حروف OCR مشوّهة في العنوان",
-      "chapter": "ملخص حزقيال 27 (طبعة 1611، تحريري)"
+      "chapter": "ملخص حزقيال 27 (طبعة 1611، تحريري)",
+      "domains": [
+        "economy",
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000386",
@@ -193,7 +292,13 @@
       "layer": "tradition",
       "type": "quantity",
       "hedge": "نص ديني وليس سجلاً تجارياً؛ موقع أوفير محل خلاف، وقد ذكر المحرر الخلاف في الشرح نفسه",
-      "chapter": "الملوك الأول 9: أوفير"
+      "chapter": "الملوك الأول 9: أوفير",
+      "domains": [
+        "trade",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000387",
@@ -203,7 +308,13 @@
       "layer": "tradition",
       "type": "event",
       "hedge": "نص ديني وليس وثيقة تعاقد؛ الشحنة تُنقل بالبحر في الآية 5:9 كما يصفها النص نفسه",
-      "chapter": "الملوك الأول 5: حيرام وخشب لبنان"
+      "chapter": "الملوك الأول 5: حيرام وخشب لبنان",
+      "domains": [
+        "trade",
+        "religion"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000397",
@@ -213,7 +324,13 @@
       "layer": "tradition",
       "type": "event",
       "hedge": "نص نبوي وشعري يصف مدينة صور؛ كثرة الثروة وصف أدبي، وليس إحصاءً تجارياً",
-      "chapter": "حزقيال 27:12 (تجارة ترشيش)"
+      "chapter": "حزقيال 27:12 (تجارة ترشيش)",
+      "domains": [
+        "trade",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000398",
@@ -223,7 +340,14 @@
       "layer": "tradition",
       "type": "event",
       "hedge": "نص ديني نبوي؛ قائمة السلع تدل على التبادل لا على الكميات، والأرقام غير موجودة",
-      "chapter": "حزقيال 27:17 (القمح والزيت والعسل)"
+      "chapter": "حزقيال 27:17 (القمح والزيت والعسل)",
+      "domains": [
+        "trade",
+        "agriculture",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000399",
@@ -233,7 +357,13 @@
       "layer": "tradition",
       "type": "event",
       "hedge": "نص نبوي؛ حلبون وصف لنوع من الخمر في النص نفسه، والعلاقة التجارية مُقدَّمة كشهادة على ثراء صور",
-      "chapter": "حزقيال 27:18 (تجارة دمشق)"
+      "chapter": "حزقيال 27:18 (تجارة دمشق)",
+      "domains": [
+        "trade",
+        "agriculture"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     }
   ]
 }

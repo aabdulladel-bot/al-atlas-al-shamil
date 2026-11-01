@@ -13,7 +13,13 @@
       "layer": "modern_scholarship",
       "type": "event",
       "hedge": "هذا من مقدمة شافان لا من نص سيما تشيان؛ فصل الفرغانة (123) لم يُستخرج بعد",
-      "chapter": "مقدمة شافان: الطريق الغربي بعد حملات الهان (يُكتب بالمقدمة لا بنص سيما تشيان)"
+      "chapter": "مقدمة شافان: الطريق الغربي بعد حملات الهان (يُكتب بالمقدمة لا بنص سيما تشيان)",
+      "domains": [
+        "trade",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000302",
@@ -23,7 +29,13 @@
       "layer": "modern_scholarship",
       "type": "event",
       "hedge": "هذا من مقدمة شافان لا من نص سيما تشيان؛ فصل الفرغانة (123) لم يُستخرج بعد",
-      "chapter": "مقدمة شافان: الطريق الغربي بعد حملات الهان (يُكتب بالمقدمة لا بنص سيما تشيان)"
+      "chapter": "مقدمة شافان: الطريق الغربي بعد حملات الهان (يُكتب بالمقدمة لا بنص سيما تشيان)",
+      "domains": [
+        "politics",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000303",
@@ -33,7 +45,12 @@
       "layer": "modern_scholarship",
       "type": "description",
       "hedge": "قول شافان نفسه: \"en l'abrégeant peut-être\"، ولم نفحص النص الأصلي بعد",
-      "chapter": "مقدمة شافان: تقرير تشانغ تشيان (يذكر أن سيما تشيان حفظ نصه)"
+      "chapter": "مقدمة شافان: تقرير تشانغ تشيان (يذكر أن سيما تشيان حفظ نصه)",
+      "domains": [
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000304",
@@ -43,7 +60,13 @@
       "layer": "modern_scholarship",
       "type": "description",
       "hedge": "هذا من مقدمة شافان لا من نص سيما تشيان؛ فصل الفرغانة (123) لم يُستخرج بعد",
-      "chapter": "مقدمة شافان: تقرير تشانغ تشيان (يذكر أن سيما تشيان حفظ نصه)"
+      "chapter": "مقدمة شافان: تقرير تشانغ تشيان (يذكر أن سيما تشيان حفظ نصه)",
+      "domains": [
+        "knowledge",
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000305",
@@ -53,7 +76,13 @@
       "layer": "modern_scholarship",
       "type": "event",
       "hedge": "هذا من مقدمة شافان لا من نص سيما تشيان؛ فصل الفرغانة (123) لم يُستخرج بعد",
-      "chapter": "مقدمة شافان: أول علاقات منتظمة مع الهان"
+      "chapter": "مقدمة شافان: أول علاقات منتظمة مع الهان",
+      "domains": [
+        "politics",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000306",
@@ -63,7 +92,12 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "الـ«لي» وحدة طول صينية، والرقم تقريبي كما ورد (可萬里)",
-      "chapter": "史記 卷123 大宛列傳：大宛的位置與俗"
+      "chapter": "史記 卷123 大宛列傳：大宛的位置與俗",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000307",
@@ -73,7 +107,13 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "数十万 تقدير عام لا إحصاء دقيق",
-      "chapter": "史記 卷123 大宛列傳：大宛的位置與俗"
+      "chapter": "史記 卷123 大宛列傳：大宛的位置與俗",
+      "domains": [
+        "population",
+        "society"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000308",
@@ -83,7 +123,13 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
-      "chapter": "史記 卷123 大宛列傳：大宛的位置與俗"
+      "chapter": "史記 卷123 大宛列傳：大宛的位置與俗",
+      "domains": [
+        "agriculture",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000309",
@@ -93,7 +139,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
-      "chapter": "史記 卷123 大宛列傳：وصول تشانغ تشيان إلى دايوان"
+      "chapter": "史記 卷123 大宛列傳：وصول تشانغ تشيان إلى دايوان",
+      "domains": [
+        "politics",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000310",
@@ -103,7 +155,12 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
-      "chapter": "史記 卷123 大宛列傳：張騫出使月氏，經大宛"
+      "chapter": "史記 卷123 大宛列傳：張騫出使月氏，經大宛",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000311",
@@ -113,7 +170,13 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
-      "chapter": "史記 卷123 大宛列傳：所至之國"
+      "chapter": "史記 卷123 大宛列傳：所至之國",
+      "domains": [
+        "politics",
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000312",
@@ -123,7 +186,12 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "\"数千里\" تقدير عام، والـ«لي» وحدة طول صينية",
-      "chapter": "史記 卷123 大宛列傳：الأنسي (فرثيا): الأسواق والتجارة"
+      "chapter": "史記 卷123 大宛列傳：الأنسي (فرثيا): الأسواق والتجارة",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000313",
@@ -133,7 +201,12 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
-      "chapter": "史記 卷123 大宛列傳：باكتريا (大夏) والهند (身毒)"
+      "chapter": "史記 卷123 大宛列傳：باكتريا (大夏) والهند (身毒)",
+      "domains": [
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000314",
@@ -143,7 +216,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
-      "chapter": "史記 卷123 大宛列傳：تشانغ تشيان: الطرق من شو إلى باكتريا"
+      "chapter": "史記 卷123 大宛列傳：تشانغ تشيان: الطرق من شو إلى باكتريا",
+      "domains": [
+        "trade",
+        "industry"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000315",
@@ -153,7 +232,12 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "هذا رأي تشانغ تشيان ومقترحه، وليس وصفاً للطريق نفسه",
-      "chapter": "史記 卷123 大宛列傳：تشانغ تشيان: الطرق من شو إلى باكتريا"
+      "chapter": "史記 卷123 大宛列傳：تشانغ تشيان: الطرق من شو إلى باكتريا",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000316",
@@ -163,7 +247,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
-      "chapter": "史記 卷123 大宛列傳：بعد وفاة تشانغ تشيان: الحصون والطرق إلى الغرب"
+      "chapter": "史記 卷123 大宛列傳：بعد وفاة تشانغ تشيان: الحصون والطرق إلى الغرب",
+      "domains": [
+        "war",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000317",
@@ -173,7 +263,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
-      "chapter": "史記 卷123 大宛列傳：بعد وفاة تشانغ تشيان: الحصون والطرق إلى الغرب"
+      "chapter": "史記 卷123 大宛列傳：بعد وفاة تشانغ تشيان: الحصون والطرق إلى الغرب",
+      "domains": [
+        "politics",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000318",
@@ -183,7 +279,12 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "هذا ادعاء بيثياس كما نقله بوليبيوس، وبوليبيوس نفسه يرفضه",
-      "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال"
+      "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال",
+      "domains": [
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000319",
@@ -193,7 +294,12 @@
       "layer": "later_historian",
       "type": "judgment",
       "hedge": "حكم بوليبيوس على مصداقية بيثياس، وليس تحققاً مستقلاً من رحلته",
-      "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال"
+      "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال",
+      "domains": [
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000320",
@@ -203,7 +309,12 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "ادعاء بيثياس كما نقله بوليبيوس، ويرفضه بوليبيوس",
-      "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال"
+      "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال",
+      "domains": [
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000321",
@@ -213,7 +324,12 @@
       "layer": "later_historian",
       "type": "quantity",
       "hedge": "الستاديون وحدة طول إغريقية، والرقم رواية بيثياس كما نقلها بوليبيوس",
-      "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال"
+      "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال",
+      "domains": [
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000322",
@@ -223,7 +339,14 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "يذكر ثوكيديديس أنهم ثاروا قبل الموعد المقرر",
-      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: things that they were engaged in fetchin"
+      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: things that they were engaged in fetchin",
+      "domains": [
+        "agriculture",
+        "trade",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000323",
@@ -233,7 +356,13 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "رواية ثوكيديديس لقرار عسكري، والغاية المذكورة تعليله هو",
-      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: to enable their corn-ships to round it"
+      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: to enable their corn-ships to round it",
+      "domains": [
+        "war",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000324",
@@ -243,7 +372,13 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "إجراء عسكري أثيني يذكره ثوكيديديس، وليس وصفاً مباشراً للطريق",
-      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: the passage of the merchantmen from Phas"
+      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: the passage of the merchantmen from Phas",
+      "domains": [
+        "war",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000325",
@@ -253,7 +388,13 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "رواية ثوكيديديس؛ يصفها بأنها بدأت قبل أن يردّ الآخرون بالمثل",
-      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: all the Athenian and allied traders whom"
+      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: all the Athenian and allied traders whom",
+      "domains": [
+        "war",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000326",
@@ -263,7 +404,12 @@
       "layer": "contemporary_witness",
       "type": "description",
       "hedge": "تقدير ملاحي على ساحل الإمبراطورية الأوديسية؛ عليه ريح خلفية دائمة، فهو تقدير لظروف مثالية",
-      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: takes a merchantman four days and four n"
+      "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: takes a merchantman four days and four n",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000327",
@@ -273,7 +419,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "الفقرة في الكتاب 13 تقريباً، والتاريخ لم يُتحقق منه بمصدر آخر",
-      "chapter": "الحوليات، الكتاب XIII (تقريبي)، الفقرة 51 (تقريبي)"
+      "chapter": "الحوليات، الكتاب XIII (تقريبي)، الفقرة 51 (تقريبي)",
+      "domains": [
+        "economy",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000328",
@@ -283,7 +435,14 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "الحكم نفسه يُنسب إلى قرار رسمي يذكره تاسيتوس؛ نقل مباشر لا تفسير",
-      "chapter": "الحوليات، الكتاب XIII (تقريبي)، الفقرة 51 (تقريبي)"
+      "chapter": "الحوليات، الكتاب XIII (تقريبي)، الفقرة 51 (تقريبي)",
+      "domains": [
+        "economy",
+        "institutions",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000329",
@@ -293,7 +452,12 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "الوصف يسبق أحداث الثورة في الكتاب 14، وما بعده لا يرد في هذه الفقرة",
-      "chapter": "الحوليات، الكتاب 14، الفقرة 33 (ظاهرة في النص: \"33. Suetonius\")"
+      "chapter": "الحوليات، الكتاب 14، الفقرة 33 (ظاهرة في النص: \"33. Suetonius\")",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000330",
@@ -303,7 +467,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "الحادثة في الكتاب 12 تقريباً؛ الكليتاي قبيلة جبلية تهاجم الساحل",
-      "chapter": "الحوليات، الكتاب XII (تقريبي)، الفقرة 55 (تقريبي)"
+      "chapter": "الحوليات، الكتاب XII (تقريبي)، الفقرة 55 (تقريبي)",
+      "domains": [
+        "society",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000331",
@@ -313,7 +483,12 @@
       "layer": "material",
       "type": "event",
       "hedge": "المعنى المقصود 'علاج'، والقراءة من OCR لمتغير المخطوطة G؛ الترجمة من عندنا",
-      "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)"
+      "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)",
+      "domains": [
+        "health"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000332",
@@ -323,7 +498,13 @@
       "layer": "material",
       "type": "event",
       "hedge": "القراءة من OCR مشوشة، والربط بين الطرق والآبار يحتاج مراجعة يدوية",
-      "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)"
+      "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)",
+      "domains": [
+        "health",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000333",
@@ -333,7 +514,13 @@
       "layer": "material",
       "type": "event",
       "hedge": "متغير براكريتي آخر لـ'على الطرق'؛ يتقاطع مع 332 لكنه ليس تأكيداً مستقلاً تماماً لأن OCR واحد",
-      "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)"
+      "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)",
+      "domains": [
+        "health",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000334",
@@ -343,7 +530,14 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "الخيل السماوية والعنب من تقرير الرحلات الغربية، وهذه الجملة في خاتمة الفصل (الحكم التاريخي)",
-      "chapter": "漢書 卷96下 西域傳：赞：开玉门、通大宛安息"
+      "chapter": "漢書 卷96下 西域傳：赞：开玉门、通大宛安息",
+      "domains": [
+        "politics",
+        "trade",
+        "agriculture"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000335",
@@ -353,7 +547,14 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "عبارة خاتمة تلخيصية، وليست تفصيل حدث بعينه",
-      "chapter": "漢書 卷96下 西域傳：赞：开玉门、通大宛安息"
+      "chapter": "漢書 卷96下 西域傳：赞：开玉门、通大宛安息",
+      "domains": [
+        "politics",
+        "trade",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000336",
@@ -363,7 +564,13 @@
       "layer": "later_historian",
       "type": "event",
       "hedge": "النص يذكر النية (欲开)، ولا يذكر تنفيذ الطريق في هذه الفقرة",
-      "chapter": "漢書 卷96下 西域傳：车师后王国新道与玉门关"
+      "chapter": "漢書 卷96下 西域傳：车师后王国新道与玉门关",
+      "domains": [
+        "politics",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000337",
@@ -373,7 +580,12 @@
       "layer": "later_historian",
       "type": "quantity",
       "hedge": "اللي وحدة صينية، والأرقام كما وردت في النص",
-      "chapter": "漢書 卷96下 西域傳：乌孫国：里数"
+      "chapter": "漢書 卷96下 西域傳：乌孫国：里数",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000338",
@@ -383,7 +595,14 @@
       "layer": "tradition",
       "type": "rule",
       "hedge": "نص تعليمي للحكم وليس وصفاً لواقع؛ 'الطرق المائية' تحتمل قنوات أو أنهاراً",
-      "chapter": "كوتيليا (منسوب): مهام الملك في استيطان الأراضي"
+      "chapter": "كوتيليا (منسوب): مهام الملك في استيطان الأراضي",
+      "domains": [
+        "trade",
+        "institutions",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000339",
@@ -393,7 +612,13 @@
       "layer": "tradition",
       "type": "rule",
       "hedge": "OCR الأسماء بين الأقواس مشوش، والمعنى من الترجمة الإنجليزية",
-      "chapter": "كوتيليا (منسوب): تطهير الطرق من التعدي والسرقة"
+      "chapter": "كوتيليا (منسوب): تطهير الطرق من التعدي والسرقة",
+      "domains": [
+        "trade",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000340",
@@ -403,7 +628,13 @@
       "layer": "tradition",
       "type": "rule",
       "hedge": "مخطط مثالي للمدينة، وليس وصفاً لمدينة فعلية",
-      "chapter": "كوتيليا (منسوب): تخطيط المدينة المحصنة"
+      "chapter": "كوتيليا (منسوب): تخطيط المدينة المحصنة",
+      "domains": [
+        "society",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000341",
@@ -413,7 +644,14 @@
       "layer": "tradition",
       "type": "rule",
       "hedge": "كلمة sulka مقروءة من OCR مشوش (4ullca)، والمعنى من الترجمة",
-      "chapter": "كوتيليا (منسوب): الجمارك على مبيعات الملك"
+      "chapter": "كوتيليا (منسوب): الجمارك على مبيعات الملك",
+      "domains": [
+        "economy",
+        "institutions",
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000342",
@@ -423,7 +661,12 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "الطريق يتصل بلائحة مدن بعينها في النص، والمسافات غير مذكورة فيه",
-      "chapter": "漢書 卷96上 西域傳：طريقان من يومن ويانغ"
+      "chapter": "漢書 卷96上 西域傳：طريقان من يومن ويانغ",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000343",
@@ -433,7 +676,12 @@
       "layer": "later_historian",
       "type": "description",
       "hedge": "أسماء الأماكن كما وردت، وبعضها غير محدد بالخريطة الحديثة",
-      "chapter": "漢書 卷96上 西域傳：طريقان من يومن ويانغ"
+      "chapter": "漢書 卷96上 西域傳：طريقان من يومن ويانغ",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000344",
@@ -443,7 +691,12 @@
       "layer": "later_historian",
       "type": "quantity",
       "hedge": "اللي وحدة صينية، و\"三百餘里\" تعني أكثر من ثلاثمئة، فالرقم حد أدنى",
-      "chapter": "漢書 卷96上 西域傳：بحيرة بوتشانغ"
+      "chapter": "漢書 卷96上 西域傳：بحيرة بوتشانغ",
+      "domains": [
+        "environment"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000383",
@@ -453,7 +706,14 @@
       "layer": "later_historian",
       "type": "rule",
       "hedge": "بوليبيوس نفسه يقدّم النص بعبارة \"more or less as follows\"، أي إعادة صياغة وليس نص الوثيقة؛ والمعنى تأكد بالنص اليوناني (μακρὸν πλοῖον)",
-      "chapter": "بوليبيوس الكتاب 3: معاهدة روما وقرطاجة الأولى"
+      "chapter": "بوليبيوس الكتاب 3: معاهدة روما وقرطاجة الأولى",
+      "domains": [
+        "trade",
+        "politics",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000384",
@@ -463,7 +723,12 @@
       "layer": "later_historian",
       "type": "judgment",
       "hedge": "شهادة عن صعوبة النص في زمن بوليبيوس، وليست قراءة مباشرة للوثيقة",
-      "chapter": "بوليبيوس الكتاب 3: صعوبة قراءة المعاهدة"
+      "chapter": "بوليبيوس الكتاب 3: صعوبة قراءة المعاهدة",
+      "domains": [
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000385",
@@ -473,7 +738,14 @@
       "layer": "later_historian",
       "type": "rule",
       "hedge": "يصف بوليبيوس المعاهدة اللاحقة بعبارة \"more or less as follows\" أيضاً، فالنص صياغة له وليس نص الوثيقة",
-      "chapter": "بوليبيوس الكتاب 3: معاهدة لاحقة"
+      "chapter": "بوليبيوس الكتاب 3: معاهدة لاحقة",
+      "domains": [
+        "politics",
+        "trade",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000392",
@@ -483,7 +755,14 @@
       "layer": "later_historian",
       "type": "judgment",
       "hedge": "حكم قيمي من المؤرخ على المشهد الروماني، وليس وصفاً محايداً؛ وهو مقدمة لإدانة نهب الأعمال الفنية",
-      "chapter": "بوليبيوس الكتاب IX"
+      "chapter": "بوليبيوس الكتاب IX",
+      "domains": [
+        "society",
+        "war",
+        "culture"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000393",
@@ -493,7 +772,13 @@
       "layer": "later_historian",
       "type": "judgment",
       "hedge": "تفسير نفسي من المؤرخ لرد فعل المغلوبين، لا قياس لمشاعرهم؛ وفي النص نفسه إقرار بأن للنهب مبرراته",
-      "chapter": "بوليبيوس الكتاب IX"
+      "chapter": "بوليبيوس الكتاب IX",
+      "domains": [
+        "war",
+        "society"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000394",
@@ -503,7 +788,12 @@
       "layer": "later_historian",
       "type": "rule",
       "hedge": "قاعدة عامة عن المشاريع العسكرية يبنيها بوليبيوس على تجارب القادة، وليست قانوناً تاريخياً مُختبراً",
-      "chapter": "بوليبيوس الكتاب IX"
+      "chapter": "بوليبيوس الكتاب IX",
+      "domains": [
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000395",
@@ -513,7 +803,12 @@
       "layer": "later_historian",
       "type": "rule",
       "hedge": "بوليبيوس يرفض هنا رأياً سائداً بأن الظروف تكشف الطبع؛ والعبارة تعميم عن \"بعض الأمراء\" لا عن الجميع",
-      "chapter": "بوليبيوس الكتاب IX"
+      "chapter": "بوليبيوس الكتاب IX",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000396",
@@ -523,7 +818,13 @@
       "layer": "later_historian",
       "type": "judgment",
       "hedge": "معيار تقييمي من المؤرخ للقادة الذين يخاطرون؛ العبارة مشروطة بسلامة التفكير، وهو حكم لا يُقاس",
-      "chapter": "بوليبيوس الكتاب IX"
+      "chapter": "بوليبيوس الكتاب IX",
+      "domains": [
+        "politics",
+        "culture"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000400",
@@ -533,7 +834,13 @@
       "layer": "later_historian",
       "type": "judgment",
       "hedge": "حكم من المؤرخ على قرار روماني؛ ويسير هنا عكس اتجاه سُنّة ابن خلدون (المغلوب يقلّد الغالب)، فهو شاهد مقيِّد لا ناقض لها",
-      "chapter": "بوليبيوس الكتاب IX §10: غنائم سرقوسة"
+      "chapter": "بوليبيوس الكتاب IX §10: غنائم سرقوسة",
+      "domains": [
+        "culture",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000401",
@@ -543,7 +850,14 @@
       "layer": "later_historian",
       "type": "judgment",
       "hedge": "تعميم من المؤرخ عن جيل روماني سابق، يُستعمل حجةً في جدال أخلاقي؛ ليس وصفاً إحصائياً لنمط العيش",
-      "chapter": "بوليبيوس الكتاب IX §10: غنائم سرقوسة"
+      "chapter": "بوليبيوس الكتاب IX §10: غنائم سرقوسة",
+      "domains": [
+        "culture",
+        "society",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000402",
@@ -553,7 +867,13 @@
       "layer": "contemporary_witness",
       "type": "description",
       "hedge": "تاسيتوس يكتب سيرة حميه أغريكولا، والتقليد هنا ثمرة سياسة رومانية مقصودة (تشجيع وبناء وتعليم)، لا ميل تلقائي فقط",
-      "chapter": "تاسيتوس، أغريكولا 21: البريطانيون والعادات الرومانية"
+      "chapter": "تاسيتوس، أغريكولا 21: البريطانيون والعادات الرومانية",
+      "domains": [
+        "culture",
+        "society"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000403",
@@ -563,7 +883,13 @@
       "layer": "contemporary_witness",
       "type": "judgment",
       "hedge": "حكم أخلاقي من تاسيتوس على المغلوبين؛ يتفق مع تفسير ابن خلدون للتقليد بالانقياد، لكنه من جهة الغالب لا المغلوب",
-      "chapter": "تاسيتوس، أغريكولا 21: البريطانيون والعادات الرومانية"
+      "chapter": "تاسيتوس، أغريكولا 21: البريطانيون والعادات الرومانية",
+      "domains": [
+        "culture",
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000404",
@@ -573,7 +899,14 @@
       "layer": "later_historian",
       "type": "cause",
       "hedge": "تفسير أخلاقي وعظي من سالوست لانحدار الجمهورية، كتبه بعد نحو قرن من سقوط قرطاجة",
-      "chapter": "سالوست، كاتيلينا 10: بعد زوال قرطاجة"
+      "chapter": "سالوست، كاتيلينا 10: بعد زوال قرطاجة",
+      "domains": [
+        "economy",
+        "politics",
+        "society"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000405",
@@ -583,7 +916,13 @@
       "layer": "later_historian",
       "type": "judgment",
       "hedge": "حكم أخلاقي عام لا قياس فيه؛ لكنه شاهد مستقل عن ابن خلدون على فكرة أن الدعة بعد الشدة تُفسد",
-      "chapter": "سالوست، كاتيلينا 10: بعد زوال قرطاجة"
+      "chapter": "سالوست، كاتيلينا 10: بعد زوال قرطاجة",
+      "domains": [
+        "society",
+        "economy"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000406",
@@ -593,7 +932,13 @@
       "layer": "later_historian",
       "type": "judgment",
       "hedge": "الجملة بين علامتي < > في هذه النسخة، فقد تكون زيادة نقدية من المحررين؛ والسياق عن نشأة روما شبه الأسطورية",
-      "chapter": "سالوست، كاتيلينا 6: نشأة روما"
+      "chapter": "سالوست، كاتيلينا 6: نشأة روما",
+      "domains": [
+        "society",
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     }
   ]
 }

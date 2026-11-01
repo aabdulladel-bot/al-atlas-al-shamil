@@ -584,6 +584,42 @@
           "bytes": 106656
         }
       ]
+    },
+    {
+      "id": "smith-wealth-oup1904-vol1",
+      "file": "verification/era7/smith_oup1904_vol1.txt",
+      "url": "https://archive.org/stream/inquiryintonatur01smit_3/inquiryintonatur01smit_3_djvu.txt",
+      "license": "ملك عام: نص آدم سميث (ت. 1790)، طبعة Oxford University Press، لندن 1904 (منشورة قبل 1929).",
+      "tier": "A",
+      "landing": "https://archive.org/details/inquiryintonatur01smit_3",
+      "attribution": "Adam Smith, An Inquiry into the Nature and Causes of the Wealth of Nations, vol. 1 (London: Oxford University Press, 1904); scan by UNC Chapel Hill via Internet Archive",
+      "note": "نص OCR فيه أخطاء متفرقة. يُقتبس من متن سميث وحده. يحوي الكتب I–III. مستخرج من وسم <pre> في صفحة الأرشيف.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era7/smith_oup1904_vol1.txt",
+          "sha256": "23adc1df3bea86299f3db7fc382597710cf00a46b1a6496910dabc68f6cc8b27",
+          "bytes": 1016280
+        }
+      ]
+    },
+    {
+      "id": "smith-wealth-cannan1904-vol2",
+      "file": "verification/era7/smith_cannan1904_vol2.txt",
+      "url": "https://archive.org/stream/inquirynature02smituoft/inquirynature02smituoft_djvu.txt",
+      "license": "ملك عام: نص آدم سميث (ت. 1790)، تحرير Edwin Cannan (ت. 1935)، Methuen وPutnam، 1904 (منشورة قبل 1929). الأرشيف يصنّفها NOT_IN_COPYRIGHT.",
+      "tier": "A",
+      "landing": "https://archive.org/details/inquirynature02smituoft",
+      "attribution": "Adam Smith, The Wealth of Nations, ed. Edwin Cannan, vol. 2 (London: Methuen; New York: Putnam, 1904); scan by University of Toronto via Internet Archive",
+      "note": "نص OCR. يُقتبس من متن سميث وحده لا من هوامش المحرر. يحوي الكتب IV–V. مستخرج من وسم <pre> في صفحة الأرشيف.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "verification/era7/smith_cannan1904_vol2.txt",
+          "sha256": "f92b21b70fe90d5804cd27afaec8df28120dfe39929788f8c6d7ce7e075024ba",
+          "bytes": 1795122
+        }
+      ]
     }
   ]
 }

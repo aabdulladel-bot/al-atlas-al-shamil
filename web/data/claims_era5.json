@@ -13,7 +13,13 @@
       "layer": "contemporary_witness",
       "type": "description",
       "hedge": "وصف بولو لطول الطريق ومخاطره في وقت الرسالة، وليس قياساً حديثاً للمسافة",
-      "chapter": "ماركو بولو: الطريق البري من بكين إلى تبريز"
+      "chapter": "ماركو بولو: الطريق البري من بكين إلى تبريز",
+      "domains": [
+        "trade",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000364",
@@ -23,7 +29,14 @@
       "layer": "contemporary_witness",
       "type": "event",
       "hedge": "رواية بولو عن رحلة المبعوثين، والسبب المذكور منه",
-      "chapter": "ماركو بولو: الطريق البري من بكين إلى تبريز"
+      "chapter": "ماركو بولو: الطريق البري من بكين إلى تبريز",
+      "domains": [
+        "trade",
+        "war",
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000365",
@@ -33,7 +46,13 @@
       "layer": "contemporary_witness",
       "type": "description",
       "hedge": "تعليق من القرن التاسع عشر، وليس نص بولو؛ وصف عام لا إحصاء. موضع الفقرة في الطبعة الأصلية لم يُتحقَّق منه بعد",
-      "chapter": "تعليق يول على رحلة بولو: طرق القوافل بعد الفتح المغولي"
+      "chapter": "تعليق يول على رحلة بولو: طرق القوافل بعد الفتح المغولي",
+      "domains": [
+        "trade",
+        "war"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000368",
@@ -43,7 +62,12 @@
       "layer": "contemporary_witness",
       "type": "description",
       "hedge": "سنة طبع المجلد غير مقروءة في الملف، والمرجح أنه 1853",
-      "chapter": "ابن بطوطة (Defrémery وSanguinetti): وصف الإسكندرية وأرصفتها ومقارنتها بموانئ أخرى"
+      "chapter": "ابن بطوطة (Defrémery وSanguinetti): وصف الإسكندرية وأرصفتها ومقارنتها بموانئ أخرى",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000369",
@@ -53,7 +77,12 @@
       "layer": "contemporary_witness",
       "type": "description",
       "hedge": "أسماء الموانئ في النص الفرنسي مشوهة بالـ OCR (Coùlemet، Käbikoëth، Zeïtoûn)، والمعنى من الترجمة",
-      "chapter": "ابن بطوطة (Defrémery وSanguinetti): وصف الإسكندرية وأرصفتها ومقارنتها بموانئ أخرى"
+      "chapter": "ابن بطوطة (Defrémery وSanguinetti): وصف الإسكندرية وأرصفتها ومقارنتها بموانئ أخرى",
+      "domains": [
+        "trade"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     },
     {
       "id": "cl_000000377",
@@ -63,7 +92,12 @@
       "layer": "contemporary_witness",
       "type": "rule",
       "hedge": "المؤلف نفسه يقول إن القاعدة \"عامة الصحة\" ولها استثناءات، فهي حكم نظري وليست قانوناً تاريخياً مُختبراً",
-      "chapter": "المقدمة: الحسب والنسب"
+      "chapter": "المقدمة: الحسب والنسب",
+      "domains": [
+        "society"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000378",
@@ -73,7 +107,13 @@
       "layer": "later_historian",
       "type": "cause",
       "hedge": "تفسير المؤلف لسلوك جماعة في صدر الإسلام، وليس وثيقة معاصرة لهم",
-      "chapter": "المقدمة: الترف والبداوة"
+      "chapter": "المقدمة: الترف والبداوة",
+      "domains": [
+        "society",
+        "culture"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000379",
@@ -83,7 +123,12 @@
       "layer": "contemporary_witness",
       "type": "judgment",
       "hedge": "حكم على جماعة في زمن المؤلف يبنيه على مشاهدته، وليس قياساً كمياً",
-      "chapter": "المقدمة: العصبية في الأندلس"
+      "chapter": "المقدمة: العصبية في الأندلس",
+      "domains": [
+        "society"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000380",
@@ -93,7 +138,13 @@
       "layer": "contemporary_witness",
       "type": "rule",
       "hedge": "تعميم نظري عن الزعامة، وليس وصفاً لحالة بعينها",
-      "chapter": "المقدمة: الملك والقهر"
+      "chapter": "المقدمة: الملك والقهر",
+      "domains": [
+        "politics",
+        "society"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000381",
@@ -103,7 +154,12 @@
       "layer": "contemporary_witness",
       "type": "rule",
       "hedge": "شرط مشروط (إذا ضعفت... فإنها تسقط)، وليس قانوناً مطلقاً",
-      "chapter": "المقدمة: سقوط الدول"
+      "chapter": "المقدمة: سقوط الدول",
+      "domains": [
+        "politics"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000382",
@@ -113,7 +169,12 @@
       "layer": "contemporary_witness",
       "type": "judgment",
       "hedge": "تعميم على شعب كامل مبني على الاستشهاد بأمثلة، وليس دراسة إحصائية",
-      "chapter": "المقدمة: العصبية عند العرب"
+      "chapter": "المقدمة: العصبية عند العرب",
+      "domains": [
+        "society"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000421",
@@ -123,7 +184,13 @@
       "layer": "tradition",
       "type": "judgment",
       "hedge": "حكم وعظي في كتاب نصيحة للملوك لا رصد تاريخي. نسبة الكتاب إلى الغزالي محل نظر عند بعض الباحثين، ولم يُتحقق في هذه الجولة من موضع هذا الفصل في الأصل الفارسي",
-      "chapter": "في ذكر العدل والسياسة وذكر الملوك وسيرهم"
+      "chapter": "في ذكر العدل والسياسة وذكر الملوك وسيرهم",
+      "domains": [
+        "politics",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     },
     {
       "id": "cl_000000422",
@@ -133,7 +200,13 @@
       "layer": "tradition",
       "type": "reported_belief",
       "hedge": "النص ينسب القول إلى النبي ﷺ، ولم يُتحقق من نسبته في كتب الحديث في هذه الجولة، فلا يُعرض حديثاً",
-      "chapter": "في ذكر العدل والسياسة وذكر الملوك وسيرهم"
+      "chapter": "في ذكر العدل والسياسة وذكر الملوك وسيرهم",
+      "domains": [
+        "politics",
+        "religion"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": true
     }
   ]
 }
