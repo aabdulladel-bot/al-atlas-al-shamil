@@ -1335,7 +1335,8 @@ legendToggle.addEventListener("click", () => {
 function scheduleLegend() {
   if (scheduleLegend.queued) return;
   scheduleLegend.queued = true;
-  requestAnimationFrame(() => { scheduleLegend.queued = false; renderLegend(); });
+  // بعد المهمة الجارية لا في الإطار التالي: يُجمع ما تغيّر معاً ولا يتأخر المفتاح ببطء الرسم
+  queueMicrotask(() => { scheduleLegend.queued = false; renderLegend(); });
 }
 function renderLegend() {
   const row = (sw, text, sub = "") => `<div class="lg-row"><i class="lg-sw lg-${sw}"></i><span>${text}${sub ? ` <span class="sub">${sub}</span>` : ""}</span></div>`;

@@ -327,7 +327,7 @@ try {
     await page.click('#sunan-list button[data-sunna="sn_luxury"]');
     await page.waitForSelector("#sunan-detail [data-start-journey]", { timeout: 30000 });
     // لغة الطبقات: أماكن الشواهد بدورها في السُّنّة المختارة، والمفتاح الحيّ يذكر الأدوار، والمواقع رموز بحسب نوعها
-    await page.waitForTimeout(400);
+    await page.waitForFunction(() => document.getElementById("legend-body").textContent.includes("مقيِّد"), null, { timeout: 10000 }).catch(() => {});
     const lg = await page.evaluate(() => ({
       rows: [...document.querySelectorAll("#legend-body .lg-row")].map((r) => r.textContent),
       color: JSON.stringify(map.getPaintProperty("claim-points", "circle-color")),
