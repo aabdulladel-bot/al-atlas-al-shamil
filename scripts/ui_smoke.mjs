@@ -47,6 +47,7 @@ async function visualCheck(browser, name, viewport) {
   await page.addInitScript(() => { try { localStorage.setItem("atlas-intro-seen", "1"); } catch {} });
   await page.route("**/elevation-tiles-prod/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: FLAT_TILE, headers: { "access-control-allow-origin": "*" } }));
   await page.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
+  await page.route(/fonts\.(googleapis|gstatic)\.com/, (route) => route.fulfill({ status: 200, contentType: "text/css", body: "" }));
   await page.goto(URL, { waitUntil: "networkidle" });
   await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 60000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
   await page.waitForFunction(() => typeof time !== "undefined" && time.key === 1200 && document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 90000 });
@@ -112,6 +113,8 @@ try {
     const page = await browser.newPage({ viewport });
     await page.route("**/elevation-tiles-prod/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: FLAT_TILE, headers: { "access-control-allow-origin": "*" } }));
     await page.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
+    // خطوط Google تُستبدل بلا شيء، فتُرسم بخطوط النظام نفسها في كل تشغيل
+    await page.route(/fonts\.(googleapis|gstatic)\.com/, (route) => route.fulfill({ status: 200, contentType: "text/css", body: "" }));
     page.on("console", (m) => { if (m.type() === "error") problems.push(`[${name}] console: ${m.text()}`); });
     page.on("pageerror", (e) => problems.push(`[${name}] pageerror: ${e.message}`));
     page.on("response", (r) => { if (r.status() >= 400) problems.push(`[${name}] HTTP ${r.status()} ${r.url()}`); });
@@ -232,7 +235,53 @@ try {
     await page.screenshot({ path: path.join(ROOT, "out", `card_${name}.png`) });
     await page.click("#card .card-close"); await page.waitForTimeout(300);
     if (!(await page.$eval("#card", (c) => c.hidden))) problems.push(`[${name}] البطاقة لم تُغلق بزرها`);
+    step = `${name}: البحث`;
+    // البحث: اسم عربي يفتح بطاقته، وسنة مكتوبة تقترح محطتها، والهروب يغلق النتائج
+    await page.fill("#q", "العثمانية");
+    await page.waitForSelector("#q-results .qr", { timeout: 60000 });
+    counts.search = await page.$$eval("#q-results .qr", (b) => b.length);
+    await page.keyboard.press("Enter");
+    await page.waitForSelector("#card:not([hidden]) #card-body h2", { timeout: 30000 });
+    await settle();
+    counts.searchCard = (await page.$eval("#card-body h2", (h) => h.textContent)).includes("العثمانية") ? 1 : 0;
+    await page.click("#card .card-close"); await page.waitForTimeout(300);
+    await page.fill("#q", "500 ق.م");
+    await page.waitForSelector("#q-results .qr", { timeout: 30000 });
+    counts.searchYear = (await page.$eval("#q-results .qr", (b) => b.textContent)).includes("انتقل") ? 1 : 0;
+    await page.keyboard.press("Escape");
+    if (!(await page.$eval("#q-results", (r) => r.hidden))) problems.push(`[${name}] نتائج البحث لم تُغلق بالهروب`);
+    await page.fill("#q", "");
+    step = `${name}: القارات`;
+    await page.click('#rail button[data-region="africa"]'); await page.waitForTimeout(800); await settle();
+    counts.rail = await page.$$eval("#rail button", (b) => b.length);
+    await page.click('#rail button[data-region="world"]'); await page.waitForTimeout(800); await settle();
     await togglePanel(true);
+    step = `${name}: العالم في هذه الحقبة`;
+    await page.evaluate(() => loadBorders(1200)); await settle();
+    await page.click("#tab-list");
+    await page.waitForSelector("#list-body .li", { timeout: 30000 });
+    counts.list = await page.$$eval("#list-body .li", (b) => b.length);
+    await page.click("#list-body .li");
+    await page.waitForSelector("#card:not([hidden]) #card-body h2", { timeout: 30000 });
+    await settle();
+    await page.click("#card .card-close"); await page.waitForTimeout(300);
+    await togglePanel(true);
+    step = `${name}: التحدي`;
+    await page.click("#tab-quiz");
+    await page.waitForSelector("#quiz-body .qz-o", { timeout: 30000 });
+    await page.click("#quiz-body .qz-o");
+    counts.quiz = (await page.$eval("#quiz-body .qz-why", (p) => !p.hidden)) ? 1 : 0;
+    await page.click("#qz-next");
+    await page.waitForSelector("#quiz-body .qz-o:not([disabled])", { timeout: 30000 });
+    await page.click("#tab-over");
+    step = `${name}: جواز المستكشف`;
+    if (await page.isVisible("#passport-btn")) {
+      await page.click("#passport-btn");
+      await page.waitForSelector("#modal:not([hidden]) .tile", { timeout: 10000 });
+      counts.passport = await page.$$eval("#modal .tile", (t) => t.length);
+      await page.keyboard.press("Escape");
+      if (!(await page.$eval("#modal", (m) => m.hidden))) problems.push(`[${name}] جواز المستكشف لم يُغلق`);
+    }
     step = `${name}: الرحلات`;
     // الرحلة: تُفتح أول رحلة، وتُجتاز خطواتها بالتالي حتى آخرها، ثم تُغلق بزر «إنهاء»
     await page.evaluate(() => { document.getElementById("journey-panel").open = true; });

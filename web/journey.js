@@ -24,6 +24,7 @@ async function startJourney(id) {
   let journey;
   try { journey = await getJson(`data/journeys/${id}.json`); } catch (err) { journeyBox.hidden = false; journeyBox.textContent = `تعذّر تحميل الرحلة: ${err.message}`; return; }
   journeyState = { journey, index: 0 };
+  if (typeof passportNote === "function") passportNote("journey", id);
   for (const b of journeyListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.journey === id));
   journeyBox.hidden = false;
   await showJourneyStep();

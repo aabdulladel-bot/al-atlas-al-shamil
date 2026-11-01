@@ -90,7 +90,16 @@ fs.cpSync(path.join(ROOT, "web"), OUT, { recursive: true });
 fs.mkdirSync(path.join(OUT, "tiles"), { recursive: true });
 
 const packs = { sat: pack("sat", SAT_URL, SAT_LEVELS, "jpeg"), dem: pack("dem", DEM_URL, DEM_LEVELS, "png"), lights: pack("lights", LIGHTS_URL, LIGHTS_LEVELS, "png", true) };
-fs.writeFileSync(path.join(OUT, "tilepacks.js"), `// بلاطات محزومة مع النسخة المنشورة (scripts/build_artifact_bundle.mjs)\nwindow.TILE_PACKS = ${JSON.stringify(packs)};\n`);
+// منصة النشر لا تقدّم ملفات .geojson، فتُنشر بلاحقة .json، وتُعدَّل الطلبات إليها: طلبات الصفحة هنا،
+// وطلبات MapLibre بـ transformRequest في app.js
+const GEOJSON_SUFFIX = ".json";
+const walkFiles = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walkFiles(path.join(d, e.name)) : [path.join(d, e.name)]));
+for (const f of walkFiles(OUT)) if (f.endsWith(".geojson")) fs.renameSync(f, f + GEOJSON_SUFFIX);
+// نص ترخيص deck.gl بلاحقة تقدّمها المنصة
+fs.renameSync(path.join(OUT, "vendor/deck.gl.LICENSE"), path.join(OUT, "vendor/deck.gl.LICENSE.txt"));
+packs.geojsonSuffix = GEOJSON_SUFFIX;
+fs.writeFileSync(path.join(OUT, "tilepacks.js"), `// بلاطات محزومة مع النسخة المنشورة (scripts/build_artifact_bundle.mjs)\nwindow.TILE_PACKS = ${JSON.stringify(packs)};\n` +
+  `(() => { const f = window.fetch.bind(window); window.fetch = (u, o) => f(typeof u === "string" && /\\.geojson$/.test(u) ? u + "${GEOJSON_SUFFIX}" : u, o); })();\n`);
 
 let html = fs.readFileSync(path.join(ROOT, "web/index.html"), "utf8");
 const css = fs.readFileSync(path.join(ROOT, "web/vendor/maplibre-gl.css"), "utf8");
