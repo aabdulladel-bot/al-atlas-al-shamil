@@ -62,7 +62,8 @@ for (const year of YEARS) {
     const geometry = roundGeom(f.geometry);
     if (!geometry) continue;
     const hn = hbNames[f.properties.NAME];
-    const ar = hn?.ar && hn.years_ar?.includes(year) ? hn.ar : null; // الاسم العربي في سنوات قيام الكيان المطابَق فقط
+    // الاسم العربي في سنوات قيام الكيان المطابَق فقط، وفي غيرها التعريب التقديري المعلن (fill) إن وُجد
+    const ar = hn?.ar && hn.years_ar?.includes(year) ? hn.ar : hn?.fill?.years.includes(year) ? hn.fill.ar : null;
     features.push({ type: "Feature", properties: { NAME: f.properties.NAME, NAME_AR: ar, PARTOF: f.properties.PARTOF ?? null, BORDERPRECISION: f.properties.BORDERPRECISION ?? null }, geometry });
   }
   const out = { type: "FeatureCollection", _meta: { year, source: "Historical Basemaps (GPL-3)", note: "حدود تقريبية؛ انظر sources/manifest.json" }, features };
