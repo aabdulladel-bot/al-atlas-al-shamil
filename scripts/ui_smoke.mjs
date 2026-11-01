@@ -292,6 +292,16 @@ try {
       await page.keyboard.press("Escape");
       if (!(await page.$eval("#modal", (m) => m.hidden))) problems.push(`[${name}] جواز المستكشف لم يُغلق`);
     }
+    step = `${name}: المشاركة والاختصارات`;
+    await page.click("#share-btn");
+    await page.waitForSelector("#toast:not([hidden])", { timeout: 10000 });
+    counts.share = (await page.evaluate(() => location.hash)).startsWith("#t") ? 1 : 0;
+    if (await page.isVisible("#keys-btn")) {
+      await page.click("#keys-btn");
+      await page.waitForSelector("#modal:not([hidden]) kbd", { timeout: 10000 });
+      counts.keys = await page.$$eval("#modal kbd", (k) => k.length);
+      await page.keyboard.press("Escape");
+    }
     step = `${name}: الرحلات`;
     // الرحلة: تُفتح أول رحلة، وتُجتاز خطواتها بالتالي حتى آخرها، ثم تُغلق بزر «إنهاء»
     await page.evaluate(() => { document.getElementById("journey-panel").open = true; });
@@ -332,6 +342,20 @@ try {
     console.log(`${name}: ${JSON.stringify(counts)}`);
     for (const [k, n] of Object.entries(counts)) if (n === 0) problems.push(`[${name}] لا أزرار في ${k}`);
     await page.close();
+    if (name === "desktop") {
+      // رابط منظر مشارَك يعيد السنة والمنطقة والسُّنّة
+      step = `${name}: رابط المنظر`;
+      const hp = await browser.newPage({ viewport });
+      await hp.addInitScript(() => { try { localStorage.setItem("atlas-intro-seen", "1"); } catch {} });
+      await hp.route("**/elevation-tiles-prod/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: FLAT_TILE, headers: { "access-control-allow-origin": "*" } }));
+      await hp.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
+      await hp.route(/fonts\.(googleapis|gstatic)\.com/, (route) => route.fulfill({ status: 200, contentType: "text/css", body: "" }));
+      hp.on("pageerror", (e) => problems.push(`[${name}] رابط المنظر pageerror: ${e.message}`));
+      await hp.goto(`${URL}#t1600-rmena-strade`, { waitUntil: "load" });
+      await hp.waitForFunction(() => typeof time !== "undefined" && time.key === 1600 && activeRegion?.id === "mena" && activeSunna?.id === "sn_trade", null, { timeout: 90000 });
+      counts.hashView = 1;
+      await hp.close();
+    }
     await visualCheck(browser, name, viewport);
     console.log(`${name} لقطات: ${JSON.stringify(counts_visual)}`);
   }

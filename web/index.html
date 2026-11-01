@@ -332,6 +332,17 @@
     #rail .mini { width: 22px; height: 22px; flex: none; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #3d82c9, #0b2a55); box-shadow: inset -3px -3px 6px rgba(0, 0, 0, 0.35); }
     #rail button[data-region="world"] .mini { background: radial-gradient(circle at 35% 30%, #4cc9a0, #0b3a55); }
     body.showcasing #search-box, body.showcasing #rail { display: none; }
+    /* المشاركة والوصول */
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .skip { position: absolute; z-index: 60; top: -60px; inset-inline-start: 12px; background: var(--accent); color: #0B1630; padding: 8px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; transition: top 0.2s; }
+    .skip:focus { top: 12px; }
+    .icon-btn { flex: none; width: 32px; height: 32px; padding: 0; display: grid; place-items: center; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 50%; cursor: pointer; font-weight: 700; font-size: 14px; transition: border-color 0.2s; }
+    .icon-btn:hover { border-color: var(--sky); }
+    .icon-btn svg { width: 16px; height: 16px; }
+    #toast { position: fixed; z-index: 55; left: 50%; bottom: calc(var(--tb-h) + 16px); transform: translateX(-50%); max-width: min(560px, calc(100% - 32px)); background: var(--card2); color: var(--ink); border: 1px solid var(--accent); border-radius: 14px; padding: 10px 16px; font-size: 13.5px; line-height: 1.6; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); animation: drop-in 0.2s ease; }
+    #toast[hidden] { display: none; }
+    table.keys th { padding: 6px 0 6px 12px; }
+    kbd { display: inline-block; min-width: 18px; text-align: center; font: 600 12.5px var(--font-b); background: var(--card); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 2px 7px; color: var(--ink); direction: ltr; }
     /* بطاقة المنطقة وعدّاد الشريط */
     #rail .rg-n { margin-inline-start: auto; font-size: 11px; color: var(--muted); background: rgba(168, 183, 212, 0.12); border-radius: 999px; padding: 0 7px; }
     #rail .rg-n:empty { display: none; }
@@ -407,7 +418,8 @@
       #rail { top: 122px; left: 8px; right: 8px; width: auto; flex-direction: row; overflow-x: auto; scrollbar-width: none; }
       #rail button { flex: none; }
       #panel:not(.collapsed) ~ #search-box, #panel:not(.collapsed) ~ #rail, body.card-open #rail { display: none; }
-      #passport-btn { display: none; }
+      #passport-btn, #keys-btn { display: none; }
+      #share-btn { margin-inline-start: auto; }
       .tiles { grid-template-columns: repeat(2, 1fr); }
       @keyframes card-in { from { opacity: 0; transform: translateY(24px); } }
     }
@@ -417,6 +429,9 @@
   </style>
 </head>
 <body data-mode="simple">
+  <a class="skip" href="#q">انتقل إلى البحث</a>
+  <div id="sr-live" class="sr" aria-live="polite"></div>
+  <div id="toast" role="status" hidden></div>
   <div id="map"></div>
   <div id="journey-box" class="card" hidden></div>
   <div id="intro" hidden>
@@ -443,6 +458,8 @@
       <div class="ph-top">
         <h1>الأطلس الشامل</h1>
         <button type="button" id="passport-btn" aria-haspopup="dialog">جواز المستكشف</button>
+        <button type="button" id="share-btn" class="icon-btn" aria-label="شارك هذا المنظر" title="شارك هذا المنظر"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg></button>
+        <button type="button" id="keys-btn" class="icon-btn" aria-haspopup="dialog" aria-label="اختصارات لوحة المفاتيح" title="اختصارات لوحة المفاتيح">?</button>
         <button type="button" id="panel-toggle" aria-expanded="true" aria-controls="panel-body">القائمة</button>
       </div>
       <p class="tagline">التاريخ والجغرافيا والثقافة والسكان على خريطة واحدة، والسنن فرضيات تُختبر بالشواهد.</p>
@@ -453,7 +470,7 @@
     </header>
     <div id="panel-body">
 
-    <section id="now" aria-live="polite">
+    <section id="now">
       <div class="now-head"><span id="now-year"></span><span id="now-era"></span></div>
       <div class="tabs" role="tablist" aria-label="الزمن الحالي">
         <button type="button" role="tab" id="tab-over" aria-selected="true" aria-controls="pane-over">نظرة</button>
