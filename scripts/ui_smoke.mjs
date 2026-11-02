@@ -520,9 +520,9 @@ try {
       // العدسات: تضع الوضع والطبقات والزمن والسُّنّة، وتُحفظ في الرابط، وتُستعاد منه، وتظهر في الأوامر
       step = `${name}: العدسات`;
       await mp.evaluate(() => { closeCard(); document.querySelector('.mode button[data-mode="simple"]')?.click(); });
-      await mp.click('.mode button[data-mode="research"]');
-      await mp.waitForSelector('#lens-list button[data-lens="political"]', { timeout: 60000 });
-      await mp.click('#lens-list button[data-lens="political"]');
+      await mp.evaluate(() => document.querySelector('.mode button[data-mode="research"]').click());
+      await mp.waitForSelector('#lens-list button[data-lens="political"]', { state: "attached", timeout: 60000 });
+      await mp.evaluate(() => document.querySelector('#lens-list button[data-lens="political"]').click());
       await mp.waitForFunction(() => activeLens === "political" && time.key === 1600 && activeSunna?.id === "sn_asabiyya" && !document.getElementById("lens-about").hidden, null, { timeout: 60000 });
       const lensState = await mp.evaluate(() => ({
         mode: document.body.dataset.mode,
