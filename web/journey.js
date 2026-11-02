@@ -59,11 +59,11 @@ async function showJourneyStep() {
 
 function moveJourneyCamera(cam) {
   if (cam.bbox) {
-    map.fitBounds([[cam.bbox[0], cam.bbox[1]], [cam.bbox[2], cam.bbox[3]]], { padding: fitPadding(), maxZoom: 5.5, pitch: 40, duration: 1800 });
+    map.fitBounds([[cam.bbox[0], cam.bbox[1]], [cam.bbox[2], cam.bbox[3]]], { padding: fitPadding(), maxZoom: 5.5, pitch: 40, duration: camMs(CAM_CINEMA) });
   } else if (cam.point) {
-    map.flyTo({ center: cam.point, zoom: 4.5, pitch: 40, duration: 1800 });
+    map.flyTo({ center: cam.point, zoom: 4.5, pitch: 40, duration: camMs(CAM_CINEMA) });
   } else {
-    map.flyTo({ center: [30, 20], zoom: 1.6, pitch: 0, duration: 1800 });
+    map.flyTo({ center: [30, 20], zoom: 1.6, pitch: 0, duration: camMs(CAM_CINEMA) });
   }
 }
 

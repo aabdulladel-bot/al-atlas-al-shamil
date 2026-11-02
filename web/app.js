@@ -13,6 +13,13 @@ const timebarHeight = () => document.getElementById("timebar")?.offsetHeight ?? 
 const fitPadding = () => (isNarrow() ? { top: 30, bottom: 30, left: 30, right: 30 } : { top: 40, bottom: 40, left: 40, right: 40 });
 // الافتتاحية: الكرة تبدأ بعيدة ثم تقترب، إلا لمن طلب من نظامه تقليل الحركة
 const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+// مدتا الكاميرا: سريعة لما يفعله القارئ بنفسه (بحث، بطاقة، منطقة) فيحسّ بالاستجابة، وسينمائية للرحلات والعرض الشامل.
+// وتبقى صفراً مع تقليل الحركة.
+const CAM_FAST = 750, CAM_REGION = 1000, CAM_CINEMA = 1800;
+const camMs = (ms) => (reduceMotion ? 0 : ms);
+// حالة دوران الخمول (المنطق في «حركة الكرة» أدناه)، معرَّفة هنا لأن معالجات الخريطة تقرؤها
+const idleSpin = { on: !reduceMotion, timer: 0, raf: 0, started: 0, last: 0 };
+try { if (localStorage.getItem("atlas-spin") === "off") idleSpin.on = false; } catch {}
 const FIRST_VIEW = { center: [35, 32], zoom: 2.8, pitch: 30, bearing: 0 };
 
 // ---------- طريقة العرض: مبسّط أو باحث ----------
@@ -148,10 +155,15 @@ const entityColor = (mode) => ["to-color", ["concat", "hsl(", ["to-string", ["ge
 const swatchColor = (h) => `hsl(${h}, ${ENTITY_SL[basemap.mode]})`;
 const HIGHLIGHT_COLOR = { satellite: "#ffffff", drawn: "#2a2620" };
 const basemap = { mode: "satellite" };
+// جودة العرض: اقتصادي (1×) يخفّف الحمل على الأجهزة الضعيفة، ومتوازن (حتى 2×، الافتراضي)، وحاد (1.5× من كثافة الشاشة حتى 3×)
+const QUALITY = { eco: () => 1, balanced: (d) => Math.min(d, 2), sharp: (d) => Math.min(d * 1.5, 3) };
+let qualityPref = "balanced";
+try { const q = localStorage.getItem("atlas-quality"); if (q in QUALITY) qualityPref = q; } catch {}
+const pixelRatioFor = (q) => QUALITY[q](window.devicePixelRatio || 1);
 const map = new maplibregl.Map({
   container: "map",
-  // شاشات الجوال عالية الكثافة: نسبة البكسل حتى 2، فلا يتضاعف عبء الرسم بلا فرق مرئي
-  pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+  // نسبة البكسل بحسب اختيار القارئ، وافتراضها حتى 2 فلا يتضاعف عبء الرسم على شاشات الجوال بلا فرق مرئي
+  pixelRatio: pixelRatioFor(qualityPref),
   style: {
     version: 8,
     // كرة أرضية افتراضياً، ويمكن التبديل إلى الخريطة المسطحة من لوحة الطبقات
@@ -420,7 +432,12 @@ function updateLabels() {
 }
 // منع التراكب: الأسماء مرتبة بأولويتها (أدنى تقريب أو أكبر مساحة أولاً)، ويُخفى كل اسم يتراكب مع اسم أعلى منه أولوية
 // حتى يُقرَّب. ما خلف الكرة أو التضاريس تخفيه MapLibre (opacityWhenCovered) فلا يحجز مكاناً.
+let lastDeclutter = 0;
 function declutterLabels() {
+  // أثناء دوران الخمول يصدر moveend في كل إطار؛ فيُحسب منع التراكب مرة في الثانية لا ثلاثين
+  const now = performance.now();
+  if (idleSpin.raf && now - lastDeclutter < 1000) return;
+  lastDeclutter = now;
   const kept = [];
   for (const l of countryLabels) {
     if (!l.added) continue;
@@ -797,10 +814,28 @@ function pointerOn(layer) {
   map.on("mouseenter", layer, () => (map.getCanvas().style.cursor = "pointer"));
   map.on("mouseleave", layer, () => (map.getCanvas().style.cursor = ""));
 }
+// جلب مسبق لمحطة الزمن التالية أثناء التشغيل: يُحفظ نصها حتى يطلبها loadBorders فيجدها جاهزة، ثم يُمحى لئلا يحتل الذاكرة
+const prefetched = new Map();
+function prefetchText(url) {
+  if (prefetched.has(url)) return;
+  prefetched.set(url, fetch(url).then((r) => (r.ok ? r.text() : null)).catch(() => null));
+}
 async function getJson(url) {
+  if (prefetched.has(url)) {
+    const text = await prefetched.get(url);
+    prefetched.delete(url);
+    if (text) return JSON.parse(text);
+  }
   const res = await fetch(url);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
+}
+function prefetchStop(key) {
+  if (key == null) return;
+  const modern = String(key) === "modern";
+  prefetchText(modern ? "data/borders/modern_countries.geojson" : `data/borders/borders_${key}.geojson`);
+  if (!modern) prefetchText(`data/borders/peoples_${key}.geojson`);
+  labelData(key);
 }
 
 // ---------- الحقب ومواقعها ----------
@@ -990,6 +1025,11 @@ async function loadBorders(key) {
   setVis("lights", lit);
   setLayerCount("lights", lit ? "صورة سنة 2016" : "تُعرض عند 2010 واليوم");
   renderNow({ names, labels, places, era });
+  // أثناء التشغيل الزمني تُجلب حدود المحطة التالية ولمّا تُطلب بعد، فتنتقل الخريطة بلا انتظار الشبكة
+  if (playTimer) {
+    const i = TIME_STOPS.findIndex((x) => String(x) === String(key));
+    if (i >= 0 && i < TIME_STOPS.length - 1) prefetchStop(TIME_STOPS[i + 1]);
+  }
   return data;
 }
 const placesCache = new Map();
@@ -1435,6 +1475,75 @@ async function countryEconHtml(name) {
   const lines = [{ name: "الدولة", label: "", pts, color: ECON_COLORS[0] }];
   if (w) lines.push({ name: "العالم", label: "", pts: w.series[w.world], color: "var(--muted)", dash: true });
   return `<section class="card-sec"><h3>الناتج للفرد عبر الزمن</h3>${econChartHtml(lines, `${d._meta.source}. ${d._meta.unit}. ${d._meta.note}`, 1820)}</section>`;
+}
+
+// ---------- حركة الكرة: دوران في الخمول، ونبضة عند الوصول ----------
+// الدوران بطيء ويبدأ بعد 45 ثانية بلا تفاعل، ويتوقف عند أي لمس أو مفتاح أو عجلة، ويتوقف مع إخفاء الصفحة وفتح بطاقة
+// وأثناء الرحلة والعرض الشامل والتشغيل الزمني وعند التقريب أو الإمالة أو الخريطة المسطحة. ويتوقف من تلقاء نفسه بعد دقيقتين
+// حتى لا تبقى الشاشة ترسم بلا قارئ. وهو معطّل مع تقليل الحركة، ويُطفأ من الإعدادات.
+const IDLE_AFTER_MS = 45000, IDLE_MAX_MS = 120000, SPIN_DEG_PER_S = 1.4, SPIN_FRAME_MS = 33;
+function spinBlocked() {
+  return document.hidden || !idleSpin.on || document.body.classList.contains("showcasing") || document.body.classList.contains("card-open") ||
+    (typeof journeyState !== "undefined" && journeyState) || playTimer || map.getZoom() > 3.4 || map.getPitch() > 20 || map.getProjection?.()?.type !== "globe";
+}
+function spinStop() { cancelAnimationFrame(idleSpin.raf); idleSpin.raf = 0; }
+function spinFrame(now) {
+  idleSpin.raf = 0;
+  if (spinBlocked() || now - idleSpin.started > IDLE_MAX_MS) return;
+  if (now - idleSpin.last >= SPIN_FRAME_MS) {
+    const dt = Math.min(0.25, (now - idleSpin.last) / 1000);
+    idleSpin.last = now;
+    const c = map.getCenter();
+    map.jumpTo({ center: [((c.lng + SPIN_DEG_PER_S * dt + 540) % 360) - 180, c.lat] });
+  }
+  idleSpin.raf = requestAnimationFrame(spinFrame);
+}
+function spinArm() {
+  clearTimeout(idleSpin.timer);
+  spinStop();
+  if (!idleSpin.on) return;
+  idleSpin.timer = setTimeout(() => {
+    if (spinBlocked()) return spinArm();
+    idleSpin.started = idleSpin.last = performance.now();
+    idleSpin.raf = requestAnimationFrame(spinFrame);
+  }, IDLE_AFTER_MS);
+}
+for (const ev of ["pointerdown", "wheel", "keydown", "touchstart"]) window.addEventListener(ev, spinArm, { passive: true, capture: true });
+document.addEventListener("visibilitychange", spinArm);
+map.on("movestart", (e) => { if (e.originalEvent) spinArm(); });
+spinArm();
+// نبضة وصول: حلقتان تتسعان وتخفتان عند الموضع بعد انتهاء الكاميرا، بحركة transform وopacity وحدهما. وبلا نبضة مع تقليل الحركة.
+function arrivePulse(lngLat) {
+  if (reduceMotion || !lngLat) return;
+  const el = document.createElement("div");
+  el.className = "arrive";
+  el.innerHTML = "<i></i><i></i>";
+  const m = new maplibregl.Marker({ element: el, anchor: "center", pitchAlignment: "map" }).setLngLat(lngLat).addTo(map);
+  setTimeout(() => m.remove(), 1700);
+}
+function arriveAfterMove(lngLat) {
+  if (reduceMotion) return;
+  map.once("moveend", () => arrivePulse(lngLat));
+}
+
+// ---------- جودة العرض ----------
+function applyQuality(q) {
+  qualityPref = q in QUALITY ? q : "balanced";
+  map.setPixelRatio(pixelRatioFor(qualityPref));
+  try { localStorage.setItem("atlas-quality", qualityPref); } catch {}
+  for (const r of document.querySelectorAll('input[name="quality"]')) r.checked = r.value === qualityPref;
+}
+for (const r of document.querySelectorAll('input[name="quality"]')) r.addEventListener("change", () => { if (r.checked) applyQuality(r.value); });
+document.querySelector(`input[name="quality"][value="${qualityPref}"]`)?.setAttribute("checked", "");
+const spinToggle = document.getElementById("idle-spin");
+if (spinToggle) {
+  spinToggle.checked = idleSpin.on;
+  spinToggle.disabled = reduceMotion;
+  spinToggle.addEventListener("change", () => {
+    idleSpin.on = spinToggle.checked;
+    try { localStorage.setItem("atlas-spin", idleSpin.on ? "on" : "off"); } catch {}
+    spinArm();
+  });
 }
 
 // ---------- المفتاح الحيّ ----------

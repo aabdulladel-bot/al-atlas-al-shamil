@@ -380,6 +380,72 @@ try {
       await hp.waitForFunction(() => typeof time !== "undefined" && time.key === 1600 && activeRegion?.id === "mena" && activeSunna?.id === "sn_trade", null, { timeout: 90000 });
       counts.hashView = 1;
       await hp.close();
+      // الحركة والسرعة (بحركة حقيقية، ودون «تقليل الحركة»): مدتا الكاميرا، ونبضة الوصول، ودوران الخمول وشروط إيقافه، والجلب المسبق، وجودة العرض
+      step = `${name}: الحركة والسرعة`;
+      const mp = await browser.newPage({ viewport, reducedMotion: "no-preference" });
+      await mp.addInitScript(() => { try { localStorage.setItem("atlas-intro-seen", "1"); } catch {} });
+      await mp.route("**/elevation-tiles-prod/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: FLAT_TILE, headers: { "access-control-allow-origin": "*" } }));
+      await mp.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
+      await mp.route(/fonts\.(googleapis|gstatic)\.com/, (route) => route.fulfill({ status: 200, contentType: "text/css", body: "" }));
+      mp.on("pageerror", (e) => problems.push(`[${name}] الحركة pageerror: ${e.message}`));
+      await mp.goto(URL, { waitUntil: "load" });
+      await mp.waitForFunction(() => typeof time !== "undefined" && time.key === 1200 && document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 90000 });
+      await mp.evaluate(() => { terrainState.on = false; applyTerrain(); });
+      await mp.evaluate(() => window.__settle?.()).catch(() => {});
+      await mp.waitForFunction(() => map.loaded() && !map.isMoving(), null, { timeout: 90000 });
+      const caps = await mp.evaluate(() => ({ fast: CAM_FAST, region: CAM_REGION, cinema: CAM_CINEMA, reduce: reduceMotion }));
+      if (caps.reduce) problems.push(`[${name}] الحركة: reduceMotion مفعّل رغم no-preference`);
+      if (!(caps.fast <= 800 && caps.region <= 1200 && caps.cinema >= 1500)) problems.push(`[${name}] مدتا الكاميرا خرجتا عن حدّيهما: ${JSON.stringify(caps)}`);
+      // نبضة الوصول: تظهر بعد انتهاء الكاميرا ثم تُزال
+      await mp.evaluate(() => { map.flyTo({ center: [44, 33], zoom: 4, duration: camMs(CAM_FAST), essential: true }); arriveAfterMove([44, 33]); });
+      await mp.waitForSelector(".arrive i", { state: "attached", timeout: 20000 });
+      await mp.waitForSelector(".arrive", { state: "detached", timeout: 10000 });
+      counts.arrivePulse = 1;
+      // زمن الإطار أثناء حركة كاميرا: للمتابعة لا للحكم، فالعرض هنا برمجي (SwiftShader) أبطأ بكثير من معالج رسوميات
+      const fr = await mp.evaluate(() => new Promise((res) => {
+        const d = []; let last = performance.now(); const t0 = last;
+        map.easeTo({ center: [60, 20], duration: 1200 });
+        (function f(now) { d.push(now - last); last = now; if (now - t0 < 1300) requestAnimationFrame(f); else res(d); })(last);
+      }));
+      fr.sort((a, b) => a - b);
+      counts.frames = fr.length;
+      counts.frameP95Ms = Math.round(fr[Math.floor(fr.length * 0.95)] ?? 0);
+      // العرض البرمجي يرسم نحو ثلاثة إطارات فقط في ثانية وثلث، فالحدّ إطاران لئلا يفشل الاختبار بتذبذب السرعة؛ والقياس للمتابعة لا للحكم
+      if (fr.length < 2) problems.push(`[${name}] الحركة: لم يُرصد أكثر من ${fr.length} إطاراً في ثانية وثلث`);
+      // دوران الخمول: يتحرك المركز، ويتوقف مع بطاقة مفتوحة
+      const spin = await mp.evaluate(() => {
+        map.jumpTo({ center: [10, 20], zoom: 1.8, pitch: 0 });
+        idleSpin.on = true; idleSpin.started = idleSpin.last = performance.now() - 1000;
+        const before = map.getCenter().lng;
+        spinFrame(performance.now());
+        const moved = map.getCenter().lng - before;
+        spinStop();
+        document.body.classList.add("card-open");
+        const blockedByCard = spinBlocked();
+        document.body.classList.remove("card-open");
+        map.jumpTo({ zoom: 6 });
+        const blockedByZoom = spinBlocked();
+        return { moved, blockedByCard, blockedByZoom };
+      });
+      if (!(spin.moved > 0)) problems.push(`[${name}] دوران الخمول لم يحرّك الكرة: ${JSON.stringify(spin)}`);
+      if (!spin.blockedByCard || !spin.blockedByZoom) problems.push(`[${name}] دوران الخمول لا يتوقف مع بطاقة مفتوحة أو تقريب: ${JSON.stringify(spin)}`);
+      counts.idleSpin = 1;
+      // الجلب المسبق: يُحفظ ثم يُستهلك مرة واحدة ويُمحى
+      const pf = await mp.evaluate(async () => {
+        const u = "data/borders/borders_1600.geojson";
+        prefetchStop(1600);
+        const had = prefetched.has(u);
+        const d = await getJson(u);
+        return { had, left: prefetched.has(u), n: d.features.length };
+      });
+      if (!pf.had || pf.left || pf.n < 100) problems.push(`[${name}] الجلب المسبق: ${JSON.stringify(pf)}`);
+      counts.prefetch = 1;
+      // جودة العرض
+      const q = await mp.evaluate(() => { applyQuality("eco"); const e = map.getPixelRatio(); applyQuality("sharp"); const sh = map.getPixelRatio(); applyQuality("balanced"); return { e, sh, b: map.getPixelRatio(), dpr: window.devicePixelRatio, saved: localStorage.getItem("atlas-quality") }; });
+      if (q.e !== 1 || q.sh < q.b || q.b !== Math.min(q.dpr, 2) || q.saved !== "balanced") problems.push(`[${name}] جودة العرض: ${JSON.stringify(q)}`);
+      counts.quality = 1;
+      console.log(`${name} حركة: ${JSON.stringify({ arrivePulse: counts.arrivePulse, frames: counts.frames, frameP95Ms: counts.frameP95Ms, idleSpin: counts.idleSpin, prefetch: counts.prefetch, quality: counts.quality })}`);
+      await mp.close();
     }
     await visualCheck(browser, name, viewport);
     console.log(`${name} لقطات: ${JSON.stringify(counts_visual)}`);

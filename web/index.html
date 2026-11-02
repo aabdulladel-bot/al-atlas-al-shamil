@@ -25,7 +25,7 @@
     .country-label.mid { font-size: 12.5px; }
     /* الأسماء تظهر مع الخريطة الجديدة بتلاشٍ من الضبابية (لا بالعتامة، فهي لـ MapLibre تُخفي بها ما خلف الكرة) */
     .country-label { animation: label-in 0.8s ease; }
-    @keyframes label-in { from { filter: blur(4px); } }
+    @keyframes label-in { from { opacity: 0; } }
     @media (prefers-reduced-motion: reduce) { .country-label { animation: none; } }
     /* اسم بلا عربي موثّق: أصغر وأخفت، بلا ميل، فلا ينافس الأسماء العربية */
     .country-label.latin { font-size: 10px !important; font-weight: 400 !important; opacity: 0.62; direction: ltr; unicode-bidi: isolate; }
@@ -95,6 +95,12 @@
     .etable tbody { display: block; max-height: 180px; overflow-y: auto; } .etable thead, .etable tbody tr { display: table; width: 100%; table-layout: fixed; }
     .dom-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
     .chip.dom { background: color-mix(in srgb, var(--sky) 16%, transparent); color: var(--ink); font-size: 11px; }
+    /* نبضة الوصول: transform وopacity وحدهما فتعمل على المعالج الرسومي */
+    .arrive { width: 0; height: 0; pointer-events: none; }
+    .arrive i { position: absolute; left: -22px; top: -22px; width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--accent); opacity: 0; animation: arrive 1.4s ease-out forwards; will-change: transform, opacity; }
+    .arrive i:nth-child(2) { animation-delay: .28s; }
+    @keyframes arrive { 0% { transform: scale(.3); opacity: .9; } 100% { transform: scale(2.6); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .arrive { display: none; } }
     .role-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-inline-end: 3px; vertical-align: middle; }
     .role-dot.sup { background: var(--evidence); } .role-dot.lim { background: var(--limit); }
     body.showcasing #legend, body:has(#intro.on) #legend { display: none; }
@@ -585,6 +591,12 @@
         <label for="terrain-exaggeration" class="sub">تضخيم الارتفاع: <span id="terrain-exaggeration-val"></span></label>
         <input type="range" id="terrain-exaggeration" min="1" max="30" step="0.5" value="15">
         <label class="opt sub"><input type="checkbox" id="terrain-auto" checked> تضخيم تلقائي بحسب التقريب</label>
+        <div class="seg" role="radiogroup" aria-label="جودة العرض" title="اقتصادي يخفّف الحمل على الأجهزة الضعيفة، وحاد يرفع الدقة على الشاشات عالية الكثافة">
+          <label><input type="radio" name="quality" value="eco"><span>اقتصادي</span></label>
+          <label><input type="radio" name="quality" value="balanced" checked><span>متوازن</span></label>
+          <label><input type="radio" name="quality" value="sharp"><span>حاد</span></label>
+        </div>
+        <label class="opt sub"><input type="checkbox" id="idle-spin" checked> دوران الكرة البطيء عند الخمول</label>
         <label class="opt"><input type="checkbox" data-group="hillshade" checked> ظلال التضاريس</label>
         <label class="opt"><input type="checkbox" data-group="water" checked> الأنهار والبحيرات</label>
         <p class="sub">اسحب بالزر الأيمن، أو بإصبعين على الجوال، لإمالة الخريطة وتدويرها. التضخيم يجعل الجبال مرئية على مستوى القارات، فالارتفاع ليس بمقياس الأرض.</p>
