@@ -17,12 +17,58 @@ import json
 import sys
 from pathlib import Path
 
+from shapely import make_valid
+from shapely.geometry import Point, shape
+from shapely.ops import unary_union
+
 ROOT = Path(__file__).resolve().parent.parent
 TR = ROOT / "web/data/transitions"
+BORDERS = ROOT / "web/data/borders"
+CLAIM_POINTS = ROOT / "web/data/claim_points.geojson"
 OUT = ROOT / "web/data/lineage.json"
 # ترتيب الخرائط الزمني، كما في BORDER_YEARS ثم الحاضر
 ORDER = ["-4000", "-1000", "-1", "700", "1200", "1600", "1800", "1914", "1945", "2010", "modern"]
 TOP = 12  # حدّ معقول لكل خطوة، والباقي يُحسب في الواجهة بعدده
+
+_polys_cache = {}
+
+
+def map_polys(k):
+    """مضلعات كيانات خريطة معينة بالاسم (حدود الواجهة المبسّطة، للاحتواء فقط لا للمساحة)."""
+    if k not in _polys_cache:
+        fn = BORDERS / ("modern_countries.geojson" if k == "modern" else f"borders_{k}.geojson")
+        out = {}
+        for f in json.loads(fn.read_text(encoding="utf-8"))["features"]:
+            n = f["properties"].get("NAME")
+            if n:
+                out.setdefault(n, []).append(make_valid(shape(f["geometry"])))
+        _polys_cache[k] = {n: unary_union(v) for n, v in out.items()}
+    return _polys_cache[k]
+
+
+_points = None
+
+
+def claim_points():
+    global _points
+    if _points is None:
+        _points = []
+        for f in json.loads(CLAIM_POINTS.read_text(encoding="utf-8"))["features"]:
+            p = f["properties"]
+            _points.append((p.get("name_ar") or p.get("name_en") or p["slug"], Point(f["geometry"]["coordinates"])))
+    return _points
+
+
+def shared_claim_places(a, x, b, y):
+    """أسماء مواقع الشواهد الواقعة داخل الأرض التي يشترك فيها الكيانان (x في الخريطة a، وy في b).
+    هذا ربط مكاني: الموقع داخل الأرض المشتركة، ولا يعني أن الشاهد يذكر الصلة نفسها."""
+    pa, pb = map_polys(a), map_polys(b)
+    if x not in pa or y not in pb:
+        return []
+    inter = pa[x].intersection(pb[y])
+    if inter.is_empty:
+        return []
+    return sorted({name for name, pt in claim_points() if inter.contains(pt)})
 
 
 def build():
@@ -37,12 +83,20 @@ def build():
             x = row["name"]
             entry = lin[a].setdefault(x, {"prev": {}, "next": {}})
             links = [{"name": n, "name_ar": None, "ownShare": sa, "otherShare": sb} for n, sa, sb in row["links"]]
+            for l in links:
+                places = shared_claim_places(a, x, b, l["name"])
+                if places:
+                    l["places"] = places
             entry["next"][b] = links
         # صفوف السنة الثانية: كل كيان Y فيها روابطه إلى الأولى (من جهة Y: sa = نصيب الآخر داخل Y، sb = نصيب Y داخل الآخر)
         for row in d["to"]:
             y = row["name"]
             entry = lin[b].setdefault(y, {"prev": {}, "next": {}})
             links = [{"name": n, "name_ar": None, "ownShare": sb, "otherShare": sa} for n, sa, sb in row["links"]]
+            for l in links:
+                places = shared_claim_places(a, l["name"], b, y)
+                if places:
+                    l["places"] = places
             entry["prev"][a] = links
         # الأسماء العربية من الملف نفسه
         ar = {r["name"]: r["name_ar"] for r in d["from"] + d["to"] if r.get("name_ar")}
@@ -68,6 +122,7 @@ def build():
             "order": ORDER,
             "shares": "ownShare: نصيب أرض هذا الكيان داخل الآخر. otherShare: نصيب أرض الآخر داخل هذا الكيان. التطابق بالأرض لا بالاسم.",
             "source": "web/data/transitions (scripts/build_transitions.py): Historical Basemaps (GPL-3، حدود تقريبية) وNatural Earth (ملك عام)",
+            "places": "places: مواقع الشواهد (web/data/claim_points.geojson) الواقعة داخل الأرض المشتركة بين الكيانين. ربط مكاني، لا حكم بأن الشاهد يذكر الصلة.",
             "top": TOP,
         },
         "lineage": lin,

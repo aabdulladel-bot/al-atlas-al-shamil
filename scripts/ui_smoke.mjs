@@ -512,8 +512,16 @@ try {
       if (!(strong >= 1 && all > strong && all <= 80)) problems.push(`[${name}] سلسلة الكيان: أقوى صلة ${strong} وكل الصلات ${all}`);
       await mp.evaluate(() => document.querySelector('#card-body [data-lmode="strong"]').click());
       await mp.waitForFunction((n) => document.querySelectorAll("#card-body .lin-btn").length === n, strong, { timeout: 60000 });
+      // كل صلة تحمل نوعها: شاهد على الأرض المشتركة أو تطابق أرض فقط
+      const typed = await mp.$$eval("#card-body .lin-btn", (b) => b.every((x) => x.querySelector(".chip")));
+      if (!typed) problems.push(`[${name}] سلسلة الكيان: صلة بلا نوع`);
       await mp.evaluate(() => document.querySelector("#card-body .lin-btn").click());
       await mp.waitForFunction(() => time.key !== "modern", null, { timeout: 60000 });
+      // الرجوع: يعيد الكيان والزمن اللذين فُتح منهما
+      await mp.waitForSelector("#card-body [data-lback]", { timeout: 60000 });
+      await mp.evaluate(() => document.querySelector("#card-body [data-lback]").click());
+      await mp.waitForFunction(() => time.key === "modern" && lastEntityCard?.f?.properties?.NAME === "Saudi Arabia", null, { timeout: 60000 });
+      counts.lineageBack = true;
       counts.lineageStrong = strong;
       counts.lineageAll = all;
       await mp.evaluate(() => closeCard());
