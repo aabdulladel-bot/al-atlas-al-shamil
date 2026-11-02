@@ -11,8 +11,8 @@ function norm(s) {
     .replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/ة/g, "ه").replace(/ؤ/g, "و").replace(/ئ/g, "ي")
     .replace(/\s+/g, " ").trim();
 }
-const ICONS = { entity: "◼", people: "◩", place: "●", claim: "❝", sunna: "✦", era: "⧗", year: "⌖", journey: "➜" };
-const TYPE_AR = { entity: "الدول والكيانات", people: "الشعوب والقبائل", place: "مواقع الحقب", claim: "الشواهد", sunna: "السنن", era: "الحقب", year: "الزمن", journey: "الرحلات" };
+const ICONS = { entity: "◼", people: "◩", place: "●", claim: "❝", sunna: "✦", era: "⧗", year: "⌖", journey: "➜", cmd: "›" };
+const TYPE_AR = { cmd: "أوامر", entity: "الدول والكيانات", people: "الشعوب والقبائل", place: "مواقع الحقب", claim: "الشواهد", sunna: "السنن", era: "الحقب", year: "الزمن", journey: "الرحلات" };
 
 // ---------- جواز المستكشف: تقدّم القارئ في متصفحه وحده ----------
 const PASS_KEY = "atlas-passport-v1";
@@ -83,6 +83,7 @@ function goSunna(it) {
   sec.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
 }
 async function goItem(it) {
+  if (it.type === "cmd") return it.run();
   if (it.type === "entity" || it.type === "people") return goEntity(it);
   if (it.type === "place") return goPlace(it);
   if (it.type === "claim") return goClaimPlace(it);
@@ -175,8 +176,46 @@ function score(it, toks) {
   const boost = activeRegion && at && inBox(activeRegion.bbox, at[0], at[1]) ? 1.5 : 0;
   return s + it.weight / 10 + boost;
 }
+// ---------- الأوامر: تُكتب في خانة البحث نفسها، وتظهر وحدها بعد «>» ----------
+// تُبنى عند كل بحث لأن عنوان بعضها يتبع الحالة الراهنة (إظهار أو إخفاء). وكل أمر يمرّ بالأداة التي يستعملها القارئ بيده.
+function buildCommands() {
+  const cmds = [];
+  const add = (title, sub, al, run) => cmds.push({ type: "cmd", title, sub, al, run, weight: 0 });
+  for (const cb of document.querySelectorAll("#layer-panel .layer-cards input[data-group]")) {
+    if (cb.disabled) continue;
+    const name = cb.closest("label").querySelector(".lc-name").textContent.trim();
+    add(`${cb.checked ? "إخفاء" : "إظهار"} طبقة «${name}»`, "الطبقات", [name, "طبقة", cb.checked ? "اخفاء اخفي" : "اظهار اظهر شغل"], () => cb.click());
+    add(`عن طبقة «${name}»`, "مصدرها وترخيصها وتغطيتها", [name, "طبقة", "مصدر ترخيص معلومات"], () => openLayerInfo(cb.dataset.group));
+  }
+  const click = (sel) => () => document.querySelector(sel)?.click();
+  add("الكرة الأرضية", "الإسقاط", ["كرة", "globe", "ثلاثي"], click('input[name="projection"][value="globe"]'));
+  add("الخريطة المسطحة", "الإسقاط", ["مسطحة", "مسطح", "flat", "mercator"], click('input[name="projection"][value="mercator"]'));
+  add("صور فضائية", "الأساس", ["قمر", "فضاء", "satellite"], click('input[name="basemap"][value="satellite"]'));
+  add("خريطة مرسومة", "الأساس", ["ورقية", "اطلس", "drawn"], click('input[name="basemap"][value="drawn"]'));
+  for (const [q, ar] of [["eco", "اقتصادي"], ["balanced", "متوازن"], ["sharp", "حاد"]]) add(`جودة العرض: ${ar}`, "الأداء", ["جودة", "عرض", "دقة", q], () => applyQuality(q));
+  add(playTimer ? "إيقاف الزمن" : "تشغيل الزمن", "الزمن", ["زمن", "تشغيل", "ايقاف", "play"], () => tbPlay.click());
+  add("الخريطة التالية", "الزمن", ["التالية", "بعد", "next"], () => { stopPlay(); stepTime(1); });
+  add("الخريطة السابقة", "الزمن", ["السابقة", "قبل", "prev"], () => { stopPlay(); stepTime(-1); });
+  for (const x of PLAY_SPEEDS) add(`سرعة التشغيل ×${x}`, "الزمن", ["سرعة", "تشغيل", `x${x}`], () => setPlaySpeed(x));
+  add("الوضع المبسّط", "العرض", ["مبسط", "بسيط", "simple"], click('.mode button[data-mode="simple"]'));
+  add("وضع الباحث", "العرض", ["باحث", "بحث", "research"], click('.mode button[data-mode="research"]'));
+  add(idleSpin.on ? "إيقاف دوران الكرة عند الخمول" : "تشغيل دوران الكرة عند الخمول", "الحركة", ["دوران", "خمول", "حركة"], () => spinToggle?.click());
+  add("انسخ رابط هذا المنظر", "المشاركة", ["رابط", "شارك", "مشاركة", "نسخ", "share"], click("#share-btn"));
+  add("اختصارات لوحة المفاتيح", "المساعدة", ["مفاتيح", "اختصارات", "keys"], openShortcuts);
+  add("جواز المستكشف", "المساعدة", ["جواز", "تقدم", "passport"], click("#passport-btn"));
+  add("إغلاق البطاقة", "العرض", ["بطاقة", "اغلاق", "close"], () => closeCard());
+  for (const it of cmds) it.n = [norm(it.title), ...(it.al ?? []).map(norm)];
+  return cmds;
+}
 const PER_TYPE = 5;
 async function search(q) {
+  // «>» في أول الخانة: الأوامر وحدها، وبلا شيء بعدها تُعرض كلها
+  if (q.trim().startsWith(">")) {
+    const toks = norm(q.trim().slice(1)).split(" ").filter(Boolean);
+    const cmds = buildCommands();
+    const hit = toks.length ? cmds.map((c) => [score(c, toks), c]).filter(([x]) => x > 0).sort((a, b) => b[0] - a[0]).map(([, c]) => c) : cmds;
+    return hit.length ? [["cmd", hit.slice(0, 14)]] : [];
+  }
   const toks = norm(q).split(" ").filter((t) => t.length >= 1);
   if (!toks.length || norm(q).length < 2) return [];
   const items = await buildIndex();
@@ -187,9 +226,12 @@ async function search(q) {
     if (list.length < PER_TYPE) list.push(it);
     byType.set(it.type, list);
   }
-  const order = ["year", "entity", "people", "place", "claim", "sunna", "era", "journey"];
+  const order = ["year", "cmd", "entity", "people", "place", "claim", "sunna", "era", "journey"];
   const yh = yearHit(q);
   if (yh) byType.set("year", [yh]);
+  // الأوامر المطابقة تظهر في البحث العادي أيضاً، قليلةً: ثلاثة أوامر على الأكثر
+  const cmdHits = buildCommands().map((c) => [score(c, toks), c]).filter(([x]) => x >= 2).sort((a, b) => b[0] - a[0]).slice(0, 3).map(([, c]) => c);
+  if (cmdHits.length) byType.set("cmd", cmdHits);
   return order.filter((t) => byType.has(t)).map((t) => [t, byType.get(t)]);
 }
 function highlight(text, q) {
@@ -201,6 +243,8 @@ function highlight(text, q) {
 }
 
 const qEl = document.getElementById("q");
+// على الجوال خانة البحث ضيقة فيُقطع التلميح الطويل في منتصفه، فيُختصر وفيه الأوامر
+if (isNarrow()) qEl.placeholder = "ابحث عن دولة أو مكان أو سنة، أو > للأوامر";
 const qRes = document.getElementById("q-results");
 let qItems = [];
 let qSel = -1;
@@ -217,7 +261,7 @@ function markSel() {
 async function runSearch() {
   const q = qEl.value;
   const token = ++qToken;
-  if (norm(q).length < 2) { closeResults(); return; }
+  if (norm(q).length < 2 && !q.trim().startsWith(">")) { closeResults(); return; }
   const groups = await search(q);
   if (token !== qToken) return;
   qItems = groups.flatMap(([, list]) => list);
@@ -254,6 +298,8 @@ document.addEventListener("pointerdown", (e) => { if (!e.target.closest("#search
 // «/» يضع المؤشر في البحث
 document.addEventListener("keydown", (e) => {
   if (e.key === "/" && !e.target.closest("input, textarea, select")) { e.preventDefault(); qEl.focus(); }
+  // Ctrl+K أو ⌘K من أي موضع: البحث والأوامر
+  else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); qEl.focus(); qEl.select(); }
 });
 
 // ---------- شريط القارات ----------
@@ -271,10 +317,10 @@ function setRegion(id) {
   for (const b of railEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.region === (activeRegion?.id ?? "world")));
   if (activeRegion) {
     const [w, s, e, n] = activeRegion.bbox;
-    map.fitBounds([[w, s], [e, n]], { padding: fitPadding(), pitch: 25, bearing: 0, duration: camMs(CAM_REGION), essential: true });
+    if (!camLock.on) map.fitBounds([[w, s], [e, n]], { padding: fitPadding(), pitch: 25, bearing: 0, duration: camMs(CAM_REGION), essential: true });
     openRegionCard(activeRegion);
   } else {
-    map.flyTo({ center: [30, 22], zoom: isNarrow() ? 0.9 : 1.6, pitch: 0, bearing: 0, duration: camMs(CAM_REGION), essential: true });
+    if (!camLock.on) map.flyTo({ center: [30, 22], zoom: isNarrow() ? 0.9 : 1.6, pitch: 0, bearing: 0, duration: camMs(CAM_REGION), essential: true });
     if (region.token === cardToken) closeCard();
   }
   renderList();
@@ -601,7 +647,14 @@ let initialApplied = false;
 function applyInitialView() {
   if (initialApplied) return;
   initialApplied = true;
-  const { r, s } = initialView;
+  const { r, s, l, p } = initialView;
+  // كاميرا مشارَكة: تُضبط أولاً وتُقفل أمام ما يطبّقه الرابط بعدها من منطقة أو سُنّة، ثم تُفتح
+  if (p) { camLock.on = true; map.jumpTo({ center: [p[0], p[1]], zoom: p[2] }); setTimeout(() => { camLock.on = false; }, 5000); }
+  // طبقات غيّرها صاحب الرابط عن الافتراضي: النقر على مربّعها يمرّ بالمسار نفسه الذي يمرّ به القارئ
+  for (const [g, on] of Object.entries(l ?? {})) {
+    const cb = document.querySelector(`#layer-panel input[data-group="${g}"]`);
+    if (cb && !cb.disabled && cb.checked !== on) cb.click();
+  }
   const until = (ok, run, tries = 40) => (ok() ? run() : tries > 0 && setTimeout(() => until(ok, run, tries - 1), 250));
   if (r) until(() => regions.length, () => { if (regions.some((x) => x.id === r)) setRegion(r); });
   if (s) until(() => sunanData?.sunan, () => { const x = sunanData.sunan.find((y) => sunnaSlug(y.id) === s); if (x) selectSunna(x); });
@@ -637,6 +690,8 @@ const SHORTCUTS = [
   ["↑ ↓ ثم Enter", "اختيار نتيجة البحث"],
   ["مسافة", "إيقاف العرض الشامل مؤقتاً"],
   ["Esc", "إغلاق البطاقة أو النتائج أو النافذة"],
+  ["Ctrl + K", "البحث والأوامر من أي موضع"],
+  ["> في البحث", "الأوامر وحدها: طبقات، وزمن، وعرض"],
   ["?", "هذه القائمة"],
 ];
 function openShortcuts() {

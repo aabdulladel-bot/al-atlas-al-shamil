@@ -1,0 +1,276 @@
+{
+ "_meta": {
+  "note": "مولَّد من scripts/config/layer_info.json وsources/manifest.json وملفات web/data. لا يُعدَّل يدوياً."
+ },
+ "groups": {
+  "borders": {
+   "ar": "الدول والكيانات",
+   "about": "مضلعات الكيانات السياسية على خرائط السنوات المتاحة، بلون ثابت لكل كيان عبر السنوات. الحد المحدد خط متصل، والتقريبي هالة، وقبل 1900 تُرسم كلها تقريبية.",
+   "coverage": {
+    "label": "الخرائط المتاحة",
+    "text": "4000 ق.م، 1000 ق.م، 1 ق.م، 700، 1200، 1600، 1800، 1914، 1945، 2010",
+    "count": 10
+   },
+   "sources": [
+    {
+     "id": "historical-basemaps",
+     "tier": "B",
+     "license": "GNU GPL v3 (الملف LICENSE في المستودع). لا يُذكر ترخيص البيانات منفصلاً، فتُعامل الملفات بترخيص المستودع. الاستعمال في الأطلس يخضع لشروط GPL-3، ويجب تحديد ذلك عند التوزيع.",
+     "attribution": "Historical Basemaps (aourednik), GPL-3",
+     "landing": "https://github.com/aourednik/historical-basemaps"
+    },
+    {
+     "id": "naturalearth-countries-50m",
+     "tier": "A",
+     "license": "ملك عام (Natural Earth)",
+     "attribution": "Natural Earth (public domain): admin-0 countries",
+     "landing": "https://github.com/nvkelso/natural-earth-vector"
+    }
+   ]
+  },
+  "labels": {
+   "ar": "الأسماء",
+   "about": "أسماء الكيانات بالعربية: الموثّق من ويكي بيانات متحققاً زمنياً، أو تعريب تقديري معلن، والإنجليزي تحته بخط صغير حين لا يكون الاسم موثّقاً.",
+   "coverage": {
+    "label": "الخرائط التي لها أسماء",
+    "text": "4000 ق.م، 1000 ق.م، 1 ق.م، 700، 1200، 1600، 1800، 1914، 1945، 2010",
+    "count": 10
+   },
+   "sources": [
+    {
+     "id": "wikidata-hb-names",
+     "tier": "A",
+     "license": "CC0 1.0 (Wikidata)",
+     "attribution": "Wikidata (CC0)",
+     "landing": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+    },
+    {
+     "id": "naturalearth-countries-50m",
+     "tier": "A",
+     "license": "ملك عام (Natural Earth)",
+     "attribution": "Natural Earth (public domain): admin-0 countries",
+     "landing": "https://github.com/nvkelso/natural-earth-vector"
+    }
+   ]
+  },
+  "peoples": {
+   "ar": "الشعوب والقبائل",
+   "about": "انتماء لا سيادة: مضلعات الشعوب والقبائل بتهشير لا بتعبئة، لأنها ليست دولاً.",
+   "coverage": {
+    "label": "الخرائط المتاحة",
+    "text": "4000 ق.م، 1000 ق.م، 1 ق.م، 700، 1200، 1600، 1800",
+    "count": 7
+   },
+   "sources": [
+    {
+     "id": "historical-basemaps",
+     "tier": "B",
+     "license": "GNU GPL v3 (الملف LICENSE في المستودع). لا يُذكر ترخيص البيانات منفصلاً، فتُعامل الملفات بترخيص المستودع. الاستعمال في الأطلس يخضع لشروط GPL-3، ويجب تحديد ذلك عند التوزيع.",
+     "attribution": "Historical Basemaps (aourednik), GPL-3",
+     "landing": "https://github.com/aourednik/historical-basemaps"
+    }
+   ]
+  },
+  "places": {
+   "ar": "مواقع الحقبة",
+   "about": "مدن ومواقع مختارة لكل حقبة، برمز بحسب مصدر إحداثياتها: موقع تاريخي في Pleiades، أو تقديري، أو مدينة قائمة اليوم.",
+   "coverage": {
+    "label": "المواقع في كل الحقب",
+    "text": "310 موقعاً",
+    "count": 310
+   },
+   "sources": [
+    {
+     "id": "pleiades-places",
+     "tier": "A",
+     "license": "CC BY 3.0 (بحسب سجل Zenodo للإصدار 4.1؛ يُتحقق من ملف الداتا نفسه)",
+     "attribution": "Pleiades (pleiades.stoa.org)، CC BY 3.0 بحسب سجل الإصدار؛ صفحة الموقع تذكر أن المحتوى كله بترخيص Creative Commons Attribution",
+     "landing": "https://pleiades.stoa.org/downloads"
+    },
+    {
+     "id": "naturalearth-populated-places-50m",
+     "tier": "A",
+     "license": "ملك عام (Natural Earth)",
+     "attribution": "Natural Earth (public domain): populated places",
+     "landing": "https://github.com/nvkelso/natural-earth-vector"
+    },
+    {
+     "id": "wikidata-islamic-cities",
+     "tier": "A",
+     "license": "CC0 (Wikidata)",
+     "attribution": "Wikidata (CC0)",
+     "landing": "https://www.wikidata.org"
+    }
+   ]
+  },
+  "claims": {
+   "ar": "الشواهد الموثّقة",
+   "about": "أماكن ادعاءات مطابقة الاقتباس لنص مصدرها، بحجم يتبع عدد الشواهد. وفي السُّنّة المختارة تُلوَّن بدورها: مؤيد أو مقيِّد.",
+   "coverage": {
+    "label": "الادعاءات المعروضة",
+    "text": "168 ادعاءً في 8 حقب",
+    "count": 168
+   },
+   "sources": [
+    {
+     "id": "tocqueville-reeve-1840-vol3",
+     "tier": "A",
+     "license": "ملك عام: ترجمة Henry Reeve، لندن: Saunders and Otley، 1840 (المترجم ت. 1895).",
+     "attribution": "Tocqueville, Democracy in America, Part II (vol. III), tr. H. Reeve, 1840; scan by Google via Internet Archive",
+     "landing": "https://archive.org/stream/democracyinamer09tocqgoog/democracyinamer09tocqgoog_djvu.txt"
+    },
+    {
+     "id": "darwin-origin-1859",
+     "tier": "A",
+     "license": "ملك عام: London: John Murray, 1859 (الطبعة الأولى).",
+     "attribution": "Darwin, On the Origin of Species, 1st ed., London: John Murray, 1859; scan via Internet Archive",
+     "landing": "https://archive.org/details/B-001-004-417"
+    },
+    {
+     "id": "marx-manifesto-moore-1888-mia",
+     "tier": "B",
+     "license": "ترجمة Samuel Moore (1888) في الملك العام. التفريغ من أرشيف الماركسيين (marxists.org، Copyleft) عن Progress Publishers 1969.",
+     "attribution": "Marx & Engels, Manifesto of the Communist Party, tr. S. Moore 1888; transcription Marxists Internet Archive",
+     "landing": "https://archive.org/details/ManifestoOfTheCommunistPartyKarlMarxFrederickEngels"
+    },
+    {
+     "id": "turath-4129-tibr-masbuk",
+     "tier": "B",
+     "license": "النص الأصلي من القرن السادس الهجري في الملك العام. النشرة: ضبط أحمد شمس الدين، دار الكتب العلمية، بيروت 1988. الاقتباس بإذن شفهي من تراث (قرار المستخدم).",
+     "attribution": "التبر المسبوك في نصيحة الملوك، عبر تراث (turath.io)",
+     "landing": "https://app.turath.io/book/4129"
+    },
+    {
+     "id": "turath-30026-sayrafi",
+     "tier": "B",
+     "license": "النص من تاريخ مصر المملوكية (القرن التاسع الهجري)، في الملك العام. النشرة من تراث بإذن شفهي من المستخدم (قرار المستخدم). بيانات الطبعة غير مقروءة في الاستجابة المحفوظة.",
+     "attribution": "ابن الصيرفي، إنباء الهصر بأنباء العصر، عبر تراث (turath.io)",
+     "landing": "https://app.turath.io/book/30026"
+    },
+    {
+     "id": "tahtawi-takhlis-archive",
+     "tier": "A",
+     "license": "ملك عام: تأليف رفاعة الطهطاوي (ت 1873)، والطبعة غير مؤرخة في بيانات هذه النسخة. النص من أرشيف الإنترنت (OCR).",
+     "attribution": "رفاعة الطهطاوي، تخليص الإبريز في تلخيص باريز (نسخة أرشيف الإنترنت)",
+     "landing": "https://archive.org/details/3p.d.f4555"
+    },
+    {
+     "id": "brinkley-japan-v4-1901",
+     "tier": "A",
+     "license": "ملك عام: كتاب 1901 (المؤلف فرانك بريكلي ت 1912). النص من أرشيف الإنترنت (OCR).",
+     "attribution": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
+     "landing": "https://archive.org/details/japanitshistory4brin"
+    },
+    {
+     "id": "versailles-1919",
+     "tier": "A",
+     "license": "ملك عام: نص معاهدة منشورة سنة 1919 من حكومة بريطانيا (HMSO)، وحقوق التاج على الوثائق الحكومية انتهت. النص من أرشيف الإنترنت.",
+     "attribution": "The Treaty of Peace between the Allied and Associated Powers and Germany (1919)",
+     "landing": "https://archive.org/details/treatyofpeacebe00alli"
+    },
+    {
+     "id": "smith-wealth-oup1904-vol1",
+     "tier": "A",
+     "license": "ملك عام: نص آدم سميث (ت. 1790)، طبعة Oxford University Press، لندن 1904 (منشورة قبل 1929).",
+     "attribution": "Adam Smith, An Inquiry into the Nature and Causes of the Wealth of Nations, vol. 1 (London: Oxford University Press, 1904); scan by UNC Chapel Hill via Internet Archive",
+     "landing": "https://archive.org/details/inquiryintonatur01smit_3"
+    },
+    {
+     "id": "smith-wealth-cannan1904-vol2",
+     "tier": "A",
+     "license": "ملك عام: نص آدم سميث (ت. 1790)، تحرير Edwin Cannan (ت. 1935)، Methuen وPutnam، 1904 (منشورة قبل 1929). الأرشيف يصنّفها NOT_IN_COPYRIGHT.",
+     "attribution": "Adam Smith, The Wealth of Nations, ed. Edwin Cannan, vol. 2 (London: Methuen; New York: Putnam, 1904); scan by University of Toronto via Internet Archive",
+     "landing": "https://archive.org/details/inquirynature02smituoft"
+    }
+   ]
+  },
+  "demography": {
+   "ar": "السكان (أعمدة)",
+   "about": "أعمدة ثلاثية الأبعاد ترتفع بحسب الجذر التربيعي للعدد. قبل 1800 إقليمية بتقديرات HYDE، وبعدها بحسب الدولة من Gapminder.",
+   "coverage": {
+    "label": "الحقب التي لها بيانات",
+    "text": "1، 2، 3، 4، 5، 6، 7، 8"
+   },
+   "sources": [
+    {
+     "id": "owid-hyde-regional-population",
+     "tier": "B",
+     "license": "CC BY 4.0 (OWID للبيانات المنشورة؛ HYDE: CC BY 4.0 بحسب فهرس DataHub)",
+     "attribution": "Population data from HYDE (Klein Goldewijk et al., 2016), via Our World in Data (CC BY 4.0).",
+     "landing": "https://datahub.io/climate-and-environment/hyde-history-database-of-the-global-environment"
+    },
+    {
+     "id": "hyde-3.3",
+     "tier": "A",
+     "license": "CC BY 4.0 (بحسب صفحة الجامعة)",
+     "landing": "https://public.yoda.uu.nl/geo/UU01/67UHB4.html"
+    },
+    {
+     "id": "gapminder-total-population",
+     "tier": "B",
+     "license": "CC BY 4.0 (بحسب README المستودع: Gapminder created this dataset and provides it under CC BY 4.0)",
+     "attribution": "Population data from Gapminder (Systema Globalis, CC BY 4.0). https://www.gapminder.org",
+     "landing": "https://github.com/open-numbers/ddf--gapminder--systema_globalis"
+    },
+    {
+     "id": "gapminder-country-entities",
+     "tier": "B",
+     "license": "CC BY 4.0 (بحسب README المستودع نفسه)",
+     "attribution": "Country entities from Gapminder (Systema Globalis, CC BY 4.0).",
+     "landing": "https://github.com/open-numbers/ddf--gapminder--systema_globalis"
+    }
+   ]
+  },
+  "lights": {
+   "ar": "أضواء الليل",
+   "about": "صورة Black Marble من NASA، تُعرض مقابل خرائط السكان التاريخية لتُرى مواضع العمران اليوم.",
+   "coverage": {
+    "label": "التغطية",
+    "text": "تُعرض عند خريطتي 2010 واليوم"
+   },
+   "sources": [
+    {
+     "id": "nasa-gibs-blackmarble",
+     "tier": "A",
+     "license": "ملك عام (صور NASA)، مع طلب الإسناد لـ NASA وخدمة GIBS",
+     "attribution": "NASA Black Marble 2016 (VIIRS, Suomi NPP); imagery via NASA GIBS (ESDIS)",
+     "landing": "https://nasa-gibs.github.io/gibs-api-docs/"
+    }
+   ]
+  },
+  "hillshade": {
+   "ar": "ظلال التضاريس",
+   "about": "تظليل الارتفاع وتلوينه من بيانات الارتفاع نفسها، ويُجسَّم عند الإمالة.",
+   "coverage": {
+    "label": "التغطية",
+    "text": "كل الخريطة"
+   },
+   "sources": [
+    {
+     "id": "aws-terrain-tiles",
+     "tier": "B",
+     "license": "بيانات مفتوحة مع إسناد إلزامي: أغلبها ملك عام (USGS 3DEP وSRTM وGMTED2010، وNOAA ETOPO1)، وبعضها مرخّص بشرط الإسناد (Copernicus EU-DEM، وأستراليا، وكندا OGL، وبريطانيا، والنمسا، والنرويج، ونيوزيلندا، والمكسيك، وArcticDEM)",
+     "attribution": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md (النص الكامل منقول في تذييل الواجهة)",
+     "landing": "https://registry.opendata.aws/terrain-tiles/"
+    }
+   ]
+  },
+  "water": {
+   "ar": "الأنهار والبحيرات",
+   "about": "أنهار وبحيرات من Natural Earth.",
+   "coverage": {
+    "label": "التغطية",
+    "text": "كل الخريطة"
+   },
+   "sources": [
+    {
+     "id": "naturalearth-50m",
+     "tier": "A",
+     "license": "Public domain (Natural Earth)",
+     "attribution": "Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com.",
+     "landing": "https://www.naturalearthdata.com/about/terms-of-use/"
+    }
+   ]
+  }
+ }
+}
