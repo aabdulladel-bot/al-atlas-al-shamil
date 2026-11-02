@@ -143,6 +143,19 @@
     .lc { position: relative; }
     .lc-i { position: absolute; top: 3px; inset-inline-start: 3px; width: 18px; height: 18px; padding: 0; border-radius: 50%; border: 1px solid var(--line); background: var(--card2); color: var(--muted); font: inherit; font-size: 11px; line-height: 1; cursor: pointer; opacity: .85; }
     .lc-i:hover, .lc-i:focus-visible { color: var(--accent); border-color: var(--accent); opacity: 1; }
+    .lineage h4 { margin: 10px 0 4px; font-size: 13px; color: var(--accent); }
+    .lineage h4.lin-dir { font-size: 14px; }
+    .lin-mode { margin: 6px 0; }
+    .lin-level { margin: 4px 0; padding-inline-start: 10px; border-inline-start: 2px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+    .lin-level > summary { cursor: pointer; font-weight: 700; font-size: 13px; padding: 2px 0; }
+    button.lin-btn { display: flex; flex-direction: column; align-items: flex-start; width: 100%; margin: 3px 0; padding: 6px 9px; border-radius: 9px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; text-align: start; cursor: pointer; }
+    button.lin-btn:hover { border-color: var(--accent); }
+    button.lin-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    button.lin-btn small { color: var(--muted); font-size: 11px; line-height: 1.5; }
+    button.lin-btn .chip { margin: 3px 0 1px; font-size: 11px; padding: 1px 8px; }
+    button.lin-back { margin: 2px 0 8px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--accent); background: transparent; color: var(--ink); font: inherit; font-size: 12px; cursor: pointer; }
+    button.lin-back:hover { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+    button.lin-back:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     .lc-name { font-weight: 600; }
     .lc-count { font-size: 11px; color: var(--muted); grid-column: 2; }
     .lc-borders { background: conic-gradient(from 30deg, hsl(10 70% 62%), hsl(130 55% 55%), hsl(210 65% 62%), hsl(290 55% 62%), hsl(10 70% 62%)); opacity: 0.85; }
@@ -261,6 +274,15 @@
     .lk { unicode-bidi: isolate; white-space: nowrap; }
     .src-quote { color: var(--muted); font-style: italic; }
     body[data-mode="simple"] .research-only { display: none; }
+    /* العدسات: أزرار كالحبوب، والمختار مبرز، والوصف وأسئلته في بطاقة صغيرة */
+    #lens-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    #lens-list button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+    #lens-list button:hover { border-color: var(--accent); }
+    #lens-list button[aria-pressed="true"] { background: var(--accent); color: var(--panel); border-color: var(--accent); font-weight: 700; }
+    #lens-list button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    #lens-about { margin-top: 8px; padding: 10px 12px; }
+    #lens-about h3 { margin: 0 0 4px; font-size: 14px; }
+    #lens-about ol { margin: 6px 0 0; padding-inline-start: 20px; font-size: 13px; line-height: 1.7; }
     .claims-list { max-height: 300px; overflow-y: auto; }
     .popup-name { font-weight: 700; font-size: 15px; }
     .popup-sub { color: var(--muted); font-size: 13px; }
@@ -565,6 +587,13 @@
         <p>والرحلة تمرّ بشواهد موثّقة خطوة خطوة، وتنتقل الخريطة معها إلى زمنها.</p>
         <div class="row" id="journey-list"></div>
       </div>
+    </details>
+
+    <details class="section research-only" id="lens-panel" open>
+      <summary>العدسات</summary>
+      <p class="sub">كل عدسة تضع الطبقات والزمن وسُنّة للبداية، لتبدأ من تخصّصك.</p>
+      <div class="row" id="lens-list" role="group" aria-label="العدسات"></div>
+      <div id="lens-about" class="card" hidden></div>
     </details>
 
     <details class="section" id="layer-panel" open>

@@ -1,0 +1,145 @@
+{
+ "_meta": {
+  "note": "مولَّد من scripts/config/lenses.json. لا يُعدَّل يدوياً."
+ },
+ "lenses": [
+  {
+   "id": "political",
+   "ar": "سياسية",
+   "about": "الدول والكيانات وسنوات قيامها وزوالها، والشرعية والعصبية، من الحدود والسنن والشواهد الموثّقة.",
+   "layers": {
+    "borders": true,
+    "labels": true,
+    "peoples": false,
+    "places": true,
+    "claims": true,
+    "demography": false,
+    "lights": false,
+    "hillshade": false,
+    "water": true
+   },
+   "time": 1600,
+   "sunna": "sn_asabiyya",
+   "questions": [
+    "كيف تتكوّن العصبية وتتحول إلى ملك؟",
+    "ما الحدود التي تغيّرت بين حقبتين وما الذي بقي منها؟",
+    "ما الشواهد التي تؤيد سُنّة الدولة وما الذي يقيّدها؟"
+   ]
+  },
+  {
+   "id": "military",
+   "ar": "عسكرية",
+   "about": "الممرات والمضائق والمدن الحصينة والطرق، وما يقيّد الحركة فيها. الأطلس لا يملك بيانات قوات أو معارك منظّمة؛ هذه العدسة جغرافيا وشواهد فقط.",
+   "layers": {
+    "borders": true,
+    "labels": true,
+    "peoples": false,
+    "places": true,
+    "claims": true,
+    "demography": false,
+    "lights": false,
+    "hillshade": true,
+    "water": true
+   },
+   "time": 700,
+   "sunna": "sn_security",
+   "questions": [
+    "أين تقع الممرات والثغور، وما الذي يُغلق الطرق؟",
+    "كيف تحمي الدولة طرق قوافلها ومالها؟",
+    "ما المواقع التي تكرر ذكرها في الشواهد؟"
+   ]
+  },
+  {
+   "id": "economic",
+   "ar": "اقتصادية",
+   "about": "الجباية والأسعار والتجارة والسكان، من سنن المقدمة وشواهدها، ومن سلسلة الناتج للفرد (Maddison) حيث تتوفر. السلسلة سياق لا اختبار للسُّنن.",
+   "layers": {
+    "borders": true,
+    "labels": true,
+    "peoples": false,
+    "places": true,
+    "claims": true,
+    "demography": true,
+    "lights": false,
+    "hillshade": false,
+    "water": true
+   },
+   "time": 1200,
+   "sunna": "sn_taxation",
+   "questions": [
+    "متى تكثر الجباية ومتى تقل؟",
+    "ماذا تفعل تجارة السلطان بكسب الرعايا؟",
+    "كيف تتغيّر الثروة للفرد عبر الحقب المتاحة في سلسلة Maddison؟"
+   ]
+  },
+  {
+   "id": "social",
+   "ar": "اجتماعية",
+   "about": "الشعوب والقبائل والعمران والسكان، بتهشير يفرّق الانتماء عن السيادة، مع الشواهد الموثّقة.",
+   "layers": {
+    "borders": true,
+    "labels": true,
+    "peoples": true,
+    "places": true,
+    "claims": true,
+    "demography": true,
+    "lights": false,
+    "hillshade": false,
+    "water": false
+   },
+   "time": 1200,
+   "sunna": "sn_knowledge",
+   "questions": [
+    "أي الشعوب تعيش في الأرض نفسها عبر الحقب؟",
+    "كيف يرتبط العمران بالسكان في الحقب المتاحة؟",
+    "أين تنتقل الصنائع والمعرفة مع الناس؟"
+   ]
+  },
+  {
+   "id": "intelligence",
+   "ar": "استخبارية",
+   "about": "ما تغيّر بين خريطتين متتاليتين، والشواهد الموثّقة عن الأماكن نفسها. مؤشرات الإنذار الحية (المرصد) لم تُبنَ بعد.",
+   "layers": {
+    "borders": true,
+    "labels": true,
+    "peoples": false,
+    "places": false,
+    "claims": true,
+    "demography": false,
+    "lights": true,
+    "hillshade": false,
+    "water": false
+   },
+   "time": "modern",
+   "sunna": null,
+   "questions": [
+    "ما الكيانات التي اختفت أو انقسمت بين آخر خريطتين؟",
+    "أي الأماكن تتكرر فيها الشواهد؟",
+    "ما فجوات البيانات الحديثة التي لا نعرفها بعد؟"
+   ]
+  },
+  {
+   "id": "academic",
+   "ar": "أكاديمية",
+   "about": "كل شيء مكشوف: الاقتباس والمصدر والتحفظ والترخيص لكل شاهد وكل خريطة. مناسبة لمراجعة المنهج.",
+   "layers": {
+    "borders": true,
+    "labels": true,
+    "peoples": true,
+    "places": true,
+    "claims": true,
+    "demography": true,
+    "lights": false,
+    "hillshade": true,
+    "water": true
+   },
+   "time": 1600,
+   "sunna": "sn_trade",
+   "questions": [
+    "ما الشاهد المؤيد والمقيِّد لهذه السُّنّة، وما اقتباسه الحرفي؟",
+    "ما المصدر الأولي لكل طبقة، وما ترخيصه؟",
+    "ما الذي لا تستطيع هذه الخريطة قوله؟"
+   ]
+  }
+ ]
+}

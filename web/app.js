@@ -665,9 +665,13 @@ function linkedEvidenceHtml(name, links) {
 }
 
 const entityTitle = (p) => p.NAME_AR || labelInfo.get(p.NAME)?.ar || p.NAME || "أرض بلا كيان مسمّى";
+let lastEntityCard = null;
 function openEntityCard(f, kind) {
   const p = f.properties;
   const key = time.key;
+  // كيان آخر يفتحه القارئ من الخريطة أو البحث يبدأ مساراً جديداً، أما التنقل داخل السلسلة أو إعادة رسم الكيان نفسه فلا
+  if (!lineageNav && !(cardEntity && cardEntity.name === p.NAME)) lineageTrail = [];
+  lastEntityCard = { f, kind };
   markPoint(null);
   if (!p.NAME) {
     cardEntity = null;
@@ -706,12 +710,18 @@ function openEntityCard(f, kind) {
   const facts = (links) => ({ name: p.NAME, kind, key, title, swatch, area: info?.a, span, years: info?.years ?? [String(key)], evidence: (links?.[p.NAME] ?? []).length });
   const pinBtn = `<div class="card-actions"><button type="button" class="chip" data-pin="${pinnedHere ? "off" : "on"}">${pinnedHere ? "إلغاء التثبيت" : pinned ? "ثبّت هذا بدلاً منه" : "ثبّت للمقارنة"}</button></div>`;
   const render = (links, econ = "") => {
-    cardEntity.facts = facts(links);
-    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + econ + about + alsoHtml();
+    if (cardEntity) cardEntity.facts = facts(links);
+    // سلسلة الكيان للدول والكيانات السياسية، لا للشعوب
+    const lineage = kind === "people" ? "" : lineageSectionHtml(key, p.NAME, p.NAME_AR ?? p.NAME);
+    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineage + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
-  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : ""]).then(([links, econ]) => updateCard(token, render(links, econ)));
+  // الإغلاق قبل وصول البيانات يُلغي التحديث: لا تُبنى البطاقة المغلقة (كان ذلك يرمي خطأ «facts» عند إغلاق سريع)
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage()]).then(([links, econ]) => {
+    if (token !== cardToken || cardEl.hidden) return;
+    updateCard(token, render(links, econ));
+  });
 }
 // المقارنة: كيان مثبّت يُقارن بكل كيان تُفتح بطاقته بعده، في أي سنة. الأرقام من بيانات البطاقتين نفسيهما.
 let pinned = null;
@@ -1565,6 +1575,167 @@ if (spinToggle) {
   });
 }
 
+// ---------- سلسلة الكيان: من أين جاء وإلى أين صار، عبر الخرائط المتجاورة (web/data/lineage.json، من ملفات الانتقال) ----------
+// وضعان: «أقوى صلة لكل حقبة» (الافتراضي، خفيف) و«كل الصلات» (كل ما يتقاطع، بحدّ ثمانية لكل خطوة).
+// التطابق بالأرض لا بالاسم: الصلة تعني أن جزءاً من الأرض مشترك، وليست حكماً على الهوية.
+let lineageData = null;
+// الملف نحو 900 كيلوبايت: يُحمَّل عند أول بطاقة كيان، لا عند فتح الأطلس
+let lineageReady = null;
+const ensureLineage = () => (lineageReady ??= getJson("data/lineage.json").then((d) => { lineageData = d; return d; }).catch(() => null));
+let lineageMode = "strong";
+try { if (localStorage.getItem("atlas-lineage") === "all") lineageMode = "all"; } catch {}
+// مسار التنقل داخل السلسلة: الكيانات التي فتحها القارئ بالصلات، فيرجع إليها. يُمسح حين يفتح كياناً آخر من الخريطة أو البحث
+let lineageTrail = [];
+let lineageNav = false;
+// خطوات السلسلة في اتجاه واحد (prev أو next)، كل خطوة مصفوفة من الكيانات المتصلة بالخطوة السابقة
+function lineageChain(key, name, dirn, mode, rootLabel) {
+  // أقوى صلة: خيط واحد، في كل خطوة الأقوى. كل الصلات: في كل خطوة الأقوى من كل ما تحت الكيانات السابقة، بحدّ ثمانية،
+  // فلا ينفجر عدد الأزرار مع العمق (كان ينفجر إلى مئة وعشرين)
+  const PER_LEVEL = mode === "strong" ? 1 : 8;
+  const levels = [];
+  let frontier = [{ key: String(key), name, label: rootLabel }];
+  const seen = new Set([`${key}|${name}`]);
+  for (let depth = 0; depth < 12 && frontier.length; depth++) {
+    const cands = [];
+    for (const cur of frontier) {
+      const ent = lineageData?.lineage[cur.key]?.[cur.name];
+      const neighbour = ent?.[dirn] ? Object.entries(ent[dirn])[0] : null;
+      if (!neighbour) continue;
+      const [nKey, { items: links }] = neighbour;
+      for (const l of links) {
+        if (seen.has(`${nKey}|${l.name}`)) continue;
+        cands.push({ key: nKey, name: l.name, name_ar: l.name_ar, ownShare: l.ownShare, otherShare: l.otherShare, places: l.places, from: cur.label });
+      }
+    }
+    if (!cands.length) break;
+    cands.sort((a, b) => Math.min(b.ownShare, b.otherShare) - Math.min(a.ownShare, a.otherShare) || b.ownShare - a.ownShare);
+    const kept = cands.slice(0, PER_LEVEL);
+    const items = kept.map((x) => ({ ...x }));
+    for (const x of kept) seen.add(`${x.key}|${x.name}`);
+    if (cands.length > kept.length) items.push({ more: cands.length - kept.length, key: kept[0].key });
+    levels.push(items);
+    frontier = kept.map((x) => ({ key: x.key, name: x.name, label: x.name_ar ?? x.name }));
+  }
+  return levels;
+}
+function lineageLevelsHtml(levels) {
+  // الخطوة الأولى (أقرب حقبة) مفتوحة، والباقي مطوي بعدد صلاته، فلا تثقل البطاقة بكل الأزرار دفعة واحدة
+  return levels.map((items, i) => {
+    const key = items.find((x) => x.key)?.key;
+    const n = items.filter((x) => !x.more).length;
+    const rows = items.map((x) => x.more
+      ? `<p class="sub">و${fmtInt(x.more)} صلة أخرى في هذه الخريطة</p>`
+      : `<button type="button" class="lin-btn" data-lkey="${escapeHtml(String(x.key))}" data-lname="${escapeHtml(x.name)}">` +
+        `<b>${escapeHtml(x.name_ar ?? x.name)}</b>` +
+        `<small>${pct(x.ownShare)} من أرض ${escapeHtml(x.from)} داخل هذا الكيان، و${pct(x.otherShare)} من أرضه داخل ${escapeHtml(x.from)}</small>` +
+        (x.places?.length
+          ? `<span class="chip tier-v">شاهد على الأرض المشتركة</span><small>${escapeHtml(x.places.join("، "))}</small>`
+          : `<span class="chip">تطابق أرض فقط</span>`) +
+        `</button>`).join("");
+    return `<details class="lin-level"${i === 0 ? " open" : ""}><summary>${escapeHtml(yearText(key))}<span class="sub"> · ${fmtInt(n)}</span></summary>${rows}</details>`;
+  }).join("");
+}
+function lineageSectionHtml(key, name, label) {
+  if (!lineageData) return "";
+  const back = lineageChain(key, name, "prev", lineageMode, label);
+  const fwd = lineageChain(key, name, "next", lineageMode, label);
+  const modeBtns = `<div class="seg lin-mode" role="radiogroup" aria-label="وضع السلسلة">` +
+    `<button type="button" data-lmode="strong" aria-pressed="${lineageMode === "strong"}">أقوى صلة لكل حقبة</button>` +
+    `<button type="button" data-lmode="all" aria-pressed="${lineageMode === "all"}">كل الصلات</button></div>`;
+  const last = lineageTrail[lineageTrail.length - 1];
+  const backBtn = last ? `<button type="button" class="lin-back" data-lback>↩ رجوع إلى ${escapeHtml(last.label)}</button>` : "";
+  if (!back.length && !fwd.length) {
+    return `<section class="card-sec lineage"><h3>سلسلة الكيان</h3>${backBtn}<p class="sub">لا سلف ولا خلف لهذا الكيان في الخرائط المتجاورة. إما أن أرضه لم تتقاطع مع كيان موثّق في الخريطة المجاورة، أو أنها خارج التغطية.</p></section>`;
+  }
+  return `<section class="card-sec lineage"><h3>سلسلة الكيان</h3>${backBtn}${modeBtns}` +
+    `<p class="sub">التطابق بالأرض لا بالاسم: كل صلة تعني أن جزءاً من الأرض مشترك بين الكيانين. «شاهد على الأرض المشتركة» تعني أن موقع شاهد موثّق يقع داخل تلك الأرض، لا أن الشاهد يذكر الصلة نفسها.</p>` +
+    (back.length ? `<h4 class="lin-dir">سبقه</h4>${lineageLevelsHtml(back)}` : "") +
+    (fwd.length ? `<h4 class="lin-dir">خلفه</h4>${lineageLevelsHtml(fwd)}` : "") +
+    `</section>`;
+}
+// فتح كيان في خريطة أخرى باسمه، ينتقل الزمن إليها ثم تُفتح بطاقته
+// back: العودة من المسار، فلا يُضاف الكيان الحالي إليه مجدداً
+async function openLineageEntity(k, name, back = false) {
+  // الحالة قبل التنقل: الزمن والكيان الحاليان يُحفظان قبل أن يغيّرهما تحميل الخريطة الجديدة
+  const from = cardEntity && lastEntityCard ? { key: String(time.key), name: cardEntity.name, label: entityTitle(lastEntityCard.f.properties) } : null;
+  const data = await loadBorders(k);
+  const f = data?.features.find((x) => x.properties.NAME === name);
+  if (!f) return;
+  if (!back && from) {
+    lineageTrail.push(from);
+    if (lineageTrail.length > 20) lineageTrail.shift();
+  }
+  cardAlso = [];
+  cardCurrent = { c: CLICKABLE.find((c) => c.layer === "borders-fill"), f };
+  lineageNav = true;
+  try { openEntityCard(f, "state"); } finally { lineageNav = false; }
+}
+cardBody.addEventListener("click", (e) => {
+  const mode = e.target.closest("[data-lmode]");
+  if (mode) {
+    lineageMode = mode.dataset.lmode;
+    try { localStorage.setItem("atlas-lineage", lineageMode); } catch {}
+    if (lastEntityCard) openEntityCard(lastEntityCard.f, lastEntityCard.kind);
+    return;
+  }
+  if (e.target.closest("[data-lback]")) {
+    const prev = lineageTrail.pop();
+    if (prev) openLineageEntity(prev.key, prev.name, true);
+    return;
+  }
+  const b = e.target.closest(".lin-btn");
+  if (b) openLineageEntity(b.dataset.lkey, b.dataset.lname);
+});
+
+// ---------- العدسات: بداية محددة لتخصص (web/data/lenses.json، مولَّد من scripts/config/lenses.json) ----------
+// العدسة تضع الطبقات بالنقر على مربّعاتها، وتطلب الزمن، وتختار سُنّتها، فتمرّ بالمسارات نفسها التي يمرّ بها القارئ.
+// وتحفظ اسمها في الرابط (g<اسم>)، فيفتح الرابط على العدسة نفسها.
+let activeLens = null;
+let lensData = null;
+const lensReady = getJson("data/lenses.json").then((d) => { lensData = d; renderLensButtons(); return d; }).catch(() => null);
+const lensById = (id) => lensData?.lenses.find((x) => x.id === id) ?? null;
+const lensAboutEl = document.getElementById("lens-about");
+function renderLensButtons() {
+  const box = document.getElementById("lens-list");
+  if (!box || !lensData) return;
+  box.replaceChildren(...lensData.lenses.map((L) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.dataset.lens = L.id;
+    b.setAttribute("aria-pressed", String(L.id === activeLens));
+    b.textContent = L.ar;
+    b.addEventListener("click", () => applyLens(L.id));
+    return b;
+  }));
+}
+function showLensAbout(L) {
+  lensAboutEl.hidden = false;
+  lensAboutEl.innerHTML = `<h3>عدسة ${escapeHtml(L.ar)}</h3><p class="sub">${escapeHtml(L.about)}</p>` +
+    `<p class="sub">أسئلة للبدء:</p><ol>${L.questions.map((q) => `<li>${escapeHtml(q)}</li>`).join("")}</ol>`;
+}
+// moveTime=false: الزمن من الرابط نفسه (t) يبقى، وإلا تنتقل الخريطة إلى زمن العدسة
+async function applyLens(id, { moveTime = true } = {}) {
+  await lensReady;
+  const L = lensById(id);
+  if (!L) return false;
+  activeLens = L.id;
+  setMode("research");
+  for (const [g, on] of Object.entries(L.layers)) {
+    const cb = document.querySelector(`#layer-panel input[data-group="${g}"]`);
+    if (cb && !cb.disabled && cb.checked !== on) cb.click();
+  }
+  if (moveTime) await loadBorders(timeKey(L.time));
+  await loadSunan();
+  if (L.sunna) {
+    const s = sunanData?.sunan.find((x) => x.id === L.sunna);
+    if (s) await selectSunna(s);
+  } else if (activeSunna) clearSunna();
+  for (const b of document.querySelectorAll("#lens-list button")) b.setAttribute("aria-pressed", String(b.dataset.lens === L.id));
+  showLensAbout(L);
+  writeHash();
+  return true;
+}
+
 // ---------- «عن الطبقة»: مصدرها وترخيصها وتغطيتها (web/data/layers_info.json، مولَّد من المانيفست وملفات البيانات) ----------
 const TIER_LABEL = { A: "ملك عام أو إسناد بسيط", B: "مرخّص بإسناد", C: "مرجع فقط" };
 let layerInfo = null;
@@ -2055,6 +2226,7 @@ function viewFromHash() {
       if (TIME_STOPS.some((x) => String(x) === String(k))) out.t = k;
     } else if (/^r[a-z]+$/.test(part)) out.r = part.slice(1);
     else if (/^s[a-z]+$/.test(part)) out.s = part.slice(1);
+    else if (/^g[a-z]+$/.test(part)) out.g = part.slice(1);
     else if (/^[hk][a-z]+$/.test(part)) (out.l ??= {})[part.slice(1)] = part[0] === "k"; // k: أُظهرت طبقة مطفأة افتراضياً، وh: أُخفيت طبقة ظاهرة
     else if (/^p\d{1,5}_\d{1,5}_\d{1,3}$/.test(part)) { const [a, b, c] = part.slice(1).split("_").map(Number); if (a <= 36000 && b <= 18000 && c <= 220) out.p = [a / 100 - 180, b / 100 - 90, c / 10]; }
   }
@@ -2067,6 +2239,7 @@ function writeHash() {
   const parts = [t];
   if (typeof activeRegion !== "undefined" && activeRegion) parts.push(`r${activeRegion.id}`);
   if (activeSunna) parts.push(`s${sunnaSlug(activeSunna.id)}`);
+  if (activeLens) parts.push(`g${activeLens}`);
   // الطبقات التي غيّرها القارئ عن افتراضها، ثم الكاميرا (خط الطول وخط العرض بمئات الدرجة، والتقريب بعشراتها)
   const defaultOff = new Set(["demography", "lights"]);
   for (const g of Object.keys(LAYER_GROUPS)) {
@@ -2079,9 +2252,12 @@ function writeHash() {
 }
 const START_TIME = initialView.t ?? 1200;
 map.on("load", async () => {
-  await loadBorders(START_TIME);
-  // المنظر المشارَك بمنطقة يضبط الكاميرا بنفسه، فلا افتتاحية
-  if (!reduceMotion && !initialView.r && !initialView.p && !document.body.classList.contains("showcasing")) map.flyTo({ ...FIRST_VIEW, duration: 5200, curve: 1.3, essential: false });
+  const lens = initialView.g ? await lensReady.then(() => lensById(initialView.g)) : null;
+  // الزمن من الرابط أولاً، ثم زمن العدسة، ثم الافتراضي
+  await loadBorders(initialView.t ?? lens?.time ?? START_TIME);
+  if (lens) await applyLens(lens.id, { moveTime: initialView.t == null });
+  // المنظر المشارَك بمنطقة أو كاميرا أو عدسة يضبط الكاميرا بنفسه، فلا افتتاحية
+  if (!reduceMotion && !initialView.r && !initialView.p && !lens && !document.body.classList.contains("showcasing")) map.flyTo({ ...FIRST_VIEW, duration: 5200, curve: 1.3, essential: false });
 });
 
 // ---------- الافتتاحية: العنوان وثلاثة أبواب، في الزيارة الأولى فقط ----------
