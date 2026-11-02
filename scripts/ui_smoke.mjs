@@ -502,7 +502,7 @@ try {
       // سلسلة الكيان: السعودية اليوم تعرض سبقها، وتنتقل إلى الخريطة التي تذكرها، والوضعان يختلفان
       step = `${name}: سلسلة الكيان`;
       await mp.evaluate(() => { closeCard(); loadBorders("modern"); });
-      await mp.waitForFunction(() => time.key === "modern" && bordersShown, null, { timeout: 60000 });
+      await mp.waitForFunction(() => time.key === "modern" && bordersShown?.features.some((f) => f.properties.NAME === "Saudi Arabia"), null, { timeout: 60000 });
       await mp.evaluate(() => { const x = bordersShown.features.find((f) => f.properties.NAME === "Saudi Arabia"); cardCurrent = { c: CLICKABLE.find((c) => c.layer === "borders-fill"), f: x }; cardAlso = []; openEntityCard(x, "state"); });
       await mp.waitForFunction(() => document.querySelector("#card-body .lineage .lin-btn") !== null, null, { timeout: 60000 });
       const strong = await mp.$$eval("#card-body .lin-btn", (b) => b.length);
