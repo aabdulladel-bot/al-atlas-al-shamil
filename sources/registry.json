@@ -3,7 +3,7 @@
     "purpose": "سجل المصادر المرجعية العالمية لكل مجال (VISION.md). مرجع للتخطيط لا إذن بالجلب: الجلب يشترط تسجيل المصدر في sources/manifest.json بترخيص متحقق من صفحته الرسمية.",
     "license_status": {
       "verified": "الترخيص مقروء من صفحة رسمية أو سجل رسمي، أو المصدر مسجّل في المانيفست",
-      "unverified": "لم يُقرأ الترخيص من مصدره؛ license_reported إن وُجد هو المتداول عنه من معرفة سابقة، لا يُعتمد"
+      "unverified": "لم يُقرأ الترخيص من مصدره؛ license_reported إن وُجد هو المتداول عنه من معرفة سابقة، لا يُعتمد؛ وما كان مصدره كتالوج World Monitor ففيه discovered_via، ولم يُجلب منه شيء"
     },
     "date": "2026-11-01 (حُدّث بعد فتح المضيفات)",
     "domains": "scripts/config/domains.json"
@@ -581,6 +581,318 @@
       "license": null,
       "license_status": "unverified",
       "note": "ملك عام؛ تجارة المحيط الهندي في القرن الأول"
+    },
+    {
+      "id": "un-wpp",
+      "name": "UN World Population Prospects 2024",
+      "kind": "dataset",
+      "domains": [
+        "population"
+      ],
+      "url": "https://population.un.org/wpp/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "note": "بنية الأعمار والإسقاطات؛ للمرصد الحديث"
+    },
+    {
+      "id": "unesco-uis",
+      "name": "UNESCO Institute for Statistics (التعليم والباحثون)",
+      "kind": "dataset",
+      "domains": [
+        "knowledge"
+      ],
+      "url": "https://uis.unesco.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "note": "مرآته في واجهة البنك الدولي"
+    },
+    {
+      "id": "ilostat",
+      "name": "ILOSTAT (العمل والقوى الصناعية)",
+      "kind": "dataset",
+      "domains": [
+        "industry",
+        "society",
+        "economy"
+      ],
+      "url": "https://ilostat.ilo.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)"
+    },
+    {
+      "id": "sipri-arms",
+      "name": "SIPRI Arms Transfers Database",
+      "kind": "dataset",
+      "domains": [
+        "war"
+      ],
+      "url": "https://armstransfers.sipri.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "license_reported": "إسناد إلزامي؛ استعمال تحليلي غير تجاري وأقل من 10% من البيانات (بحسب كتالوج World Monitor، لا يُعتمد قبل قراءته من الصفحة الرسمية)",
+      "note": "يحتاج إذناً للاستعمال التجاري"
+    },
+    {
+      "id": "sipri-milex",
+      "name": "SIPRI Military Expenditure (عبر البنك الدولي MS.MIL)",
+      "kind": "dataset",
+      "domains": [
+        "war",
+        "economy"
+      ],
+      "url": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "license_reported": "CC BY 4.0 لنسخة البنك الدولي (بحسب كتالوج World Monitor، لا يُعتمد قبل قراءته من الصفحة الرسمية)"
+    },
+    {
+      "id": "gdelt",
+      "name": "GDELT (أحداث العالم ونبرة الأخبار)",
+      "kind": "dataset",
+      "domains": [
+        "politics",
+        "war",
+        "culture"
+      ],
+      "url": "https://www.gdeltproject.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "note": "سلسلة أحداث منذ 1979؛ لمرصد الحدث"
+    },
+    {
+      "id": "imf-portwatch",
+      "name": "IMF PortWatch (عبور المضائق والموانئ)",
+      "kind": "dataset",
+      "domains": [
+        "trade",
+        "war"
+      ],
+      "url": "https://portwatch.imf.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "note": "أساس سوابق المضائق في الحاضر: هرمز وباب المندب والسويس وملقا"
+    },
+    {
+      "id": "unhcr",
+      "name": "UNHCR Refugee Data (اللجوء والنزوح)",
+      "kind": "dataset",
+      "domains": [
+        "population",
+        "society",
+        "war"
+      ],
+      "url": "https://www.unhcr.org/refugee-statistics/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)"
+    },
+    {
+      "id": "usgs-earthquakes",
+      "name": "USGS Earthquake Hazards",
+      "kind": "dataset",
+      "domains": [
+        "environment"
+      ],
+      "url": "https://earthquake.usgs.gov/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "license_reported": "ملك عام (حكومة أمريكية) (بحسب كتالوج World Monitor، لا يُعتمد قبل قراءته من الصفحة الرسمية)"
+    },
+    {
+      "id": "nasa-firms",
+      "name": "NASA FIRMS (الحرائق بالأقمار)",
+      "kind": "dataset",
+      "domains": [
+        "environment"
+      ],
+      "url": "https://firms.modaps.eosdis.nasa.gov/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)"
+    },
+    {
+      "id": "nasa-eonet",
+      "name": "NASA EONET (الأحداث الطبيعية)",
+      "kind": "dataset",
+      "domains": [
+        "environment"
+      ],
+      "url": "https://eonet.gsfc.nasa.gov/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)"
+    },
+    {
+      "id": "gdacs",
+      "name": "GDACS (إنذار الكوارث الأممي)",
+      "kind": "dataset",
+      "domains": [
+        "environment",
+        "health"
+      ],
+      "url": "https://www.gdacs.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)"
+    },
+    {
+      "id": "era5-open-meteo",
+      "name": "ERA5 عبر Open-Meteo (إعادة تحليل المناخ)",
+      "kind": "dataset",
+      "domains": [
+        "environment",
+        "agriculture"
+      ],
+      "url": "https://open-meteo.com/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "note": "شذوذ المناخ؛ جسر بين المناخ الحديث والتاريخي"
+    },
+    {
+      "id": "copernicus-s5p",
+      "name": "Copernicus Sentinel-5P (ثاني أكسيد النيتروجين)",
+      "kind": "dataset",
+      "domains": [
+        "environment",
+        "industry"
+      ],
+      "url": "https://dataspace.copernicus.eu/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "note": "مؤشر غير مباشر للنشاط الصناعي"
+    },
+    {
+      "id": "usgs-mcs",
+      "name": "USGS Mineral Commodity Summaries",
+      "kind": "dataset",
+      "domains": [
+        "industry",
+        "economy"
+      ],
+      "url": "https://doi.org/10.5066/P1WKQ63T",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "license_reported": "ملك عام (بحسب كتالوج World Monitor، لا يُعتمد قبل قراءته من الصفحة الرسمية)"
+    },
+    {
+      "id": "bgs-minerals",
+      "name": "BGS World Mineral Production",
+      "kind": "dataset",
+      "domains": [
+        "industry",
+        "economy"
+      ],
+      "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "license_reported": "إسناد إلزامي (بحسب كتالوج World Monitor، لا يُعتمد قبل قراءته من الصفحة الرسمية)"
+    },
+    {
+      "id": "fred",
+      "name": "FRED (بنك الاحتياطي الفيدرالي في سانت لويس)",
+      "kind": "dataset",
+      "domains": [
+        "economy"
+      ],
+      "url": "https://fred.stlouisfed.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "note": "تراخيص سلاسله تختلف بحسب مصدر كل سلسلة"
+    },
+    {
+      "id": "bis",
+      "name": "BIS Statistics (المصارف المركزية والائتمان)",
+      "kind": "dataset",
+      "domains": [
+        "economy",
+        "institutions"
+      ],
+      "url": "https://data.bis.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)"
+    },
+    {
+      "id": "eurostat",
+      "name": "Eurostat",
+      "kind": "dataset",
+      "domains": [
+        "economy",
+        "population"
+      ],
+      "url": "https://ec.europa.eu/eurostat",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)"
+    },
+    {
+      "id": "un-comtrade",
+      "name": "UN Comtrade (تدفقات التجارة)",
+      "kind": "dataset",
+      "domains": [
+        "trade",
+        "economy"
+      ],
+      "url": "https://comtradeplus.un.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "note": "شروط الاستعمال والجلب الكثيف مقيّدة؛ يُقرأ قبل أي جلب"
+    },
+    {
+      "id": "eia",
+      "name": "U.S. EIA (الطاقة)",
+      "kind": "dataset",
+      "domains": [
+        "economy",
+        "industry"
+      ],
+      "url": "https://www.eia.gov/opendata/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "license_reported": "ملك عام (حكومة أمريكية) (بحسب كتالوج World Monitor، لا يُعتمد قبل قراءته من الصفحة الرسمية)"
+    },
+    {
+      "id": "submarine-cables",
+      "name": "Submarine Cable Map (TeleGeography)",
+      "kind": "dataset",
+      "domains": [
+        "trade",
+        "war",
+        "knowledge"
+      ],
+      "url": "https://www.submarinecablemap.com/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)",
+      "note": "شروطه تحتاج قراءة؛ الكابلات امتداد حديث لطرق التجارة"
+    },
+    {
+      "id": "celestrak",
+      "name": "CelesTrak (مدارات الأقمار)",
+      "kind": "dataset",
+      "domains": [
+        "war",
+        "knowledge"
+      ],
+      "url": "https://celestrak.org/",
+      "license": null,
+      "license_status": "unverified",
+      "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)"
     }
   ]
 }
