@@ -708,14 +708,18 @@ function openEntityCard(f, kind) {
   const facts = (links) => ({ name: p.NAME, kind, key, title, swatch, area: info?.a, span, years: info?.years ?? [String(key)], evidence: (links?.[p.NAME] ?? []).length });
   const pinBtn = `<div class="card-actions"><button type="button" class="chip" data-pin="${pinnedHere ? "off" : "on"}">${pinnedHere ? "إلغاء التثبيت" : pinned ? "ثبّت هذا بدلاً منه" : "ثبّت للمقارنة"}</button></div>`;
   const render = (links, econ = "") => {
-    cardEntity.facts = facts(links);
+    if (cardEntity) cardEntity.facts = facts(links);
     // سلسلة الكيان للدول والكيانات السياسية، لا للشعوب
     const lineage = kind === "people" ? "" : lineageSectionHtml(key, p.NAME, p.NAME_AR ?? p.NAME);
     return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineage + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
-  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage()]).then(([links, econ]) => updateCard(token, render(links, econ)));
+  // الإغلاق قبل وصول البيانات يُلغي التحديث: لا تُبنى البطاقة المغلقة (كان ذلك يرمي خطأ «facts» عند إغلاق سريع)
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage()]).then(([links, econ]) => {
+    if (token !== cardToken || cardEl.hidden) return;
+    updateCard(token, render(links, econ));
+  });
 }
 // المقارنة: كيان مثبّت يُقارن بكل كيان تُفتح بطاقته بعده، في أي سنة. الأرقام من بيانات البطاقتين نفسيهما.
 let pinned = null;

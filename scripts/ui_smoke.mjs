@@ -511,7 +511,7 @@ try {
       const all = await mp.$$eval("#card-body .lin-btn", (b) => b.length);
       if (!(strong >= 1 && all > strong && all <= 80)) problems.push(`[${name}] سلسلة الكيان: أقوى صلة ${strong} وكل الصلات ${all}`);
       await mp.evaluate(() => document.querySelector('#card-body [data-lmode="strong"]').click());
-      await mp.waitForFunction(() => document.querySelectorAll("#card-body .lin-btn").length === strong, null, { timeout: 60000 });
+      await mp.waitForFunction((n) => document.querySelectorAll("#card-body .lin-btn").length === n, strong, { timeout: 60000 });
       await mp.evaluate(() => document.querySelector("#card-body .lin-btn").click());
       await mp.waitForFunction(() => time.key !== "modern", null, { timeout: 60000 });
       counts.lineageStrong = strong;
