@@ -664,6 +664,27 @@ function linkedEvidenceHtml(name, links) {
   return `<section class="card-sec"><h3>الشواهد على أرضه (${fmtInt(list.length)})</h3><p class="sub">ربط مكاني محسوب على حدود المصدر، يُصنَّف كل شاهد بمستواه وسببه، ولا يُعدّ حكماً تاريخياً.</p>${rows}</section>`;
 }
 
+// ما لا نعرفه: فجوات الكيان في هذه الخريطة. كل فجوة تُقرأ من بيان معروض أصلاً، فلا تُضاف معلومة ولا تُقدَّر
+function gapList({ links, econ, modern, approxAll, info, p, kind, key }) {
+  const g = [];
+  if (!p.NAME_AR && !info?.ar) g.push("لا اسم عربي موثّق لهذا الكيان");
+  else if (info?.st === "arabized") g.push("اسمه العربي تعريب تقديري، لا من مصدر موثّق");
+  if (!modern && (approxAll || Number(p.BORDERPRECISION) !== 3)) g.push("حدّه في هذه الخريطة تقريبي بحسب المصدر");
+  if (info?.st !== "verified") g.push("لا تواريخ موثّقة له في ويكي بيانات");
+  if (!(links?.[p.NAME] ?? []).length) g.push("لا شاهد موثّق يقع على أرضه في هذه الخريطة");
+  if (kind !== "people") {
+    const ent = lineageData?.lineage?.[String(key)]?.[p.NAME];
+    if (!ent || (!Object.keys(ent.prev).length && !Object.keys(ent.next).length)) g.push("لا سلف ولا خلف له في الخرائط المتجاورة");
+  }
+  if (modern && !econ) g.push("لا سلسلة ناتج للفرد له في بيانات Maddison");
+  return g;
+}
+function gapsHtml(gaps) {
+  if (!gaps.length) return `<section class="card-sec gaps"><h3>ما لا نعرفه</h3><p class="sub">لا فجوة ظاهرة في البيانات التي يعرضها الأطلس لهذا الكيان في هذه الخريطة.</p></section>`;
+  return `<section class="card-sec gaps"><h3>ما لا نعرفه (${fmtInt(gaps.length)})</h3>` +
+    `<p class="sub">تُحسب من البيانات المعروضة هنا. الفجوة تعني أن الأطلس لا يملك الدليل، لا أن الكيان لم يوجد.</p>` +
+    `<ul class="gap-list">${gaps.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul></section>`;
+}
 const entityTitle = (p) => p.NAME_AR || labelInfo.get(p.NAME)?.ar || p.NAME || "أرض بلا كيان مسمّى";
 let lastEntityCard = null;
 function openEntityCard(f, kind) {
@@ -713,7 +734,9 @@ function openEntityCard(f, kind) {
     if (cardEntity) cardEntity.facts = facts(links);
     // سلسلة الكيان للدول والكيانات السياسية، لا للشعوب
     const lineage = kind === "people" ? "" : lineageSectionHtml(key, p.NAME, p.NAME_AR ?? p.NAME);
-    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineage + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + econ + about + alsoHtml();
+    // ما لا نعرفه: فجوات تُحسب من البيانات المعروضة نفسها، بعد وصولها فقط
+    const gaps = links ? gapsHtml(gapList({ links, econ, modern, approxAll, info, p, kind, key })) : "";
+    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineage + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
