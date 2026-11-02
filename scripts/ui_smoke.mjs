@@ -512,6 +512,8 @@ try {
       if (!(strong >= 1 && all > strong && all <= 80)) problems.push(`[${name}] سلسلة الكيان: أقوى صلة ${strong} وكل الصلات ${all}`);
       await mp.evaluate(() => document.querySelector('#card-body [data-lmode="strong"]').click());
       await mp.waitForFunction((n) => document.querySelectorAll("#card-body .lin-btn").length === n, strong, { timeout: 60000 });
+      // ما لا نعرفه يظهر بعد وصول الشواهد والسلسلة معاً
+      await mp.waitForSelector("#card-body .gaps", { timeout: 60000 });
       // كل صلة تحمل نوعها: شاهد على الأرض المشتركة أو تطابق أرض فقط
       const typed = await mp.$$eval("#card-body .lin-btn", (b) => b.every((x) => x.querySelector(".chip")));
       if (!typed) problems.push(`[${name}] سلسلة الكيان: صلة بلا نوع`);
