@@ -531,7 +531,7 @@ try {
       // الأوامر: كل عدسة أمر
       await mp.keyboard.press("Control+k");
       await mp.fill("#q", ">عدسة");
-      await mp.waitForFunction(() => document.querySelectorAll("#q-results .qr").length >= 6, null, { timeout: 60000 });
+      await mp.waitForFunction(() => [...document.querySelectorAll("#q-results .qr")].filter((b) => b.textContent.includes("عدسة")).length >= 6, null, { timeout: 60000 });
       counts.lensCommands = await mp.$$eval("#q-results .qr", (b) => b.filter((x) => x.textContent.includes("عدسة")).length);
       if (counts.lensCommands < 6) problems.push(`[${name}] الأوامر لا تعرض العدسات الست: ${counts.lensCommands}`);
       await mp.evaluate(() => closeCard());
