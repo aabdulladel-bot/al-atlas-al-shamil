@@ -1,0 +1,62 @@
+{
+  "_note": "ربط مناطق شريط القارات بأقاليم Maddison (تبدأ من 1820). الربط تقريبي ومعلن في البطاقة: أقاليم Maddison غير مستطيلات الأطلس.",
+  "world": "World",
+  "regions": {
+    "mena": {
+      "series": [
+        "Middle East and North Africa (Maddison)"
+      ],
+      "note": "إقليم Maddison للشرق الأوسط وشمال أفريقيا"
+    },
+    "asia": {
+      "series": [
+        "East Asia (Maddison)",
+        "South and South East Asia (Maddison)"
+      ],
+      "note": "إقليما شرق آسيا وجنوبها وجنوب شرقها؛ غرب آسيا في إقليم الشرق الأوسط"
+    },
+    "africa": {
+      "series": [
+        "Sub Saharan Africa (Maddison)"
+      ],
+      "note": "أفريقيا جنوب الصحراء؛ شمال أفريقيا في إقليم الشرق الأوسط"
+    },
+    "europe": {
+      "series": [
+        "Western Europe (Maddison)",
+        "Eastern Europe (Maddison)"
+      ],
+      "note": "إقليما أوروبا الغربية والشرقية"
+    },
+    "namerica": {
+      "series": [
+        "Western offshoots (Maddison)",
+        "Latin America (Maddison)"
+      ],
+      "note": "«الامتدادات الغربية» عند Maddison تجمع الولايات المتحدة وكندا وأستراليا ونيوزيلندا، وأمريكا اللاتينية تشمل المكسيك وأمريكا الوسطى"
+    },
+    "samerica": {
+      "series": [
+        "Latin America (Maddison)"
+      ],
+      "note": "أمريكا اللاتينية عند Maddison تشمل المكسيك وأمريكا الوسطى والكاريبي"
+    },
+    "oceania": {
+      "series": [
+        "Western offshoots (Maddison)"
+      ],
+      "note": "«الامتدادات الغربية» تجمع أستراليا ونيوزيلندا مع الولايات المتحدة وكندا"
+    }
+  },
+  "names": {
+    "World": "العالم",
+    "Middle East and North Africa (Maddison)": "الشرق الأوسط وشمال أفريقيا",
+    "East Asia (Maddison)": "شرق آسيا",
+    "South and South East Asia (Maddison)": "جنوب آسيا وجنوب شرقها",
+    "Sub Saharan Africa (Maddison)": "أفريقيا جنوب الصحراء",
+    "Western Europe (Maddison)": "أوروبا الغربية",
+    "Eastern Europe (Maddison)": "أوروبا الشرقية",
+    "Western offshoots (Maddison)": "الامتدادات الغربية",
+    "Latin America (Maddison)": "أمريكا اللاتينية"
+  }
+}

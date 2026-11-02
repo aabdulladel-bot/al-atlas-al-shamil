@@ -620,6 +620,29 @@
           "bytes": 1795122
         }
       ]
+    },
+    {
+      "id": "maddison-2023-owid",
+      "file": "data/raw/maddison/owid_gdppc_maddison.csv",
+      "url": "https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database.csv?v=1&csvType=full&useColumnShortNames=true",
+      "license": "CC BY 4.0: «Maddison Project Database, version 2023 by Jutta Bolt and Jan Luiten van Zanden is licensed under a Creative Commons Attribution 4.0 International License» (rug.nl)، وبيانات Dataverse: CC-BY-4.0. ونسخة Our World in Data بترخيص CC BY مع بقاء ترخيص المصدر.",
+      "tier": "B",
+      "landing": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023",
+      "attribution": "Bolt, J. and van Zanden, J. L. (2024), Maddison style estimates of the evolution of the world economy: A new 2023 update, Journal of Economic Surveys; data via Our World in Data (with minor processing)",
+      "note": "الملف الأصلي (mpd2023_web.xlsx) على dataverse.nl يحيل إلى مخزن objectstore.surf.nl المحجوب عن البيئة، فجُلبت نسخة OWID للناتج للفرد وحدها. السكان في الملف الأصلي لم يُجلبا بعد.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/maddison/owid_gdppc_maddison.csv",
+          "sha256": "3764bd2ceff342198e539a27a87ec85bc2679ed8fc40c09f430a70a21fcdf27b",
+          "bytes": 567429
+        },
+        {
+          "file": "data/raw/maddison/owid_gdppc_maddison.metadata.json",
+          "sha256": "96bbef96050a4ca37ee05df3e1da7145234b1f13e2c93bdde1c35874fdebc7c1",
+          "bytes": 4446
+        }
+      ]
     }
   ]
 }

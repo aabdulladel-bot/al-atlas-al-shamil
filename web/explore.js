@@ -557,8 +557,9 @@ async function renderRegionCard(r, refresh = false) {
   // الجزء الحي يُعاد رسمه مع كل تغيّر في الزمن، وزرّ العرض خارجه فيبقى في مكانه أثناء التشغيل
   const live = cardHead({ title: r.ar, chips: [chip(`خريطة ${yearText(time.key)}`), chip(`الكيانات المسمّاة: ${fmtInt(cur?.n ?? 0)}`), chip(`دول اليوم في المصدر: ${fmtInt(r.countries)}`)], note: "المنطقة مستطيل محسوب من Natural Earth، فيدخل فيه ما حول حدوده." }) +
     `<section class="card-sec"><h3>عدد الكيانات المسمّاة عبر الزمن</h3><div class="rg-chart" role="group" aria-label="الكيانات في كل محطة زمنية">${bars}</div><div class="rg-yrs" aria-hidden="true">${yrs}</div></section>`;
+  const econ = await regionEconHtml(r.id);
   const rest = (top ? `<section class="card-sec"><h3>أكبر كياناتها على هذه الخريطة</h3>${top}</section>` : "") +
-    change +
+    change + econ +
     (eras ? `<section class="card-sec"><h3>شواهدها الموثّقة بحسب الحقبة</h3>${eras}</section>` : `<section class="card-sec"><h3>شواهدها الموثّقة</h3><p class="sub">لا شاهد له مكان في هذه المنطقة بعد.</p></section>`) +
     aboutHtml([["المنطقة", "Natural Earth (ملك عام): نقاط تسمية الدول بين المئين 5 و95 وهامش 4 درجات (scripts/build_regions.mjs)"], ["الكيانات", "نقاط تسمية الكيانات داخل المستطيل، من خرائط Historical Basemaps وNatural Earth"]]);
   if (refresh) {
