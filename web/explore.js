@@ -197,6 +197,7 @@ function buildCommands() {
   add("الخريطة التالية", "الزمن", ["التالية", "بعد", "next"], () => { stopPlay(); stepTime(1); });
   add("الخريطة السابقة", "الزمن", ["السابقة", "قبل", "prev"], () => { stopPlay(); stepTime(-1); });
   for (const x of PLAY_SPEEDS) add(`سرعة التشغيل ×${x}`, "الزمن", ["سرعة", "تشغيل", `x${x}`], () => setPlaySpeed(x));
+  for (const L of (lensData?.lenses ?? [])) add(`عدسة ${L.ar}`, "تبدأ من تخصّصك", [L.ar, L.id, "عدسة", "عدسات", "تخصص"], () => applyLens(L.id));
   add("الوضع المبسّط", "العرض", ["مبسط", "بسيط", "simple"], click('.mode button[data-mode="simple"]'));
   add("وضع الباحث", "العرض", ["باحث", "بحث", "research"], click('.mode button[data-mode="research"]'));
   add(idleSpin.on ? "إيقاف دوران الكرة عند الخمول" : "تشغيل دوران الكرة عند الخمول", "الحركة", ["دوران", "خمول", "حركة"], () => spinToggle?.click());

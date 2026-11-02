@@ -1565,6 +1565,55 @@ if (spinToggle) {
   });
 }
 
+// ---------- العدسات: بداية محددة لتخصص (web/data/lenses.json، مولَّد من scripts/config/lenses.json) ----------
+// العدسة تضع الطبقات بالنقر على مربّعاتها، وتطلب الزمن، وتختار سُنّتها، فتمرّ بالمسارات نفسها التي يمرّ بها القارئ.
+// وتحفظ اسمها في الرابط (g<اسم>)، فيفتح الرابط على العدسة نفسها.
+let activeLens = null;
+let lensData = null;
+const lensReady = getJson("data/lenses.json").then((d) => { lensData = d; renderLensButtons(); return d; }).catch(() => null);
+const lensById = (id) => lensData?.lenses.find((x) => x.id === id) ?? null;
+const lensAboutEl = document.getElementById("lens-about");
+function renderLensButtons() {
+  const box = document.getElementById("lens-list");
+  if (!box || !lensData) return;
+  box.replaceChildren(...lensData.lenses.map((L) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.dataset.lens = L.id;
+    b.setAttribute("aria-pressed", String(L.id === activeLens));
+    b.textContent = L.ar;
+    b.addEventListener("click", () => applyLens(L.id));
+    return b;
+  }));
+}
+function showLensAbout(L) {
+  lensAboutEl.hidden = false;
+  lensAboutEl.innerHTML = `<h3>عدسة ${escapeHtml(L.ar)}</h3><p class="sub">${escapeHtml(L.about)}</p>` +
+    `<p class="sub">أسئلة للبدء:</p><ol>${L.questions.map((q) => `<li>${escapeHtml(q)}</li>`).join("")}</ol>`;
+}
+// moveTime=false: الزمن من الرابط نفسه (t) يبقى، وإلا تنتقل الخريطة إلى زمن العدسة
+async function applyLens(id, { moveTime = true } = {}) {
+  await lensReady;
+  const L = lensById(id);
+  if (!L) return false;
+  activeLens = L.id;
+  setMode("research");
+  for (const [g, on] of Object.entries(L.layers)) {
+    const cb = document.querySelector(`#layer-panel input[data-group="${g}"]`);
+    if (cb && !cb.disabled && cb.checked !== on) cb.click();
+  }
+  if (moveTime) await loadBorders(timeKey(L.time));
+  await loadSunan();
+  if (L.sunna) {
+    const s = sunanData?.sunan.find((x) => x.id === L.sunna);
+    if (s) await selectSunna(s);
+  } else if (activeSunna) clearSunna();
+  for (const b of document.querySelectorAll("#lens-list button")) b.setAttribute("aria-pressed", String(b.dataset.lens === L.id));
+  showLensAbout(L);
+  writeHash();
+  return true;
+}
+
 // ---------- «عن الطبقة»: مصدرها وترخيصها وتغطيتها (web/data/layers_info.json، مولَّد من المانيفست وملفات البيانات) ----------
 const TIER_LABEL = { A: "ملك عام أو إسناد بسيط", B: "مرخّص بإسناد", C: "مرجع فقط" };
 let layerInfo = null;
@@ -2055,6 +2104,7 @@ function viewFromHash() {
       if (TIME_STOPS.some((x) => String(x) === String(k))) out.t = k;
     } else if (/^r[a-z]+$/.test(part)) out.r = part.slice(1);
     else if (/^s[a-z]+$/.test(part)) out.s = part.slice(1);
+    else if (/^g[a-z]+$/.test(part)) out.g = part.slice(1);
     else if (/^[hk][a-z]+$/.test(part)) (out.l ??= {})[part.slice(1)] = part[0] === "k"; // k: أُظهرت طبقة مطفأة افتراضياً، وh: أُخفيت طبقة ظاهرة
     else if (/^p\d{1,5}_\d{1,5}_\d{1,3}$/.test(part)) { const [a, b, c] = part.slice(1).split("_").map(Number); if (a <= 36000 && b <= 18000 && c <= 220) out.p = [a / 100 - 180, b / 100 - 90, c / 10]; }
   }
@@ -2067,6 +2117,7 @@ function writeHash() {
   const parts = [t];
   if (typeof activeRegion !== "undefined" && activeRegion) parts.push(`r${activeRegion.id}`);
   if (activeSunna) parts.push(`s${sunnaSlug(activeSunna.id)}`);
+  if (activeLens) parts.push(`g${activeLens}`);
   // الطبقات التي غيّرها القارئ عن افتراضها، ثم الكاميرا (خط الطول وخط العرض بمئات الدرجة، والتقريب بعشراتها)
   const defaultOff = new Set(["demography", "lights"]);
   for (const g of Object.keys(LAYER_GROUPS)) {
@@ -2079,9 +2130,12 @@ function writeHash() {
 }
 const START_TIME = initialView.t ?? 1200;
 map.on("load", async () => {
-  await loadBorders(START_TIME);
-  // المنظر المشارَك بمنطقة يضبط الكاميرا بنفسه، فلا افتتاحية
-  if (!reduceMotion && !initialView.r && !initialView.p && !document.body.classList.contains("showcasing")) map.flyTo({ ...FIRST_VIEW, duration: 5200, curve: 1.3, essential: false });
+  const lens = initialView.g ? await lensReady.then(() => lensById(initialView.g)) : null;
+  // الزمن من الرابط أولاً، ثم زمن العدسة، ثم الافتراضي
+  await loadBorders(initialView.t ?? lens?.time ?? START_TIME);
+  if (lens) await applyLens(lens.id, { moveTime: initialView.t == null });
+  // المنظر المشارَك بمنطقة أو كاميرا أو عدسة يضبط الكاميرا بنفسه، فلا افتتاحية
+  if (!reduceMotion && !initialView.r && !initialView.p && !lens && !document.body.classList.contains("showcasing")) map.flyTo({ ...FIRST_VIEW, duration: 5200, curve: 1.3, essential: false });
 });
 
 // ---------- الافتتاحية: العنوان وثلاثة أبواب، في الزيارة الأولى فقط ----------
