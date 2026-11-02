@@ -45,7 +45,8 @@ async function goEntity(it) {
   const key = timeKey(nearestKey(it.keys));
   const data = await loadBorders(key);
   const zoom = Math.max(3, Math.min(6, (it.min ?? 3) + 1));
-  map.flyTo({ center: [it.x, it.y], zoom, pitch: 25, bearing: 0, duration: reduceMotion ? 0 : 2200, essential: true });
+  map.flyTo({ center: [it.x, it.y], zoom, pitch: 25, bearing: 0, duration: camMs(CAM_FAST), essential: true });
+  arriveAfterMove([it.x, it.y]);
   let f = data?.features.find((x) => x.properties.NAME === it.en);
   let kind = "state";
   if (!f) { f = peoplesData?.features.find((x) => x.properties.NAME === it.en); kind = "people"; }
@@ -56,7 +57,8 @@ async function goEntity(it) {
 async function goPlace(it) {
   const era = ERAS.find((e) => e.id === it.era);
   if (era) await loadBorders(era.border);
-  map.flyTo({ center: it.coords, zoom: 6, pitch: 20, bearing: 0, duration: reduceMotion ? 0 : 2200, essential: true });
+  map.flyTo({ center: it.coords, zoom: 6, pitch: 20, bearing: 0, duration: camMs(CAM_FAST), essential: true });
+  arriveAfterMove(it.coords);
   const f = placesData?.features.find((x) => x.properties.name_ar === it.ar && x.geometry.coordinates[0] === it.coords[0]);
   if (f) { cardAlso = []; showHit({ c: CLICKABLE.find((c) => c.layer === "places"), f }); }
 }
@@ -65,7 +67,8 @@ async function goClaimPlace(it) {
   if (era) await loadBorders(era.border);
   clearSunna();
   showClaimPoints(false);
-  map.flyTo({ center: it.coords, zoom: 5.5, pitch: 20, bearing: 0, duration: reduceMotion ? 0 : 2200, essential: true });
+  map.flyTo({ center: it.coords, zoom: 5.5, pitch: 20, bearing: 0, duration: camMs(CAM_FAST), essential: true });
+  arriveAfterMove(it.coords);
   const f = claimPoints?.features.find((x) => x.properties.slug === it.slug);
   if (f) { cardAlso = []; showHit({ c: CLICKABLE.find((c) => c.layer === "claim-points"), f }); }
 }
@@ -268,10 +271,10 @@ function setRegion(id) {
   for (const b of railEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.region === (activeRegion?.id ?? "world")));
   if (activeRegion) {
     const [w, s, e, n] = activeRegion.bbox;
-    map.fitBounds([[w, s], [e, n]], { padding: fitPadding(), pitch: 25, bearing: 0, duration: reduceMotion ? 0 : 2400, essential: true });
+    map.fitBounds([[w, s], [e, n]], { padding: fitPadding(), pitch: 25, bearing: 0, duration: camMs(CAM_REGION), essential: true });
     openRegionCard(activeRegion);
   } else {
-    map.flyTo({ center: [30, 22], zoom: isNarrow() ? 0.9 : 1.6, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 2400, essential: true });
+    map.flyTo({ center: [30, 22], zoom: isNarrow() ? 0.9 : 1.6, pitch: 0, bearing: 0, duration: camMs(CAM_REGION), essential: true });
     if (region.token === cardToken) closeCard();
   }
   renderList();
