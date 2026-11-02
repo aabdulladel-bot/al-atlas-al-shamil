@@ -499,6 +499,24 @@ try {
       for (let i = 0; i < 3; i++) { await mp.click("#tb-speed"); sp.push(await mp.$eval("#tb-speed", (b) => b.textContent)); }
       if (sp.join("|") !== "×2|×0.5|×1") problems.push(`[${name}] دورة السرعة: ${sp.join("|")}`);
       counts.playSpeed = 1;
+      // سلسلة الكيان: السعودية اليوم تعرض سبقها، وتنتقل إلى الخريطة التي تذكرها، والوضعان يختلفان
+      step = `${name}: سلسلة الكيان`;
+      await mp.evaluate(() => { closeCard(); loadBorders("modern"); });
+      await mp.waitForFunction(() => time.key === "modern" && bordersShown, null, { timeout: 60000 });
+      await mp.evaluate(() => { const x = bordersShown.features.find((f) => f.properties.NAME === "Saudi Arabia"); cardCurrent = { c: CLICKABLE.find((c) => c.layer === "borders-fill"), f: x }; cardAlso = []; openEntityCard(x, "state"); });
+      await mp.waitForFunction(() => document.querySelector("#card-body .lineage .lin-btn") !== null, null, { timeout: 60000 });
+      const strong = await mp.$$eval("#card-body .lin-btn", (b) => b.length);
+      await mp.evaluate(() => document.querySelector('#card-body [data-lmode="all"]').click());
+      await mp.waitForFunction(() => document.querySelectorAll("#card-body .lin-btn").length > 1, null, { timeout: 60000 });
+      const all = await mp.$$eval("#card-body .lin-btn", (b) => b.length);
+      if (!(strong >= 1 && all > strong && all <= 80)) problems.push(`[${name}] سلسلة الكيان: أقوى صلة ${strong} وكل الصلات ${all}`);
+      await mp.evaluate(() => document.querySelector('#card-body [data-lmode="strong"]').click());
+      await mp.waitForFunction(() => document.querySelectorAll("#card-body .lin-btn").length === strong, null, { timeout: 60000 });
+      await mp.evaluate(() => document.querySelector("#card-body .lin-btn").click());
+      await mp.waitForFunction(() => time.key !== "modern", null, { timeout: 60000 });
+      counts.lineageStrong = strong;
+      counts.lineageAll = all;
+      await mp.evaluate(() => closeCard());
       // العدسات: تضع الوضع والطبقات والزمن والسُّنّة، وتُحفظ في الرابط، وتُستعاد منه، وتظهر في الأوامر
       step = `${name}: العدسات`;
       await mp.evaluate(() => { closeCard(); document.querySelector('.mode button[data-mode="simple"]')?.click(); });
@@ -535,7 +553,7 @@ try {
       counts.lensCommands = await mp.$$eval("#q-results .qr", (b) => b.filter((x) => x.textContent.includes("عدسة")).length);
       if (counts.lensCommands < 6) problems.push(`[${name}] الأوامر لا تعرض العدسات الست: ${counts.lensCommands}`);
       await mp.evaluate(() => closeCard());
-      console.log(`${name} حركة: ${JSON.stringify({ arrivePulse: counts.arrivePulse, frames: counts.frames, frameP95Ms: counts.frameP95Ms, idleSpin: counts.idleSpin, prefetch: counts.prefetch, quality: counts.quality, idleStable: counts.idleStable, layerInfo: counts.layerInfo, commands: counts.commands, shareLink: counts.shareLink, playSpeed: counts.playSpeed, lens: counts.lens, lensLink: counts.lensLink, lensCommands: counts.lensCommands })}`);
+      console.log(`${name} حركة: ${JSON.stringify({ arrivePulse: counts.arrivePulse, frames: counts.frames, frameP95Ms: counts.frameP95Ms, idleSpin: counts.idleSpin, prefetch: counts.prefetch, quality: counts.quality, idleStable: counts.idleStable, layerInfo: counts.layerInfo, commands: counts.commands, shareLink: counts.shareLink, playSpeed: counts.playSpeed, lens: counts.lens, lensLink: counts.lensLink, lensCommands: counts.lensCommands, lineageStrong: counts.lineageStrong, lineageAll: counts.lineageAll })}`);
       await mp.close();
     }
     await visualCheck(browser, name, viewport);

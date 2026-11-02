@@ -665,9 +665,11 @@ function linkedEvidenceHtml(name, links) {
 }
 
 const entityTitle = (p) => p.NAME_AR || labelInfo.get(p.NAME)?.ar || p.NAME || "أرض بلا كيان مسمّى";
+let lastEntityCard = null;
 function openEntityCard(f, kind) {
   const p = f.properties;
   const key = time.key;
+  lastEntityCard = { f, kind };
   markPoint(null);
   if (!p.NAME) {
     cardEntity = null;
@@ -707,11 +709,13 @@ function openEntityCard(f, kind) {
   const pinBtn = `<div class="card-actions"><button type="button" class="chip" data-pin="${pinnedHere ? "off" : "on"}">${pinnedHere ? "إلغاء التثبيت" : pinned ? "ثبّت هذا بدلاً منه" : "ثبّت للمقارنة"}</button></div>`;
   const render = (links, econ = "") => {
     cardEntity.facts = facts(links);
-    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + econ + about + alsoHtml();
+    // سلسلة الكيان للدول والكيانات السياسية، لا للشعوب
+    const lineage = kind === "people" ? "" : lineageSectionHtml(key, p.NAME, p.NAME_AR ?? p.NAME);
+    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineage + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
-  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : ""]).then(([links, econ]) => updateCard(token, render(links, econ)));
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage()]).then(([links, econ]) => updateCard(token, render(links, econ)));
 }
 // المقارنة: كيان مثبّت يُقارن بكل كيان تُفتح بطاقته بعده، في أي سنة. الأرقام من بيانات البطاقتين نفسيهما.
 let pinned = null;
@@ -1564,6 +1568,96 @@ if (spinToggle) {
     spinArm();
   });
 }
+
+// ---------- سلسلة الكيان: من أين جاء وإلى أين صار، عبر الخرائط المتجاورة (web/data/lineage.json، من ملفات الانتقال) ----------
+// وضعان: «أقوى صلة لكل حقبة» (الافتراضي، خفيف) و«كل الصلات» (كل ما يتقاطع، بحدّ ثمانية لكل خطوة).
+// التطابق بالأرض لا بالاسم: الصلة تعني أن جزءاً من الأرض مشترك، وليست حكماً على الهوية.
+let lineageData = null;
+// الملف نحو 900 كيلوبايت: يُحمَّل عند أول بطاقة كيان، لا عند فتح الأطلس
+let lineageReady = null;
+const ensureLineage = () => (lineageReady ??= getJson("data/lineage.json").then((d) => { lineageData = d; return d; }).catch(() => null));
+let lineageMode = "strong";
+try { if (localStorage.getItem("atlas-lineage") === "all") lineageMode = "all"; } catch {}
+// خطوات السلسلة في اتجاه واحد (prev أو next)، كل خطوة مصفوفة من الكيانات المتصلة بالخطوة السابقة
+function lineageChain(key, name, dirn, mode, rootLabel) {
+  // أقوى صلة: خيط واحد، في كل خطوة الأقوى. كل الصلات: في كل خطوة الأقوى من كل ما تحت الكيانات السابقة، بحدّ ثمانية،
+  // فلا ينفجر عدد الأزرار مع العمق (كان ينفجر إلى مئة وعشرين)
+  const PER_LEVEL = mode === "strong" ? 1 : 8;
+  const levels = [];
+  let frontier = [{ key: String(key), name, label: rootLabel }];
+  const seen = new Set([`${key}|${name}`]);
+  for (let depth = 0; depth < 12 && frontier.length; depth++) {
+    const cands = [];
+    for (const cur of frontier) {
+      const ent = lineageData?.lineage[cur.key]?.[cur.name];
+      const neighbour = ent?.[dirn] ? Object.entries(ent[dirn])[0] : null;
+      if (!neighbour) continue;
+      const [nKey, { items: links }] = neighbour;
+      for (const l of links) {
+        if (seen.has(`${nKey}|${l.name}`)) continue;
+        cands.push({ key: nKey, name: l.name, name_ar: l.name_ar, ownShare: l.ownShare, otherShare: l.otherShare, from: cur.label });
+      }
+    }
+    if (!cands.length) break;
+    cands.sort((a, b) => Math.min(b.ownShare, b.otherShare) - Math.min(a.ownShare, a.otherShare) || b.ownShare - a.ownShare);
+    const kept = cands.slice(0, PER_LEVEL);
+    const items = kept.map((x) => ({ ...x }));
+    for (const x of kept) seen.add(`${x.key}|${x.name}`);
+    if (cands.length > kept.length) items.push({ more: cands.length - kept.length, key: kept[0].key });
+    levels.push(items);
+    frontier = kept.map((x) => ({ key: x.key, name: x.name, label: x.name_ar ?? x.name }));
+  }
+  return levels;
+}
+function lineageLevelsHtml(levels) {
+  // الخطوة الأولى (أقرب حقبة) مفتوحة، والباقي مطوي بعدد صلاته، فلا تثقل البطاقة بكل الأزرار دفعة واحدة
+  return levels.map((items, i) => {
+    const key = items.find((x) => x.key)?.key;
+    const n = items.filter((x) => !x.more).length;
+    const rows = items.map((x) => x.more
+      ? `<p class="sub">و${fmtInt(x.more)} صلة أخرى في هذه الخريطة</p>`
+      : `<button type="button" class="lin-btn" data-lkey="${escapeHtml(String(x.key))}" data-lname="${escapeHtml(x.name)}">` +
+        `<b>${escapeHtml(x.name_ar ?? x.name)}</b>` +
+        `<small>${pct(x.ownShare)} من أرض ${escapeHtml(x.from)} داخل هذا الكيان، و${pct(x.otherShare)} من أرضه داخل ${escapeHtml(x.from)}</small></button>`).join("");
+    return `<details class="lin-level"${i === 0 ? " open" : ""}><summary>${escapeHtml(yearText(key))}<span class="sub"> · ${fmtInt(n)}</span></summary>${rows}</details>`;
+  }).join("");
+}
+function lineageSectionHtml(key, name, label) {
+  if (!lineageData) return "";
+  const back = lineageChain(key, name, "prev", lineageMode, label);
+  const fwd = lineageChain(key, name, "next", lineageMode, label);
+  const modeBtns = `<div class="seg lin-mode" role="radiogroup" aria-label="وضع السلسلة">` +
+    `<button type="button" data-lmode="strong" aria-pressed="${lineageMode === "strong"}">أقوى صلة لكل حقبة</button>` +
+    `<button type="button" data-lmode="all" aria-pressed="${lineageMode === "all"}">كل الصلات</button></div>`;
+  if (!back.length && !fwd.length) {
+    return `<section class="card-sec lineage"><h3>سلسلة الكيان</h3><p class="sub">لا سلف ولا خلف لهذا الكيان في الخرائط المتجاورة. إما أن أرضه لم تتقاطع مع كيان موثّق في الخريطة المجاورة، أو أنها خارج التغطية.</p></section>`;
+  }
+  return `<section class="card-sec lineage"><h3>سلسلة الكيان</h3>${modeBtns}` +
+    `<p class="sub">التطابق بالأرض لا بالاسم: كل صلة تعني أن جزءاً من الأرض مشترك بين الكيانين.</p>` +
+    (back.length ? `<h4 class="lin-dir">سبقه</h4>${lineageLevelsHtml(back)}` : "") +
+    (fwd.length ? `<h4 class="lin-dir">خلفه</h4>${lineageLevelsHtml(fwd)}` : "") +
+    `</section>`;
+}
+// فتح كيان في خريطة أخرى باسمه، ينتقل الزمن إليها ثم تُفتح بطاقته
+async function openLineageEntity(k, name) {
+  const data = await loadBorders(k);
+  const f = data?.features.find((x) => x.properties.NAME === name);
+  if (!f) return;
+  cardAlso = [];
+  cardCurrent = { c: CLICKABLE.find((c) => c.layer === "borders-fill"), f };
+  openEntityCard(f, "state");
+}
+cardBody.addEventListener("click", (e) => {
+  const mode = e.target.closest("[data-lmode]");
+  if (mode) {
+    lineageMode = mode.dataset.lmode;
+    try { localStorage.setItem("atlas-lineage", lineageMode); } catch {}
+    if (lastEntityCard) openEntityCard(lastEntityCard.f, lastEntityCard.kind);
+    return;
+  }
+  const b = e.target.closest(".lin-btn");
+  if (b) openLineageEntity(b.dataset.lkey, b.dataset.lname);
+});
 
 // ---------- العدسات: بداية محددة لتخصص (web/data/lenses.json، مولَّد من scripts/config/lenses.json) ----------
 // العدسة تضع الطبقات بالنقر على مربّعاتها، وتطلب الزمن، وتختار سُنّتها، فتمرّ بالمسارات نفسها التي يمرّ بها القارئ.
