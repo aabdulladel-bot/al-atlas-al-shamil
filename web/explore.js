@@ -243,6 +243,8 @@ function highlight(text, q) {
 }
 
 const qEl = document.getElementById("q");
+// على الجوال خانة البحث ضيقة فيُقطع التلميح الطويل في منتصفه، فيُختصر وفيه الأوامر
+if (isNarrow()) qEl.placeholder = "ابحث عن دولة أو مكان أو سنة، أو > للأوامر";
 const qRes = document.getElementById("q-results");
 let qItems = [];
 let qSel = -1;
