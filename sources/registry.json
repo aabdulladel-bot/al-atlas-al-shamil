@@ -231,9 +231,10 @@
       "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/",
       "license": "CC BY 4.0",
       "license_status": "verified",
-      "note": "المرجع العالمي للناتج التاريخي",
+      "note": "مجلوب: الناتج للفرد عبر نسخة Our World in Data؛ الملف الأصلي على مخزن محجوب (objectstore.surf.nl)",
       "verified_via": "الصفحة الرسمية https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023، قُرئت 2026-11-01",
-      "license_quote": "Maddison Project Database, version 2023 by Jutta Bolt and Jan Luiten van Zanden is licensed under a Creative Commons Attribution 4.0 International License"
+      "license_quote": "Maddison Project Database, version 2023 by Jutta Bolt and Jan Luiten van Zanden is licensed under a Creative Commons Attribution 4.0 International License",
+      "manifest_id": "maddison-2023-owid"
     },
     {
       "id": "clio-infra",

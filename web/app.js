@@ -686,12 +686,13 @@ function openEntityCard(f, kind) {
   ]);
   const facts = (links) => ({ name: p.NAME, kind, key, title, swatch, area: info?.a, span, years: info?.years ?? [String(key)], evidence: (links?.[p.NAME] ?? []).length });
   const pinBtn = `<div class="card-actions"><button type="button" class="chip" data-pin="${pinnedHere ? "off" : "on"}">${pinnedHere ? "إلغاء التثبيت" : pinned ? "ثبّت هذا بدلاً منه" : "ثبّت للمقارنة"}</button></div>`;
-  const render = (links) => {
+  const render = (links, econ = "") => {
     cardEntity.facts = facts(links);
-    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + about + alsoHtml();
+    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
-  loadLinks(key).then((links) => updateCard(token, render(links)));
+  // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : ""]).then(([links, econ]) => updateCard(token, render(links, econ)));
 }
 // المقارنة: كيان مثبّت يُقارن بكل كيان تُفتح بطاقته بعده، في أي سنة. الأرقام من بيانات البطاقتين نفسيهما.
 let pinned = null;
@@ -1356,6 +1357,85 @@ claimMapBtn.addEventListener("click", async () => {
   showClaimPoints(show);
   if (show) fitTo(claimPoints.features, 4);
 });
+
+// ---------- السلاسل الاقتصادية (Maddison 2023، web/data/econ) ----------
+// خط زمني بمحور واحد لوغاريتمي، والماضي على اليمين كشريط الزمن. سلسلتان ملونتان على الأكثر، والعالم مرجع رمادي متقطع.
+// الألوان مفحوصة بمدقق الألوان على سطح اللوحة الداكن (#0B1630): نطاق الإضاءة، والتمييز لعمى الألوان، والتباين.
+const ECON_COLORS = ["#BF8A2E", "#3B8FD0"];
+const econCache = new Map();
+const econData = (file) => { if (!econCache.has(file)) econCache.set(file, getJson(`data/econ/${file}`).catch(() => null)); return econCache.get(file); };
+function econChartHtml(all, note, from = null) {
+  const W = 340, H = 168, L = 14, R = 52, T = 10, B = 24;
+  // سلسلة تبدأ بنقاط متفرقة قبل 1820 تضغط القرنين الأخيرين في شريط ضيق؛ فيبدأ الرسم من 1820 وتبقى الأقدم في الجدول
+  const lines = all.map((l) => ({ ...l, pts: from ? l.pts.filter((p) => p[0] >= from) : l.pts }));
+  const pts = lines.flatMap((l) => l.pts);
+  if (!pts.length) return "";
+  const y0 = Math.min(...pts.map((p) => p[0])), y1 = Math.max(...pts.map((p) => p[0]));
+  const v0 = Math.min(...pts.map((p) => p[1])), v1 = Math.max(...pts.map((p) => p[1]));
+  const lo = Math.log10(Math.max(100, v0 * 0.85)), hi = Math.log10(v1 * 1.15);
+  const x = (yr) => W - R - ((yr - y0) / Math.max(1, y1 - y0)) * (W - L - R); // الماضي يميناً
+  const y = (v) => T + (1 - (Math.log10(v) - lo) / (hi - lo)) * (H - T - B);
+  const ticks = [300, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000].filter((v) => Math.log10(v) >= lo && Math.log10(v) <= hi);
+  const grid = ticks.map((v) => `<line x1="${L}" x2="${W - R}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" class="eg"/><text x="${W - R + 10}" y="${(y(v) + 3).toFixed(1)}" class="et">${fmtInt(v)}</text>`).join("");
+  const span = y1 - y0, step = span > 1500 ? 500 : span > 400 ? 100 : 50;
+  const xt = [];
+  for (let yr = Math.ceil(y0 / step) * step; yr <= y1; yr += step) xt.push(yr);
+  const xaxis = xt.map((yr) => `<text x="${x(yr).toFixed(1)}" y="${H - 8}" class="et" text-anchor="middle">${yr}</text>`).join("");
+  const now = Number(time.key);
+  const nowLine = Number.isFinite(now) && now >= y0 && now <= y1 ? `<line x1="${x(now).toFixed(1)}" x2="${x(now).toFixed(1)}" y1="${T}" y2="${H - B}" class="enow"/>` : "";
+  const paths = lines.map((l) => {
+    const d = l.pts.map((p, i) => `${i ? "L" : "M"}${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`).join("");
+    // نقطة على كل قيمة لا تجاورها قيمة السنة السابقة: تقدير منفرد، والخط إليها وصل لا قياس
+    const dots = l.pts.filter((p, i) => i === 0 || p[0] - l.pts[i - 1][0] > 1).map((p) => `<circle cx="${x(p[0]).toFixed(1)}" cy="${y(p[1]).toFixed(1)}" r="2.6" fill="${l.color}" class="edot"/>`).join("");
+    const last = l.pts[l.pts.length - 1];
+    const lab = l.label ? `<text x="${(x(last[0]) - 4).toFixed(1)}" y="${(y(last[1]) + 3).toFixed(1)}" class="elab" text-anchor="end">${escapeHtml(l.label)}</text>` : "";
+    return `<path d="${d}" fill="none" stroke="${l.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"${l.dash ? ' stroke-dasharray="4 3"' : ""}/>${l.dash ? "" : dots}${lab}`;
+  }).join("");
+  const legend = lines.length > 1 ? `<div class="elegend">${lines.map((l) => `<span><i style="background:${l.color}"${l.dash ? ' class="dash"' : ""}></i>${escapeHtml(l.name)}</span>`).join("")}</div>` : "";
+  const data = escapeHtml(JSON.stringify({ lines: lines.map((l) => ({ n: l.name, c: l.color, p: l.pts })), y0, y1, W, L, R }));
+  const allPts = all.flatMap((l) => l.pts);
+  const older = from && allPts.some((p) => p[0] < from) ? `<p class="sub">في جدول القيم تقديرات أقدم من ${from} لنقاط متفرقة.</p>` : "";
+  const table = `${older}<details class="etable"><summary class="sub">جدول القيم</summary><table><thead><tr><th>السنة</th>${all.map((l) => `<th>${escapeHtml(l.name)}</th>`).join("")}</tr></thead><tbody>${[...new Set(allPts.map((p) => p[0]))].sort((a, b) => b - a).filter((yr, i, a) => yr <= 1950 || yr % 10 === 0 || i === 0).map((yr) => `<tr><td>${escapeHtml(yearLabel(yr))}</td>${all.map((l) => { const p = l.pts.find((q) => q[0] === yr); return `<td>${p ? fmtInt(p[1]) : "—"}</td>`; }).join("")}</tr>`).join("")}</tbody></table></details>`;
+  return `${legend}<div class="econ" data-econ="${data}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="الناتج للفرد عبر الزمن، بمقياس لوغاريتمي">${grid}${nowLine}${paths}${xaxis}<line class="ecross" y1="${T}" y2="${H - B}" x1="-10" x2="-10"/></svg><div class="etip" hidden></div></div><p class="sub">${escapeHtml(note)}</p>${table}`;
+}
+// تلميح التمرير: أقرب سنة لها قيمة، وقيم كل سلسلة فيها
+cardBody.addEventListener("pointermove", (e) => {
+  const box = e.target.closest?.(".econ");
+  if (!box) return;
+  const d = JSON.parse(box.dataset.econ), svg = box.querySelector("svg"), r = svg.getBoundingClientRect();
+  const sx = ((e.clientX - r.left) / r.width) * d.W;
+  const yr = d.y0 + ((d.W - d.R - sx) / (d.W - d.L - d.R)) * (d.y1 - d.y0);
+  const years = [...new Set(d.lines.flatMap((l) => l.p.map((p) => p[0])))];
+  if (!years.length) return;
+  const near = years.reduce((a, b) => (Math.abs(b - yr) < Math.abs(a - yr) ? b : a));
+  const cx = d.W - d.R - ((near - d.y0) / Math.max(1, d.y1 - d.y0)) * (d.W - d.L - d.R);
+  const cross = svg.querySelector(".ecross");
+  cross.setAttribute("x1", cx); cross.setAttribute("x2", cx);
+  const tip = box.querySelector(".etip");
+  tip.hidden = false;
+  tip.innerHTML = `<b>${escapeHtml(yearLabel(near))}</b>` + d.lines.map((l) => { const p = l.p.find((q) => q[0] === near); return p ? `<div><i style="background:${l.c}"></i>${escapeHtml(l.n)}: <bdi>${fmtInt(p[1])}</bdi> دولار</div>` : ""; }).join("");
+  tip.style.left = `${Math.min(r.width - 150, Math.max(0, (cx / d.W) * r.width - 75))}px`;
+});
+cardBody.addEventListener("pointerleave", () => { for (const t of cardBody.querySelectorAll(".etip")) t.hidden = true; for (const c of cardBody.querySelectorAll(".ecross")) { c.setAttribute("x1", -10); c.setAttribute("x2", -10); } }, true);
+// قسم الناتج للفرد لمنطقة من شريط القارات
+async function regionEconHtml(id) {
+  const d = await econData("gdppc_regions.json");
+  const m = d?.map[id];
+  if (!m) return "";
+  const lines = m.series.map((n, i) => ({ name: d.names[n] ?? n, label: "", pts: d.series[n], color: ECON_COLORS[i] }));
+  lines.push({ name: d.names[d.world] ?? "العالم", label: "", pts: d.series[d.world], color: "var(--muted)", dash: true });
+  return `<section class="card-sec"><h3>الناتج للفرد عبر الزمن</h3><p class="sub">${escapeHtml(m.note)}.</p>${econChartHtml(lines, `${d._meta.source}. ${d._meta.unit}. ${d._meta.note}`)}</section>`;
+}
+// قسم الناتج للفرد لدولة على خريطة الدول اليوم
+async function countryEconHtml(name) {
+  const d = await econData("gdppc_countries.json");
+  const pts = d?.countries[name];
+  if (!pts?.length) return "";
+  const w = (await econData("gdppc_regions.json"));
+  const lines = [{ name: "الدولة", label: "", pts, color: ECON_COLORS[0] }];
+  if (w) lines.push({ name: "العالم", label: "", pts: w.series[w.world], color: "var(--muted)", dash: true });
+  return `<section class="card-sec"><h3>الناتج للفرد عبر الزمن</h3>${econChartHtml(lines, `${d._meta.source}. ${d._meta.unit}. ${d._meta.note}`, 1820)}</section>`;
+}
 
 // ---------- المفتاح الحيّ ----------
 // صفوف للطبقات الظاهرة على الخريطة الآن فقط، بالرمز المرسوم عليها. أنواع المواقع من مواقع الحقبة المحمّلة، وأدوار
