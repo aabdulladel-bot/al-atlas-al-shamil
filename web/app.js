@@ -1303,7 +1303,7 @@ const claimMapBtn = document.getElementById("claim-map-btn");
 let claimPoints = null;
 let claimPointsReady = null;
 // ما يُعرض من أماكن الادعاءات: ادعاءات حقبة الزمن الحالي، إلا إذا اختارت سُنّة أو رحلة أو زرّ «كلها» غير ذلك
-const claimView = { override: false, filter: null, sunna: null };
+const claimView = { override: false, filter: null, sunna: null, sig: "" };
 // دور كل ادعاء في السنن: claimId ← { sup: [معرّفات السنن التي يؤيدها], lim: [التي يقيّدها] }، من data/sunan.json
 const claimSunnaRoles = new Map();
 let sunanReady = null;
@@ -1323,7 +1323,7 @@ function ensureClaimPoints() {
     map.addSource("claim-points", { type: "geojson", data: claimPoints });
     const radius = ["+", 8, ["*", 1.8, ["get", "count"]]];
     // هالة تنبض حول أماكن الشواهد لتُميَّز عن المواقع؛ ساكنة لمن يفضّل تقليل الحركة
-    map.addLayer({ id: "claim-halo", type: "circle", source: "claim-points", layout: { visibility: "none" }, paint: { "circle-radius": ["+", radius, 4], "circle-color": cssVar("--evidence"), "circle-opacity": reduceMotion ? 0.22 : 0.4, "circle-blur": 0.35 } });
+    map.addLayer({ id: "claim-halo", type: "circle", source: "claim-points", layout: { visibility: "none" }, paint: { "circle-radius": ["+", radius, 4], "circle-color": cssVar("--evidence"), "circle-opacity": reduceMotion ? 0.22 : 0.3, "circle-blur": 0.35 } });
     map.addLayer({
       id: "claim-points",
       type: "circle",
@@ -1338,27 +1338,41 @@ function ensureClaimPoints() {
       },
     });
     pointerOn("claim-points");
-    if (!reduceMotion) pulseClaims(radius);
+    claimRadius = radius;
     return true;
   })();
   return claimPointsReady;
 }
-// النبض: تتسع الهالة وتخفت ثم تعود، بانتقالات MapLibre نفسها لا بإطار كل لحظة، وتتوقف والصفحة مخفية
-function pulseClaims(radius) {
-  const big = ["+", radius, 16], small = ["+", radius, 3];
-  setInterval(() => {
-    if (document.hidden || map.getLayoutProperty("claim-halo", "visibility") !== "visible") return;
-    map.setPaintProperty("claim-halo", "circle-radius-transition", { duration: 0, delay: 0 });
-    map.setPaintProperty("claim-halo", "circle-opacity-transition", { duration: 0, delay: 0 });
-    map.setPaintProperty("claim-halo", "circle-radius", small);
+// النبض: ثلاث نبضات كلما تغيّر ما يُعرض من أماكن الشواهد، ثم هالة ساكنة. نبض لا ينتهي كان يُبقي الخريطة ترسم بلا توقف
+// (فلا تبلغ حال «idle» أبداً، ويُستهلك المعالج الرسومي بلا قارئ)، فصار نبضاً قصيراً يلفت النظر ثم تسكن الخريطة.
+// النبضة تتسع وتخفت بانتقالات MapLibre. وتبقى الهالة ساكنة لمن يفضّل تقليل الحركة.
+let claimRadius = null, pulseLeft = 0, pulseTimer = 0;
+const HALO_STATIC_OPACITY = 0.3;
+function haloStatic() {
+  if (!map.getLayer("claim-halo") || !claimRadius) return;
+  for (const k of ["circle-radius", "circle-opacity"]) map.setPaintProperty("claim-halo", `${k}-transition`, { duration: 0, delay: 0 });
+  map.setPaintProperty("claim-halo", "circle-radius", ["+", claimRadius, 4]);
+  map.setPaintProperty("claim-halo", "circle-opacity", HALO_STATIC_OPACITY);
+}
+function pulseBurst(n = 3) {
+  if (reduceMotion || !claimRadius) return;
+  pulseLeft = n;
+  if (pulseTimer) return;
+  const tick = () => {
+    pulseTimer = 0;
+    if (pulseLeft <= 0 || document.hidden || map.getLayoutProperty("claim-halo", "visibility") !== "visible") { pulseLeft = 0; haloStatic(); return; }
+    pulseLeft--;
+    for (const k of ["circle-radius", "circle-opacity"]) map.setPaintProperty("claim-halo", `${k}-transition`, { duration: 0, delay: 0 });
+    map.setPaintProperty("claim-halo", "circle-radius", ["+", claimRadius, 3]);
     map.setPaintProperty("claim-halo", "circle-opacity", 0.45);
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      map.setPaintProperty("claim-halo", "circle-radius-transition", { duration: 1500, delay: 0 });
-      map.setPaintProperty("claim-halo", "circle-opacity-transition", { duration: 1500, delay: 0 });
-      map.setPaintProperty("claim-halo", "circle-radius", big);
+      for (const k of ["circle-radius", "circle-opacity"]) map.setPaintProperty("claim-halo", `${k}-transition`, { duration: 1500, delay: 0 });
+      map.setPaintProperty("claim-halo", "circle-radius", ["+", claimRadius, 16]);
       map.setPaintProperty("claim-halo", "circle-opacity", 0);
     }));
-  }, 2200);
+    pulseTimer = setTimeout(tick, 2000);
+  };
+  tick();
 }
 // لون مكان الشاهد: محايد في عرض الحقبة، وفي السُّنّة المختارة (أو رحلتها) بدوره فيها: مؤيد، أو مقيِّد، أو الاثنان معاً
 // (تعبئة المؤيد وحلقة المقيِّد)، لأن المكان الواحد قد يحمل ادعاءات بدورين
@@ -1379,6 +1393,9 @@ function applyClaimView() {
   map.setPaintProperty("claim-points", "circle-stroke-width", paint.width);
   map.setPaintProperty("claim-halo", "circle-color", paint.color);
   for (const id of LAYER_GROUPS.claims) setVis(id, true);
+  // نبضات الانتباه عند تغيّر ما يُعرض من أماكن (السُّنّة أو الفلتر)، لا عند كل تغيّر في الزمن
+  const sig = JSON.stringify([filter, claimView.override ? claimView.sunna : null]);
+  if (sig !== claimView.sig) { claimView.sig = sig; pulseBurst(); }
   if (claimView.override) { setLayerCount("claims", claimView.filter ? "مختارة" : "كلها"); return; }
   const id = `,${eraOf(time.key ?? "modern").id},`;
   const n = claimPoints.features.filter((f) => f.properties.eras.includes(id)).length;

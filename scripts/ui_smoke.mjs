@@ -393,6 +393,11 @@ try {
       await mp.evaluate(() => { terrainState.on = false; applyTerrain(); });
       await mp.evaluate(() => window.__settle?.()).catch(() => {});
       await mp.waitForFunction(() => map.loaded() && !map.isMoving(), null, { timeout: 90000 });
+      // الخريطة تبلغ السكون وتبقى ساكنة: لا حركة مستمرة تُبقيها ترسم بلا قارئ (كان نبض الهالة اللانهائي يمنع ذلك)
+      await mp.waitForTimeout(3500);
+      const stable = await mp.evaluate(() => map.loaded() && !map.isMoving());
+      if (!stable) problems.push(`[${name}] الخريطة لا تبقى ساكنة بعد انتهاء التحميل: ثمة حركة أو تحديث مستمر`);
+      counts.idleStable = stable ? 1 : 0;
       const caps = await mp.evaluate(() => ({ fast: CAM_FAST, region: CAM_REGION, cinema: CAM_CINEMA, reduce: reduceMotion }));
       if (caps.reduce) problems.push(`[${name}] الحركة: reduceMotion مفعّل رغم no-preference`);
       if (!(caps.fast <= 800 && caps.region <= 1200 && caps.cinema >= 1500)) problems.push(`[${name}] مدتا الكاميرا خرجتا عن حدّيهما: ${JSON.stringify(caps)}`);
@@ -494,7 +499,7 @@ try {
       for (let i = 0; i < 3; i++) { await mp.click("#tb-speed"); sp.push(await mp.$eval("#tb-speed", (b) => b.textContent)); }
       if (sp.join("|") !== "×2|×0.5|×1") problems.push(`[${name}] دورة السرعة: ${sp.join("|")}`);
       counts.playSpeed = 1;
-      console.log(`${name} حركة: ${JSON.stringify({ arrivePulse: counts.arrivePulse, frames: counts.frames, frameP95Ms: counts.frameP95Ms, idleSpin: counts.idleSpin, prefetch: counts.prefetch, quality: counts.quality, layerInfo: counts.layerInfo, commands: counts.commands, shareLink: counts.shareLink, playSpeed: counts.playSpeed })}`);
+      console.log(`${name} حركة: ${JSON.stringify({ arrivePulse: counts.arrivePulse, frames: counts.frames, frameP95Ms: counts.frameP95Ms, idleSpin: counts.idleSpin, prefetch: counts.prefetch, quality: counts.quality, idleStable: counts.idleStable, layerInfo: counts.layerInfo, commands: counts.commands, shareLink: counts.shareLink, playSpeed: counts.playSpeed })}`);
       await mp.close();
     }
     await visualCheck(browser, name, viewport);
