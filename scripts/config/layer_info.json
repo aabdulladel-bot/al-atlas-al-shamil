@@ -1,0 +1,59 @@
+{
+  "_note": "وصف كل طبقة في لوحة الطبقات وأي مصادر المانيفست تغذّيها. الوصف نص تعريفي بلا أرقام؛ والتغطية الزمنية والأعداد والترخيص والإسناد تُولَّد من ملفات البيانات وsources/manifest.json بـ scripts/build_layer_info.mjs.",
+  "groups": {
+    "borders": {
+      "ar": "الدول والكيانات",
+      "about": "مضلعات الكيانات السياسية على خرائط السنوات المتاحة، بلون ثابت لكل كيان عبر السنوات. الحد المحدد خط متصل، والتقريبي هالة، وقبل 1900 تُرسم كلها تقريبية.",
+      "sources": ["historical-basemaps", "naturalearth-countries-50m"],
+      "coverage": { "kind": "files", "glob": "web/data/borders/borders_*.geojson", "label": "الخرائط المتاحة" }
+    },
+    "labels": {
+      "ar": "الأسماء",
+      "about": "أسماء الكيانات بالعربية: الموثّق من ويكي بيانات متحققاً زمنياً، أو تعريب تقديري معلن، والإنجليزي تحته بخط صغير حين لا يكون الاسم موثّقاً.",
+      "sources": ["wikidata-hb-names", "naturalearth-countries-50m"],
+      "coverage": { "kind": "files", "glob": "web/data/borders/labels_*.json", "label": "الخرائط التي لها أسماء" }
+    },
+    "peoples": {
+      "ar": "الشعوب والقبائل",
+      "about": "انتماء لا سيادة: مضلعات الشعوب والقبائل بتهشير لا بتعبئة، لأنها ليست دولاً.",
+      "sources": ["historical-basemaps"],
+      "coverage": { "kind": "files", "glob": "web/data/borders/peoples_*.geojson", "label": "الخرائط المتاحة", "skipEmpty": true }
+    },
+    "places": {
+      "ar": "مواقع الحقبة",
+      "about": "مدن ومواقع مختارة لكل حقبة، برمز بحسب مصدر إحداثياتها: موقع تاريخي في Pleiades، أو تقديري، أو مدينة قائمة اليوم.",
+      "sources": ["pleiades-places", "naturalearth-populated-places-50m", "wikidata-islamic-cities"],
+      "coverage": { "kind": "features", "glob": "web/data/places_era*.geojson", "label": "المواقع في كل الحقب", "unit": "موقعاً" }
+    },
+    "claims": {
+      "ar": "الشواهد الموثّقة",
+      "about": "أماكن ادعاءات مطابقة الاقتباس لنص مصدرها، بحجم يتبع عدد الشواهد. وفي السُّنّة المختارة تُلوَّن بدورها: مؤيد أو مقيِّد.",
+      "sources": { "kind": "manifest-file-prefix", "prefix": "verification/" },
+      "coverage": { "kind": "claims-index", "label": "الادعاءات المعروضة" }
+    },
+    "demography": {
+      "ar": "السكان (أعمدة)",
+      "about": "أعمدة ثلاثية الأبعاد ترتفع بحسب الجذر التربيعي للعدد. قبل 1800 إقليمية بتقديرات HYDE، وبعدها بحسب الدولة من Gapminder.",
+      "sources": ["owid-hyde-regional-population", "hyde-3.3", "gapminder-total-population", "gapminder-country-entities"],
+      "coverage": { "kind": "files", "glob": "web/data/demography_*era*.geojson", "label": "ملفات السكان", "era": true }
+    },
+    "lights": {
+      "ar": "أضواء الليل",
+      "about": "صورة Black Marble من NASA، تُعرض مقابل خرائط السكان التاريخية لتُرى مواضع العمران اليوم.",
+      "sources": ["nasa-gibs-blackmarble"],
+      "coverage": { "kind": "text", "text": "تُعرض عند خريطتي 2010 واليوم" }
+    },
+    "hillshade": {
+      "ar": "ظلال التضاريس",
+      "about": "تظليل الارتفاع وتلوينه من بيانات الارتفاع نفسها، ويُجسَّم عند الإمالة.",
+      "sources": ["aws-terrain-tiles"],
+      "coverage": { "kind": "text", "text": "كل الخريطة" }
+    },
+    "water": {
+      "ar": "الأنهار والبحيرات",
+      "about": "أنهار وبحيرات من Natural Earth.",
+      "sources": ["naturalearth-50m"],
+      "coverage": { "kind": "text", "text": "كل الخريطة" }
+    }
+  }
+}

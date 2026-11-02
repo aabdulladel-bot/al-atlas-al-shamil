@@ -444,7 +444,57 @@ try {
       const q = await mp.evaluate(() => { applyQuality("eco"); const e = map.getPixelRatio(); applyQuality("sharp"); const sh = map.getPixelRatio(); applyQuality("balanced"); return { e, sh, b: map.getPixelRatio(), dpr: window.devicePixelRatio, saved: localStorage.getItem("atlas-quality") }; });
       if (q.e !== 1 || q.sh < q.b || q.b !== Math.min(q.dpr, 2) || q.saved !== "balanced") problems.push(`[${name}] جودة العرض: ${JSON.stringify(q)}`);
       counts.quality = 1;
-      console.log(`${name} حركة: ${JSON.stringify({ arrivePulse: counts.arrivePulse, frames: counts.frames, frameP95Ms: counts.frameP95Ms, idleSpin: counts.idleSpin, prefetch: counts.prefetch, quality: counts.quality })}`);
+      // «عن الطبقة»: زرّ لكل بطاقة طبقة، وبطاقة بمصادرها من المانيفست
+      step = `${name}: عن الطبقة`;
+      await mp.evaluate(() => { closeCard(); document.querySelector('.mode button[data-mode="research"]')?.click(); });
+      const nLc = await mp.$$eval("#layer-panel .layer-cards .lc", (e) => e.length);
+      const nBtn = await mp.$$eval("#layer-panel .layer-cards .lc .lc-i", (e) => e.length);
+      if (!nLc || nLc !== nBtn) problems.push(`[${name}] أزرار «عن الطبقة» ${nBtn} من ${nLc} بطاقة`);
+      await mp.evaluate(() => document.querySelector('#layer-panel .lc:has(input[data-group="borders"]) .lc-i').click());
+      await mp.waitForFunction(() => !document.getElementById("card").hidden && document.getElementById("card-body").textContent.includes("المصادر"), null, { timeout: 15000 });
+      const li = await mp.evaluate(() => ({ h: document.querySelector("#card-body h2")?.textContent, txt: document.getElementById("card-body").textContent, srcs: document.querySelectorAll("#card-body .src").length, checked: document.querySelector('input[data-group="borders"]').checked }));
+      if (!li.txt.includes("historical-basemaps") || !li.txt.includes("GPL") || li.srcs < 1 || !li.checked) problems.push(`[${name}] بطاقة «عن الطبقة»: ${JSON.stringify({ h: li.h, srcs: li.srcs, checked: li.checked })}`);
+      counts.layerInfo = li.srcs;
+      // الأوامر في البحث: «>» تعرضها كلها، وأمر الإظهار يغيّر الطبقة، وCtrl+K يركّز الخانة
+      step = `${name}: الأوامر`;
+      await mp.evaluate(() => closeCard());
+      await mp.keyboard.press("Control+k");
+      if ((await mp.evaluate(() => document.activeElement?.id)) !== "q") problems.push(`[${name}] Ctrl+K لا يركّز البحث`);
+      await mp.fill("#q", ">");
+      await mp.waitForSelector("#q-results .qr", { timeout: 60000 });
+      counts.commands = await mp.$$eval("#q-results .qr", (b) => b.length);
+      if (counts.commands < 10) problems.push(`[${name}] «>» تعرض ${counts.commands} أمراً فقط`);
+      await mp.fill("#q", ">اظهار السكان");
+      await mp.waitForFunction(() => [...document.querySelectorAll("#q-results .qr")].some((b) => b.textContent.includes("إظهار طبقة") && b.textContent.includes("السكان")), null, { timeout: 60000 });
+      const demoBefore = await mp.evaluate(() => userOff.has("demography"));
+      await mp.evaluate(() => [...document.querySelectorAll("#q-results .qr")].find((b) => b.textContent.includes("إظهار طبقة") && b.textContent.includes("السكان")).click());
+      await mp.waitForFunction(() => !userOff.has("demography"), null, { timeout: 15000 });
+      if (!demoBefore) problems.push(`[${name}] طبقة السكان كانت ظاهرة قبل الأمر`);
+      // الرابط يحمل الطبقة والكاميرا ويعيدهما
+      step = `${name}: رابط الطبقات والكاميرا`;
+      await mp.evaluate(() => { map.jumpTo({ center: [44, 33], zoom: 3, pitch: 0 }); writeHash(); });
+      const hash = await mp.evaluate(() => location.hash);
+      if (!/kdemography/.test(hash) || !/-p\d+_\d+_\d+/.test(hash)) problems.push(`[${name}] الرابط لا يحمل الطبقة والكاميرا: ${hash}`);
+      const rp = await browser.newPage({ viewport, reducedMotion: "no-preference" });
+      await rp.addInitScript(() => { try { localStorage.setItem("atlas-intro-seen", "1"); } catch {} });
+      await rp.route("**/elevation-tiles-prod/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: FLAT_TILE, headers: { "access-control-allow-origin": "*" } }));
+      await rp.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
+      await rp.route(/fonts\.(googleapis|gstatic)\.com/, (route) => route.fulfill({ status: 200, contentType: "text/css", body: "" }));
+      rp.on("pageerror", (e) => problems.push(`[${name}] رابط الطبقات pageerror: ${e.message}`));
+      await rp.goto(`${URL}${hash}`, { waitUntil: "load" });
+      await rp.waitForFunction(() => typeof userOff !== "undefined" && !userOff.has("demography"), null, { timeout: 90000 });
+      await rp.waitForTimeout(3000);
+      const back = await rp.evaluate(() => ({ lng: map.getCenter().lng, lat: map.getCenter().lat, z: map.getZoom() }));
+      if (Math.abs(back.lng - 44) > 1 || Math.abs(back.lat - 33) > 1 || Math.abs(back.z - 3) > 0.3) problems.push(`[${name}] الكاميرا لم تُستعد من الرابط: ${JSON.stringify(back)}`);
+      counts.shareLink = 1;
+      await rp.close();
+      // سرعة التشغيل: ×1 ← ×2 ← ×0.5 ← ×1
+      step = `${name}: سرعة التشغيل`;
+      const sp = [];
+      for (let i = 0; i < 3; i++) { await mp.click("#tb-speed"); sp.push(await mp.$eval("#tb-speed", (b) => b.textContent)); }
+      if (sp.join("|") !== "×2|×0.5|×1") problems.push(`[${name}] دورة السرعة: ${sp.join("|")}`);
+      counts.playSpeed = 1;
+      console.log(`${name} حركة: ${JSON.stringify({ arrivePulse: counts.arrivePulse, frames: counts.frames, frameP95Ms: counts.frameP95Ms, idleSpin: counts.idleSpin, prefetch: counts.prefetch, quality: counts.quality, layerInfo: counts.layerInfo, commands: counts.commands, shareLink: counts.shareLink, playSpeed: counts.playSpeed })}`);
       await mp.close();
     }
     await visualCheck(browser, name, viewport);

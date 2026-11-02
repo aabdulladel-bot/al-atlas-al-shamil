@@ -16,6 +16,8 @@ const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").mat
 // مدتا الكاميرا: سريعة لما يفعله القارئ بنفسه (بحث، بطاقة، منطقة) فيحسّ بالاستجابة، وسينمائية للرحلات والعرض الشامل.
 // وتبقى صفراً مع تقليل الحركة.
 const CAM_FAST = 750, CAM_REGION = 1000, CAM_CINEMA = 1800;
+// منظر مشارَك بكاميرا (p) يضبط الكاميرا بنفسه، فلا تتحرك الكاميرا لمنطقة أو سُنّة يطبّقها الرابط معه
+const camLock = { on: false };
 const camMs = (ms) => (reduceMotion ? 0 : ms);
 // حالة دوران الخمول (المنطق في «حركة الكرة» أدناه)، معرَّفة هنا لأن معالجات الخريطة تقرؤها
 const idleSpin = { on: !reduceMotion, timer: 0, raf: 0, started: 0, last: 0 };
@@ -805,7 +807,7 @@ function openDemoCard(f) {
 }
 
 function fitTo(features, maxZoom) {
-  if (!features.length) return;
+  if (!features.length || camLock.on) return;
   const bounds = new maplibregl.LngLatBounds();
   for (const f of features) bounds.extend(f.geometry.coordinates);
   map.fitBounds(bounds, { padding: fitPadding(), maxZoom, duration: 500 });
@@ -1546,6 +1548,33 @@ if (spinToggle) {
   });
 }
 
+// ---------- «عن الطبقة»: مصدرها وترخيصها وتغطيتها (web/data/layers_info.json، مولَّد من المانيفست وملفات البيانات) ----------
+const TIER_LABEL = { A: "ملك عام أو إسناد بسيط", B: "مرخّص بإسناد", C: "مرجع فقط" };
+let layerInfo = null;
+async function openLayerInfo(group) {
+  layerInfo ??= await getJson("data/layers_info.json").catch(() => null);
+  const g = layerInfo?.groups[group];
+  if (!g) return;
+  const srcs = g.sources.map((x) => `<div class="src">` +
+    `<b>${x.landing ? `<a href="${escapeHtml(x.landing)}" target="_blank" rel="noopener">${escapeHtml(x.id)}</a>` : escapeHtml(x.id)}</b>` +
+    `<div class="sub">${escapeHtml(x.attribution ?? "")}</div>` +
+    `<div class="chips">${chip(`الفئة ${x.tier}: ${TIER_LABEL[x.tier] ?? ""}`, x.tier === "A" ? "tier-v" : "")}</div>` +
+    `<div class="sub">الترخيص: ${escapeHtml(x.license ?? "")}</div></div>`).join("");
+  openCard(cardHead({ title: g.ar, note: escapeHtml(g.about), chips: [chip("طبقة"), ...(g.coverage?.count != null ? [chip(`${g.coverage.label}: ${fmtInt(g.coverage.count)}`)] : [])] }) +
+    (g.coverage ? `<section class="card-sec"><h3>${escapeHtml(g.coverage.label)}</h3><p>${escapeHtml(g.coverage.text)}</p></section>` : "") +
+    `<section class="card-sec"><h3>المصادر</h3>${srcs || '<p class="sub">لا مصدر خارجي: تُحسب من بيانات الأطلس نفسها.</p>'}</section>` +
+    aboutHtml([["أصل هذه المعلومات", "sources/manifest.json: لكل مصدر ترخيصه وتجزئة ملفه، وscripts/build_layer_info.mjs يولّد هذه البطاقة منه ومن ملفات البيانات"]]));
+}
+for (const lc of document.querySelectorAll("#layer-panel .layer-cards .lc, #layer-panel label.opt")) {
+  const cb = lc.querySelector("input[data-group]");
+  if (!cb) continue;
+  const name = lc.querySelector(".lc-name")?.textContent.trim() ?? lc.textContent.trim();
+  const b = Object.assign(document.createElement("button"), { type: "button", className: "lc-i", textContent: "i", title: `عن طبقة «${name}»` });
+  b.setAttribute("aria-label", `عن طبقة ${name}`);
+  b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); openLayerInfo(cb.dataset.group); });
+  if (lc.classList.contains("lc")) lc.append(b);
+}
+
 // ---------- المفتاح الحيّ ----------
 // صفوف للطبقات الظاهرة على الخريطة الآن فقط، بالرمز المرسوم عليها. أنواع المواقع من مواقع الحقبة المحمّلة، وأدوار
 // الشواهد لا تظهر إلا حين تختار سُنّة أو رحلة، لأن عرض الحقبة يلوّنها لوناً واحداً.
@@ -1966,6 +1995,18 @@ tbTrack.addEventListener("keydown", (e) => {
 });
 // التشغيل: يعبر المحطات واحدة واحدة حتى اليوم
 let playTimer = null;
+// سرعة التشغيل الزمني: نصف، وعادية، ومضاعفة. الفاصل بين المحطات 2800 م.ث عند السرعة العادية
+const PLAY_SPEEDS = [0.5, 1, 2];
+const PLAY_BASE_MS = 2800;
+let playSpeed = 1;
+const tbSpeed = document.getElementById("tb-speed");
+function setPlaySpeed(x) {
+  playSpeed = PLAY_SPEEDS.includes(x) ? x : 1;
+  tbSpeed.textContent = `×${playSpeed}`;
+  tbSpeed.setAttribute("aria-label", `سرعة التشغيل ×${playSpeed}`);
+  if (playTimer) { clearInterval(playTimer); playTimer = setInterval(() => { if (!stepTime(1)) stopPlay(); }, PLAY_BASE_MS / playSpeed); }
+}
+tbSpeed.addEventListener("click", () => setPlaySpeed(PLAY_SPEEDS[(PLAY_SPEEDS.indexOf(playSpeed) + 1) % PLAY_SPEEDS.length]));
 function stopPlay() {
   clearInterval(playTimer);
   playTimer = null;
@@ -1980,7 +2021,7 @@ tbPlay.addEventListener("click", () => {
   tbPlay.setAttribute("aria-pressed", "true");
   tbPlay.textContent = "❚❚";
   tbPlay.setAttribute("aria-label", "إيقاف الزمن");
-  playTimer = setInterval(() => { if (!stepTime(1)) stopPlay(); }, 2800);
+  playTimer = setInterval(() => { if (!stepTime(1)) stopPlay(); }, PLAY_BASE_MS / playSpeed);
 });
 
 // البداية: سنة 1200م، حقبة التبادل العابر للقارات، فيرى الزائر الكيانات بألوانها والشواهد في مكانها
@@ -1997,6 +2038,8 @@ function viewFromHash() {
       if (TIME_STOPS.some((x) => String(x) === String(k))) out.t = k;
     } else if (/^r[a-z]+$/.test(part)) out.r = part.slice(1);
     else if (/^s[a-z]+$/.test(part)) out.s = part.slice(1);
+    else if (/^[hk][a-z]+$/.test(part)) (out.l ??= {})[part.slice(1)] = part[0] === "k"; // k: أُظهرت طبقة مطفأة افتراضياً، وh: أُخفيت طبقة ظاهرة
+    else if (/^p\d{1,5}_\d{1,5}_\d{1,3}$/.test(part)) { const [a, b, c] = part.slice(1).split("_").map(Number); if (a <= 36000 && b <= 18000 && c <= 220) out.p = [a / 100 - 180, b / 100 - 90, c / 10]; }
   }
   return out;
 }
@@ -2007,13 +2050,21 @@ function writeHash() {
   const parts = [t];
   if (typeof activeRegion !== "undefined" && activeRegion) parts.push(`r${activeRegion.id}`);
   if (activeSunna) parts.push(`s${sunnaSlug(activeSunna.id)}`);
+  // الطبقات التي غيّرها القارئ عن افتراضها، ثم الكاميرا (خط الطول وخط العرض بمئات الدرجة، والتقريب بعشراتها)
+  const defaultOff = new Set(["demography", "lights"]);
+  for (const g of Object.keys(LAYER_GROUPS)) {
+    if (userOff.has(g) && !defaultOff.has(g)) parts.push(`h${g}`);
+    else if (!userOff.has(g) && defaultOff.has(g)) parts.push(`k${g}`);
+  }
+  const c = map.getCenter();
+  parts.push(`p${Math.round((((c.lng + 180) % 360) + 360) % 360 * 100)}_${Math.round((c.lat + 90) * 100)}_${Math.round(map.getZoom() * 10)}`);
   try { history.replaceState(null, "", `#${parts.join("-")}`); } catch {}
 }
 const START_TIME = initialView.t ?? 1200;
 map.on("load", async () => {
   await loadBorders(START_TIME);
   // المنظر المشارَك بمنطقة يضبط الكاميرا بنفسه، فلا افتتاحية
-  if (!reduceMotion && !initialView.r && !document.body.classList.contains("showcasing")) map.flyTo({ ...FIRST_VIEW, duration: 5200, curve: 1.3, essential: false });
+  if (!reduceMotion && !initialView.r && !initialView.p && !document.body.classList.contains("showcasing")) map.flyTo({ ...FIRST_VIEW, duration: 5200, curve: 1.3, essential: false });
 });
 
 // ---------- الافتتاحية: العنوان وثلاثة أبواب، في الزيارة الأولى فقط ----------
