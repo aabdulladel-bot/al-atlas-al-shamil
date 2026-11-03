@@ -522,7 +522,8 @@ try {
       // الرجوع: يعيد الكيان والزمن اللذين فُتح منهما
       await mp.waitForSelector("#card-body [data-lback]", { timeout: 60000 });
       await mp.evaluate(() => document.querySelector("#card-body [data-lback]").click());
-      await mp.waitForFunction(() => time.key === "modern" && lastEntityCard?.f?.properties?.NAME === "Saudi Arabia", null, { timeout: 60000 });
+      // الشرط يطلب بطاقة السعودية الحديثة نفسها (facts.key)، لا السعودية في 2010 التي تحمل الاسم نفسه
+      await mp.waitForFunction(() => time.key === "modern" && cardEntity?.facts?.key === "modern" && lastEntityCard?.f?.properties?.NAME === "Saudi Arabia", null, { timeout: 60000 });
       // مقارنة السلسلتين: تثبيت السعودية، ثم فتح كيان من سلسلتها يُعرض جدول مقابلتهما عبر الزمن
       await mp.evaluate(() => document.querySelector("#card-body [data-pin]").click());
       const pinState = async () => mp.evaluate(() => ({ pins: [...document.querySelectorAll("#card-body [data-pin]")].map((b) => b.dataset.pin), pinned: pinned ? `${pinned.name}|${pinned.key}` : null, card: lastEntityCard?.f?.properties?.NAME ?? null, key: time.key }));
