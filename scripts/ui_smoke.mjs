@@ -523,6 +523,14 @@ try {
       await mp.waitForSelector("#card-body [data-lback]", { timeout: 60000 });
       await mp.evaluate(() => document.querySelector("#card-body [data-lback]").click());
       await mp.waitForFunction(() => time.key === "modern" && lastEntityCard?.f?.properties?.NAME === "Saudi Arabia", null, { timeout: 60000 });
+      // مقارنة السلسلتين: تثبيت السعودية، ثم فتح كيان من سلسلتها يُعرض جدول مقابلتهما عبر الزمن
+      await mp.evaluate(() => document.querySelector("#card-body [data-pin]").click());
+      await mp.waitForSelector('#card-body [data-pin="off"]', { timeout: 60000 });
+      await mp.evaluate(() => document.querySelector("#card-body .lin-btn").click());
+      await mp.waitForSelector("#card-body .lin-compare", { timeout: 60000 });
+      const cmpRows = await mp.$$eval("#card-body .lin-compare tr", (r) => r.length);
+      if (cmpRows < 2) problems.push(`[${name}] مقارنة السلسلتين: ${cmpRows} صفوف`);
+      await mp.evaluate(() => { pinned = null; });
       counts.lineageBack = true;
       counts.lineageStrong = strong;
       counts.lineageAll = all;
