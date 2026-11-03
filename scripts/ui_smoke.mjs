@@ -525,9 +525,10 @@ try {
       await mp.waitForFunction(() => time.key === "modern" && lastEntityCard?.f?.properties?.NAME === "Saudi Arabia", null, { timeout: 60000 });
       // مقارنة السلسلتين: تثبيت السعودية، ثم فتح كيان من سلسلتها يُعرض جدول مقابلتهما عبر الزمن
       await mp.evaluate(() => document.querySelector("#card-body [data-pin]").click());
-      await mp.waitForSelector('#card-body [data-pin="off"]', { timeout: 60000 });
+      const pinState = async () => mp.evaluate(() => ({ pins: [...document.querySelectorAll("#card-body [data-pin]")].map((b) => b.dataset.pin), pinned: pinned ? `${pinned.name}|${pinned.key}` : null, card: lastEntityCard?.f?.properties?.NAME ?? null, key: time.key }));
+      try { await mp.waitForSelector('#card-body [data-pin="off"]', { timeout: 60000 }); } catch (err) { throw new Error(`تثبيت: ${JSON.stringify(await pinState())}`); }
       await mp.evaluate(() => document.querySelector("#card-body .lin-btn").click());
-      await mp.waitForSelector("#card-body .lin-compare", { timeout: 60000 });
+      try { await mp.waitForSelector("#card-body .lin-compare", { timeout: 60000 }); } catch (err) { throw new Error(`مقارنة: ${JSON.stringify(await pinState())}`); }
       const cmpRows = await mp.$$eval("#card-body .lin-compare tr", (r) => r.length);
       if (cmpRows < 2) problems.push(`[${name}] مقارنة السلسلتين: ${cmpRows} صفوف`);
       await mp.evaluate(() => { pinned = null; });
