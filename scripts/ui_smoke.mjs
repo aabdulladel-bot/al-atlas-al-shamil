@@ -522,7 +522,17 @@ try {
       // الرجوع: يعيد الكيان والزمن اللذين فُتح منهما
       await mp.waitForSelector("#card-body [data-lback]", { timeout: 60000 });
       await mp.evaluate(() => document.querySelector("#card-body [data-lback]").click());
-      await mp.waitForFunction(() => time.key === "modern" && lastEntityCard?.f?.properties?.NAME === "Saudi Arabia", null, { timeout: 60000 });
+      // الشرط يطلب بطاقة السعودية الحديثة نفسها (facts.key)، لا السعودية في 2010 التي تحمل الاسم نفسه
+      await mp.waitForFunction(() => time.key === "modern" && cardEntity?.facts?.key === "modern" && lastEntityCard?.f?.properties?.NAME === "Saudi Arabia", null, { timeout: 60000 });
+      // مقارنة السلسلتين: تثبيت السعودية، ثم فتح كيان من سلسلتها يُعرض جدول مقابلتهما عبر الزمن
+      await mp.evaluate(() => document.querySelector("#card-body [data-pin]").click());
+      const pinState = async () => mp.evaluate(() => ({ pins: [...document.querySelectorAll("#card-body [data-pin]")].map((b) => b.dataset.pin), pinned: pinned ? `${pinned.name}|${pinned.key}` : null, card: lastEntityCard?.f?.properties?.NAME ?? null, key: time.key }));
+      try { await mp.waitForSelector('#card-body [data-pin="off"]', { timeout: 60000 }); } catch (err) { throw new Error(`تثبيت: ${JSON.stringify(await pinState())}`); }
+      await mp.evaluate(() => document.querySelector("#card-body .lin-btn").click());
+      try { await mp.waitForSelector("#card-body .lin-compare", { timeout: 60000 }); } catch (err) { throw new Error(`مقارنة: ${JSON.stringify(await pinState())}`); }
+      const cmpRows = await mp.$$eval("#card-body .lin-compare tr", (r) => r.length);
+      if (cmpRows < 2) problems.push(`[${name}] مقارنة السلسلتين: ${cmpRows} صفوف`);
+      await mp.evaluate(() => { pinned = null; });
       counts.lineageBack = true;
       counts.lineageStrong = strong;
       counts.lineageAll = all;

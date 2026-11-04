@@ -736,7 +736,9 @@ function openEntityCard(f, kind) {
     const lineage = kind === "people" ? "" : lineageSectionHtml(key, p.NAME, p.NAME_AR ?? p.NAME);
     // ما لا نعرفه: فجوات تُحسب من البيانات المعروضة نفسها، بعد وصولها فقط
     const gaps = links ? gapsHtml(gapList({ links, econ, modern, approxAll, info, p, kind, key })) : "";
-    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineage + (links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + econ + about + alsoHtml();
+    // مقارنة السلسلتين تظهر مع المثبّت من الكيانات السياسية وحدها، وتحتاج بيانات السلسلة المحمّلة
+    const lineageCmp = pinned && !pinnedHere && kind !== "people" && pinned.kind !== "people" ? lineageCompareHtml(pinned, { name: p.NAME, key, title }) : "";
+    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
@@ -760,6 +762,33 @@ function compareHtml(a, b) {
     row("خرائط يظهر عليها", (x) => fmtInt(x.years.length)) +
     row("شواهد على أرضه", (x) => fmtInt(x.evidence)) +
     `</table><p class="sub">المساحة على خريطة سنته من حدود المصدر التقريبية، والشواهد ربط مكاني لا حكم تاريخي.</p></section>`;
+}
+// مقارنة السلسلتين عبر الزمن: لكل حقبة في أي من السلسلتين، ما يقابل كل كيان فيها، وهل تلتقيان في كيان واحد.
+// تُبنى من أقوى صلة في كل اتجاه، فتُعرض الخيط الواحد لكل كيان، لا كل ما يتقاطع معه.
+function lineageEntries(key, name, label) {
+  const out = new Map([[String(key), label]]);
+  for (const dirn of ["prev", "next"]) {
+    for (const level of lineageChain(key, name, dirn, "strong", label)) {
+      for (const x of level) if (!x.more) out.set(String(x.key), x.name_ar ?? x.name);
+    }
+  }
+  return out;
+}
+function lineageCompareHtml(a, b) {
+  if (!lineageData) return "";
+  const ea = lineageEntries(a.key, a.name, a.title);
+  const eb = lineageEntries(b.key, b.name, b.title);
+  const keys = (lineageData._meta?.order ?? []).filter((k) => ea.has(k) || eb.has(k));
+  if (!keys.length) return "";
+  const rows = keys.map((k) => {
+    const na = ea.get(k);
+    const nb = eb.get(k);
+    const status = na && nb ? (na === nb ? "تلتقيان في كيان واحد" : "تتوازيان: كيانان مختلفان") : "سلسلة واحدة فقط في هذه الحقبة";
+    return `<tr><th>${escapeHtml(yearText(k))}</th><td>${na ? escapeHtml(na) : "—"}</td><td>${nb ? escapeHtml(nb) : "—"}</td><td class="sub">${status}</td></tr>`;
+  }).join("");
+  return `<section class="card-sec lin-compare"><h3>مقارنة السلسلتين عبر الزمن</h3>` +
+    `<table class="cmp"><tr><th></th><td><b>${escapeHtml(a.title)}</b></td><td><b>${escapeHtml(b.title)}</b></td><td></td></tr>${rows}</table>` +
+    `<p class="sub">أقوى صلة في كل اتجاه، والتطابق بالأرض لا بالاسم. «تلتقيان» تعني أن السلسلتين تصلان إلى الكيان نفسه في الحقبة نفسها، وهذا لا يثبت وحدة نسبهما.</p></section>`;
 }
 // تتبّع الكيان المعروض إلى سنة أخرى: ينتقل الزمن، ثم تُفتح بطاقته في تلك السنة إن وُجد فيها
 async function followEntity(k) {
