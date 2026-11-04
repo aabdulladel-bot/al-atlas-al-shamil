@@ -514,6 +514,8 @@ try {
       await mp.waitForFunction((n) => document.querySelectorAll("#card-body .lin-btn").length === n, strong, { timeout: 60000 });
       // ما لا نعرفه يظهر بعد وصول الشواهد والسلسلة معاً
       await mp.waitForSelector("#card-body .gaps", { timeout: 60000 });
+      // زر النسخ مع الإسناد موجود في القسم
+      if (!(await mp.$("#card-body .lineage [data-lcopy]"))) problems.push(`[${name}] سلسلة الكيان: لا زر نسخ مع الإسناد`);
       // كل صلة تحمل نوعها: شاهد على الأرض المشتركة أو تطابق أرض فقط
       const typed = await mp.$$eval("#card-body .lin-btn", (b) => b.every((x) => x.querySelector(".chip")));
       if (!typed) problems.push(`[${name}] سلسلة الكيان: صلة بلا نوع`);
