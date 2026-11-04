@@ -735,14 +735,10 @@ function openEntityCard(f, kind) {
     // سلسلة الكيان للدول والكيانات السياسية، لا للشعوب
     const lineage = kind === "people" ? "" : lineageSectionHtml(key, p.NAME, p.NAME_AR ?? p.NAME);
     // ما لا نعرفه: فجوات تُحسب من البيانات المعروضة نفسها، بعد وصولها فقط
-    const gapsArr = links ? gapList({ links, econ, modern, approxAll, info, p, kind, key }) : [];
-    const gaps = links ? gapsHtml(gapsArr) : "";
-    // نسخ البطاقة كلها مع إسنادها: يُبنى عند وصول الشواهد، فيحمل النص ما هو معروض فعلاً
-    const exportBtn = links ? `<div class="card-actions"><button type="button" class="chip" data-ecopy>انسخ البطاقة مع إسنادها</button></div>` : "";
-    if (cardEntity) cardEntity.dossier = links ? () => entityExportText({ p, key, title, info, kind, links, span, gaps: gapsArr }) : null;
+    const gaps = links ? gapsHtml(gapList({ links, econ, modern, approxAll, info, p, kind, key })) : "";
     // مقارنة السلسلتين تظهر مع المثبّت من الكيانات السياسية وحدها، وتحتاج بيانات السلسلة المحمّلة
     const lineageCmp = pinned && !pinnedHere && kind !== "people" && pinned.kind !== "people" ? lineageCompareHtml(pinned, { name: p.NAME, key, title }) : "";
-    return top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + econ + about + alsoHtml();
+    return top + pinBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
@@ -1715,8 +1711,7 @@ function lineageSectionHtml(key, name, label) {
     `</section>`;
 }
 // نص السلسلة للاستشهاد: الحقب بترتيبها الزمني، وكل صلة بنسبتيها ونوعها، ثم الإسناد وترخيص المصادر
-// سطور السلسلة وحدها (بلا إسناد)، لتُستعمل في النص المنسوخ للسلسلة وللبطاقة كلها
-function lineageBodyLines(key, name, label) {
+function lineageExportText(key, name, label) {
   const mode = lineageMode === "all" ? "كل الصلات (بحدّ ثمانية لكل خطوة)" : "أقوى صلة لكل حقبة";
   const line = (x) => `${yearText(x.key)}: ${x.name_ar ?? x.name}، ${pct(x.ownShare)} من أرض ${label} داخل هذا الكيان، و${pct(x.otherShare)} من أرضه داخل ${label}، ` +
     (x.places?.length ? `شاهد على الأرض المشتركة: ${x.places.join("، ")}` : "تطابق أرض فقط");
@@ -1725,10 +1720,6 @@ function lineageBodyLines(key, name, label) {
   const fwd = lineageChain(key, name, "next", lineageMode, label);
   if (back.length) { out.push("", "سبقه:"); for (const lv of back) for (const x of lv) if (!x.more) out.push(`  ${line(x)}`); }
   if (fwd.length) { out.push("", "خلفه:"); for (const lv of fwd) for (const x of lv) if (!x.more) out.push(`  ${line(x)}`); }
-  return out;
-}
-function lineageExportText(key, name, label) {
-  const out = lineageBodyLines(key, name, label);
   out.push("", "الإسناد:");
   out.push("- حدود الخرائط التاريخية: Historical Basemaps (GPL-3)، وحدود اليوم: Natural Earth (ملك عام). الحدود التاريخية تقريبية.");
   out.push("- ownShare: نصيب أرض هذا الكيان داخل الآخر. otherShare: نصيب أرض الآخر داخل هذا الكيان. التطابق بالأرض لا بالاسم.");
@@ -1736,35 +1727,11 @@ function lineageExportText(key, name, label) {
   out.push(`- نُسخ من الأطلس الشامل في ${new Date().toISOString().slice(0, 10)}`);
   return out.join("\n");
 }
-// بطاقة الكيان كلها للنسخ: الفجوات، والشواهد بمعرّفاتها ومصادرها، والسلسلة، والإسناد
-function entityExportText({ p, key, title, info, kind, links, span, gaps }) {
-  const out = [title + (info?.en_shown || p.NAME ? ` (${info?.en_shown ?? p.NAME})` : "")];
-  out.push(`الخريطة: ${yearText(key)}، ${kind === "people" ? "شعب أو قبيلة" : "كيان سياسي"}`);
-  if (info?.a) out.push(`المساحة على هذه الخريطة: ${fmtInt(info.a)} كم² تقريباً`);
-  if (span) out.push(`مدته في ويكي بيانات: ${span}`);
-  out.push("", "ما لا نعرفه:");
-  out.push(...(gaps.length ? gaps.map((g) => `  - ${g}`) : ["  - لا فجوة ظاهرة في البيانات المعروضة"]));
-  const list = links?.[p.NAME] ?? [];
-  out.push("", `الشواهد على أرضه (${fmtInt(list.length)}):`);
-  out.push(...(list.length
-    ? list.map((c) => `  - [${c.id}] ${c.statement}\n    المصدر: ${c.attributed_to}؛ المكان: ${c.place_ar}${c.place_note ? ` (${c.place_note})` : ""}؛ المستوى: ${c.tier}، ${c.tier_reason}`)
-    : ["  - لا شاهد موثّق يقع على أرضه في هذه الخريطة"]));
-  if (kind !== "people" && lineageData) out.push("", ...lineageBodyLines(key, p.NAME, title));
-  out.push("", "الإسناد:");
-  out.push("- الشواهد من قاعدة ادعاءات الأطلس، ولكل شاهد مصدره المذكور. الربط بالمكان محسوب على حدود المصدر، ولا يُعدّ حكماً تاريخياً.");
-  out.push("- حدود الخرائط التاريخية: Historical Basemaps (GPL-3)، وحدود اليوم: Natural Earth (ملك عام). الحدود التاريخية تقريبية.");
-  out.push(`- نُسخ من الأطلس الشامل في ${new Date().toISOString().slice(0, 10)}`);
-  return out.join("\n");
-}
-// نسخ نص إلى الحافظة مع إعلام الزر بالنتيجة لحظات
-async function copyText(btn, text, okLabel, idleLabel) {
+async function copyLineage(btn) {
   let ok = false;
-  try { await navigator.clipboard.writeText(text); ok = true; } catch {}
-  btn.textContent = ok ? okLabel : "تعذّر النسخ من هذا المتصفح";
-  setTimeout(() => { btn.textContent = idleLabel; }, 2500);
-}
-function copyLineage(btn) {
-  return copyText(btn, lineageExportText(btn.dataset.lkey, btn.dataset.lname, btn.dataset.llabel), "نُسخت السلسلة مع إسنادها", "انسخ السلسلة مع إسنادها");
+  try { await navigator.clipboard.writeText(lineageExportText(btn.dataset.lkey, btn.dataset.lname, btn.dataset.llabel)); ok = true; } catch {}
+  btn.textContent = ok ? "نُسخت السلسلة مع إسنادها" : "تعذّر النسخ من هذا المتصفح";
+  setTimeout(() => { btn.textContent = "انسخ السلسلة مع إسنادها"; }, 2500);
 }
 // فتح كيان في خريطة أخرى باسمه، ينتقل الزمن إليها ثم تُفتح بطاقته
 // back: العودة من المسار، فلا يُضاف الكيان الحالي إليه مجدداً
@@ -1793,8 +1760,6 @@ cardBody.addEventListener("click", (e) => {
   }
   const cp = e.target.closest("[data-lcopy]");
   if (cp) { copyLineage(cp); return; }
-  const ec = e.target.closest("[data-ecopy]");
-  if (ec) { if (cardEntity?.dossier) copyText(ec, cardEntity.dossier(), "نُسخت البطاقة مع إسنادها", "انسخ البطاقة مع إسنادها"); return; }
   if (e.target.closest("[data-lback]")) {
     const prev = lineageTrail.pop();
     if (prev) openLineageEntity(prev.key, prev.name, true);
