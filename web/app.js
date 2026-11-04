@@ -1699,11 +1699,39 @@ function lineageSectionHtml(key, name, label) {
   if (!back.length && !fwd.length) {
     return `<section class="card-sec lineage"><h3>سلسلة الكيان</h3>${backBtn}<p class="sub">لا سلف ولا خلف لهذا الكيان في الخرائط المتجاورة. إما أن أرضه لم تتقاطع مع كيان موثّق في الخريطة المجاورة، أو أنها خارج التغطية.</p></section>`;
   }
+  // العدسة النشطة تقترح سؤالها الأول قراءةً للسلسلة. هذا إطار للقراءة، لا تصفية: الروابط لا تحمل بعد وسوماً عسكرية أو اقتصادية
+  const lens = activeLens ? lensById(activeLens) : null;
+  const lensNote = lens?.questions?.[0] ? `<p class="sub lin-lens">تقرؤها عدسة «${escapeHtml(lens.ar)}»: ${escapeHtml(lens.questions[0])}</p>` : "";
+  const copyBtn = `<button type="button" class="lin-copy" data-lcopy data-lkey="${escapeHtml(String(key))}" data-lname="${escapeHtml(name)}" data-llabel="${escapeHtml(label)}">انسخ السلسلة مع إسنادها</button>`;
   return `<section class="card-sec lineage"><h3>سلسلة الكيان</h3>${backBtn}${modeBtns}` +
     `<p class="sub">التطابق بالأرض لا بالاسم: كل صلة تعني أن جزءاً من الأرض مشترك بين الكيانين. «شاهد على الأرض المشتركة» تعني أن موقع شاهد موثّق يقع داخل تلك الأرض، لا أن الشاهد يذكر الصلة نفسها.</p>` +
+    lensNote + copyBtn +
     (back.length ? `<h4 class="lin-dir">سبقه</h4>${lineageLevelsHtml(back)}` : "") +
     (fwd.length ? `<h4 class="lin-dir">خلفه</h4>${lineageLevelsHtml(fwd)}` : "") +
     `</section>`;
+}
+// نص السلسلة للاستشهاد: الحقب بترتيبها الزمني، وكل صلة بنسبتيها ونوعها، ثم الإسناد وترخيص المصادر
+function lineageExportText(key, name, label) {
+  const mode = lineageMode === "all" ? "كل الصلات (بحدّ ثمانية لكل خطوة)" : "أقوى صلة لكل حقبة";
+  const line = (x) => `${yearText(x.key)}: ${x.name_ar ?? x.name}، ${pct(x.ownShare)} من أرض ${label} داخل هذا الكيان، و${pct(x.otherShare)} من أرضه داخل ${label}، ` +
+    (x.places?.length ? `شاهد على الأرض المشتركة: ${x.places.join("، ")}` : "تطابق أرض فقط");
+  const out = [`سلسلة ${label} (${yearText(key)})، وضع: ${mode}`];
+  const back = lineageChain(key, name, "prev", lineageMode, label).reverse();
+  const fwd = lineageChain(key, name, "next", lineageMode, label);
+  if (back.length) { out.push("", "سبقه:"); for (const lv of back) for (const x of lv) if (!x.more) out.push(`  ${line(x)}`); }
+  if (fwd.length) { out.push("", "خلفه:"); for (const lv of fwd) for (const x of lv) if (!x.more) out.push(`  ${line(x)}`); }
+  out.push("", "الإسناد:");
+  out.push("- حدود الخرائط التاريخية: Historical Basemaps (GPL-3)، وحدود اليوم: Natural Earth (ملك عام). الحدود التاريخية تقريبية.");
+  out.push("- ownShare: نصيب أرض هذا الكيان داخل الآخر. otherShare: نصيب أرض الآخر داخل هذا الكيان. التطابق بالأرض لا بالاسم.");
+  out.push("- «شاهد على الأرض المشتركة» ربط مكاني بمواقع الشواهد في الأطلس، لا يعني أن الشاهد يذكر الصلة نفسها.");
+  out.push(`- نُسخ من الأطلس الشامل في ${new Date().toISOString().slice(0, 10)}`);
+  return out.join("\n");
+}
+async function copyLineage(btn) {
+  let ok = false;
+  try { await navigator.clipboard.writeText(lineageExportText(btn.dataset.lkey, btn.dataset.lname, btn.dataset.llabel)); ok = true; } catch {}
+  btn.textContent = ok ? "نُسخت السلسلة مع إسنادها" : "تعذّر النسخ من هذا المتصفح";
+  setTimeout(() => { btn.textContent = "انسخ السلسلة مع إسنادها"; }, 2500);
 }
 // فتح كيان في خريطة أخرى باسمه، ينتقل الزمن إليها ثم تُفتح بطاقته
 // back: العودة من المسار، فلا يُضاف الكيان الحالي إليه مجدداً
@@ -1730,6 +1758,8 @@ cardBody.addEventListener("click", (e) => {
     if (lastEntityCard) openEntityCard(lastEntityCard.f, lastEntityCard.kind);
     return;
   }
+  const cp = e.target.closest("[data-lcopy]");
+  if (cp) { copyLineage(cp); return; }
   if (e.target.closest("[data-lback]")) {
     const prev = lineageTrail.pop();
     if (prev) openLineageEntity(prev.key, prev.name, true);
