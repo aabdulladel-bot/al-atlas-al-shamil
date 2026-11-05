@@ -643,6 +643,24 @@
           "bytes": 4446
         }
       ]
+    },
+    {
+      "id": "ucdp-prio-acd-261",
+      "file": "data/raw/ucdp/ucdp-prio-acd-261-csv.zip",
+      "url": "https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-261-csv.zip",
+      "license": "CC BY 4.0: «All datasets are free of charge and licensed under CC BY 4.0 — you are free to use and redistribute them provided you cite the relevant publications listed with each dataset» (ucdp.uu.se/downloads، الصفحة نفسها تذكر الإصدار 26.1).",
+      "tier": "B",
+      "landing": "https://ucdp.uu.se/downloads/",
+      "attribution": "UCDP/PRIO Armed Conflict Dataset version 26.1، Uppsala Conflict Data Program وPRIO. الاستشهاد المدرج في صفحة التنزيلات: Gleditsch, Nils Petter et al. (2002) Armed Conflict 1946-2001: A New Dataset، Journal of Peace Research 39(5)، مع الاستشهاد المحدد في الكودبوك لم يُقرأ بعد.",
+      "note": "أُضيف قبل الجلب وفق قاعدة الحقوق، ثم جُلب الإصدار 26.1 من صفحة التنزيلات نفسها. الترخيص والاستشهاد من الصفحة الرسمية، والاستشهاد المحدد بالكودبوك لم يُقرأ بعد.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/ucdp/ucdp-prio-acd-261-csv.zip",
+          "sha256": "5f951743222964674a446e32a5a871077b29bd13349588d85fc59953d89c878a",
+          "bytes": 45955
+        }
+      ]
     }
   ]
 }
