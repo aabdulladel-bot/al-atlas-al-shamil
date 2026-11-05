@@ -1810,6 +1810,32 @@ cardBody.addEventListener("click", (e) => {
 let activeLens = null;
 let lensData = null;
 const lensReady = getJson("data/lenses.json").then((d) => { lensData = d; renderLensButtons(); return d; }).catch(() => null);
+
+// ---------- السوابق: كل مضيق بسوابقه الموثّقة (web/data/precedents.json، من scripts/config/precedents.json) ----------
+// الاقتباسات من نصوص المصادر وتُطابَق بالنص، أما أوجه الشبه والاختلاف فقراءة تحليلية للأطلس، وتُعرض كذلك
+let precedentsData = null;
+const precedentsReady = getJson("data/precedents.json").then((d) => { precedentsData = d; return d; }).catch(() => null);
+function openPrecedentCard(chokeId) {
+  const C = precedentsData?.chokepoints.find((x) => x.id === chokeId);
+  if (!C) return;
+  const list = precedentsData.precedents.filter((p) => p.chokepoint === chokeId);
+  cardEntity = null;
+  markPoint(null);
+  const bullets = (xs) => `<ul class="gap-list">${xs.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`;
+  const items = list.map((p) => `<section class="card-sec prec"><h3>${escapeHtml(p.period)}</h3>` +
+    `<p>${escapeHtml(p.statement_ar)}</p>` +
+    `<blockquote class="prec-q" dir="ltr">${escapeHtml(p.quote)}</blockquote>` +
+    `<p class="sub">المصدر: ${escapeHtml(p.attributed_to)}</p>` +
+    `<h4>أوجه الشبه (قراءة الأطلس)</h4>${bullets(p.similarities)}` +
+    `<h4>أوجه الاختلاف (قراءة الأطلس)</h4>${bullets(p.differences)}` +
+    `<p class="sub">تحفظ: ${escapeHtml(p.hedge)}</p></section>`).join("");
+  const today = C.today
+    ? `<section class="card-sec"><h3>الحالة المعاصرة</h3><p>${escapeHtml(C.today)}</p></section>`
+    : `<p class="sub">لم يُضَف بعد وصف معاصر لهذا المضيق من مصدر موثّق، فلا تُعرض مقارنة بحالة اليوم.</p>`;
+  openCard(cardHead({ title: C.name_ar, en: C.name_en, icon: "place", note: `${fmtInt(list.length)} سابقة موثّقة` }) +
+    today + (items || `<p class="sub">لا سابقة مضافة لهذا المضيق بعد.</p>`) +
+    `<p class="sub">الاقتباسات بالإنجليزية كما وردت في نص المصدر.</p>`);
+}
 const lensById = (id) => lensData?.lenses.find((x) => x.id === id) ?? null;
 const lensAboutEl = document.getElementById("lens-about");
 function renderLensButtons() {

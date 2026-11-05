@@ -540,6 +540,12 @@ try {
       counts.lineageStrong = strong;
       counts.lineageAll = all;
       await mp.evaluate(() => closeCard());
+      // السوابق: بطاقة المضيق تعرض سوابقه بالاقتباس والشبه والاختلاف
+      await mp.evaluate(() => { closeCard(); openPrecedentCard("bosporus"); });
+      await mp.waitForSelector("#card-body .prec", { timeout: 60000 });
+      const precN = await mp.$$eval("#card-body .prec", (x) => x.length);
+      if (precN < 1) problems.push(`[${name}] السوابق: لا سابقة في بطاقة البوسفور`);
+      await mp.evaluate(() => closeCard());
       // العدسات: تضع الوضع والطبقات والزمن والسُّنّة، وتُحفظ في الرابط، وتُستعاد منه، وتظهر في الأوامر
       step = `${name}: العدسات`;
       await mp.evaluate(() => { closeCard(); document.querySelector('.mode button[data-mode="simple"]')?.click(); });
