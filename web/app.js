@@ -1827,7 +1827,7 @@ function observatoryHtml(name) {
     if (!v) return "";
     const src = observatoryData._meta.sources[ind.source];
     return `<section class="card-sec obs"><h3>${escapeHtml(ind.name_ar)}</h3>` +
-      `<div class="stats"><div class="stat"><b>${fmtInt(v.value)} من ${fmtInt(v.of)}</b><span>${escapeHtml(ind.unit_ar)}</span></div></div>` +
+      `<div class="stats"><div class="stat"><b>${v.of != null ? `${fmtInt(v.value)} من ${fmtInt(v.of)}` : (Number.isInteger(v.value) ? fmtInt(v.value) : v.value.toFixed(1))}</b><span>${escapeHtml(ind.unit_ar)}</span></div></div>` +
       `<p class="sub">${escapeHtml(ind.definition_ar)}</p>` +
       `<p class="sub">${escapeHtml(ind.sunna_link_ar)}</p>` +
       `<p class="sub">المصدر: ${escapeHtml(src.attribution)}. الترخيص: ${escapeHtml(src.license)}</p></section>`;
