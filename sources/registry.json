@@ -893,6 +893,20 @@
       "license": null,
       "license_status": "unverified",
       "discovered_via": "كتالوج مصادر World Monitor (docs/data-sources.mdx في koala73/worldmonitor، قُرئ 2026-11-02)"
+    },
+    {
+      "id": "ucdp-prio-acd",
+      "name": "UCDP/PRIO Armed Conflict Dataset (Uppsala University)",
+      "kind": "dataset",
+      "domains": [
+        "war"
+      ],
+      "url": "https://ucdp.uu.se/downloads/",
+      "license": "CC BY 4.0 (مقروء من صفحة التنزيلات الرسمية)",
+      "license_status": "verified",
+      "verified_via": "صفحة التنزيلات الرسمية ucdp.uu.se/downloads، ومسجّل في sources/manifest.json",
+      "manifest_id": "ucdp-prio-acd-261",
+      "note": "يغذّي مؤشر سنوات النزاع المسلح في المرصد (المرحلة 15، البداية)"
     }
   ]
 }

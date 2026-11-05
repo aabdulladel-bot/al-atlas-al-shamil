@@ -742,12 +742,12 @@ function openEntityCard(f, kind) {
     if (cardEntity) cardEntity.dossier = links ? () => entityExportText({ p, key, title, info, kind, links, span, gaps: gapsArr }) : null;
     // مقارنة السلسلتين تظهر مع المثبّت من الكيانات السياسية وحدها، وتحتاج بيانات السلسلة المحمّلة
     const lineageCmp = pinned && !pinnedHere && kind !== "people" && pinned.kind !== "people" ? lineageCompareHtml(pinned, { name: p.NAME, key, title }) : "";
-    return top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + econ + about + alsoHtml();
+    return top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + (modern && kind !== "people" ? observatoryHtml(p.NAME) : "") + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
   // الإغلاق قبل وصول البيانات يُلغي التحديث: لا تُبنى البطاقة المغلقة (كان ذلك يرمي خطأ «facts» عند إغلاق سريع)
-  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage()]).then(([links, econ]) => {
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady]).then(([links, econ]) => {
     if (token !== cardToken || cardEl.hidden) return;
     updateCard(token, render(links, econ));
   });
@@ -1815,6 +1815,25 @@ const lensReady = getJson("data/lenses.json").then((d) => { lensData = d; render
 // الاقتباسات من نصوص المصادر وتُطابَق بالنص، أما أوجه الشبه والاختلاف فقراءة تحليلية للأطلس، وتُعرض كذلك
 let precedentsData = null;
 const precedentsReady = getJson("data/precedents.json").then((d) => { precedentsData = d; return d; }).catch(() => null);
+
+// ---------- المرصد: مؤشرات حالية لكل دولة اليوم (web/data/observatory.json، من scripts/build_observatory.py) ----------
+// كل مؤشر يُحسب من ملف خام مرخّص، ويُعرض معه مصدره وترخيصه والسُّنّة التي يُختبر بها بوصفها فرضية
+let observatoryData = null;
+const observatoryReady = getJson("data/observatory.json").then((d) => { observatoryData = d; return d; }).catch(() => null);
+function observatoryHtml(name) {
+  if (!observatoryData?.indicators?.length) return "";
+  const rows = observatoryData.indicators.map((ind) => {
+    const v = ind.values?.[name];
+    if (!v) return "";
+    const src = observatoryData._meta.sources[ind.source];
+    return `<section class="card-sec obs"><h3>${escapeHtml(ind.name_ar)}</h3>` +
+      `<div class="stats"><div class="stat"><b>${fmtInt(v.value)} من ${fmtInt(v.of)}</b><span>${escapeHtml(ind.unit_ar)}</span></div></div>` +
+      `<p class="sub">${escapeHtml(ind.definition_ar)}</p>` +
+      `<p class="sub">${escapeHtml(ind.sunna_link_ar)}</p>` +
+      `<p class="sub">المصدر: ${escapeHtml(src.attribution)}. الترخيص: ${escapeHtml(src.license)}</p></section>`;
+  }).join("");
+  return rows;
+}
 function openPrecedentCard(chokeId) {
   const C = precedentsData?.chokepoints.find((x) => x.id === chokeId);
   if (!C) return;
