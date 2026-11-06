@@ -679,6 +679,42 @@
           "bytes": 16557272
         }
       ]
+    },
+    {
+      "id": "ucdp-onesided-261",
+      "file": "data/raw/ucdp/ucdp-onesided-261-csv.zip",
+      "url": "https://ucdp.uu.se/downloads/nsos/ucdp-onesided-261-csv.zip",
+      "license": "CC BY 4.0: «All datasets are free of charge and licensed under CC BY 4.0 — you are free to use and redistribute them provided you cite the relevant publications listed with each dataset» (ucdp.uu.se/downloads/، الصفحة نفسها تذكر الإصدار 26.1).",
+      "tier": "B",
+      "landing": "https://ucdp.uu.se/downloads/",
+      "attribution": "UCDP One-sided Violence Dataset 26.1، Uppsala Conflict Data Program وPRIO. Davies, Shawn, Therése Pettersson & Magnus Öberg (2026)، Organized violence 1989–2025، Journal of Peace Research، doi:10.1093/jopres/xjag046 (الاستشهاد العام الوارد في صفحة التنزيلات؛ الاستشهاد الخاص بكل مجموعة يُقرأ من صفحتها قبل النشر).",
+      "note": "سُجّل قبل التنزيل وفق قاعدة الحقوق، والترخيص مقروء من صفحة التنزيلات نفسها. الاستشهاد الخاص بالمجموعة في الكودبوك لم يُقرأ بعد.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/ucdp/ucdp-onesided-261-csv.zip",
+          "sha256": "ecd346fdb72d23bf75aee0845a610e5f81f35caf76991ec875089070b1f39a8f",
+          "bytes": 28884
+        }
+      ]
+    },
+    {
+      "id": "ucdp-brd-conf-261",
+      "file": "data/raw/ucdp/ucdp-brd-conf-261-csv.zip",
+      "url": "https://ucdp.uu.se/downloads/brd/ucdp-brd-conf-261-csv.zip",
+      "license": "CC BY 4.0: «All datasets are free of charge and licensed under CC BY 4.0 — you are free to use and redistribute them provided you cite the relevant publications listed with each dataset» (ucdp.uu.se/downloads/، الصفحة نفسها تذكر الإصدار 26.1).",
+      "tier": "B",
+      "landing": "https://ucdp.uu.se/downloads/",
+      "attribution": "UCDP Battle-Related Deaths Dataset (conflict-level) 26.1، Uppsala Conflict Data Program وPRIO. Davies, Shawn, Therése Pettersson & Magnus Öberg (2026)، Organized violence 1989–2025، Journal of Peace Research، doi:10.1093/jopres/xjag046 (الاستشهاد العام الوارد في صفحة التنزيلات؛ الاستشهاد الخاص بكل مجموعة يُقرأ من صفحتها قبل النشر).",
+      "note": "سُجّل قبل التنزيل وفق قاعدة الحقوق، والترخيص مقروء من صفحة التنزيلات نفسها. الاستشهاد الخاص بالمجموعة في الكودبوك لم يُقرأ بعد.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/ucdp/ucdp-brd-conf-261-csv.zip",
+          "sha256": "a88c81fb727f10a689ff0084bacf78e6fbfaadbbe925a608f6e7be2f44a6141e",
+          "bytes": 39816
+        }
+      ]
     }
   ]
 }
