@@ -661,6 +661,24 @@
           "bytes": 45955
         }
       ]
+    },
+    {
+      "id": "un-wpp-2024-medium",
+      "file": "data/raw/un-wpp/WPP2024_Demographic_Indicators_Medium.csv.gz",
+      "url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+      "license": "CC BY 3.0 IGO: «Copyright © 2024 by United Nations, made available under a Creative Commons license CC BY 3.0 IGO» (مقروء من صفحة التنزيلات الرسمية population.un.org/wpp/downloads، بعد تشغيلها بالمتصفح).",
+      "tier": "B",
+      "landing": "https://population.un.org/wpp/downloads?folder=Standard%20Projections&group=CSV%20format",
+      "attribution": "United Nations, Department of Economic and Social Affairs, Population Division (2024). World Population Prospects 2024, Online Edition.",
+      "note": "قُرئ الترخيص من صفحة التنزيلات قبل التنزيل، ثم سُجّل الملف هنا بتجزئته. صفحة شروط الاستعمال على un.org تعطي 403، فالترخيص المعتمد هو ما تذكره صفحة التنزيلات نفسها.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/un-wpp/WPP2024_Demographic_Indicators_Medium.csv.gz",
+          "sha256": "286ac36bb1415e2e1ade03acfef0a29f0e4c087e2f78e38c48f50c5df89082bc",
+          "bytes": 16557272
+        }
+      ]
     }
   ]
 }

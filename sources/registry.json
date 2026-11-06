@@ -907,6 +907,21 @@
       "verified_via": "صفحة التنزيلات الرسمية ucdp.uu.se/downloads، ومسجّل في sources/manifest.json",
       "manifest_id": "ucdp-prio-acd-261",
       "note": "يغذّي مؤشر سنوات النزاع المسلح في المرصد (المرحلة 15، البداية)"
+    },
+    {
+      "id": "un-wpp-2024",
+      "name": "World Population Prospects 2024 (UN DESA، Population Division)",
+      "kind": "dataset",
+      "domains": [
+        "population",
+        "health"
+      ],
+      "url": "https://population.un.org/wpp/downloads?folder=Standard%20Projections&group=CSV%20format",
+      "license": "CC BY 3.0 IGO (مقروء من صفحة التنزيلات الرسمية)",
+      "license_status": "verified",
+      "verified_via": "صفحة التنزيلات الرسمية population.un.org/wpp/downloads، ومسجّل في sources/manifest.json",
+      "manifest_id": "un-wpp-2024-medium",
+      "note": "يغذّي مؤشر متوقع الحياة عند الولادة في المرصد (المرحلة 15)"
     }
   ]
 }
