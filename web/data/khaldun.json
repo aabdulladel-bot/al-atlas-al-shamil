@@ -1,0 +1,1760 @@
+{
+  "_meta": {
+    "note": "مؤشر الشروط الخلدونية (المرحلة 15): شروط تُقاس بمؤشرات مرخّصة من المرصد، كل شرط مربوط بسُنّة من sunan/sunan.json هي فرضية لا قانون. المؤشر المركّب لا يُحسب إلا إن توفّرت لدولة شروط كافية (min_conditions)، وإلا تُعرض الدرجات الجزئية مع بيان النقص. الأوزان متساوية حتى يُقرّر منهجياً غيرها، والمعايرة التاريخية على Seshat لم تُنجز بعد. الدرجات رتب مئينية بين الدول، ولا تعني مستوى مطلقاً.",
+    "min_conditions": 3,
+    "total_conditions": 4
+  },
+  "conditions": [
+    {
+      "id": "cond_security",
+      "name_ar": "الأمن",
+      "sunna": "sn_security",
+      "hypothesis": "العدوان على الأموال يذهب بآمال الناس في الكسب فيخرب العمران، والأمن على الطرق والأموال يجلب التجار والقوافل.",
+      "proxy_note_ar": "السُّنّة تتحدث عن الأموال والطرق، والمؤشرات تقيس العنف المسجّل. هذا وكيل جزئي، لا قياس مباشر للأمن على الأموال.",
+      "gap_ar": "",
+      "indicators": [
+        {
+          "indicator": "onesided_deaths_2016_2025",
+          "per": "population_2024",
+          "direction": "lower_is_better",
+          "countries": 225
+        },
+        {
+          "indicator": "battle_deaths_2016_2025",
+          "per": "population_2024",
+          "direction": "lower_is_better",
+          "countries": 225
+        },
+        {
+          "indicator": "conflict_years_2016_2025",
+          "per": null,
+          "direction": "lower_is_better",
+          "countries": 242
+        }
+      ]
+    },
+    {
+      "id": "cond_taxation",
+      "name_ar": "الجباية",
+      "sunna": "sn_taxation",
+      "hypothesis": "خفة الضرائب في أول الدولة تنشّط الناس للعمل فيكثر العمران وتكثر جملة الجباية، وثقلها في آخرها يفتر الأعمال فتقل الجملة وإن كثرت الوزائع.",
+      "proxy_note_ar": "",
+      "gap_ar": "لا مؤشر مرخّص بعد: الإيرادات الضريبية تحتاج مصدراً مُتحقَّقاً من ترخيصه.",
+      "indicators": []
+    },
+    {
+      "id": "cond_trade",
+      "name_ar": "التجارة",
+      "sunna": "sn_trade",
+      "hypothesis": "تتركز التجارة في مراكز على تقاطع الطرق البرية والبحرية، وتزدهر المراكز بازدهار طرقها وتتراجع بتحوّلها.",
+      "proxy_note_ar": "",
+      "gap_ar": "لا مؤشر مرخّص بعد: حجم التجارة الخارجية يحتاج مصدراً مُتحقَّقاً من ترخيصه (البنك الدولي وUN Comtrade وغيرهما محجوبة أو غير مُتحقَّقة).",
+      "indicators": []
+    },
+    {
+      "id": "cond_knowledge",
+      "name_ar": "المعرفة",
+      "sunna": "sn_knowledge",
+      "hypothesis": "الصنائع تكمل بكمال العمران الحضري، وتنتقل المعارف التقنية بين الحضارات عبر وسطاء من رهبان وتجار وبحارة.",
+      "proxy_note_ar": "",
+      "gap_ar": "لا مؤشر مرخّص بعد: معدلات الإلمام بالقراءة تحتاج مصدراً مُتحقَّقاً من ترخيصه (UNESCO UIS محجوب).",
+      "indicators": []
+    }
+  ],
+  "countries": {
+    "Afghanistan": {
+      "conditions": {
+        "cond_security": 0.054
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Albania": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Algeria": {
+      "conditions": {
+        "cond_security": 0.451
+      },
+      "available": 1,
+      "composite": null
+    },
+    "American Samoa": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Andorra": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Angola": {
+      "conditions": {
+        "cond_security": 0.438
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Anguilla": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Antarctica": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Antigua and Barb.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Argentina": {
+      "conditions": {
+        "cond_security": 0.699
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Armenia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Aruba": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Ashmore and Cartier Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Australia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Austria": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Azerbaijan": {
+      "conditions": {
+        "cond_security": 0.392
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Bahamas": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Bahrain": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Bangladesh": {
+      "conditions": {
+        "cond_security": 0.183
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Barbados": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Belarus": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Belgium": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Belize": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Benin": {
+      "conditions": {
+        "cond_security": 0.434
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Bermuda": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Bhutan": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Bolivia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Bosnia and Herz.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Botswana": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Br. Indian Ocean Ter.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Brazil": {
+      "conditions": {
+        "cond_security": 0.707
+      },
+      "available": 1,
+      "composite": null
+    },
+    "British Virgin Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Brunei": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Bulgaria": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Burkina Faso": {
+      "conditions": {
+        "cond_security": 0.064
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Burundi": {
+      "conditions": {
+        "cond_security": 0.105
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Cabo Verde": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Cambodia": {
+      "conditions": {
+        "cond_security": 0.741
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Cameroon": {
+      "conditions": {
+        "cond_security": 0.076
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Canada": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Cayman Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Central African Rep.": {
+      "conditions": {
+        "cond_security": 0.054
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Chad": {
+      "conditions": {
+        "cond_security": 0.413
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Chile": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "China": {
+      "conditions": {
+        "cond_security": 0.741
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Colombia": {
+      "conditions": {
+        "cond_security": 0.091
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Comoros": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Congo": {
+      "conditions": {
+        "cond_security": 0.458
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Cook Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Costa Rica": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Croatia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Cuba": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Curaçao": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Cyprus": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Czechia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Côte d'Ivoire": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Dem. Rep. Congo": {
+      "conditions": {
+        "cond_security": 0.059
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Denmark": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Djibouti": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Dominica": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Dominican Rep.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Ecuador": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Egypt": {
+      "conditions": {
+        "cond_security": 0.42
+      },
+      "available": 1,
+      "composite": null
+    },
+    "El Salvador": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Eq. Guinea": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Eritrea": {
+      "conditions": {
+        "cond_security": 0.741
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Estonia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Ethiopia": {
+      "conditions": {
+        "cond_security": 0.059
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Faeroe Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Falkland Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Fiji": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Finland": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Fr. Polynesia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Fr. S. Antarctic Lands": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "France": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Gabon": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Gambia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Georgia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Germany": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Ghana": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Greece": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Greenland": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Grenada": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Guam": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Guatemala": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Guernsey": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Guinea": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Guinea-Bissau": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Guyana": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Haiti": {
+      "conditions": {
+        "cond_security": 0.094
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Heard I. and McDonald Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Honduras": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Hong Kong": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Hungary": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Iceland": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "India": {
+      "conditions": {
+        "cond_security": 0.136
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Indian Ocean Ter.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Indonesia": {
+      "conditions": {
+        "cond_security": 0.157
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Iran": {
+      "conditions": {
+        "cond_security": 0.116
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Iraq": {
+      "conditions": {
+        "cond_security": 0.072
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Ireland": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Isle of Man": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Israel": {
+      "conditions": {
+        "cond_security": 0.052
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Italy": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Jamaica": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Japan": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Jersey": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Jordan": {
+      "conditions": {
+        "cond_security": 0.471
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Kazakhstan": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Kenya": {
+      "conditions": {
+        "cond_security": 0.119
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Kiribati": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Kosovo": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Kuwait": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Kyrgyzstan": {
+      "conditions": {
+        "cond_security": 0.73
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Laos": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Latvia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Lebanon": {
+      "conditions": {
+        "cond_security": 0.457
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Lesotho": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Liberia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Libya": {
+      "conditions": {
+        "cond_security": 0.398
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Liechtenstein": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Lithuania": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Luxembourg": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Macao": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Madagascar": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Malawi": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Malaysia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Maldives": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Mali": {
+      "conditions": {
+        "cond_security": 0.056
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Malta": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Marshall Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Mauritania": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Mauritius": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Mexico": {
+      "conditions": {
+        "cond_security": 0.708
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Micronesia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Moldova": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Monaco": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Mongolia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Montenegro": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Montserrat": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Morocco": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Mozambique": {
+      "conditions": {
+        "cond_security": 0.085
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Myanmar": {
+      "conditions": {
+        "cond_security": 0.062
+      },
+      "available": 1,
+      "composite": null
+    },
+    "N. Cyprus": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "N. Mariana Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Namibia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Nauru": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Nepal": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Netherlands": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "New Caledonia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "New Zealand": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Nicaragua": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Niger": {
+      "conditions": {
+        "cond_security": 0.383
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Nigeria": {
+      "conditions": {
+        "cond_security": 0.094
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Niue": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Norfolk Island": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "North Korea": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "North Macedonia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Norway": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Oman": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Pakistan": {
+      "conditions": {
+        "cond_security": 0.105
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Palau": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Palestine": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Panama": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Papua New Guinea": {
+      "conditions": {
+        "cond_security": 0.705
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Paraguay": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Peru": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Philippines": {
+      "conditions": {
+        "cond_security": 0.113
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Pitcairn Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Poland": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Portugal": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Puerto Rico": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Qatar": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Romania": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Russia": {
+      "conditions": {
+        "cond_security": 0.432
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Rwanda": {
+      "conditions": {
+        "cond_security": 0.124
+      },
+      "available": 1,
+      "composite": null
+    },
+    "S. Geo. and the Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "S. Sudan": {
+      "conditions": {
+        "cond_security": 0.136
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Saint Helena": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Saint Lucia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Samoa": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "San Marino": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Saudi Arabia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Senegal": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Serbia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Seychelles": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Siachen Glacier": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Sierra Leone": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Singapore": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Sint Maarten": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Slovakia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Slovenia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Solomon Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Somalia": {
+      "conditions": {
+        "cond_security": 0.368
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Somaliland": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "South Africa": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "South Korea": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Spain": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Sri Lanka": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "St-Barthélemy": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "St-Martin": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "St. Kitts and Nevis": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "St. Pierre and Miquelon": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "St. Vin. and Gren.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Sudan": {
+      "conditions": {
+        "cond_security": 0.046
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Suriname": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Sweden": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Switzerland": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Syria": {
+      "conditions": {
+        "cond_security": 0.038
+      },
+      "available": 1,
+      "composite": null
+    },
+    "São Tomé and Principe": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Taiwan": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Tajikistan": {
+      "conditions": {
+        "cond_security": 0.442
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Tanzania": {
+      "conditions": {
+        "cond_security": 0.172
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Thailand": {
+      "conditions": {
+        "cond_security": 0.133
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Timor-Leste": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Togo": {
+      "conditions": {
+        "cond_security": 0.436
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Tonga": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Trinidad and Tobago": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Tunisia": {
+      "conditions": {
+        "cond_security": 0.463
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Turkey": {
+      "conditions": {
+        "cond_security": 0.391
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Turkmenistan": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Turks and Caicos Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Tuvalu": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "U.S. Virgin Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Uganda": {
+      "conditions": {
+        "cond_security": 0.445
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Ukraine": {
+      "conditions": {
+        "cond_security": 0.078
+      },
+      "available": 1,
+      "composite": null
+    },
+    "United Arab Emirates": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "United Kingdom": {
+      "conditions": {
+        "cond_security": 0.73
+      },
+      "available": 1,
+      "composite": null
+    },
+    "United States of America": {
+      "conditions": {
+        "cond_security": 0.452
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Uruguay": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Uzbekistan": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Vanuatu": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Vatican": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Venezuela": {
+      "conditions": {
+        "cond_security": 0.696
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Vietnam": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "W. Sahara": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Wallis and Futuna Is.": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Yemen": {
+      "conditions": {
+        "cond_security": 0.071
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Zambia": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Zimbabwe": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    },
+    "eSwatini": {
+      "conditions": {
+        "cond_security": 0.683
+      },
+      "available": 1,
+      "composite": null
+    },
+    "Åland": {
+      "conditions": {
+        "cond_security": 1.0
+      },
+      "available": 1,
+      "composite": null
+    }
+  }
+}

@@ -742,12 +742,12 @@ function openEntityCard(f, kind) {
     if (cardEntity) cardEntity.dossier = links ? () => entityExportText({ p, key, title, info, kind, links, span, gaps: gapsArr }) : null;
     // مقارنة السلسلتين تظهر مع المثبّت من الكيانات السياسية وحدها، وتحتاج بيانات السلسلة المحمّلة
     const lineageCmp = pinned && !pinnedHere && kind !== "people" && pinned.kind !== "people" ? lineageCompareHtml(pinned, { name: p.NAME, key, title }) : "";
-    return top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + (modern && kind !== "people" ? observatoryHtml(p.NAME) : "") + econ + about + alsoHtml();
+    return top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + (modern && kind !== "people" ? observatoryHtml(p.NAME) + khaldunHtml(p.NAME) : "") + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
   // الإغلاق قبل وصول البيانات يُلغي التحديث: لا تُبنى البطاقة المغلقة (كان ذلك يرمي خطأ «facts» عند إغلاق سريع)
-  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady]).then(([links, econ]) => {
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady, khaldunReady]).then(([links, econ]) => {
     if (token !== cardToken || cardEl.hidden) return;
     updateCard(token, render(links, econ));
   });
@@ -1833,6 +1833,27 @@ function observatoryHtml(name) {
       `<p class="sub">المصدر: ${escapeHtml(src.attribution)}. الترخيص: ${escapeHtml(src.license)}</p></section>`;
   }).join("");
   return rows;
+}
+
+// مؤشر الشروط الخلدونية (web/data/khaldun.json، من scripts/build_khaldun.py): درجات الشروط المتاحة للدولة، وما ينقصه
+let khaldunData = null;
+const khaldunReady = getJson("data/khaldun.json").then((d) => { khaldunData = d; return d; }).catch(() => null);
+function khaldunHtml(name) {
+  const c = khaldunData?.countries?.[name];
+  if (!khaldunData?.conditions?.length) return "";
+  const total = khaldunData._meta.total_conditions;
+  const min = khaldunData._meta.min_conditions;
+  const head = c?.composite != null
+    ? `<div class="stats"><div class="stat"><b>${Math.round(c.composite * 100)}%</b><span>المركّب، من ${fmtInt(c.available)} شروط</span></div></div>`
+    : `<p class="sub">المركّب لا يُحسب إلا بـ${fmtInt(min)} شروط على الأقل، والمتاح لهذه الدولة ${fmtInt(c?.available ?? 0)} من ${fmtInt(total)}.</p>`;
+  const perCond = khaldunData.conditions.map((k) => {
+    const score = c?.conditions?.[k.id];
+    if (score == null) return `<li><b>${escapeHtml(k.name_ar)}:</b> ${escapeHtml(k.gap_ar || "لا بيانات لهذه الدولة")}</li>`;
+    return `<li><b>${escapeHtml(k.name_ar)}:</b> أفضل من أو مثل ${Math.round(score * 100)}% من الدول، والسُّنّة: «${escapeHtml(k.hypothesis)}»` +
+      (k.proxy_note_ar ? ` ${escapeHtml(k.proxy_note_ar)}` : "") + `</li>`;
+  }).join("");
+  return `<section class="card-sec khal"><h3>مؤشر الشروط الخلدونية</h3>${head}<ul class="gap-list">${perCond}</ul>` +
+    `<p class="sub">الدرجات رتب مئينية بين الدول، لا مستوى مطلقاً، والارتباط بالسُّنن فرضية تُختبر لا تُثبت.</p></section>`;
 }
 function openPrecedentCard(chokeId) {
   const C = precedentsData?.chokepoints.find((x) => x.id === chokeId);
