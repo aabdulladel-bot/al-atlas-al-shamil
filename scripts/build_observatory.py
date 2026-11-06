@@ -33,9 +33,9 @@ def manifest_entry(source_id):
     raise SystemExit(f"مصدر غير مسجّل في المانيفست: {source_id}")
 
 
-def verified_bytes(entry):
-    """الملف الخام بعد التحقق من تجزئته مع المانيفست."""
-    f = entry["files"][0]
+def verified_bytes(entry, file_path=None):
+    """الملف الخام بعد التحقق من تجزئته مع المانيفست. يُختار الملف بمساره إن لم يكن الأول."""
+    f = entry["files"][0] if file_path is None else next(x for x in entry["files"] if x["file"] == file_path)
     data = (ROOT / f["file"]).read_bytes()
     got = hashlib.sha256(data).hexdigest()
     if got != f["sha256"]:
@@ -109,6 +109,29 @@ def read_ucdp_sum(data, ind, names, aliases):
     return values, sorted(unmatched), excluded
 
 
+def read_gapminder_latest(data, ind, names):
+    """آخر قيمة متاحة داخل المدى لكل دولة، مع سنتها. الرموز ISO3 بحروف صغيرة في الملف."""
+    rows = list(csv.DictReader(io.StringIO(data.decode("utf-8"))))
+    lo, hi = ind["years"]
+    value_col = [c for c in rows[0].keys() if c not in ("geo", "time")][0]
+    latest = {}
+    for r in rows:
+        y = int(r["time"])
+        if not lo <= y <= hi or r[value_col] == "":
+            continue
+        code = r["geo"].upper()
+        if code not in latest or y > latest[code][0]:
+            latest[code] = (y, float(r[value_col]))
+    iso = name_to_iso3()
+    values = {}
+    for n in names:
+        code = iso.get(n)
+        if code in latest:
+            y, v = latest[code]
+            values[n] = {"value": round(v, 1), "year": y}
+    return values, [], None
+
+
 def read_wpp_lex(data, ind, names):
     """متوقع الحياة عند الولادة (LEx) لكل دولة في السنة المطلوبة، بمطابقة ISO3."""
     text = gzip.decompress(data).decode("utf-8-sig")
@@ -140,7 +163,7 @@ def build():
             "landing": entry["landing"],
             "tier": entry["tier"],
         }
-        data = verified_bytes(entry)
+        data = verified_bytes(entry, ind.get("file"))
         if ind["reader"] == "ucdp_years":
             values, unmatched, of = read_ucdp_years(data, ind, names, aliases)
             shown = {n: {"value": v, "of": of} for n, v in sorted(values.items())}
@@ -148,6 +171,9 @@ def build():
             values, unmatched, excluded = read_ucdp_sum(data, ind, names, aliases)
             shown = {n: {"value": v} for n, v in sorted(values.items())}
             out["_meta"].setdefault("excluded", {})[ind["id"]] = excluded
+        elif ind["reader"] == "gapminder_latest":
+            values, unmatched, _ = read_gapminder_latest(data, ind, names)
+            shown = {n: v for n, v in sorted(values.items())}
         elif ind["reader"] == "wpp_lex":
             values, unmatched, _ = read_wpp_lex(data, ind, names)
             shown = {n: {"value": v} for n, v in sorted(values.items())}

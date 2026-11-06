@@ -715,6 +715,39 @@
           "bytes": 39816
         }
       ]
+    },
+    {
+      "id": "gapminder-systema-globalis",
+      "file": "data/raw/gapminder-systema/ddf--datapoints--tax_revenue_percent_of_gdp--by--geo--time.csv",
+      "url": "https://github.com/open-numbers/ddf--gapminder--systema_globalis",
+      "license": "CC BY 4.0: «Gapminder created this dataset and provides it under Creative Common Attribution 4.0 International» (README المستودع open-numbers/ddf--gapminder--systema_globalis). هذا الترخيص يغطي تجميع Gapminder. ترخيص البيانات الأصلية (البنك الدولي للضريبة والتجارة، وUNESCO للقراءة) لم يُتحقَّق منه من صفحاته، وقد وافق صاحب المشروع على الاعتماد على ترخيص Gapminder.",
+      "tier": "B",
+      "landing": "https://github.com/open-numbers/ddf--gapminder--systema_globalis",
+      "attribution": "Gapminder Foundation، مجموعة Systema Globalis (DDF). المصادر الأصلية: World Development Indicators (البنك الدولي) للضريبة والتجارة، وUNESCO للإلمام بالقراءة، بحسب تعريفات المستودع نفسه.",
+      "note": "سُجّل قبل النسخ وفق قاعدة الحقوق. الملفات الثلاثة: الضريبة (% من الناتج)، والإلمام بالقراءة للبالغين، والتجارة الخارجية للسلع (% من الناتج). ملاحظة: ترخيص المصدر الأصلي غير مُتحقَّق، وهذا قرار صريح من صاحب المشروع.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/gapminder-systema/ddf--datapoints--tax_revenue_percent_of_gdp--by--geo--time.csv",
+          "sha256": "6c309df14226f8784ceb1fe496bfab3f02e1594a55c1dc977482c236d58a4e82",
+          "bytes": 83086
+        },
+        {
+          "file": "data/raw/gapminder-systema/ddf--datapoints--literacy_rate_adult_total_percent_of_people_ages_15_and_above--by--geo--time.csv",
+          "sha256": "24698c05cdf0fb99a4b35304ef5e5d5a9b4f910d8e7e9cb6a3c1c9fb2d9ea08c",
+          "bytes": 17057
+        },
+        {
+          "file": "data/raw/gapminder-systema/ddf--datapoints--merchandise_trade_percent_of_gdp--by--geo--time.csv",
+          "sha256": "5f1549bec259e356efbf9410b9b811ebd006946e3f974c6bd60e988b39824910",
+          "bytes": 194784
+        },
+        {
+          "file": "data/raw/gapminder-systema/ddf--entities--geo--country.csv",
+          "sha256": "eb9428941f8a2d7b6ce10feada30d723f8b5284fcb47e566128851a1637a4e35",
+          "bytes": 52934
+        }
+      ]
     }
   ]
 }
