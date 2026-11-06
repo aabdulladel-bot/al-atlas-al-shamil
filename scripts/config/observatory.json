@@ -178,6 +178,54 @@
       "absent": "unavailable",
       "sunan": [],
       "sunna_link_ar": "مقام حسابي للمؤشرات الأخرى، لا فرضية مستقلة."
+    },
+    {
+      "id": "tax_revenue_latest",
+      "name_ar": "الإيرادات الضريبية، آخر قيمة",
+      "unit_ar": "% من الناتج المحلي",
+      "file": "data/raw/gapminder-systema/ddf--datapoints--tax_revenue_percent_of_gdp--by--geo--time.csv",
+      "definition_ar": "الإيرادات الضريبية للحكومة المركزية بوصفها نسبة من الناتج المحلي، آخر سنة متاحة بين ٢٠١٦ و٢٠٢٥ (البنك الدولي عبر Gapminder).",
+      "sunna_link_ar": "فرضية سُنّة الجباية: خفة الضرائب تنشّط العمران، وثقلها يفتر الأعمال. الاتجاه غير محسوم في السُّنّة نفسها، فلا تُحسب له درجة بعد.",
+      "source": "gapminder-systema-globalis",
+      "reader": "gapminder_latest",
+      "years": [
+        2016,
+        2025
+      ],
+      "absent": "unavailable",
+      "sunan": []
+    },
+    {
+      "id": "trade_latest",
+      "name_ar": "حجم التجارة الخارجية للسلع، آخر قيمة",
+      "unit_ar": "% من الناتج المحلي",
+      "file": "data/raw/gapminder-systema/ddf--datapoints--merchandise_trade_percent_of_gdp--by--geo--time.csv",
+      "definition_ar": "مجموع صادرات السلع وواردها بوصفه نسبة من الناتج المحلي، آخر سنة متاحة بين ٢٠١٦ و٢٠٢٥ (البنك الدولي عبر Gapminder).",
+      "sunna_link_ar": "فرضية سُنّة التجارة: تزدهر المراكز بازدهار طرقها. الافتراض هنا أن ارتفاع الحجم علامة ازدهار، ويُراجَع.",
+      "source": "gapminder-systema-globalis",
+      "reader": "gapminder_latest",
+      "years": [
+        2016,
+        2025
+      ],
+      "absent": "unavailable",
+      "sunan": []
+    },
+    {
+      "id": "literacy_latest",
+      "name_ar": "معدل الإلمام بالقراءة للبالغين، آخر قيمة",
+      "unit_ar": "% من البالغين",
+      "file": "data/raw/gapminder-systema/ddf--datapoints--literacy_rate_adult_total_percent_of_people_ages_15_and_above--by--geo--time.csv",
+      "definition_ar": "نسبة من تبلغ أعمارهم ١٥ سنة فأكثر ممن يقرؤون ويكتبون جملة بسيطة عن حياتهم اليومية بفهم، آخر سنة متاحة بين ٢٠١٦ و٢٠٢٥ (UNESCO عبر Gapminder).",
+      "sunna_link_ar": "فرضية سُنّة المعرفة: تنتقل المعرفة وتثبت حيث يزدهر العمران. الارتباط فرضية تُختبر لا تُثبت.",
+      "source": "gapminder-systema-globalis",
+      "reader": "gapminder_latest",
+      "years": [
+        2016,
+        2025
+      ],
+      "absent": "unavailable",
+      "sunan": []
     }
   ]
 }

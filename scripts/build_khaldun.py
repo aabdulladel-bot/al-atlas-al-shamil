@@ -43,6 +43,16 @@ def build():
     cond_scores = {}  # الشرط -> {الدولة: درجة}
     cond_meta = []
     for cond in cfg["conditions"]:
+        if cond.get("scored") is False:
+            # شرط معروض دون درجة: لا يدخل المركّب ولا يُعامَل كغائب
+            cond_scores[cond["id"]] = {}
+            cond_meta.append({
+                "id": cond["id"], "name_ar": cond["name_ar"], "sunna": cond["sunna"],
+                "hypothesis": hyp.get(cond["sunna"], ""), "proxy_note_ar": cond.get("proxy_note_ar", ""),
+                "gap_ar": cond.get("gap_ar", ""), "scored": False,
+                "indicators": [{"indicator": x["id"], "direction": x.get("direction")} for x in cond["indicators"]],
+            })
+            continue
         per_country = {}
         used = []
         for spec in cond["indicators"]:
@@ -65,13 +75,15 @@ def build():
             "hypothesis": hyp.get(cond["sunna"], ""),
             "proxy_note_ar": cond.get("proxy_note_ar", ""),
             "gap_ar": cond.get("gap_ar", ""),
+            "scored": True,
             "indicators": used,
         })
 
-    countries = sorted({k for m in cond_scores.values() for k in m})
+    scored_ids = {c["id"] for c in cond_meta if c.get("scored")}
+    countries = sorted({k for cid, m in cond_scores.items() if cid in scored_ids for k in m})
     out_countries = {}
     for k in countries:
-        scores = {cid: round(m[k], 3) for cid, m in cond_scores.items() if k in m}
+        scores = {cid: round(m[k], 3) for cid, m in cond_scores.items() if cid in scored_ids and k in m}
         n = len(scores)
         comp = round(sum(scores.values()) / n, 3) if n >= cfg["min_conditions"] else None
         out_countries[k] = {"conditions": scores, "available": n, "composite": comp}
@@ -79,7 +91,7 @@ def build():
         "_meta": {
             "note": cfg["_note"],
             "min_conditions": cfg["min_conditions"],
-            "total_conditions": len(cfg["conditions"]),
+            "total_conditions": len(scored_ids),
         },
         "conditions": cond_meta,
         "countries": out_countries,
