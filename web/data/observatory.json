@@ -25,6 +25,12 @@
         "attribution": "UCDP Battle-Related Deaths Dataset (conflict-level) 26.1، Uppsala Conflict Data Program وPRIO. Davies, Shawn, Therése Pettersson & Magnus Öberg (2026)، Organized violence 1989–2025، Journal of Peace Research، doi:10.1093/jopres/xjag046 (الاستشهاد العام الوارد في صفحة التنزيلات؛ الاستشهاد الخاص بكل مجموعة يُقرأ من صفحتها قبل النشر).",
         "landing": "https://ucdp.uu.se/downloads/",
         "tier": "B"
+      },
+      "gapminder-systema-globalis": {
+        "license": "CC BY 4.0: «Gapminder created this dataset and provides it under Creative Common Attribution 4.0 International» (README المستودع open-numbers/ddf--gapminder--systema_globalis). هذا الترخيص يغطي تجميع Gapminder. ترخيص البيانات الأصلية (البنك الدولي للضريبة والتجارة، وUNESCO للقراءة) لم يُتحقَّق منه من صفحاته، وقد وافق صاحب المشروع على الاعتماد على ترخيص Gapminder.",
+        "attribution": "Gapminder Foundation، مجموعة Systema Globalis (DDF). المصادر الأصلية: World Development Indicators (البنك الدولي) للضريبة والتجارة، وUNESCO للإلمام بالقراءة، بحسب تعريفات المستودع نفسه.",
+        "landing": "https://github.com/open-numbers/ddf--gapminder--systema_globalis",
+        "tier": "B"
       }
     },
     "excluded": {
@@ -7341,6 +7347,1934 @@
           "value": 1242.8
         }
       }
+    },
+    {
+      "id": "tax_revenue_latest",
+      "name_ar": "الإيرادات الضريبية، آخر قيمة",
+      "unit_ar": "% من الناتج المحلي",
+      "definition_ar": "الإيرادات الضريبية للحكومة المركزية بوصفها نسبة من الناتج المحلي، آخر سنة متاحة بين ٢٠١٦ و٢٠٢٥ (البنك الدولي عبر Gapminder).",
+      "source": "gapminder-systema-globalis",
+      "years": [
+        2016,
+        2025
+      ],
+      "sunan": [],
+      "sunna_link_ar": "فرضية سُنّة الجباية: خفة الضرائب تنشّط العمران، وثقلها يفتر الأعمال. الاتجاه غير محسوم في السُّنّة نفسها، فلا تُحسب له درجة بعد.",
+      "absent": "unavailable",
+      "values": {
+        "Afghanistan": {
+          "value": 9.9,
+          "year": 2017
+        },
+        "Albania": {
+          "value": 18.0,
+          "year": 2024
+        },
+        "Andorra": {
+          "value": 15.6,
+          "year": 2024
+        },
+        "Angola": {
+          "value": 7.7,
+          "year": 2024
+        },
+        "Argentina": {
+          "value": 10.4,
+          "year": 2024
+        },
+        "Armenia": {
+          "value": 22.4,
+          "year": 2024
+        },
+        "Australia": {
+          "value": 23.6,
+          "year": 2022
+        },
+        "Austria": {
+          "value": 25.8,
+          "year": 2024
+        },
+        "Azerbaijan": {
+          "value": 17.8,
+          "year": 2023
+        },
+        "Bahamas": {
+          "value": 17.3,
+          "year": 2024
+        },
+        "Bahrain": {
+          "value": 2.8,
+          "year": 2020
+        },
+        "Bangladesh": {
+          "value": 7.6,
+          "year": 2021
+        },
+        "Barbados": {
+          "value": 23.4,
+          "year": 2016
+        },
+        "Belarus": {
+          "value": 13.5,
+          "year": 2024
+        },
+        "Belgium": {
+          "value": 22.9,
+          "year": 2024
+        },
+        "Belize": {
+          "value": 21.3,
+          "year": 2017
+        },
+        "Bhutan": {
+          "value": 12.3,
+          "year": 2020
+        },
+        "Bosnia and Herz.": {
+          "value": 20.3,
+          "year": 2024
+        },
+        "Botswana": {
+          "value": 22.5,
+          "year": 2024
+        },
+        "Brazil": {
+          "value": 15.4,
+          "year": 2024
+        },
+        "Bulgaria": {
+          "value": 20.7,
+          "year": 2024
+        },
+        "Burkina Faso": {
+          "value": 18.6,
+          "year": 2023
+        },
+        "Burundi": {
+          "value": 12.6,
+          "year": 2021
+        },
+        "Cabo Verde": {
+          "value": 18.4,
+          "year": 2020
+        },
+        "Cambodia": {
+          "value": 12.2,
+          "year": 2023
+        },
+        "Cameroon": {
+          "value": 11.3,
+          "year": 2021
+        },
+        "Canada": {
+          "value": 13.9,
+          "year": 2024
+        },
+        "Central African Rep.": {
+          "value": 8.2,
+          "year": 2021
+        },
+        "Chile": {
+          "value": 18.2,
+          "year": 2024
+        },
+        "China": {
+          "value": 7.0,
+          "year": 2024
+        },
+        "Colombia": {
+          "value": 15.3,
+          "year": 2024
+        },
+        "Congo": {
+          "value": 6.5,
+          "year": 2021
+        },
+        "Costa Rica": {
+          "value": 13.9,
+          "year": 2023
+        },
+        "Croatia": {
+          "value": 21.2,
+          "year": 2023
+        },
+        "Cyprus": {
+          "value": 23.9,
+          "year": 2024
+        },
+        "Czechia": {
+          "value": 18.7,
+          "year": 2024
+        },
+        "Côte d'Ivoire": {
+          "value": 13.0,
+          "year": 2023
+        },
+        "Dem. Rep. Congo": {
+          "value": 10.7,
+          "year": 2022
+        },
+        "Denmark": {
+          "value": 33.4,
+          "year": 2024
+        },
+        "Dominican Rep.": {
+          "value": 14.7,
+          "year": 2024
+        },
+        "Ecuador": {
+          "value": 13.1,
+          "year": 2022
+        },
+        "El Salvador": {
+          "value": 21.5,
+          "year": 2024
+        },
+        "Eq. Guinea": {
+          "value": 6.6,
+          "year": 2022
+        },
+        "Estonia": {
+          "value": 22.7,
+          "year": 2024
+        },
+        "Ethiopia": {
+          "value": 3.4,
+          "year": 2024
+        },
+        "Fiji": {
+          "value": 23.9,
+          "year": 2024
+        },
+        "Finland": {
+          "value": 25.3,
+          "year": 2024
+        },
+        "France": {
+          "value": 22.8,
+          "year": 2024
+        },
+        "Gabon": {
+          "value": 9.5,
+          "year": 2021
+        },
+        "Georgia": {
+          "value": 24.3,
+          "year": 2024
+        },
+        "Germany": {
+          "value": 10.9,
+          "year": 2024
+        },
+        "Ghana": {
+          "value": 12.4,
+          "year": 2023
+        },
+        "Greece": {
+          "value": 27.4,
+          "year": 2024
+        },
+        "Guatemala": {
+          "value": 11.6,
+          "year": 2024
+        },
+        "Guinea-Bissau": {
+          "value": 8.2,
+          "year": 2024
+        },
+        "Honduras": {
+          "value": 15.1,
+          "year": 2020
+        },
+        "Hungary": {
+          "value": 22.8,
+          "year": 2024
+        },
+        "Iceland": {
+          "value": 23.2,
+          "year": 2023
+        },
+        "India": {
+          "value": 6.7,
+          "year": 2022
+        },
+        "Iraq": {
+          "value": 1.3,
+          "year": 2019
+        },
+        "Ireland": {
+          "value": 17.9,
+          "year": 2024
+        },
+        "Israel": {
+          "value": 23.3,
+          "year": 2024
+        },
+        "Italy": {
+          "value": 25.6,
+          "year": 2024
+        },
+        "Jamaica": {
+          "value": 23.7,
+          "year": 2020
+        },
+        "Jordan": {
+          "value": 17.0,
+          "year": 2023
+        },
+        "Kazakhstan": {
+          "value": 11.9,
+          "year": 2023
+        },
+        "Kenya": {
+          "value": 14.1,
+          "year": 2023
+        },
+        "Kiribati": {
+          "value": 17.7,
+          "year": 2023
+        },
+        "Kyrgyzstan": {
+          "value": 20.4,
+          "year": 2024
+        },
+        "Laos": {
+          "value": 12.1,
+          "year": 2022
+        },
+        "Latvia": {
+          "value": 17.8,
+          "year": 2024
+        },
+        "Lebanon": {
+          "value": 11.1,
+          "year": 2024
+        },
+        "Lesotho": {
+          "value": 37.3,
+          "year": 2024
+        },
+        "Lithuania": {
+          "value": 22.0,
+          "year": 2024
+        },
+        "Luxembourg": {
+          "value": 28.6,
+          "year": 2024
+        },
+        "Macao": {
+          "value": 22.9,
+          "year": 2023
+        },
+        "Madagascar": {
+          "value": 11.1,
+          "year": 2024
+        },
+        "Malawi": {
+          "value": 13.5,
+          "year": 2022
+        },
+        "Malaysia": {
+          "value": 12.4,
+          "year": 2024
+        },
+        "Maldives": {
+          "value": 19.5,
+          "year": 2021
+        },
+        "Mali": {
+          "value": 12.0,
+          "year": 2020
+        },
+        "Malta": {
+          "value": 24.1,
+          "year": 2024
+        },
+        "Marshall Is.": {
+          "value": 17.2,
+          "year": 2020
+        },
+        "Mauritius": {
+          "value": 20.5,
+          "year": 2024
+        },
+        "Mexico": {
+          "value": 14.6,
+          "year": 2024
+        },
+        "Micronesia": {
+          "value": 7.0,
+          "year": 2020
+        },
+        "Moldova": {
+          "value": 18.6,
+          "year": 2023
+        },
+        "Mongolia": {
+          "value": 16.9,
+          "year": 2024
+        },
+        "Morocco": {
+          "value": 20.7,
+          "year": 2023
+        },
+        "Mozambique": {
+          "value": 21.9,
+          "year": 2024
+        },
+        "Myanmar": {
+          "value": 6.0,
+          "year": 2019
+        },
+        "Namibia": {
+          "value": 33.0,
+          "year": 2023
+        },
+        "Nauru": {
+          "value": 22.1,
+          "year": 2024
+        },
+        "Nepal": {
+          "value": 13.9,
+          "year": 2023
+        },
+        "Netherlands": {
+          "value": 25.3,
+          "year": 2024
+        },
+        "New Zealand": {
+          "value": 29.7,
+          "year": 2024
+        },
+        "Nicaragua": {
+          "value": 20.1,
+          "year": 2024
+        },
+        "North Macedonia": {
+          "value": 17.8,
+          "year": 2023
+        },
+        "Norway": {
+          "value": 25.4,
+          "year": 2024
+        },
+        "Palau": {
+          "value": 17.9,
+          "year": 2020
+        },
+        "Panama": {
+          "value": 7.5,
+          "year": 2021
+        },
+        "Papua New Guinea": {
+          "value": 15.9,
+          "year": 2023
+        },
+        "Paraguay": {
+          "value": 11.4,
+          "year": 2024
+        },
+        "Peru": {
+          "value": 15.9,
+          "year": 2021
+        },
+        "Philippines": {
+          "value": 14.4,
+          "year": 2024
+        },
+        "Poland": {
+          "value": 18.0,
+          "year": 2023
+        },
+        "Portugal": {
+          "value": 22.4,
+          "year": 2024
+        },
+        "Romania": {
+          "value": 16.2,
+          "year": 2024
+        },
+        "Russia": {
+          "value": 10.9,
+          "year": 2024
+        },
+        "Rwanda": {
+          "value": 13.5,
+          "year": 2023
+        },
+        "Saint Lucia": {
+          "value": 18.2,
+          "year": 2017
+        },
+        "Samoa": {
+          "value": 24.0,
+          "year": 2023
+        },
+        "San Marino": {
+          "value": 17.3,
+          "year": 2023
+        },
+        "Saudi Arabia": {
+          "value": 8.2,
+          "year": 2024
+        },
+        "Senegal": {
+          "value": 19.5,
+          "year": 2023
+        },
+        "Serbia": {
+          "value": 23.9,
+          "year": 2022
+        },
+        "Singapore": {
+          "value": 14.2,
+          "year": 2024
+        },
+        "Slovakia": {
+          "value": 19.1,
+          "year": 2024
+        },
+        "Slovenia": {
+          "value": 21.0,
+          "year": 2024
+        },
+        "Solomon Is.": {
+          "value": 22.1,
+          "year": 2022
+        },
+        "Somalia": {
+          "value": 2.2,
+          "year": 2024
+        },
+        "South Africa": {
+          "value": 25.4,
+          "year": 2023
+        },
+        "South Korea": {
+          "value": 14.6,
+          "year": 2023
+        },
+        "Spain": {
+          "value": 14.9,
+          "year": 2024
+        },
+        "Sri Lanka": {
+          "value": 9.9,
+          "year": 2023
+        },
+        "St. Kitts and Nevis": {
+          "value": 15.0,
+          "year": 2020
+        },
+        "St. Vin. and Gren.": {
+          "value": 23.8,
+          "year": 2017
+        },
+        "Sudan": {
+          "value": 7.4,
+          "year": 2016
+        },
+        "Sweden": {
+          "value": 27.3,
+          "year": 2024
+        },
+        "Switzerland": {
+          "value": 9.8,
+          "year": 2024
+        },
+        "Tajikistan": {
+          "value": 10.9,
+          "year": 2024
+        },
+        "Tanzania": {
+          "value": 12.8,
+          "year": 2024
+        },
+        "Thailand": {
+          "value": 15.3,
+          "year": 2024
+        },
+        "Timor-Leste": {
+          "value": 21.6,
+          "year": 2022
+        },
+        "Togo": {
+          "value": 13.8,
+          "year": 2023
+        },
+        "Tonga": {
+          "value": 20.5,
+          "year": 2023
+        },
+        "Trinidad and Tobago": {
+          "value": 16.8,
+          "year": 2019
+        },
+        "Turkey": {
+          "value": 17.6,
+          "year": 2024
+        },
+        "Uganda": {
+          "value": 12.6,
+          "year": 2024
+        },
+        "Ukraine": {
+          "value": 21.0,
+          "year": 2024
+        },
+        "United Arab Emirates": {
+          "value": 0.6,
+          "year": 2024
+        },
+        "United Kingdom": {
+          "value": 27.0,
+          "year": 2024
+        },
+        "United States of America": {
+          "value": 11.0,
+          "year": 2024
+        },
+        "Uruguay": {
+          "value": 18.2,
+          "year": 2024
+        },
+        "Uzbekistan": {
+          "value": 11.5,
+          "year": 2023
+        },
+        "Vanuatu": {
+          "value": 17.6,
+          "year": 2023
+        },
+        "Zambia": {
+          "value": 16.8,
+          "year": 2021
+        },
+        "Zimbabwe": {
+          "value": 7.2,
+          "year": 2018
+        },
+        "eSwatini": {
+          "value": 24.3,
+          "year": 2021
+        }
+      }
+    },
+    {
+      "id": "trade_latest",
+      "name_ar": "حجم التجارة الخارجية للسلع، آخر قيمة",
+      "unit_ar": "% من الناتج المحلي",
+      "definition_ar": "مجموع صادرات السلع وواردها بوصفه نسبة من الناتج المحلي، آخر سنة متاحة بين ٢٠١٦ و٢٠٢٥ (البنك الدولي عبر Gapminder).",
+      "source": "gapminder-systema-globalis",
+      "years": [
+        2016,
+        2025
+      ],
+      "sunan": [],
+      "sunna_link_ar": "فرضية سُنّة التجارة: تزدهر المراكز بازدهار طرقها. الافتراض هنا أن ارتفاع الحجم علامة ازدهار، ويُراجَع.",
+      "absent": "unavailable",
+      "values": {
+        "Afghanistan": {
+          "value": 21.4,
+          "year": 2024
+        },
+        "Albania": {
+          "value": 50.3,
+          "year": 2024
+        },
+        "Algeria": {
+          "value": 35.2,
+          "year": 2024
+        },
+        "American Samoa": {
+          "value": 117.7,
+          "year": 2022
+        },
+        "Andorra": {
+          "value": 56.7,
+          "year": 2024
+        },
+        "Angola": {
+          "value": 53.6,
+          "year": 2024
+        },
+        "Antigua and Barb.": {
+          "value": 38.8,
+          "year": 2024
+        },
+        "Argentina": {
+          "value": 22.0,
+          "year": 2024
+        },
+        "Armenia": {
+          "value": 116.2,
+          "year": 2024
+        },
+        "Aruba": {
+          "value": 38.6,
+          "year": 2024
+        },
+        "Australia": {
+          "value": 36.3,
+          "year": 2024
+        },
+        "Austria": {
+          "value": 79.6,
+          "year": 2024
+        },
+        "Azerbaijan": {
+          "value": 64.1,
+          "year": 2024
+        },
+        "Bahamas": {
+          "value": 35.5,
+          "year": 2024
+        },
+        "Bahrain": {
+          "value": 84.7,
+          "year": 2024
+        },
+        "Bangladesh": {
+          "value": 25.6,
+          "year": 2024
+        },
+        "Barbados": {
+          "value": 34.9,
+          "year": 2024
+        },
+        "Belarus": {
+          "value": 113.3,
+          "year": 2024
+        },
+        "Belgium": {
+          "value": 156.4,
+          "year": 2024
+        },
+        "Belize": {
+          "value": 60.5,
+          "year": 2024
+        },
+        "Benin": {
+          "value": 41.9,
+          "year": 2024
+        },
+        "Bermuda": {
+          "value": 14.5,
+          "year": 2024
+        },
+        "Bhutan": {
+          "value": 65.6,
+          "year": 2024
+        },
+        "Bolivia": {
+          "value": 34.6,
+          "year": 2024
+        },
+        "Bosnia and Herz.": {
+          "value": 83.5,
+          "year": 2024
+        },
+        "Botswana": {
+          "value": 61.0,
+          "year": 2024
+        },
+        "Brazil": {
+          "value": 28.1,
+          "year": 2024
+        },
+        "Brunei": {
+          "value": 120.8,
+          "year": 2024
+        },
+        "Bulgaria": {
+          "value": 88.6,
+          "year": 2024
+        },
+        "Burkina Faso": {
+          "value": 52.2,
+          "year": 2024
+        },
+        "Burundi": {
+          "value": 38.8,
+          "year": 2024
+        },
+        "Cabo Verde": {
+          "value": 68.9,
+          "year": 2024
+        },
+        "Cambodia": {
+          "value": 119.4,
+          "year": 2024
+        },
+        "Cameroon": {
+          "value": 26.5,
+          "year": 2024
+        },
+        "Canada": {
+          "value": 50.9,
+          "year": 2024
+        },
+        "Cayman Is.": {
+          "value": 26.1,
+          "year": 2023
+        },
+        "Central African Rep.": {
+          "value": 23.8,
+          "year": 2024
+        },
+        "Chad": {
+          "value": 33.8,
+          "year": 2024
+        },
+        "Chile": {
+          "value": 55.5,
+          "year": 2024
+        },
+        "China": {
+          "value": 32.9,
+          "year": 2024
+        },
+        "Colombia": {
+          "value": 27.1,
+          "year": 2024
+        },
+        "Comoros": {
+          "value": 26.9,
+          "year": 2024
+        },
+        "Congo": {
+          "value": 83.2,
+          "year": 2024
+        },
+        "Costa Rica": {
+          "value": 50.5,
+          "year": 2024
+        },
+        "Croatia": {
+          "value": 77.2,
+          "year": 2024
+        },
+        "Cuba": {
+          "value": 8.3,
+          "year": 2020
+        },
+        "Cyprus": {
+          "value": 47.1,
+          "year": 2024
+        },
+        "Czechia": {
+          "value": 143.0,
+          "year": 2024
+        },
+        "Côte d'Ivoire": {
+          "value": 42.6,
+          "year": 2024
+        },
+        "Dem. Rep. Congo": {
+          "value": 79.6,
+          "year": 2024
+        },
+        "Denmark": {
+          "value": 60.3,
+          "year": 2024
+        },
+        "Djibouti": {
+          "value": 258.1,
+          "year": 2024
+        },
+        "Dominica": {
+          "value": 42.2,
+          "year": 2024
+        },
+        "Dominican Rep.": {
+          "value": 35.1,
+          "year": 2024
+        },
+        "Ecuador": {
+          "value": 51.3,
+          "year": 2024
+        },
+        "Egypt": {
+          "value": 33.0,
+          "year": 2024
+        },
+        "El Salvador": {
+          "value": 63.4,
+          "year": 2024
+        },
+        "Eq. Guinea": {
+          "value": 35.2,
+          "year": 2024
+        },
+        "Eritrea": {
+          "value": 30.9,
+          "year": 2024
+        },
+        "Estonia": {
+          "value": 95.7,
+          "year": 2024
+        },
+        "Ethiopia": {
+          "value": 17.4,
+          "year": 2024
+        },
+        "Faeroe Is.": {
+          "value": 80.8,
+          "year": 2024
+        },
+        "Fiji": {
+          "value": 70.9,
+          "year": 2024
+        },
+        "Finland": {
+          "value": 53.1,
+          "year": 2024
+        },
+        "Fr. Polynesia": {
+          "value": 38.7,
+          "year": 2024
+        },
+        "France": {
+          "value": 44.0,
+          "year": 2024
+        },
+        "Gabon": {
+          "value": 81.8,
+          "year": 2024
+        },
+        "Gambia": {
+          "value": 73.6,
+          "year": 2024
+        },
+        "Georgia": {
+          "value": 68.6,
+          "year": 2024
+        },
+        "Germany": {
+          "value": 66.2,
+          "year": 2024
+        },
+        "Ghana": {
+          "value": 43.1,
+          "year": 2024
+        },
+        "Greece": {
+          "value": 56.9,
+          "year": 2024
+        },
+        "Greenland": {
+          "value": 59.2,
+          "year": 2023
+        },
+        "Grenada": {
+          "value": 48.5,
+          "year": 2024
+        },
+        "Guam": {
+          "value": 18.4,
+          "year": 2022
+        },
+        "Guatemala": {
+          "value": 41.6,
+          "year": 2024
+        },
+        "Guinea": {
+          "value": 62.9,
+          "year": 2024
+        },
+        "Guinea-Bissau": {
+          "value": 33.0,
+          "year": 2024
+        },
+        "Guyana": {
+          "value": 107.9,
+          "year": 2024
+        },
+        "Haiti": {
+          "value": 14.9,
+          "year": 2024
+        },
+        "Honduras": {
+          "value": 77.7,
+          "year": 2024
+        },
+        "Hong Kong": {
+          "value": 331.7,
+          "year": 2024
+        },
+        "Hungary": {
+          "value": 137.4,
+          "year": 2024
+        },
+        "Iceland": {
+          "value": 50.4,
+          "year": 2024
+        },
+        "India": {
+          "value": 29.7,
+          "year": 2024
+        },
+        "Indonesia": {
+          "value": 35.7,
+          "year": 2024
+        },
+        "Iran": {
+          "value": 38.3,
+          "year": 2024
+        },
+        "Iraq": {
+          "value": 67.4,
+          "year": 2024
+        },
+        "Ireland": {
+          "value": 63.2,
+          "year": 2024
+        },
+        "Israel": {
+          "value": 28.5,
+          "year": 2024
+        },
+        "Italy": {
+          "value": 54.2,
+          "year": 2024
+        },
+        "Jamaica": {
+          "value": 41.6,
+          "year": 2024
+        },
+        "Japan": {
+          "value": 36.0,
+          "year": 2024
+        },
+        "Jordan": {
+          "value": 75.4,
+          "year": 2024
+        },
+        "Kazakhstan": {
+          "value": 48.6,
+          "year": 2024
+        },
+        "Kenya": {
+          "value": 23.5,
+          "year": 2024
+        },
+        "Kiribati": {
+          "value": 116.6,
+          "year": 2024
+        },
+        "Kuwait": {
+          "value": 70.6,
+          "year": 2024
+        },
+        "Kyrgyzstan": {
+          "value": 91.8,
+          "year": 2024
+        },
+        "Laos": {
+          "value": 109.4,
+          "year": 2024
+        },
+        "Latvia": {
+          "value": 101.6,
+          "year": 2024
+        },
+        "Lebanon": {
+          "value": 81.2,
+          "year": 2024
+        },
+        "Lesotho": {
+          "value": 125.3,
+          "year": 2024
+        },
+        "Liberia": {
+          "value": 62.2,
+          "year": 2024
+        },
+        "Libya": {
+          "value": 98.1,
+          "year": 2024
+        },
+        "Lithuania": {
+          "value": 99.5,
+          "year": 2024
+        },
+        "Luxembourg": {
+          "value": 44.3,
+          "year": 2024
+        },
+        "Macao": {
+          "value": 35.8,
+          "year": 2024
+        },
+        "Madagascar": {
+          "value": 42.6,
+          "year": 2024
+        },
+        "Malawi": {
+          "value": 37.2,
+          "year": 2024
+        },
+        "Malaysia": {
+          "value": 149.4,
+          "year": 2024
+        },
+        "Maldives": {
+          "value": 56.9,
+          "year": 2024
+        },
+        "Mali": {
+          "value": 46.9,
+          "year": 2024
+        },
+        "Malta": {
+          "value": 53.0,
+          "year": 2024
+        },
+        "Marshall Is.": {
+          "value": 56.9,
+          "year": 2024
+        },
+        "Mauritania": {
+          "value": 82.1,
+          "year": 2024
+        },
+        "Mauritius": {
+          "value": 61.7,
+          "year": 2024
+        },
+        "Mexico": {
+          "value": 67.9,
+          "year": 2024
+        },
+        "Micronesia": {
+          "value": 101.2,
+          "year": 2024
+        },
+        "Moldova": {
+          "value": 69.3,
+          "year": 2024
+        },
+        "Mongolia": {
+          "value": 115.1,
+          "year": 2024
+        },
+        "Montenegro": {
+          "value": 61.2,
+          "year": 2024
+        },
+        "Morocco": {
+          "value": 75.3,
+          "year": 2024
+        },
+        "Mozambique": {
+          "value": 76.6,
+          "year": 2024
+        },
+        "Myanmar": {
+          "value": 37.0,
+          "year": 2024
+        },
+        "N. Mariana Is.": {
+          "value": 50.5,
+          "year": 2022
+        },
+        "Namibia": {
+          "value": 115.4,
+          "year": 2024
+        },
+        "Nauru": {
+          "value": 59.7,
+          "year": 2024
+        },
+        "Nepal": {
+          "value": 31.8,
+          "year": 2024
+        },
+        "Netherlands": {
+          "value": 142.8,
+          "year": 2024
+        },
+        "New Caledonia": {
+          "value": 41.1,
+          "year": 2024
+        },
+        "New Zealand": {
+          "value": 34.3,
+          "year": 2024
+        },
+        "Nicaragua": {
+          "value": 96.4,
+          "year": 2024
+        },
+        "Niger": {
+          "value": 22.6,
+          "year": 2024
+        },
+        "Nigeria": {
+          "value": 37.5,
+          "year": 2024
+        },
+        "North Macedonia": {
+          "value": 120.3,
+          "year": 2024
+        },
+        "Norway": {
+          "value": 55.4,
+          "year": 2024
+        },
+        "Oman": {
+          "value": 99.4,
+          "year": 2024
+        },
+        "Pakistan": {
+          "value": 23.9,
+          "year": 2024
+        },
+        "Palau": {
+          "value": 43.1,
+          "year": 2024
+        },
+        "Panama": {
+          "value": 46.1,
+          "year": 2024
+        },
+        "Papua New Guinea": {
+          "value": 56.9,
+          "year": 2024
+        },
+        "Paraguay": {
+          "value": 63.2,
+          "year": 2024
+        },
+        "Peru": {
+          "value": 44.3,
+          "year": 2024
+        },
+        "Philippines": {
+          "value": 45.0,
+          "year": 2024
+        },
+        "Poland": {
+          "value": 82.7,
+          "year": 2024
+        },
+        "Portugal": {
+          "value": 64.5,
+          "year": 2024
+        },
+        "Qatar": {
+          "value": 59.4,
+          "year": 2024
+        },
+        "Romania": {
+          "value": 61.9,
+          "year": 2024
+        },
+        "Russia": {
+          "value": 33.7,
+          "year": 2024
+        },
+        "Rwanda": {
+          "value": 64.8,
+          "year": 2024
+        },
+        "Saint Lucia": {
+          "value": 41.4,
+          "year": 2024
+        },
+        "Samoa": {
+          "value": 45.2,
+          "year": 2024
+        },
+        "Saudi Arabia": {
+          "value": 43.4,
+          "year": 2024
+        },
+        "Senegal": {
+          "value": 55.5,
+          "year": 2024
+        },
+        "Serbia": {
+          "value": 81.9,
+          "year": 2024
+        },
+        "Seychelles": {
+          "value": 92.4,
+          "year": 2024
+        },
+        "Sierra Leone": {
+          "value": 51.4,
+          "year": 2024
+        },
+        "Singapore": {
+          "value": 176.2,
+          "year": 2024
+        },
+        "Sint Maarten": {
+          "value": 81.5,
+          "year": 2024
+        },
+        "Slovakia": {
+          "value": 162.2,
+          "year": 2024
+        },
+        "Slovenia": {
+          "value": 223.9,
+          "year": 2024
+        },
+        "Solomon Is.": {
+          "value": 78.7,
+          "year": 2024
+        },
+        "Somalia": {
+          "value": 42.8,
+          "year": 2024
+        },
+        "South Africa": {
+          "value": 58.2,
+          "year": 2024
+        },
+        "South Korea": {
+          "value": 70.1,
+          "year": 2024
+        },
+        "Spain": {
+          "value": 51.9,
+          "year": 2024
+        },
+        "Sri Lanka": {
+          "value": 31.9,
+          "year": 2024
+        },
+        "St-Martin": {
+          "value": 145.6,
+          "year": 2021
+        },
+        "St. Kitts and Nevis": {
+          "value": 35.5,
+          "year": 2024
+        },
+        "St. Vin. and Gren.": {
+          "value": 48.7,
+          "year": 2024
+        },
+        "Sudan": {
+          "value": 16.2,
+          "year": 2024
+        },
+        "Suriname": {
+          "value": 71.6,
+          "year": 2024
+        },
+        "Sweden": {
+          "value": 63.8,
+          "year": 2024
+        },
+        "Switzerland": {
+          "value": 87.1,
+          "year": 2024
+        },
+        "Syria": {
+          "value": 44.9,
+          "year": 2024
+        },
+        "São Tomé and Principe": {
+          "value": 22.1,
+          "year": 2024
+        },
+        "Tajikistan": {
+          "value": 63.1,
+          "year": 2024
+        },
+        "Tanzania": {
+          "value": 29.1,
+          "year": 2024
+        },
+        "Thailand": {
+          "value": 115.4,
+          "year": 2024
+        },
+        "Timor-Leste": {
+          "value": 56.4,
+          "year": 2024
+        },
+        "Togo": {
+          "value": 47.9,
+          "year": 2024
+        },
+        "Tonga": {
+          "value": 47.0,
+          "year": 2024
+        },
+        "Trinidad and Tobago": {
+          "value": 60.7,
+          "year": 2024
+        },
+        "Tunisia": {
+          "value": 89.6,
+          "year": 2024
+        },
+        "Turkey": {
+          "value": 44.6,
+          "year": 2024
+        },
+        "Turkmenistan": {
+          "value": 31.5,
+          "year": 2024
+        },
+        "Turks and Caicos Is.": {
+          "value": 26.1,
+          "year": 2024
+        },
+        "Tuvalu": {
+          "value": 40.1,
+          "year": 2023
+        },
+        "Uganda": {
+          "value": 41.0,
+          "year": 2024
+        },
+        "Ukraine": {
+          "value": 58.1,
+          "year": 2024
+        },
+        "United Arab Emirates": {
+          "value": 207.8,
+          "year": 2024
+        },
+        "United Kingdom": {
+          "value": 36.0,
+          "year": 2024
+        },
+        "United States of America": {
+          "value": 18.9,
+          "year": 2024
+        },
+        "Uruguay": {
+          "value": 28.1,
+          "year": 2024
+        },
+        "Uzbekistan": {
+          "value": 47.8,
+          "year": 2024
+        },
+        "Vanuatu": {
+          "value": 56.4,
+          "year": 2024
+        },
+        "Venezuela": {
+          "value": 24.4,
+          "year": 2024
+        },
+        "Vietnam": {
+          "value": 164.9,
+          "year": 2024
+        },
+        "Yemen": {
+          "value": 24.0,
+          "year": 2024
+        },
+        "Zambia": {
+          "value": 88.5,
+          "year": 2024
+        },
+        "Zimbabwe": {
+          "value": 40.8,
+          "year": 2024
+        },
+        "eSwatini": {
+          "value": 90.5,
+          "year": 2024
+        }
+      }
+    },
+    {
+      "id": "literacy_latest",
+      "name_ar": "معدل الإلمام بالقراءة للبالغين، آخر قيمة",
+      "unit_ar": "% من البالغين",
+      "definition_ar": "نسبة من تبلغ أعمارهم ١٥ سنة فأكثر ممن يقرؤون ويكتبون جملة بسيطة عن حياتهم اليومية بفهم، آخر سنة متاحة بين ٢٠١٦ و٢٠٢٥ (UNESCO عبر Gapminder).",
+      "source": "gapminder-systema-globalis",
+      "years": [
+        2016,
+        2025
+      ],
+      "sunan": [],
+      "sunna_link_ar": "فرضية سُنّة المعرفة: تنتقل المعرفة وتثبت حيث يزدهر العمران. الارتباط فرضية تُختبر لا تُثبت.",
+      "absent": "unavailable",
+      "values": {
+        "Afghanistan": {
+          "value": 37.3,
+          "year": 2021
+        },
+        "Albania": {
+          "value": 97.7,
+          "year": 2023
+        },
+        "Argentina": {
+          "value": 99.1,
+          "year": 2020
+        },
+        "Armenia": {
+          "value": 99.8,
+          "year": 2023
+        },
+        "Azerbaijan": {
+          "value": 99.8,
+          "year": 2023
+        },
+        "Bahrain": {
+          "value": 97.8,
+          "year": 2024
+        },
+        "Bangladesh": {
+          "value": 79.0,
+          "year": 2022
+        },
+        "Belarus": {
+          "value": 99.9,
+          "year": 2019
+        },
+        "Belize": {
+          "value": 87.9,
+          "year": 2022
+        },
+        "Benin": {
+          "value": 51.4,
+          "year": 2022
+        },
+        "Bhutan": {
+          "value": 64.9,
+          "year": 2022
+        },
+        "Bolivia": {
+          "value": 95.5,
+          "year": 2023
+        },
+        "Brazil": {
+          "value": 94.8,
+          "year": 2024
+        },
+        "Burkina Faso": {
+          "value": 41.4,
+          "year": 2023
+        },
+        "Burundi": {
+          "value": 71.4,
+          "year": 2020
+        },
+        "Cabo Verde": {
+          "value": 88.5,
+          "year": 2024
+        },
+        "Cambodia": {
+          "value": 71.9,
+          "year": 2021
+        },
+        "Cameroon": {
+          "value": 72.5,
+          "year": 2018
+        },
+        "Central African Rep.": {
+          "value": 42.4,
+          "year": 2019
+        },
+        "Chad": {
+          "value": 30.6,
+          "year": 2019
+        },
+        "Chile": {
+          "value": 96.4,
+          "year": 2017
+        },
+        "China": {
+          "value": 96.7,
+          "year": 2020
+        },
+        "Colombia": {
+          "value": 95.3,
+          "year": 2024
+        },
+        "Comoros": {
+          "value": 75.8,
+          "year": 2021
+        },
+        "Cuba": {
+          "value": 97.7,
+          "year": 2019
+        },
+        "Côte d'Ivoire": {
+          "value": 50.0,
+          "year": 2021
+        },
+        "Dem. Rep. Congo": {
+          "value": 65.7,
+          "year": 2020
+        },
+        "Dominican Rep.": {
+          "value": 94.0,
+          "year": 2024
+        },
+        "Ecuador": {
+          "value": 96.3,
+          "year": 2022
+        },
+        "Egypt": {
+          "value": 79.5,
+          "year": 2022
+        },
+        "El Salvador": {
+          "value": 89.8,
+          "year": 2024
+        },
+        "Ethiopia": {
+          "value": 60.5,
+          "year": 2022
+        },
+        "Gabon": {
+          "value": 88.9,
+          "year": 2021
+        },
+        "Gambia": {
+          "value": 51.6,
+          "year": 2021
+        },
+        "Georgia": {
+          "value": 99.7,
+          "year": 2024
+        },
+        "Ghana": {
+          "value": 76.5,
+          "year": 2021
+        },
+        "Guatemala": {
+          "value": 82.1,
+          "year": 2024
+        },
+        "Guinea": {
+          "value": 39.6,
+          "year": 2018
+        },
+        "Guinea-Bissau": {
+          "value": 63.9,
+          "year": 2022
+        },
+        "Guyana": {
+          "value": 85.6,
+          "year": 2020
+        },
+        "Haiti": {
+          "value": 68.0,
+          "year": 2017
+        },
+        "Honduras": {
+          "value": 88.2,
+          "year": 2024
+        },
+        "India": {
+          "value": 81.7,
+          "year": 2023
+        },
+        "Indonesia": {
+          "value": 96.0,
+          "year": 2020
+        },
+        "Iran": {
+          "value": 88.9,
+          "year": 2023
+        },
+        "Iraq": {
+          "value": 84.1,
+          "year": 2021
+        },
+        "Italy": {
+          "value": 99.3,
+          "year": 2019
+        },
+        "Jordan": {
+          "value": 94.8,
+          "year": 2023
+        },
+        "Kiribati": {
+          "value": 98.6,
+          "year": 2020
+        },
+        "Kuwait": {
+          "value": 96.5,
+          "year": 2020
+        },
+        "Laos": {
+          "value": 75.6,
+          "year": 2023
+        },
+        "Lebanon": {
+          "value": 92.0,
+          "year": 2019
+        },
+        "Lesotho": {
+          "value": 90.5,
+          "year": 2024
+        },
+        "Macao": {
+          "value": 96.5,
+          "year": 2016
+        },
+        "Madagascar": {
+          "value": 74.7,
+          "year": 2021
+        },
+        "Malawi": {
+          "value": 70.2,
+          "year": 2020
+        },
+        "Malaysia": {
+          "value": 95.8,
+          "year": 2022
+        },
+        "Maldives": {
+          "value": 98.2,
+          "year": 2019
+        },
+        "Mali": {
+          "value": 35.5,
+          "year": 2018
+        },
+        "Marshall Is.": {
+          "value": 95.8,
+          "year": 2021
+        },
+        "Mauritania": {
+          "value": 59.5,
+          "year": 2020
+        },
+        "Mauritius": {
+          "value": 94.3,
+          "year": 2023
+        },
+        "Mexico": {
+          "value": 95.9,
+          "year": 2025
+        },
+        "Mongolia": {
+          "value": 98.6,
+          "year": 2023
+        },
+        "Montenegro": {
+          "value": 98.5,
+          "year": 2018
+        },
+        "Mozambique": {
+          "value": 61.7,
+          "year": 2022
+        },
+        "Myanmar": {
+          "value": 93.5,
+          "year": 2020
+        },
+        "Namibia": {
+          "value": 87.6,
+          "year": 2023
+        },
+        "Nauru": {
+          "value": 96.6,
+          "year": 2023
+        },
+        "Nepal": {
+          "value": 68.7,
+          "year": 2019
+        },
+        "Niger": {
+          "value": 35.6,
+          "year": 2022
+        },
+        "Nigeria": {
+          "value": 70.4,
+          "year": 2024
+        },
+        "Niue": {
+          "value": 99.5,
+          "year": 2022
+        },
+        "Oman": {
+          "value": 97.3,
+          "year": 2022
+        },
+        "Pakistan": {
+          "value": 58.9,
+          "year": 2021
+        },
+        "Palau": {
+          "value": 100.0,
+          "year": 2020
+        },
+        "Panama": {
+          "value": 96.3,
+          "year": 2024
+        },
+        "Papua New Guinea": {
+          "value": 87.1,
+          "year": 2022
+        },
+        "Paraguay": {
+          "value": 94.9,
+          "year": 2024
+        },
+        "Peru": {
+          "value": 93.7,
+          "year": 2024
+        },
+        "Philippines": {
+          "value": 98.5,
+          "year": 2020
+        },
+        "Puerto Rico": {
+          "value": 92.4,
+          "year": 2017
+        },
+        "Romania": {
+          "value": 99.2,
+          "year": 2021
+        },
+        "Russia": {
+          "value": 99.9,
+          "year": 2021
+        },
+        "Rwanda": {
+          "value": 78.8,
+          "year": 2022
+        },
+        "Samoa": {
+          "value": 98.0,
+          "year": 2019
+        },
+        "San Marino": {
+          "value": 99.9,
+          "year": 2022
+        },
+        "Saudi Arabia": {
+          "value": 97.9,
+          "year": 2024
+        },
+        "Senegal": {
+          "value": 50.4,
+          "year": 2023
+        },
+        "Serbia": {
+          "value": 99.3,
+          "year": 2022
+        },
+        "Sierra Leone": {
+          "value": 43.6,
+          "year": 2019
+        },
+        "Singapore": {
+          "value": 97.7,
+          "year": 2021
+        },
+        "Somalia": {
+          "value": 54.1,
+          "year": 2022
+        },
+        "South Africa": {
+          "value": 91.2,
+          "year": 2024
+        },
+        "Spain": {
+          "value": 99.7,
+          "year": 2021
+        },
+        "Sri Lanka": {
+          "value": 92.7,
+          "year": 2023
+        },
+        "Syria": {
+          "value": 94.4,
+          "year": 2021
+        },
+        "São Tomé and Principe": {
+          "value": 87.4,
+          "year": 2019
+        },
+        "Tanzania": {
+          "value": 78.2,
+          "year": 2022
+        },
+        "Thailand": {
+          "value": 91.1,
+          "year": 2022
+        },
+        "Timor-Leste": {
+          "value": 72.5,
+          "year": 2022
+        },
+        "Togo": {
+          "value": 72.6,
+          "year": 2022
+        },
+        "Tonga": {
+          "value": 91.0,
+          "year": 2019
+        },
+        "Tunisia": {
+          "value": 86.2,
+          "year": 2023
+        },
+        "Turkey": {
+          "value": 97.3,
+          "year": 2021
+        },
+        "Turkmenistan": {
+          "value": 99.9,
+          "year": 2022
+        },
+        "Tuvalu": {
+          "value": 100.0,
+          "year": 2022
+        },
+        "Uganda": {
+          "value": 79.1,
+          "year": 2021
+        },
+        "United Arab Emirates": {
+          "value": 98.8,
+          "year": 2024
+        },
+        "Uruguay": {
+          "value": 98.9,
+          "year": 2024
+        },
+        "Uzbekistan": {
+          "value": 100.0,
+          "year": 2022
+        },
+        "Vanuatu": {
+          "value": 88.0,
+          "year": 2023
+        },
+        "Venezuela": {
+          "value": 97.2,
+          "year": 2017
+        },
+        "Vietnam": {
+          "value": 96.1,
+          "year": 2022
+        },
+        "Wallis and Futuna Is.": {
+          "value": 99.8,
+          "year": 2023
+        },
+        "Zambia": {
+          "value": 82.0,
+          "year": 2023
+        },
+        "Zimbabwe": {
+          "value": 93.2,
+          "year": 2019
+        },
+        "eSwatini": {
+          "value": 90.8,
+          "year": 2022
+        }
+      }
     }
   ],
   "unmatched": {
@@ -7353,6 +9287,9 @@
     "population_density_2024": [],
     "onesided_deaths_2016_2025": [],
     "battle_deaths_2016_2025": [],
-    "population_2024": []
+    "population_2024": [],
+    "tax_revenue_latest": [],
+    "trade_latest": [],
+    "literacy_latest": []
   }
 }
