@@ -1,0 +1,362 @@
+{
+  "_meta": {
+    "note_ar": "تحليل حساسية لترتيب مؤشر الشروط الخلدونية للأوزان. ρ قريب من ١ يعني أن الترتيب ثابت تقريباً، وانخفاضه يعني أن الترتيب يعتمد على الوزن. الرتب بين الدول المتجانسة، والرتبة ١ هي الأدنى مركّباً.",
+    "baseline": "أوزان متساوية",
+    "countries_compared": 114,
+    "scored_conditions": [
+      "cond_security",
+      "cond_trade",
+      "cond_knowledge"
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "cond_security_x0.5",
+      "label_ar": "وزن «العنف المسجّل» × 0.5",
+      "condition": "cond_security",
+      "multiplier": 0.5,
+      "spearman_vs_base": 0.9835,
+      "max_rank_shift": 24.0,
+      "top_movers": [
+        {
+          "country": "Thailand",
+          "base_rank": 40.0,
+          "scenario_rank": 64.0,
+          "shift": 24.0
+        },
+        {
+          "country": "Azerbaijan",
+          "base_rank": 69.0,
+          "scenario_rank": 90.0,
+          "shift": 21.0
+        },
+        {
+          "country": "Philippines",
+          "base_rank": 30.0,
+          "scenario_rank": 49.0,
+          "shift": 19.0
+        },
+        {
+          "country": "Russia",
+          "base_rank": 42.0,
+          "scenario_rank": 57.0,
+          "shift": 15.0
+        },
+        {
+          "country": "Turkey",
+          "base_rank": 39.0,
+          "scenario_rank": 53.0,
+          "shift": 14.0
+        },
+        {
+          "country": "Lebanon",
+          "base_rank": 53.0,
+          "scenario_rank": 67.0,
+          "shift": 14.0
+        },
+        {
+          "country": "Jordan",
+          "base_rank": 57.0,
+          "scenario_rank": 69.0,
+          "shift": 12.0
+        },
+        {
+          "country": "Tunisia",
+          "base_rank": 50.0,
+          "scenario_rank": 61.0,
+          "shift": 11.0
+        }
+      ]
+    },
+    {
+      "id": "cond_security_x2",
+      "label_ar": "وزن «العنف المسجّل» × 2",
+      "condition": "cond_security",
+      "multiplier": 2.0,
+      "spearman_vs_base": 0.9846,
+      "max_rank_shift": 25.0,
+      "top_movers": [
+        {
+          "country": "Azerbaijan",
+          "base_rank": 69.0,
+          "scenario_rank": 44.0,
+          "shift": 25.0
+        },
+        {
+          "country": "Jordan",
+          "base_rank": 57.0,
+          "scenario_rank": 38.0,
+          "shift": 19.0
+        },
+        {
+          "country": "Lebanon",
+          "base_rank": 53.0,
+          "scenario_rank": 36.0,
+          "shift": 17.0
+        },
+        {
+          "country": "Tunisia",
+          "base_rank": 50.0,
+          "scenario_rank": 34.0,
+          "shift": 16.0
+        },
+        {
+          "country": "eSwatini",
+          "base_rank": 70.0,
+          "scenario_rank": 56.0,
+          "shift": 14.0
+        },
+        {
+          "country": "Mexico",
+          "base_rank": 72.0,
+          "scenario_rank": 58.0,
+          "shift": 14.0
+        },
+        {
+          "country": "Côte d'Ivoire",
+          "base_rank": 34.0,
+          "scenario_rank": 46.0,
+          "shift": 12.0
+        },
+        {
+          "country": "Comoros",
+          "base_rank": 33.0,
+          "scenario_rank": 45.0,
+          "shift": 12.0
+        }
+      ]
+    },
+    {
+      "id": "cond_trade_x0.5",
+      "label_ar": "وزن «التجارة» × 0.5",
+      "condition": "cond_trade",
+      "multiplier": 0.5,
+      "spearman_vs_base": 0.9787,
+      "max_rank_shift": 17.0,
+      "top_movers": [
+        {
+          "country": "Uruguay",
+          "base_rank": 68.0,
+          "scenario_rank": 85.0,
+          "shift": 17.0
+        },
+        {
+          "country": "Turkmenistan",
+          "base_rank": 77.0,
+          "scenario_rank": 93.0,
+          "shift": 16.0
+        },
+        {
+          "country": "Tunisia",
+          "base_rank": 50.0,
+          "scenario_rank": 34.0,
+          "shift": 16.0
+        },
+        {
+          "country": "Cuba",
+          "base_rank": 56.0,
+          "scenario_rank": 72.0,
+          "shift": 16.0
+        },
+        {
+          "country": "Cambodia",
+          "base_rank": 62.0,
+          "scenario_rank": 46.5,
+          "shift": 15.5
+        },
+        {
+          "country": "Argentina",
+          "base_rank": 45.0,
+          "scenario_rank": 59.0,
+          "shift": 14.0
+        },
+        {
+          "country": "Venezuela",
+          "base_rank": 38.0,
+          "scenario_rank": 51.0,
+          "shift": 13.0
+        },
+        {
+          "country": "Namibia",
+          "base_rank": 93.0,
+          "scenario_rank": 80.0,
+          "shift": 13.0
+        }
+      ]
+    },
+    {
+      "id": "cond_trade_x2",
+      "label_ar": "وزن «التجارة» × 2",
+      "condition": "cond_trade",
+      "multiplier": 2.0,
+      "spearman_vs_base": 0.9691,
+      "max_rank_shift": 23.0,
+      "top_movers": [
+        {
+          "country": "Cambodia",
+          "base_rank": 62.0,
+          "scenario_rank": 85.0,
+          "shift": 23.0
+        },
+        {
+          "country": "Tuvalu",
+          "base_rank": 92.0,
+          "scenario_rank": 71.0,
+          "shift": 21.0
+        },
+        {
+          "country": "Turkmenistan",
+          "base_rank": 77.0,
+          "scenario_rank": 56.0,
+          "shift": 21.0
+        },
+        {
+          "country": "Thailand",
+          "base_rank": 40.0,
+          "scenario_rank": 61.0,
+          "shift": 21.0
+        },
+        {
+          "country": "Uruguay",
+          "base_rank": 68.0,
+          "scenario_rank": 51.0,
+          "shift": 17.0
+        },
+        {
+          "country": "Laos",
+          "base_rank": 80.0,
+          "scenario_rank": 97.0,
+          "shift": 17.0
+        },
+        {
+          "country": "eSwatini",
+          "base_rank": 70.0,
+          "scenario_rank": 86.0,
+          "shift": 16.0
+        },
+        {
+          "country": "Palau",
+          "base_rank": 94.0,
+          "scenario_rank": 78.0,
+          "shift": 16.0
+        }
+      ]
+    },
+    {
+      "id": "cond_knowledge_x0.5",
+      "label_ar": "وزن «المعرفة» × 0.5",
+      "condition": "cond_knowledge",
+      "multiplier": 0.5,
+      "spearman_vs_base": 0.9796,
+      "max_rank_shift": 17.0,
+      "top_movers": [
+        {
+          "country": "Tuvalu",
+          "base_rank": 92.0,
+          "scenario_rank": 75.0,
+          "shift": 17.0
+        },
+        {
+          "country": "Laos",
+          "base_rank": 80.0,
+          "scenario_rank": 97.0,
+          "shift": 17.0
+        },
+        {
+          "country": "Turkmenistan",
+          "base_rank": 77.0,
+          "scenario_rank": 61.0,
+          "shift": 16.0
+        },
+        {
+          "country": "Mauritania",
+          "base_rank": 64.0,
+          "scenario_rank": 80.0,
+          "shift": 16.0
+        },
+        {
+          "country": "Sierra Leone",
+          "base_rank": 41.0,
+          "scenario_rank": 55.0,
+          "shift": 14.0
+        },
+        {
+          "country": "Senegal",
+          "base_rank": 44.0,
+          "scenario_rank": 58.0,
+          "shift": 14.0
+        },
+        {
+          "country": "Zambia",
+          "base_rank": 81.0,
+          "scenario_rank": 94.0,
+          "shift": 13.0
+        },
+        {
+          "country": "Uzbekistan",
+          "base_rank": 100.0,
+          "scenario_rank": 87.0,
+          "shift": 13.0
+        }
+      ]
+    },
+    {
+      "id": "cond_knowledge_x2",
+      "label_ar": "وزن «المعرفة» × 2",
+      "condition": "cond_knowledge",
+      "multiplier": 2.0,
+      "spearman_vs_base": 0.9675,
+      "max_rank_shift": 30.0,
+      "top_movers": [
+        {
+          "country": "Russia",
+          "base_rank": 42.0,
+          "scenario_rank": 72.0,
+          "shift": 30.0
+        },
+        {
+          "country": "Argentina",
+          "base_rank": 45.0,
+          "scenario_rank": 66.5,
+          "shift": 21.5
+        },
+        {
+          "country": "Philippines",
+          "base_rank": 30.0,
+          "scenario_rank": 51.0,
+          "shift": 21.0
+        },
+        {
+          "country": "Azerbaijan",
+          "base_rank": 69.0,
+          "scenario_rank": 88.0,
+          "shift": 19.0
+        },
+        {
+          "country": "Gambia",
+          "base_rank": 59.0,
+          "scenario_rank": 41.0,
+          "shift": 18.0
+        },
+        {
+          "country": "Bhutan",
+          "base_rank": 60.0,
+          "scenario_rank": 42.0,
+          "shift": 18.0
+        },
+        {
+          "country": "Laos",
+          "base_rank": 80.0,
+          "scenario_rank": 63.0,
+          "shift": 17.0
+        },
+        {
+          "country": "Uruguay",
+          "base_rank": 68.0,
+          "scenario_rank": 84.0,
+          "shift": 16.0
+        }
+      ]
+    }
+  ]
+}
