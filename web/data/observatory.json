@@ -13,7 +13,23 @@
         "attribution": "United Nations, Department of Economic and Social Affairs, Population Division (2024). World Population Prospects 2024, Online Edition.",
         "landing": "https://population.un.org/wpp/downloads?folder=Standard%20Projections&group=CSV%20format",
         "tier": "B"
+      },
+      "ucdp-onesided-261": {
+        "license": "CC BY 4.0: «All datasets are free of charge and licensed under CC BY 4.0 — you are free to use and redistribute them provided you cite the relevant publications listed with each dataset» (ucdp.uu.se/downloads/، الصفحة نفسها تذكر الإصدار 26.1).",
+        "attribution": "UCDP One-sided Violence Dataset 26.1، Uppsala Conflict Data Program وPRIO. Davies, Shawn, Therése Pettersson & Magnus Öberg (2026)، Organized violence 1989–2025، Journal of Peace Research، doi:10.1093/jopres/xjag046 (الاستشهاد العام الوارد في صفحة التنزيلات؛ الاستشهاد الخاص بكل مجموعة يُقرأ من صفحتها قبل النشر).",
+        "landing": "https://ucdp.uu.se/downloads/",
+        "tier": "B"
+      },
+      "ucdp-brd-conf-261": {
+        "license": "CC BY 4.0: «All datasets are free of charge and licensed under CC BY 4.0 — you are free to use and redistribute them provided you cite the relevant publications listed with each dataset» (ucdp.uu.se/downloads/، الصفحة نفسها تذكر الإصدار 26.1).",
+        "attribution": "UCDP Battle-Related Deaths Dataset (conflict-level) 26.1، Uppsala Conflict Data Program وPRIO. Davies, Shawn, Therése Pettersson & Magnus Öberg (2026)، Organized violence 1989–2025، Journal of Peace Research، doi:10.1093/jopres/xjag046 (الاستشهاد العام الوارد في صفحة التنزيلات؛ الاستشهاد الخاص بكل مجموعة يُقرأ من صفحتها قبل النشر).",
+        "landing": "https://ucdp.uu.se/downloads/",
+        "tier": "B"
       }
+    },
+    "excluded": {
+      "onesided_deaths_2016_2025": 79,
+      "battle_deaths_2016_2025": 29
     }
   },
   "indicators": [
@@ -5148,6 +5164,1492 @@
           "value": 71.6
         }
       }
+    },
+    {
+      "id": "onesided_deaths_2016_2025",
+      "name_ar": "قتلى العنف الأحادي على أرض الدولة، ٢٠١٦–٢٠٢٥",
+      "unit_ar": "قتيل",
+      "definition_ar": "مجموع تقديرات أفضل عدد للقتلى في العنف الأحادي، أي هجمات طرف مسلح على مدنيين، داخل أرض الدولة من ٢٠١٦ إلى ٢٠٢٥، وفق قاعدة UCDP للعنف الأحادي (إصدار 26.1). الصفوف التي تقع في أكثر من دولة مستبعدة، لأن قتلاها لا يوزّع على الدول بغير تقدير، ويُذكر عددها في سجل المصدر.",
+      "source": "ucdp-onesided-261",
+      "years": [
+        2016,
+        2025
+      ],
+      "sunan": [
+        "sn_security"
+      ],
+      "sunna_link_ar": "قرابة في المعنى لا تطابق: سُنّة الأمن تتحدث عن العدوان على الأموال والطرق، والمؤشر يقيس القتل المدني. الارتباط فرضية تُختبر لا تُثبت.",
+      "absent": "zero",
+      "values": {
+        "Afghanistan": {
+          "value": 1063
+        },
+        "Albania": {
+          "value": 0
+        },
+        "Algeria": {
+          "value": 0
+        },
+        "American Samoa": {
+          "value": 0
+        },
+        "Andorra": {
+          "value": 0
+        },
+        "Angola": {
+          "value": 0
+        },
+        "Anguilla": {
+          "value": 0
+        },
+        "Antarctica": {
+          "value": 0
+        },
+        "Antigua and Barb.": {
+          "value": 0
+        },
+        "Argentina": {
+          "value": 209
+        },
+        "Armenia": {
+          "value": 0
+        },
+        "Aruba": {
+          "value": 0
+        },
+        "Ashmore and Cartier Is.": {
+          "value": 0
+        },
+        "Australia": {
+          "value": 0
+        },
+        "Austria": {
+          "value": 0
+        },
+        "Azerbaijan": {
+          "value": 0
+        },
+        "Bahamas": {
+          "value": 0
+        },
+        "Bahrain": {
+          "value": 0
+        },
+        "Bangladesh": {
+          "value": 26
+        },
+        "Barbados": {
+          "value": 0
+        },
+        "Belarus": {
+          "value": 0
+        },
+        "Belgium": {
+          "value": 0
+        },
+        "Belize": {
+          "value": 0
+        },
+        "Benin": {
+          "value": 0
+        },
+        "Bermuda": {
+          "value": 0
+        },
+        "Bhutan": {
+          "value": 0
+        },
+        "Bolivia": {
+          "value": 0
+        },
+        "Bosnia and Herz.": {
+          "value": 0
+        },
+        "Botswana": {
+          "value": 0
+        },
+        "Br. Indian Ocean Ter.": {
+          "value": 0
+        },
+        "Brazil": {
+          "value": 464
+        },
+        "British Virgin Is.": {
+          "value": 0
+        },
+        "Brunei": {
+          "value": 0
+        },
+        "Bulgaria": {
+          "value": 0
+        },
+        "Burkina Faso": {
+          "value": 2168
+        },
+        "Burundi": {
+          "value": 399
+        },
+        "Cabo Verde": {
+          "value": 0
+        },
+        "Cambodia": {
+          "value": 0
+        },
+        "Cameroon": {
+          "value": 649
+        },
+        "Canada": {
+          "value": 0
+        },
+        "Cayman Is.": {
+          "value": 0
+        },
+        "Central African Rep.": {
+          "value": 1811
+        },
+        "Chad": {
+          "value": 0
+        },
+        "Chile": {
+          "value": 0
+        },
+        "China": {
+          "value": 0
+        },
+        "Colombia": {
+          "value": 1333
+        },
+        "Comoros": {
+          "value": 0
+        },
+        "Congo": {
+          "value": 0
+        },
+        "Cook Is.": {
+          "value": 0
+        },
+        "Costa Rica": {
+          "value": 0
+        },
+        "Croatia": {
+          "value": 0
+        },
+        "Cuba": {
+          "value": 0
+        },
+        "Curaçao": {
+          "value": 0
+        },
+        "Cyprus": {
+          "value": 0
+        },
+        "Czechia": {
+          "value": 0
+        },
+        "Côte d'Ivoire": {
+          "value": 0
+        },
+        "Dem. Rep. Congo": {
+          "value": 11438
+        },
+        "Denmark": {
+          "value": 0
+        },
+        "Djibouti": {
+          "value": 0
+        },
+        "Dominica": {
+          "value": 0
+        },
+        "Dominican Rep.": {
+          "value": 0
+        },
+        "Ecuador": {
+          "value": 0
+        },
+        "Egypt": {
+          "value": 0
+        },
+        "El Salvador": {
+          "value": 0
+        },
+        "Eq. Guinea": {
+          "value": 0
+        },
+        "Eritrea": {
+          "value": 0
+        },
+        "Estonia": {
+          "value": 0
+        },
+        "Ethiopia": {
+          "value": 9197
+        },
+        "Faeroe Is.": {
+          "value": 0
+        },
+        "Falkland Is.": {
+          "value": 0
+        },
+        "Fiji": {
+          "value": 0
+        },
+        "Finland": {
+          "value": 0
+        },
+        "Fr. Polynesia": {
+          "value": 0
+        },
+        "Fr. S. Antarctic Lands": {
+          "value": 0
+        },
+        "France": {
+          "value": 0
+        },
+        "Gabon": {
+          "value": 0
+        },
+        "Gambia": {
+          "value": 0
+        },
+        "Georgia": {
+          "value": 0
+        },
+        "Germany": {
+          "value": 0
+        },
+        "Ghana": {
+          "value": 0
+        },
+        "Greece": {
+          "value": 0
+        },
+        "Greenland": {
+          "value": 0
+        },
+        "Grenada": {
+          "value": 0
+        },
+        "Guam": {
+          "value": 0
+        },
+        "Guatemala": {
+          "value": 0
+        },
+        "Guernsey": {
+          "value": 0
+        },
+        "Guinea": {
+          "value": 0
+        },
+        "Guinea-Bissau": {
+          "value": 0
+        },
+        "Guyana": {
+          "value": 0
+        },
+        "Haiti": {
+          "value": 2876
+        },
+        "Heard I. and McDonald Is.": {
+          "value": 0
+        },
+        "Honduras": {
+          "value": 0
+        },
+        "Hong Kong": {
+          "value": 0
+        },
+        "Hungary": {
+          "value": 0
+        },
+        "Iceland": {
+          "value": 0
+        },
+        "India": {
+          "value": 796
+        },
+        "Indian Ocean Ter.": {
+          "value": 0
+        },
+        "Indonesia": {
+          "value": 28
+        },
+        "Iran": {
+          "value": 516
+        },
+        "Iraq": {
+          "value": 390
+        },
+        "Ireland": {
+          "value": 0
+        },
+        "Isle of Man": {
+          "value": 0
+        },
+        "Israel": {
+          "value": 810
+        },
+        "Italy": {
+          "value": 0
+        },
+        "Jamaica": {
+          "value": 0
+        },
+        "Japan": {
+          "value": 0
+        },
+        "Jersey": {
+          "value": 0
+        },
+        "Jordan": {
+          "value": 0
+        },
+        "Kazakhstan": {
+          "value": 0
+        },
+        "Kenya": {
+          "value": 43
+        },
+        "Kiribati": {
+          "value": 0
+        },
+        "Kosovo": {
+          "value": 0
+        },
+        "Kuwait": {
+          "value": 0
+        },
+        "Kyrgyzstan": {
+          "value": 0
+        },
+        "Laos": {
+          "value": 0
+        },
+        "Latvia": {
+          "value": 0
+        },
+        "Lebanon": {
+          "value": 0
+        },
+        "Lesotho": {
+          "value": 0
+        },
+        "Liberia": {
+          "value": 0
+        },
+        "Libya": {
+          "value": 0
+        },
+        "Liechtenstein": {
+          "value": 0
+        },
+        "Lithuania": {
+          "value": 0
+        },
+        "Luxembourg": {
+          "value": 0
+        },
+        "Macao": {
+          "value": 0
+        },
+        "Madagascar": {
+          "value": 0
+        },
+        "Malawi": {
+          "value": 0
+        },
+        "Malaysia": {
+          "value": 0
+        },
+        "Maldives": {
+          "value": 0
+        },
+        "Mali": {
+          "value": 2332
+        },
+        "Malta": {
+          "value": 0
+        },
+        "Marshall Is.": {
+          "value": 0
+        },
+        "Mauritania": {
+          "value": 0
+        },
+        "Mauritius": {
+          "value": 0
+        },
+        "Mexico": {
+          "value": 275
+        },
+        "Micronesia": {
+          "value": 0
+        },
+        "Moldova": {
+          "value": 0
+        },
+        "Monaco": {
+          "value": 0
+        },
+        "Mongolia": {
+          "value": 0
+        },
+        "Montenegro": {
+          "value": 0
+        },
+        "Montserrat": {
+          "value": 0
+        },
+        "Morocco": {
+          "value": 0
+        },
+        "Mozambique": {
+          "value": 792
+        },
+        "Myanmar": {
+          "value": 4656
+        },
+        "N. Cyprus": {
+          "value": 0
+        },
+        "N. Mariana Is.": {
+          "value": 0
+        },
+        "Namibia": {
+          "value": 0
+        },
+        "Nauru": {
+          "value": 0
+        },
+        "Nepal": {
+          "value": 0
+        },
+        "Netherlands": {
+          "value": 0
+        },
+        "New Caledonia": {
+          "value": 0
+        },
+        "New Zealand": {
+          "value": 0
+        },
+        "Nicaragua": {
+          "value": 0
+        },
+        "Niger": {
+          "value": 0
+        },
+        "Nigeria": {
+          "value": 805
+        },
+        "Niue": {
+          "value": 0
+        },
+        "Norfolk Island": {
+          "value": 0
+        },
+        "North Korea": {
+          "value": 0
+        },
+        "North Macedonia": {
+          "value": 0
+        },
+        "Norway": {
+          "value": 0
+        },
+        "Oman": {
+          "value": 0
+        },
+        "Pakistan": {
+          "value": 689
+        },
+        "Palau": {
+          "value": 0
+        },
+        "Palestine": {
+          "value": 0
+        },
+        "Panama": {
+          "value": 0
+        },
+        "Papua New Guinea": {
+          "value": 26
+        },
+        "Paraguay": {
+          "value": 0
+        },
+        "Peru": {
+          "value": 0
+        },
+        "Philippines": {
+          "value": 57
+        },
+        "Pitcairn Is.": {
+          "value": 0
+        },
+        "Poland": {
+          "value": 0
+        },
+        "Portugal": {
+          "value": 0
+        },
+        "Puerto Rico": {
+          "value": 0
+        },
+        "Qatar": {
+          "value": 0
+        },
+        "Romania": {
+          "value": 0
+        },
+        "Russia": {
+          "value": 0
+        },
+        "Rwanda": {
+          "value": 27
+        },
+        "S. Geo. and the Is.": {
+          "value": 0
+        },
+        "S. Sudan": {
+          "value": 899
+        },
+        "Saint Helena": {
+          "value": 0
+        },
+        "Saint Lucia": {
+          "value": 0
+        },
+        "Samoa": {
+          "value": 0
+        },
+        "San Marino": {
+          "value": 0
+        },
+        "Saudi Arabia": {
+          "value": 0
+        },
+        "Senegal": {
+          "value": 0
+        },
+        "Serbia": {
+          "value": 0
+        },
+        "Seychelles": {
+          "value": 0
+        },
+        "Siachen Glacier": {
+          "value": 0
+        },
+        "Sierra Leone": {
+          "value": 0
+        },
+        "Singapore": {
+          "value": 0
+        },
+        "Sint Maarten": {
+          "value": 0
+        },
+        "Slovakia": {
+          "value": 0
+        },
+        "Slovenia": {
+          "value": 0
+        },
+        "Solomon Is.": {
+          "value": 0
+        },
+        "Somalia": {
+          "value": 0
+        },
+        "Somaliland": {
+          "value": 0
+        },
+        "South Africa": {
+          "value": 0
+        },
+        "South Korea": {
+          "value": 0
+        },
+        "Spain": {
+          "value": 0
+        },
+        "Sri Lanka": {
+          "value": 0
+        },
+        "St-Barthélemy": {
+          "value": 0
+        },
+        "St-Martin": {
+          "value": 0
+        },
+        "St. Kitts and Nevis": {
+          "value": 0
+        },
+        "St. Pierre and Miquelon": {
+          "value": 0
+        },
+        "St. Vin. and Gren.": {
+          "value": 0
+        },
+        "Sudan": {
+          "value": 68407
+        },
+        "Suriname": {
+          "value": 0
+        },
+        "Sweden": {
+          "value": 0
+        },
+        "Switzerland": {
+          "value": 0
+        },
+        "Syria": {
+          "value": 2451
+        },
+        "São Tomé and Principe": {
+          "value": 0
+        },
+        "Taiwan": {
+          "value": 0
+        },
+        "Tajikistan": {
+          "value": 0
+        },
+        "Tanzania": {
+          "value": 1009
+        },
+        "Thailand": {
+          "value": 25
+        },
+        "Timor-Leste": {
+          "value": 0
+        },
+        "Togo": {
+          "value": 0
+        },
+        "Tonga": {
+          "value": 0
+        },
+        "Trinidad and Tobago": {
+          "value": 0
+        },
+        "Tunisia": {
+          "value": 0
+        },
+        "Turkey": {
+          "value": 0
+        },
+        "Turkmenistan": {
+          "value": 0
+        },
+        "Turks and Caicos Is.": {
+          "value": 0
+        },
+        "Tuvalu": {
+          "value": 0
+        },
+        "U.S. Virgin Is.": {
+          "value": 0
+        },
+        "Uganda": {
+          "value": 0
+        },
+        "Ukraine": {
+          "value": 1132
+        },
+        "United Arab Emirates": {
+          "value": 0
+        },
+        "United Kingdom": {
+          "value": 0
+        },
+        "United States of America": {
+          "value": 0
+        },
+        "Uruguay": {
+          "value": 0
+        },
+        "Uzbekistan": {
+          "value": 0
+        },
+        "Vanuatu": {
+          "value": 0
+        },
+        "Vatican": {
+          "value": 0
+        },
+        "Venezuela": {
+          "value": 225
+        },
+        "Vietnam": {
+          "value": 0
+        },
+        "W. Sahara": {
+          "value": 0
+        },
+        "Wallis and Futuna Is.": {
+          "value": 0
+        },
+        "Yemen": {
+          "value": 184
+        },
+        "Zambia": {
+          "value": 0
+        },
+        "Zimbabwe": {
+          "value": 0
+        },
+        "eSwatini": {
+          "value": 48
+        },
+        "Åland": {
+          "value": 0
+        }
+      }
+    },
+    {
+      "id": "battle_deaths_2016_2025",
+      "name_ar": "قتلى المعارك المسلحة على أرض الدولة، ٢٠١٦–٢٠٢٥",
+      "unit_ar": "قتيل",
+      "definition_ar": "مجموع تقديرات أفضل عدد للقتلى في المعارك بين أطراف النزاع المسلح، لنزاعات تقع في دولة واحدة فقط، من ٢٠١٦ إلى ٢٠٢٥، وفق قاعدة UCDP للقتلى في المعارك (إصدار 26.1). النزاعات متعددة الدول مستبعدة لأن قتلاها لا يوزّع على الدول بغير تقدير، ويُذكر عددها في سجل المصدر.",
+      "source": "ucdp-brd-conf-261",
+      "years": [
+        2016,
+        2025
+      ],
+      "sunan": [],
+      "sunna_link_ar": "لا سُنّة مرتبطة بهذا المؤشر بعد. يُعرض وصفاً لحجم المعارك في الدولة، ولا يُقرأ بوصفه قياساً للأمن.",
+      "absent": "zero",
+      "values": {
+        "Afghanistan": {
+          "value": 149943
+        },
+        "Albania": {
+          "value": 0
+        },
+        "Algeria": {
+          "value": 205
+        },
+        "American Samoa": {
+          "value": 0
+        },
+        "Andorra": {
+          "value": 0
+        },
+        "Angola": {
+          "value": 175
+        },
+        "Anguilla": {
+          "value": 0
+        },
+        "Antarctica": {
+          "value": 0
+        },
+        "Antigua and Barb.": {
+          "value": 0
+        },
+        "Argentina": {
+          "value": 0
+        },
+        "Armenia": {
+          "value": 0
+        },
+        "Aruba": {
+          "value": 0
+        },
+        "Ashmore and Cartier Is.": {
+          "value": 0
+        },
+        "Australia": {
+          "value": 0
+        },
+        "Austria": {
+          "value": 0
+        },
+        "Azerbaijan": {
+          "value": 8525
+        },
+        "Bahamas": {
+          "value": 0
+        },
+        "Bahrain": {
+          "value": 0
+        },
+        "Bangladesh": {
+          "value": 88
+        },
+        "Barbados": {
+          "value": 0
+        },
+        "Belarus": {
+          "value": 0
+        },
+        "Belgium": {
+          "value": 0
+        },
+        "Belize": {
+          "value": 0
+        },
+        "Benin": {
+          "value": 284
+        },
+        "Bermuda": {
+          "value": 0
+        },
+        "Bhutan": {
+          "value": 0
+        },
+        "Bolivia": {
+          "value": 0
+        },
+        "Bosnia and Herz.": {
+          "value": 0
+        },
+        "Botswana": {
+          "value": 0
+        },
+        "Br. Indian Ocean Ter.": {
+          "value": 0
+        },
+        "Brazil": {
+          "value": 0
+        },
+        "British Virgin Is.": {
+          "value": 0
+        },
+        "Brunei": {
+          "value": 0
+        },
+        "Bulgaria": {
+          "value": 0
+        },
+        "Burkina Faso": {
+          "value": 14072
+        },
+        "Burundi": {
+          "value": 621
+        },
+        "Cabo Verde": {
+          "value": 0
+        },
+        "Cambodia": {
+          "value": 0
+        },
+        "Cameroon": {
+          "value": 4012
+        },
+        "Canada": {
+          "value": 0
+        },
+        "Cayman Is.": {
+          "value": 0
+        },
+        "Central African Rep.": {
+          "value": 2462
+        },
+        "Chad": {
+          "value": 1129
+        },
+        "Chile": {
+          "value": 0
+        },
+        "China": {
+          "value": 0
+        },
+        "Colombia": {
+          "value": 1283
+        },
+        "Comoros": {
+          "value": 0
+        },
+        "Congo": {
+          "value": 73
+        },
+        "Cook Is.": {
+          "value": 0
+        },
+        "Costa Rica": {
+          "value": 0
+        },
+        "Croatia": {
+          "value": 0
+        },
+        "Cuba": {
+          "value": 0
+        },
+        "Curaçao": {
+          "value": 0
+        },
+        "Cyprus": {
+          "value": 0
+        },
+        "Czechia": {
+          "value": 0
+        },
+        "Côte d'Ivoire": {
+          "value": 0
+        },
+        "Dem. Rep. Congo": {
+          "value": 14862
+        },
+        "Denmark": {
+          "value": 0
+        },
+        "Djibouti": {
+          "value": 0
+        },
+        "Dominica": {
+          "value": 0
+        },
+        "Dominican Rep.": {
+          "value": 0
+        },
+        "Ecuador": {
+          "value": 0
+        },
+        "Egypt": {
+          "value": 3039
+        },
+        "El Salvador": {
+          "value": 0
+        },
+        "Eq. Guinea": {
+          "value": 0
+        },
+        "Eritrea": {
+          "value": 0
+        },
+        "Estonia": {
+          "value": 0
+        },
+        "Ethiopia": {
+          "value": 317708
+        },
+        "Faeroe Is.": {
+          "value": 0
+        },
+        "Falkland Is.": {
+          "value": 0
+        },
+        "Fiji": {
+          "value": 0
+        },
+        "Finland": {
+          "value": 0
+        },
+        "Fr. Polynesia": {
+          "value": 0
+        },
+        "Fr. S. Antarctic Lands": {
+          "value": 0
+        },
+        "France": {
+          "value": 0
+        },
+        "Gabon": {
+          "value": 0
+        },
+        "Gambia": {
+          "value": 0
+        },
+        "Georgia": {
+          "value": 0
+        },
+        "Germany": {
+          "value": 0
+        },
+        "Ghana": {
+          "value": 0
+        },
+        "Greece": {
+          "value": 0
+        },
+        "Greenland": {
+          "value": 0
+        },
+        "Grenada": {
+          "value": 0
+        },
+        "Guam": {
+          "value": 0
+        },
+        "Guatemala": {
+          "value": 0
+        },
+        "Guernsey": {
+          "value": 0
+        },
+        "Guinea": {
+          "value": 0
+        },
+        "Guinea-Bissau": {
+          "value": 0
+        },
+        "Guyana": {
+          "value": 0
+        },
+        "Haiti": {
+          "value": 1428
+        },
+        "Heard I. and McDonald Is.": {
+          "value": 0
+        },
+        "Honduras": {
+          "value": 0
+        },
+        "Hong Kong": {
+          "value": 0
+        },
+        "Hungary": {
+          "value": 0
+        },
+        "Iceland": {
+          "value": 0
+        },
+        "India": {
+          "value": 4803
+        },
+        "Indian Ocean Ter.": {
+          "value": 0
+        },
+        "Indonesia": {
+          "value": 411
+        },
+        "Iran": {
+          "value": 424
+        },
+        "Iraq": {
+          "value": 23369
+        },
+        "Ireland": {
+          "value": 0
+        },
+        "Isle of Man": {
+          "value": 0
+        },
+        "Israel": {
+          "value": 68112
+        },
+        "Italy": {
+          "value": 0
+        },
+        "Jamaica": {
+          "value": 0
+        },
+        "Japan": {
+          "value": 0
+        },
+        "Jersey": {
+          "value": 0
+        },
+        "Jordan": {
+          "value": 34
+        },
+        "Kazakhstan": {
+          "value": 0
+        },
+        "Kenya": {
+          "value": 800
+        },
+        "Kiribati": {
+          "value": 0
+        },
+        "Kosovo": {
+          "value": 0
+        },
+        "Kuwait": {
+          "value": 0
+        },
+        "Kyrgyzstan": {
+          "value": 0
+        },
+        "Laos": {
+          "value": 0
+        },
+        "Latvia": {
+          "value": 0
+        },
+        "Lebanon": {
+          "value": 70
+        },
+        "Lesotho": {
+          "value": 0
+        },
+        "Liberia": {
+          "value": 0
+        },
+        "Libya": {
+          "value": 4425
+        },
+        "Liechtenstein": {
+          "value": 0
+        },
+        "Lithuania": {
+          "value": 0
+        },
+        "Luxembourg": {
+          "value": 0
+        },
+        "Macao": {
+          "value": 0
+        },
+        "Madagascar": {
+          "value": 0
+        },
+        "Malawi": {
+          "value": 0
+        },
+        "Malaysia": {
+          "value": 0
+        },
+        "Maldives": {
+          "value": 0
+        },
+        "Mali": {
+          "value": 7935
+        },
+        "Malta": {
+          "value": 0
+        },
+        "Marshall Is.": {
+          "value": 0
+        },
+        "Mauritania": {
+          "value": 0
+        },
+        "Mauritius": {
+          "value": 0
+        },
+        "Mexico": {
+          "value": 0
+        },
+        "Micronesia": {
+          "value": 0
+        },
+        "Moldova": {
+          "value": 0
+        },
+        "Monaco": {
+          "value": 0
+        },
+        "Mongolia": {
+          "value": 0
+        },
+        "Montenegro": {
+          "value": 0
+        },
+        "Montserrat": {
+          "value": 0
+        },
+        "Morocco": {
+          "value": 0
+        },
+        "Mozambique": {
+          "value": 3204
+        },
+        "Myanmar": {
+          "value": 11401
+        },
+        "N. Cyprus": {
+          "value": 0
+        },
+        "N. Mariana Is.": {
+          "value": 0
+        },
+        "Namibia": {
+          "value": 0
+        },
+        "Nauru": {
+          "value": 0
+        },
+        "Nepal": {
+          "value": 0
+        },
+        "Netherlands": {
+          "value": 0
+        },
+        "New Caledonia": {
+          "value": 0
+        },
+        "New Zealand": {
+          "value": 0
+        },
+        "Nicaragua": {
+          "value": 0
+        },
+        "Niger": {
+          "value": 4238
+        },
+        "Nigeria": {
+          "value": 18044
+        },
+        "Niue": {
+          "value": 0
+        },
+        "Norfolk Island": {
+          "value": 0
+        },
+        "North Korea": {
+          "value": 0
+        },
+        "North Macedonia": {
+          "value": 0
+        },
+        "Norway": {
+          "value": 0
+        },
+        "Oman": {
+          "value": 0
+        },
+        "Pakistan": {
+          "value": 8865
+        },
+        "Palau": {
+          "value": 0
+        },
+        "Palestine": {
+          "value": 0
+        },
+        "Panama": {
+          "value": 0
+        },
+        "Papua New Guinea": {
+          "value": 0
+        },
+        "Paraguay": {
+          "value": 0
+        },
+        "Peru": {
+          "value": 0
+        },
+        "Philippines": {
+          "value": 4297
+        },
+        "Pitcairn Is.": {
+          "value": 0
+        },
+        "Poland": {
+          "value": 0
+        },
+        "Portugal": {
+          "value": 0
+        },
+        "Puerto Rico": {
+          "value": 0
+        },
+        "Qatar": {
+          "value": 0
+        },
+        "Romania": {
+          "value": 0
+        },
+        "Russia": {
+          "value": 386
+        },
+        "Rwanda": {
+          "value": 757
+        },
+        "S. Geo. and the Is.": {
+          "value": 0
+        },
+        "S. Sudan": {
+          "value": 2383
+        },
+        "Saint Helena": {
+          "value": 0
+        },
+        "Saint Lucia": {
+          "value": 0
+        },
+        "Samoa": {
+          "value": 0
+        },
+        "San Marino": {
+          "value": 0
+        },
+        "Saudi Arabia": {
+          "value": 0
+        },
+        "Senegal": {
+          "value": 0
+        },
+        "Serbia": {
+          "value": 0
+        },
+        "Seychelles": {
+          "value": 0
+        },
+        "Siachen Glacier": {
+          "value": 0
+        },
+        "Sierra Leone": {
+          "value": 0
+        },
+        "Singapore": {
+          "value": 0
+        },
+        "Sint Maarten": {
+          "value": 0
+        },
+        "Slovakia": {
+          "value": 0
+        },
+        "Slovenia": {
+          "value": 0
+        },
+        "Solomon Is.": {
+          "value": 0
+        },
+        "Somalia": {
+          "value": 24291
+        },
+        "Somaliland": {
+          "value": 0
+        },
+        "South Africa": {
+          "value": 0
+        },
+        "South Korea": {
+          "value": 0
+        },
+        "Spain": {
+          "value": 0
+        },
+        "Sri Lanka": {
+          "value": 0
+        },
+        "St-Barthélemy": {
+          "value": 0
+        },
+        "St-Martin": {
+          "value": 0
+        },
+        "St. Kitts and Nevis": {
+          "value": 0
+        },
+        "St. Pierre and Miquelon": {
+          "value": 0
+        },
+        "St. Vin. and Gren.": {
+          "value": 0
+        },
+        "Sudan": {
+          "value": 30548
+        },
+        "Suriname": {
+          "value": 0
+        },
+        "Sweden": {
+          "value": 0
+        },
+        "Switzerland": {
+          "value": 0
+        },
+        "Syria": {
+          "value": 99449
+        },
+        "São Tomé and Principe": {
+          "value": 0
+        },
+        "Taiwan": {
+          "value": 0
+        },
+        "Tajikistan": {
+          "value": 101
+        },
+        "Tanzania": {
+          "value": 25
+        },
+        "Thailand": {
+          "value": 397
+        },
+        "Timor-Leste": {
+          "value": 0
+        },
+        "Togo": {
+          "value": 178
+        },
+        "Tonga": {
+          "value": 0
+        },
+        "Trinidad and Tobago": {
+          "value": 0
+        },
+        "Tunisia": {
+          "value": 71
+        },
+        "Turkey": {
+          "value": 8055
+        },
+        "Turkmenistan": {
+          "value": 0
+        },
+        "Turks and Caicos Is.": {
+          "value": 0
+        },
+        "Tuvalu": {
+          "value": 0
+        },
+        "U.S. Virgin Is.": {
+          "value": 0
+        },
+        "Uganda": {
+          "value": 308
+        },
+        "Ukraine": {
+          "value": 2159
+        },
+        "United Arab Emirates": {
+          "value": 0
+        },
+        "United Kingdom": {
+          "value": 0
+        },
+        "United States of America": {
+          "value": 265
+        },
+        "Uruguay": {
+          "value": 0
+        },
+        "Uzbekistan": {
+          "value": 0
+        },
+        "Vanuatu": {
+          "value": 0
+        },
+        "Vatican": {
+          "value": 0
+        },
+        "Venezuela": {
+          "value": 0
+        },
+        "Vietnam": {
+          "value": 0
+        },
+        "W. Sahara": {
+          "value": 0
+        },
+        "Wallis and Futuna Is.": {
+          "value": 0
+        },
+        "Yemen": {
+          "value": 48482
+        },
+        "Zambia": {
+          "value": 0
+        },
+        "Zimbabwe": {
+          "value": 0
+        },
+        "eSwatini": {
+          "value": 0
+        },
+        "Åland": {
+          "value": 0
+        }
+      }
     }
   ],
   "unmatched": {
@@ -5157,6 +6659,8 @@
     "infant_mortality_2024": [],
     "median_age_2024": [],
     "net_migration_2024": [],
-    "population_density_2024": []
+    "population_density_2024": [],
+    "onesided_deaths_2016_2025": [],
+    "battle_deaths_2016_2025": []
   }
 }

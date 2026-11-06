@@ -922,6 +922,34 @@
       "verified_via": "صفحة التنزيلات الرسمية population.un.org/wpp/downloads، ومسجّل في sources/manifest.json",
       "manifest_id": "un-wpp-2024-medium",
       "note": "يغذّي مؤشر متوقع الحياة عند الولادة في المرصد (المرحلة 15)"
+    },
+    {
+      "id": "ucdp-onesided",
+      "name": "UCDP One-sided Violence Dataset (Uppsala University)",
+      "kind": "dataset",
+      "domains": [
+        "war"
+      ],
+      "url": "https://ucdp.uu.se/downloads/",
+      "license": "CC BY 4.0 (مقروء من صفحة التنزيلات الرسمية)",
+      "license_status": "verified",
+      "verified_via": "صفحة التنزيلات الرسمية ucdp.uu.se/downloads، ومسجّل في sources/manifest.json",
+      "manifest_id": "ucdp-onesided-261",
+      "note": "يغذّي مؤشر قتلى العنف الأحادي في المرصد"
+    },
+    {
+      "id": "ucdp-brd",
+      "name": "UCDP Battle-Related Deaths Dataset (Uppsala University)",
+      "kind": "dataset",
+      "domains": [
+        "war"
+      ],
+      "url": "https://ucdp.uu.se/downloads/",
+      "license": "CC BY 4.0 (مقروء من صفحة التنزيلات الرسمية)",
+      "license_status": "verified",
+      "verified_via": "صفحة التنزيلات الرسمية ucdp.uu.se/downloads، ومسجّل في sources/manifest.json",
+      "manifest_id": "ucdp-brd-conf-261",
+      "note": "يغذّي مؤشر قتلى المعارك في المرصد"
     }
   ]
 }

@@ -7,7 +7,9 @@
     "Yemen (North Yemen)": "Yemen",
     "Cambodia (Kampuchea)": "Cambodia",
     "Central African Republic": "Central African Rep.",
-    "South Sudan": "S. Sudan"
+    "South Sudan": "S. Sudan",
+    "Kingdom of eSwatini (Swaziland)": "eSwatini",
+    "Ivory Coast": "Côte d'Ivoire"
   },
   "indicators": [
     {
@@ -122,6 +124,44 @@
       ],
       "absent": "unavailable",
       "sunan": []
+    },
+    {
+      "id": "onesided_deaths_2016_2025",
+      "name_ar": "قتلى العنف الأحادي على أرض الدولة، ٢٠١٦–٢٠٢٥",
+      "unit_ar": "قتيل",
+      "definition_ar": "مجموع تقديرات أفضل عدد للقتلى في العنف الأحادي، أي هجمات طرف مسلح على مدنيين، داخل أرض الدولة من ٢٠١٦ إلى ٢٠٢٥، وفق قاعدة UCDP للعنف الأحادي (إصدار 26.1). الصفوف التي تقع في أكثر من دولة مستبعدة، لأن قتلاها لا يوزّع على الدول بغير تقدير، ويُذكر عددها في سجل المصدر.",
+      "source": "ucdp-onesided-261",
+      "reader": "ucdp_sum",
+      "column": "best_fatality_estimate",
+      "location_column": "location",
+      "years": [
+        2016,
+        2025
+      ],
+      "absent": "zero",
+      "sunan": [
+        "sn_security"
+      ],
+      "sunna_link_ar": "قرابة في المعنى لا تطابق: سُنّة الأمن تتحدث عن العدوان على الأموال والطرق، والمؤشر يقيس القتل المدني. الارتباط فرضية تُختبر لا تُثبت.",
+      "single_location_only": true
+    },
+    {
+      "id": "battle_deaths_2016_2025",
+      "name_ar": "قتلى المعارك المسلحة على أرض الدولة، ٢٠١٦–٢٠٢٥",
+      "unit_ar": "قتيل",
+      "definition_ar": "مجموع تقديرات أفضل عدد للقتلى في المعارك بين أطراف النزاع المسلح، لنزاعات تقع في دولة واحدة فقط، من ٢٠١٦ إلى ٢٠٢٥، وفق قاعدة UCDP للقتلى في المعارك (إصدار 26.1). النزاعات متعددة الدول مستبعدة لأن قتلاها لا يوزّع على الدول بغير تقدير، ويُذكر عددها في سجل المصدر.",
+      "source": "ucdp-brd-conf-261",
+      "reader": "ucdp_sum",
+      "column": "bd_best",
+      "location_column": "location_inc",
+      "single_location_only": true,
+      "years": [
+        2016,
+        2025
+      ],
+      "absent": "zero",
+      "sunan": [],
+      "sunna_link_ar": "لا سُنّة مرتبطة بهذا المؤشر بعد. يُعرض وصفاً لحجم المعارك في الدولة، ولا يُقرأ بوصفه قياساً للأمن."
     }
   ]
 }

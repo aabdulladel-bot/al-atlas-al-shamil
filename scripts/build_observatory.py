@@ -80,6 +80,35 @@ def read_ucdp_years(data, ind, names, aliases):
     return values, sorted(unmatched), hi - lo + 1
 
 
+def read_ucdp_sum(data, ind, names, aliases):
+    """مجموع قيمة عمود (مثل الوفيات) داخل المدى، لكل دولة حديثة.
+
+    إن كان "single_location_only" فلا تُحسب الصفوف التي يقع فيها النزاع في أكثر من دولة،
+    لأن قيمتها لا تُوزّع على الدول بغير تقدير، وحسابها كاملاً لكل دولة يضاعف الرقم.
+    """
+    z = zipfile.ZipFile(io.BytesIO(data))
+    rows = list(csv.DictReader(io.StringIO(z.read(z.infolist()[0]).decode("utf-8"))))
+    lo, hi = ind["years"]
+    totals, unmatched, excluded = {}, set(), 0
+    for r in rows:
+        y = int(r["year"])
+        if not lo <= y <= hi:
+            continue
+        loc = r[ind["location_column"]].strip()
+        if ind.get("single_location_only") and ", " in loc:
+            excluded += 1
+            continue
+        for raw in loc.split(", "):
+            raw = raw.strip()
+            name = aliases.get(raw, raw)
+            if name not in names:
+                unmatched.add(raw)
+                continue
+            totals[name] = totals.get(name, 0) + float(r[ind["column"]] or 0)
+    values = {n: round(totals.get(n, 0)) for n in names}  # الغائب صفر: القاعدة تسجّل الحدث فقط
+    return values, sorted(unmatched), excluded
+
+
 def read_wpp_lex(data, ind, names):
     """متوقع الحياة عند الولادة (LEx) لكل دولة في السنة المطلوبة، بمطابقة ISO3."""
     text = gzip.decompress(data).decode("utf-8-sig")
@@ -115,6 +144,10 @@ def build():
         if ind["reader"] == "ucdp_years":
             values, unmatched, of = read_ucdp_years(data, ind, names, aliases)
             shown = {n: {"value": v, "of": of} for n, v in sorted(values.items())}
+        elif ind["reader"] == "ucdp_sum":
+            values, unmatched, excluded = read_ucdp_sum(data, ind, names, aliases)
+            shown = {n: {"value": v} for n, v in sorted(values.items())}
+            out["_meta"].setdefault("excluded", {})[ind["id"]] = excluded
         elif ind["reader"] == "wpp_lex":
             values, unmatched, _ = read_wpp_lex(data, ind, names)
             shown = {n: {"value": v} for n, v in sorted(values.items())}
