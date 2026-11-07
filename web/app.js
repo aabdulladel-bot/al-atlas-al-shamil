@@ -742,12 +742,12 @@ function openEntityCard(f, kind) {
     if (cardEntity) cardEntity.dossier = links ? () => entityExportText({ p, key, title, info, kind, links, span, gaps: gapsArr }) : null;
     // مقارنة السلسلتين تظهر مع المثبّت من الكيانات السياسية وحدها، وتحتاج بيانات السلسلة المحمّلة
     const lineageCmp = pinned && !pinnedHere && kind !== "people" && pinned.kind !== "people" ? lineageCompareHtml(pinned, { name: p.NAME, key, title }) : "";
-    return top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + (modern && kind !== "people" ? observatoryHtml(p.NAME) + khaldunHtml(p.NAME) : "") + econ + about + alsoHtml();
+    return top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + (modern && kind !== "people" ? `<div class="card-actions"><button type="button" class="chip" data-dossier="${escapeHtml(p.NAME)}">ملف الدولة</button></div>` + observatoryHtml(p.NAME) + khaldunHtml(p.NAME) : "") + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
   // الإغلاق قبل وصول البيانات يُلغي التحديث: لا تُبنى البطاقة المغلقة (كان ذلك يرمي خطأ «facts» عند إغلاق سريع)
-  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady, khaldunReady]).then(([links, econ]) => {
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady, khaldunReady, dossierReady]).then(([links, econ]) => {
     if (token !== cardToken || cardEl.hidden) return;
     updateCard(token, render(links, econ));
   });
@@ -1793,6 +1793,8 @@ cardBody.addEventListener("click", (e) => {
   }
   const cp = e.target.closest("[data-lcopy]");
   if (cp) { copyLineage(cp); return; }
+  const dz = e.target.closest("[data-dossier]");
+  if (dz) { openDossierCard(dz.dataset.dossier); return; }
   const ec = e.target.closest("[data-ecopy]");
   if (ec) { if (cardEntity?.dossier) copyText(ec, cardEntity.dossier(), "نُسخت البطاقة مع إسنادها", "انسخ البطاقة مع إسنادها"); return; }
   if (e.target.closest("[data-lback]")) {
@@ -1835,6 +1837,36 @@ function observatoryHtml(name) {
   return rows;
 }
 
+// ملف الدولة (web/data/dossier.json، من scripts/build_dossier.py): طبقات الأطلس لدولة اليوم في صفحة واحدة
+let dossierData = null;
+const dossierReady = getJson("data/dossier.json").then((d) => { dossierData = d; return d; }).catch(() => null);
+function openDossierCard(name) {
+  const c = dossierData?.countries?.[name];
+  if (!c) return;
+  cardEntity = null;
+  markPoint(null);
+  const f = (x) => (Number.isInteger(x) ? fmtInt(x) : Number(x).toFixed(1));
+  const indRows = dossierData._meta.indicator_meta.map((m) => {
+    const v = c.indicators[m.id];
+    if (!v) return `<li><b>${escapeHtml(m.name_ar)}:</b> غائب من المصادر المرخّصة</li>`;
+    return `<li><b>${escapeHtml(m.name_ar)}:</b> ${f(v.value)} ${escapeHtml(m.unit_ar)}${v.year ? ` (${v.year})` : ""}</li>`;
+  }).join("");
+  const idx = c.index;
+  const idxHead = idx.composite != null
+    ? `<p><b>${Math.round(idx.composite * 100)}%</b> المركّب، من ${fmtInt(idx.available)} شروط من ${fmtInt(idx.total)}</p>`
+    : `<p class="sub">المركّب لا يُحسب إلا بثلاثة شروط على الأقل، والمتاح ${fmtInt(idx.available)} من ${fmtInt(idx.total)}.</p>`;
+  const econ = c.economy ? `<p>${fmtInt(c.economy.gdppc_value)} دولار دولي للفرد (${c.economy.gdppc_year})</p>` : `<p class="sub">لا سلسلة ناتج للفرد لهذه الدولة.</p>`;
+  const side = (x, label, isNext) => x ? `<li><b>${label} (${escapeHtml(String(x.map))}):</b> ${escapeHtml(x.name)}، ${pct(x.ownShare)} من أرضها داخل هذه الدولة، و${pct(x.otherShare)} من أرضه داخل الدولة الأخرى</li>` : `<li><b>${label}:</b> ${isNext ? "لا خريطة لاحقة: هذه آخر الحقب في الأطلس" : "لا صلة موثّقة في الخرائط المتجاورة"}</li>`;
+  const gaps = c.gaps.length ? `<ul class="gap-list">${c.gaps.map((g) => `<li>${escapeHtml(g)}</li>`).join("")}</ul>` : `<p class="sub">لا فجوة ظاهرة في الطبقات الموجودة.</p>`;
+  const src = Object.entries(dossierData._meta.sources.observatory || {}).map(([k, v]) => `<li>${escapeHtml(v.attribution)}: ${escapeHtml(v.license)}</li>`).join("");
+  openCard(cardHead({ title: c.name_ar || name, en: name, icon: "state", note: [c.continent, c.subregion].filter(Boolean).join(" · ") }) +
+    `<section class="card-sec"><h3>المؤشرات الحالية</h3><ul class="gap-list">${indRows}</ul></section>` +
+    `<section class="card-sec"><h3>مؤشر الشروط الخلدونية</h3>${idxHead}</section>` +
+    `<section class="card-sec"><h3>الاقتصاد</h3>${econ}</section>` +
+    `<section class="card-sec"><h3>السلف والخلف</h3><ul class="gap-list">${side(c.lineage.prev, "سبقها", false)}${side(c.lineage.next, "خلفها", true)}</ul></section>` +
+    `<section class="card-sec"><h3>ما لا نعرفه</h3>${gaps}</section>` +
+    `<section class="card-sec"><h3>الإسناد</h3><ul class="gap-list">${src}</ul><p class="sub">${escapeHtml(dossierData._meta.sources.index)}</p></section>`);
+}
 // مؤشر الشروط الخلدونية (web/data/khaldun.json، من scripts/build_khaldun.py): درجات الشروط المتاحة للدولة، وما ينقصه
 let khaldunData = null;
 const khaldunReady = getJson("data/khaldun.json").then((d) => { khaldunData = d; return d; }).catch(() => null);
