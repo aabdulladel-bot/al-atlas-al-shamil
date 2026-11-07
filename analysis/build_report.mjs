@@ -4,7 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const r = JSON.parse(fs.readFileSync(path.join(DIR, "seshat_results.json"), "utf8"));
-const A = r.test_a_dynasty_age, B = r.test_b_trade_centers, C = r.test_c_crafts_urbanism;
+const A = r.test_a_dynasty_age, B = r.test_b_trade_centers, C = r.test_c_crafts_urbanism, D = r.test_d_writing_population;
 const pct = (x) => `${Math.round(x * 100)}%`;
 const ci = (c, f = pct) => `${f(c[0])}–${f(c[1])}`;
 const x10 = (v) => (10 ** v).toFixed(1);
@@ -63,9 +63,29 @@ ${B.controlled_for_population.results.map((x) => `| ${names[x.x]} | ${x.n} | ${x
 
 **القراءة:** العلاقة قوية جداً دون ضبط، وتصبح **صغيرة لكنها موجبة** بعد ضبط حجم الدولة. هذا يؤيد السُنّة ارتباطاً، بأثر أضعف مما يوحي به الارتباط الخام.
 
+## د. الكتابة وحجم الدولة
+
+**الفرضية:** ${D.hypothesis}. **المتغير التابع:** حجم الدولة (سكانها) لا مؤشر التعقيد، لأن التعقيد يتضمن الكتابة نفسها فيصبح الاختبار دائرياً.
+
+**دون ضبط للإقليم** (${D.measure}):
+
+| المتغير | الكيانات | الفرق في الحجم | p (اختبار تبديل) |
+|---|---|---|---|
+| الكتابة (Script) | ${D.primary.n_polities} (${D.primary.n_present} موجود، ${D.primary.n_absent} غائب) | ${D.primary.ratio_population} ضعفاً | ${D.primary.p_one_sided_permutation} |
+| السجلات المكتوبة (WRecord، للتحقق) | ${D.robustness_written_records.n_polities} (${D.robustness_written_records.n_present} موجود، ${D.robustness_written_records.n_absent} غائب) | ${D.robustness_written_records.ratio_population} ضعفاً | ${D.robustness_written_records.p_one_sided_permutation} |
+
+**مع ضبط الإقليم والألفية** (${D.controlled_for_region.measure}):
+
+| المتغير | الكيانات | الأقاليم | أكبر بنحو | فترة الثقة 95% |
+|---|---|---|---|---|
+${D.controlled_for_region.results.map((x) => `| ${x.variable === "Script" ? "الكتابة (Script)" : "السجلات المكتوبة (WRecord)"} | ${x.n} | ${x.regions} | ${x.ratio_population} ضعفاً | ${x.ci95_ratio[0]}–${x.ci95_ratio[1]} |`).join("\n")}
+
+**القراءة:** الكتابة تقترن بدولة أكبر سكاناً، والأثر يصمد بعد ضبط الإقليم والألفية. هذا **يؤيد السُنّة ارتباطاً** بوكيل جزئي: الكتابة وسيلة لنقل المعرفة، لا قياس مباشر لها. الاتجاه غير محسوم، فقد تكون الدولة الكبيرة هي التي طوّرت الكتابة لإدارة أرضها، لا العكس.
+
 ## ما لم يُختبر
 
 - **العصبية، والترف، واقتداء المغلوب، والأمن على الأموال:** لا متغيرات مباشرة لها في Equinox. يحتاج اختبارها بيانات أخرى (مثل مقاييس التماسك عند Turchin).
+- **الجباية والضرائب:** لا متغير ضريبي في Equinox، فلا تُختبر هذه السُّنّة من هذه البيانات.
 `;
 fs.writeFileSync(path.join(DIR, "README.md"), md);
 console.log("كُتب analysis/README.md");

@@ -158,10 +158,68 @@ test_c["controlled_for_population"] = {
     "results": [ols_controlled("info", "cap")],
 }
 
+# ---------- د. الكتابة وحجم الدولة ----------
+# المتغير التابع حجم الدولة (سكانها)، لا مؤشر التعقيد، لأن التعقيد يتضمن الكتابة نفسها فيصبح الاختبار دائرياً.
+# الكتابة (Script) وسيلة لنقل المعرفة، وهي وكيل جزئي لا قياس مباشر للمعرفة.
+for v in ["Script", "WRecord"]:
+    per[v] = ts.groupby("PolID")[v].apply(presence)
+per["logpop"] = np.log10(per["pop"])
+
+def writing_test(var):
+    d = per.dropna(subset=[var, "logpop"])
+    d = d[d.groupby("bin")[var].transform(lambda x: x.nunique() == 2)]  # حقب فيها الحالتان فقط
+    def stat(df):
+        diffs, w = [], []
+        for _, g in df.groupby("bin"):
+            diffs.append(g[g[var] == 1].logpop.mean() - g[g[var] == 0].logpop.mean()); w.append(len(g))
+        return float(np.average(diffs, weights=w))
+    obs = stat(d)
+    count = 0
+    for _ in range(N_PERM):
+        p = d.copy()
+        p[var] = p.groupby("bin")[var].transform(lambda x: rng.permutation(x.to_numpy()))
+        if stat(p) >= obs: count += 1
+    return {
+        "variable": var, "n_polities": int(len(d)), "n_present": int((d[var] == 1).sum()), "n_absent": int((d[var] == 0).sum()),
+        "diff_log10_pop_within_millennium": round(obs, 3), "ratio_population": round(10 ** obs, 2),
+        "p_one_sided_permutation": round((count + 1) / (N_PERM + 1), 4),
+    }
+
+# ضبط الإقليم: الكتابة قد تتركز في مناطق بعينها تكون دولها أكبر لأسباب أخرى.
+per["region"] = per.index.map(pol.drop_duplicates("PolID").set_index("PolID")["World Region"])
+
+def writing_regression(var, n_boot=2000):
+    # log10(سكان) = a + b*الكتابة + تأثيرات الألفية + تأثيرات الإقليم؛ نعيد b مع فترة ثقة bootstrap.
+    d = per.dropna(subset=[var, "logpop", "region"]).copy()
+    def fit(df):
+        bins = pd.get_dummies(df["bin"], prefix="b", drop_first=True, dtype=float)
+        regs = pd.get_dummies(df["region"], prefix="r", drop_first=True, dtype=float)
+        X = np.column_stack([np.ones(len(df)), df[var].to_numpy(float), bins.to_numpy(), regs.to_numpy()])
+        coef, *_ = np.linalg.lstsq(X, df["logpop"].to_numpy(float), rcond=None)
+        return float(coef[1])
+    b = fit(d)
+    boots = [fit(d.iloc[rng.integers(0, len(d), len(d))]) for _ in range(n_boot)]
+    lo, hi = float(np.percentile(boots, 2.5)), float(np.percentile(boots, 97.5))
+    return {"variable": var, "n": int(len(d)), "regions": int(d["region"].nunique()),
+            "coef_log10_pop": round(b, 3), "ratio_population": round(10 ** b, 2),
+            "ci95_log10": [round(lo, 3), round(hi, 3)],
+            "ci95_ratio": [round(10 ** lo, 2), round(10 ** hi, 2)]}
+
+test_d = {
+    "hypothesis": "الكتابة تقترن بدولة أكبر سكاناً: نقل المعرفة وإدارة الدولة يحتاجان الكتابة",
+    "measure": "الفرق في لوغاريتم سكان الدولة بين وجود الكتابة وغيابها، داخل كل ألفية، مع اختبار تبديل داخل الألفيات",
+    "primary": writing_test("Script"),
+    "robustness_written_records": writing_test("WRecord"),
+    "controlled_for_region": {
+        "measure": "معامل الكتابة في انحدار لوغاريتم السكان على الكتابة + تأثيرات الألفية + تأثيرات الإقليم",
+        "results": [writing_regression("Script"), writing_regression("WRecord")],
+    },
+}
+
 res = {
     "_source": "Seshat Equinox 2020 (Equinox_on_GitHub_June9_2022.xlsx)، ترخيص CC BY-NC-SA",
     "_note": "نتائج ارتباطية من بيانات مُرمَّزة ومُستكمَلة إحصائياً (imputed)، لا تثبت سببية. الكيان في Seshat ليس دائماً دولة بمعنى ابن خلدون.",
-    "seed": 7, "test_a_dynasty_age": test_a, "test_b_trade_centers": test_b, "test_c_crafts_urbanism": test_c,
+    "seed": 7, "test_a_dynasty_age": test_a, "test_b_trade_centers": test_b, "test_c_crafts_urbanism": test_c, "test_d_writing_population": test_d,
 }
 with open(f"{OUT}/seshat_results.json", "w", encoding="utf-8") as f:
     json.dump(res, f, ensure_ascii=False, indent=2, default=float)

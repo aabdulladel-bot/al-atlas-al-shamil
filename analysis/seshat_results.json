@@ -257,5 +257,62 @@
         }
       ]
     }
+  },
+  "test_d_writing_population": {
+    "hypothesis": "الكتابة تقترن بدولة أكبر سكاناً: نقل المعرفة وإدارة الدولة يحتاجان الكتابة",
+    "measure": "الفرق في لوغاريتم سكان الدولة بين وجود الكتابة وغيابها، داخل كل ألفية، مع اختبار تبديل داخل الألفيات",
+    "primary": {
+      "variable": "Script",
+      "n_polities": 323,
+      "n_present": 250,
+      "n_absent": 73,
+      "diff_log10_pop_within_millennium": 0.203,
+      "ratio_population": 1.6,
+      "p_one_sided_permutation": 0.0002
+    },
+    "robustness_written_records": {
+      "variable": "WRecord",
+      "n_polities": 324,
+      "n_present": 242,
+      "n_absent": 82,
+      "diff_log10_pop_within_millennium": 0.189,
+      "ratio_population": 1.55,
+      "p_one_sided_permutation": 0.0002
+    },
+    "controlled_for_region": {
+      "measure": "معامل الكتابة في انحدار لوغاريتم السكان على الكتابة + تأثيرات الألفية + تأثيرات الإقليم",
+      "results": [
+        {
+          "variable": "Script",
+          "n": 346,
+          "regions": 10,
+          "coef_log10_pop": 0.167,
+          "ratio_population": 1.47,
+          "ci95_log10": [
+            0.13,
+            0.209
+          ],
+          "ci95_ratio": [
+            1.35,
+            1.62
+          ]
+        },
+        {
+          "variable": "WRecord",
+          "n": 347,
+          "regions": 10,
+          "coef_log10_pop": 0.152,
+          "ratio_population": 1.42,
+          "ci95_log10": [
+            0.116,
+            0.189
+          ],
+          "ci95_ratio": [
+            1.31,
+            1.55
+          ]
+        }
+      ]
+    }
   }
 }
