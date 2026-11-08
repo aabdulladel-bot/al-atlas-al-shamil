@@ -748,6 +748,26 @@
           "bytes": 52934
         }
       ]
+    },
+    {
+      "id": "dincecco-fiscal-revenues-1650-1913",
+      "file": null,
+      "url": null,
+      "license": "لا يوجد ترخيص صريح. حقوق النشر الافتراضية سارية. المقالة: \"Copyright © The Economic History Association 2009\" مع زر Rights & Permissions. لم يُنص على ترخيص لملفات البيانات في صفحة GPIH.",
+      "tier": "C",
+      "landing": "https://gpih.ucdavis.edu/Evidence.htm",
+      "article": "https://www.cambridge.org/core/journals/journal-of-economic-history/article/abs/fiscal-centralization-limited-government-and-public-revenues-in-europe-16501913/69CBC2A1CD3B166E445FBE2960A59328",
+      "data_files": [
+        "https://gpih.ucdavis.edu/files/Dincecco_gov't_revs_a.xls",
+        "https://gpih.ucdavis.edu/files/Dincecco_gov't_revs_b.xls",
+        "https://gpih.ucdavis.edu/files/Dincecco_gov't_revs_Appendix.pdf"
+      ],
+      "coverage": "الإيرادات الحكومية المركزية فقط. 1650–1913 لـ: النمسا-المجر، بريطانيا، فرنسا، هولندا، بروسيا، إسبانيا. 1800–1913 لـ: بلجيكا، الدنمارك، إيطاليا، البرتغال، السويد.",
+      "status": "registered_not_downloaded",
+      "checked_at": "2026-11-07",
+      "attribution": "Dincecco, M. (2009). Fiscal Centralization, Limited Government, and Public Revenues in Europe, 1650–1913. Journal of Economic History 69(1): 48–103.",
+      "permission_basis": null,
+      "note": "سُجّل قبل أي جلب وفق قاعدة الحقوق. الترخيص غير مُصرَّح به، لذا الطبقة C: مرجع فقط بلا استخراج ولا إعادة توزيع، حتى يصل إذن موثّق من المؤلف أو GPIH. يجب الاستشهاد بالمقالة عند الاستعمال."
     }
   ]
 }
