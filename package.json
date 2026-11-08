@@ -29,6 +29,7 @@
     "check:all": "node scripts/check_all_quotes.mjs && node scripts/check_schema.mjs && node verification/era3/polybius_iii_greek_check.mjs && node verification/era3/polybius_ix_greek_check.mjs && node sunan/check_sunan.mjs && node scripts/check_transitions.mjs && node scripts/build_journeys.mjs --check && python3 -I scripts/check_spatial_links.py && node scripts/build_layer_info.mjs --check && node scripts/build_lenses.mjs --check && python3 -I scripts/build_lineage.py --check && node scripts/check_precedents.mjs && node scripts/build_precedents.mjs --check && python3 -I scripts/build_observatory.py --check && python3 -I scripts/build_khaldun.py --check && python3 -I scripts/build_khaldun_sensitivity.py --check && python3 -I scripts/build_dossier.py --check",
     "analyze:seshat": "mkdir -p /tmp/seshat_x && unzip -oq data/raw/Equinox_Data-v.1.zip -d /tmp/seshat_x && python3 -I analysis/seshat_sunan.py /tmp/seshat_x/seshatdb-Equinox_Data-ed8f570/Equinox_on_GitHub_June9_2022.xlsx analysis > /dev/null && node analysis/build_report.mjs && node sunan/check_sunan.mjs",
     "check:quotes": "node scripts/check_all_quotes.mjs",
+    "check:launch": "node scripts/check_licenses.mjs",
     "test:ui": "node scripts/ui_smoke.mjs",
     "review:import": "node scripts/import_review.mjs",
     "build:precedents": "node scripts/build_precedents.mjs",
