@@ -48,3 +48,5 @@
 | `xuanzang-beal`، `gregory-brehaut`، `bede-latin-pl95`، `procopius-dewing-1928` | 4 | غير مسجّل في المانيفست | — | غير مسجّل | غير موثّق |
 | `polo-yule-1871`، `battuta-defremery`، `khaldun-slane-1863` | 5 | غير مسجّل في المانيفست | — | غير مسجّل | غير موثّق |
 | `garcilaso-rycaut-1688`، `diaz-maudslay`، `gama-hakluyt-1898`، `ricci-trigault-1615`، `evliya-ottoman-1896-v2` | 6 | غير مسجّل في المانيفست | — | غير مسجّل | غير موثّق |
+
+**قرار صاحب المشروع (2026-11-08):** تبقى شواهد النشرتين `turath-4129-tibr-masbuk` و`turath-30026-sayrafi` في الملفات المنشورة، ولا تُزالان. تبقى البوابة مغلقة عليهما إلى أن يُحسم ترخيصهما بإذن مكتوب أو باستبدال النشرة.
