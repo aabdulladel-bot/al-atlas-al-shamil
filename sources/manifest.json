@@ -854,24 +854,13 @@
     },
     {
       "id": "kjv1611-1872-vol2",
-      "file": "verification/era2/kjv.txt",
       "url": "https://archive.org/details/holybibleaccordi0002unse",
       "license": "ملك عام: نُشر سنة 1872، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
       "tier": "A",
       "landing": "https://archive.org/details/holybibleaccordi0002unse",
       "attribution": "The Holy Bible، Authorized Version (1611)، لندن 1872، المجلد II",
       "note": "مطابقة الملف بالمجلد الثاني مأخوذة من README الحقبة الثانية.",
-      "status": "ok",
-      "retrieved_at": "2026-11-08T09:04:38.517Z",
-      "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
-      "bytes": 6444955,
-      "files": [
-        {
-          "file": "verification/era2/kjv.txt",
-          "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
-          "bytes": 6444955
-        }
-      ]
+      "status": "skipped: لا ملف نص محفوظ للمجلد الثاني. الملف الذي رُبط به سابقاً (verification/era2/kjv.txt) من مادة 1611-king-james-bible ولا يحوي المقاطع."
     },
     {
       "id": "kjv1611-1872-vol6",
@@ -1127,24 +1116,13 @@
     },
     {
       "id": "procopius-dewing-1928",
-      "file": "verification/era4/procopius.txt",
       "url": "https://archive.org/details/procopiuswitheng05procuoft",
       "license": "ملك عام: نُشر سنة 1928، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
       "tier": "A",
       "landing": "https://archive.org/details/procopiuswitheng05procuoft",
       "attribution": "Procopius، ترجمة H. B. Dewing، Loeb، المجلد V",
       "note": "تعارض: README الحقبة الرابعة يذكر 1928، والأرشيف يذكر 1914 لهذا العنوان. الحكم لا يتغير، ويُصحَّح السجل عند فحص صفحة العنوان.",
-      "status": "ok",
-      "retrieved_at": "2026-11-08T09:04:38.517Z",
-      "sha256": "bfa66163511be6ce4e7c44976d696e96a175e425114eb83df65f07a172fe4af8",
-      "bytes": 1514612,
-      "files": [
-        {
-          "file": "verification/era4/procopius.txt",
-          "sha256": "bfa66163511be6ce4e7c44976d696e96a175e425114eb83df65f07a172fe4af8",
-          "bytes": 1514612
-        }
-      ]
+      "status": "skipped: الملف verification/era4/procopius.txt من مادة procopiusvolume00procgoog ولا يحوي المقاطع. نص المجلد الخامس غير محفوظ."
     },
     {
       "id": "ricci-trigault-1615",
@@ -1206,6 +1184,174 @@
           "file": "verification/era5/khaldun_slane1863.txt",
           "sha256": "0c3ec67e627b07dd5701b24d7f1acaf8167fa271f746ea5af2b7421d76874ed6",
           "bytes": 1592324
+        }
+      ]
+    },
+    {
+      "id": "hammurabi",
+      "file": "verification/era1/harper.txt",
+      "url": "https://archive.org/details/codeofhammurabik00harpuoft",
+      "license": "ملك عام: نُشر سنة 1904، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/codeofhammurabik00harpuoft",
+      "attribution": "Harper، The Code of Hammurabi, King of Babylon (1904)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "120d44f9201f7bcfff40750937439a41831b8fa94bc8ce55664eef86dfaa2174",
+      "bytes": 586457,
+      "files": [
+        {
+          "file": "verification/era1/harper.txt",
+          "sha256": "120d44f9201f7bcfff40750937439a41831b8fa94bc8ce55664eef86dfaa2174",
+          "bytes": 586457
+        }
+      ]
+    },
+    {
+      "id": "ptahhotep",
+      "file": "verification/era1/gunn.txt",
+      "url": "https://archive.org/details/instructionofpta00ptahrich",
+      "license": "ملك عام: نُشر سنة 1912، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. والمترجم B. Gunn توفي سنة 1950.",
+      "tier": "A",
+      "landing": "https://archive.org/details/instructionofpta00ptahrich",
+      "attribution": "Gunn، The Instruction of Ptah-hotep (1912، صفحة العنوان 1918)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "8ab77fb267e27ebb441c91cee483a475db05ebaa402405ef664e51704b28a326",
+      "bytes": 256384,
+      "files": [
+        {
+          "file": "verification/era1/gunn.txt",
+          "sha256": "8ab77fb267e27ebb441c91cee483a475db05ebaa402405ef664e51704b28a326",
+          "bytes": 256384
+        }
+      ]
+    },
+    {
+      "id": "gilgamesh",
+      "file": "verification/era1/smith.txt",
+      "url": "https://archive.org/details/thechaldeanaccou00smituoft",
+      "license": "ملك عام: نُشر سنة 1876، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/thechaldeanaccou00smituoft",
+      "attribution": "George Smith، The Chaldean Account of Genesis (1876)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "503e0ea4d9b4484f12c3f158cda358890ad4d199c3da7f64b2891103a707f3e7",
+      "bytes": 733940,
+      "files": [
+        {
+          "file": "verification/era1/smith.txt",
+          "sha256": "503e0ea4d9b4484f12c3f158cda358890ad4d199c3da7f64b2891103a707f3e7",
+          "bytes": 733940
+        }
+      ]
+    },
+    {
+      "id": "kjv1611",
+      "file": "verification/era2/kjv.txt",
+      "url": "https://archive.org/details/1611-king-james-bible",
+      "license": "ملك عام: نُشر سنة 1611، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/1611-king-james-bible",
+      "attribution": "1611 King James Bible",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
+      "bytes": 6444955,
+      "files": [
+        {
+          "file": "verification/era2/kjv.txt",
+          "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
+          "bytes": 6444955
+        }
+      ]
+    },
+    {
+      "id": "polo-yule-1871",
+      "file": "verification/era5/polo.txt",
+      "url": "https://archive.org/details/bookofsermarcopo01polo",
+      "license": "ملك عام: نُشر سنة 1871، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/bookofsermarcopo01polo",
+      "attribution": "Yule، The Book of Ser Marco Polo، المجلد 1 (1871)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "a48f7b86f4efa5f248d6c7237ae8359ba670f91e9eb62d9f9028440c208352f7",
+      "bytes": 1713368,
+      "files": [
+        {
+          "file": "verification/era5/polo.txt",
+          "sha256": "a48f7b86f4efa5f248d6c7237ae8359ba670f91e9eb62d9f9028440c208352f7",
+          "bytes": 1713368
+        }
+      ]
+    },
+    {
+      "id": "battuta-defremery",
+      "file": "verification/era5/battuta.txt",
+      "url": "https://archive.org/details/voyagesdibnbato02sanggoog",
+      "license": "ملك عام: نُشر سنة 1853، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/voyagesdibnbato02sanggoog",
+      "attribution": "Defrémery وSanguinetti، Voyages d'Ibn Batoutah، المجلد 1 (1853)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "34d7bdb3826be9be51b8d89e0f0f3e50a84c5bd5471f99bfc71179a0eaad8913",
+      "bytes": 922574,
+      "files": [
+        {
+          "file": "verification/era5/battuta.txt",
+          "sha256": "34d7bdb3826be9be51b8d89e0f0f3e50a84c5bd5471f99bfc71179a0eaad8913",
+          "bytes": 922574
+        }
+      ]
+    },
+    {
+      "id": "garcilaso-rycaut-1688",
+      "file": "verification/era6/garcilaso.txt",
+      "url": "https://archive.org/details/royalcommentarie00vega_0",
+      "license": "ملك عام: نُشر سنة 1688، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/royalcommentarie00vega_0",
+      "attribution": "Garcilaso de la Vega، The Royal Commentaries of Peru، ترجمة Rycaut (1688)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "bf82d92e697196aed6ff3410dd4e00f19959b40422d069b85136c1ac7b0b66ff",
+      "bytes": 4599490,
+      "files": [
+        {
+          "file": "verification/era6/garcilaso.txt",
+          "sha256": "bf82d92e697196aed6ff3410dd4e00f19959b40422d069b85136c1ac7b0b66ff",
+          "bytes": 4599490
+        }
+      ]
+    },
+    {
+      "id": "diaz-maudslay",
+      "file": "verification/era6/diaz.txt",
+      "url": "https://archive.org/details/truehistoryofcon2242dazd",
+      "license": "ملك عام: نُشر سنة 1908، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. والمترجم A. P. Maudslay توفي سنة 1931.",
+      "tier": "A",
+      "landing": "https://archive.org/details/truehistoryofcon2242dazd",
+      "attribution": "Díaz del Castillo، The True History of the Conquest of New Spain، ترجمة Maudslay، Hakluyt Society، المجلد 2 (1908)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "f9f4a13bcf56bcaf1e7c6530f401964356a797ff3d68e342043b13b0b3af36ee",
+      "bytes": 858413,
+      "files": [
+        {
+          "file": "verification/era6/diaz.txt",
+          "sha256": "f9f4a13bcf56bcaf1e7c6530f401964356a797ff3d68e342043b13b0b3af36ee",
+          "bytes": 858413
         }
       ]
     }

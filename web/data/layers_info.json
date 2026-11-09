@@ -197,13 +197,6 @@
      "landing": "https://archive.org/details/ancient-records-of-assyria-and-babylonia-volume-2"
     },
     {
-     "id": "kjv1611-1872-vol2",
-     "tier": "A",
-     "license": "ملك عام: نُشر سنة 1872، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
-     "attribution": "The Holy Bible، Authorized Version (1611)، لندن 1872، المجلد II",
-     "landing": "https://archive.org/details/holybibleaccordi0002unse"
-    },
-    {
      "id": "kjv1611-1872-vol6",
      "tier": "A",
      "license": "ملك عام: نُشر سنة 1876، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
@@ -288,13 +281,6 @@
      "landing": "https://archive.org/details/historyoffranks01greg"
     },
     {
-     "id": "procopius-dewing-1928",
-     "tier": "A",
-     "license": "ملك عام: نُشر سنة 1928، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
-     "attribution": "Procopius، ترجمة H. B. Dewing، Loeb، المجلد V",
-     "landing": "https://archive.org/details/procopiuswitheng05procuoft"
-    },
-    {
      "id": "ricci-trigault-1615",
      "tier": "A",
      "license": "ملك عام: نُشر سنة 1615، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
@@ -314,6 +300,62 @@
      "license": "ملك عام: نُشر سنة 1863، والأرشيف يحمل علامة public-domain mark 1.0.",
      "attribution": "Ibn Khaldun، Les Prolégomènes، ترجمة de Slane (1863)",
      "landing": "https://archive.org/details/bub_gb_JTs8AAAAMAAJ"
+    },
+    {
+     "id": "hammurabi",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1904، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Harper، The Code of Hammurabi, King of Babylon (1904)",
+     "landing": "https://archive.org/details/codeofhammurabik00harpuoft"
+    },
+    {
+     "id": "ptahhotep",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1912، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. والمترجم B. Gunn توفي سنة 1950.",
+     "attribution": "Gunn، The Instruction of Ptah-hotep (1912، صفحة العنوان 1918)",
+     "landing": "https://archive.org/details/instructionofpta00ptahrich"
+    },
+    {
+     "id": "gilgamesh",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1876، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "George Smith، The Chaldean Account of Genesis (1876)",
+     "landing": "https://archive.org/details/thechaldeanaccou00smituoft"
+    },
+    {
+     "id": "kjv1611",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1611، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "1611 King James Bible",
+     "landing": "https://archive.org/details/1611-king-james-bible"
+    },
+    {
+     "id": "polo-yule-1871",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1871، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Yule، The Book of Ser Marco Polo، المجلد 1 (1871)",
+     "landing": "https://archive.org/details/bookofsermarcopo01polo"
+    },
+    {
+     "id": "battuta-defremery",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1853، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Defrémery وSanguinetti، Voyages d'Ibn Batoutah، المجلد 1 (1853)",
+     "landing": "https://archive.org/details/voyagesdibnbato02sanggoog"
+    },
+    {
+     "id": "garcilaso-rycaut-1688",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1688، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Garcilaso de la Vega، The Royal Commentaries of Peru، ترجمة Rycaut (1688)",
+     "landing": "https://archive.org/details/royalcommentarie00vega_0"
+    },
+    {
+     "id": "diaz-maudslay",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1908، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. والمترجم A. P. Maudslay توفي سنة 1931.",
+     "attribution": "Díaz del Castillo، The True History of the Conquest of New Spain، ترجمة Maudslay، Hakluyt Society، المجلد 2 (1908)",
+     "landing": "https://archive.org/details/truehistoryofcon2242dazd"
     }
    ]
   },

@@ -83,14 +83,42 @@ for (const f of webFiles) {
 
 // ---- القسم ب: كل نص مقتبس في verification/eraN يجب أن يكون له صف موثّق ----
 const passageIds = new Set();
+const passagesBySource = {};
 for (const dir of fs.readdirSync(path.join(ROOT, "verification"))) {
   if (!/^era\d+$/.test(dir)) continue;
   const p = path.join(ROOT, "verification", dir, "passages.json");
   if (!fs.existsSync(p)) continue;
   const data = JSON.parse(fs.readFileSync(p, "utf8"));
   const list = Array.isArray(data) ? data : data.passages || Object.values(data);
-  for (const x of list) if (x && x.source_id) passageIds.add(x.source_id);
+  for (const x of list) if (x && x.source_id) (passagesBySource[x.source_id] ||= []).push(x.text || "");
 }
+for (const id of Object.keys(passagesBySource)) passageIds.add(id);
+
+// الطبعة الموثّقة يجب أن تكون هي مصدر المقاطع فعلاً: كل مقطع يُوجد في ملف المانيفست
+// (90% على الأقل من نوافذه ذات الأربع كلمات، لتحمّل أخطاء OCR).
+const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "sources/manifest.json"), "utf8")).sources;
+const norm = (s) =>
+  s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z؀-ۿ一-鿿]+/g, " ").trim();
+function passageCoverage(id) {
+  const src = manifest.find((s) => s.id === id);
+  if (!src || !src.file) return null;
+  const file = path.join(ROOT, src.file);
+  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return null;
+  const text = norm(fs.readFileSync(file, "utf8"));
+  let worst = 100;
+  for (const p of passagesBySource[id]) {
+    const w = norm(p).split(" ");
+    let n = 0, hit = 0;
+    for (let i = 0; i + 4 <= w.length; i += 4) {
+      n++;
+      if (text.includes(w.slice(i, i + 4).join(" "))) hit++;
+    }
+    if (n > 0) worst = Math.min(worst, Math.round((100 * hit) / n));
+  }
+  return { file: src.file, worst };
+}
+
 for (const id of [...passageIds].sort()) {
   const rows = textRows.filter((cells) => tokens(cells[0]).includes(id));
   if (rows.length === 0) {
@@ -98,7 +126,12 @@ for (const id of [...passageIds].sort()) {
     continue;
   }
   const ok = rows.find((cells) => cells[5] === STATUS_OK && DATE_RE.test(cells[4]));
-  if (!ok) fail(`نص مقتبس غير موثّق: ${id} (${rows[0][5]})`);
+  if (!ok) {
+    fail(`نص مقتبس غير موثّق: ${id} (${rows[0][5]})`);
+    continue;
+  }
+  const cov = passageCoverage(id);
+  if (cov && cov.worst < 90) fail(`المقاطع غير موجودة في ملف الطبعة الموثّقة: ${id} (${cov.file}، ${cov.worst}%)`);
 }
 
 // ---- النتيجة ----
