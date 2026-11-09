@@ -1,0 +1,5639 @@
+{
+ "_meta": {
+  "source": "Wikidata (CC0) عبر wbgetentities",
+  "retrieved_at": "2026-11-09T10:50:12.041865+00:00",
+  "note": "مستخلص للبطاقة التعريفية: لا يُحفظ من ويكي بيانات إلا الحقول المذكورة في fetch_wikidata_entities.py"
+ },
+ "entities": {
+  "Q1000": {
+   "ar": "الغابون",
+   "en": "Gabon",
+   "desc_ar": "دولة في غرب وسط أفريقيا",
+   "desc_en": "country on the Atlantic coast of Central Africa",
+   "p31": [
+    "Q6256",
+    "Q3624078",
+    "Q179023"
+   ],
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الغابون",
+   "enwiki": "Gabon"
+  },
+  "Q1006": {
+   "ar": "غينيا",
+   "en": "Guinea",
+   "desc_ar": "دولة في غرب أفريقيا",
+   "desc_en": "sovereign state in West Africa",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1958-10-02T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "غينيا",
+   "enwiki": "Guinea"
+  },
+  "Q1008": {
+   "ar": "ساحل العاج",
+   "en": "Ivory Coast",
+   "desc_ar": "دولة في غرب أفريقيا",
+   "desc_en": "sovereign state in West Africa",
+   "p31": [
+    "Q3624078",
+    "Q7270",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "ساحل العاج",
+   "enwiki": "Ivory Coast"
+  },
+  "Q10086": {
+   "ar": "ميسور",
+   "en": "Mysore",
+   "desc_ar": "مدينة في جنوب الهند",
+   "desc_en": "city in Karnataka, India",
+   "p31": [
+    "Q515",
+    "Q1549591"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "ميسور (الهند)",
+   "enwiki": "Mysore"
+  },
+  "Q1009": {
+   "ar": "الكاميرون",
+   "en": "Cameroon",
+   "desc_ar": "دولة في وسط إفريقيا غربا",
+   "desc_en": "sovereign state in West-Central Africa",
+   "p31": [
+    "Q6256",
+    "Q7270",
+    "Q3624078"
+   ],
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الكاميرون",
+   "enwiki": "Cameroon"
+  },
+  "Q1016": {
+   "ar": "ليبيا",
+   "en": "Libya",
+   "desc_ar": "دولة في شمال إفريقيا",
+   "desc_en": "sovereign state in North Africa",
+   "p31": [
+    "Q3624078",
+    "Q51576574",
+    "Q6256"
+   ],
+   "inception": [
+    "+1551-08-15T00:00:00Z",
+    "+1977-03-02T00:00:00Z",
+    "+1969-09-01T00:00:00Z",
+    "+1951-12-24T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "ليبيا",
+   "enwiki": "Libya"
+  },
+  "Q1019": {
+   "ar": "مدغشقر",
+   "en": "Madagascar",
+   "desc_ar": "دولة جزرية في جنوب شرق أفريقيا بالمحيط الهندي",
+   "desc_en": "island sovereign state off the coast of Southeast Africa, in the Indian Ocean",
+   "p31": [
+    "Q3624078",
+    "Q112099",
+    "Q179164",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "مدغشقر",
+   "enwiki": "Madagascar"
+  },
+  "Q1020": {
+   "ar": "ملاوي",
+   "en": "Malawi",
+   "desc_ar": "دولة في جنوب شرق أفريقيا",
+   "desc_en": "sovereign state in Africa",
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1964-07-06T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "ملاوي",
+   "enwiki": "Malawi"
+  },
+  "Q102090": {
+   "ar": "أباتشي",
+   "en": "Apache",
+   "desc_ar": null,
+   "desc_en": "several culturally related groups of indigenous peoples of the United States",
+   "p31": [
+    "Q103817",
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "أباتشي (شعب)",
+   "enwiki": "Apache"
+  },
+  "Q1025": {
+   "ar": "موريتانيا",
+   "en": "Mauritania",
+   "desc_ar": "دولة عربية في شمال غرب أفريقيا",
+   "desc_en": "sovereign state in West Africa and North Africa",
+   "p31": [
+    "Q672729",
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-11-28T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "موريتانيا",
+   "enwiki": "Mauritania"
+  },
+  "Q1028": {
+   "ar": "المغرب",
+   "en": "Morocco",
+   "desc_ar": "دولة في شمال إفريقيا",
+   "desc_en": "sovereign state in North Africa",
+   "p31": [
+    "Q41614",
+    "Q3624078",
+    "Q51576574",
+    "Q6256"
+   ],
+   "inception": [
+    "+1956-04-07T00:00:00Z",
+    "+1956-03-02T00:00:00Z",
+    "+1631-00-00T00:00:00Z",
+    "+1549-00-00T00:00:00Z",
+    "+0789-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "المغرب",
+   "enwiki": "Morocco"
+  },
+  "Q1029": {
+   "ar": "موزمبيق",
+   "en": "Mozambique",
+   "desc_ar": "دولة في جنوب شرق أفريقيا",
+   "desc_en": "country in Southeastern Africa; the current form of Mozambique since 1975",
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1975-06-25T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "موزمبيق",
+   "enwiki": "Mozambique"
+  },
+  "Q1030": {
+   "ar": "ناميبيا",
+   "en": "Namibia",
+   "desc_ar": "دولة في جنوب غرب أفريقيا",
+   "desc_en": "country in Southern Africa",
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1990-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "ناميبيا",
+   "enwiki": "Namibia"
+  },
+  "Q1032": {
+   "ar": "النيجر",
+   "en": "Niger",
+   "desc_ar": "دولة في غرب أفريقيا",
+   "desc_en": "sovereign state in western Africa",
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "النيجر",
+   "enwiki": "Niger"
+  },
+  "Q1033": {
+   "ar": "نيجيريا",
+   "en": "Nigeria",
+   "desc_ar": "دولة في غرب إفريقيا",
+   "desc_en": "sovereign state in West Africa",
+   "p31": [
+    "Q3624078",
+    "Q512187",
+    "Q6256"
+   ],
+   "inception": [
+    "+1963-10-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "نيجيريا",
+   "enwiki": "Nigeria"
+  },
+  "Q1036": {
+   "ar": "أوغندا",
+   "en": "Uganda",
+   "desc_ar": "دولة في شرق أفريقيا",
+   "desc_en": "country in East Africa",
+   "p31": [
+    "Q3624078",
+    "Q7270",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1962-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "أوغندا",
+   "enwiki": "Uganda"
+  },
+  "Q1041": {
+   "ar": "السنغال",
+   "en": "Senegal",
+   "desc_ar": "دولة في غرب أفريقيا",
+   "desc_en": "country on the coast of West Africa",
+   "p31": [
+    "Q3624078",
+    "Q7270",
+    "Q4209223",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "السنغال",
+   "enwiki": "Senegal"
+  },
+  "Q1045": {
+   "ar": "الصومال",
+   "en": "Somalia",
+   "desc_ar": "دولة في شرق أفريقيا",
+   "desc_en": "sovereign state in Africa",
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q512187",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الصومال",
+   "enwiki": "Somalia"
+  },
+  "Q1049": {
+   "ar": "السودان",
+   "en": "Sudan",
+   "desc_ar": "دولة عربية تقع في شمال شرق إفريقيا",
+   "desc_en": "country in Northeast Africa",
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q6256",
+    "Q1088391"
+   ],
+   "inception": [
+    "+1956-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "السودان",
+   "enwiki": "Sudan"
+  },
+  "Q105985268": {
+   "ar": null,
+   "en": "Kingdom of Kashmir",
+   "desc_ar": null,
+   "desc_en": null,
+   "p31": [],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Kingdom of Kashmir"
+  },
+  "Q1065583": {
+   "ar": "بوتاواتومي",
+   "en": "Potawatomi",
+   "desc_ar": null,
+   "desc_en": "Native American people of the Great Plains",
+   "p31": [
+    "Q41710",
+    "Q36747"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "بوتاواتومي",
+   "enwiki": "Potawatomi"
+  },
+  "Q106577": {
+   "ar": "نيوستريا",
+   "en": "Neustria",
+   "desc_ar": null,
+   "desc_en": "western part of the Kingdom of the Franks",
+   "p31": [
+    "Q3024240"
+   ],
+   "inception": [
+    "+0511-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0977-00-00T00:00:00Z",
+    "+0751-00-00T00:00:00Z"
+   ],
+   "arwiki": "نيوستريا",
+   "enwiki": "Neustria"
+  },
+  "Q1074730": {
+   "ar": "شيريكاوا",
+   "en": "Chiricahua",
+   "desc_ar": null,
+   "desc_en": "band of Apache Native Americans",
+   "p31": [
+    "Q102090",
+    "Q36747"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "شيريكاوا",
+   "enwiki": "Chiricahua"
+  },
+  "Q1081589": {
+   "ar": "كوش",
+   "en": "Kush",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كوش (توضيح)",
+   "enwiki": "Kush"
+  },
+  "Q110117": {
+   "ar": "البلغار",
+   "en": "Bulgars",
+   "desc_ar": "تحالف قَبَلي تركي بائد",
+   "desc_en": "extinct Turkic tribal confederation",
+   "p31": [
+    "Q4204501"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "بلغار (شعب تركي)",
+   "enwiki": "Bulgars"
+  },
+  "Q114": {
+   "ar": "كينيا",
+   "en": "Kenya",
+   "desc_ar": "دولة في شرق أفريقيا",
+   "desc_en": "country in Eastern Africa",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1963-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "كينيا",
+   "enwiki": "Kenya"
+  },
+  "Q1141752": {
+   "ar": null,
+   "en": "Enets",
+   "desc_ar": null,
+   "desc_en": "Uralic ethnic group",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Enets"
+  },
+  "Q115": {
+   "ar": "إثيوبيا",
+   "en": "Ethiopia",
+   "desc_ar": "دولة في شرق إفريقيا",
+   "desc_en": "country in the Horn of Africa",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q123480"
+   ],
+   "inception": [
+    "+1995-08-21T00:00:00Z",
+    "+1991-05-28T00:00:00Z",
+    "+1974-09-12T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "إثيوبيا",
+   "enwiki": "Ethiopia"
+  },
+  "Q117": {
+   "ar": "غانا",
+   "en": "Ghana",
+   "desc_ar": "دولة في غرب أفريقيا",
+   "desc_en": "country in West Africa",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1957-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "غانا",
+   "enwiki": "Ghana"
+  },
+  "Q117100": {
+   "ar": "كيوا (قبيلة)",
+   "en": "Kiowa people",
+   "desc_ar": null,
+   "desc_en": "Native American Nation",
+   "p31": [
+    "Q41710",
+    "Q7840353"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كيوا (قبيلة)",
+   "enwiki": "Kiowa"
+  },
+  "Q117133": {
+   "ar": "كومانشي",
+   "en": "Comanche",
+   "desc_ar": null,
+   "desc_en": "Plains Indian tribe whose historic territory consisted of eastern New Mexico, southeastern Colorado, southwestern Kansas, western Oklahoma, and northwest Texas",
+   "p31": [
+    "Q133311",
+    "Q7840353"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كومانشي (قبيلة)",
+   "enwiki": "Comanche"
+  },
+  "Q117191": {
+   "ar": "كري",
+   "en": "Cree",
+   "desc_ar": null,
+   "desc_en": "group of First Nations peoples",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كري",
+   "enwiki": "Cree"
+  },
+  "Q1180689": {
+   "ar": null,
+   "en": "Norte Chico",
+   "desc_ar": null,
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Norte Chico"
+  },
+  "Q1194765": {
+   "ar": "كاماروبا",
+   "en": "Kamarupa",
+   "desc_ar": null,
+   "desc_en": "kingdom based around Assam (350-1140)",
+   "p31": [
+    "Q3024240"
+   ],
+   "inception": [
+    "+0350-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1140-00-00T00:00:00Z"
+   ],
+   "arwiki": "كاماروبا",
+   "enwiki": "Kamarupa"
+  },
+  "Q1194881": {
+   "ar": null,
+   "en": "Burmese",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Burmese"
+  },
+  "Q1204": {
+   "ar": "إلينوي",
+   "en": "Illinois",
+   "desc_ar": "ولاية الولايات المتحدة الأمريكية",
+   "desc_en": "state of the United States of America",
+   "p31": [
+    "Q35657"
+   ],
+   "inception": [
+    "+1818-12-03T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "إلينوي",
+   "enwiki": "Illinois"
+  },
+  "Q1209388": {
+   "ar": null,
+   "en": "Arrernte",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Arrernte"
+  },
+  "Q1220215": {
+   "ar": null,
+   "en": "Yankton",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Yankton"
+  },
+  "Q1220720": {
+   "ar": "تيتون",
+   "en": "Teton",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "تيتون (توضيح)",
+   "enwiki": "Teton"
+  },
+  "Q12544": {
+   "ar": "الإمبراطورية البيزنطية",
+   "en": "Byzantine Empire",
+   "desc_ar": "دولة سابقة، أسسها قسطنطين العظيم واستمرت ما بين (330 – 1453م)",
+   "desc_en": "Roman Empire during Late Antiquity and the Middle Ages",
+   "p31": [
+    "Q48349",
+    "Q3024240",
+    "Q11514315",
+    "Q392160",
+    "Q56061",
+    "Q11042"
+   ],
+   "inception": [
+    "+0395-01-17T00:00:00Z",
+    "+0330-00-00T00:00:00Z",
+    "+0286-00-00T00:00:00Z",
+    "+0285-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1453-05-29T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية البيزنطية",
+   "enwiki": "Byzantine Empire"
+  },
+  "Q12548": {
+   "ar": "الإمبراطورية الرومانية المقدسة",
+   "en": "Holy Roman Empire",
+   "desc_ar": "أمبراطورية أوروبية سابقة",
+   "desc_en": "multi-ethnic complex of territories in Western and Central Europe (800/962–1806)",
+   "p31": [
+    "Q48349",
+    "Q3624078",
+    "Q3024240"
+   ],
+   "inception": [
+    "+0962-02-02T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1806-08-06T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية الرومانية المقدسة",
+   "enwiki": "Holy Roman Empire"
+  },
+  "Q12557": {
+   "ar": "إمبراطورية المغول",
+   "en": "Mongol Empire",
+   "desc_ar": "إمبراطورية تشكلت في ما يُعرف اليوم بدولة منغوليا وهي ثاني أضخم إمبراطورية بالتاريخ والأضخم ككتلة قارية واحدة",
+   "desc_en": "13th- and 14th-century empire originating in Mongolia",
+   "p31": [
+    "Q3024240",
+    "Q48349",
+    "Q331644"
+   ],
+   "inception": [
+    "+1206-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1368-01-01T00:00:00Z"
+   ],
+   "arwiki": "إمبراطورية المغول",
+   "enwiki": "Mongol Empire"
+  },
+  "Q12560": {
+   "ar": "الدولة العثمانية",
+   "en": "Ottoman Empire",
+   "desc_ar": "دولة إسلامية سابقة، أسسها عثمان الأول واستمرت ما بين (687 – 1341هـ / 1299 – 1922م)",
+   "desc_en": "empire with the monarchs from the Ottoman dynasty (1299–1922)",
+   "p31": [
+    "Q48349",
+    "Q3024240",
+    "Q12759805"
+   ],
+   "inception": [
+    "+1302-07-27T00:00:00Z",
+    "+1299-07-29T00:00:00Z",
+    "+1300-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1922-11-17T00:00:00Z"
+   ],
+   "arwiki": "الدولة العثمانية",
+   "enwiki": "Ottoman Empire"
+  },
+  "Q1268882": {
+   "ar": null,
+   "en": "Quapaw",
+   "desc_ar": null,
+   "desc_en": "Native American people indigenous to Arkansas and Oklahoma",
+   "p31": [
+    "Q41710",
+    "Q7840353"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Quapaw"
+  },
+  "Q128904": {
+   "ar": "عيلام",
+   "en": "Elam",
+   "desc_ar": "حضارة قديمة في الشرق الأدنى، تركزت في سهل سوسيانا ومرتفعات عيلام",
+   "desc_en": "ancient civilization of the Near East, centered in the Susiana plain and the Elamite highlands",
+   "p31": [
+    "Q28171280",
+    "Q3024240"
+   ],
+   "inception": [
+    "-2700-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "-0539-00-00T00:00:00Z"
+   ],
+   "arwiki": "عيلام",
+   "enwiki": "Elam"
+  },
+  "Q129282": {
+   "ar": null,
+   "en": "Karasuk culture",
+   "desc_ar": null,
+   "desc_en": "archaeological culture",
+   "p31": [
+    "Q465299"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Karasuk culture"
+  },
+  "Q129286": {
+   "ar": "الراج البريطاني",
+   "en": "British Raj",
+   "desc_ar": null,
+   "desc_en": "British colonial rule on the Indian subcontinent (1858–1947)",
+   "p31": [
+    "Q133156",
+    "Q3024240",
+    "Q1351282"
+   ],
+   "inception": [
+    "+1858-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1947-08-15T00:00:00Z"
+   ],
+   "arwiki": "الراج البريطاني",
+   "enwiki": "British Raj"
+  },
+  "Q131727273": {
+   "ar": null,
+   "en": "Papuans",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Papuans"
+  },
+  "Q131964": {
+   "ar": "الإمبراطورية النمساوية",
+   "en": "Austrian Empire",
+   "desc_ar": "دولة أوروبية سابقة",
+   "desc_en": "Central European multinational Empire from 1804 to 1867",
+   "p31": [
+    "Q3624078",
+    "Q3024240"
+   ],
+   "inception": [
+    "+1804-08-11T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1867-06-08T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية النمساوية",
+   "enwiki": "Austrian Empire"
+  },
+  "Q135013626": {
+   "ar": null,
+   "en": "Sámi",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Sámi"
+  },
+  "Q137367476": {
+   "ar": null,
+   "en": "Kushites",
+   "desc_ar": null,
+   "desc_en": "ancient people on present-day Sudan",
+   "p31": [
+    "Q4204501"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Kushites"
+  },
+  "Q142": {
+   "ar": "فرنسا",
+   "en": "France",
+   "desc_ar": "دولة في غرب أوروبا",
+   "desc_en": "country in Western Europe and other continents (through its overseas territories in America, Africa and Oceania)",
+   "p31": [
+    "Q3624078",
+    "Q20181813",
+    "Q51576574",
+    "Q7270",
+    "Q6256"
+   ],
+   "inception": [
+    "+1958-10-04T00:00:00Z",
+    "+1792-00-00T00:00:00Z",
+    "+0843-08-00T00:00:00Z",
+    "+0481-00-00T00:00:00Z",
+    "+1804-05-18T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "فرنسا",
+   "enwiki": "France"
+  },
+  "Q145": {
+   "ar": "المملكة المتحدة",
+   "en": "United Kingdom",
+   "desc_ar": "دولة في شمال غرب أوروبا",
+   "desc_en": "island country in north-west Europe",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q20181813",
+    "Q112099"
+   ],
+   "inception": [
+    "+1921-12-06T00:00:00Z",
+    "+1927-04-12T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "المملكة المتحدة",
+   "enwiki": "United Kingdom"
+  },
+  "Q146715": {
+   "ar": "إيليريون",
+   "en": "Illyrians",
+   "desc_ar": "مجموعة من القبائل الهندية الأوروبية عاشت في العصور القديمة",
+   "desc_en": "ancient Western Balkanic tribes",
+   "p31": [
+    "Q4204501"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "إيلوريون",
+   "enwiki": "Illyrians"
+  },
+  "Q148": {
+   "ar": "الصين",
+   "en": "People's Republic of China",
+   "desc_ar": "دولة في شرق آسيا",
+   "desc_en": "country in East Asia",
+   "p31": [
+    "Q3624078",
+    "Q842112",
+    "Q859563",
+    "Q1520223",
+    "Q465613",
+    "Q118365",
+    "Q849866",
+    "Q6256",
+    "Q185145",
+    "Q10711424"
+   ],
+   "inception": [
+    "+1949-10-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الصين",
+   "enwiki": "China"
+  },
+  "Q1493185": {
+   "ar": null,
+   "en": "Tonkawa",
+   "desc_ar": null,
+   "desc_en": "Native American Nation",
+   "p31": [
+    "Q7840353",
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Tonkawa"
+  },
+  "Q149386": {
+   "ar": "فريغيون",
+   "en": "Phrygians",
+   "desc_ar": null,
+   "desc_en": "ancient Indo-European speaking people",
+   "p31": [
+    "Q4204501"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "فريغيون",
+   "enwiki": "Phrygians"
+  },
+  "Q15116503": {
+   "ar": null,
+   "en": "Malese",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Malays"
+  },
+  "Q1546": {
+   "ar": "آيوا",
+   "en": "Iowa",
+   "desc_ar": "ولاية أمريكية في الغرب الأوسط الأمريكي",
+   "desc_en": "state of the United States of America",
+   "p31": [
+    "Q35657"
+   ],
+   "inception": [
+    "+1846-12-28T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "آيوا",
+   "enwiki": "Iowa"
+  },
+  "Q155": {
+   "ar": "البرازيل",
+   "en": "Brazil",
+   "desc_ar": "دولة فدرالية في أمريكا الجنوبية وتعد اكبر دولة في القارة",
+   "desc_en": "country in South America",
+   "p31": [
+    "Q3624078",
+    "Q859563",
+    "Q6256"
+   ],
+   "inception": [
+    "+1822-09-07T00:00:00Z",
+    "+1549-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "البرازيل",
+   "enwiki": "Brazil"
+  },
+  "Q155431": {
+   "ar": null,
+   "en": "Osage",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Osage"
+  },
+  "Q159": {
+   "ar": "روسيا",
+   "en": "Russia",
+   "desc_ar": "دولة تقع في شمال أوراسيا",
+   "desc_en": "country in Eastern Europe and Northern Asia, the largest in the world by area",
+   "p31": [
+    "Q3624078",
+    "Q859563",
+    "Q6256",
+    "Q1323642",
+    "Q127693126"
+   ],
+   "inception": [
+    "+1991-12-25T00:00:00Z",
+    "+0880-00-00T00:00:00Z",
+    "+1125-00-00T00:00:00Z",
+    "+1263-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "روسيا",
+   "enwiki": "Russia"
+  },
+  "Q16": {
+   "ar": "كندا",
+   "en": "Canada",
+   "desc_ar": "دولة في أمريكا الشمالية",
+   "desc_en": "country in North America",
+   "p31": [
+    "Q223832",
+    "Q202686",
+    "Q3624078",
+    "Q6256",
+    "Q43702"
+   ],
+   "inception": [
+    "+1867-07-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "كندا",
+   "enwiki": "Canada"
+  },
+  "Q160307": {
+   "ar": "الدولة الفاطمية",
+   "en": "Fatimid Caliphate",
+   "desc_ar": "دولة إسلامية سابقة، استمرت ما بين (297 – 567هـ / 909 – 1171م)",
+   "desc_en": "Egyptian Shia Islamic caliphate (909–1171)",
+   "p31": [
+    "Q131401",
+    "Q1323642",
+    "Q3024240",
+    "Q4204060"
+   ],
+   "inception": [
+    "+0909-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1171-01-01T00:00:00Z"
+   ],
+   "arwiki": "الدولة الفاطمية",
+   "enwiki": "Fatimid Caliphate"
+  },
+  "Q160440": {
+   "ar": "خانية القرم",
+   "en": "Crimean Khanate",
+   "desc_ar": "دولة سابقة ظهرت في شبه جزيرة القرم من 1441 حتى 1783",
+   "desc_en": "former state at the Crimean Peninsula until April 1783",
+   "p31": [
+    "Q3024240",
+    "Q331644"
+   ],
+   "inception": [
+    "+1441-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1783-04-19T00:00:00Z"
+   ],
+   "arwiki": "خانية القرم",
+   "enwiki": "Crimean Khanate"
+  },
+  "Q160687": {
+   "ar": "فالديفيا",
+   "en": "Valdivia",
+   "desc_ar": "مدينة في جنوب تشيلي",
+   "desc_en": "city in Chile",
+   "p31": [
+    "Q25412763",
+    "Q1549591"
+   ],
+   "inception": [
+    "+1552-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "فالديفيا",
+   "enwiki": "Valdivia"
+  },
+  "Q161062": {
+   "ar": "توغولاند",
+   "en": "Togoland",
+   "desc_ar": null,
+   "desc_en": "former protectorate of the German colonial empire in West Africa (1884–1914), divided between present-day Ghana and Togo",
+   "p31": [
+    "Q164142"
+   ],
+   "inception": [
+    "+1884-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1914-01-01T00:00:00Z"
+   ],
+   "arwiki": "توغولاند",
+   "enwiki": "Togoland"
+  },
+  "Q1611788": {
+   "ar": null,
+   "en": "Vijayanagara",
+   "desc_ar": "مستوطنة بشرية",
+   "desc_en": "now ruins, previously the capital of Vijayanagara Empire founded in the 14th century",
+   "p31": [
+    "Q839954",
+    "Q11514315"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Vijayanagara"
+  },
+  "Q16210895": {
+   "ar": null,
+   "en": "Mirning people",
+   "desc_ar": null,
+   "desc_en": "Aboriginal Australian people",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Mirning"
+  },
+  "Q1649306": {
+   "ar": "نياسالند",
+   "en": "Nyasaland",
+   "desc_ar": null,
+   "desc_en": "a British protectorate in Africa that was established in 1907 when the former British Central Africa Protectorate changed its name",
+   "p31": [
+    "Q21479969"
+   ],
+   "inception": [
+    "+1907-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1964-01-01T00:00:00Z"
+   ],
+   "arwiki": "نياسالند",
+   "enwiki": "Nyasaland"
+  },
+  "Q165192": {
+   "ar": "سويديون",
+   "en": "Swedes",
+   "desc_ar": null,
+   "desc_en": "ethnic group in Northern Europe",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "سويديون",
+   "enwiki": "Swedes"
+  },
+  "Q1653472": {
+   "ar": null,
+   "en": "Ifat",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Ifat"
+  },
+  "Q169977": {
+   "ar": "الحجاز",
+   "en": "Hejaz",
+   "desc_ar": "منطقة جغرافية في غرب شبه الجزيرة العربية",
+   "desc_en": "geographic region in western Arabia",
+   "p31": [
+    "Q82794",
+    "Q1620908"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "الحجاز",
+   "enwiki": "Hejaz"
+  },
+  "Q17": {
+   "ar": "اليابان",
+   "en": "Japan",
+   "desc_ar": "دولة جزرية في شرق آسيا",
+   "desc_en": "island country in East Asia",
+   "p31": [
+    "Q3624078",
+    "Q112099",
+    "Q6256"
+   ],
+   "inception": [
+    "-0660-02-11T00:00:00Z",
+    "+1890-11-29T00:00:00Z",
+    "+1947-05-03T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "اليابان",
+   "enwiki": "Japan"
+  },
+  "Q17252": {
+   "ar": "التبت",
+   "en": "Tibet",
+   "desc_ar": "منطقة جغرافية في آسيا",
+   "desc_en": "plateau region in west China",
+   "p31": [
+    "Q82794",
+    "Q878223",
+    "Q3502482",
+    "Q15239622"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "التبت",
+   "enwiki": "Tibet"
+  },
+  "Q172579": {
+   "ar": "مملكة إيطاليا",
+   "en": "Kingdom of Italy",
+   "desc_ar": "مملكة في جنوب أوروبا من عام 1861 إلى عام 1946",
+   "desc_en": "kingdom in Southern Europe from 1861 to 1946",
+   "p31": [
+    "Q3624078",
+    "Q3024240",
+    "Q20181813"
+   ],
+   "inception": [
+    "+1861-03-17T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1946-06-18T00:00:00Z"
+   ],
+   "arwiki": "مملكة إيطاليا",
+   "enwiki": "Kingdom of Italy"
+  },
+  "Q173082": {
+   "ar": "داقية",
+   "en": "Dacia",
+   "desc_ar": "منطقة تاريخية موجودة في رومانيا",
+   "desc_en": "Balkan kingdom of the Dacians (168 BC-106 AD)",
+   "p31": [
+    "Q3024240",
+    "Q28171280",
+    "Q1620908"
+   ],
+   "inception": [
+    "-0060-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0106-00-00T00:00:00Z"
+   ],
+   "arwiki": "داقية",
+   "enwiki": "Dacia"
+  },
+  "Q173282": {
+   "ar": "خزر",
+   "en": "Khazars",
+   "desc_ar": "شعب تركي قديم",
+   "desc_en": "historical semi-nomadic Turkic ethnic group",
+   "p31": [
+    "Q4204501"
+   ],
+   "inception": [
+    "+0618-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1048-01-01T00:00:00Z"
+   ],
+   "arwiki": "خزر",
+   "enwiki": "Khazars"
+  },
+  "Q173371": {
+   "ar": "البنتويون",
+   "en": "Bantu people",
+   "desc_ar": "مجموعات عرقية أفريقية",
+   "desc_en": "family of ethnolinguistic groups in Africa",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "بنتو (شعب)",
+   "enwiki": "Bantu peoples"
+  },
+  "Q174193": {
+   "ar": "المملكة المتحدة لبريطانيا العظمى وأيرلندا",
+   "en": "United Kingdom of Great Britain and Ireland",
+   "desc_ar": "دولة تاريخية ذات سيادة",
+   "desc_en": "historical sovereign state (1801–1922)",
+   "p31": [
+    "Q3624078",
+    "Q3024240",
+    "Q20181813"
+   ],
+   "inception": [
+    "+1801-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1927-04-12T00:00:00Z"
+   ],
+   "arwiki": "المملكة المتحدة لبريطانيا العظمى وأيرلندا",
+   "enwiki": "United Kingdom of Great Britain and Ireland"
+  },
+  "Q175064": {
+   "ar": "آراميون",
+   "en": "Arameans",
+   "desc_ar": null,
+   "desc_en": "ancient Semitic-speaking people in the Near East",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "آراميون",
+   "enwiki": "Arameans"
+  },
+  "Q176": {
+   "ar": "كبك",
+   "en": "Quebec",
+   "desc_ar": "إقليم كندي",
+   "desc_en": "province of Canada",
+   "p31": [
+    "Q11828004"
+   ],
+   "inception": [
+    "+1867-07-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "كيبك",
+   "enwiki": "Quebec"
+  },
+  "Q1774": {
+   "ar": "زنجبار",
+   "en": "Zanzibar Islands",
+   "desc_ar": "جزر في شرق افريقيا",
+   "desc_en": "semi-autonomous part of Tanzania",
+   "p31": [
+    "Q107390",
+    "Q56061"
+   ],
+   "inception": [
+    "+1964-04-26T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "زنجبار",
+   "enwiki": "Zanzibar"
+  },
+  "Q1801538": {
+   "ar": null,
+   "en": "Saami",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Saami"
+  },
+  "Q18097": {
+   "ar": "كوريا",
+   "en": "Korea",
+   "desc_ar": "منطقة جغرافية تقع في شرق آسيا",
+   "desc_en": "region in East Asia",
+   "p31": [
+    "Q82794",
+    "Q7275",
+    "Q3024240",
+    "Q11396118"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كوريا",
+   "enwiki": "Korea"
+  },
+  "Q1820260": {
+   "ar": null,
+   "en": "Pintupi",
+   "desc_ar": null,
+   "desc_en": "Australian Aboriginal group who are part of the Western Desert cultural group",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Pintupi"
+  },
+  "Q183": {
+   "ar": "ألمانيا",
+   "en": "Germany",
+   "desc_ar": "دولة في وسط غرب أوروبا",
+   "desc_en": "country in Central Europe",
+   "p31": [
+    "Q3624078",
+    "Q619610",
+    "Q4209223",
+    "Q63791824",
+    "Q6256"
+   ],
+   "inception": [
+    "+1949-05-23T00:00:00Z",
+    "+1933-00-00T00:00:00Z",
+    "+1918-00-00T00:00:00Z",
+    "+1871-01-01T00:00:00Z",
+    "+1867-07-01T00:00:00Z",
+    "+0641-00-00T00:00:00Z",
+    "+0800-12-25T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "ألمانيا",
+   "enwiki": "Germany"
+  },
+  "Q185068": {
+   "ar": "أورارتو",
+   "en": "Urartu",
+   "desc_ar": "مملكة تعود للعصر الحديدي، تقع في الهضبة الأرمينية",
+   "desc_en": "Iron Age kingdom located in a large region around Lake Van",
+   "p31": [
+    "Q3024240",
+    "Q28171280"
+   ],
+   "inception": [
+    "-0860-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "-0590-00-00T00:00:00Z"
+   ],
+   "arwiki": "أورارتو",
+   "enwiki": "Urartu"
+  },
+  "Q185221": {
+   "ar": "ملقا",
+   "en": "Malacca",
+   "desc_ar": "ثالث أصغر أقاليم ماليزيا",
+   "desc_en": "state of Malaysia",
+   "p31": [
+    "Q15063586"
+   ],
+   "inception": [
+    "+1948-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "ملقا",
+   "enwiki": "Malacca"
+  },
+  "Q185682": {
+   "ar": "الهند الصينية الفرنسية",
+   "en": "French Indochina",
+   "desc_ar": "منطقة نفوذ الاستعمار الفرنسي في جنوب شرق آسيا (1887 - 1954)",
+   "desc_en": "federal state in Southeast Asia",
+   "p31": [
+    "Q43702",
+    "Q3024240",
+    "Q133156"
+   ],
+   "inception": [
+    "+1887-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1954-01-01T00:00:00Z"
+   ],
+   "arwiki": "الهند الصينية الفرنسية",
+   "enwiki": "French Indochina"
+  },
+  "Q187985": {
+   "ar": "شعب التبت",
+   "en": "Tibetan people",
+   "desc_ar": null,
+   "desc_en": "East Asian ethnic group native to Tibet",
+   "p31": [
+    "Q41710",
+    "Q858804"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "شعب التبت",
+   "enwiki": "Tibetans"
+  },
+  "Q188161": {
+   "ar": "الهند الشرقية الهولندية",
+   "en": "Dutch East Indies",
+   "desc_ar": null,
+   "desc_en": "Dutch colony in Southeast Asia and Oceania (1800–1949)",
+   "p31": [
+    "Q3024240",
+    "Q133156"
+   ],
+   "inception": [
+    "+1800-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1945-08-17T00:00:00Z",
+    "+1949-12-27T00:00:00Z"
+   ],
+   "arwiki": "الهند الشرقية الهولندية",
+   "enwiki": "Dutch East Indies"
+  },
+  "Q188712": {
+   "ar": "إمبراطورية اليابان",
+   "en": "Empire of Japan",
+   "desc_ar": "إمبراطورية في آسيا المحيط الهادئ بين 1868-1947",
+   "desc_en": "empire in the Asia-Pacific region from 1868 to 1947",
+   "p31": [
+    "Q3024240",
+    "Q48349"
+   ],
+   "inception": [
+    "+1868-01-03T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1947-05-03T00:00:00Z"
+   ],
+   "arwiki": "إمبراطورية اليابان",
+   "enwiki": "Empire of Japan"
+  },
+  "Q188836": {
+   "ar": "شيونغنو",
+   "en": "Xiongnu",
+   "desc_ar": null,
+   "desc_en": "Ancient steppe empire north of China.",
+   "p31": [
+    "Q3024240",
+    "Q4204501"
+   ],
+   "inception": [
+    "-0300-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0500-00-00T00:00:00Z"
+   ],
+   "arwiki": "شيونغنو",
+   "enwiki": "Xiongnu"
+  },
+  "Q189": {
+   "ar": "آيسلندا",
+   "en": "Iceland",
+   "desc_ar": "إحدى الدول الإسكندنافية الجزرية الواقعة في شمال أوروبا",
+   "desc_en": "Nordic island country in the North Atlantic Ocean",
+   "p31": [
+    "Q112099",
+    "Q3624078",
+    "Q6256",
+    "Q140892892"
+   ],
+   "inception": [
+    "+1918-12-01T00:00:00Z",
+    "+1944-06-17T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "آيسلندا",
+   "enwiki": "Iceland"
+  },
+  "Q1986139": {
+   "ar": "الإمبراطورية الفرثية",
+   "en": "Parthian Empire",
+   "desc_ar": "إمبراطورية ساسية سكيثية تأسست سنة 247ق.م وسميت بالإمبراطورية الفرثية نسبة إلى مقاطعة فرثيا و انتهت في سنة 224م",
+   "desc_en": "second ancient Iranian Empire (247 BC–224 AD)",
+   "p31": [
+    "Q3024240",
+    "Q48349",
+    "Q816829"
+   ],
+   "inception": [
+    "-0247-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0224-00-00T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية الفرثية",
+   "enwiki": "Parthian Empire"
+  },
+  "Q199688": {
+   "ar": "الدولة الموحدية",
+   "en": "Almohad Caliphate",
+   "desc_ar": "دولة أمازيغية حكمت بلاد المغرب (شمال إفريقيا) والأندلس (1121 – 1269م)",
+   "desc_en": "1121–1269 Berber empire in North Africa and Iberia",
+   "p31": [
+    "Q131401",
+    "Q3024240"
+   ],
+   "inception": [
+    "+1121-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1269-01-01T00:00:00Z"
+   ],
+   "arwiki": "الدولة الموحدية",
+   "enwiki": "Almohad Caliphate"
+  },
+  "Q20": {
+   "ar": "النرويج",
+   "en": "Norway",
+   "desc_ar": "إحدى الدول الإسكندنافية الواقعة في شمال أوروبا",
+   "desc_en": "country in Northern Europe",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1905-10-26T00:00:00Z",
+    "+1814-05-17T00:00:00Z",
+    "+0900-00-00T00:00:00Z",
+    "+1905-06-07T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "النرويج",
+   "enwiki": "Norway"
+  },
+  "Q201705": {
+   "ar": "إمبراطورية الخمير",
+   "en": "Khmer Empire",
+   "desc_ar": null,
+   "desc_en": "802–1431 empire in Southeast Asia",
+   "p31": [
+    "Q48349",
+    "Q11042",
+    "Q11514315",
+    "Q3024240"
+   ],
+   "inception": [
+    "+0802-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1431-01-01T00:00:00Z"
+   ],
+   "arwiki": "إمبراطورية الخمير",
+   "enwiki": "Khmer Empire"
+  },
+  "Q205466": {
+   "ar": "كوكتورك",
+   "en": "Göktürks",
+   "desc_ar": "شعوب بدوية من الشعوب التركية في آسيا الداخلية في العصور الوسطى",
+   "desc_en": "Turkic people organized as a state in medieval Inner Asia",
+   "p31": [
+    "Q3024240",
+    "Q331644"
+   ],
+   "inception": [
+    "+0552-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0657-00-00T00:00:00Z"
+   ],
+   "arwiki": "كوكتورك",
+   "enwiki": "Göktürks"
+  },
+  "Q207761": {
+   "ar": "شعب البلطيق",
+   "en": "Balts",
+   "desc_ar": null,
+   "desc_en": "ethnic group",
+   "p31": [
+    "Q4533081"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "شعوب البلطيق",
+   "enwiki": "Balts"
+  },
+  "Q209217": {
+   "ar": "زيمبابوي العظمى",
+   "en": "Great Zimbabwe",
+   "desc_ar": "موقع أثري في منطقة ماسفينغو، زيمبابوي",
+   "desc_en": "ruined city in the south-eastern hills of Zimbabwe near Lake Mutirikwe and the town of Masvingo, was once the capital of the Kingdom of Zimbabwe during the country's Late Iron Age",
+   "p31": [
+    "Q109607",
+    "Q839954",
+    "Q515"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "زيمبابوي العظمى",
+   "enwiki": "Great Zimbabwe"
+  },
+  "Q210551": {
+   "ar": "النيابة الملكية على ريو دي لا بلاتا",
+   "en": "Viceroyalty of the Río de la Plata",
+   "desc_ar": "نيابة ملكية تابعة للإمبراطورية الإسبانية في الأمريكتين (1776-1814)",
+   "desc_en": "(1776-1814) Viceroyalty of the Spanish Empire in America",
+   "p31": [
+    "Q20203507"
+   ],
+   "inception": [
+    "+1776-08-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1810-00-00T00:00:00Z"
+   ],
+   "arwiki": "النيابة الملكية على ريو دي لا بلاتا",
+   "enwiki": "Viceroyalty of the Río de la Plata"
+  },
+  "Q210682": {
+   "ar": "غرب إفريقيا الفرنسي",
+   "en": "French West Africa",
+   "desc_ar": "الاتحاد الاستعماري الفرنسي في غرب إفريقيا من عام 1895 إلى عام 1958",
+   "desc_en": "French colonial federation in west Africa from 1895 to 1958",
+   "p31": [
+    "Q43702",
+    "Q56061",
+    "Q55097243"
+   ],
+   "inception": [
+    "+1895-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1958-10-04T00:00:00Z"
+   ],
+   "arwiki": "غرب إفريقيا الفرنسي",
+   "enwiki": "French West Africa"
+  },
+  "Q211435": {
+   "ar": "النيابة الملكية على بيرو",
+   "en": "Viceroyalty of Peru",
+   "desc_ar": null,
+   "desc_en": "viceroyalty of the Spanish Empire",
+   "p31": [
+    "Q20203507"
+   ],
+   "inception": [
+    "+1542-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1824-01-01T00:00:00Z"
+   ],
+   "arwiki": "النيابة الملكية على بيرو",
+   "enwiki": "Viceroyalty of Peru"
+  },
+  "Q212": {
+   "ar": "أوكرانيا",
+   "en": "Ukraine",
+   "desc_ar": "دولة في شرق أوروبا",
+   "desc_en": "country in Eastern Europe",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q179164",
+    "Q7270",
+    "Q619610",
+    "Q4209223",
+    "Q4835091"
+   ],
+   "inception": [
+    "+1991-08-24T00:00:00Z",
+    "+1917-11-07T00:00:00Z",
+    "+1919-03-10T00:00:00Z",
+    "+1648-00-00T00:00:00Z",
+    "+0900-00-00T00:00:00Z",
+    "+1199-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "أوكرانيا",
+   "enwiki": "Ukraine"
+  },
+  "Q213510": {
+   "ar": "الكونغو البلجيكية",
+   "en": "Belgian Congo",
+   "desc_ar": null,
+   "desc_en": "Belgian colony in Central Africa (1908–1960), established after international pressure forced Belgium to annex the Congo Free State following King Leopold II's brutal personal rule; now the Democratic Republic of the Congo",
+   "p31": [
+    "Q133156",
+    "Q19953632"
+   ],
+   "inception": [
+    "+1908-11-15T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1960-06-30T00:00:00Z"
+   ],
+   "arwiki": "الكونغو البلجيكية",
+   "enwiki": "Belgian Congo"
+  },
+  "Q2135412": {
+   "ar": null,
+   "en": "Wu",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Wu"
+  },
+  "Q216786": {
+   "ar": "تشامبا",
+   "en": "Champa",
+   "desc_ar": "مملكة قديمة والتي تشكل اليوم جزء من فيتنام",
+   "desc_en": "Civilization, comprised of multiple kingdoms, sometimes unified, sometimes not, in South-East Asia",
+   "p31": [
+    "Q1250464",
+    "Q48349",
+    "Q8432",
+    "Q1620908",
+    "Q3024240"
+   ],
+   "inception": [
+    "+0192-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1832-01-01T00:00:00Z"
+   ],
+   "arwiki": "تشامبا",
+   "enwiki": "Champa"
+  },
+  "Q217169": {
+   "ar": "رودسيا",
+   "en": "Rhodesia",
+   "desc_ar": null,
+   "desc_en": "unrecognised state in Southern Africa (1965–1979)",
+   "p31": [
+    "Q99541706",
+    "Q10711424"
+   ],
+   "inception": [
+    "+1965-11-11T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1979-06-01T00:00:00Z"
+   ],
+   "arwiki": "رودسيا",
+   "enwiki": "Rhodesia"
+  },
+  "Q217499": {
+   "ar": "ياماتو",
+   "en": "Yamato",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "ياماتو (توضيح)",
+   "enwiki": "Yamato"
+  },
+  "Q218": {
+   "ar": "رومانيا",
+   "en": "Romania",
+   "desc_ar": "دولة في جنوب شرق أوربا",
+   "desc_en": "country in Southeast Europe",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q179671"
+   ],
+   "inception": [
+    "+1330-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "رومانيا",
+   "enwiki": "Romania"
+  },
+  "Q219": {
+   "ar": "بلغاريا",
+   "en": "Bulgaria",
+   "desc_ar": "دولة في جنوب شرق أوروبا",
+   "desc_en": "country in southeast Europe",
+   "p31": [
+    "Q6256",
+    "Q179164",
+    "Q3624078"
+   ],
+   "inception": [
+    "+0681-00-00T00:00:00Z",
+    "+1878-07-13T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "بلغاريا",
+   "enwiki": "Bulgaria"
+  },
+  "Q2205751": {
+   "ar": null,
+   "en": "Segu",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Segu"
+  },
+  "Q223": {
+   "ar": "غرينلاند",
+   "en": "Greenland",
+   "desc_ar": "إقليم تابع لمملكة الدنمارك",
+   "desc_en": "autonomous territory of the Kingdom of Denmark and world's largest island",
+   "p31": [
+    "Q66724388",
+    "Q192611",
+    "Q112099",
+    "Q161243",
+    "Q788176",
+    "Q140892892"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "جرينلاند",
+   "enwiki": "Greenland"
+  },
+  "Q226570": {
+   "ar": null,
+   "en": "Ainu",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Ainu"
+  },
+  "Q2277": {
+   "ar": "الإمبراطورية الرومانية",
+   "en": "Roman Empire",
+   "desc_ar": "مرحلة ما بعد الجمهورية الرومانية، في الفتره ( 27 ق.م -395 ب.م )",
+   "desc_en": "period of Ancient Rome following the Republic",
+   "p31": [
+    "Q48349",
+    "Q11514315",
+    "Q3024240"
+   ],
+   "inception": [],
+   "dissolved": [
+    "+0476-10-04T00:00:00Z",
+    "+1453-00-00T00:00:00Z",
+    "+0395-01-17T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية الرومانية",
+   "enwiki": "Roman Empire"
+  },
+  "Q228591": {
+   "ar": "زولو",
+   "en": "Zulu",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "زولو (توضيح)",
+   "enwiki": "Zulu"
+  },
+  "Q230635": {
+   "ar": "ساحل الذهب",
+   "en": "Gold Coast",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "ساحل الذهب (توضيح)",
+   "enwiki": "Gold Coast"
+  },
+  "Q23159": {
+   "ar": "دورست",
+   "en": "Dorset",
+   "desc_ar": "مقاطعة في إنجلترا",
+   "desc_en": "ceremonial county in South West England, UK",
+   "p31": [
+    "Q180673"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "دورست",
+   "enwiki": "Dorset"
+  },
+  "Q232": {
+   "ar": "كازاخستان",
+   "en": "Kazakhstan",
+   "desc_ar": "دولة في آسيا الوسطى",
+   "desc_en": "sovereign state in Eastern Europe and Central Asia",
+   "p31": [
+    "Q3624078",
+    "Q179164",
+    "Q123480",
+    "Q140892892",
+    "Q6256"
+   ],
+   "inception": [
+    "+1991-00-00T00:00:00Z",
+    "+1936-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "كازاخستان",
+   "enwiki": "Kazakhstan"
+  },
+  "Q23808759": {
+   "ar": "الشعوب الناطقة بالسامية القديمة",
+   "en": "Ancient Semitic-speaking peoples",
+   "desc_ar": null,
+   "desc_en": "Western Asian people who resided in the ancient Near East until the end of antiquity",
+   "p31": [
+    "Q851990",
+    "Q15893266"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "الشعوب الناطقة بالسامية القديمة",
+   "enwiki": "Ancient Semitic-speaking peoples"
+  },
+  "Q241": {
+   "ar": "كوبا",
+   "en": "Cuba",
+   "desc_ar": "دولة جزرية في منطقة البحر الكاريبي",
+   "desc_en": "sovereign state situated on an island in the Caribbean Sea",
+   "p31": [
+    "Q112099",
+    "Q3624078",
+    "Q179164",
+    "Q849866",
+    "Q6256"
+   ],
+   "inception": [
+    "+1898-12-10T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "كوبا",
+   "enwiki": "Cuba"
+  },
+  "Q249598": {
+   "ar": null,
+   "en": "Wichita",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Wichita"
+  },
+  "Q24969823": {
+   "ar": null,
+   "en": "Suren Kingdom",
+   "desc_ar": null,
+   "desc_en": null,
+   "p31": [
+    "Q417175"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Suren Kingdom"
+  },
+  "Q251075": {
+   "ar": "سابا",
+   "en": "Saba",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "سابا (توضيح)",
+   "enwiki": "Saba"
+  },
+  "Q252": {
+   "ar": "إندونيسيا",
+   "en": "Indonesia",
+   "desc_ar": "دولة عابرة للقارات تقع في جنوب شرق آسيا و في أوقيانوسيا",
+   "desc_en": "island country in Southeast Asia and Oceania",
+   "p31": [
+    "Q3624078",
+    "Q11815167",
+    "Q1520223",
+    "Q112099",
+    "Q6256",
+    "Q99541706",
+    "Q179164"
+   ],
+   "inception": [
+    "+1945-08-17T00:00:00Z",
+    "+1949-12-27T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "إندونيسيا",
+   "enwiki": "Indonesia"
+  },
+  "Q253436": {
+   "ar": "شاوني",
+   "en": "Shawnee",
+   "desc_ar": null,
+   "desc_en": "federally recognized Native American Nation in Oklahoma, USA",
+   "p31": [
+    "Q3117863",
+    "Q41710",
+    "Q7840353"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "شاوني",
+   "enwiki": "Shawnee"
+  },
+  "Q258": {
+   "ar": "جنوب إفريقيا",
+   "en": "South Africa",
+   "desc_ar": "دولة في جنوب إفريقيا",
+   "desc_en": "country in southern Africa",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1910-05-31T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "جنوب إفريقيا",
+   "enwiki": "South Africa"
+  },
+  "Q262": {
+   "ar": "الجزائر",
+   "en": "Algeria",
+   "desc_ar": "دولة في شمال إفريقيا",
+   "desc_en": "country in North Africa",
+   "p31": [
+    "Q3624078",
+    "Q51576574",
+    "Q6256"
+   ],
+   "inception": [
+    "+1962-07-05T00:00:00Z",
+    "+1962-07-03T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الجزائر",
+   "enwiki": "Algeria"
+  },
+  "Q2625916": {
+   "ar": "حضارة غاندهارا",
+   "en": "Gandhara grave culture",
+   "desc_ar": null,
+   "desc_en": "aspect of Pakistani history",
+   "p31": [
+    "Q465299"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Gandhara grave culture"
+  },
+  "Q264942": {
+   "ar": null,
+   "en": "Oromo",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Oromo"
+  },
+  "Q265": {
+   "ar": "أوزبكستان",
+   "en": "Uzbekistan",
+   "desc_ar": "دولة في آسيا الوسطى",
+   "desc_en": "sovereign state in Central Asia",
+   "p31": [
+    "Q3624078",
+    "Q136361597",
+    "Q6256"
+   ],
+   "inception": [
+    "+1991-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "أوزبكستان",
+   "enwiki": "Uzbekistan"
+  },
+  "Q271894": {
+   "ar": "أفريقيا الاستوائية الفرنسية",
+   "en": "French Equatorial Africa",
+   "desc_ar": null,
+   "desc_en": "former federation of French colonial possessions in Central Africa",
+   "p31": [
+    "Q133156"
+   ],
+   "inception": [
+    "+1910-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1958-01-01T00:00:00Z"
+   ],
+   "arwiki": "إفريقيا الاستوائية الفرنسية",
+   "enwiki": "French Equatorial Africa"
+  },
+  "Q273874": {
+   "ar": "الدولة البويهية",
+   "en": "Buyid dynasty",
+   "desc_ar": "سلالة من الديلم هيمنت على الخلافة العبَّاسيَّة ودام حكمهم ما بين سنتيّ 934 و 1062م",
+   "desc_en": "Iranian dynasty ruling of central and western Iran (934–1062)",
+   "p31": [
+    "Q164950",
+    "Q3024240",
+    "Q417175"
+   ],
+   "inception": [
+    "+0934-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1062-00-00T00:00:00Z"
+   ],
+   "arwiki": "الدولة البويهية",
+   "enwiki": "Buyid dynasty"
+  },
+  "Q28": {
+   "ar": "المجر",
+   "en": "Hungary",
+   "desc_ar": "دولة في وسط أوروبا",
+   "desc_en": "country in Central Europe",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256",
+    "Q127693126"
+   ],
+   "inception": [
+    "+1000-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "المجر",
+   "enwiki": "Hungary"
+  },
+  "Q281117": {
+   "ar": null,
+   "en": "Koryaks",
+   "desc_ar": null,
+   "desc_en": "ethnic group",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Koryaks"
+  },
+  "Q28208": {
+   "ar": "مملكة غوريو",
+   "en": "Goryeo",
+   "desc_ar": null,
+   "desc_en": "ancient kingdom in the Korean peninsula (918–1392)",
+   "p31": [
+    "Q3024240",
+    "Q164950"
+   ],
+   "inception": [
+    "+0918-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1392-08-05T00:00:00Z"
+   ],
+   "arwiki": "مملكة غوريو",
+   "enwiki": "Goryeo"
+  },
+  "Q28573": {
+   "ar": "إنكا",
+   "en": "Inca Empire",
+   "desc_ar": "إمبراطورية قديمة في أمريكا الجنوبية",
+   "desc_en": "1438–1533 empire in South America",
+   "p31": [
+    "Q3024240"
+   ],
+   "inception": [
+    "+1438-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1533-01-01T00:00:00Z",
+    "+1572-00-00T00:00:00Z"
+   ],
+   "arwiki": "إمبراطورية الإنكا",
+   "enwiki": "Inca Empire"
+  },
+  "Q29": {
+   "ar": "إسبانيا",
+   "en": "Spain",
+   "desc_ar": "دولة في جنوب غرب أوروبا في شبه الجزيرة الأيبيرية",
+   "desc_en": "country in southwestern Europe with territories in Africa",
+   "p31": [
+    "Q3624078",
+    "Q1250464",
+    "Q6256",
+    "Q51576574",
+    "Q179671"
+   ],
+   "inception": [
+    "+1715-00-00T00:00:00Z",
+    "+1812-03-19T00:00:00Z",
+    "+1931-12-09T00:00:00Z",
+    "+1978-12-29T00:00:00Z",
+    "+1516-03-14T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "إسبانيا",
+   "enwiki": "Spain"
+  },
+  "Q2920081": {
+   "ar": null,
+   "en": "Viceroyalty of Brazil",
+   "desc_ar": null,
+   "desc_en": "Portuguese viceroyalty in Brazil 1763-1815",
+   "p31": [
+    "Q12356456"
+   ],
+   "inception": [
+    "+1763-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1808-00-00T00:00:00Z"
+   ],
+   "arwiki": null,
+   "enwiki": "Viceroyalty of Brazil"
+  },
+  "Q29317": {
+   "ar": "باغان",
+   "en": "Bagan",
+   "desc_ar": "موقع أثري في منطقة ماندالاي، ميانمار",
+   "desc_en": "ancient city in Myanmar",
+   "p31": [
+    "Q7830262",
+    "Q839954",
+    "Q15661340"
+   ],
+   "inception": [
+    "+0200-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "باغان",
+   "enwiki": "Bagan"
+  },
+  "Q298": {
+   "ar": "تشيلي",
+   "en": "Chile",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "country in South America",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q6266",
+    "Q5255892",
+    "Q1323642"
+   ],
+   "inception": [
+    "+1810-09-18T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "تشيلي",
+   "enwiki": "Chile"
+  },
+  "Q298683": {
+   "ar": null,
+   "en": "UTE",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Ute"
+  },
+  "Q30": {
+   "ar": "الولايات المتحدة",
+   "en": "United States",
+   "desc_ar": "دولة في أمريكا الشمالية",
+   "desc_en": "country located primarily in North America",
+   "p31": [
+    "Q3624078",
+    "Q1489259",
+    "Q6256",
+    "Q99541706",
+    "Q1520223",
+    "Q5035794"
+   ],
+   "inception": [
+    "+1776-07-04T00:00:00Z",
+    "+1784-05-12T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الولايات المتحدة",
+   "enwiki": "United States"
+  },
+  "Q3123073": {
+   "ar": null,
+   "en": "Vazimba",
+   "desc_ar": null,
+   "desc_en": "ethnic group from Madagascar",
+   "p31": [
+    "Q41710",
+    "Q27863646"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Vazimba"
+  },
+  "Q319984": {
+   "ar": "الصومال الإيطالي",
+   "en": "Italian Somaliland",
+   "desc_ar": "مستعمرة أفريقية",
+   "desc_en": "colony of the Kingdom of Italy in Somalia",
+   "p31": [
+    "Q133156",
+    "Q19953632"
+   ],
+   "inception": [
+    "+1880-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1936-01-01T00:00:00Z"
+   ],
+   "arwiki": "الصومال الإيطالي",
+   "enwiki": "Italian Somaliland"
+  },
+  "Q3245102": {
+   "ar": null,
+   "en": "Warumungu people",
+   "desc_ar": null,
+   "desc_en": "Australian Indigenous people",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Warumungu"
+  },
+  "Q324516": {
+   "ar": "تشوكتاو",
+   "en": "Choctaw",
+   "desc_ar": null,
+   "desc_en": "Native American people originally from the Southeastern United States",
+   "p31": [
+    "Q133311"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "تشوكتاو",
+   "enwiki": "Choctaw"
+  },
+  "Q33": {
+   "ar": "فنلندا",
+   "en": "Finland",
+   "desc_ar": "دولة في أوروبا الشمالية",
+   "desc_en": "country in Northern Europe",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q179164",
+    "Q63791824"
+   ],
+   "inception": [
+    "+1917-12-06T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "فنلندا",
+   "enwiki": "Finland"
+  },
+  "Q331789": {
+   "ar": "شعب كرو",
+   "en": "Crow Nation",
+   "desc_ar": null,
+   "desc_en": "federally recognized Native American Nation",
+   "p31": [
+    "Q41710",
+    "Q7840353"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "شعب الكرو",
+   "enwiki": "Crow people"
+  },
+  "Q33296": {
+   "ar": "سلطنة مغول الهند",
+   "en": "Mughal Empire",
+   "desc_ar": "أخر الدول والامبراطوريات الاسلامية في الهند، أسسها ظهير الدين بابر 1526م",
+   "desc_en": "great Turkic descent empire ruling India (1526–1857)",
+   "p31": [
+    "Q48349",
+    "Q7275",
+    "Q3024240"
+   ],
+   "inception": [
+    "+1526-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1857-09-21T00:00:00Z"
+   ],
+   "arwiki": "سلطنة مغول الهند",
+   "enwiki": "Mughal Empire"
+  },
+  "Q33946": {
+   "ar": "تشيكوسلوفاكيا",
+   "en": "Czechoslovakia",
+   "desc_ar": "دولة زائلة كانت ذات سيادة في أوروبا الوسطى (1918-1992)",
+   "desc_en": "country in Central Europe (1918–1992)",
+   "p31": [
+    "Q3624078",
+    "Q3024240"
+   ],
+   "inception": [
+    "+1918-10-28T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1992-12-31T00:00:00Z"
+   ],
+   "arwiki": "تشيكوسلوفاكيا",
+   "enwiki": "Czechoslovakia"
+  },
+  "Q34": {
+   "ar": "السويد",
+   "en": "Sweden",
+   "desc_ar": "دولة في أوروبا",
+   "desc_en": "country in Northern Europe",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q179164",
+    "Q63791824",
+    "Q41614"
+   ],
+   "inception": [
+    "+0900-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "السويد",
+   "enwiki": "Sweden"
+  },
+  "Q34266": {
+   "ar": "الإمبراطورية الروسية",
+   "en": "Russian Empire",
+   "desc_ar": "إمبراطورية شملت روسيا وما جاورها",
+   "desc_en": "former empire in Eurasia and North America (1721–1917)",
+   "p31": [
+    "Q48349",
+    "Q3624078",
+    "Q3024240",
+    "Q1323642",
+    "Q6256"
+   ],
+   "inception": [
+    "+1721-10-22T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1917-09-01T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية الروسية",
+   "enwiki": "Russian Empire"
+  },
+  "Q347087": {
+   "ar": null,
+   "en": "Adal",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Adal"
+  },
+  "Q34800": {
+   "ar": "سنجان",
+   "en": "Xinjiang",
+   "desc_ar": "إحدى مقاطعات الصين وأكبرهم بالمساحة وذات غالبية مسلمة",
+   "desc_en": "autonomous region in China",
+   "p31": [
+    "Q57362"
+   ],
+   "inception": [
+    "+1955-10-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "شينجيانغ",
+   "enwiki": "Xinjiang"
+  },
+  "Q35": {
+   "ar": "الدنمارك",
+   "en": "Denmark",
+   "desc_ar": "إحدى الدول الإسكندنافية الواقعة في شمال أوروبا",
+   "desc_en": "country in Northern Europe",
+   "p31": [
+    "Q7275",
+    "Q20181813",
+    "Q63791824",
+    "Q6256",
+    "Q66724388"
+   ],
+   "inception": [
+    "+0800-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الدنمارك",
+   "enwiki": "Denmark"
+  },
+  "Q35170": {
+   "ar": "أمة كادو",
+   "en": "Caddo",
+   "desc_ar": "اتحاد عدة قبائل من السكان الأصليين في جنوب شرق أمريكا",
+   "desc_en": "confederacy of several Southeastern Native American tribes",
+   "p31": [
+    "Q133311",
+    "Q26883974",
+    "Q7840353"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Caddo"
+  },
+  "Q354307": {
+   "ar": null,
+   "en": "Malaya",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Malaya"
+  },
+  "Q354425": {
+   "ar": null,
+   "en": "Luba",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Luba"
+  },
+  "Q3561": {
+   "ar": "الجزائر العاصمة",
+   "en": "Algiers",
+   "desc_ar": "عاصمة الجزائر",
+   "desc_en": "capital city of Algeria",
+   "p31": [
+    "Q486972",
+    "Q515",
+    "Q5119"
+   ],
+   "inception": [
+    "+0944-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الجزائر (مدينة)",
+   "enwiki": "Algiers"
+  },
+  "Q356524": {
+   "ar": "كالينغا",
+   "en": "Kalinga",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كالينغا (توضيح)",
+   "enwiki": "Kalinga"
+  },
+  "Q3586": {
+   "ar": "جاوة الشرقية",
+   "en": "East Java",
+   "desc_ar": "إقليم إندونيسي في جزيرة جاوة",
+   "desc_en": "province of Indonesia, on island of Java",
+   "p31": [
+    "Q5098"
+   ],
+   "inception": [
+    "+1950-02-25T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "جاوة الشرقية",
+   "enwiki": "East Java"
+  },
+  "Q35930": {
+   "ar": "كونغو",
+   "en": "Congo",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كونغو (توضيح)",
+   "enwiki": "Congo"
+  },
+  "Q36": {
+   "ar": "بولندا",
+   "en": "Poland",
+   "desc_ar": "دولة في أوروبا الوسطى",
+   "desc_en": "country in Central Europe",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q63791824",
+    "Q127693126"
+   ],
+   "inception": [
+    "+1000-00-00T00:00:00Z",
+    "+1918-11-11T00:00:00Z",
+    "+0960-00-00T00:00:00Z",
+    "+1025-00-00T00:00:00Z",
+    "+1807-00-00T00:00:00Z",
+    "+1815-00-00T00:00:00Z",
+    "+1917-01-14T00:00:00Z",
+    "+1918-11-00T00:00:00Z",
+    "+1947-07-22T00:00:00Z",
+    "+1989-12-31T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "بولندا",
+   "enwiki": "Poland"
+  },
+  "Q361392": {
+   "ar": null,
+   "en": "Bega",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Bega"
+  },
+  "Q3636023": {
+   "ar": "بيجابور",
+   "en": "Vijayapura",
+   "desc_ar": "مستوطنة في الهند",
+   "desc_en": "city in Karnataka, India",
+   "p31": [
+    "Q486972",
+    "Q515",
+    "Q1549591"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "بيجابور (كرناتكا)",
+   "enwiki": "Bijapur"
+  },
+  "Q36704": {
+   "ar": "يوغوسلافيا",
+   "en": "Yugoslavia",
+   "desc_ar": "دولة سابقة في جنوب شرق أوروبا",
+   "desc_en": "1918–1992 country in Southeastern Europe",
+   "p31": [
+    "Q3024240",
+    "Q3624078",
+    "Q51576574"
+   ],
+   "inception": [
+    "+1918-12-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1992-04-27T00:00:00Z"
+   ],
+   "arwiki": "يوغسلافيا",
+   "enwiki": "Yugoslavia"
+  },
+  "Q37211": {
+   "ar": "السند",
+   "en": "Sindh",
+   "desc_ar": "أحد أقاليم باكستان الأربع يقع في جنوب شرق باكستان، عاصمته كراتشي",
+   "desc_en": "province of Pakistan",
+   "p31": [
+    "Q15058985"
+   ],
+   "inception": [
+    "+1947-08-14T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "السند (باكستان)",
+   "enwiki": "Sindh"
+  },
+  "Q38": {
+   "ar": "إيطاليا",
+   "en": "Italy",
+   "desc_ar": "دولة في جنوب غرب أوروبا",
+   "desc_en": "country in southern Europe",
+   "p31": [
+    "Q6256",
+    "Q3624078",
+    "Q619610",
+    "Q179164",
+    "Q7270",
+    "Q51576574"
+   ],
+   "inception": [
+    "+1946-06-18T00:00:00Z",
+    "+1861-03-17T00:00:00Z",
+    "+0476-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "إيطاليا",
+   "enwiki": "Italy"
+  },
+  "Q3877527": {
+   "ar": null,
+   "en": "Mardu",
+   "desc_ar": "قرية في المملكة المتحدة",
+   "desc_en": "village in Shropshire, United Kingdom",
+   "p31": [
+    "Q532"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Mardu"
+  },
+  "Q388450": {
+   "ar": "زاغ",
+   "en": "crow",
+   "desc_ar": "طائر من جنس الغراب",
+   "desc_en": "bird of the genus Corvus, or more broadly a synonym for all of Corvus",
+   "p31": [
+    "Q55983715"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "زاغ",
+   "enwiki": "Crow"
+  },
+  "Q38872": {
+   "ar": "بروسيا",
+   "en": "Prussia",
+   "desc_ar": "دولة فى أوروبا المركزية ما بين عامي (1525) و (1947)",
+   "desc_en": "common term for the Duchy, the Kingdom and the Free State of Prussia (1525–1947)",
+   "p31": [
+    "Q3024240",
+    "Q3624078",
+    "Q113136497"
+   ],
+   "inception": [
+    "+1525-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1947-02-25T00:00:00Z",
+    "+1933-00-00T00:00:00Z"
+   ],
+   "arwiki": "بروسيا",
+   "enwiki": "Prussia"
+  },
+  "Q3929733": {
+   "ar": "راجفوتانة",
+   "en": "Rajputana",
+   "desc_ar": "إقليمٌ يقع شمال غرب الهند",
+   "desc_en": "extensive region in the northwest of India",
+   "p31": [
+    "Q4835091"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Rajputana"
+  },
+  "Q396480": {
+   "ar": null,
+   "en": "Chukchi",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Chukchi"
+  },
+  "Q397528": {
+   "ar": null,
+   "en": "Bantu",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Bantu"
+  },
+  "Q397777": {
+   "ar": "ماوري",
+   "en": "Maori",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "ماوري (توضيح)",
+   "enwiki": "Māori"
+  },
+  "Q399": {
+   "ar": "أرمينيا",
+   "en": "Armenia",
+   "desc_ar": "دولة في غرب آسيا و شرق أوروبا",
+   "desc_en": "sovereign state in the South Caucasus region of Eurasia",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256",
+    "Q140892892"
+   ],
+   "inception": [
+    "+1991-09-23T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "أرمينيا",
+   "enwiki": "Armenia"
+  },
+  "Q399871": {
+   "ar": null,
+   "en": "Songhai",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Songhai"
+  },
+  "Q4018210": {
+   "ar": null,
+   "en": "Warlpiri",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Warlpiri"
+  },
+  "Q402075": {
+   "ar": "كاتاوبا",
+   "en": "Catawba",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كاتاوبا (توضيح)",
+   "enwiki": "Catawba"
+  },
+  "Q404350": {
+   "ar": "سانتي",
+   "en": "Santee",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "سانتي (توضيح)",
+   "enwiki": "Santee"
+  },
+  "Q408": {
+   "ar": "أستراليا",
+   "en": "Australia",
+   "desc_ar": "دولة في أوقيانوسيا",
+   "desc_en": "country in Oceania",
+   "p31": [
+    "Q202686",
+    "Q223832",
+    "Q3624078",
+    "Q43702",
+    "Q6256"
+   ],
+   "inception": [
+    "+1901-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "أستراليا",
+   "enwiki": "Australia"
+  },
+  "Q408474": {
+   "ar": "باوني",
+   "en": "Pawnee",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "باوني (توضيح)",
+   "enwiki": "Pawnee"
+  },
+  "Q41": {
+   "ar": "اليونان",
+   "en": "Greece",
+   "desc_ar": "دولة في جنوب شرق أوروبا",
+   "desc_en": "country in Southeast Europe",
+   "p31": [
+    "Q3624078",
+    "Q179164",
+    "Q51576574",
+    "Q6256",
+    "Q619610",
+    "Q4209223",
+    "Q7275"
+   ],
+   "inception": [
+    "+1821-03-25T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "اليونان",
+   "enwiki": "Greece"
+  },
+  "Q41137": {
+   "ar": "آشور",
+   "en": "Assyrian Empire",
+   "desc_ar": "حضارة قديمة قامت في العراق",
+   "desc_en": "major Mesopotamian East Semitic kingdom",
+   "p31": [
+    "Q3024240",
+    "Q48349"
+   ],
+   "inception": [
+    "-2025-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "-0609-00-00T00:00:00Z"
+   ],
+   "arwiki": "آشور",
+   "enwiki": "Assyria"
+  },
+  "Q411834": {
+   "ar": null,
+   "en": "Muskogee",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Muskogee"
+  },
+  "Q414": {
+   "ar": "الأرجنتين",
+   "en": "Argentina",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "country in South America",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q6266",
+    "Q10551526",
+    "Q140892892"
+   ],
+   "inception": [
+    "+1816-07-09T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الأرجنتين",
+   "enwiki": "Argentina"
+  },
+  "Q416133": {
+   "ar": null,
+   "en": "Liao",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Liao"
+  },
+  "Q417070": {
+   "ar": null,
+   "en": "Lunda",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Lunda"
+  },
+  "Q41741": {
+   "ar": "تراقيا",
+   "en": "Thrace",
+   "desc_ar": "منطقة تاريخية وجغرافية تقع جنوب شرقي البلقان",
+   "desc_en": "geographical and historical region in Southeast Europe",
+   "p31": [
+    "Q1620908",
+    "Q28171280"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "تراقيا",
+   "enwiki": "Thrace"
+  },
+  "Q419": {
+   "ar": "بيرو",
+   "en": "Peru",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "sovereign state in South America",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1821-07-28T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "بيرو",
+   "enwiki": "Peru"
+  },
+  "Q422776": {
+   "ar": null,
+   "en": "Kanem",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Kanem"
+  },
+  "Q424": {
+   "ar": "كمبوديا",
+   "en": "Cambodia",
+   "desc_ar": "دولة في جنوب شرق آسيا",
+   "desc_en": "country in Southeast Asia",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q1250464"
+   ],
+   "inception": [
+    "+1953-11-09T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "كمبوديا",
+   "enwiki": "Cambodia"
+  },
+  "Q4246708": {
+   "ar": null,
+   "en": "Brushed Ceramics Culture",
+   "desc_ar": null,
+   "desc_en": "European Bronze Age archaeological culture",
+   "p31": [
+    "Q465299"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Brushed Pottery culture"
+  },
+  "Q43": {
+   "ar": "تركيا",
+   "en": "Turkey",
+   "desc_ar": "دولة يقع معظمها في غرب آسيا و جزء منها في جنوب شرق أوروبا",
+   "desc_en": "country in West Asia and Southeast Europe",
+   "p31": [
+    "Q3624078",
+    "Q1323642",
+    "Q51576574",
+    "Q6256",
+    "Q619610",
+    "Q339834",
+    "Q859563",
+    "Q127693126"
+   ],
+   "inception": [
+    "+1923-10-29T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "تركيا",
+   "enwiki": "Turkey"
+  },
+  "Q430309": {
+   "ar": null,
+   "en": "Dai Viet",
+   "desc_ar": null,
+   "desc_en": "Name of Vietnamese monarchy (1054 - 1400; 1428 - 1804)",
+   "p31": [
+    "Q417175",
+    "Q3024240"
+   ],
+   "inception": [
+    "+1054-00-00T00:00:00Z",
+    "+1428-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1400-00-00T00:00:00Z",
+    "+1805-00-00T00:00:00Z"
+   ],
+   "arwiki": null,
+   "enwiki": "Đại Việt"
+  },
+  "Q43287": {
+   "ar": "الإمبراطورية الألمانية",
+   "en": "German Empire",
+   "desc_ar": "إمبراطورية في وسط أوروبا بين 1871-1918",
+   "desc_en": "German nation-state in Central Europe from 1871 to 1918",
+   "p31": [
+    "Q11514315",
+    "Q3024240",
+    "Q3624078",
+    "Q48349"
+   ],
+   "inception": [
+    "+1871-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1918-11-09T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية الألمانية",
+   "enwiki": "German Empire"
+  },
+  "Q449615": {
+   "ar": null,
+   "en": "Alwa",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Alwa"
+  },
+  "Q45": {
+   "ar": "البرتغال",
+   "en": "Portugal",
+   "desc_ar": "دولة في جنوب غرب أوروبا في شبه الجزيرة الأيبيرية",
+   "desc_en": "country in Southwestern Europe",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q20181813",
+    "Q140892892"
+   ],
+   "inception": [
+    "+1139-07-25T00:00:00Z",
+    "+1143-10-05T00:00:00Z",
+    "+1128-06-24T00:00:00Z",
+    "+1179-05-23T00:00:00Z",
+    "+0868-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "البرتغال",
+   "enwiki": "Portugal"
+  },
+  "Q45315": {
+   "ar": "الأمازيغ",
+   "en": "Berbers",
+   "desc_ar": "مجموعة عرقية في شمال إفريقيا",
+   "desc_en": "ethnic group indigenous to North Africa",
+   "p31": [
+    "Q41710",
+    "Q4533081"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "أمازيغ",
+   "enwiki": "Berbers"
+  },
+  "Q459387": {
+   "ar": "كويسان",
+   "en": "Khoisan",
+   "desc_ar": "من أهالي جنوب إفريقيا",
+   "desc_en": "African ethnic group",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كويسان",
+   "enwiki": "Khoisan"
+  },
+  "Q46118": {
+   "ar": "أويغور",
+   "en": "Uyghurs",
+   "desc_ar": "أقلية تركية تنتمي ثقافيًا وجغرافيًا لوسط آسيا وشرقها",
+   "desc_en": "Turkic ethnic group of Central and East Asia",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "أويغور",
+   "enwiki": "Uyghurs"
+  },
+  "Q46733": {
+   "ar": "دارفور",
+   "en": "Darfur",
+   "desc_ar": "إقليم دارفور",
+   "desc_en": "region of Sudan",
+   "p31": [
+    "Q28070554"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "دارفور",
+   "enwiki": "Darfur"
+  },
+  "Q4702431": {
+   "ar": "الحبشة",
+   "en": "Abyssinia",
+   "desc_ar": "منطقة تاريخية في المرتفعات الشمالية لإثيوبيا وإرتريا",
+   "desc_en": "ancient region in the northern highlands of Ethiopia and Eritrea",
+   "p31": [
+    "Q82794"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "الحبشة",
+   "enwiki": "Abyssinia"
+  },
+  "Q47690": {
+   "ar": "بلاد بابل",
+   "en": "Babylonia",
+   "desc_ar": "دولة قديمة قامت في جنوب بلاد ما بين النهرين",
+   "desc_en": "historical country",
+   "p31": [
+    "Q7275",
+    "Q3024240",
+    "Q3502482",
+    "Q28171280",
+    "Q96196009"
+   ],
+   "inception": [
+    "-1900-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "-0539-00-00T00:00:00Z"
+   ],
+   "arwiki": "بلاد بابل",
+   "enwiki": "Babylonia"
+  },
+  "Q48815031": {
+   "ar": null,
+   "en": "Iningai",
+   "desc_ar": null,
+   "desc_en": "Aboriginal Australian people",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Iningai"
+  },
+  "Q497568": {
+   "ar": null,
+   "en": "Innu people",
+   "desc_ar": null,
+   "desc_en": "First Nation in North America",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Innu"
+  },
+  "Q5011445": {
+   "ar": "سلتيأيبيرون",
+   "en": "Celtiberians",
+   "desc_ar": null,
+   "desc_en": "ancient Celtic peoples of the Iberian Peninsula",
+   "p31": [
+    "Q4204501"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "سلتيأيبيرون",
+   "enwiki": "Celtiberians"
+  },
+  "Q538677": {
+   "ar": "أنجيفن",
+   "en": "Angevin Empire",
+   "desc_ar": null,
+   "desc_en": "former collection of states in north-western Europe during the High Middle Ages",
+   "p31": [
+    "Q417175",
+    "Q188800",
+    "Q130533560"
+   ],
+   "inception": [
+    "+1154-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1242-00-00T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية الأنجوية",
+   "enwiki": "Angevin Empire"
+  },
+  "Q5406": {
+   "ar": "حيثيون",
+   "en": "Hittites",
+   "desc_ar": "شعب عاش في الأناضول وذكر في الكتاب المقدس العبري",
+   "desc_en": "Anatolian ethnic group who built kingdoms at Kussara & Hattusa (c. 2000-700 BCE)",
+   "p31": [
+    "Q4204501"
+   ],
+   "inception": [
+    "-1700-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "حيثيون",
+   "enwiki": "Hittites"
+  },
+  "Q541455": {
+   "ar": "السودان الإنجليزي المصري",
+   "en": "Anglo-Egyptian Sudan",
+   "desc_ar": "السودان تحت الحكم المشترك بين بريطانيا ومصر 1899 - 1956",
+   "desc_en": "Joint British and Egyptian rule between 1899-1956",
+   "p31": [
+    "Q3024240",
+    "Q734818"
+   ],
+   "inception": [
+    "+1899-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1956-01-01T00:00:00Z"
+   ],
+   "arwiki": "السودان الإنجليزي المصري",
+   "enwiki": "Anglo-Egyptian Sudan"
+  },
+  "Q564450": {
+   "ar": null,
+   "en": "Annam",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Annam"
+  },
+  "Q56585": {
+   "ar": null,
+   "en": "Mescalero",
+   "desc_ar": null,
+   "desc_en": "ethnic group in New Mexico, United States",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Mescalero"
+  },
+  "Q568523": {
+   "ar": "نوباتيا",
+   "en": "Nobatia",
+   "desc_ar": "مملكة مسيحية قديمة في السودان",
+   "desc_en": "former country in modern-day Sudan",
+   "p31": [
+    "Q3024240",
+    "Q417175"
+   ],
+   "inception": [
+    "+0400-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0650-00-00T00:00:00Z"
+   ],
+   "arwiki": "نوباتيا",
+   "enwiki": "Nobatia"
+  },
+  "Q5699": {
+   "ar": "أور",
+   "en": "Ur",
+   "desc_ar": "موقع أثري جنوب العراق",
+   "desc_en": "ancient Mesopotamian city-state",
+   "p31": [
+    "Q15661340",
+    "Q839954"
+   ],
+   "inception": [
+    "-3800-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "-0500-00-00T00:00:00Z"
+   ],
+   "arwiki": "أور",
+   "enwiki": "Ur"
+  },
+  "Q5767417": {
+   "ar": null,
+   "en": "Ngaanyatjarra",
+   "desc_ar": null,
+   "desc_en": "indigenous people in Western Australia",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Ngaanyatjarra"
+  },
+  "Q582779": {
+   "ar": "سيخ",
+   "en": "Sikh",
+   "desc_ar": "مجموعة دينية في وسط آسيا",
+   "desc_en": "Religious group",
+   "p31": [
+    "Q11197007"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "سيخ",
+   "enwiki": "Sikhs"
+  },
+  "Q5832": {
+   "ar": "أكسوم",
+   "en": "Axum",
+   "desc_ar": "مدينه في إثيوبيا",
+   "desc_en": "town in Tigray Region, Ethiopia",
+   "p31": [
+    "Q515",
+    "Q690840"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "أكسوم",
+   "enwiki": "Axum"
+  },
+  "Q61413166": {
+   "ar": null,
+   "en": "Wirangu",
+   "desc_ar": null,
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Wirangu"
+  },
+  "Q622728": {
+   "ar": "تشيكاساو",
+   "en": "Chickasaw",
+   "desc_ar": null,
+   "desc_en": "indigenous people of Southeastern Woodlands of the US",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "تشيكاساو",
+   "enwiki": "Chickasaw"
+  },
+  "Q622778": {
+   "ar": "تونكين",
+   "en": "Tonkin",
+   "desc_ar": "منطقة في فيتنام",
+   "desc_en": "northern part of Vietnam, to the west of the Gulf of Tonkin",
+   "p31": [
+    "Q82794",
+    "Q56061"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "تونكين (مدينة)",
+   "enwiki": "Tonkin"
+  },
+  "Q6250": {
+   "ar": "الصحراء الغربية",
+   "en": "Western Sahara",
+   "desc_ar": "منطقة مُتنازع عليها بشمال غرب إفريقيا",
+   "desc_en": "territory in North and West Africa",
+   "p31": [
+    "Q15239622",
+    "Q900119",
+    "Q2577883"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "الصحراء الغربية",
+   "enwiki": "Western Sahara"
+  },
+  "Q626136": {
+   "ar": "أراباهو",
+   "en": "Arapaho people",
+   "desc_ar": null,
+   "desc_en": "tribe of Native Americans historically living on the plains of Colorado and Wyoming",
+   "p31": [
+    "Q133311"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "أراباهو",
+   "enwiki": "Arapaho"
+  },
+  "Q631210": {
+   "ar": null,
+   "en": "Nogai Horde",
+   "desc_ar": null,
+   "desc_en": "former country",
+   "p31": [
+    "Q3024240",
+    "Q1345055"
+   ],
+   "inception": [
+    "+1440-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1634-01-01T00:00:00Z"
+   ],
+   "arwiki": null,
+   "enwiki": "Nogai Horde"
+  },
+  "Q6412614": {
+   "ar": null,
+   "en": "Kingdom of Kapisi",
+   "desc_ar": null,
+   "desc_en": "former country",
+   "p31": [
+    "Q3024240",
+    "Q1250464"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Kingdom of Kapisa"
+  },
+  "Q6426567": {
+   "ar": null,
+   "en": "Kokatha Mula",
+   "desc_ar": null,
+   "desc_en": "an Aboriginal Australian people of remote western South Australia",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Kokatha"
+  },
+  "Q644137": {
+   "ar": "هان",
+   "en": "Han",
+   "desc_ar": "صفحة توضيح في ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "هان",
+   "enwiki": "Han"
+  },
+  "Q6499777": {
+   "ar": "مجمع لوريل",
+   "en": "Laurel Complex",
+   "desc_ar": null,
+   "desc_en": "former Native American culture in upper midwest and Canada",
+   "p31": [
+    "Q465299"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "مجمع لوريل",
+   "enwiki": "Laurel complex"
+  },
+  "Q6500954": {
+   "ar": "زائير",
+   "en": "Zaire",
+   "desc_ar": "اسم قديم لجمهورية الكونغو الديمقراطية في الوقت الحالي والتي عاصمتها كينشاسا",
+   "desc_en": "one-party military dictatorship in Central Africa (1965–1997) under Mobutu Sese Seko; renamed Republic of Zaire in 1971 as part of Mobutu's Authenticité policy; formerly Belgian Congo, now Democratic Republic of the Congo",
+   "p31": [
+    "Q3024240",
+    "Q3624078",
+    "Q17524420",
+    "Q6256"
+   ],
+   "inception": [
+    "+1971-10-27T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1997-05-16T00:00:00Z"
+   ],
+   "arwiki": "زائير",
+   "enwiki": "Zaire"
+  },
+  "Q657": {
+   "ar": "تشاد",
+   "en": "Chad",
+   "desc_ar": "دولة في وسط أفريقيا",
+   "desc_en": "sovereign state in central Africa",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-08-11T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "تشاد",
+   "enwiki": "Chad"
+  },
+  "Q661423": {
+   "ar": "شعب بيوثوك",
+   "en": "Beothuk people",
+   "desc_ar": null,
+   "desc_en": "extinct indigenous people",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Beothuk"
+  },
+  "Q662653": {
+   "ar": "الصومال البريطاني",
+   "en": "British Somaliland",
+   "desc_ar": "محمية بريطانية سابقة تقع في شرق إفريقيا",
+   "desc_en": "former British protectorate",
+   "p31": [
+    "Q3024240",
+    "Q164142"
+   ],
+   "inception": [
+    "+1884-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1960-06-26T00:00:00Z"
+   ],
+   "arwiki": "الصومال البريطاني",
+   "enwiki": "British Somaliland"
+  },
+  "Q664": {
+   "ar": "نيوزيلندا",
+   "en": "New Zealand",
+   "desc_ar": "دولة جزرية في جنوب المحيط الهادئ",
+   "desc_en": "island country in the southwest Pacific Ocean",
+   "p31": [
+    "Q202686",
+    "Q223832",
+    "Q3624078",
+    "Q6256",
+    "Q112099",
+    "Q1351282",
+    "Q140892892"
+   ],
+   "inception": [
+    "+1986-12-13T00:00:00Z",
+    "+1907-09-26T00:00:00Z",
+    "+1841-05-03T00:00:00Z",
+    "+1947-11-25T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "نيوزيلندا",
+   "enwiki": "New Zealand"
+  },
+  "Q668": {
+   "ar": "الهند",
+   "en": "India",
+   "desc_ar": "دولة في جنوب آسيا",
+   "desc_en": "country in South Asia",
+   "p31": [
+    "Q6256",
+    "Q3624078",
+    "Q223832"
+   ],
+   "inception": [
+    "+1947-08-15T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الهند",
+   "enwiki": "India"
+  },
+  "Q668294": {
+   "ar": "الكاميرون الألمانية",
+   "en": "Kamerun",
+   "desc_ar": "الكاميرون الألمانية ‏ مستعمرة للإمبراطورية الألمانية بغرب أفريقيا من 1884-1916 في المنطقة التي هي اليوم جمهورية الكاميرون",
+   "desc_en": "West African colony of the German Empire from 1884 to 1916",
+   "p31": [
+    "Q3024240",
+    "Q133156"
+   ],
+   "inception": [
+    "+1884-07-12T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1919-01-01T00:00:00Z"
+   ],
+   "arwiki": "الكاميرون الألمانية",
+   "enwiki": "Kamerun"
+  },
+  "Q671008": {
+   "ar": "ثولي",
+   "en": "Thule",
+   "desc_ar": null,
+   "desc_en": "island in the far north in classical European literature",
+   "p31": [
+    "Q129264"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "ثولي",
+   "enwiki": "Thule"
+  },
+  "Q6734874": {
+   "ar": null,
+   "en": "Mahra",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Mahra"
+  },
+  "Q6747616": {
+   "ar": null,
+   "en": "Manchu Empire",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Manchu Empire"
+  },
+  "Q6792792": {
+   "ar": "موريطنيون",
+   "en": "Mauri people",
+   "desc_ar": "سكان موريطنية القديمة",
+   "desc_en": "Latin designation for the Berber population of Mauretania",
+   "p31": [
+    "Q3117863",
+    "Q2472587"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "موريطنيون",
+   "enwiki": "Mauri"
+  },
+  "Q6806806": {
+   "ar": null,
+   "en": "Chola Empire",
+   "desc_ar": null,
+   "desc_en": "South Indian kingdom (848 CE–1070 CE)",
+   "p31": [
+    "Q48349",
+    "Q3024240"
+   ],
+   "inception": [
+    "+0848-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1279-00-00T00:00:00Z"
+   ],
+   "arwiki": null,
+   "enwiki": "Chola Empire"
+  },
+  "Q689837": {
+   "ar": "أملاك إسبانيا في الصحراء",
+   "en": "Spanish Sahara",
+   "desc_ar": "منطقة الصحراء التي كانت تحت السيطرة الإسبانية من 1884 إلى 1976",
+   "desc_en": "former Spanish North African colonial possession",
+   "p31": [
+    "Q183366",
+    "Q3024240",
+    "Q41792036",
+    "Q17259945"
+   ],
+   "inception": [
+    "+1884-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1976-02-06T00:00:00Z"
+   ],
+   "arwiki": "الصحراء الإسبانية",
+   "enwiki": "Spanish Sahara"
+  },
+  "Q691": {
+   "ar": "بابوا غينيا الجديدة",
+   "en": "Papua New Guinea",
+   "desc_ar": "دولة في جنوب شرق آسيا",
+   "desc_en": "country in Oceania",
+   "p31": [
+    "Q202686",
+    "Q112099",
+    "Q6256",
+    "Q3624078",
+    "Q11815167",
+    "Q41614"
+   ],
+   "inception": [
+    "+1975-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "بابوا غينيا الجديدة",
+   "enwiki": "Papua New Guinea"
+  },
+  "Q69812": {
+   "ar": null,
+   "en": null,
+   "desc_ar": "بلدية في لاغونا، الفلبين",
+   "desc_en": "municipality of the Philippines in the province of Laguna",
+   "p31": [
+    "Q24764"
+   ],
+   "inception": [
+    "+1854-04-03T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Luisiana"
+  },
+  "Q7021970": {
+   "ar": null,
+   "en": "Nganasan",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Nganasan"
+  },
+  "Q70972": {
+   "ar": "مملكة فرنسا",
+   "en": "Kingdom of France",
+   "desc_ar": "مملكة في غرب أوروبا (987 - 1791)",
+   "desc_en": "monarchical state that ruled France from 987 to 1792, and again from 1814 to 1848 (except during the Hundred Days in 1815)",
+   "p31": [
+    "Q3624078",
+    "Q3024240",
+    "Q417175",
+    "Q20181813"
+   ],
+   "inception": [
+    "+0987-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1791-09-04T00:00:00Z"
+   ],
+   "arwiki": "مملكة فرنسا",
+   "enwiki": "Kingdom of France"
+  },
+  "Q711": {
+   "ar": "منغوليا",
+   "en": "Mongolia",
+   "desc_ar": "دولة في آسيا الوسطى و شرق آسيا",
+   "desc_en": "country in East Asia",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1911-01-01T00:00:00Z",
+    "+1992-02-12T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "منغوليا",
+   "enwiki": "Mongolia"
+  },
+  "Q717": {
+   "ar": "فنزويلا",
+   "en": "Venezuela",
+   "desc_ar": "دولة في أمريكا الجنوبية تطل على منطقة البحر الكاريبي",
+   "desc_en": "country in South America",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1811-07-05T00:00:00Z",
+    "+1845-03-30T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "فنزويلا",
+   "enwiki": "Venezuela"
+  },
+  "Q720954": {
+   "ar": null,
+   "en": "Asante",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Asante"
+  },
+  "Q730": {
+   "ar": "سورينام",
+   "en": "Suriname",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "country in South America",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q116052725"
+   ],
+   "inception": [
+    "+1975-11-25T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "سورينام",
+   "enwiki": "Suriname"
+  },
+  "Q733": {
+   "ar": "باراغواي",
+   "en": "Paraguay",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "sovereign state in South America",
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1811-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "باراغواي",
+   "enwiki": "Paraguay"
+  },
+  "Q734": {
+   "ar": "غيانا",
+   "en": "Guyana",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "country in South America",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1966-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "غيانا",
+   "enwiki": "Guyana"
+  },
+  "Q736": {
+   "ar": "الإكوادور",
+   "en": "Ecuador",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "sovereign state in South America",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1809-08-10T00:00:00Z",
+    "+1822-05-24T00:00:00Z",
+    "+1811-10-11T00:00:00Z",
+    "+1840-02-16T00:00:00Z",
+    "+1830-05-13T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الإكوادور",
+   "enwiki": "Ecuador"
+  },
+  "Q738395": {
+   "ar": "روبرتس لاند",
+   "en": "Rupert's Land",
+   "desc_ar": null,
+   "desc_en": "territory in British North America",
+   "p31": [
+    "Q183366"
+   ],
+   "inception": [
+    "+1670-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1870-07-15T00:00:00Z"
+   ],
+   "arwiki": "روبرتس لاند",
+   "enwiki": "Rupert's Land"
+  },
+  "Q739": {
+   "ar": "كولومبيا",
+   "en": "Colombia",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "country in South America",
+   "p31": [
+    "Q3624078",
+    "Q7270",
+    "Q859563",
+    "Q6256",
+    "Q140892892"
+   ],
+   "inception": [
+    "+1810-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "كولومبيا",
+   "enwiki": "Colombia"
+  },
+  "Q7391292": {
+   "ar": "هواء",
+   "en": "air",
+   "desc_ar": "غاز",
+   "desc_en": "homogeneous mixture of the gaseous substances nitrogen, oxygen, and smaller amounts of other substances; gas mixture present in the Earth's atmosphere",
+   "p31": [
+    "Q11432",
+    "Q169336",
+    "Q79529"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "هواء",
+   "enwiki": "Air"
+  },
+  "Q750": {
+   "ar": "بوليفيا",
+   "en": "Bolivia",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "sovereign state in South America",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1825-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "بوليفيا",
+   "enwiki": "Bolivia"
+  },
+  "Q77": {
+   "ar": "الأوروغواي",
+   "en": "Uruguay",
+   "desc_ar": "دولة في أمريكا الجنوبية",
+   "desc_en": "sovereign state in South America",
+   "p31": [
+    "Q3624078",
+    "Q859563",
+    "Q6256",
+    "Q1520223"
+   ],
+   "inception": [
+    "+1825-08-25T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "أوروغواي",
+   "enwiki": "Uruguay"
+  },
+  "Q774": {
+   "ar": "غواتيمالا",
+   "en": "Guatemala",
+   "desc_ar": "دولة في أمريكا الوسطى",
+   "desc_en": "sovereign state in Central America",
+   "p31": [
+    "Q3624078",
+    "Q7270",
+    "Q6256",
+    "Q171751"
+   ],
+   "inception": [
+    "+1821-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "غواتيمالا",
+   "enwiki": "Guatemala"
+  },
+  "Q783": {
+   "ar": "هندوراس",
+   "en": "Honduras",
+   "desc_ar": "دولة في أمريكا الوسطى",
+   "desc_en": "sovereign state in Central America",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1821-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "هندوراس",
+   "enwiki": "Honduras"
+  },
+  "Q79": {
+   "ar": "مصر",
+   "en": "Egypt",
+   "desc_ar": "دولة عربية تقع في شمال شرق إفريقيا وجنوب غرب آسيا",
+   "desc_en": "country in Northeast Africa and Southwest Asia",
+   "p31": [
+    "Q3624078",
+    "Q1323642",
+    "Q51576574",
+    "Q6256"
+   ],
+   "inception": [
+    "+1922-02-28T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "مصر",
+   "enwiki": "Egypt"
+  },
+  "Q793363": {
+   "ar": null,
+   "en": "Ayutthaya",
+   "desc_ar": null,
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Ayutthaya"
+  },
+  "Q794": {
+   "ar": "إيران",
+   "en": "Iran",
+   "desc_ar": "دولة في الشرق الأوسط",
+   "desc_en": "country in Western Asia",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q127693126"
+   ],
+   "inception": [
+    "+1979-04-01T00:00:00Z",
+    "-0550-00-00T00:00:00Z",
+    "-0247-00-00T00:00:00Z",
+    "+0224-00-00T00:00:00Z",
+    "+1925-12-15T00:00:00Z",
+    "+1785-00-00T00:00:00Z",
+    "+1501-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "إيران",
+   "enwiki": "Iran"
+  },
+  "Q796": {
+   "ar": "العراق",
+   "en": "Iraq",
+   "desc_ar": "دولة عربية في غرب آسيا",
+   "desc_en": "sovereign state in Western Asia",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1932-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "العراق",
+   "enwiki": "Iraq"
+  },
+  "Q80338": {
+   "ar": "بنغال",
+   "en": "Bengal",
+   "desc_ar": "منطقة تاريخية في الراج البريطاني تقع حاليا شرق الهند ودولة بنغلاديش",
+   "desc_en": "historical and geographical region in the east region of the Indian subcontinent",
+   "p31": [
+    "Q1620908",
+    "Q82794"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "بنغال",
+   "enwiki": "Bengal"
+  },
+  "Q805": {
+   "ar": "اليمن",
+   "en": "Yemen",
+   "desc_ar": "دولة عربية تقع في شبه الجزيرة العربية",
+   "desc_en": "country in West Asia",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1990-05-22T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "اليمن",
+   "enwiki": "Yemen"
+  },
+  "Q8070884": {
+   "ar": null,
+   "en": "Zhoa",
+   "desc_ar": "بلدة في الكاميرون",
+   "desc_en": "commune of Cameroon",
+   "p31": [
+    "Q3076994"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Zhoa"
+  },
+  "Q808139": {
+   "ar": "برغواطة",
+   "en": "Barghawata",
+   "desc_ar": "إمارة نشأت في المغرب من 744 إلى 1058",
+   "desc_en": "Amazigh (berber) ethnic group",
+   "p31": [
+    "Q41710",
+    "Q107410977"
+   ],
+   "inception": [
+    "+0744-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1058-00-00T00:00:00Z"
+   ],
+   "arwiki": "برغواطة",
+   "enwiki": "Barghawata"
+  },
+  "Q811": {
+   "ar": "نيكاراغوا",
+   "en": "Nicaragua",
+   "desc_ar": "دولة في أمريكا الوسطى",
+   "desc_en": "sovereign state in Central America",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1821-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "نيكاراغوا",
+   "enwiki": "Nicaragua"
+  },
+  "Q81126": {
+   "ar": "منشوريا",
+   "en": "Manchuria",
+   "desc_ar": "منطقة جغرافية واسعة في شرق آسيا في الصين وروسيا",
+   "desc_en": "geographic region in Northeast Asia",
+   "p31": [
+    "Q1620908"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "منشوريا",
+   "enwiki": "Manchuria"
+  },
+  "Q813": {
+   "ar": "قرغيزستان",
+   "en": "Kyrgyzstan",
+   "desc_ar": "دولة في آسيا الوسطى",
+   "desc_en": "sovereign state in Central Asia",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q7270",
+    "Q6256"
+   ],
+   "inception": [
+    "+1991-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "قرغيزستان",
+   "enwiki": "Kyrgyzstan"
+  },
+  "Q815677": {
+   "ar": "قارلوق",
+   "en": "Karluks",
+   "desc_ar": null,
+   "desc_en": "ethnic group",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "قارلوق",
+   "enwiki": "Karluks"
+  },
+  "Q819": {
+   "ar": "لاوس",
+   "en": "Laos",
+   "desc_ar": "دولة في جنوب شرق آسيا",
+   "desc_en": "country in Southeast Asia",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q849866",
+    "Q465613",
+    "Q6256"
+   ],
+   "inception": [
+    "+1949-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "لاوس",
+   "enwiki": "Laos"
+  },
+  "Q829300": {
+   "ar": null,
+   "en": "palas",
+   "desc_ar": null,
+   "desc_en": "German medieval castle hall",
+   "p31": [],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Palas"
+  },
+  "Q833": {
+   "ar": "ماليزيا",
+   "en": "Malaysia",
+   "desc_ar": "دولة في جنوب شرق آسيا",
+   "desc_en": "country in Southeast Asia",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q140892892"
+   ],
+   "inception": [
+    "+1963-09-16T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "ماليزيا",
+   "enwiki": "Malaysia"
+  },
+  "Q837": {
+   "ar": "نيبال",
+   "en": "Nepal",
+   "desc_ar": "دولة في جنوب آسيا",
+   "desc_en": "country in South Asia",
+   "p31": [
+    "Q123480",
+    "Q3624078",
+    "Q82794",
+    "Q6256",
+    "Q842112"
+   ],
+   "inception": [
+    "+1768-09-25T00:00:00Z",
+    "+2008-05-28T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "نيبال",
+   "enwiki": "Nepal"
+  },
+  "Q83891": {
+   "ar": "الإمبراطورية الساسانية",
+   "en": "Sasanian Empire",
+   "desc_ar": "إمبراطورية فارسية استمرت لأكثر من أربعة قرون من 224 إلى 651 م",
+   "desc_en": "last pre-Islamic Iranian empire (224–651 AD)",
+   "p31": [
+    "Q83311",
+    "Q3024240",
+    "Q816829"
+   ],
+   "inception": [
+    "+0224-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0651-01-01T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية الساسانية",
+   "enwiki": "Sasanian Empire"
+  },
+  "Q842": {
+   "ar": "سلطنة عمان",
+   "en": "Oman",
+   "desc_ar": "دولة في غرب آسيا",
+   "desc_en": "sovereign state in western Asia",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q12759805"
+   ],
+   "inception": [
+    "+1970-07-23T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "سلطنة عمان",
+   "enwiki": "Oman"
+  },
+  "Q843": {
+   "ar": "باكستان",
+   "en": "Pakistan",
+   "desc_ar": "دولة في جنوب آسيا",
+   "desc_en": "sovereign state in South Asia",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1947-08-14T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "باكستان",
+   "enwiki": "Pakistan"
+  },
+  "Q851": {
+   "ar": "السعودية",
+   "en": "Saudi Arabia",
+   "desc_ar": "دولة عربية تقع في شبه الجزيرة العربية غرب اسيا",
+   "desc_en": "country in West Asia",
+   "p31": [
+    "Q3624078",
+    "Q417175",
+    "Q6256"
+   ],
+   "inception": [
+    "+1727-00-00T00:00:00Z",
+    "+1447-00-00T00:00:00Z",
+    "+0622-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "السعودية",
+   "enwiki": "Saudi Arabia"
+  },
+  "Q851955": {
+   "ar": "بوندلخاند",
+   "en": "Bundelkhand",
+   "desc_ar": "منطقة جغرافية لوسط الهند",
+   "desc_en": "geographic region of central India",
+   "p31": [
+    "Q82794"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Bundelkhand"
+  },
+  "Q8575586": {
+   "ar": "الدولة الأموية",
+   "en": "Umayyad Caliphate",
+   "desc_ar": "دولة إسلامية سابقة، أسسها معاوية بن أبي سفيان واستمرت ما بين (41 – 132هـ / 661 – 750م)",
+   "desc_en": "second Islamic caliphate (661–750 CE)",
+   "p31": [
+    "Q1323642",
+    "Q131401",
+    "Q3024240",
+    "Q3624078",
+    "Q4204060",
+    "Q12759805"
+   ],
+   "inception": [
+    "+0661-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0750-07-00T00:00:00Z"
+   ],
+   "arwiki": "الدولة الأموية",
+   "enwiki": "Umayyad Caliphate"
+  },
+  "Q858": {
+   "ar": "سوريا",
+   "en": "Syria",
+   "desc_ar": "دولة عربية تقع في الشرق الأوسط",
+   "desc_en": "country in West Asia",
+   "p31": [
+    "Q6256",
+    "Q3624078",
+    "Q51576574"
+   ],
+   "inception": [
+    "+1920-03-08T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "سوريا",
+   "enwiki": "Syria"
+  },
+  "Q863": {
+   "ar": "طاجيكستان",
+   "en": "Tajikistan",
+   "desc_ar": "دولة في آسيا الوسطى",
+   "desc_en": "sovereign state in Central Asia",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q179164",
+    "Q6256"
+   ],
+   "inception": [
+    "+1991-09-09T00:00:00Z",
+    "+1929-10-16T00:00:00Z",
+    "+1924-10-27T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "طاجيكستان",
+   "enwiki": "Tajikistan"
+  },
+  "Q869": {
+   "ar": "تايلاند",
+   "en": "Thailand",
+   "desc_ar": "دولة في جنوب شرق آسيا",
+   "desc_en": "country in Southeast Asia",
+   "p31": [
+    "Q41614",
+    "Q3624078",
+    "Q6256",
+    "Q179164"
+   ],
+   "inception": [
+    "+1768-12-28T00:00:00Z",
+    "+1238-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "تايلاند",
+   "enwiki": "Thailand"
+  },
+  "Q874": {
+   "ar": "تركمانستان",
+   "en": "Turkmenistan",
+   "desc_ar": "دولة في آسيا الوسطى",
+   "desc_en": "country in Central Asia",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1991-10-27T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "تركمانستان",
+   "enwiki": "Turkmenistan"
+  },
+  "Q878": {
+   "ar": "الإمارات العربية المتحدة",
+   "en": "United Arab Emirates",
+   "desc_ar": "دولة تقع في الساحل الشرقي لشبه الجزيرة العربية",
+   "desc_en": "country in Western Asia",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1971-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الإمارات العربية المتحدة",
+   "enwiki": "United Arab Emirates"
+  },
+  "Q881": {
+   "ar": "فيتنام",
+   "en": "Vietnam",
+   "desc_ar": "دولة في جنوب شرق آسيا",
+   "desc_en": "country in Southeast Asia",
+   "p31": [
+    "Q3624078",
+    "Q849866",
+    "Q6256"
+   ],
+   "inception": [
+    "+1976-07-02T00:00:00Z",
+    "+1945-09-02T00:00:00Z",
+    "+1804-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "فيتنام",
+   "enwiki": "Vietnam"
+  },
+  "Q889": {
+   "ar": "أفغانستان",
+   "en": "Afghanistan",
+   "desc_ar": "دولة في آسيا الوسطى",
+   "desc_en": "country in Central and South Asia",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1709-01-01T00:00:00Z",
+    "+1747-06-19T00:00:00Z",
+    "+1823-01-01T00:00:00Z",
+    "+1926-00-00T00:00:00Z",
+    "+1973-00-00T00:00:00Z",
+    "+1978-00-00T00:00:00Z",
+    "+1992-00-00T00:00:00Z",
+    "+1996-00-00T00:00:00Z",
+    "+2002-00-00T00:00:00Z",
+    "+2004-00-00T00:00:00Z",
+    "+2021-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "أفغانستان",
+   "enwiki": "Afghanistan"
+  },
+  "Q89523018": {
+   "ar": null,
+   "en": "Bidjara",
+   "desc_ar": null,
+   "desc_en": "Wikimedia disambiguation page",
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Bidjara"
+  },
+  "Q8965": {
+   "ar": "النيابة الملكية على غرناطة الجديدة",
+   "en": "Viceroyalty of New Granada",
+   "desc_ar": "نائبية الإمبراطورية الإسبانية في الأمريكتين (1717-1819)",
+   "desc_en": "viceroyalty of the Spanish Empire in the Americas (1717-1819)",
+   "p31": [
+    "Q20203507",
+    "Q15893266"
+   ],
+   "inception": [
+    "+1717-10-12T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1819-09-27T00:00:00Z"
+   ],
+   "arwiki": "النيابة الملكية على غرناطة الجديدة",
+   "enwiki": "Viceroyalty of New Granada"
+  },
+  "Q902": {
+   "ar": "بنغلاديش",
+   "en": "Bangladesh",
+   "desc_ar": "دولة في جنوب آسيا",
+   "desc_en": "country in South Asia",
+   "p31": [
+    "Q3624078",
+    "Q465613",
+    "Q6256"
+   ],
+   "inception": [
+    "+1971-03-26T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "بنغلاديش",
+   "enwiki": "Bangladesh"
+  },
+  "Q912": {
+   "ar": "مالي",
+   "en": "Mali",
+   "desc_ar": "دولة في غرب إفريقيا",
+   "desc_en": "country in West Africa",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-09-22T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "مالي",
+   "enwiki": "Mali"
+  },
+  "Q916": {
+   "ar": "أنغولا",
+   "en": "Angola",
+   "desc_ar": "دولة ساحلية في جنوب وسط أفريقيا",
+   "desc_en": "country on the west coast of Southern Africa",
+   "p31": [
+    "Q3624078",
+    "Q200464",
+    "Q6256",
+    "Q333542"
+   ],
+   "inception": [
+    "+1975-11-11T00:00:00Z",
+    "+1992-08-25T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "أنغولا",
+   "enwiki": "Angola"
+  },
+  "Q918126": {
+   "ar": "غيانا البريطانية",
+   "en": "British Guiana",
+   "desc_ar": null,
+   "desc_en": "British possession in the Guianas region between 1814–1966",
+   "p31": [
+    "Q1351282"
+   ],
+   "inception": [
+    "+1814-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1966-01-01T00:00:00Z"
+   ],
+   "arwiki": "غيانا البريطانية",
+   "enwiki": "British Guiana"
+  },
+  "Q924833": {
+   "ar": null,
+   "en": "Kaarta",
+   "desc_ar": null,
+   "desc_en": "Bambara kingdom",
+   "p31": [
+    "Q3024240"
+   ],
+   "inception": [
+    "+1753-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1854-01-01T00:00:00Z"
+   ],
+   "arwiki": null,
+   "enwiki": "Kaarta"
+  },
+  "Q928": {
+   "ar": "الفلبين",
+   "en": "Philippines",
+   "desc_ar": "دولة في جنوب شرق آسيا",
+   "desc_en": "archipelagic country in Southeast Asia",
+   "p31": [
+    "Q3624078",
+    "Q11815167",
+    "Q6256",
+    "Q112099"
+   ],
+   "inception": [
+    "+1565-00-00T00:00:00Z",
+    "+1901-07-04T00:00:00Z",
+    "+1935-11-15T00:00:00Z",
+    "+1946-07-04T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "الفلبين",
+   "enwiki": "Philippines"
+  },
+  "Q929": {
+   "ar": "جمهورية إفريقيا الوسطى",
+   "en": "Central African Republic",
+   "desc_ar": "دولة في وسط إفريقيا",
+   "desc_en": "country in Central Africa",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256",
+    "Q7270"
+   ],
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "جمهورية إفريقيا الوسطى",
+   "enwiki": "Central African Republic"
+  },
+  "Q934374": {
+   "ar": null,
+   "en": "Blemmyes",
+   "desc_ar": null,
+   "desc_en": "ancient nomadic African kingdom",
+   "p31": [
+    "Q4204501"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Blemmyes"
+  },
+  "Q948": {
+   "ar": "تونس",
+   "en": "Tunisia",
+   "desc_ar": "دولة عربية تقع في شمال إفريقيا",
+   "desc_en": "country in North Africa",
+   "p31": [
+    "Q6256",
+    "Q3624078",
+    "Q7270",
+    "Q51576574"
+   ],
+   "inception": [
+    "+1956-03-20T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "تونس",
+   "enwiki": "Tunisia"
+  },
+  "Q953": {
+   "ar": "زامبيا",
+   "en": "Zambia",
+   "desc_ar": "دولة في جنوب شرق أفريقيا",
+   "desc_en": "country at the crossroads of Central and Southern Africa",
+   "p31": [
+    "Q3624078",
+    "Q7270",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1964-10-24T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "زامبيا",
+   "enwiki": "Zambia"
+  },
+  "Q953903": {
+   "ar": "رودسيا الشمالية",
+   "en": "Northern Rhodesia",
+   "desc_ar": null,
+   "desc_en": "1911–1964 British protectorate in Southern Africa",
+   "p31": [
+    "Q164142",
+    "Q21479969"
+   ],
+   "inception": [
+    "+1924-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1964-10-24T00:00:00Z"
+   ],
+   "arwiki": "رودسيا الشمالية",
+   "enwiki": "Northern Rhodesia"
+  },
+  "Q954": {
+   "ar": "زيمبابوي",
+   "en": "Zimbabwe",
+   "desc_ar": "دولة في جنوب شرق أفريقيا",
+   "desc_en": "sovereign state in southern Africa",
+   "p31": [
+    "Q7270",
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1980-04-18T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "زيمبابوي",
+   "enwiki": "Zimbabwe"
+  },
+  "Q957298": {
+   "ar": null,
+   "en": "Wiradjuri",
+   "desc_ar": null,
+   "desc_en": "Indigenous Australian people including family groups and clans throughout central New South Wales.",
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Wiradjuri"
+  },
+  "Q96": {
+   "ar": "المكسيك",
+   "en": "Mexico",
+   "desc_ar": "دولة في أمريكا الشمالية",
+   "desc_en": "country in North America",
+   "p31": [
+    "Q3624078",
+    "Q6256",
+    "Q6266"
+   ],
+   "inception": [
+    "+1821-08-24T00:00:00Z",
+    "+1836-12-00T00:00:00Z",
+    "+1821-09-28T00:00:00Z",
+    "+1810-09-16T00:00:00Z",
+    "+1820-00-00T00:00:00Z",
+    "+1821-09-27T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "المكسيك",
+   "enwiki": "Mexico"
+  },
+  "Q962": {
+   "ar": "بنين",
+   "en": "Benin",
+   "desc_ar": "دولة في أفريقيا الغربية",
+   "desc_en": "sovereign state in West Africa",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-08-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "بنين",
+   "enwiki": "Benin"
+  },
+  "Q963": {
+   "ar": "بوتسوانا",
+   "en": "Botswana",
+   "desc_ar": "دولة في افريقيا الجنوبية",
+   "desc_en": "sovereign state in Southern Africa",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1966-09-30T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "بوتسوانا",
+   "enwiki": "Botswana"
+  },
+  "Q965": {
+   "ar": "بوركينا فاسو",
+   "en": "Burkina Faso",
+   "desc_ar": "دولة في غرب أفريقيا",
+   "desc_en": "sovereign state in Africa",
+   "p31": [
+    "Q3624078",
+    "Q123480",
+    "Q6256"
+   ],
+   "inception": [
+    "+1960-01-01T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "بوركينا فاسو",
+   "enwiki": "Burkina Faso"
+  },
+  "Q986": {
+   "ar": "إرتريا",
+   "en": "Eritrea",
+   "desc_ar": "دولة في شرق أفريقيا",
+   "desc_en": "country in the Horn of Africa",
+   "p31": [
+    "Q3624078",
+    "Q6256"
+   ],
+   "inception": [
+    "+1993-05-24T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "إرتريا",
+   "enwiki": "Eritrea"
+  }
+ },
+ "type_labels": {
+  "Q102090": {
+   "ar": "أباتشي",
+   "en": "Apache"
+  },
+  "Q103817": {
+   "ar": "سكان أصليون",
+   "en": "indigenous people"
+  },
+  "Q10551526": {
+   "ar": null,
+   "en": "confessional state"
+  },
+  "Q10711424": {
+   "ar": "دولة ذات اعتراف محدود",
+   "en": "state with limited recognition"
+  },
+  "Q107390": {
+   "ar": "ولاية اتحادية",
+   "en": "federated state"
+  },
+  "Q107410977": {
+   "ar": "قبائل أمازيغية",
+   "en": "Amazigh tribe"
+  },
+  "Q1088391": {
+   "ar": "بقايا دولة",
+   "en": "rump state"
+  },
+  "Q109607": {
+   "ar": "أطلال",
+   "en": "ruins"
+  },
+  "Q11042": {
+   "ar": "ثقافة",
+   "en": "culture"
+  },
+  "Q11197007": {
+   "ar": "إثنيات دينية",
+   "en": "ethnoreligious group"
+  },
+  "Q112099": {
+   "ar": "دولة جزرية",
+   "en": "island country"
+  },
+  "Q113136497": {
+   "ar": null,
+   "en": "state of the German Confederation 1815–1848 & 1850–1866"
+  },
+  "Q11396118": {
+   "ar": null,
+   "en": "divided territory"
+  },
+  "Q11432": {
+   "ar": "غاز",
+   "en": "gas"
+  },
+  "Q11514315": {
+   "ar": "فترة تاريخية",
+   "en": "historical period"
+  },
+  "Q116052725": {
+   "ar": null,
+   "en": "national geopolitical entity"
+  },
+  "Q11815167": {
+   "ar": "دولة أرخبيلية",
+   "en": "archipelagic state"
+  },
+  "Q11828004": {
+   "ar": "مقاطعة كندا",
+   "en": "province of Canada"
+  },
+  "Q118365": {
+   "ar": "دكتاتورية البروليتاريا",
+   "en": "dictatorship of the proletariat"
+  },
+  "Q123480": {
+   "ar": "دولة غير ساحلية",
+   "en": "landlocked country"
+  },
+  "Q12356456": {
+   "ar": "نيابة الملك",
+   "en": "viceroyalty"
+  },
+  "Q1250464": {
+   "ar": "مملكة",
+   "en": "realm"
+  },
+  "Q12759805": {
+   "ar": "سلطنة",
+   "en": "sultanate"
+  },
+  "Q127693126": {
+   "ar": null,
+   "en": "successor state"
+  },
+  "Q129264": {
+   "ar": "جزيرة شبح",
+   "en": "phantom island"
+  },
+  "Q130533560": {
+   "ar": null,
+   "en": "retrospective label"
+  },
+  "Q131401": {
+   "ar": "خلافة إسلامية",
+   "en": "caliphate"
+  },
+  "Q1323642": {
+   "ar": "دول عابرة للقارات",
+   "en": "transcontinental country"
+  },
+  "Q133156": {
+   "ar": "مستعمرة",
+   "en": "colony"
+  },
+  "Q133311": {
+   "ar": "قبيلة",
+   "en": "tribe"
+  },
+  "Q1345055": {
+   "ar": null,
+   "en": "horde"
+  },
+  "Q1351282": {
+   "ar": "مستعمرة التاج",
+   "en": "crown colony"
+  },
+  "Q136361597": {
+   "ar": null,
+   "en": "doubly landlocked country"
+  },
+  "Q140892892": {
+   "ar": "دولة قد تعتبر  عابرة للقارات",
+   "en": "country sometimes considered transcontinental"
+  },
+  "Q1489259": {
+   "ar": "القوى العظمى",
+   "en": "superpower"
+  },
+  "Q15058985": {
+   "ar": "إقليم في باكستان",
+   "en": "province of Pakistan"
+  },
+  "Q15063586": {
+   "ar": "ولاية في ماليزيا",
+   "en": "state of Malaysia"
+  },
+  "Q1520223": {
+   "ar": "جمهورية دستورية",
+   "en": "constitutional republic"
+  },
+  "Q15239622": {
+   "ar": "منطقة متنازع عليها",
+   "en": "disputed territory"
+  },
+  "Q1549591": {
+   "ar": "مدينة كبيرة (>100,000)",
+   "en": "big city"
+  },
+  "Q15661340": {
+   "ar": "مدينة قديمة",
+   "en": "ancient city"
+  },
+  "Q15893266": {
+   "ar": "كيان سابق",
+   "en": "former entity"
+  },
+  "Q161243": {
+   "ar": "تبعية",
+   "en": "dependent territory"
+  },
+  "Q1620908": {
+   "ar": "منطقة تاريخية",
+   "en": "historical region"
+  },
+  "Q164142": {
+   "ar": "محمية",
+   "en": "protectorate"
+  },
+  "Q164950": {
+   "ar": "سلالة حاكمة",
+   "en": "dynasty"
+  },
+  "Q169336": {
+   "ar": "مزيج",
+   "en": "mixture"
+  },
+  "Q171751": {
+   "ar": "جمهورية الموز",
+   "en": "banana republic"
+  },
+  "Q17259945": {
+   "ar": null,
+   "en": "province of the Spanish Empire"
+  },
+  "Q17524420": {
+   "ar": "وصف تاريخ",
+   "en": "aspect of history"
+  },
+  "Q179023": {
+   "ar": "الإمبراطورية الاستعمارية الفرنسية",
+   "en": "French colonial empire"
+  },
+  "Q179164": {
+   "ar": "دولة مركزية",
+   "en": "unitary state"
+  },
+  "Q179671": {
+   "ar": "دولة قومية",
+   "en": "nation state"
+  },
+  "Q180673": {
+   "ar": "مقاطعات ومناطق إنجلترا المراسيمية",
+   "en": "ceremonial county of England"
+  },
+  "Q183366": {
+   "ar": "منطقة",
+   "en": "territory"
+  },
+  "Q185145": {
+   "ar": "قوة عظمى",
+   "en": "great power"
+  },
+  "Q188800": {
+   "ar": "اتحاد شخصي",
+   "en": "personal union"
+  },
+  "Q192611": {
+   "ar": "دائرة انتخابية",
+   "en": "electoral unit"
+  },
+  "Q19953632": {
+   "ar": "تقسيم إداري سابق",
+   "en": "former administrative territorial entity"
+  },
+  "Q200464": {
+   "ar": "الإمبراطورية البرتغالية",
+   "en": "Portuguese Empire"
+  },
+  "Q20181813": {
+   "ar": "قوة استعمارية",
+   "en": "colonial power"
+  },
+  "Q20203507": {
+   "ar": "نيابة ملكية للإمبراطورية الإسبانية",
+   "en": "viceroyalty of the Spanish Empire"
+  },
+  "Q202686": {
+   "ar": "عالم كومنولث",
+   "en": "Commonwealth realm"
+  },
+  "Q21479969": {
+   "ar": "محمية بريطانية",
+   "en": "British protectorate"
+  },
+  "Q223832": {
+   "ar": "دومينيون",
+   "en": "dominion of the British Empire"
+  },
+  "Q2472587": {
+   "ar": "شعب",
+   "en": "people"
+  },
+  "Q24764": {
+   "ar": "بلدية في الفلبين",
+   "en": "municipality of the Philippines"
+  },
+  "Q25412763": {
+   "ar": "مدينة في تشيلي",
+   "en": "city in Chile"
+  },
+  "Q2577883": {
+   "ar": "أرض محتلة",
+   "en": "occupied territory"
+  },
+  "Q26883974": {
+   "ar": null,
+   "en": "nomadic confederacy"
+  },
+  "Q27863646": {
+   "ar": "شعب خرافي",
+   "en": "mythical people"
+  },
+  "Q28070554": {
+   "ar": null,
+   "en": "region of Sudan"
+  },
+  "Q28171280": {
+   "ar": "حضارة قديمة",
+   "en": "ancient civilization"
+  },
+  "Q3024240": {
+   "ar": "بلد سابق",
+   "en": "historical country"
+  },
+  "Q3076994": {
+   "ar": null,
+   "en": "commune of Cameroon"
+  },
+  "Q3117863": {
+   "ar": "مجموعة بشرية منعزلة",
+   "en": "isolated human group"
+  },
+  "Q331644": {
+   "ar": "خانية",
+   "en": "khanate"
+  },
+  "Q333542": {
+   "ar": null,
+   "en": "overseas province of Portugal"
+  },
+  "Q339834": {
+   "ar": "قوة إقليمية",
+   "en": "regional power"
+  },
+  "Q3502482": {
+   "ar": "مناطق نفوذ ثقافي",
+   "en": "cultural region"
+  },
+  "Q35657": {
+   "ar": "ولاية الولايات المتحدة",
+   "en": "U.S. state"
+  },
+  "Q3624078": {
+   "ar": "دولة ذات سيادة",
+   "en": "sovereign state"
+  },
+  "Q36747": {
+   "ar": "الشعوب الأصلية في الأمريكتين",
+   "en": "indigenous peoples of the Americas"
+  },
+  "Q392160": {
+   "ar": "دولة فاشلة",
+   "en": "failed state"
+  },
+  "Q41614": {
+   "ar": "ملكية دستورية",
+   "en": "constitutional monarchy"
+  },
+  "Q4167410": {
+   "ar": "صفحة توضيح في ويكيميديا",
+   "en": "Wikimedia disambiguation page"
+  },
+  "Q41710": {
+   "ar": "مجموعة إثنية",
+   "en": "ethnic group"
+  },
+  "Q417175": {
+   "ar": "مملكة",
+   "en": "kingdom"
+  },
+  "Q41792036": {
+   "ar": null,
+   "en": "oversea province of Spain"
+  },
+  "Q4204060": {
+   "ar": "الدولة الإسلامية (مصطلح)",
+   "en": "Islamic state"
+  },
+  "Q4204501": {
+   "ar": "مجموعة عرقية قديمة",
+   "en": "historical ethnic group"
+  },
+  "Q4209223": {
+   "ar": "دولة القانون",
+   "en": "Rechtsstaat"
+  },
+  "Q43702": {
+   "ar": "اتحاد",
+   "en": "federation"
+  },
+  "Q4533081": {
+   "ar": "مجموعة إثنية لغوية",
+   "en": "ethnolinguistic group"
+  },
+  "Q465299": {
+   "ar": "ثقافة أثرية",
+   "en": "archaeological culture"
+  },
+  "Q465613": {
+   "ar": "جمهورية شعبية",
+   "en": "people's republic"
+  },
+  "Q48349": {
+   "ar": "إمبراطورية",
+   "en": "empire"
+  },
+  "Q4835091": {
+   "ar": "كيان إقليمي",
+   "en": "territory"
+  },
+  "Q486972": {
+   "ar": "مستوطنة",
+   "en": "human settlement"
+  },
+  "Q5035794": {
+   "ar": "دولة رأسمالية",
+   "en": "capitalist state"
+  },
+  "Q5098": {
+   "ar": "أقاليم إندونيسيا",
+   "en": "province of Indonesia"
+  },
+  "Q5119": {
+   "ar": "عاصمة",
+   "en": "capital city"
+  },
+  "Q512187": {
+   "ar": "جمهورية فدرالية",
+   "en": "federal republic"
+  },
+  "Q515": {
+   "ar": "مدينة",
+   "en": "city"
+  },
+  "Q51576574": {
+   "ar": "بلد متوسطي",
+   "en": "Mediterranean country"
+  },
+  "Q5255892": {
+   "ar": "الجمهورية الديمقراطية",
+   "en": "democratic republic"
+  },
+  "Q532": {
+   "ar": "قرية",
+   "en": "village"
+  },
+  "Q55097243": {
+   "ar": "منظمة فانية",
+   "en": "defunct organization"
+  },
+  "Q55983715": {
+   "ar": "كائنات حية معروفة باسم شائع",
+   "en": "organisms known by a particular common name"
+  },
+  "Q56061": {
+   "ar": "كيان إقليمي إداري",
+   "en": "administrative territorial entity"
+  },
+  "Q57362": {
+   "ar": "منطقة حكم ذاتي في جمهورية الصين الشعبية",
+   "en": "autonomous region of China"
+  },
+  "Q619610": {
+   "ar": "دولة اجتماعية",
+   "en": "social state"
+  },
+  "Q6256": {
+   "ar": "بلد",
+   "en": "country"
+  },
+  "Q6266": {
+   "ar": "أمة",
+   "en": "nation"
+  },
+  "Q63791824": {
+   "ar": "بلد ذو حدود على بحر البلطيق",
+   "en": "country bordering the Baltic Sea"
+  },
+  "Q66724388": {
+   "ar": null,
+   "en": "autonomous country within the Kingdom of Denmark"
+  },
+  "Q672729": {
+   "ar": "جمهورية إسلامية",
+   "en": "Islamic Republic"
+  },
+  "Q690840": {
+   "ar": null,
+   "en": "district of Ethiopia"
+  },
+  "Q7270": {
+   "ar": "جمهورية",
+   "en": "republic"
+  },
+  "Q7275": {
+   "ar": "دولة",
+   "en": "state"
+  },
+  "Q734818": {
+   "ar": "سيادة مشتركة (القانون الدولي)",
+   "en": "condominium"
+  },
+  "Q7830262": {
+   "ar": "بلدة في بورما",
+   "en": "township of Myanmar"
+  },
+  "Q7840353": {
+   "ar": null,
+   "en": "federally recognized Native American tribe in the United States"
+  },
+  "Q788176": {
+   "ar": "كيان إقليمي إداري مستقل",
+   "en": "autonomous administrative territorial entity"
+  },
+  "Q79529": {
+   "ar": "مادة كيميائية",
+   "en": "chemical substance"
+  },
+  "Q816829": {
+   "ar": "تحقيب",
+   "en": "periodization"
+  },
+  "Q82794": {
+   "ar": "منطقة",
+   "en": "region"
+  },
+  "Q83311": {
+   "ar": "الإمبراطورية الفارسية",
+   "en": "Persian Empire"
+  },
+  "Q839954": {
+   "ar": "موقع أثري",
+   "en": "archaeological site"
+  },
+  "Q842112": {
+   "ar": "دولة اشتراكية",
+   "en": "socialist state"
+  },
+  "Q8432": {
+   "ar": "حضارة",
+   "en": "civilization"
+  },
+  "Q849866": {
+   "ar": "دولة شيوعية",
+   "en": "communist state"
+  },
+  "Q851990": {
+   "ar": "مجموعة سكانية",
+   "en": "population group"
+  },
+  "Q858804": {
+   "ar": "الأقليات الإثنية في الصين",
+   "en": "ethnic minorities in China"
+  },
+  "Q859563": {
+   "ar": "دولة علمانية",
+   "en": "secular state"
+  },
+  "Q878223": {
+   "ar": "مرتفع",
+   "en": "highland"
+  },
+  "Q900119": {
+   "ar": "قائمة الأمم المتحدة للأقاليم غير المحكومة ذاتيا",
+   "en": "United Nations list of non-self-governing territories"
+  },
+  "Q96196009": {
+   "ar": "بلد سابق أو حالي",
+   "en": "former or current state"
+  },
+  "Q99541706": {
+   "ar": "دولة سابقة غير معترف بها",
+   "en": "historical unrecognized state"
+  }
+ }
+}

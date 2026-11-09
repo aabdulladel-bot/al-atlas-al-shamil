@@ -15,8 +15,12 @@ import json
 import re
 import sys
 from pathlib import Path
+import importlib.util
 
 ROOT = Path(__file__).resolve().parent.parent
+_spec = importlib.util.spec_from_file_location("wt", ROOT / "scripts/wikidata_titles.py")
+wt = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(wt)
 RAW = ROOT / "data/raw/historical-basemaps"
 EXTRACT = ROOT / "data/raw/wikidata/hb_titles.json"
 OVERRIDES = ROOT / "scripts/config/hb_name_overrides.json"
@@ -37,7 +41,7 @@ REJECT_P31 = {
 # الكيان بلا تواريخ لا يُتحقق منه زمنياً، فلا يُقبل إلا بنوع سياسي أو بشري أو إقليمي صريح
 UNDATED_OK = {
     "Q3024240", "Q6256", "Q3624078", "Q48349", "Q417175", "Q7275", "Q1250464", "Q164950",  # كيانات سياسية
-    "Q41710", "Q133311", "Q2472587", "Q4533081", "Q103817", "Q4204501",  # جماعات وشعوب وقبائل
+    "Q41710", "Q133311", "Q2472587", "Q4533081", "Q103817", "Q4204501", "Q851990",  # جماعات وشعوب وقبائل ومجموعات سكانية
     "Q82794", "Q1620908", "Q465299", "Q8432",  # أقاليم وثقافات وحضارات
 }
 
@@ -112,7 +116,7 @@ def write_review(cfg, names):
 
 def main():
     present = years_by_name()
-    extract = json.loads(EXTRACT.read_text(encoding="utf-8")) if EXTRACT.exists() else {"titles": {}}
+    extract = {"titles": wt.load_titles()} if EXTRACT.exists() else {"titles": {}}
     overrides = json.loads(OVERRIDES.read_text(encoding="utf-8")).get("overrides", {}) if OVERRIDES.exists() else {}
     names = {}
     for n, hit in sorted(extract["titles"].items()):

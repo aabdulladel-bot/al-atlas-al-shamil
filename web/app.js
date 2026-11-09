@@ -671,6 +671,7 @@ function gapList({ links, econ, modern, approxAll, info, p, kind, key }) {
   else if (info?.st === "arabized") g.push("اسمه العربي تعريب تقديري، لا من مصدر موثّق");
   if (!modern && (approxAll || Number(p.BORDERPRECISION) !== 3)) g.push("حدّه في هذه الخريطة تقريبي بحسب المصدر");
   if (info?.st !== "verified") g.push("لا تواريخ موثّقة له في ويكي بيانات");
+  if (!modern && entityInfo && !entityInfo.entities?.[p.NAME]) g.push("لا وصف له في ويكي بيانات");
   if (!(links?.[p.NAME] ?? []).length) g.push("لا شاهد موثّق يقع على أرضه في هذه الخريطة");
   if (kind !== "people") {
     const ent = lineageData?.lineage?.[String(key)]?.[p.NAME];
@@ -718,8 +719,9 @@ function openEntityCard(f, kind) {
   const span = info?.st === "verified" && (info.from != null || info.to != null)
     ? `${info.from != null ? yearLabel(info.from) : "؟"} – ${info.to != null ? yearLabel(info.to) : "؟"}` : "";
   if (typeof passportNote === "function") passportNote("entity", p.NAME);
-  const top = cardHead({ title, en: info?.en_shown ?? p.NAME, swatch, chips, note: notes.join("<br>"), icon: people ? "people" : "state" }) +
-    statsHtml([["المساحة على هذه الخريطة (كم²)", info?.a ? fmtBig(info.a) : "", info?.a ? `${fmtInt(info.a)} كم² تقريباً` : ""], ["مدته في ويكي بيانات", span]]) +
+  // التعريف يلي العنوان مباشرة: أول ما يسأله القارئ «من هؤلاء؟»، ثم المساحة والمدة
+  const head = cardHead({ title, en: info?.en_shown ?? p.NAME, swatch, chips, note: notes.join("<br>"), icon: people ? "people" : "state" });
+  const top = statsHtml([["المساحة على هذه الخريطة (كم²)", info?.a ? fmtBig(info.a) : "", info?.a ? `${fmtInt(info.a)} كم² تقريباً` : ""], ["مدته في ويكي بيانات", span]]) +
     lifeHtml(info?.years, key, swatch);
   const prec = modern ? "محددة (Natural Earth)" : `${PRECISION_LABEL[p.BORDERPRECISION] ?? "غير مذكورة"} بحسب المصدر${approxAll ? "، ويرسمها الأطلس تقريبية" : ""}`;
   const about = aboutHtml([
@@ -742,12 +744,12 @@ function openEntityCard(f, kind) {
     if (cardEntity) cardEntity.dossier = links ? () => entityExportText({ p, key, title, info, kind, links, span, gaps: gapsArr }) : null;
     // مقارنة السلسلتين تظهر مع المثبّت من الكيانات السياسية وحدها، وتحتاج بيانات السلسلة المحمّلة
     const lineageCmp = pinned && !pinnedHere && kind !== "people" && pinned.kind !== "people" ? lineageCompareHtml(pinned, { name: p.NAME, key, title }) : "";
-    return top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + (modern && kind !== "people" ? `<div class="card-actions"><button type="button" class="chip" data-dossier="${escapeHtml(p.NAME)}">ملف الدولة</button></div>` + observatoryHtml(p.NAME) + khaldunHtml(p.NAME) : "") + econ + about + alsoHtml();
+    return head + defineHtml(p.NAME) + top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + (modern && kind !== "people" ? `<div class="card-actions"><button type="button" class="chip" data-dossier="${escapeHtml(p.NAME)}">ملف الدولة</button></div>` + observatoryHtml(p.NAME) + khaldunHtml(p.NAME) : "") + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
   // الإغلاق قبل وصول البيانات يُلغي التحديث: لا تُبنى البطاقة المغلقة (كان ذلك يرمي خطأ «facts» عند إغلاق سريع)
-  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady, khaldunReady, dossierReady]).then(([links, econ]) => {
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady, khaldunReady, dossierReady, entityInfoReady]).then(([links, econ]) => {
     if (token !== cardToken || cardEl.hidden) return;
     updateCard(token, render(links, econ));
   });
@@ -1870,6 +1872,30 @@ function openDossierCard(name) {
 // مؤشر الشروط الخلدونية (web/data/khaldun.json، من scripts/build_khaldun.py): درجات الشروط المتاحة للدولة، وما ينقصه
 let khaldunData = null;
 const khaldunReady = getJson("data/khaldun.json").then((d) => { khaldunData = d; return d; }).catch(() => null);
+
+// البطاقة التعريفية: وصف الكيان ونوعه كما في ويكي بيانات (CC0)، بعد تصحيحات الهوية (scripts/build_entity_info.py).
+// لا يكتب الأطلس وصفاً من عنده: يعرض وصف ويكي بيانات كما هو، ويحيل إلى ويكيبيديا للاستزادة دون نقل نصها.
+let entityInfo = null;
+const entityInfoReady = getJson("data/names/entity_info.json").then((d) => { entityInfo = d; return d; }).catch(() => null);
+function defineHtml(name) {
+  const head = `<section class="card-sec define"><h3>تعريف</h3>`;
+  if (!entityInfo) return `${head}<p class="sub">جارٍ التحميل…</p></section>`;
+  const e = entityInfo.entities?.[name];
+  if (!e) return `${head}<p class="sub">لا وصف لهذا الكيان في ويكي بيانات، أو لم يُطابَق اسمه بعنصر فيها.</p></section>`;
+  const desc = e.d_ar ? `<p class="define-desc">${escapeHtml(e.d_ar)}</p>`
+    : e.d_en ? `<p class="define-desc" dir="ltr" lang="en">${escapeHtml(e.d_en)}</p><p class="sub">لا وصف عربي في ويكي بيانات، والمعروض وصفها الإنجليزي.</p>`
+    : `<p class="sub">لا وصف له في ويكي بيانات.</p>`;
+  const types = (e.t ?? []).map((q) => entityInfo.types?.[q]).filter(Boolean).map((l) => chip(l.ar ?? l.en)).join("");
+  const note = e.g ? `<p class="sub define-note">${escapeHtml(entityInfo._meta?.grouping_note ?? "")}</p>` : "";
+  const fix = e.fix ? `<details class="sub define-fix"><summary>تصحيح هوية معلن</summary><p>${escapeHtml(e.fix)}</p></details>` : "";
+  const links = [
+    e.arwiki ? `<a href="https://ar.wikipedia.org/wiki/${encodeURIComponent(e.arwiki)}" target="_blank" rel="noopener">ويكيبيديا العربية</a>` : "",
+    e.enwiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(e.enwiki)}" target="_blank" rel="noopener" lang="en">Wikipedia</a>` : "",
+    `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(e.q)}" target="_blank" rel="noopener">ويكي بيانات <bdi>${escapeHtml(e.q)}</bdi></a>`,
+  ].filter(Boolean).join(" · ");
+  return head + desc + (types ? `<div class="chips" title="النوع في ويكي بيانات">${types}</div>` : "") + note +
+    `<p class="define-links">${links}</p><p class="sub">الوصف والنوع من ويكي بيانات (CC0) كما هما، لا من الأطلس.</p>${fix}</section>`;
+}
 function khaldunHtml(name) {
   const c = khaldunData?.countries?.[name];
   if (!khaldunData?.conditions?.length) return "";

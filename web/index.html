@@ -203,6 +203,20 @@
     .life-labels { display: flex; justify-content: space-between; font-size: 9.5px; color: var(--muted); margin-top: 4px; direction: rtl; }
     .card-sec { margin-top: 14px; border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding-top: 10px; }
     .card-sec h3 { font-size: 14px; margin: 0 0 6px; }
+    .define-desc { font-size: 15px; line-height: 1.75; margin: 0 0 8px; }
+    .define-links { font-size: 13px; margin: 8px 0 4px; }
+    .define-note { border-inline-start: 3px solid var(--accent); padding-inline-start: 8px; margin: 8px 0; }
+    body.cubing #intro { display: none; }
+    ol.cube-col { list-style: none; padding: 0; margin: 8px 0; }
+    .cube-row { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 1px solid color-mix(in srgb, var(--accent) 18%, transparent); }
+    .cube-row.empty { opacity: 0.6; }
+    .cube-row.self { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+    details.define-fix > summary { cursor: pointer; }
+    .cube-row .sw { flex: none; }
+    .cube-era { min-width: 74px; font-size: 12px; color: var(--muted); }
+    button.linkish { background: none; border: 0; padding: 0; font: inherit; font-weight: 700; color: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; text-align: start; }
+    details.cube-adv { margin-top: 10px; }
+    details.cube-adv > summary { cursor: pointer; font-size: 13px; }
     .ev-card { padding: 9px 0; border-bottom: 1px dashed color-mix(in srgb, var(--muted) 35%, transparent); font-size: 13.5px; line-height: 1.7; }
     .ev-card:last-child { border-bottom: 0; }
     .ev-st { font-weight: 600; }
@@ -656,12 +670,15 @@
 
     <details class="section" id="cube-panel">
       <summary>المكعّب الزمكاني</summary>
-      <p class="sub">الأرض في الأسفل والزمن يصعد: كل خريطة حدود طبقة فوق الأرض، والخيوط بينها تتبع الأرض من كيان إلى ما صار إليه. اضغط كياناً لتتبّع سلالته عبر الزمن.</p>
+      <p class="sub">الأرض في الأسفل والزمن يصعد، وكل خريطة طبقة. ابدأ بسؤال: اضغط أي مكان لترى من حكمه في كل عصر، ثم اضغط اسماً لترى سلالته.</p>
       <label class="opt"><input type="checkbox" id="cube-toggle"> تشغيل المكعّب</label>
       <p class="sub warn" id="cube-status"></p>
       <div id="cube-controls" hidden>
+        <div class="mode" id="cube-mode"><label><input type="radio" name="cube-mode" value="place" checked> ماذا كان هنا؟</label><label><input type="radio" name="cube-mode" value="all"> كل الطبقات (متقدم)</label></div>
         <div id="cube-focus" class="card sub"></div>
-        <p class="tr-h">ما يُعرض</p>
+        <details class="cube-adv">
+        <summary>إعدادات متقدمة</summary>
+        <p class="tr-h">ما يُعرض في «كل الطبقات»</p>
         <label class="opt"><input type="checkbox" id="cube-show-fill" checked> الحدود (أسطح)</label>
         <label class="opt"><input type="checkbox" id="cube-show-edges" checked> حواف الكيانات</label>
         <label class="opt"><input type="checkbox" id="cube-show-same" checked><i class="ln" style="background:#ebe6dc"></i> خيط: الاسم نفسه</label>
@@ -676,7 +693,8 @@
         <label class="opt"><input type="radio" name="cube-axis" value="years"> متناسب مع السنين (الحديث يتزاحم في الأعلى)</label>
         <label for="cube-spacing" class="sub">المسافة بين الطبقات: <span id="cube-spacing-val"></span></label>
         <input type="range" id="cube-spacing" min="40" max="500" step="10" value="150">
-        <p class="sub">المحور العمودي ترتيب زمني لا ارتفاع، فتُطفأ التضاريس وحدود الخريطة أثناء المكعّب وتعودان بعده. الخيط علاقة مكانية بين خريطتين متتاليتين من لوحة التحولات، لا حكم بالسببية، ولا يرى ما جرى بين السنتين. قبل 1900 تُرسم كل الحدود تقريبية (أسطح أخف).</p>
+        </details>
+        <p class="sub">المحور العمودي ترتيب زمني لا ارتفاع، فتُطفأ التضاريس وحدود الخريطة والأسماء أثناء المكعّب، وتُسطَّح الكرة، ثم يعود كل شيء بعده. الخيط علاقة مكانية بين خريطتين متتاليتين من لوحة التحولات، لا حكم بالسببية، ولا يرى ما جرى بين السنتين. قبل 1900 تُرسم كل الحدود تقريبية (أسطح أخف).</p>
       </div>
     </details>
 
