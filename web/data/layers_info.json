@@ -290,7 +290,7 @@
     {
      "id": "procopius-dewing-1928",
      "tier": "A",
-     "license": "ملك عام: نُشر سنة 1928، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "license": "ملك عام: الأرشيف يذكر 1914 وREADME يذكر 1928 للمجلد الخامس، وكلاهما ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
      "attribution": "Procopius، ترجمة H. B. Dewing، Loeb، المجلد V",
      "landing": "https://archive.org/details/procopiuswitheng05procuoft"
     },
@@ -314,6 +314,90 @@
      "license": "ملك عام: نُشر سنة 1863، والأرشيف يحمل علامة public-domain mark 1.0.",
      "attribution": "Ibn Khaldun، Les Prolégomènes، ترجمة de Slane (1863)",
      "landing": "https://archive.org/details/bub_gb_JTs8AAAAMAAJ"
+    },
+    {
+     "id": "hammurabi",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1904، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Harper، The Code of Hammurabi, King of Babylon (1904)",
+     "landing": "https://archive.org/details/codeofhammurabik00harpuoft"
+    },
+    {
+     "id": "ptahhotep",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1912، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. والمترجم B. Gunn توفي سنة 1950.",
+     "attribution": "Gunn، The Instruction of Ptah-hotep (1912، صفحة العنوان 1918)",
+     "landing": "https://archive.org/details/instructionofpta00ptahrich"
+    },
+    {
+     "id": "gilgamesh",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1876، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "George Smith، The Chaldean Account of Genesis (1876)",
+     "landing": "https://archive.org/details/thechaldeanaccou00smituoft"
+    },
+    {
+     "id": "kjv1611",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1611، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "1611 King James Bible",
+     "landing": "https://archive.org/details/1611-king-james-bible"
+    },
+    {
+     "id": "polo-yule-1871",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1871، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Yule، The Book of Ser Marco Polo، المجلد 1 (1871)",
+     "landing": "https://archive.org/details/bookofsermarcopo01polo"
+    },
+    {
+     "id": "battuta-defremery",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1853، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Defrémery وSanguinetti، Voyages d'Ibn Batoutah، المجلد 1 (1853)",
+     "landing": "https://archive.org/details/voyagesdibnbato02sanggoog"
+    },
+    {
+     "id": "garcilaso-rycaut-1688",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1688، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Garcilaso de la Vega، The Royal Commentaries of Peru، ترجمة Rycaut (1688)",
+     "landing": "https://archive.org/details/royalcommentarie00vega_0"
+    },
+    {
+     "id": "diaz-maudslay",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1908، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. والمترجم A. P. Maudslay توفي سنة 1931.",
+     "attribution": "Díaz del Castillo، The True History of the Conquest of New Spain، ترجمة Maudslay، Hakluyt Society، المجلد 2 (1908)",
+     "landing": "https://archive.org/details/truehistoryofcon2242dazd"
+    },
+    {
+     "id": "sima-qian-zh",
+     "tier": "B",
+     "license": "النص الأصلي ملك عام (سيما تشيان، نحو 90 ق.م). التفريغ في ويكي مصدر بترخيص CC BY-SA 4.0 بحسب تذييل الصفحة.",
+     "attribution": "史記 卷123 大宛列傳، ويكي مصدر الصيني (CC BY-SA 4.0)",
+     "landing": "https://zh.wikisource.org/wiki/史記/卷123"
+    },
+    {
+     "id": "hanshu-zh",
+     "tier": "B",
+     "license": "النص الأصلي ملك عام (بان قو، القرن الأول الميلادي). التفريغ في ويكي مصدر بترخيص CC BY-SA 4.0 بحسب تذييل الصفحة.",
+     "attribution": "漢書 卷96 西域傳 (上 و下)، ويكي مصدر الصيني (CC BY-SA 4.0)",
+     "landing": "https://zh.wikisource.org/wiki/漢書/卷096上"
+    },
+    {
+     "id": "bede-latin-pl95",
+     "tier": "B",
+     "license": "النص الأصلي ملك عام (بيدا، ت 735؛ Patrologia Latina 95). التفريغ في ويكي مصدر بترخيص CC BY-SA 4.0 بحسب تذييل الصفحة.",
+     "attribution": "Beda Venerabilis، Historia Ecclesiastica gentis Anglorum، الكتب I وII وIV، ويكي مصدر اللاتيني (CC BY-SA 4.0)",
+     "landing": "https://la.wikisource.org/wiki/Historia_Ecclesiastica_gentis_Anglorum"
+    },
+    {
+     "id": "gama-hakluyt-1898",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1898، والأرشيف يحمل علامة public-domain mark 1.0.",
+     "attribution": "A Journal of the First Voyage of Vasco da Gama, 1497-1499، ترجمة E. G. Ravenstein، Hakluyt Society (1898)",
+     "landing": "https://archive.org/details/bub_gb_13stAAAAMAAJ"
     }
    ]
   },

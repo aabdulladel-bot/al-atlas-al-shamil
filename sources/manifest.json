@@ -854,22 +854,22 @@
     },
     {
       "id": "kjv1611-1872-vol2",
-      "file": "verification/era2/kjv.txt",
       "url": "https://archive.org/details/holybibleaccordi0002unse",
       "license": "ملك عام: نُشر سنة 1872، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
       "tier": "A",
       "landing": "https://archive.org/details/holybibleaccordi0002unse",
       "attribution": "The Holy Bible، Authorized Version (1611)، لندن 1872، المجلد II",
-      "note": "مطابقة الملف بالمجلد الثاني مأخوذة من README الحقبة الثانية.",
+      "note": "المجلد II (يشوع حتى الملوك الأول) بحسب بيانات الأرشيف. حُفظ النص كاملاً بعد تصحيح ربط خاطئ، والمقاطع موجودة فيه.",
       "status": "ok",
-      "retrieved_at": "2026-11-08T09:04:38.517Z",
-      "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
-      "bytes": 6444955,
+      "file": "verification/era2/kjv1611_1872_vol2.txt",
+      "retrieved_at": "2026-11-09T08:45:46.027Z",
+      "sha256": "2ca4c19a6c4ba76cbfac5ffcbd78f20262e081804a936d8247edfecfdcf99b72",
+      "bytes": 2806385,
       "files": [
         {
-          "file": "verification/era2/kjv.txt",
-          "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
-          "bytes": 6444955
+          "file": "verification/era2/kjv1611_1872_vol2.txt",
+          "sha256": "2ca4c19a6c4ba76cbfac5ffcbd78f20262e081804a936d8247edfecfdcf99b72",
+          "bytes": 2806385
         }
       ]
     },
@@ -1127,22 +1127,22 @@
     },
     {
       "id": "procopius-dewing-1928",
-      "file": "verification/era4/procopius.txt",
       "url": "https://archive.org/details/procopiuswitheng05procuoft",
-      "license": "ملك عام: نُشر سنة 1928، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "license": "ملك عام: الأرشيف يذكر 1914 وREADME يذكر 1928 للمجلد الخامس، وكلاهما ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
       "tier": "A",
       "landing": "https://archive.org/details/procopiuswitheng05procuoft",
       "attribution": "Procopius، ترجمة H. B. Dewing، Loeb، المجلد V",
-      "note": "تعارض: README الحقبة الرابعة يذكر 1928، والأرشيف يذكر 1914 لهذا العنوان. الحكم لا يتغير، ويُصحَّح السجل عند فحص صفحة العنوان.",
+      "note": "نص المجلد الخامس كاملاً من الأرشيف بعد تصحيح ربط خاطئ، والمقاطع موجودة فيه. تعارض التاريخ قائم ويُصحَّح بصفحة العنوان. الملف القديم verification/era4/procopius.txt من مجلد آخر وغير مسجّل.",
       "status": "ok",
-      "retrieved_at": "2026-11-08T09:04:38.517Z",
-      "sha256": "bfa66163511be6ce4e7c44976d696e96a175e425114eb83df65f07a172fe4af8",
-      "bytes": 1514612,
+      "file": "verification/era4/procopius_dewing_vol5.txt",
+      "retrieved_at": "2026-11-09T08:45:46.027Z",
+      "sha256": "92422291f140199449c3bafaecc21737ae9583d2db1bdb7fcdfc2f4beefe2563",
+      "bytes": 959209,
       "files": [
         {
-          "file": "verification/era4/procopius.txt",
-          "sha256": "bfa66163511be6ce4e7c44976d696e96a175e425114eb83df65f07a172fe4af8",
-          "bytes": 1514612
+          "file": "verification/era4/procopius_dewing_vol5.txt",
+          "sha256": "92422291f140199449c3bafaecc21737ae9583d2db1bdb7fcdfc2f4beefe2563",
+          "bytes": 959209
         }
       ]
     },
@@ -1208,6 +1208,306 @@
           "bytes": 1592324
         }
       ]
+    },
+    {
+      "id": "hammurabi",
+      "file": "verification/era1/harper.txt",
+      "url": "https://archive.org/details/codeofhammurabik00harpuoft",
+      "license": "ملك عام: نُشر سنة 1904، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/codeofhammurabik00harpuoft",
+      "attribution": "Harper، The Code of Hammurabi, King of Babylon (1904)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "120d44f9201f7bcfff40750937439a41831b8fa94bc8ce55664eef86dfaa2174",
+      "bytes": 586457,
+      "files": [
+        {
+          "file": "verification/era1/harper.txt",
+          "sha256": "120d44f9201f7bcfff40750937439a41831b8fa94bc8ce55664eef86dfaa2174",
+          "bytes": 586457
+        }
+      ]
+    },
+    {
+      "id": "ptahhotep",
+      "file": "verification/era1/gunn.txt",
+      "url": "https://archive.org/details/instructionofpta00ptahrich",
+      "license": "ملك عام: نُشر سنة 1912، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. والمترجم B. Gunn توفي سنة 1950.",
+      "tier": "A",
+      "landing": "https://archive.org/details/instructionofpta00ptahrich",
+      "attribution": "Gunn، The Instruction of Ptah-hotep (1912، صفحة العنوان 1918)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "8ab77fb267e27ebb441c91cee483a475db05ebaa402405ef664e51704b28a326",
+      "bytes": 256384,
+      "files": [
+        {
+          "file": "verification/era1/gunn.txt",
+          "sha256": "8ab77fb267e27ebb441c91cee483a475db05ebaa402405ef664e51704b28a326",
+          "bytes": 256384
+        }
+      ]
+    },
+    {
+      "id": "gilgamesh",
+      "file": "verification/era1/smith.txt",
+      "url": "https://archive.org/details/thechaldeanaccou00smituoft",
+      "license": "ملك عام: نُشر سنة 1876، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/thechaldeanaccou00smituoft",
+      "attribution": "George Smith، The Chaldean Account of Genesis (1876)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "503e0ea4d9b4484f12c3f158cda358890ad4d199c3da7f64b2891103a707f3e7",
+      "bytes": 733940,
+      "files": [
+        {
+          "file": "verification/era1/smith.txt",
+          "sha256": "503e0ea4d9b4484f12c3f158cda358890ad4d199c3da7f64b2891103a707f3e7",
+          "bytes": 733940
+        }
+      ]
+    },
+    {
+      "id": "kjv1611",
+      "file": "verification/era2/kjv.txt",
+      "url": "https://archive.org/details/1611-king-james-bible",
+      "license": "ملك عام: نُشر سنة 1611، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/1611-king-james-bible",
+      "attribution": "1611 King James Bible",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
+      "bytes": 6444955,
+      "files": [
+        {
+          "file": "verification/era2/kjv.txt",
+          "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
+          "bytes": 6444955
+        }
+      ]
+    },
+    {
+      "id": "polo-yule-1871",
+      "file": "verification/era5/polo.txt",
+      "url": "https://archive.org/details/bookofsermarcopo01polo",
+      "license": "ملك عام: نُشر سنة 1871، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/bookofsermarcopo01polo",
+      "attribution": "Yule، The Book of Ser Marco Polo، المجلد 1 (1871)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "a48f7b86f4efa5f248d6c7237ae8359ba670f91e9eb62d9f9028440c208352f7",
+      "bytes": 1713368,
+      "files": [
+        {
+          "file": "verification/era5/polo.txt",
+          "sha256": "a48f7b86f4efa5f248d6c7237ae8359ba670f91e9eb62d9f9028440c208352f7",
+          "bytes": 1713368
+        }
+      ]
+    },
+    {
+      "id": "battuta-defremery",
+      "file": "verification/era5/battuta.txt",
+      "url": "https://archive.org/details/voyagesdibnbato02sanggoog",
+      "license": "ملك عام: نُشر سنة 1853، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/voyagesdibnbato02sanggoog",
+      "attribution": "Defrémery وSanguinetti، Voyages d'Ibn Batoutah، المجلد 1 (1853)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "34d7bdb3826be9be51b8d89e0f0f3e50a84c5bd5471f99bfc71179a0eaad8913",
+      "bytes": 922574,
+      "files": [
+        {
+          "file": "verification/era5/battuta.txt",
+          "sha256": "34d7bdb3826be9be51b8d89e0f0f3e50a84c5bd5471f99bfc71179a0eaad8913",
+          "bytes": 922574
+        }
+      ]
+    },
+    {
+      "id": "garcilaso-rycaut-1688",
+      "file": "verification/era6/garcilaso.txt",
+      "url": "https://archive.org/details/royalcommentarie00vega_0",
+      "license": "ملك عام: نُشر سنة 1688، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/royalcommentarie00vega_0",
+      "attribution": "Garcilaso de la Vega، The Royal Commentaries of Peru، ترجمة Rycaut (1688)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "bf82d92e697196aed6ff3410dd4e00f19959b40422d069b85136c1ac7b0b66ff",
+      "bytes": 4599490,
+      "files": [
+        {
+          "file": "verification/era6/garcilaso.txt",
+          "sha256": "bf82d92e697196aed6ff3410dd4e00f19959b40422d069b85136c1ac7b0b66ff",
+          "bytes": 4599490
+        }
+      ]
+    },
+    {
+      "id": "diaz-maudslay",
+      "file": "verification/era6/diaz.txt",
+      "url": "https://archive.org/details/truehistoryofcon2242dazd",
+      "license": "ملك عام: نُشر سنة 1908، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. والمترجم A. P. Maudslay توفي سنة 1931.",
+      "tier": "A",
+      "landing": "https://archive.org/details/truehistoryofcon2242dazd",
+      "attribution": "Díaz del Castillo، The True History of the Conquest of New Spain، ترجمة Maudslay، Hakluyt Society، المجلد 2 (1908)",
+      "note": "المعرّف مأخوذ من الصفحة المحفوظة نفسها، والمقاطع المقتبسة موجودة في الملف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T08:39:17.286Z",
+      "sha256": "f9f4a13bcf56bcaf1e7c6530f401964356a797ff3d68e342043b13b0b3af36ee",
+      "bytes": 858413,
+      "files": [
+        {
+          "file": "verification/era6/diaz.txt",
+          "sha256": "f9f4a13bcf56bcaf1e7c6530f401964356a797ff3d68e342043b13b0b3af36ee",
+          "bytes": 858413
+        }
+      ]
+    },
+    {
+      "id": "sima-qian-zh",
+      "url": "https://zh.wikisource.org/wiki/史記/卷123",
+      "license": "النص الأصلي ملك عام (سيما تشيان، نحو 90 ق.م). التفريغ في ويكي مصدر بترخيص CC BY-SA 4.0 بحسب تذييل الصفحة.",
+      "tier": "B",
+      "landing": "https://zh.wikisource.org/wiki/史記/卷123",
+      "attribution": "史記 卷123 大宛列傳، ويكي مصدر الصيني (CC BY-SA 4.0)",
+      "note": "النص الخام للصفحة (action=raw). المقاطع موجودة فيه.",
+      "status": "ok",
+      "file": "verification/era3/shiji_123_zh_wikisource.txt",
+      "retrieved_at": "2026-11-09T08:45:46.027Z",
+      "sha256": "3272feefc3fadfa275c914bd175c2570143fb725143662d6e25def74164ed9b1",
+      "bytes": 20349,
+      "files": [
+        {
+          "file": "verification/era3/shiji_123_zh_wikisource.txt",
+          "sha256": "3272feefc3fadfa275c914bd175c2570143fb725143662d6e25def74164ed9b1",
+          "bytes": 20349
+        }
+      ],
+      "license_verified_at": "2026-11-09"
+    },
+    {
+      "id": "hanshu-zh",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷096上",
+      "license": "النص الأصلي ملك عام (بان قو، القرن الأول الميلادي). التفريغ في ويكي مصدر بترخيص CC BY-SA 4.0 بحسب تذييل الصفحة.",
+      "tier": "B",
+      "landing": "https://zh.wikisource.org/wiki/漢書/卷096上",
+      "attribution": "漢書 卷96 西域傳 (上 و下)، ويكي مصدر الصيني (CC BY-SA 4.0)",
+      "note": "الصفحتان 漢書/卷096上 و漢書/卷096下 في ملف واحد. يحلّ محل hanshu.txt الفارغ.",
+      "status": "ok",
+      "file": "verification/era3/hanshu_096_zh_wikisource.txt",
+      "retrieved_at": "2026-11-09T08:45:46.027Z",
+      "sha256": "1bb1ac5a59d9842e7eaedaa4a16842b995f2a01f860d36bf07e20f2ae4800e38",
+      "bytes": 53452,
+      "files": [
+        {
+          "file": "verification/era3/hanshu_096_zh_wikisource.txt",
+          "sha256": "1bb1ac5a59d9842e7eaedaa4a16842b995f2a01f860d36bf07e20f2ae4800e38",
+          "bytes": 53452
+        }
+      ],
+      "license_verified_at": "2026-11-09"
+    },
+    {
+      "id": "bede-latin-pl95",
+      "url": "https://la.wikisource.org/wiki/Historia_Ecclesiastica_gentis_Anglorum",
+      "license": "النص الأصلي ملك عام (بيدا، ت 735؛ Patrologia Latina 95). التفريغ في ويكي مصدر بترخيص CC BY-SA 4.0 بحسب تذييل الصفحة.",
+      "tier": "B",
+      "landing": "https://la.wikisource.org/wiki/Historia_Ecclesiastica_gentis_Anglorum",
+      "attribution": "Beda Venerabilis، Historia Ecclesiastica gentis Anglorum، الكتب I وII وIV، ويكي مصدر اللاتيني (CC BY-SA 4.0)",
+      "note": "الكتب الثلاثة التي تأتي منها المقاطع.",
+      "status": "ok",
+      "file": "verification/era4/bede_latin_pl95_wikisource.txt",
+      "retrieved_at": "2026-11-09T08:45:46.027Z",
+      "sha256": "9dcac23a2d69e90f129703bc76e5999c1a51517f5707a6289be92522cbbad57d",
+      "bytes": 318121,
+      "files": [
+        {
+          "file": "verification/era4/bede_latin_pl95_wikisource.txt",
+          "sha256": "9dcac23a2d69e90f129703bc76e5999c1a51517f5707a6289be92522cbbad57d",
+          "bytes": 318121
+        }
+      ],
+      "license_verified_at": "2026-11-09"
+    },
+    {
+      "id": "tacitus-agricola-la-ws",
+      "url": "https://la.wikisource.org/wiki/De_vita_et_moribus_Iulii_Agricolae",
+      "license": "النص الأصلي ملك عام (تاسيتوس، نحو 98م). التفريغ في ويكي مصدر بترخيص CC BY-SA 4.0 بحسب تذييل الصفحة.",
+      "tier": "B",
+      "landing": "https://la.wikisource.org/wiki/De_vita_et_moribus_Iulii_Agricolae",
+      "attribution": "Tacitus، De vita et moribus Iulii Agricolae، ويكي مصدر اللاتيني (CC BY-SA 4.0)",
+      "note": "الملف نفسه المسجّل تحت wikisource-latin-tacitus-sallust، بمعرّف المقاطع.",
+      "status": "ok",
+      "file": "data/raw/wikisource_latin/tacitus_agricola.txt",
+      "retrieved_at": "2026-11-09T08:45:46.027Z",
+      "sha256": "18a4c90dff6e49c93403f1597f337a8aded614937c1624bf180a8a7bd03be5fa",
+      "bytes": 51789,
+      "files": [
+        {
+          "file": "data/raw/wikisource_latin/tacitus_agricola.txt",
+          "sha256": "18a4c90dff6e49c93403f1597f337a8aded614937c1624bf180a8a7bd03be5fa",
+          "bytes": 51789
+        }
+      ],
+      "license_verified_at": "2026-11-09"
+    },
+    {
+      "id": "sallust-catilina-la-ws",
+      "url": "https://la.wikisource.org/wiki/De_Catilinae_coniuratione",
+      "license": "النص الأصلي ملك عام (سالوست، نحو 40 ق.م). التفريغ في ويكي مصدر بترخيص CC BY-SA 4.0 بحسب تذييل الصفحة.",
+      "tier": "B",
+      "landing": "https://la.wikisource.org/wiki/De_Catilinae_coniuratione",
+      "attribution": "Sallustius، De Catilinae coniuratione، ويكي مصدر اللاتيني (CC BY-SA 4.0)",
+      "note": "الملف نفسه المسجّل تحت wikisource-latin-tacitus-sallust، بمعرّف المقاطع.",
+      "status": "ok",
+      "file": "data/raw/wikisource_latin/sallust_catilina.txt",
+      "retrieved_at": "2026-11-09T08:45:46.027Z",
+      "sha256": "ea5ccfc20d97ad480a2871d3532109d2d22a96c0cbca7dc47fde329ae5d4949a",
+      "bytes": 83104,
+      "files": [
+        {
+          "file": "data/raw/wikisource_latin/sallust_catilina.txt",
+          "sha256": "ea5ccfc20d97ad480a2871d3532109d2d22a96c0cbca7dc47fde329ae5d4949a",
+          "bytes": 83104
+        }
+      ],
+      "license_verified_at": "2026-11-09"
+    },
+    {
+      "id": "gama-hakluyt-1898",
+      "url": "https://archive.org/details/bub_gb_13stAAAAMAAJ",
+      "license": "ملك عام: نُشر سنة 1898، والأرشيف يحمل علامة public-domain mark 1.0.",
+      "tier": "A",
+      "landing": "https://archive.org/details/bub_gb_13stAAAAMAAJ",
+      "attribution": "A Journal of the First Voyage of Vasco da Gama, 1497-1499، ترجمة E. G. Ravenstein، Hakluyt Society (1898)",
+      "note": "نص الأرشيف كاملاً، والمقاطع موجودة فيه.",
+      "status": "ok",
+      "file": "verification/era6/gama_ravenstein1898.txt",
+      "retrieved_at": "2026-11-09T08:45:46.027Z",
+      "sha256": "90eaa961ab82ef7385072bf6901affa48f110a60c738cdfea0b5b6489954d897",
+      "bytes": 634419,
+      "files": [
+        {
+          "file": "verification/era6/gama_ravenstein1898.txt",
+          "sha256": "90eaa961ab82ef7385072bf6901affa48f110a60c738cdfea0b5b6489954d897",
+          "bytes": 634419
+        }
+      ],
+      "license_verified_at": "2026-11-09"
     }
   ]
 }
