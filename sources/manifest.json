@@ -420,7 +420,7 @@
       "id": "versailles-1919",
       "file": "verification/era8/versailles_1919_excerpt.txt",
       "url": "https://archive.org/details/treatyofpeacebe00alli",
-      "license": "ملك عام: نص معاهدة منشورة سنة 1919 من حكومة بريطانيا (HMSO)، وحقوق التاج على الوثائق الحكومية انتهت. النص من أرشيف الإنترنت.",
+      "license": "ملك عام: نُشر سنة 1919 (London: H.M. Stationery Office، بحسب بيانات الأرشيف)، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. وحقوق التاج البريطانية على العمل المنشور مدتها 50 سنة من نهاية سنة النشر فانتهت سنة 1969، لكن نص القانون (CDPA 1988، المادة 163) لم يُقرأ لأن موقع legislation.gov.uk محجوب عن الجلسة.",
       "tier": "A",
       "landing": "https://archive.org/details/treatyofpeacebe00alli",
       "attribution": "The Treaty of Peace between the Allied and Associated Powers and Germany (1919)",
@@ -432,7 +432,13 @@
           "sha256": "e3c8d06a76a6e13d048486935a12b4d2fe29bcfd6057789f650fb077382d4f39",
           "bytes": 1259
         }
-      ]
+      ],
+      "retrieved_at": "2026-11-09T08:50:01.680Z",
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://archive.org/metadata/treatyofpeacebe00alli",
+        "quote": "publisher: London H.M. Stationery Off ; date: 1919"
+      }
     },
     {
       "id": "historical-basemaps",
