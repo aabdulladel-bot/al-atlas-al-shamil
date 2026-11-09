@@ -34,6 +34,8 @@
     "check:launch": "node scripts/build_licenses.mjs --check && node scripts/check_licenses.mjs",
     "build:licenses": "node scripts/build_licenses.mjs",
     "test:ui": "node scripts/ui_smoke.mjs",
+    "test:search": "node scripts/search_check.mjs",
+    "fetch:extras": "python3 -I scripts/fetch_wikidata_extras.py",
     "review:import": "node scripts/import_review.mjs",
     "build:precedents": "node scripts/build_precedents.mjs",
     "check:precedents": "node scripts/check_precedents.mjs",

@@ -1,0 +1,25 @@
+{
+  "_note": "أقاليم تاريخية وكيانات غائبة عن خرائط الأطلس، يجدها البحث. لكل عنصر معرّفه في ويكي بيانات (qid)، والبيانات (الأسماء والوصف والإحداثيات والتواريخ) تُجلب منها بـ scripts/fetch_wikidata_extras.py. search: عبارة البحث التي اختير بها المعرّف، للتوثيق. zoom: تقريب الخريطة عند الطيران إلى الإقليم.",
+  "regions": [
+    {"search": "al-Andalus", "zoom": 5.2},
+    {"search": "Levant", "zoom": 5.4},
+    {"search": "Maghreb", "zoom": 4.4},
+    {"search": "Mesopotamia", "zoom": 5.2},
+    {"search": "Hejaz", "zoom": 5.4},
+    {"search": "Greater Khorasan", "zoom": 4.8},
+    {"search": "Transoxiana", "zoom": 5},
+    {"search": "Anatolia", "zoom": 5.2},
+    {"search": "Nubia", "zoom": 5},
+    {"search": "Silk Road", "zoom": 3.4}
+  ],
+  "absent": [
+    {"search": "Abbasid Caliphate"},
+    {"search": "Rashidun Caliphate"},
+    {"search": "Ayyubid dynasty"},
+    {"search": "Mamluk Sultanate"},
+    {"search": "Seljuk Empire"},
+    {"search": "Almoravid dynasty"},
+    {"search": "Timurid Empire"},
+    {"search": "Kingdom of Jerusalem"}
+  ]
+}

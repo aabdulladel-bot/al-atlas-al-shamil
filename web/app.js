@@ -815,6 +815,59 @@ const COORD_SHORT = {
   "natural-earth-modern-city": "موقع المدينة الحديثة",
   "wikidata-modern-city": "موقع المدينة الحديثة",
 };
+// شاهد واحد: نصه واقتباسه المطابق وقائله وتحفّظه، ودوره في السنن. تستعمله بطاقة المكان وبطاقة الشاهد بلا مكان
+function claimRowHtml(c) {
+  const era = ERAS.find((x) => x.id === Number(c.era));
+  const roles = (claimRoles.get(c.id) ?? []).map((r) => chip(`${r.role === "limit" ? "يقيّد" : "يؤيد"}: ${r.name}`, r.role));
+  return `<article class="ev-card"><div class="ev-st">${escapeHtml(c.statement)}</div>` +
+    `<blockquote class="ev-q" dir="auto">“${escapeHtml(c.quote)}”</blockquote>` +
+    `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi></div>` +
+    (c.hedge ? `<div class="ev-hedge">تحفّظ: ${escapeHtml(c.hedge)}</div>` : "") +
+    domainChips(c.id) +
+    `<div class="chips">${era ? chip(`الحقبة ${era.id}: ${era.label}${era.id === eraOf(time.key).id ? " (الحقبة المعروضة)" : ""}`, era.id === eraOf(time.key).id ? "now-era" : "", `data-time="${era.border}" title="انقل الخريطة إلى زمنه"`) : ""}${roles.join("")}</div></article>`;
+}
+// شاهد لا مكان له على الخريطة (يجده البحث): يُعرض نصاً، ولا تُوضع له نقطة
+function openClaimTextCard(c, era) {
+  markPoint(null);
+  if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
+  cardEntity = null;
+  if (typeof passportNote === "function") passportNote("claim", c.id);
+  openCard(cardHead({
+    title: "شاهد موثّق", en: c.attributed_to, icon: "claim",
+    chips: [chip("بلا مكان على الخريطة"), chip("مطابق لنص مصدره", "tier-v")],
+    note: "لم يُربط هذا الشاهد بمكان محدد، فيُعرض نصه وحده.",
+  }) + `<section class="card-sec">${claimRowHtml({ ...c, era })}</section>` + alsoHtml());
+}
+// كيان غائب عن خرائط الأطلس (يجده البحث): البطاقة تقول لماذا لا يظهر، من تواريخه في ويكي بيانات وسنوات الخرائط
+function openAbsentCard(a) {
+  markPoint(null);
+  if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
+  cardEntity = null;
+  const years = BORDER_YEARS.filter((k) => k !== "modern").map(Number).sort((x, y) => x - y);
+  let why;
+  if (a.from == null || a.to == null) {
+    why = "لا تواريخ كاملة له في ويكي بيانات، فلا يُعرف أي خرائط الأطلس تقع في مدته.";
+  } else {
+    const inside = years.filter((y) => y >= a.from && y <= a.to);
+    if (inside.length) {
+      why = `خريطة ${inside.map(yearLabel).join("، ")} تقع في مدته، لكن خرائط المصدر (Historical Basemaps) لا ترسمه باسمه. هذه فجوة في المصدر، لا حكم بأنه لم يكن قائماً.`;
+    } else {
+      const before = years.filter((y) => y < a.from).pop();
+      const after = years.find((y) => y > a.to);
+      why = `مدته كلها تقع بين ${before != null ? `خريطة ${yearLabel(before)}` : "أول الخرائط"} و${after != null ? `خريطة ${yearLabel(after)}` : "آخر الخرائط"}، فلا تظهر في أي خريطة من خرائط الأطلس، وهي لقطات في سنوات محددة.`;
+    }
+  }
+  const span = `${a.from != null ? yearLabel(a.from) : "؟"} – ${a.to != null ? yearLabel(a.to) : "؟"}`;
+  const desc = a.d_ar ? `<p class="define-desc">${escapeHtml(a.d_ar)}</p>` : a.d_en ? `<p class="define-desc" dir="ltr" lang="en">${escapeHtml(a.d_en)}</p>` : "";
+  const links = [
+    a.arwiki ? `<a href="https://ar.wikipedia.org/wiki/${encodeURIComponent(a.arwiki)}" target="_blank" rel="noopener">ويكيبيديا العربية</a>` : "",
+    a.enwiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(a.enwiki)}" target="_blank" rel="noopener" lang="en">Wikipedia</a>` : "",
+    `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(a.q)}" target="_blank" rel="noopener">ويكي بيانات <bdi>${escapeHtml(a.q)}</bdi></a>`,
+  ].filter(Boolean).join(" · ");
+  openCard(cardHead({ title: a.ar, en: a.en, icon: "state", chips: [chip("غائب عن خرائط الأطلس", "tier-u"), chip(`مدته في ويكي بيانات: ${span}`)] }) +
+    `<section class="card-sec define"><h3>تعريف</h3>${desc}<p class="define-links">${links}</p><p class="sub">الوصف والتواريخ من ويكي بيانات (CC0).</p></section>` +
+    `<section class="card-sec gaps"><h3>لماذا لا يظهر على الخريطة؟</h3><p>${escapeHtml(why)}</p></section>` + alsoHtml());
+}
 function openClaimCard(f) {
   const p = f.properties;
   markPoint(f.geometry.coordinates);
@@ -822,16 +875,7 @@ function openClaimCard(f) {
   cardEntity = null;
   const only = activeSunna ? new Set(activeSunna.ids) : null;
   const claims = JSON.parse(p.claims).filter((c) => !only || only.has(c.id));
-  const rows = claims.map((c) => {
-    const era = ERAS.find((x) => x.id === Number(c.era));
-    const roles = (claimRoles.get(c.id) ?? []).map((r) => chip(`${r.role === "limit" ? "يقيّد" : "يؤيد"}: ${r.name}`, r.role));
-    return `<article class="ev-card"><div class="ev-st">${escapeHtml(c.statement)}</div>` +
-      `<blockquote class="ev-q" dir="auto">“${escapeHtml(c.quote)}”</blockquote>` +
-      `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi></div>` +
-      (c.hedge ? `<div class="ev-hedge">تحفّظ: ${escapeHtml(c.hedge)}</div>` : "") +
-      domainChips(c.id) +
-      `<div class="chips">${era ? chip(`الحقبة ${era.id}: ${era.label}${era.id === eraOf(time.key).id ? " (الحقبة المعروضة)" : ""}`, era.id === eraOf(time.key).id ? "now-era" : "", `data-time="${era.border}" title="انقل الخريطة إلى زمنه"`) : ""}${roles.join("")}</div></article>`;
-  }).join("");
+  const rows = claims.map(claimRowHtml).join("");
   if (typeof passportNote === "function") for (const c of claims) passportNote("claim", c.id);
   openCard(cardHead({
     title: p.name_ar, en: p.name_en, icon: "claim",

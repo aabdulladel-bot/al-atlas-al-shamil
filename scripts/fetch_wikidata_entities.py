@@ -1,4 +1,4 @@
-# يجلب من ويكي بيانات (CC0) وصف كيانات Historical Basemaps للبطاقة التعريفية: التسمية والوصف بالعربية والإنجليزية،
+# يجلب من ويكي بيانات (CC0) وصف كيانات Historical Basemaps للبطاقة التعريفية والبحث: التسمية والوصف والأسماء البديلة بالعربية والإنجليزية،
 # والنوع (P31) وتاريخا النشأة والزوال (P571/P576)، وعنوانا مقالتي ويكيبيديا العربية والإنجليزية (للرابط وحده).
 # ثم تسميات الأنواع نفسها، ليُعرض نوع الكيان كما تسمّيه ويكي بيانات.
 # المعرّفات: من data/raw/wikidata/hb_titles.json، مع تصحيحات scripts/config/hb_qid_overrides.json.
@@ -50,7 +50,7 @@ def main():
     titles = json.loads((ROOT / "data/raw/wikidata/hb_titles.json").read_text(encoding="utf-8"))["titles"]
     overrides = json.loads((ROOT / "scripts/config/hb_qid_overrides.json").read_text(encoding="utf-8"))["overrides"]
     qids = {v["qid"] for v in titles.values() if v and v.get("qid")} | {o["qid"] for o in overrides.values()}
-    raw = fetch(qids, "labels|descriptions|claims|sitelinks", "arwiki|enwiki")
+    raw = fetch(qids, "labels|descriptions|aliases|claims|sitelinks", "arwiki|enwiki")
     entities = {}
     for q, e in raw.items():
         if "missing" in e:
@@ -59,6 +59,9 @@ def main():
         entities[q] = {
             "ar": val(e.get("labels", {}), "ar"), "en": val(e.get("labels", {}), "en"),
             "desc_ar": val(e.get("descriptions", {}), "ar"), "desc_en": val(e.get("descriptions", {}), "en"),
+            # الأسماء البديلة للبحث (الأمويون، الخلافة العباسية...): كما في ويكي بيانات
+            "aliases_ar": [a["value"] for a in e.get("aliases", {}).get("ar", [])][:12],
+            "aliases_en": [a["value"] for a in e.get("aliases", {}).get("en", [])][:8],
             "p31": ids_of(claims, "P31"),
             "inception": fwn.times(claims, "P571"), "dissolved": fwn.times(claims, "P576"),
             "arwiki": (e.get("sitelinks", {}).get("arwiki") or {}).get("title"),

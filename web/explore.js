@@ -11,8 +11,18 @@ function norm(s) {
     .replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/ة/g, "ه").replace(/ؤ/g, "و").replace(/ئ/g, "ي")
     .replace(/\s+/g, " ").trim();
 }
-const ICONS = { entity: "◼", people: "◩", place: "●", claim: "❝", sunna: "✦", era: "⧗", year: "⌖", journey: "➜", cmd: "›" };
-const TYPE_AR = { cmd: "أوامر", entity: "الدول والكيانات", people: "الشعوب والقبائل", place: "مواقع الحقب", claim: "الشواهد", sunna: "السنن", era: "الحقب", year: "الزمن", journey: "الرحلات" };
+// جذع تقريبي للكلمة العربية بعد norm: تُنزع «ال» وما يسبقها من حروف الجر والعطف، ولاحقة واحدة من لواحق الجمع والنسبة،
+// فتلتقي «الأمويون» و«الدولة الأموية» على «امو»، و«العباسيون» و«الخلافة العباسية» على «عباس». لا يُنقص الجذع عن ثلاثة أحرف.
+const STEM_PRE = ["وال", "بال", "فال", "كال", "لل", "ال"];
+const STEM_SUF = ["يون", "يين", "يات", "ون", "ين", "ات", "يه", "ه", "ي"];
+function stem(w) {
+  for (const p of STEM_PRE) if (w.startsWith(p) && w.length - p.length >= 3) { w = w.slice(p.length); break; }
+  for (const x of STEM_SUF) if (w.endsWith(x) && w.length - x.length >= 3) { w = w.slice(0, -x.length); break; }
+  return w;
+}
+const stems = (t) => t.split(" ").filter(Boolean).map(stem);
+const ICONS = { entity: "◼", people: "◩", place: "●", claim: "❝", sunna: "✦", era: "⧗", year: "⌖", journey: "➜", cmd: "›", region: "◎", absent: "◌" };
+const TYPE_AR = { cmd: "أوامر", region: "الأقاليم التاريخية", absent: "غائبة عن الخرائط", entity: "الدول والكيانات", people: "الشعوب والقبائل", place: "مواقع الحقب", claim: "الشواهد", sunna: "السنن", era: "الحقب", year: "الزمن", journey: "الرحلات" };
 
 // ---------- جواز المستكشف: تقدّم القارئ في متصفحه وحده ----------
 const PASS_KEY = "atlas-passport-v1";
@@ -72,6 +82,23 @@ async function goClaimPlace(it) {
   const f = claimPoints?.features.find((x) => x.properties.slug === it.slug);
   if (f) { cardAlso = []; showHit({ c: CLICKABLE.find((c) => c.layer === "claim-points"), f }); }
 }
+// شاهد بلا مكان: يُعرض نصاً في بطاقته، وتنتقل الخريطة إلى حقبته
+async function goClaimText(it) {
+  const era = ERAS.find((e) => e.id === it.era);
+  if (era) await loadBorders(era.border);
+  openClaimTextCard(it.claim, it.era);
+}
+// إقليم تاريخي (الأندلس، بلاد الشام...): تطير الخريطة إليه، وتُفتح بطاقة الكيان الذي يحكمه في الخريطة المعروضة
+function goRegion(it) {
+  closeCard();
+  map.flyTo({ center: it.coords, zoom: it.zoom ?? 4.6, pitch: 20, bearing: 0, duration: camMs(CAM_FAST), essential: true });
+  arriveAfterMove(it.coords);
+  map.once("moveend", () => {
+    const pt = map.project(it.coords);
+    const hit = map.queryRenderedFeatures(pt, { layers: ["borders-fill"].filter((l) => map.getLayer(l)) })[0];
+    if (hit) openEntityCard(hit, "state");
+  });
+}
 function goSunna(it) {
   const s = sunanData?.sunan.find((x) => x.id === it.id);
   if (!s) return;
@@ -86,7 +113,9 @@ async function goItem(it) {
   if (it.type === "cmd") return it.run();
   if (it.type === "entity" || it.type === "people") return goEntity(it);
   if (it.type === "place") return goPlace(it);
-  if (it.type === "claim") return goClaimPlace(it);
+  if (it.type === "claim") return it.coords ? goClaimPlace(it) : goClaimText(it);
+  if (it.type === "region") return goRegion(it);
+  if (it.type === "absent") return openAbsentCard(it.rec);
   if (it.type === "sunna") return goSunna(it);
   if (it.type === "era") return loadEra(ERAS.find((e) => e.id === it.id));
   if (it.type === "year") return loadBorders(it.key);
@@ -115,11 +144,14 @@ function buildIndex() {
     await Promise.all(BORDER_YEARS.map(async (k) => {
       try { for (const f of (await getJson(`data/borders/peoples_${k}.geojson`)).features) peoples.add(f.properties.NAME); } catch {}
     }));
+    // الأسماء البديلة من ويكي بيانات (CC0): «الأمويون» و«الخلافة العباسية» وغيرها، تُبحث ولا تُعرض
+    await entityInfoReady;
     for (const e of ents.values()) {
       if (peoples.has(e.en)) e.type = "people";
       e.title = e.ar ?? e.shown;
       e.sub = `${e.ar && e.shown !== e.ar ? `${e.shown} · ` : ""}${e.keys.map(yearText).join("، ")}`;
-      e.text = [e.title, e.shown];
+      const al = entityInfo?.entities?.[e.en]?.al ?? [];
+      e.text = [e.title, e.shown, ...al];
       e.weight = Math.log10(1 + (e.a || 1e5));
       items.push(e);
     }
@@ -134,21 +166,48 @@ function buildIndex() {
         items.push({ type: "place", ar: p.name_ar, title: p.name_ar, sub: `الحقبة ${era.id}: ${era.label}${p.name_en && p.name_en !== p.name_ar ? ` · ${p.name_en}` : ""}`, text: [p.name_ar, p.name_en], era: era.id, coords: f.geometry.coordinates, weight: 4 });
       }
     }
-    // الشواهد: كل ادعاء له مكان، ويُفتح على بطاقة مكانه
+    // الشواهد كلها: ما له مكان يُفتح على بطاقة مكانه، وما لا مكان له يُفتح نصاً في بطاقته.
+    // كان الفهرس يقرأ الشواهد ذات المكان وحدها (31 من 168)، فلا يجد «ابن خلدون» ولا «الحرير».
+    const placed = new Set();
     if (await ensureClaimPoints()) {
       for (const f of claimPoints.features) {
         const p = f.properties;
         for (const c of JSON.parse(p.claims)) {
+          placed.add(c.id);
           items.push({ type: "claim", title: c.statement, sub: `${p.name_ar} · الحقبة ${c.era} · ${c.attributed_to}`, text: [c.statement, p.name_ar, p.name_en, c.attributed_to], era: c.era, coords: f.geometry.coordinates, slug: p.slug, weight: 3 });
         }
       }
     }
-    for (const s of sunanData?.sunan ?? []) items.push({ type: "sunna", id: s.id, title: s.name, sub: s.hypothesis, text: [s.name, s.hypothesis], weight: 6 });
+    await Promise.all(ERAS.map(async (era) => {
+      try {
+        for (const c of (await getJson(`data/claims_era${era.id}.json`)).claims) {
+          if (placed.has(c.id)) continue;
+          items.push({ type: "claim", title: c.statement, sub: `الحقبة ${era.id} · ${c.attributed_to}`, text: [c.statement, c.attributed_to], era: era.id, claim: c, weight: 2.5 });
+        }
+      } catch {}
+    }));
+    // السنن بنص ابن خلدون أيضاً، فيجدها من يكتب «ابن خلدون» أو كلمة من المقدمة
+    for (const s of sunanData?.sunan ?? []) items.push({ type: "sunna", id: s.id, title: s.name, sub: s.hypothesis, text: [s.name, s.hypothesis, "ابن خلدون المقدمة", ...(s.khaldun ?? []).map((k) => k.quote)], weight: 6 });
+    // من ويكي بيانات (CC0): الأقاليم التاريخية (ليست كيانات في الخرائط، فتطير إليها الخريطة)،
+    // والكيانات الغائبة عن خرائط الأطلس (يجدها البحث فيشرح سبب غيابها بدل «لا نتيجة»)
+    try {
+      const x = await getJson("data/names/search_extras.json");
+      for (const r of x.regions) {
+        items.push({ type: "region", title: r.ar, sub: `إقليم تاريخي${r.d_ar ? ` · ${r.d_ar}` : ""}`, text: [r.ar, r.en, ...(r.al ?? [])], coords: r.coords, zoom: r.zoom, weight: 7 });
+      }
+      for (const a of x.absent) {
+        const span = a.from != null || a.to != null ? `${a.from != null ? yearLabel(a.from) : "؟"} – ${a.to != null ? yearLabel(a.to) : "؟"}` : "";
+        items.push({ type: "absent", title: a.ar, sub: `غائبة عن خرائط الأطلس${span ? ` · ${span}` : ""}`, text: [a.ar, a.en, ...(a.al ?? [])], rec: a, weight: 6.5 });
+      }
+    } catch {}
     for (const e of ERAS) items.push({ type: "era", id: e.id, title: `الحقبة ${e.id}: ${e.label}`, sub: e.desc, text: [e.label, `الحقبة ${e.id}`], weight: 6 });
     try {
       for (const j of await getJson("data/journeys/index.json")) items.push({ type: "journey", id: j.id, title: j.title, sub: "رحلة سردية بشواهد موثّقة", text: [j.title], weight: 6 });
     } catch {}
-    for (const it of items) it.n = it.text.filter(Boolean).map(norm);
+    for (const it of items) {
+      it.n = it.text.filter(Boolean).map(norm);
+      it.s = it.n.map(stems);
+    }
     return items;
   })();
   return searchIndex;
@@ -161,14 +220,22 @@ function yearHit(q) {
   const key = TIME_STOPS.reduce((b, k) => (Math.abs(yearOf(k) - y) < Math.abs(yearOf(b) - y) ? k : b), TIME_STOPS[0]);
   return { type: "year", key, title: `انتقل إلى ${yearText(key)}`, sub: `أقرب خريطة حدود إلى سنة ${yearLabel(y)}، الحقبة ${eraOf(key).id}: ${eraOf(key).label}` };
 }
+// المطابقة بالجذع: كلمة العنوان المطابقة لجذع الكلمة تماماً أولاً، ثم ما يبدأ به، ثم ما يحويه العنوان،
+// ثم النصوص الأخرى (الأسماء البديلة والشرح). وكل كلمة من البحث لا بد أن تطابق شيئاً.
 function score(it, toks) {
   let s = 0;
-  for (const t of toks) {
-    const [p, ...rest] = it.n;
-    if (p.startsWith(t)) s += 3;
-    else if (p.split(" ").some((w) => w.startsWith(t) || w.startsWith(`ال${t}`))) s += 2;
-    else if (p.includes(t)) s += 1;
-    else if (rest.some((r) => r.includes(t))) s += 0.5;
+  const [p, ...rest] = it.n;
+  const [ps, ...rs] = it.s ?? it.n.map(stems);
+  const qs = toks.map(stem);
+  if (toks.length && toks.join(" ") === p) s += 2;
+  for (let i = 0; i < toks.length; i++) {
+    const t = toks[i];
+    const st = qs[i];
+    if (ps.some((w) => w === st)) s += 3.5;
+    else if (p.startsWith(t) || ps.some((w) => w.startsWith(st))) s += 3;
+    else if (p.includes(t)) s += 1.5;
+    else if (rs.some((ws) => ws.some((w) => w === st))) s += 1.4;
+    else if (rs.some((ws) => ws.some((w) => w.startsWith(st))) || rest.some((r) => r.includes(t))) s += 0.6;
     else return 0;
   }
   // ما في المنطقة المختارة يتقدّم
@@ -228,7 +295,7 @@ async function search(q) {
     if (list.length < PER_TYPE) list.push(it);
     byType.set(it.type, list);
   }
-  const order = ["year", "cmd", "entity", "people", "place", "claim", "sunna", "era", "journey"];
+  const order = ["year", "cmd", "region", "entity", "people", "absent", "place", "sunna", "claim", "era", "journey"];
   const yh = yearHit(q);
   if (yh) byType.set("year", [yh]);
   // الأوامر المطابقة تظهر في البحث العادي أيضاً، قليلةً: ثلاثة أوامر على الأكثر
