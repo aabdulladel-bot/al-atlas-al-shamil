@@ -181,6 +181,139 @@
      "license": "ملك عام: نص آدم سميث (ت. 1790)، تحرير Edwin Cannan (ت. 1935)، Methuen وPutnam، 1904 (منشورة قبل 1929). الأرشيف يصنّفها NOT_IN_COPYRIGHT.",
      "attribution": "Adam Smith, The Wealth of Nations, ed. Edwin Cannan, vol. 2 (London: Methuen; New York: Putnam, 1904); scan by University of Toronto via Internet Archive",
      "landing": "https://archive.org/details/inquirynature02smituoft"
+    },
+    {
+     "id": "behistun",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1846، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Rawlinson، The Persian cuneiform inscription at Behistun (1846)",
+     "landing": "https://archive.org/details/10250456bsb"
+    },
+    {
+     "id": "luckenbill",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1927، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Luckenbill، Ancient Records of Assyria and Babylonia، المجلد II (1927)",
+     "landing": "https://archive.org/details/ancient-records-of-assyria-and-babylonia-volume-2"
+    },
+    {
+     "id": "kjv1611-1872-vol2",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1872، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "The Holy Bible، Authorized Version (1611)، لندن 1872، المجلد II",
+     "landing": "https://archive.org/details/holybibleaccordi0002unse"
+    },
+    {
+     "id": "kjv1611-1872-vol6",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1876، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "The Holy Bible، Authorized Version (1611)، المجلد VI",
+     "landing": "https://archive.org/details/holybibleaccordi0006unse"
+    },
+    {
+     "id": "herodotus",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1861، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Herodotus، History of Herodotus، ترجمة G. Rawlinson، المجلد III (1861)",
+     "landing": "https://archive.org/details/historyofherod03hero"
+    },
+    {
+     "id": "chavannes",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1895، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Chavannes، Les Mémoires historiques de Se-ma Ts'ien (1895-1905)",
+     "landing": "https://archive.org/details/lesmemoireshisto0001edou"
+    },
+    {
+     "id": "thucydides",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1910، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Thucydides، The Peloponnesian War، ترجمة R. Crawley، Everyman's Library (1910)",
+     "landing": "https://archive.org/details/india.history.resource.91344"
+    },
+    {
+     "id": "tacitus",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1921، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Tacitus، The Annals، ترجمة Church وBrodribb (1921)",
+     "landing": "https://archive.org/details/annalsoftacitus0000alfr"
+    },
+    {
+     "id": "asoka",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1920، والأرشيف يحمل علامة public-domain mark 1.0.",
+     "attribution": "Bhandarkar وMajumdar، The Inscriptions of Asoka (1920)",
+     "landing": "https://archive.org/details/cu_pub648"
+    },
+    {
+     "id": "arthashastra",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1929، والمترجم R. Shamasastry توفي سنة 1944، فهو في الملك العام في بلدان life+70 منذ 2015، وفي الولايات المتحدة منذ 2025.",
+     "attribution": "Shamasastry، Kautilya's Arthasastra (1929)",
+     "landing": "https://archive.org/details/KautilyasArthasastra"
+    },
+    {
+     "id": "polybius",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1889، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Polybius، The Histories، ترجمة E. S. Shuckburgh (1889)",
+     "landing": "https://archive.org/details/historiesofpolyb0002evel"
+    },
+    {
+     "id": "polybius-paton-1922",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1922، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Polybius، The Histories، ترجمة W. R. Paton، Loeb (1922)",
+     "landing": "https://archive.org/details/historieswitheng02poly"
+    },
+    {
+     "id": "polybius-paton-1925",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1925، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Polybius، The Histories، المجلد IV، ترجمة W. R. Paton، Loeb (1925)",
+     "landing": "https://archive.org/details/polybiushistorie0000wrpa"
+    },
+    {
+     "id": "xuanzang-beal",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1884، والأرشيف يحمل علامة public-domain mark 1.0.",
+     "attribution": "Beal، Si-Yu-Ki: Buddhist Records of the Western World (1884)",
+     "landing": "https://archive.org/details/si-yu-ki-1884"
+    },
+    {
+     "id": "gregory-brehaut",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1916، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Gregory of Tours، The History of the Franks، ترجمة E. Brehaut (1916)",
+     "landing": "https://archive.org/details/historyoffranks01greg"
+    },
+    {
+     "id": "procopius-dewing-1928",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1928، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Procopius، ترجمة H. B. Dewing، Loeb، المجلد V",
+     "landing": "https://archive.org/details/procopiuswitheng05procuoft"
+    },
+    {
+     "id": "ricci-trigault-1615",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1615، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Ricci وTrigault، De Christiana expeditione apud Sinas (1615)",
+     "landing": "https://archive.org/details/dechristianaexpe00ricc"
+    },
+    {
+     "id": "evliya-ottoman-1896-v2",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1896، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Evliya Çelebi، Seyahatname، المجلد II (1896)",
+     "landing": "https://archive.org/details/evliyaelebisey02evliuoft"
+    },
+    {
+     "id": "khaldun-slane-1863",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1863، والأرشيف يحمل علامة public-domain mark 1.0.",
+     "attribution": "Ibn Khaldun، Les Prolégomènes، ترجمة de Slane (1863)",
+     "landing": "https://archive.org/details/bub_gb_JTs8AAAAMAAJ"
     }
    ]
   },

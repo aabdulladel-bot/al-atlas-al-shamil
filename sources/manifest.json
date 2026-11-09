@@ -248,7 +248,7 @@
       "tier": "A",
       "landing": "https://archive.org/stream/democracyinamer09tocqgoog/democracyinamer09tocqgoog_djvu.txt",
       "attribution": "Tocqueville, Democracy in America, Part II (vol. III), tr. H. Reeve, 1840; scan by Google via Internet Archive",
-      "note": "نص OCR من مسح Google. المجلد الثالث فقط (الجزء الثاني من الكتاب). مستخرج من وسم <pre> في صفحة الأرشيف.",
+      "note": "نص OCR من مسح Google. المجلد الثالث فقط (الجزء الثاني من الكتاب). مستخرج من وسم <pre> في صفحة الأرشيف. تاريخ النشر 1840 مأخوذ من بيانات الأرشيف (democracyinamer09tocqgoog).",
       "status": "ok",
       "files": [
         {
@@ -256,7 +256,8 @@
           "sha256": "e6d9a4a3b2b8798433b5d971fa76246fcbd539eb9c5f66e101df98130e506860",
           "bytes": 374322
         }
-      ]
+      ],
+      "retrieved_at": "2026-11-08T09:04:38.517Z"
     },
     {
       "id": "darwin-origin-1859",
@@ -266,7 +267,7 @@
       "tier": "A",
       "landing": "https://archive.org/details/B-001-004-417",
       "attribution": "Darwin, On the Origin of Species, 1st ed., London: John Murray, 1859; scan via Internet Archive",
-      "note": "نص OCR من مسح Google؛ تمهيد Google بالروسية في أوله. مستخرج من وسم <pre>.",
+      "note": "نص OCR من مسح Google؛ تمهيد Google بالروسية في أوله. مستخرج من وسم <pre>. تاريخ النشر 1859 مأخوذ من بيانات الأرشيف (B-001-004-417).",
       "status": "ok",
       "files": [
         {
@@ -274,7 +275,8 @@
           "sha256": "efaa64b8b93c2e772bfeda4f2711aea297ebe8e4269cfbf5d09932dac22571f6",
           "bytes": 1086409
         }
-      ]
+      ],
+      "retrieved_at": "2026-11-08T09:04:38.517Z"
     },
     {
       "id": "marx-manifesto-moore-1888-mia",
@@ -284,7 +286,7 @@
       "tier": "B",
       "landing": "https://archive.org/details/ManifestoOfTheCommunistPartyKarlMarxFrederickEngels",
       "attribution": "Marx & Engels, Manifesto of the Communist Party, tr. S. Moore 1888; transcription Marxists Internet Archive",
-      "note": "يُقتبس من نص البيان (الأقسام I–IV) فقط. المقدمة التحريرية والهوامش من Progress/MIA لا تُقتبس.",
+      "note": "يُقتبس من نص البيان (الأقسام I–IV) فقط. المقدمة التحريرية والهوامش من Progress/MIA لا تُقتبس. تاريخ النشر 1888 مأخوذ من بيانات الأرشيف (ManifestoOfTheCommunistPartyKarlMarxFrederickEngels).",
       "status": "ok",
       "files": [
         {
@@ -292,7 +294,8 @@
           "sha256": "531cfbf2a9b9978c0dffd888a1fd23310eea71727c2ddd0dc61d6188f2f07fed",
           "bytes": 242758
         }
-      ]
+      ],
+      "retrieved_at": "2026-11-08T09:04:38.517Z"
     },
     {
       "id": "turath-4129-tibr-masbuk",
@@ -402,7 +405,7 @@
       "tier": "A",
       "landing": "https://archive.org/details/japanitshistory4brin",
       "attribution": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
-      "note": "مقتطفان فقط من الفصل الذي يصف الاستعادة (1868). الكاتب مؤرخ من أوائل القرن العشرين، والعبارة الواردة نقل للميثاق بالإنجليزية وليست الوثيقة اليابانية نفسها.",
+      "note": "مقتطفان فقط من الفصل الذي يصف الاستعادة (1868). الكاتب مؤرخ من أوائل القرن العشرين، والعبارة الواردة نقل للميثاق بالإنجليزية وليست الوثيقة اليابانية نفسها. تاريخ النشر 1901 مأخوذ من بيانات الأرشيف (japanitshistory4brin).",
       "status": "ok",
       "files": [
         {
@@ -410,7 +413,8 @@
           "sha256": "4db1023988276e59f31319e387eed4e50e293870ab65a33df1b5600dac5d6c8b",
           "bytes": 1316
         }
-      ]
+      ],
+      "retrieved_at": "2026-11-08T09:04:38.517Z"
     },
     {
       "id": "versailles-1919",
@@ -593,7 +597,7 @@
       "tier": "A",
       "landing": "https://archive.org/details/inquiryintonatur01smit_3",
       "attribution": "Adam Smith, An Inquiry into the Nature and Causes of the Wealth of Nations, vol. 1 (London: Oxford University Press, 1904); scan by UNC Chapel Hill via Internet Archive",
-      "note": "نص OCR فيه أخطاء متفرقة. يُقتبس من متن سميث وحده. يحوي الكتب I–III. مستخرج من وسم <pre> في صفحة الأرشيف.",
+      "note": "نص OCR فيه أخطاء متفرقة. يُقتبس من متن سميث وحده. يحوي الكتب I–III. مستخرج من وسم <pre> في صفحة الأرشيف. تاريخ النشر 1904 مأخوذ من بيانات الأرشيف (inquiryintonatur01smit_3).",
       "status": "ok",
       "files": [
         {
@@ -601,7 +605,8 @@
           "sha256": "23adc1df3bea86299f3db7fc382597710cf00a46b1a6496910dabc68f6cc8b27",
           "bytes": 1016280
         }
-      ]
+      ],
+      "retrieved_at": "2026-11-08T09:04:38.517Z"
     },
     {
       "id": "smith-wealth-cannan1904-vol2",
@@ -611,7 +616,7 @@
       "tier": "A",
       "landing": "https://archive.org/details/inquirynature02smituoft",
       "attribution": "Adam Smith, The Wealth of Nations, ed. Edwin Cannan, vol. 2 (London: Methuen; New York: Putnam, 1904); scan by University of Toronto via Internet Archive",
-      "note": "نص OCR. يُقتبس من متن سميث وحده لا من هوامش المحرر. يحوي الكتب IV–V. مستخرج من وسم <pre> في صفحة الأرشيف.",
+      "note": "نص OCR. يُقتبس من متن سميث وحده لا من هوامش المحرر. يحوي الكتب IV–V. مستخرج من وسم <pre> في صفحة الأرشيف. تاريخ النشر 1904 مأخوذ من بيانات الأرشيف (inquirynature02smituoft).",
       "status": "ok",
       "files": [
         {
@@ -619,7 +624,8 @@
           "sha256": "f92b21b70fe90d5804cd27afaec8df28120dfe39929788f8c6d7ce7e075024ba",
           "bytes": 1795122
         }
-      ]
+      ],
+      "retrieved_at": "2026-11-08T09:04:38.517Z"
     },
     {
       "id": "maddison-2023-owid",
@@ -746,6 +752,405 @@
           "file": "data/raw/gapminder-systema/ddf--entities--geo--country.csv",
           "sha256": "eb9428941f8a2d7b6ce10feada30d723f8b5284fcb47e566128851a1637a4e35",
           "bytes": 52934
+        }
+      ]
+    },
+    {
+      "id": "behistun",
+      "file": "verification/era2/behistun.txt",
+      "url": "https://archive.org/details/10250456bsb",
+      "license": "ملك عام: نُشر سنة 1846، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/10250456bsb",
+      "attribution": "Rawlinson، The Persian cuneiform inscription at Behistun (1846)",
+      "note": "طبعة 1846 بحسب الأرشيف، والمحتوى مطابق لـ README الحقبة الثانية.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "c5d660d70ac8593a3be6de343de7a4088e85fe333e13ccfa4de2b9e1046d8e5b",
+      "bytes": 1235333,
+      "files": [
+        {
+          "file": "verification/era2/behistun.txt",
+          "sha256": "c5d660d70ac8593a3be6de343de7a4088e85fe333e13ccfa4de2b9e1046d8e5b",
+          "bytes": 1235333
+        }
+      ]
+    },
+    {
+      "id": "luckenbill",
+      "file": "verification/era2/luckenbill.txt",
+      "url": "https://archive.org/details/ancient-records-of-assyria-and-babylonia-volume-2",
+      "license": "ملك عام: نُشر سنة 1927، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/ancient-records-of-assyria-and-babylonia-volume-2",
+      "attribution": "Luckenbill، Ancient Records of Assyria and Babylonia، المجلد II (1927)",
+      "note": "المجلد الثاني، بحسب README الحقبة الثانية.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "5abdefb78925488ed8b275280cd57467bb146c5a8a020ed0c6a5c972d68a85c8",
+      "bytes": 1162949,
+      "files": [
+        {
+          "file": "verification/era2/luckenbill.txt",
+          "sha256": "5abdefb78925488ed8b275280cd57467bb146c5a8a020ed0c6a5c972d68a85c8",
+          "bytes": 1162949
+        }
+      ]
+    },
+    {
+      "id": "kjv1611-1872-vol2",
+      "file": "verification/era2/kjv.txt",
+      "url": "https://archive.org/details/holybibleaccordi0002unse",
+      "license": "ملك عام: نُشر سنة 1872، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/holybibleaccordi0002unse",
+      "attribution": "The Holy Bible، Authorized Version (1611)، لندن 1872، المجلد II",
+      "note": "مطابقة الملف بالمجلد الثاني مأخوذة من README الحقبة الثانية.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
+      "bytes": 6444955,
+      "files": [
+        {
+          "file": "verification/era2/kjv.txt",
+          "sha256": "b56bf1e4a3bdc18898cc00db2f4740a65fa088aeab47b1a541e5ba615f210907",
+          "bytes": 6444955
+        }
+      ]
+    },
+    {
+      "id": "kjv1611-1872-vol6",
+      "file": "verification/era2/ezekiel27_kjv1611_1872.txt",
+      "url": "https://archive.org/details/holybibleaccordi0006unse",
+      "license": "ملك عام: نُشر سنة 1876، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/holybibleaccordi0006unse",
+      "attribution": "The Holy Bible، Authorized Version (1611)، المجلد VI",
+      "note": "تعارض: README الحقبة الثانية يذكر 1872، والأرشيف يذكر 1876. الحكم بالملك العام لا يتغير، ويُصحَّح السجل عند التحقق من صفحة العنوان.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "12571f048c98ef24170c322c4a6a8f0d1a4a4e8414a765d49c1693a70a38a4d3",
+      "bytes": 18539,
+      "files": [
+        {
+          "file": "verification/era2/ezekiel27_kjv1611_1872.txt",
+          "sha256": "12571f048c98ef24170c322c4a6a8f0d1a4a4e8414a765d49c1693a70a38a4d3",
+          "bytes": 18539
+        }
+      ]
+    },
+    {
+      "id": "herodotus",
+      "file": "verification/era2/herodotus.txt",
+      "url": "https://archive.org/details/historyofherod03hero",
+      "license": "ملك عام: نُشر سنة 1861، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/historyofherod03hero",
+      "attribution": "Herodotus، History of Herodotus، ترجمة G. Rawlinson، المجلد III (1861)",
+      "note": "الهوامش لا تُقتبس.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "119b42a1feb54c8330ff8bc3cd46bebbab2df1a857ea5ebbadc1e9a5e38c454d",
+      "bytes": 1953174,
+      "files": [
+        {
+          "file": "verification/era2/herodotus.txt",
+          "sha256": "119b42a1feb54c8330ff8bc3cd46bebbab2df1a857ea5ebbadc1e9a5e38c454d",
+          "bytes": 1953174
+        }
+      ]
+    },
+    {
+      "id": "chavannes",
+      "file": "verification/era2/chavannes.txt",
+      "url": "https://archive.org/details/lesmemoireshisto0001edou",
+      "license": "ملك عام: نُشر سنة 1895، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/lesmemoireshisto0001edou",
+      "attribution": "Chavannes، Les Mémoires historiques de Se-ma Ts'ien (1895-1905)",
+      "note": "المجلد الأول، 1895.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "2d427011bc77fe32634d77fc59c279fd6d5c3b457c61ce72777c1abe1edfda30",
+      "bytes": 1437652,
+      "files": [
+        {
+          "file": "verification/era2/chavannes.txt",
+          "sha256": "2d427011bc77fe32634d77fc59c279fd6d5c3b457c61ce72777c1abe1edfda30",
+          "bytes": 1437652
+        }
+      ]
+    },
+    {
+      "id": "thucydides",
+      "file": "verification/era3/thucydides.txt",
+      "url": "https://archive.org/details/india.history.resource.91344",
+      "license": "ملك عام: نُشر سنة 1910، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/india.history.resource.91344",
+      "attribution": "Thucydides، The Peloponnesian War، ترجمة R. Crawley، Everyman's Library (1910)",
+      "note": "متطابقة مع README الحقبة الثالثة.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "ad8ef02b3561b0060ee0a507de62fb961bd83bf18d313e3586fbce206202658c",
+      "bytes": 1417353,
+      "files": [
+        {
+          "file": "verification/era3/thucydides.txt",
+          "sha256": "ad8ef02b3561b0060ee0a507de62fb961bd83bf18d313e3586fbce206202658c",
+          "bytes": 1417353
+        }
+      ]
+    },
+    {
+      "id": "tacitus",
+      "file": "verification/era3/tacitus.txt",
+      "url": "https://archive.org/details/annalsoftacitus0000alfr",
+      "license": "ملك عام: نُشر سنة 1921، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/annalsoftacitus0000alfr",
+      "attribution": "Tacitus، The Annals، ترجمة Church وBrodribb (1921)",
+      "note": "الطبعة الأصلية 1876، والطبعة المستعملة 1921.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "e96fed8d68298cdaddc743de3895b19e871a486b4a3cdc4cad4c4db1825851e9",
+      "bytes": 1486038,
+      "files": [
+        {
+          "file": "verification/era3/tacitus.txt",
+          "sha256": "e96fed8d68298cdaddc743de3895b19e871a486b4a3cdc4cad4c4db1825851e9",
+          "bytes": 1486038
+        }
+      ]
+    },
+    {
+      "id": "asoka",
+      "file": "verification/era3/asoka.txt",
+      "url": "https://archive.org/details/cu_pub648",
+      "license": "ملك عام: نُشر سنة 1920، والأرشيف يحمل علامة public-domain mark 1.0.",
+      "tier": "A",
+      "landing": "https://archive.org/details/cu_pub648",
+      "attribution": "Bhandarkar وMajumdar، The Inscriptions of Asoka (1920)",
+      "note": "علامة PD في الأرشيف هي الأساس الموثّق.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "399d2bf432a72ee774518e602fe48b0b61df774702e8648fb0afce718382af70",
+      "bytes": 236789,
+      "files": [
+        {
+          "file": "verification/era3/asoka.txt",
+          "sha256": "399d2bf432a72ee774518e602fe48b0b61df774702e8648fb0afce718382af70",
+          "bytes": 236789
+        }
+      ]
+    },
+    {
+      "id": "arthashastra",
+      "file": "verification/era3/arthashastra.txt",
+      "url": "https://archive.org/details/KautilyasArthasastra",
+      "license": "ملك عام: نُشر سنة 1929، والمترجم R. Shamasastry توفي سنة 1944، فهو في الملك العام في بلدان life+70 منذ 2015، وفي الولايات المتحدة منذ 2025.",
+      "tier": "A",
+      "landing": "https://archive.org/details/KautilyasArthasastra",
+      "attribution": "Shamasastry، Kautilya's Arthasastra (1929)",
+      "note": "حساب الملك العام يعتمد على تاريخ الوفاة والنشر، لا على علامة في الأرشيف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "22dec0b8bf4fba360ba330fc92f7927bc13ae886ffaaa744c23640152bda39e8",
+      "bytes": 422949,
+      "files": [
+        {
+          "file": "verification/era3/arthashastra.txt",
+          "sha256": "22dec0b8bf4fba360ba330fc92f7927bc13ae886ffaaa744c23640152bda39e8",
+          "bytes": 422949
+        }
+      ]
+    },
+    {
+      "id": "polybius",
+      "file": "verification/era3/polybius.txt",
+      "url": "https://archive.org/details/historiesofpolyb0002evel",
+      "license": "ملك عام: نُشر سنة 1889، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/historiesofpolyb0002evel",
+      "attribution": "Polybius، The Histories، ترجمة E. S. Shuckburgh (1889)",
+      "note": "المجلد II، متوافق مع README الحقبة الثالثة.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "a88f68398f0054e98ab74fbdde046959eb7edae0d7a08c4a3082f794d016b55b",
+      "bytes": 1585594,
+      "files": [
+        {
+          "file": "verification/era3/polybius.txt",
+          "sha256": "a88f68398f0054e98ab74fbdde046959eb7edae0d7a08c4a3082f794d016b55b",
+          "bytes": 1585594
+        }
+      ]
+    },
+    {
+      "id": "polybius-paton-1922",
+      "file": "verification/era3/polybius_paton1922_book3.txt",
+      "url": "https://archive.org/details/historieswitheng02poly",
+      "license": "ملك عام: نُشر سنة 1922، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/historieswitheng02poly",
+      "attribution": "Polybius، The Histories، ترجمة W. R. Paton، Loeb (1922)",
+      "note": "المجلد II.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "2539b9eb1d9c27e8b48107c19eb16982f2533efa7b2ac8f944cbb9171b9afd4d",
+      "bytes": 876232,
+      "files": [
+        {
+          "file": "verification/era3/polybius_paton1922_book3.txt",
+          "sha256": "2539b9eb1d9c27e8b48107c19eb16982f2533efa7b2ac8f944cbb9171b9afd4d",
+          "bytes": 876232
+        }
+      ]
+    },
+    {
+      "id": "polybius-paton-1925",
+      "file": "verification/era3/polybius_paton_loeb4_books9-12.txt",
+      "url": "https://archive.org/details/polybiushistorie0000wrpa",
+      "license": "ملك عام: نُشر سنة 1925، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/polybiushistorie0000wrpa",
+      "attribution": "Polybius، The Histories، المجلد IV، ترجمة W. R. Paton، Loeb (1925)",
+      "note": "الكتب IX–XII.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "61236d075850155d6b37d508c1a0d0fc368e75afc3f56eb4842c1d8827cfc172",
+      "bytes": 902123,
+      "files": [
+        {
+          "file": "verification/era3/polybius_paton_loeb4_books9-12.txt",
+          "sha256": "61236d075850155d6b37d508c1a0d0fc368e75afc3f56eb4842c1d8827cfc172",
+          "bytes": 902123
+        }
+      ]
+    },
+    {
+      "id": "xuanzang-beal",
+      "file": "verification/era4/xuanzang.txt",
+      "url": "https://archive.org/details/si-yu-ki-1884",
+      "license": "ملك عام: نُشر سنة 1884، والأرشيف يحمل علامة public-domain mark 1.0.",
+      "tier": "A",
+      "landing": "https://archive.org/details/si-yu-ki-1884",
+      "attribution": "Beal، Si-Yu-Ki: Buddhist Records of the Western World (1884)",
+      "note": "علامة PD في الأرشيف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "e2e2f867867191a8582e6692d5315fa31a075516fd50a66211e36ac8469be995",
+      "bytes": 1063040,
+      "files": [
+        {
+          "file": "verification/era4/xuanzang.txt",
+          "sha256": "e2e2f867867191a8582e6692d5315fa31a075516fd50a66211e36ac8469be995",
+          "bytes": 1063040
+        }
+      ]
+    },
+    {
+      "id": "gregory-brehaut",
+      "file": "verification/era4/gregory.txt",
+      "url": "https://archive.org/details/historyoffranks01greg",
+      "license": "ملك عام: نُشر سنة 1916، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/historyoffranks01greg",
+      "attribution": "Gregory of Tours، The History of the Franks، ترجمة E. Brehaut (1916)",
+      "note": "طبعة Columbia 1916، بحسب README الحقبة الرابعة.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "cf3921514e5b9b2676d27b5b91db84a94771463a4eb300f4521218829f5aea49",
+      "bytes": 939003,
+      "files": [
+        {
+          "file": "verification/era4/gregory.txt",
+          "sha256": "cf3921514e5b9b2676d27b5b91db84a94771463a4eb300f4521218829f5aea49",
+          "bytes": 939003
+        }
+      ]
+    },
+    {
+      "id": "procopius-dewing-1928",
+      "file": "verification/era4/procopius.txt",
+      "url": "https://archive.org/details/procopiuswitheng05procuoft",
+      "license": "ملك عام: نُشر سنة 1928، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/procopiuswitheng05procuoft",
+      "attribution": "Procopius، ترجمة H. B. Dewing، Loeb، المجلد V",
+      "note": "تعارض: README الحقبة الرابعة يذكر 1928، والأرشيف يذكر 1914 لهذا العنوان. الحكم لا يتغير، ويُصحَّح السجل عند فحص صفحة العنوان.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "bfa66163511be6ce4e7c44976d696e96a175e425114eb83df65f07a172fe4af8",
+      "bytes": 1514612,
+      "files": [
+        {
+          "file": "verification/era4/procopius.txt",
+          "sha256": "bfa66163511be6ce4e7c44976d696e96a175e425114eb83df65f07a172fe4af8",
+          "bytes": 1514612
+        }
+      ]
+    },
+    {
+      "id": "ricci-trigault-1615",
+      "file": "verification/era6/ricci_trigault1615_latin.txt",
+      "url": "https://archive.org/details/dechristianaexpe00ricc",
+      "license": "ملك عام: نُشر سنة 1615، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/dechristianaexpe00ricc",
+      "attribution": "Ricci وTrigault، De Christiana expeditione apud Sinas (1615)",
+      "note": "النص اللاتيني.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "40257b7e21a28d02190826ab3c783a1f0ccc31ebc3b61f52cbd0f1b09c005f23",
+      "bytes": 1388496,
+      "files": [
+        {
+          "file": "verification/era6/ricci_trigault1615_latin.txt",
+          "sha256": "40257b7e21a28d02190826ab3c783a1f0ccc31ebc3b61f52cbd0f1b09c005f23",
+          "bytes": 1388496
+        }
+      ]
+    },
+    {
+      "id": "evliya-ottoman-1896-v2",
+      "file": "verification/era6/evliya_ottoman1896_vol2.txt",
+      "url": "https://archive.org/details/evliyaelebisey02evliuoft",
+      "license": "ملك عام: نُشر سنة 1896، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/evliyaelebisey02evliuoft",
+      "attribution": "Evliya Çelebi، Seyahatname، المجلد II (1896)",
+      "note": "المجلد الثاني.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "149abab7b0ddf45f560c4e3a8e14747145792fc2a9ea7da4312ee2b1e0da9f2c",
+      "bytes": 1331376,
+      "files": [
+        {
+          "file": "verification/era6/evliya_ottoman1896_vol2.txt",
+          "sha256": "149abab7b0ddf45f560c4e3a8e14747145792fc2a9ea7da4312ee2b1e0da9f2c",
+          "bytes": 1331376
+        }
+      ]
+    },
+    {
+      "id": "khaldun-slane-1863",
+      "file": "verification/era5/khaldun_slane1863.txt",
+      "url": "https://archive.org/details/bub_gb_JTs8AAAAMAAJ",
+      "license": "ملك عام: نُشر سنة 1863، والأرشيف يحمل علامة public-domain mark 1.0.",
+      "tier": "A",
+      "landing": "https://archive.org/details/bub_gb_JTs8AAAAMAAJ",
+      "attribution": "Ibn Khaldun، Les Prolégomènes، ترجمة de Slane (1863)",
+      "note": "علامة PD في الأرشيف.",
+      "status": "ok",
+      "retrieved_at": "2026-11-08T09:04:38.517Z",
+      "sha256": "0c3ec67e627b07dd5701b24d7f1acaf8167fa271f746ea5af2b7421d76874ed6",
+      "bytes": 1592324,
+      "files": [
+        {
+          "file": "verification/era5/khaldun_slane1863.txt",
+          "sha256": "0c3ec67e627b07dd5701b24d7f1acaf8167fa271f746ea5af2b7421d76874ed6",
+          "bytes": 1592324
         }
       ]
     }
