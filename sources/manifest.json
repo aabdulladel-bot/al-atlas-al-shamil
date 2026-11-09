@@ -500,7 +500,13 @@
           "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
           "bytes": 35147
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/aourednik/historical-basemaps/master/LICENSE",
+        "quote": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007",
+        "how": "ملف LICENSE يغطي المستودع كله، وREADME لا يذكر ترخيصاً منفصلاً للبيانات"
+      }
     },
     {
       "id": "naturalearth-countries-50m",
@@ -518,7 +524,13 @@
           "sha256": "3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb",
           "bytes": 3083490
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/LICENSE.md",
+        "quote": "Everything here is public domain.",
+        "how": "موقع naturalearthdata.com محجوب عن الجلسة، فقُرئ ملف LICENSE في المستودع الرسمي"
+      }
     },
     {
       "id": "aws-terrain-tiles",
@@ -569,7 +581,13 @@
           "sha256": "da4662b7bbfeb897d02f228c5839131dce27acff5717630f91ccff4f67828ee7",
           "bytes": 3350885
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/LICENSE.md",
+        "quote": "Everything here is public domain.",
+        "how": "كما في naturalearth-countries-50m"
+      }
     },
     {
       "id": "wikidata-hb-names",
@@ -587,7 +605,12 @@
           "sha256": "071c071c51a24f5dbc1345a222c85ee7e0b02d815dbb1fab79519d27b98f688f",
           "bytes": 106656
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+        "quote": "All data in Wikidata has a CC0 license."
+      }
     },
     {
       "id": "smith-wealth-oup1904-vol1",
@@ -648,7 +671,12 @@
           "sha256": "96bbef96050a4ca37ee05df3e1da7145234b1f13e2c93bdde1c35874fdebc7c1",
           "bytes": 4446
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023",
+        "quote": "is licensed under a Creative Commons Attribution 4.0 International License"
+      }
     },
     {
       "id": "ucdp-prio-acd-261",
@@ -666,7 +694,12 @@
           "sha256": "5f951743222964674a446e32a5a871077b29bd13349588d85fc59953d89c878a",
           "bytes": 45955
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://ucdp.uu.se/downloads/",
+        "quote": "CC BY 4.0 — you are free to use and redistribute them provided …"
+      }
     },
     {
       "id": "un-wpp-2024-medium",
@@ -684,7 +717,13 @@
           "sha256": "286ac36bb1415e2e1ade03acfef0a29f0e4c087e2f78e38c48f50c5df89082bc",
           "bytes": 16557272
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://population.un.org/wpp/downloads?folder=Standard%20Projections&group=CSV%20format",
+        "quote": "Copyright © 2024 by United Nations, made available under a Creative Commons license CC BY 3.0 IGO",
+        "how": "الصفحة تُبنى بـ JavaScript، فقُرئت بعد عرضها في متصفح"
+      }
     },
     {
       "id": "ucdp-onesided-261",
@@ -702,7 +741,12 @@
           "sha256": "ecd346fdb72d23bf75aee0845a610e5f81f35caf76991ec875089070b1f39a8f",
           "bytes": 28884
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://ucdp.uu.se/downloads/",
+        "quote": "CC BY 4.0 — you are free to use and redistribute them provided …"
+      }
     },
     {
       "id": "ucdp-brd-conf-261",
@@ -720,7 +764,12 @@
           "sha256": "a88c81fb727f10a689ff0084bacf78e6fbfaadbbe925a608f6e7be2f44a6141e",
           "bytes": 39816
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://ucdp.uu.se/downloads/",
+        "quote": "CC BY 4.0 — you are free to use and redistribute them provided …"
+      }
     },
     {
       "id": "gapminder-systema-globalis",
@@ -753,7 +802,13 @@
           "sha256": "eb9428941f8a2d7b6ce10feada30d723f8b5284fcb47e566128851a1637a4e35",
           "bytes": 52934
         }
-      ]
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/open-numbers/ddf--gapminder--systema_globalis/master/README.md",
+        "quote": "Gapminder created this dataset and provides it under Creative Common Attribution 4.0 International",
+        "how": "يغطي تجميع Gapminder؛ ترخيص المصادر الأصلية غير مُتحقَّق، والاعتماد بقرار صاحب المشروع"
+      }
     },
     {
       "id": "behistun",
