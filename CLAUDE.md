@@ -41,6 +41,7 @@
 
 - `npm run check:all` قبل أي commit: مطابقة الاقتباسات، والمقابلات اليونانية، والسنن.
 - `npm run check:launch` قبل نشر الموقع فقط: بوابة التراخيص في `LICENSES.md`. لا تدخل في `check:all` حتى لا تُعيق تطوير المواد.
+- `npm run build:licenses` بعد تعديل مدخلات النصوص المقتبسة في `sources/manifest.json`: يولّد القسم ب من `LICENSES.md`. وقرارات صاحب المشروع في `scripts/config/licence_decisions.json`.
 - `npm run build:all` بعد تعديل الادعاءات أو السنن.
 - `npm run analyze:seshat` لإعادة التحليل الكمي.
 - الواجهة: `python3 -m http.server` داخل `web/`.

@@ -24,12 +24,18 @@
 | `web/data/demography_*.geojson` | `gapminder-total-population`، `gapminder-country-entities`، `owid-hyde-regional-population` (HYDE عبر OWID) | CC BY 4.0 (Gapminder بحسب README المستودع؛ HYDE عبر OWID بترخيص CC BY 4.0) | إسناد Gapminder وHYDE وOWID | 2026-10-22 | موثّق |
 | `web/data/econ/` | `maddison-2023-owid` | CC BY 4.0: «licensed under a Creative Commons Attribution 4.0 International License» (صفحة rug.nl) | إسناد Bolt وvan Zanden (2024) | 2026-11-09 | موثّق |
 | `web/data/observatory.json`، `web/data/khaldun.json`، `web/data/khaldun_sensitivity.json`، `web/data/dossier.json` | `ucdp-prio-acd-261`، `ucdp-onesided-261`، `ucdp-brd-conf-261`، `un-wpp-2024-medium`، `gapminder-systema-globalis`، `naturalearth-countries-50m` | CC BY 4.0 (UCDP)؛ CC BY 3.0 IGO (UN WPP)؛ CC BY 4.0 (Gapminder؛ الأصل من البنك الدولي وUNESCO غير مُتحقَّق، وقد وافق صاحب المشروع على الاعتماد على ترخيص Gapminder)؛ ملك عام (Natural Earth) | إسناد لكل مصدر؛ وإسناد IGO كما يطلبه UN | 2026-11-09 | موثّق |
-| `web/data/sunan.json` | `wikisource-muqaddima-ar`، `seshat-equinox`، والنصوص المرتبطة بالشواهد (القسم ب) | نص ابن خلدون ملك عام والتفريغ CC BY-SA؛ الاختبار الكمي من Seshat بترخيص CC BY-NC-SA (يتوقف على القسم ب) | إسناد؛ غير تجاري لما أُخذ من Seshat؛ المشتق بترخيص النسخة | 2026-10-22 / 2026-10-20 | غير موثّق |
-| `web/data/claims_*.json`، `web/data/journeys/`، `web/data/precedents.json`، `web/data/domains.json`، `web/data/layers_info.json`، `web/data/lenses.json` | نصوص الشواهد في `verification/era1` إلى `era8` (القسم ب)؛ ومسارات `dynasty` وknowledge وtrade تشير إلى اختبارات Seshat | تابعة لكل نص في القسم ب؛ Seshat: CC BY-NC-SA | إسناد كل نص وكل مصدر؛ غير تجاري لما فيه Seshat | غير مسجّل | غير موثّق |
+| `web/data/sunan.json` | `wikisource-muqaddima-ar`، `seshat-equinox`، والنصوص المرتبطة بالشواهد (القسم ب) | نص ابن خلدون ملك عام والتفريغ CC BY-SA؛ الاختبار الكمي من Seshat بترخيص CC BY-NC-SA؛ ونصوص الشواهد كلها موثّقة في القسم ب | إسناد كل مصدر؛ غير تجاري لما أُخذ من Seshat، والمشتق منه بالترخيص نفسه | 2026-11-09 | موثّق |
+| `web/data/claims_*.json`، `web/data/journeys/`، `web/data/precedents.json`، `web/data/domains.json`، `web/data/layers_info.json`، `web/data/lenses.json` | نصوص الشواهد في `verification/era1` إلى `era8` (القسم ب)؛ ومسارات `dynasty` وknowledge وtrade تشير إلى اختبارات Seshat | تابعة لكل نص في القسم ب (كلها موثّقة)؛ Seshat: CC BY-NC-SA | إسناد كل نص وكل مصدر؛ غير تجاري لما فيه Seshat | 2026-11-09 | موثّق |
+
+## تنبيه قانوني قبل الإطلاق
+
+- **Seshat (CC BY-NC-SA):** ما يُشتق منه في الموقع غير تجاري ويُنشر بالترخيص نفسه. أي استعمال تجاري للمركز يحتاج ترخيصاً منفصلاً أو فصل هذه المواد.
+- **اجتماع CC BY-SA وCC BY-NC-SA في ملف واحد** (`sunan.json`، وملفات الادعاءات): الترخيصان لا يتوافقان في الأعمال المشتقة. المواد هنا مجموعة بنود منفصلة، لا عمل مشتق واحد، وتفريغ نص في الملك العام قد لا يحمل حقاً مستقلاً. هذا تقدير لا رأي قانوني، ويُراجع قبل الإطلاق.
+- **قرارات صاحب المشروع** (Gapminder، والطهطاوي، ونشرات تراث) مسجّلة في القسم ب وفي حقل `license_decision` في المانيفست.
 
 ## ب. النصوص المقتبسة
 
-تاريخ التحقق هنا هو تاريخ قراءة بيانات الأرشيف للطبعة (وليس تاريخ قراءة الكتاب نفسه). والحكم بالملك العام المبني على تاريخ النشر تُذكر أساسه صراحة في عمود الترخيص.
+مولَّد بـ `npm run build:licenses` من المانيفست، فلا يُعدَّل يدوياً. تاريخ التحقق هو `license_verified_at` إن وُجد، وإلا تاريخ قراءة بيانات الطبعة. والحكم بالملك العام المبني على تاريخ النشر يُذكر أساسه صراحة في عمود الترخيص.
 
 | المعرّف | الحقبة | الترخيص | شروط الاستخدام | تاريخ التحقق | الحالة |
 |---|---|---|---|---|---|
@@ -57,18 +63,18 @@
 | `bede-latin-pl95` | 4 | النص الأصلي ملك عام (بيدا، ت 735؛ Patrologia Latina 95). التفريغ في ويكي مصدر بترخيص CC BY-SA 4.0 بحسب تذييل الصفحة. | إسناد: Beda Venerabilis، Historia Ecclesiastica gentis Anglorum، الكتب I وII وIV، ويكي مصدر اللاتيني (CC BY-SA 4.0) | 2026-11-09 | موثّق |
 | `gregory-brehaut` | 4 | ملك عام: نُشر سنة 1916، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. | إسناد: Gregory of Tours، The History of the Franks، ترجمة E. Brehaut (1916) | 2026-11-08 | موثّق |
 | `procopius-dewing-1928` | 4 | ملك عام: الأرشيف يذكر 1914 وREADME يذكر 1928 للمجلد الخامس، وكلاهما ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. | إسناد: Procopius، ترجمة H. B. Dewing، Loeb، المجلد V | 2026-11-09 | موثّق |
-| `tabari-turath-9783` | 4 | نشرة من تراث، ولم يُحدَّد ترخيصها | — | غير مسجّل | غير موثّق |
+| `tabari-turath-9783` | 4 | ملك عام بقرار صاحب المشروع (2026-11-09): متن تاريخ الطبري (ت 310هـ) ملك عام، والمقتبس من المتن. النشرة من تراث (ط المعارف، المجلدات 1-11) حديثة، والمحقق غير مذكور في البيانات، وREADME الحقبة الرابعة يرجّح أنها محمية. لا إذن مكتوب من تراث. | إسناد: الطبري، تاريخ الرسل والملوك، عبر تراث (turath.io، الكتاب 9783) | 2026-11-09 | موثّق |
 | `xuanzang-beal` | 4 | ملك عام: نُشر سنة 1884، والأرشيف يحمل علامة public-domain mark 1.0. | إسناد: Beal، Si-Yu-Ki: Buddhist Records of the Western World (1884) | 2026-11-08 | موثّق |
 | `battuta-defremery` | 5 | ملك عام: نُشر سنة 1853، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. | إسناد: Defrémery وSanguinetti، Voyages d'Ibn Batoutah، المجلد 1 (1853) | 2026-11-09 | موثّق |
 | `khaldun-slane-1863` | 5 | ملك عام: نُشر سنة 1863، والأرشيف يحمل علامة public-domain mark 1.0. | إسناد: Ibn Khaldun، Les Prolégomènes، ترجمة de Slane (1863) | 2026-11-08 | موثّق |
 | `polo-yule-1871` | 5 | ملك عام: نُشر سنة 1871، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. | إسناد: Yule، The Book of Ser Marco Polo، المجلد 1 (1871) | 2026-11-09 | موثّق |
-| `turath-4129-tibr-masbuk` | 5 | إذن شفهي فقط، والقرار: تبقى الشواهد حتى يُحسم الترخيص | — | غير مسجّل | غير موثّق |
+| `turath-4129-tibr-masbuk` | 5 | ملك عام بقرار صاحب المشروع (2026-11-09): متن التبر المسبوك (القرن السادس الهجري) ملك عام، والمقتبس من المتن. النشرة من تراث (ضبط أحمد شمس الدين، دار الكتب العلمية، 1988) حديثة، وفي المقاطع تشكيل قليل قد يكون من الضبط. لا إذن مكتوب من تراث. | إسناد: التبر المسبوك في نصيحة الملوك، عبر تراث (turath.io) | 2026-11-09 | موثّق |
 | `diaz-maudslay` | 6 | ملك عام: نُشر سنة 1908، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. والمترجم A. P. Maudslay توفي سنة 1931. | إسناد: Díaz del Castillo، The True History of the Conquest of New Spain، ترجمة Maudslay، Hakluyt Society، المجلد 2 (1908) | 2026-11-09 | موثّق |
 | `evliya-ottoman-1896-v2` | 6 | ملك عام: نُشر سنة 1896، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. | إسناد: Evliya Çelebi، Seyahatname، المجلد II (1896) | 2026-11-08 | موثّق |
 | `gama-hakluyt-1898` | 6 | ملك عام: نُشر سنة 1898، والأرشيف يحمل علامة public-domain mark 1.0. | إسناد: A Journal of the First Voyage of Vasco da Gama, 1497-1499، ترجمة E. G. Ravenstein، Hakluyt Society (1898) | 2026-11-09 | موثّق |
 | `garcilaso-rycaut-1688` | 6 | ملك عام: نُشر سنة 1688، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. | إسناد: Garcilaso de la Vega، The Royal Commentaries of Peru، ترجمة Rycaut (1688) | 2026-11-09 | موثّق |
 | `ricci-trigault-1615` | 6 | ملك عام: نُشر سنة 1615، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص. | إسناد: Ricci وTrigault، De Christiana expeditione apud Sinas (1615) | 2026-11-08 | موثّق |
-| `turath-30026-sayrafi` | 6 | إذن شفهي فقط، والقرار: تبقى الشواهد حتى يُحسم الترخيص | — | غير مسجّل | غير موثّق |
+| `turath-30026-sayrafi` | 6 | ملك عام بقرار صاحب المشروع (2026-11-09): متن إنباء الهصر لابن الصيرفي (القرن التاسع الهجري) ملك عام، والمقتبس من المتن. النشرة من تراث، وبيانات الطبعة غير مقروءة، وفي أحد المقاطع تشكيل قد يكون من المحقق. لا إذن مكتوب من تراث. | إسناد: ابن الصيرفي، إنباء الهصر بأنباء العصر، عبر تراث (turath.io) | 2026-11-09 | موثّق |
 | `brinkley-japan-v4-1901` | 7 | ملك عام: كتاب 1901 (المؤلف فرانك بريكلي ت 1912). النص من أرشيف الإنترنت (OCR). | إسناد: Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901) | 2026-11-08 | موثّق |
 | `darwin-origin-1859` | 7 | ملك عام: London: John Murray, 1859 (الطبعة الأولى). | إسناد: Darwin, On the Origin of Species, 1st ed., London: John Murray, 1859; scan via Internet Archive | 2026-11-08 | موثّق |
 | `marx-manifesto-moore-1888-mia` | 7 | ترجمة Samuel Moore (1888) في الملك العام. التفريغ من أرشيف الماركسيين (marxists.org، Copyleft) عن Progress Publishers 1969. | إسناد: Marx & Engels, Manifesto of the Communist Party, tr. S. Moore 1888; transcription Marxists Internet Archive | 2026-11-08 | موثّق |
@@ -78,6 +84,8 @@
 | `tocqueville-reeve-1840-vol3` | 7 | ملك عام: ترجمة Henry Reeve، لندن: Saunders and Otley، 1840 (المترجم ت. 1895). | إسناد: Tocqueville, Democracy in America, Part II (vol. III), tr. H. Reeve, 1840; scan by Google via Internet Archive | 2026-11-08 | موثّق |
 | `versailles-1919` | 8 | ملك عام: نُشر سنة 1919 (London: H.M. Stationery Office، بحسب بيانات الأرشيف)، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. وحقوق التاج البريطانية على العمل المنشور مدتها 50 سنة من نهاية سنة النشر فانتهت سنة 1969، لكن نص القانون (CDPA 1988، المادة 163) لم يُقرأ لأن موقع legislation.gov.uk محجوب عن الجلسة. | إسناد: The Treaty of Peace between the Allied and Associated Powers and Germany (1919) | 2026-11-09 | موثّق |
 
-**قرار صاحب المشروع (2026-11-08):** تبقى شواهد النشرتين `turath-4129-tibr-masbuk` و`turath-30026-sayrafi` في الملفات المنشورة، ولا تُزالان. تبقى البوابة مغلقة عليهما إلى أن يُحسم ترخيصهما بإذن مكتوب أو باستبدال النشرة.
+**قرار صاحب المشروع (2026-11-08):** تبقى شواهد النشرتين `turath-4129-tibr-masbuk` و`turath-30026-sayrafi` في الملفات المنشورة، ولا تُزالان. (حُسم ترخيصهما في 2026-11-09، انظر القرار التالي.)
 
 **قرار صاحب المشروع (2026-11-09):** يُقبل `tahtawi-takhlis-archive` على أساس أن المتن ملك عام للمؤلف (ت 1873، ونُشر سنة 1834). الطبعة المحفوظة غير معرّفة، والمقتبس من المتن وحده.
+
+**قرار صاحب المشروع (2026-11-09):** تُقبل نشرات تراث الثلاث (`turath-4129-tibr-masbuk`، `turath-30026-sayrafi`، `tabari-turath-9783`) على أساس أن المتن ملك عام للمؤلف، بدل الإذن الشفهي. النشرات نفسها حديثة، ولا إذن مكتوب من تراث، وفي بعض المقاطع تشكيل قليل قد يكون من الضبط. هذا مذكور في ترخيص كل منها.
