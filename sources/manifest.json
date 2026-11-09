@@ -1552,6 +1552,32 @@
         "date": "2026-11-09",
         "basis": "المتن ملك عام للمؤلف، والنشرة من تراث"
       }
+    },
+    {
+      "id": "wikidata-hb-entities",
+      "file": "data/raw/wikidata/hb_entities.json",
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities (scripts/fetch_wikidata_entities.py)",
+      "license": "CC0 1.0 (Wikidata)",
+      "tier": "A",
+      "landing": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "attribution": "Wikidata (CC0): وصف كيانات Historical Basemaps ونوعها للبطاقة التعريفية",
+      "note": "التسمية والوصف (عربي وإنجليزي) والنوع P31 وتاريخا النشأة والزوال وعنوانا مقالتي ويكيبيديا، لـ 310 معرّفات، مع تصحيحات scripts/config/hb_qid_overrides.json.",
+      "status": "ok",
+      "retrieved_at": "2026-11-09T10:50:12.041865+00:00",
+      "sha256": "91940004f6a1300b7460ea057ce194a062301050dee0ddc235ef4cdc43723961",
+      "bytes": 128545,
+      "files": [
+        {
+          "file": "data/raw/wikidata/hb_entities.json",
+          "sha256": "91940004f6a1300b7460ea057ce194a062301050dee0ddc235ef4cdc43723961",
+          "bytes": 128545
+        }
+      ],
+      "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+        "quote": "All data in Wikidata has a CC0 license."
+      }
     }
   ]
 }

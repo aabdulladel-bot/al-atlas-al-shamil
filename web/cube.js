@@ -30,6 +30,9 @@ const cube = {
   show: { fill: true, edges: true, same: true, succ: true, change: false, places: true },
   axis: "even",
   spacingKm: 150,
+  // الوضع: "place" يبدأ بسؤال (ماذا كان هنا؟) ويرسم عمود نقطة واحدة؛ "all" كل الطبقات (متقدم)
+  mode: "place",
+  column: null,
   focus: null,
   lineage: "main",
   lastFocus: null,
@@ -75,17 +78,24 @@ function cubeRender() {
   if (!cube.on || !cube.overlay) return;
   const keys = CUBE_KEYS.filter((k) => cube.visible.has(k) && cube.slices.has(k));
   const focus = cube.focus;
-  const inFocus = (key, e) => !focus || focus.nodes.has(cubeNode(key, e.n));
+  const col = cube.mode === "place" ? cube.column : null;
+  const all = cube.mode === "all" && !focus;
+  // ما يُرسم وحده، لا ما يُخفَّت: سلالة الكيان المركَّز، أو كيانات عمود النقطة، أو كل الطبقات في الوضع المتقدم.
+  // كان المكعّب يرسم كل الكيانات (نحو 2400) في كل الأحوال، فيضيع المطلوب في الزحام.
+  const show = focus ? (key, e) => focus.nodes.has(cubeNode(key, e.n))
+    : all ? () => true
+    : col ? (key, e) => col.nodes.has(cubeNode(key, e.n))
+    : () => false;
   const polys = [];
   const rings = [];
   for (const k of keys) {
     const g = cubeGeometry(k);
-    polys.push(...g.polys);
-    rings.push(...g.rings);
+    for (const d of g.polys) if (show(k, d.e)) polys.push(d);
+    for (const d of g.rings) if (show(k, d.e)) rings.push(d);
   }
-  // إحدى عشرة طبقة متراكبة: تعبئة خفيفة بلا تركيز حتى تُقرأ الطبقات من خلال بعضها
-  const fillAlpha = (d) => (focus ? (inFocus(d.key, d.e) ? 150 : 8) : cubePrecise(d.key, d.e) ? 45 : 25);
-  const edgeAlpha = (d) => (focus ? (inFocus(d.key, d.e) ? 255 : 20) : cubePrecise(d.key, d.e) ? 170 : 100);
+  // في الوضع المتقدم إحدى عشرة طبقة متراكبة بتعبئة خفيفة، وفي غيره كيانات قليلة فتُرسم واضحة
+  const fillAlpha = (d) => (all ? (cubePrecise(d.key, d.e) ? 45 : 25) : cubePrecise(d.key, d.e) ? 140 : 105);
+  const edgeAlpha = (d) => (all ? (cubePrecise(d.key, d.e) ? 170 : 100) : 255);
   // الأسطح شفافة لا تحجب بعضها، والكرة تحجب ما خلفها
   const flat = { depthCompare: "less-equal", depthWriteEnabled: false };
   const layers = [];
@@ -93,19 +103,20 @@ function cubeRender() {
     layers.push(new deck.SolidPolygonLayer({
       id: "cube-planes", data: polys, getPolygon: (d) => d.polygon, pickable: true, parameters: flat,
       getFillColor: (d) => [...CUBE_COLOR[d.key], fillAlpha(d)],
-      updateTriggers: { getFillColor: [focus] },
+      updateTriggers: { getFillColor: [focus, cube.mode, col] },
     }));
   }
   if (cube.show.edges) {
     layers.push(new deck.PathLayer({
       id: "cube-edges", data: rings, getPath: (d) => d.path, widthUnits: "pixels", parameters: flat, pickable: !cube.show.fill,
-      getWidth: (d) => (focus && inFocus(d.key, d.e) ? 2.5 : 1),
+      getWidth: () => (all ? 1 : 2.5),
       getColor: (d) => [...CUBE_COLOR[d.key], edgeAlpha(d)],
-      updateTriggers: { getWidth: [focus], getColor: [focus] },
+      updateTriggers: { getWidth: [focus, cube.mode], getColor: [focus, cube.mode] },
     }));
   }
   const vis = new Set(keys);
-  const threads = cube.links.filter((l, i) => vis.has(l[0]) && vis.has(l[2]) && (focus ? focus.links.has(i) : cube.show[l[6]]));
+  // الخيوط: خيوط السلالة مع التركيز، وكل الخيوط المختارة في الوضع المتقدم، ولا خيوط في عمود النقطة
+  const threads = cube.links.filter((l, i) => vis.has(l[0]) && vis.has(l[2]) && (focus ? focus.links.has(i) : all && cube.show[l[6]]));
   layers.push(new deck.LineLayer({
     id: "cube-threads", data: threads, pickable: true, widthUnits: "pixels", parameters: flat,
     getSourcePosition: (l) => cubePos(l[0], l[1]),
@@ -114,7 +125,27 @@ function cubeRender() {
     getWidth: (l) => (focus ? 1.5 : 0.8) + 3 * Math.max(l[4], l[5]),
     updateTriggers: { getSourcePosition: [cube.axis, cube.spacingKm], getTargetPosition: [cube.axis, cube.spacingKm], getColor: [focus], getWidth: [focus] },
   }));
-  if (cube.show.places) {
+  // العمود: خط عمودي يصل الطبقات عند النقطة المسؤول عنها، أو عند مركز الكيان في «من حكم أرضه»، وعلامة على كل طبقة
+  const anchorCol = focus?.anchor ? { lon: focus.anchor[0], lat: focus.anchor[1], hits: CUBE_KEYS.map((k) => ({ key: k, e: focus.chain.some((c) => c.key === k) ? true : null })) } : !focus ? col : null;
+  if (anchorCol) {
+    const col = anchorCol;
+    const zs = keys.map((k) => cubeZ(k));
+    if (zs.length) {
+      layers.push(new deck.LineLayer({
+        id: "cube-column", data: [col], widthUnits: "pixels", parameters: flat, getWidth: 2,
+        getSourcePosition: (c) => [c.lon, c.lat, 0], getTargetPosition: (c) => [c.lon, c.lat, Math.max(...zs)],
+        getColor: [255, 255, 255, 220], updateTriggers: { getTargetPosition: [cube.axis, cube.spacingKm, keys.length] },
+      }));
+      layers.push(new deck.ScatterplotLayer({
+        id: "cube-column-dots", data: keys.map((k) => ({ k, hit: col.hits.find((h) => h.key === k)?.e })), parameters: flat,
+        getPosition: (d) => [col.lon, col.lat, cubeZ(d.k)], radiusUnits: "pixels", getRadius: (d) => (d.hit ? 6 : 3),
+        getFillColor: (d) => (d.hit ? [...CUBE_COLOR[d.k], 255] : [255, 255, 255, 120]), stroked: true,
+        getLineColor: [20, 30, 50, 255], lineWidthUnits: "pixels", getLineWidth: 1,
+        updateTriggers: { getPosition: [cube.axis, cube.spacingKm] },
+      }));
+    }
+  }
+  if (cube.show.places && all) {
     layers.push(new deck.ScatterplotLayer({
       id: "cube-places", data: cube.places.filter((p) => vis.has(p.key)), pickable: true, parameters: flat,
       getPosition: (p) => [p.lon, p.lat, cubeZ(p.key)], radiusUnits: "pixels", getRadius: 4,
@@ -136,70 +167,176 @@ function cubeTooltip({ object, layer }) {
   return null;
 }
 
+// ---------- عمود النقطة: ماذا كان هنا؟ ----------
+// لكل خريطة الكيانُ المسمّى الذي تقع النقطة داخل حدوده في المصدر. الحدود قبل 1900 تقريبية، فالجواب تقريبي قربها.
+function cubeInRing(ring, x, y) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i];
+    const [xj, yj] = ring[j];
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+function cubeContains(e, x, y) {
+  if (!e._bb) {
+    let a = 180, b = 90, c = -180, d = -90;
+    for (const poly of e.g) for (const [px, py] of poly[0]) { if (px < a) a = px; if (py < b) b = py; if (px > c) c = px; if (py > d) d = py; }
+    e._bb = [a, b, c, d];
+  }
+  const [a, b, c, d] = e._bb;
+  if (x < a || x > c || y < b || y > d) return false;
+  return e.g.some((poly) => cubeInRing(poly[0], x, y) && !poly.slice(1).some((h) => cubeInRing(h, x, y)));
+}
+const cubeName = (key, n) => cubeEntity(key, n)?.ar ?? (typeof labelInfo !== "undefined" ? labelInfo.get(n)?.ar : null) ?? n;
+function cubeColumnAt([lon, lat]) {
+  const hits = CUBE_KEYS.map((k) => ({ key: k, e: (cube.slices.get(k) ?? []).find((x) => x.n && cubeContains(x, lon, lat)) ?? null }));
+  cube.column = { lon, lat, hits, nodes: new Set(hits.filter((h) => h.e).map((h) => cubeNode(h.key, h.e.n))) };
+  cube.focus = null;
+  cube.lastFocus = null;
+  cubePanelIdle();
+  cubeRender();
+}
+const CUBE_PLACE_HINT = "اضغط أي مكان على الخريطة لترى من حكمه في كل خريطة، من 4000 ق.م إلى اليوم. ثم اضغط اسماً لترى سلالته.";
+function cubePanelIdle() {
+  const col = cube.mode === "place" ? cube.column : null;
+  if (!col) { cubeFocusEl.textContent = cube.mode === "place" ? CUBE_PLACE_HINT : CUBE_FOCUS_HINT; return; }
+  const named = col.hits.filter((h) => h.e).length;
+  const rows = [...col.hits].reverse().map((h) => {
+    const [r, g, b] = CUBE_COLOR[h.key];
+    const sw = `<i class="sw" style="background:rgb(${r},${g},${b})"></i>`;
+    const era = `<span class="cube-era">${escapeHtml(cubeLabel(h.key))}</span>`;
+    if (!h.e) return `<li class="cube-row empty">${sw}${era}<span class="sub">لا كيان مسمّى هنا في المصدر</span></li>`;
+    const approx = cubePrecise(h.key, h.e) ? "" : ` <span class="sub">حد تقريبي</span>`;
+    return `<li class="cube-row">${sw}${era}<button type="button" class="linkish" data-cube-lineage="${escapeHtml(h.key)}|${escapeHtml(h.e.n)}"><bdi>${escapeHtml(cubeName(h.key, h.e.n))}</bdi></button>${approx}</li>`;
+  }).join("");
+  cubeFocusEl.innerHTML = `<p><b>ماذا كان هنا؟</b> ${named} من ${col.hits.length} خريطة تسمّي كياناً على هذه النقطة. الأحدث في الأعلى.</p>` +
+    `<ol class="cube-col">${rows}</ol><p class="sub">اضغط اسماً لترى سلالته عبر الطبقات، أو اضغط مكاناً آخر على الخريطة.</p>`;
+  for (const b of cubeFocusEl.querySelectorAll("[data-cube-lineage]")) {
+    b.addEventListener("click", () => { const v = b.dataset.cubeLineage; const i = v.indexOf("|"); cubeSetFocus(v.slice(0, i), v.slice(i + 1)); });
+  }
+}
+
 // ---------- التركيز: سلالة كيان عبر الطبقات ----------
-// الرئيسية: إلى الأمام كيان أخذ ربع أرضه فأكثر، وإلى الخلف كيان أعطاه ربع أرضه فأكثر.
-// الواسعة: تضيف كل كيان صغير ذهب أكثر أرضه إليه أو جاء أكثر أرضه منه، فتتشعب كثيراً مع الإمبراطوريات.
+// «كل ما اتصل بأرضه»: يتبع كل خيط يتجاوز ربع الأرض في الاتجاهين، فيتشعّب كثيراً مع الإمبراطوريات.
+// والوضع الافتراضي («من حكم أرضه») لا يتبع الخيوط بل يقيس الأرض نفسها (cubeLandChain).
 const CUBE_LINEAGE = {
-  main: { fw: (l) => l[4] >= 0.25, bw: (l) => l[5] >= 0.25 },
   wide: { fw: (l) => l[4] >= 0.25 || l[5] >= 0.5, bw: (l) => l[5] >= 0.25 || l[4] >= 0.5 },
 };
 const cubeFocusEl = document.getElementById("cube-focus");
 const CUBE_FOCUS_HINT = "اضغط أي كيان على أي طبقة لترى ما سبقه وما صار إليه.";
+// عيّنات من أرض الكيان: نقاط شبكة داخل حدوده، تُسأل عنها كل طبقة
+function cubeSamples(e) {
+  cubeContains(e, 0, 0); // يحسب المستطيل المحيط
+  const [a, b, c, d] = e._bb;
+  for (const n of [16, 32, 64]) {
+    const pts = [];
+    for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) {
+      const x = a + ((i + 0.5) * (c - a)) / n;
+      const y = b + ((j + 0.5) * (d - b)) / n;
+      if (cubeContains(e, x, y)) pts.push([x, y]);
+    }
+    if (pts.length >= 40 || n === 64) return pts.length ? pts : [e.r];
+  }
+  return [e.r];
+}
+// السلسلة على أرض الكيان: لكل خريطة الكيانُ الذي يغطي أكبر نصيب من أرض الكيان المختار، ونصيبه.
+// كانت السلسلة تتبع سلف الكيان كله خطوة بعد خطوة، فتنجرف مع الإمبراطوريات إلى أراضٍ بعيدة
+// (من العراق إلى العثمانيين ثم الفاطميين في مصر ثم الرومان). هنا تبقى على الأرض نفسها.
+function cubeLandChain(key, name) {
+  const e = cubeEntity(key, name);
+  if (!e) return [];
+  const pts = cubeSamples(e);
+  return CUBE_KEYS.map((k) => {
+    const counts = new Map();
+    for (const [x, y] of pts) {
+      const hit = (cube.slices.get(k) ?? []).find((z) => z.n && cubeContains(z, x, y));
+      if (hit) counts.set(hit.n, (counts.get(hit.n) ?? 0) + 1);
+    }
+    let best = null;
+    let n = 0;
+    for (const [nm, c] of counts) if (c > n) { best = nm; n = c; }
+    return { key: k, name: best, share: best ? n / pts.length : 0 };
+  });
+}
 function cubeSetFocus(key, name) {
   cube.lastFocus = key ? [key, name] : null;
   if (!key) {
     cube.focus = null;
-    cubeFocusEl.textContent = CUBE_FOCUS_HINT;
+    cubePanelIdle();
     cubeRender();
     return;
   }
   const start = cubeNode(key, name);
   const nodes = new Set([start]);
   const links = new Set();
-  const out = new Map();
-  const inn = new Map();
-  cube.links.forEach((l, i) => {
-    const a = cubeNode(l[0], l[1]);
-    const b = cubeNode(l[2], l[3]);
-    if (!out.has(a)) out.set(a, []);
-    if (!inn.has(b)) inn.set(b, []);
-    out.get(a).push(i);
-    inn.get(b).push(i);
-  });
-  const walk = (edges, next, keep) => {
-    const queue = [start];
-    while (queue.length) {
-      const n = queue.shift();
-      for (const i of edges.get(n) ?? []) {
-        const l = cube.links[i];
-        if (!keep(l)) continue;
-        links.add(i);
-        const m = next(l);
-        if (!nodes.has(m)) { nodes.add(m); queue.push(m); }
+  let chain = null;
+  if (cube.lineage === "main") {
+    chain = cubeLandChain(key, name).filter((c) => c.name && c.share >= 0.1);
+    for (const c of chain) nodes.add(cubeNode(c.key, c.name));
+    // لا خيوط هنا: الخيط يصل مركزَي كيانين كاملين، والسؤال عن أرض واحدة، فيُرسم عمود عند مركزها بدلاً منه
+  } else {
+    const out = new Map();
+    const inn = new Map();
+    cube.links.forEach((l, i) => {
+      const a = cubeNode(l[0], l[1]);
+      const b = cubeNode(l[2], l[3]);
+      if (!out.has(a)) out.set(a, []);
+      if (!inn.has(b)) inn.set(b, []);
+      out.get(a).push(i);
+      inn.get(b).push(i);
+    });
+    const walk = (edges, next, keep) => {
+      const queue = [start];
+      while (queue.length) {
+        const n = queue.shift();
+        for (const i of edges.get(n) ?? []) {
+          const l = cube.links[i];
+          if (!keep(l)) continue;
+          links.add(i);
+          const m = next(l);
+          if (!nodes.has(m)) { nodes.add(m); queue.push(m); }
+        }
       }
-    }
-  };
-  const rule = CUBE_LINEAGE[cube.lineage];
-  walk(out, (l) => cubeNode(l[2], l[3]), rule.fw);
-  walk(inn, (l) => cubeNode(l[0], l[1]), rule.bw);
-  cube.focus = { nodes, links };
-  const picked = cubeEntity(key, name);
-  if (picked) map.easeTo({ center: picked.r, zoom: Math.max(map.getZoom(), 2.8), duration: 900 });
-  const bySlice = new Map();
-  for (const n of nodes) {
-    const i = n.indexOf("|");
-    const k = n.slice(0, i);
-    if (!bySlice.has(k)) bySlice.set(k, []);
-    bySlice.get(k).push(n.slice(i + 1));
+    };
+    const rule = CUBE_LINEAGE.wide;
+    walk(out, (l) => cubeNode(l[2], l[3]), rule.fw);
+    walk(inn, (l) => cubeNode(l[0], l[1]), rule.bw);
   }
-  const nameOf = (k, n) => cubeEntity(k, n)?.ar ?? n;
-  cubeFocusEl.innerHTML =
-    `<p><b><bdi>${escapeHtml(nameOf(key, name))}</bdi></b> (${escapeHtml(cubeLabel(key))}): ${nodes.size} كياناً في ${bySlice.size} طبقة، و${links.size} خيطاً.</p>` +
-    `<ul class="tr-list">${CUBE_KEYS.filter((k) => bySlice.has(k)).map((k) => `<li>${escapeHtml(cubeLabel(k))}: ${bySlice.get(k).map((n) => `<bdi>${escapeHtml(nameOf(k, n))}</bdi>`).join("، ")}</li>`).join("")}</ul>` +
-    `<div class="mode"><label><input type="radio" name="cube-lineage" value="main"${cube.lineage === "main" ? " checked" : ""}> السلالة الرئيسية</label>` +
-    `<label><input type="radio" name="cube-lineage" value="wide"${cube.lineage === "wide" ? " checked" : ""}> كل ما اتصل بأرضه</label></div>` +
-    `<div class="row"><button type="button" id="cube-focus-clear">إلغاء التركيز</button></div>`;
+  const picked = cubeEntity(key, name);
+  cube.focus = { nodes, links, anchor: chain && picked ? picked.r : null, chain };
+  if (picked) map.easeTo({ center: picked.r, zoom: Math.max(map.getZoom(), 2.8), duration: 900 });
+  const title = `<b><bdi>${escapeHtml(cubeName(key, name))}</bdi></b> (${escapeHtml(cubeLabel(key))})`;
+  let body;
+  if (chain) {
+    const rows = [...chain].reverse().map((c) => {
+      const [r, g, b] = CUBE_COLOR[c.key];
+      const self = c.key === key && c.name === name;
+      return `<li class="cube-row${self ? " self" : ""}"><i class="sw" style="background:rgb(${r},${g},${b})"></i><span class="cube-era">${escapeHtml(cubeLabel(c.key))}</span>` +
+        `<button type="button" class="linkish" data-cube-lineage="${escapeHtml(c.key)}|${escapeHtml(c.name)}"><bdi>${escapeHtml(cubeName(c.key, c.name))}</bdi></button>` +
+        `<span class="sub">${Math.round(c.share * 100)}%</span></li>`;
+    }).join("");
+    body = `<p>${title}: من حكم أرضه في كل خريطة. النسبة نصيب كل كيان من أرض هذا الكيان، والأحدث في الأعلى.</p><ol class="cube-col">${rows}</ol>` +
+      `<p class="sub">يُعرض الكيان إن غطّى عُشر الأرض فأكثر. والحدود قبل 1900 تقريبية، فالنسب تقريبية.</p>`;
+  } else {
+    const bySlice = new Map();
+    for (const n of nodes) {
+      const i = n.indexOf("|");
+      const k = n.slice(0, i);
+      if (!bySlice.has(k)) bySlice.set(k, []);
+      bySlice.get(k).push(n.slice(i + 1));
+    }
+    body = `<p>${title}: ${nodes.size} كياناً في ${bySlice.size} طبقة، و${links.size} خيطاً.</p>` +
+      `<ul class="tr-list">${CUBE_KEYS.filter((k) => bySlice.has(k)).map((k) => `<li>${escapeHtml(cubeLabel(k))}: ${bySlice.get(k).map((n) => `<bdi>${escapeHtml(cubeName(k, n))}</bdi>`).join("، ")}</li>`).join("")}</ul>`;
+  }
+  cubeFocusEl.innerHTML = body +
+    `<div class="mode"><label><input type="radio" name="cube-lineage" value="main"${cube.lineage === "main" ? " checked" : ""}> من حكم أرضه (أوضح)</label>` +
+    `<label><input type="radio" name="cube-lineage" value="wide"${cube.lineage === "wide" ? " checked" : ""}> كل ما اتصل بأرضه (متشعّب)</label></div>` +
+    `<div class="row"><button type="button" id="cube-focus-clear">${cube.mode === "place" && cube.column ? "رجوع إلى عمود النقطة" : "إلغاء التركيز"}</button></div>`;
   for (const r of cubeFocusEl.querySelectorAll('input[name="cube-lineage"]')) r.addEventListener("change", () => { cube.lineage = r.value; cubeSetFocus(...cube.lastFocus); });
+  for (const bt of cubeFocusEl.querySelectorAll("[data-cube-lineage]")) {
+    bt.addEventListener("click", () => { const v = bt.dataset.cubeLineage; const i = v.indexOf("|"); cubeSetFocus(v.slice(0, i), v.slice(i + 1)); });
+  }
   document.getElementById("cube-focus-clear").addEventListener("click", () => cubeSetFocus(null));
   cubeRender();
 }
@@ -268,17 +405,28 @@ async function cubeSetOn(on) {
   if (on) {
     // التضاريس تتعارض مع محور الزمن العمودي، وحدود الخريطة المسطّحة تكرار للطبقات: تُطفأ وتُستعاد عند الإطفاء
     // تُخفى عبر آلية لوحة الطبقات نفسها، فلا يعيدها فتح حقبة أثناء المكعّب
-    cube.prev = { terrain: terrainState.on, bordersOff: userOff.has("borders"), pitch: map.getPitch(), bearing: map.getBearing() };
+    // وتُخفى الأسماء وطبقة الشعوب وشاشة الترحيب، وتُسطَّح الكرة: الطبقات فوق كرة تتلوى وتتزاحم
+    cube.prev = { terrain: terrainState.on, bordersOff: userOff.has("borders"), labelsOff: userOff.has("labels"), peoplesOff: userOff.has("peoples"),
+      placesOff: userOff.has("places"), claimsOff: userOff.has("claims"),
+      projection: map.getProjection?.()?.type ?? "globe", pitch: map.getPitch(), bearing: map.getBearing() };
     terrainState.on = false;
     applyTerrain();
-    userOff.add("borders");
-    for (const id of LAYER_GROUPS.borders) if (wanted.has(id)) setVis(id, wanted.get(id));
+    for (const g of ["borders", "peoples", "places", "claims", "labels"]) {
+      userOff.add(g);
+      for (const id of LAYER_GROUPS[g]) if (wanted.has(id)) setVis(id, wanted.get(id));
+    }
+    updateLabels();
+    document.body.classList.add("cubing");
+    if (cube.prev.projection !== "mercator") map.setProjection({ type: "mercator" });
+    cubePanelIdle();
+    document.getElementById("cube-panel").scrollIntoView({ block: "start", behavior: "smooth" });
     if (!cube.overlay) {
       try {
         if (!window.deck) await loadScript("vendor/deck.gl.min.js");
       } catch (err) { cubeStatusEl.textContent = err.message; return; }
       cube.overlay = new deck.MapboxOverlay({ interleaved: true, layers: [], getTooltip: cubeTooltip, onClick: (info) => {
         if (info.object && info.object.e) cubeSetFocus(info.object.key, info.object.e.n);
+        else if (!info.object && cube.mode === "place" && info.coordinate && cube.loaded) cubeColumnAt(info.coordinate);
         else if (!info.object) cubeSetFocus(null);
       } });
     }
@@ -294,11 +442,20 @@ async function cubeSetOn(on) {
       terrainState.on = cube.prev.terrain;
       applyTerrain();
       if (!cube.prev.bordersOff) userOff.delete("borders");
-      for (const id of LAYER_GROUPS.borders) if (wanted.has(id)) setVis(id, wanted.get(id));
+      if (!cube.prev.peoplesOff) userOff.delete("peoples");
+      if (!cube.prev.labelsOff) userOff.delete("labels");
+      if (!cube.prev.placesOff) userOff.delete("places");
+      if (!cube.prev.claimsOff) userOff.delete("claims");
+      for (const g of ["borders", "peoples", "places", "claims"]) for (const id of LAYER_GROUPS[g]) if (wanted.has(id)) setVis(id, wanted.get(id));
+      updateLabels();
+      if (cube.prev.projection !== "mercator") map.setProjection({ type: cube.prev.projection });
       map.easeTo({ pitch: cube.prev.pitch, bearing: cube.prev.bearing, duration: 800 });
     }
   }
+  if (!on) document.body.classList.remove("cubing");
   document.getElementById("terrain-toggle").checked = terrainState.on;
+  const proj = document.querySelector(`input[name="projection"][value="${on ? "mercator" : cube.prev?.projection ?? "globe"}"]`);
+  if (proj) proj.checked = true;
 }
 
 // ---------- لوحة التحكم ----------
@@ -332,4 +489,11 @@ cubeSpacingEl.addEventListener("input", () => {
   cubeRender();
 });
 document.getElementById("cube-toggle").addEventListener("change", (e) => cubeSetOn(e.target.checked));
-cubeFocusEl.textContent = CUBE_FOCUS_HINT;
+for (const r of document.querySelectorAll('input[name="cube-mode"]')) r.addEventListener("change", () => {
+  cube.mode = r.value;
+  cube.focus = null;
+  cube.lastFocus = null;
+  cubePanelIdle();
+  cubeRender();
+});
+cubeFocusEl.textContent = CUBE_PLACE_HINT;

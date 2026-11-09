@@ -15,6 +15,9 @@ from pathlib import Path
 from shapely.geometry import Point
 
 ROOT = Path(__file__).resolve().parent.parent
+_wspec = importlib.util.spec_from_file_location("wt", ROOT / "scripts/wikidata_titles.py")
+wt = importlib.util.module_from_spec(_wspec)
+_wspec.loader.exec_module(wt)
 spec = importlib.util.spec_from_file_location("bt", ROOT / "scripts/build_transitions.py")
 bt = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(bt)
@@ -42,7 +45,7 @@ def sunna_index():
 
 def wikidata_facts():
     # النوع والتواريخ من مستخلص ويكي بيانات (P31، و hb_names للتواريخ المعتمدة)
-    raw = json.loads((ROOT / "data/raw/wikidata/hb_titles.json").read_text(encoding="utf-8"))["titles"]
+    raw = wt.load_titles()  # مع تصحيحات الهوية في scripts/config/hb_qid_overrides.json
     names = json.loads((ROOT / "web/data/names/hb_names.json").read_text(encoding="utf-8"))["names"]
     return raw, names
 
