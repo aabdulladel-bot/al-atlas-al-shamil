@@ -1,25 +1,84 @@
 {
-  "_note": "أقاليم تاريخية وكيانات غائبة عن خرائط الأطلس، يجدها البحث. لكل عنصر معرّفه في ويكي بيانات (qid)، والبيانات (الأسماء والوصف والإحداثيات والتواريخ) تُجلب منها بـ scripts/fetch_wikidata_extras.py. search: عبارة البحث التي اختير بها المعرّف، للتوثيق. zoom: تقريب الخريطة عند الطيران إلى الإقليم.",
-  "regions": [
-    {"search": "al-Andalus", "zoom": 5.2},
-    {"search": "Levant", "zoom": 5.4},
-    {"search": "Maghreb", "zoom": 4.4},
-    {"search": "Mesopotamia", "zoom": 5.2},
-    {"search": "Hejaz", "zoom": 5.4},
-    {"search": "Greater Khorasan", "zoom": 4.8},
-    {"search": "Transoxiana", "zoom": 5},
-    {"search": "Anatolia", "zoom": 5.2},
-    {"search": "Nubia", "zoom": 5},
-    {"search": "Silk Road", "zoom": 3.4}
-  ],
-  "absent": [
-    {"search": "Abbasid Caliphate"},
-    {"search": "Rashidun Caliphate"},
-    {"search": "Ayyubid dynasty"},
-    {"search": "Mamluk Sultanate"},
-    {"search": "Seljuk Empire"},
-    {"search": "Almoravid dynasty"},
-    {"search": "Timurid Empire"},
-    {"search": "Kingdom of Jerusalem"}
-  ]
+ "_note": "أقاليم تاريخية وكيانات غائبة عن خرائط الأطلس، يجدها البحث. لكل عنصر معرّفه في ويكي بيانات (qid)، والبيانات (الأسماء والوصف والإحداثيات والتواريخ) تُجلب منها بـ scripts/fetch_wikidata_extras.py. enwiki: عنوان مقالة ويكيبيديا الإنجليزية الذي اختير به المعرّف (Special:ItemByTitle)، للتوثيق. zoom: تقريب الخريطة عند الطيران إلى الإقليم. «طريق الحرير» (Q36288) ليس هنا: لا إحداثيات له في ويكي بيانات لأنه شبكة طرق لا مكان، ويجده البحث في الشواهد.",
+ "regions": [
+  {
+   "zoom": 5.2,
+   "enwiki": "Al-Andalus",
+   "qid": "Q123559"
+  },
+  {
+   "zoom": 5.4,
+   "enwiki": "Levant",
+   "qid": "Q81483"
+  },
+  {
+   "zoom": 4.4,
+   "enwiki": "Maghreb",
+   "qid": "Q28227"
+  },
+  {
+   "zoom": 5.2,
+   "enwiki": "Mesopotamia",
+   "qid": "Q11767"
+  },
+  {
+   "zoom": 5.4,
+   "enwiki": "Hejaz",
+   "qid": "Q169977"
+  },
+  {
+   "zoom": 4.8,
+   "enwiki": "Greater Khorasan",
+   "qid": "Q2352322"
+  },
+  {
+   "zoom": 5,
+   "enwiki": "Transoxiana",
+   "qid": "Q183324"
+  },
+  {
+   "zoom": 5.2,
+   "enwiki": "Anatolia",
+   "qid": "Q51614"
+  },
+  {
+   "zoom": 5,
+   "enwiki": "Nubia",
+   "qid": "Q135028"
+  }
+ ],
+ "absent": [
+  {
+   "enwiki": "Abbasid Caliphate",
+   "qid": "Q12536"
+  },
+  {
+   "enwiki": "Rashidun Caliphate",
+   "qid": "Q12490507"
+  },
+  {
+   "enwiki": "Ayyubid dynasty",
+   "qid": "Q180114"
+  },
+  {
+   "enwiki": "Mamluk Sultanate",
+   "qid": "Q282428"
+  },
+  {
+   "enwiki": "Seljuk Empire",
+   "qid": "Q3708094"
+  },
+  {
+   "enwiki": "Almoravid dynasty",
+   "qid": "Q75613"
+  },
+  {
+   "enwiki": "Timurid Empire",
+   "qid": "Q484195"
+  },
+  {
+   "enwiki": "Kingdom of Jerusalem",
+   "qid": "Q55502"
+  }
+ ]
 }

@@ -21,6 +21,7 @@ function stem(w) {
   return w;
 }
 const stems = (t) => t.split(" ").filter(Boolean).map(stem);
+const SOFT_WORDS = new Set(["بلاد", "اقليم", "منطقه", "ارض"]);
 const ICONS = { entity: "◼", people: "◩", place: "●", claim: "❝", sunna: "✦", era: "⧗", year: "⌖", journey: "➜", cmd: "›", region: "◎", absent: "◌" };
 const TYPE_AR = { cmd: "أوامر", region: "الأقاليم التاريخية", absent: "غائبة عن الخرائط", entity: "الدول والكيانات", people: "الشعوب والقبائل", place: "مواقع الحقب", claim: "الشواهد", sunna: "السنن", era: "الحقب", year: "الزمن", journey: "الرحلات" };
 
@@ -88,16 +89,29 @@ async function goClaimText(it) {
   if (era) await loadBorders(era.border);
   openClaimTextCard(it.claim, it.era);
 }
-// إقليم تاريخي (الأندلس، بلاد الشام...): تطير الخريطة إليه، وتُفتح بطاقة الكيان الذي يحكمه في الخريطة المعروضة
+// إقليم تاريخي (الأندلس، بلاد الشام...): تطير الخريطة إليه، وتُفتح بطاقة الكيان الذي يحكمه في الخريطة المعروضة.
+// الكيان يُختار بالهندسة (المضلع الذي يحوي إحداثيات الإقليم في بيانات الخريطة)، لا بالبكسل تحت الشاشة:
+// البكسل يُقرأ قبل أن تصل الكاميرا، فكان يفتح بطاقة كيان آخر (الفاطميين بدل الموحدين للأندلس).
+function ringHas(ring, x, y) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i];
+    const [xj, yj] = ring[j];
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+function featureHas(f, [x, y]) {
+  const g = f.geometry;
+  const polys = g?.type === "Polygon" ? [g.coordinates] : g?.type === "MultiPolygon" ? g.coordinates : [];
+  return polys.some((poly) => ringHas(poly[0], x, y) && !poly.slice(1).some((h) => ringHas(h, x, y)));
+}
 function goRegion(it) {
   closeCard();
   map.flyTo({ center: it.coords, zoom: it.zoom ?? 4.6, pitch: 20, bearing: 0, duration: camMs(CAM_FAST), essential: true });
   arriveAfterMove(it.coords);
-  map.once("moveend", () => {
-    const pt = map.project(it.coords);
-    const hit = map.queryRenderedFeatures(pt, { layers: ["borders-fill"].filter((l) => map.getLayer(l)) })[0];
-    if (hit) openEntityCard(hit, "state");
-  });
+  const hit = bordersShown?.features?.find((f) => f.properties.NAME && featureHas(f, it.coords));
+  if (hit) map.once("moveend", () => openEntityCard(hit, "state"));
 }
 function goSunna(it) {
   const s = sunanData?.sunan.find((x) => x.id === it.id);
@@ -285,7 +299,10 @@ async function search(q) {
     const hit = toks.length ? cmds.map((c) => [score(c, toks), c]).filter(([x]) => x > 0).sort((a, b) => b[0] - a[0]).map(([, c]) => c) : cmds;
     return hit.length ? [["cmd", hit.slice(0, 14)]] : [];
   }
-  const toks = norm(q).split(" ").filter((t) => t.length >= 1);
+  // كلمات عامة في أسماء الأقاليم («بلاد الشام»، «إقليم خراسان») لا تُشترط مطابقتها إن بقي في البحث غيرها
+  const all = norm(q).split(" ").filter((t) => t.length >= 1);
+  const core = all.filter((t) => !SOFT_WORDS.has(t));
+  const toks = core.length ? core : all;
   if (!toks.length || norm(q).length < 2) return [];
   const items = await buildIndex();
   const scored = items.map((it) => [score(it, toks), it]).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]);

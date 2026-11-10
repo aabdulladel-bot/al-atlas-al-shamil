@@ -3,10 +3,13 @@
 # ثم تسميات الأنواع نفسها، ليُعرض نوع الكيان كما تسمّيه ويكي بيانات.
 # المعرّفات: من data/raw/wikidata/hb_titles.json، مع تصحيحات scripts/config/hb_qid_overrides.json.
 # يكتب data/raw/wikidata/hb_entities.json. الاستعمال: python3 -I scripts/fetch_wikidata_entities.py
-# الطلبات 50 معرّفاً في الطلب، متمهّلة، وتحترم Retry-After (دالة get من fetch_wikidata_names.py).
+# كل كيان في طلب من Special:EntityData، بتمهّل، ويحترم Retry-After.
 import importlib.util
 import json
+import os
+import subprocess
 import sys
+import tempfile
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -32,17 +35,50 @@ def ids_of(claims, prop):
     return out
 
 
-def fetch(ids, props, sitefilter=None):
+# الكيانات تُجلب واحداً واحداً من Special:EntityData (صفحة مخزّنة مؤقتاً لا تمرّ بواجهة الاستعلام)، بتمهّل،
+# مع ذاكرة مؤقتة خارج المستودع يُستأنف منها إن انقطع الجلب. واجهة wbgetentities ترفض الطلبات (429) لساعات أحياناً.
+ENTITY_URL = "https://www.wikidata.org/wiki/Special:EntityData/{}.json"
+CACHE = Path(tempfile.gettempdir()) / "al-atlas-wikidata-cache"
+
+
+def get_entity(q):
+    CACHE.mkdir(exist_ok=True)
+    f = CACHE / f"{q}.json"
+    if f.exists():
+        return json.loads(f.read_text(encoding="utf-8")), True
+    part = CACHE / f"{q}.part"
+    for attempt in range(8):
+        r = subprocess.run(["curl", "-sS", "-L", "-m", "180", "-A", fwn.UA, "-o", str(part), "-D", str(CACHE / f"{q}.head"),
+                            "-w", "%{http_code}", ENTITY_URL.format(q)], capture_output=True, text=True)
+        status = r.stdout.strip() or "000"
+        if status == "200":
+            os.replace(part, f)
+            return json.loads(f.read_text(encoding="utf-8")), False
+        wait = 30 * (attempt + 1)
+        head = (CACHE / f"{q}.head").read_text(errors="replace") if (CACHE / f"{q}.head").exists() else ""
+        for line in head.splitlines():
+            if line.lower().startswith("retry-after:"):
+                try:
+                    wait = max(wait, int(line.split(":", 1)[1].strip()))
+                except ValueError:
+                    pass
+        print(f"{q}: HTTP {status}، انتظار {wait} ث (محاولة {attempt + 1})", file=sys.stderr, flush=True)
+        time.sleep(wait)
+    raise SystemExit(f"تعذّر جلب {q} بعد ثماني محاولات")
+
+
+def fetch(ids, props=None, sitefilter=None):
+    # props وsitefilter باقيان للتوافق: الصفحة تعيد الكيان كاملاً، ويُستخلص منه ما يلزم وحده
     out = {}
     ids = sorted(set(ids))
-    for i in range(0, len(ids), BATCH):
-        params = {"action": "wbgetentities", "ids": "|".join(ids[i:i + BATCH]), "props": props,
-                  "languages": "ar|en", "format": "json"}
-        if sitefilter:
-            params["sitefilter"] = sitefilter
-        out.update(fwn.get(params).get("entities", {}))
-        print(f"{min(i + BATCH, len(ids))}/{len(ids)}", file=sys.stderr, flush=True)
-        time.sleep(8)
+    for n, q in enumerate(ids, 1):
+        d, cached = get_entity(q)
+        ents = d.get("entities", {})
+        out[q] = ents.get(q) or next(iter(ents.values()))  # المعرّف المحوَّل يعود باسمه الجديد
+        if n % 25 == 0 or n == len(ids):
+            print(f"{n}/{len(ids)}", file=sys.stderr, flush=True)
+        if not cached:
+            time.sleep(1.5)
     return out
 
 

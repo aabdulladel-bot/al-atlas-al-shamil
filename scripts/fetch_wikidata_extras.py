@@ -5,7 +5,10 @@
 # الاستعمال: python3 -I scripts/fetch_wikidata_extras.py
 import importlib.util
 import json
+import re
+import subprocess
 import time
+import urllib.parse
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -24,13 +27,27 @@ def coords(claims):
     return None
 
 
+def item_by_title(title):
+    # عنوان مقالة ويكيبيديا الإنجليزية ← معرّف الكيان، بإعادة توجيه Special:ItemByTitle (لا بواجهة البحث)
+    url = "https://www.wikidata.org/wiki/Special:ItemByTitle/enwiki/" + urllib.parse.quote(title.replace(" ", "_"))
+    r = subprocess.run(["curl", "-sS", "-m", "60", "-A", fwe.fwn.UA, "-o", "/dev/null", "-w", "%{redirect_url}", url], capture_output=True, text=True)
+    m = re.search(r"/(Q\d+)$", r.stdout.strip())
+    return m.group(1) if m else None
+
+
 def resolve(cfg):
-    # عنصر بلا qid: تُطبع مرشّحات البحث الثلاثة الأولى ليُختار المعرّف يدوياً ويُكتب في الإعداد، ولا يُختار آلياً
+    # عنصر بلا qid: يُطبع المعرّف المرشّح مع تسميته ووصفه، ليُراجَع ويُكتب في الإعداد يدوياً، ولا يُكتب آلياً
     pending = [x for x in cfg["regions"] + cfg["absent"] if not x.get("qid")]
     for x in pending:
-        r = fwe.fwn.get({"action": "wbsearchentities", "search": x["search"], "language": "en", "limit": 3, "format": "json"})
-        print(x["search"], "→", " | ".join(f"{h['id']} {h.get('label')} ({h.get('description', '')})" for h in r.get("search", [])))
-        time.sleep(6)
+        q = item_by_title(x["enwiki"])
+        if not q:
+            print(x["enwiki"], "→ لا كيان")
+            continue
+        e, _ = fwe.get_entity(q)
+        ent = next(iter(e["entities"].values()))
+        lab = lambda k, l: (ent.get(k, {}).get(l) or {}).get("value")
+        print(f"{x['enwiki']} → {q} | {lab('labels', 'ar')} | {lab('labels', 'en')} | {lab('descriptions', 'en')} | P625={'P625' in ent.get('claims', {})}")
+        time.sleep(1.5)
     return bool(pending)
 
 
