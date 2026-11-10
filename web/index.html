@@ -48,6 +48,26 @@
     .intro-doors button { font: inherit; font-size: 15px; font-weight: 700; padding: 10px 22px; border-radius: 999px; border: 1px solid rgba(243, 214, 164, 0.75); background: rgba(20, 14, 10, 0.55); color: #f6efe3; backdrop-filter: blur(6px); cursor: pointer; }
     .intro-doors button:first-child { background: #d89a72; border-color: #d89a72; color: #1d1a16; }
     .intro-doors button:focus-visible, .intro-skip:focus-visible { outline: 2px solid #f3d6a4; outline-offset: 2px; }
+    /* أبواب الدخول: مجلّدات بلسان، والتصميم في الشيفرة لا صور خارجية (ينظر النموذج في prototypes/ui-lab) */
+    #intro .intro-doors { gap: 18px; }
+    #intro .intro-doors .door { position: relative; width: 200px; height: 232px; padding: 0; margin: 0; border: 0; border-radius: 16px; background: linear-gradient(170deg, #16244A, #0B1430); color: var(--ink); font: inherit; text-align: start; cursor: pointer; overflow: hidden; backdrop-filter: none; clip-path: polygon(0 22px, calc(100% - 92px) 22px, calc(100% - 76px) 0, 100% 0, 100% 100%, 0 100%); transition: transform .45s cubic-bezier(.2, .8, .2, 1); }
+    #intro .intro-doors .door:hover, #intro .intro-doors .door:focus-visible { transform: translateY(-10px); }
+    #intro .intro-doors .door .art { position: absolute; inset: 22px 0 auto 0; height: 46%; overflow: hidden; }
+    #intro .intro-doors .door .art svg { width: 100%; height: 100%; display: block; transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
+    #intro .intro-doors .door:hover .art svg, #intro .intro-doors .door:focus-visible .art svg { transform: scale(1.06); }
+    #intro .intro-doors .door .no { position: absolute; top: calc(22px + 46% - 40px); inset-inline-start: 14px; font: 800 30px var(--font-d); color: var(--ink); text-shadow: 0 4px 18px rgba(0, 0, 0, .3); }
+    #intro .intro-doors .door .tx { position: absolute; inset: auto 14px 14px 14px; display: flex; flex-direction: column; gap: 4px; }
+    #intro .intro-doors .door .tx b { font: 700 15px var(--font-d); line-height: 1.5; }
+    #intro .intro-doors .door .tx small { font-size: 12px; line-height: 1.6; color: var(--muted); }
+    #intro .intro-doors .door:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (prefers-reduced-motion: reduce) { #intro .intro-doors .door, #intro .intro-doors .door .art svg { transition: none; } }
+    @media (max-width: 600px) {
+      #intro .intro-doors { gap: 8px; flex-wrap: nowrap; }
+      #intro .intro-doors .door { width: calc((100% - 16px) / 3); height: 168px; }
+      #intro .intro-doors .door .no { font-size: 22px; top: calc(22px + 46% - 30px); }
+      #intro .intro-doors .door .tx b { font-size: 12px; }
+      #intro .intro-doors .door .tx small { display: none; }
+    }
     .intro-skip { margin-top: 12px; font: inherit; font-size: 13px; background: none; border: 0; color: #d8c5ab; text-decoration: underline; cursor: pointer; }
     body.showcasing #intro { display: none; }
     #timebar.hint { animation: hint-bar 1.1s ease 2; }
@@ -579,9 +599,10 @@
     <h2>الأطلس الشامل</h2>
     <p id="intro-span"></p>
     <div class="intro-doors">
-      <button type="button" data-door="show">شاهد العرض</button>
-      <button type="button" data-door="time">تجوّل في الزمن</button>
-      <button type="button" data-door="sunan">اختبر سُنّة</button>
+      <button type="button" class="door" data-door="show"><span class="art" aria-hidden="true"><svg viewBox="0 0 220 130" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="door-g1" cx="35%" cy="30%"><stop offset="0" stop-color="#7FD3FF"/><stop offset=".55" stop-color="#2B5FD9"/><stop offset="1" stop-color="#0B1A4A"/></radialGradient><linearGradient id="door-bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2A1B6E"/><stop offset="1" stop-color="#0B1230"/></linearGradient></defs><rect width="220" height="130" fill="url(#door-bg1)"/><circle cx="150" cy="78" r="62" fill="url(#door-g1)"/><g fill="none" stroke="#BFE6FF" stroke-opacity=".45"><ellipse cx="150" cy="78" rx="62" ry="22"/><ellipse cx="150" cy="78" rx="30" ry="62"/><path d="M88 78h124"/></g><circle cx="40" cy="30" r="1.6" fill="#fff"/><circle cx="70" cy="18" r="1" fill="#fff"/><circle cx="24" cy="70" r="1.2" fill="#fff"/></svg></span><span class="no" aria-hidden="true">01</span><span class="tx"><b>شاهد العرض</b><small>جولة سينمائية تعبر الحقب الثماني على كرة واحدة.</small></span></button>
+      <button type="button" class="door" data-door="time"><span class="art" aria-hidden="true"><svg viewBox="0 0 220 130" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="door-bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A5B"/><stop offset="1" stop-color="#E9B44C"/></linearGradient></defs><rect width="220" height="130" fill="url(#door-bg2)"/><g fill="#fff">
+        <rect x="20" y="92" width="12" height="18" rx="3" fill-opacity=".45"/><rect x="44" y="76" width="12" height="34" rx="3" fill-opacity=".52"/><rect x="68" y="84" width="12" height="26" rx="3" fill-opacity=".59"/><rect x="92" y="62" width="12" height="48" rx="3" fill-opacity=".66"/><rect x="116" y="70" width="12" height="40" rx="3" fill-opacity=".73"/><rect x="140" y="48" width="12" height="62" rx="3" fill-opacity=".8"/><rect x="164" y="58" width="12" height="52" rx="3" fill-opacity=".87"/><rect x="188" y="36" width="12" height="74" rx="3" fill-opacity=".94"/></g><path d="M14 112h192" stroke="#fff" stroke-opacity=".7"/></svg></span><span class="no" aria-hidden="true">02</span><span class="tx"><b>تجوّل في الزمن</b><small>من 4000 ق.م إلى اليوم، خريطة بعد خريطة.</small></span></button>
+      <button type="button" class="door" data-door="sunan"><span class="art" aria-hidden="true"><svg viewBox="0 0 220 130" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="door-bg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D8E6F7"/><stop offset="1" stop-color="#A9C1E2"/></linearGradient></defs><rect width="220" height="130" fill="url(#door-bg3)"/><text x="110" y="92" text-anchor="middle" font-family="Noto Kufi Arabic, serif" font-size="74" fill="#12192B" fill-opacity=".85">«»</text></svg></span><span class="no" aria-hidden="true">03</span><span class="tx"><b>اختبر سُنّة</b><small>نص ابن خلدون، وشواهدها المؤيدة والمقيِّدة.</small></span></button>
     </div>
     <button type="button" class="intro-skip" data-door="skip">ادخل مباشرة</button>
   </div>
