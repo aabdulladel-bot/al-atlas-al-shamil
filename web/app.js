@@ -324,7 +324,9 @@ panelToggle.addEventListener("click", () => {
   if (open && !cardEl.hidden) closeCard();
   setPanelCollapsed(!open);
 });
-if (isNarrow()) setPanelCollapsed(true);
+// الزيارة الأولى: الشاشة الأولى تبقى هادئة، فاللوحة مطوية والمفتاح مطوي، ويفتحهما زرّ «القائمة» أو الأبواب
+const firstVisit = (() => { try { return localStorage.getItem("atlas-intro-seen") !== "1"; } catch { return true; } })();
+if (isNarrow() || firstVisit) setPanelCollapsed(true);
 // الكرة في وسط المساحة الحرة: حشوة الخريطة تحجز مكان اللوحة (يمين المكتب، أو شريط عنوانها على الجوال) وشريط الزمن،
 // فيتوسّط مركزُ الخريطة ما بقي مرئياً، وتبني عليها كل حركات الكاميرا والتقريب
 function viewPadding() {
@@ -2175,6 +2177,7 @@ for (const lc of document.querySelectorAll("#layer-panel .layer-cards .lc, #laye
 const legendEl = document.getElementById("legend");
 const legendBody = document.getElementById("legend-body");
 const legendToggle = document.getElementById("legend-toggle");
+if (firstVisit) legendToggle.setAttribute("aria-expanded", "false");
 try { if (localStorage.getItem("atlas-legend") === "closed" || (localStorage.getItem("atlas-legend") === null && matchMedia("(max-width: 600px)").matches)) legendToggle.setAttribute("aria-expanded", "false"); } catch {}
 legendToggle.addEventListener("click", () => {
   const open = legendToggle.getAttribute("aria-expanded") !== "true";
