@@ -3,7 +3,7 @@
   "links": [
     {"claim": "cl_000000397", "year": "-1000", "place": "صور", "entity": "Kingdom of David and Solomon", "tier": "محل خلاف"},
     {"claim": "cl_000000397", "year": "-1000", "place": "ترشيش", "entity": "Celtiberians", "tier": "شعب"},
-    {"claim": "cl_000000365", "year": "1200", "place": "الإسكندرية", "entity": "Fatimid Caliphate", "tier": "قريب من الحد", "why": "الإسكندرية خارج مضلع الدولة الفاطمية في خريطة 1200م على مسافة قريبة، فليست داخلها كما ظُنّ سابقاً"},
+    {"claim": "cl_000000365", "year": "1200", "place": "الإسكندرية", "entity": "Fatimid Caliphate", "tier": "غير موجود", "why": "تصحيح تاريخي: سجل الخلافة الفاطمية ينتهي 1171 (سقوط مصر بيد الأيوبيين)، فأُسقطت من طبقة 1200 (scripts/config/historical_corrections.json)، فلا كيان مسمّى للإسكندرية في 1200 حتى يُضاف الأيوبيون بمصدر. كانت الحالة السابقة تختبر قرب الإسكندرية من حد مضلع فاطمي لا يصح في 1200"},
     {"claim": "cl_000000365", "year": "1200", "place": "طرابزون", "entity": "Byzantine Empire", "tier": "قريب من الحد"},
     {"claim": "cl_000000390", "year": "1600", "place": "بورصة", "entity": "Ottoman Empire", "tier": "متحقق"},
     {"claim": "cl_000000347", "year": "700", "place": "أنورادهابورا", "entity": "Simhala", "tier": "غير متحقق", "why": "نوع الكيان غير معروف في ويكي بيانات"},
