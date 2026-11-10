@@ -129,6 +129,7 @@
     :root { --tb-h: 68px; }
     #panel { position: absolute; z-index: 3; top: 12px; inset-inline-start: 12px; width: min(380px, calc(100% - 24px)); max-height: calc(100vh - var(--tb-h) - 24px); overflow-y: auto; box-sizing: border-box; background: var(--panel); padding: 14px 16px; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,.18); }
     .ph-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    #panel.collapsed #panel-toggle { display: inline-block; }
     #panel-toggle { display: none; font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
     #panel.collapsed #panel-body, #panel.collapsed .tagline, #panel.collapsed .mode { display: none; }
     body.card-open #panel { visibility: hidden; }
