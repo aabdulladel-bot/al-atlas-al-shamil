@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>معمل الواجهة · الأطلس الشامل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060B18; --ink: #EAF1FF; --muted: #A8B7D4; --accent: #E9B44C; --sky: #5BB8FF;
+    --panel: #0B1630; --card: #101F3E; --card2: #15264A; --line: rgba(150, 185, 255, 0.17);
+    --sand: #E8D3B0; --terra: #B4582F;
+    --font-d: "Noto Kufi Arabic", "IBM Plex Sans Arabic", system-ui, sans-serif;
+    --font-b: "IBM Plex Sans Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-b); }
+  body { padding: 28px 20px 60px; }
+  header.lab-head { max-width: 1240px; margin: 0 auto 26px; }
+  header.lab-head h1 { font-family: var(--font-d); font-size: 30px; margin: 0 0 6px; }
+  header.lab-head p { color: var(--muted); margin: 0; line-height: 1.8; max-width: 760px; }
+  section.demo { max-width: 1240px; margin: 0 auto 28px; display: grid; grid-template-columns: 1fr 300px; gap: 0; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #0A1328; }
+  .stage { position: relative; min-height: 520px; overflow: hidden; display: flex; flex-direction: column; }
+  .stage-head { display: flex; align-items: baseline; gap: 12px; padding: 16px 20px 0; z-index: 2; }
+  .stage-head .n { font: 600 12px var(--font-b); color: var(--muted); }
+  .stage-head h2 { font: 700 16px var(--font-d); margin: 0; }
+  .stage-head .hint { color: var(--muted); font-size: 12px; }
+  .panel { background: #0D1834; border-inline-start: 1px solid var(--line); padding: 14px 16px; font-size: 12px; display: flex; flex-direction: column; }
+  .panel h3 { font: 700 13px var(--font-d); margin: 0 0 8px; display: flex; justify-content: space-between; }
+  .panel .grp { color: var(--muted); font-size: 11px; margin: 10px 0 4px; letter-spacing: .02em; }
+  .row { display: grid; grid-template-columns: 1fr 52px; align-items: center; gap: 6px 10px; margin: 5px 0; }
+  .row label { color: var(--ink); }
+  .row output { text-align: start; color: var(--muted); font-variant-numeric: tabular-nums; direction: ltr; }
+  .row input[type=range] { grid-column: 1 / -1; width: 100%; accent-color: var(--accent); height: 18px; margin: 0; }
+  .row.check { grid-template-columns: 1fr auto; }
+  .panel .acts { margin-top: auto; padding-top: 12px; display: flex; gap: 6px; }
+  .panel .acts button { flex: 1; font: 600 12px var(--font-b); color: var(--ink); background: var(--card2); border: 1px solid var(--line); border-radius: 8px; padding: 7px 6px; cursor: pointer; }
+  .panel .acts button:hover { border-color: var(--accent); }
+  .toast { position: fixed; bottom: 18px; inset-inline-start: 50%; transform: translateX(50%); background: var(--accent); color: #1a1406; padding: 8px 14px; border-radius: 999px; font-weight: 600; opacity: 0; transition: opacity .3s; pointer-events: none; }
+  .toast.on { opacity: 1; }
+
+  /* ---------- 1) قوس الحقب ---------- */
+  #arc .stage { background: radial-gradient(120% 90% at 50% 0%, #F6EFE3 0%, #EFE5D4 60%, #E7D9C3 100%); color: #2A2016; }
+  #arc .stage-head .n, #arc .stage-head .hint { color: #7A6650; }
+  .arc-track { position: relative; flex: 1; touch-action: pan-y; cursor: grab; user-select: none; }
+  .arc-track.drag { cursor: grabbing; }
+  .arc-card { position: absolute; left: 50%; top: 24%; width: var(--cw, 128px); aspect-ratio: 3 / 4; margin-left: calc(var(--cw, 128px) / -2); border-radius: 18px; transform-origin: 50% 50%; will-change: transform, opacity; box-shadow: 0 18px 40px rgba(80, 50, 20, .28), inset 0 1px 0 rgba(255,255,255,.35); overflow: hidden; color: #fff; display: flex; flex-direction: column; justify-content: space-between; padding: 12px; }
+  .arc-card .no { font: 800 22px var(--font-d); opacity: .95; letter-spacing: .02em; }
+  .arc-card .yr { font: 600 11px var(--font-b); opacity: .9; }
+  .arc-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(255,255,255,.28), transparent 45%); pointer-events: none; }
+  .arc-caption { position: absolute; inset-inline: 0; bottom: 34px; text-align: center; padding: 0 20px; }
+  .arc-caption h3 { font: 700 30px var(--font-d); margin: 0 0 6px; color: #2A2016; }
+  .arc-caption p { margin: 0 auto 12px; color: #6E5A44; max-width: 520px; font-size: 14px; line-height: 1.8; min-height: 25px; }
+  .arc-caption .swap { animation: rise .45s cubic-bezier(.2,.8,.2,1); }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+  .arc-nav { display: inline-flex; align-items: center; gap: 14px; }
+  .arc-nav button { width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(42,32,22,.25); background: rgba(255,255,255,.55); color: #2A2016; font-size: 16px; cursor: pointer; }
+  .arc-nav .go { width: auto; height: 34px; padding: 0 18px; border-radius: 999px; background: #2A2016; color: #F6EFE3; border: 0; font: 600 13px var(--font-b); }
+  .arc-dots { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
+  .arc-dots i { width: 6px; height: 6px; border-radius: 3px; background: rgba(42,32,22,.25); transition: width .3s, background .3s; }
+  .arc-dots i.on { width: 18px; background: #2A2016; }
+
+  /* ---------- 2) دوّار السنن ---------- */
+  #ring .stage { background: radial-gradient(100% 80% at 50% 30%, #C3683C 0%, #A44E28 55%, #833B1D 100%); }
+  .ring-scene { position: relative; flex: 1; perspective: var(--persp, 1100px); touch-action: pan-y; cursor: grab; user-select: none; display: flex; align-items: center; justify-content: center; }
+  .ring-scene.drag { cursor: grabbing; }
+  .ring { position: relative; width: var(--rw, 210px); height: 150px; transform-style: preserve-3d; will-change: transform; }
+  .ring-card { position: absolute; inset: 0; border-radius: 14px; background: linear-gradient(165deg, #121B33, #0B1226); border: 1px solid rgba(255,255,255,.1); color: var(--ink); padding: 12px 13px; box-shadow: 0 14px 30px rgba(0,0,0,.35); backface-visibility: hidden; display: flex; flex-direction: column; gap: 6px; transition: box-shadow .3s; }
+  .ring-card.light { background: linear-gradient(165deg, #FBF6EE, #EFE5D4); color: #2A2016; }
+  .ring-card .nm { font: 700 13px var(--font-d); line-height: 1.5; }
+  .ring-card .hp { font-size: 11px; line-height: 1.7; opacity: .82; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .ring-card .st { margin-top: auto; font-size: 10px; display: flex; gap: 6px; align-items: center; opacity: .9; }
+  .ring-card .st b { display: inline-block; width: 7px; height: 7px; border-radius: 50%; }
+  .ring-card.on { box-shadow: 0 0 0 2px var(--accent), 0 18px 40px rgba(0,0,0,.4); }
+  .ring-detail { margin: 0 20px 20px; min-height: 120px; background: rgba(10, 16, 34, .72); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 14px 16px; }
+  .ring-detail h3 { font: 700 17px var(--font-d); margin: 0 0 6px; }
+  .ring-detail blockquote { margin: 8px 0; padding-inline-start: 10px; border-inline-start: 3px solid var(--accent); font-size: 15px; line-height: 1.9; }
+  .ring-detail .src { color: var(--muted); font-size: 11px; }
+  .ring-detail .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .ring-detail .chips span { font-size: 11px; padding: 3px 9px; border-radius: 999px; background: var(--card2); border: 1px solid var(--line); }
+
+  /* ---------- 3) أبواب الدخول ---------- */
+  #doors .stage { background: linear-gradient(180deg, #F3F5FA, #E6EAF3); color: #12192B; }
+  #doors .stage-head .n, #doors .stage-head .hint { color: #5B6680; }
+  .doors { flex: 1; display: flex; align-items: center; justify-content: center; gap: var(--gap, 22px); padding: 30px 20px; perspective: 900px; flex-wrap: wrap; }
+  .door { position: relative; width: var(--dw, 210px); height: 290px; border-radius: var(--dr, 18px); background: #0E1424; color: #fff; transform-style: preserve-3d; transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s; box-shadow: 0 16px 36px rgba(18,25,43,.22); cursor: pointer; outline: none; clip-path: polygon(0 var(--notch, 22px), calc(100% - var(--tab, 46%)) var(--notch, 22px), calc(100% - var(--tab, 46%) + 16px) 0, 100% 0, 100% 100%, 0 100%); }
+  .door.light { background: #FFFFFF; color: #12192B; }
+  .door:focus-visible { box-shadow: 0 0 0 3px var(--accent), 0 16px 36px rgba(18,25,43,.22); }
+  .door .art { position: absolute; inset: var(--notch, 22px) 0 auto 0; height: 46%; overflow: hidden; }
+  .door .art svg { width: 100%; height: 100%; display: block; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+  .door:hover .art svg, .door:focus-visible .art svg { transform: scale(1.06); }
+  .door .no { position: absolute; top: calc(var(--notch, 22px) + 46% - 44px); inset-inline-start: 16px; font: 800 34px var(--font-d); text-shadow: 0 4px 18px rgba(0,0,0,.25); }
+  .door .tx { position: absolute; inset: auto 16px 16px 16px; }
+  .door .tx h3 { font: 700 16px var(--font-d); margin: 0 0 4px; }
+  .door .tx p { font-size: 12px; line-height: 1.7; margin: 0; opacity: .75; }
+  .door .arrow { position: absolute; top: calc(var(--notch, 22px) + 12px); inset-inline-end: 14px; font-size: 16px; opacity: .85; }
+
+  @media (max-width: 900px) {
+    section.demo { grid-template-columns: 1fr; }
+    .panel { border-inline-start: 0; border-top: 1px solid var(--line); }
+    .stage { min-height: 460px; }
+    .arc-caption h3 { font-size: 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .arc-caption .swap { animation: none; }
+    .door, .door .art svg { transition: none; }
+  }
+</style>
+</head>
+<body>
+<header class="lab-head">
+  <h1>معمل الواجهة</h1>
+  <p>نماذج أولية لمكوّنات تفاعلية بمحتوى الأطلس نفسه: الحقب الثماني، وسنن ابن خلدون العشر، وأبواب الدخول الثلاثة. لكل مكوّن لوحة ضبط تغيّر شكله وحركته مباشرة، و«نسخ الإعدادات» يحفظ القيم المختارة لتُنقل إلى الأطلس. نموذج للتجربة، لا جزء من الموقع المنشور.</p>
+</header>
+
+<section class="demo" id="arc">
+  <div class="stage">
+    <div class="stage-head"><span class="n">01</span><h2>قوس الحقب</h2><span class="hint">اسحب، أو اضغط حقبة، أو استعمل الأسهم</span></div>
+    <div class="arc-track" tabindex="0" aria-label="الحقب الثماني"></div>
+    <div class="arc-caption">
+      <h3></h3><p></p>
+      <div class="arc-nav"><button type="button" data-step="1" aria-label="السابقة">›</button><button type="button" class="go">ادخل الحقبة</button><button type="button" data-step="-1" aria-label="التالية">‹</button></div>
+      <div class="arc-dots"></div>
+    </div>
+  </div>
+  <aside class="panel" data-for="arc"></aside>
+</section>
+
+<section class="demo" id="ring">
+  <div class="stage">
+    <div class="stage-head"><span class="n" style="color:#F6E4D2">02</span><h2 style="color:#FFF6EC">دوّار السنن</h2><span class="hint" style="color:#F3D9C4">اسحب ليدور، أو اضغط سُنّة لتراها</span></div>
+    <div class="ring-scene" tabindex="0" aria-label="سنن ابن خلدون"><div class="ring"></div></div>
+    <div class="ring-detail" aria-live="polite"></div>
+  </div>
+  <aside class="panel" data-for="ring"></aside>
+</section>
+
+<section class="demo" id="doors">
+  <div class="stage">
+    <div class="stage-head"><span class="n">03</span><h2>أبواب الدخول</h2><span class="hint">مرّر المؤشر فوق الباب</span></div>
+    <div class="doors"></div>
+  </div>
+  <aside class="panel" data-for="doors"></aside>
+</section>
+
+<div class="toast" role="status"></div>
+
+<script>
+const DATA = {"eras":[{"id":1,"label":"الماء والاستقرار","span":"4000 ق.م – 1200 ق.م","desc":"وادي الرافدين ومصر القديمة (4000-1200 ق.م)"},{"id":2,"label":"الطرق والممالك","span":"1200 ق.م – 500 ق.م","desc":"الطرق والممالك الأولى (1200-500 ق.م)"},{"id":3,"label":"الإمبراطوريات الكبرى","span":"500 ق.م – 300م","desc":"الإمبراطوريات الكبرى (500 ق.م-300م)"},{"id":4,"label":"الأديان الكبرى","span":"300م – 1000م","desc":"الأديان الكبرى وتشكّل العالم القديم المتأخر (300-1000م)"},{"id":5,"label":"التبادل العابر للقارات","span":"1000م – 1450م","desc":"التبادل العابر للقارات (1000-1450م)"},{"id":6,"label":"الكشوف وتبادل العالم","span":"1450م – 1760م","desc":"الكشوف وتبادل العالم (1450-1760م)"},{"id":7,"label":"الصناعة والمدينة","span":"1760م – 1914م","desc":"الصناعة والمدينة (1760-1914م)"},{"id":8,"label":"الحروب العالمية والدولة الحديثة","span":"1914م – 2025م","desc":"الحروب العالمية والدولة الحديثة (1914-2025م)"}],"sunan":[{"id":"sn_asabiyya","name":"سُنّة العصبية والملك","hyp":"تقوم الدولة على عصبية جامعة تربط الجماعة، وتسعى العصبية بطبيعتها إلى الملك؛ فإذا ضعفت العصبية ضعفت القدرة على الغلبة.","strength":"شواهد متعددة","quote":"الغاية التي تجري إليها العصبية هي الملك","loc":"الكتاب الأول، الباب الثاني، الفصل السابع عشر","sup":4,"lim":2},{"id":"sn_dynasty_age","name":"سُنّة أعمار الدول","hyp":"للدولة عمر يشبه عمر الأشخاص، يغلب ألا يتجاوز ثلاثة أجيال، ويتآكل الحسب في أربعة آباء؛ ويمكن أن يتجدد عمر الدولة بعصبية جديدة.","strength":"شواهد قليلة","quote":"الدّولة في الغالب لا تعدو أعمار ثلاثة أجيال","loc":"الكتاب الأول، الباب الثالث، الفصل الرابع عشر","sup":2,"lim":2},{"id":"sn_luxury","name":"سُنّة الترف والهرم","hyp":"الانغماس في الترف يضعف القوة التي قامت بها الجماعة، وخشونة العيش تقترن بالقدرة على الغلبة.","strength":"شواهد متعددة","quote":"من عوائق الملك حصول الترف و انغماس القبيل في النعيم","loc":"الكتاب الأول، الباب الثاني، الفصل الثامن عشر","sup":5,"lim":3},{"id":"sn_imitation","name":"سُنّة اقتداء المغلوب بالغالب","hyp":"المغلوب يميل إلى تقليد الغالب في شعاره وزيه وعوائده، لاعتقاده الكمال فيمن غلبه.","strength":"شواهد قليلة","quote":"المغلوب مولع أبداً بالاقتداء بالغالب","loc":"الكتاب الأول، الباب الثاني، الفصل الثالث والعشرون","sup":2,"lim":2},{"id":"sn_security","name":"سُنّة الأمن على الأموال وعمران الأسواق","hyp":"العدوان على الأموال يذهب بآمال الناس في الكسب فيخرب العمران، والأمن على الطرق والأموال يجلب التجار والقوافل.","strength":"شواهد متعددة","quote":"الظلم مؤذن بخراب العمران","loc":"الكتاب الأول، الباب الثالث، الفصل الثالث والأربعون","sup":8,"lim":2},{"id":"sn_trade","name":"سُنّة التجارة ومراكزها","hyp":"تتركز التجارة في مراكز على تقاطع الطرق البرية والبحرية، وتزدهر المراكز بازدهار طرقها وتتراجع بتحوّلها.","strength":"شواهد متعددة","quote":"التجارة محاولة الكسب بتنمية المال بشراء السلع بالرخص و بيعها بالغلاء","loc":"الكتاب الأول، الباب الخامس، الفصل التاسع","sup":12,"lim":2},{"id":"sn_knowledge","name":"سُنّة الصنائع وانتقال المعرفة","hyp":"الصنائع تكمل بكمال العمران الحضري، وتنتقل المعارف التقنية بين الحضارات عبر وسطاء من رهبان وتجار وبحارة.","strength":"شواهد متعددة","quote":"الصنائع إنما تكمل بكمال العمران الحضري و كثرته","loc":"الكتاب الأول، الباب الخامس، الفصل السابع عشر","sup":5,"lim":1},{"id":"sn_taxation","name":"سُنّة الجباية: قلة الوزائع وكثرة الجملة","hyp":"خفة الضرائب في أول الدولة تنشّط الناس للعمل فيكثر العمران وتكثر جملة الجباية، وثقلها في آخرها يفتر الأعمال فتقل الجملة وإن كثرت الوزائع.","strength":"شواهد قليلة","quote":"الجباية أوّل الدّولة تكون قليلة الوزائع كثيرة الجملة وآخر الدّولة تكون كثيرة الوزائع قليلة الجملة","loc":"الكتاب الأول، الباب الثالث، الفصل الثامن والثلاثون","sup":2,"lim":2},{"id":"sn_sultan_trade","name":"سُنّة تجارة السلطان","hyp":"إذا اتجر السلطان أو فلح زاحم الرعايا بقوة لا يقدرون عليها فأفسد كسبهم، ونقصت الجباية لأنها من كسبهم.","strength":"شواهد قليلة","quote":"التجارة من السلطان مضرة بالرعايا ومفسدة للجباية","loc":"الكتاب الأول، الباب الثالث، الفصل الأربعون","sup":2,"lim":2},{"id":"sn_state_market","name":"سُنّة الدولة السوق الأعظم","hyp":"الدولة أعظم الأسواق ومادة العمران؛ فإذا حبس السلطان المال عن مصارفه قلّت نفقات الحاشية والجند فكسدت الأسواق ونقصت الجباية التي هي من الأسواق.","strength":"بلا شواهد مؤيدة بعد","quote":"الدّولة والسّلطان هي السّوق الأعظم للعالم ومنه مادّة العمران","loc":"الكتاب الأول، الباب الثالث، الفصل الثاني والأربعون","sup":0,"lim":2}]};
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+// أرقام البطاقات بالأرقام نفسها التي يكتب بها الأطلس السنوات؛ الصفر الهندي نقطة في خط الكوفي، فيُقرأ «٠١» كأنه «•١»
+const toArabicDigits = (n) => String(n).padStart(2, "0");
+const toast = (t) => { const el = document.querySelector(".toast"); el.textContent = t; el.classList.add("on"); setTimeout(() => el.classList.remove("on"), 1600); };
+
+// لوحة ضبط عامة: قيم افتراضية، ومنزلقات تغيّر القيم وتستدعي الرسم، وإعادة ضبط ونسخ
+function makePanel(host, title, spec, state, onChange, onReplay) {
+  const defaults = JSON.parse(JSON.stringify(state));
+  const html = [`<h3><span>${title}</span></h3>`];
+  for (const g of spec) {
+    html.push(`<div class="grp">${g.group}</div>`);
+    for (const f of g.fields) {
+      if (f.type === "check") html.push(`<div class="row check"><label for="${host.dataset.for}-${f.key}">${f.label}</label><input type="checkbox" id="${host.dataset.for}-${f.key}" data-k="${f.key}"></div>`);
+      else html.push(`<div class="row"><label for="${host.dataset.for}-${f.key}">${f.label}</label><output data-o="${f.key}"></output><input type="range" id="${host.dataset.for}-${f.key}" data-k="${f.key}" min="${f.min}" max="${f.max}" step="${f.step}"></div>`);
+    }
+  }
+  html.push(`<div class="acts"><button type="button" data-a="reset">إعادة الضبط</button><button type="button" data-a="replay">إعادة التشغيل</button><button type="button" data-a="copy">نسخ الإعدادات</button></div>`);
+  host.innerHTML = html.join("");
+  const fields = spec.flatMap((g) => g.fields);
+  const sync = () => {
+    for (const f of fields) {
+      const el = host.querySelector(`[data-k="${f.key}"]`);
+      if (f.type === "check") el.checked = !!state[f.key];
+      else { el.value = state[f.key]; host.querySelector(`[data-o="${f.key}"]`).textContent = `${state[f.key]}${f.unit ?? ""}`; }
+    }
+  };
+  host.addEventListener("input", (e) => {
+    const k = e.target.dataset.k;
+    if (!k) return;
+    state[k] = e.target.type === "checkbox" ? e.target.checked : Number(e.target.value);
+    sync();
+    onChange();
+  });
+  host.addEventListener("click", (e) => {
+    const a = e.target.dataset.a;
+    if (a === "reset") { Object.assign(state, JSON.parse(JSON.stringify(defaults))); sync(); onChange(); }
+    if (a === "replay") onReplay();
+    if (a === "copy") {
+      const text = JSON.stringify({ [host.dataset.for]: state }, null, 2);
+      (navigator.clipboard?.writeText(text) ?? Promise.reject()).then(() => toast("نُسخت الإعدادات"), () => { console.log(text); toast("تعذّر النسخ: القيم في وحدة التحكم"); });
+    }
+  });
+  sync();
+}
+
+// نابض بسيط: يقترب من الهدف بسرعة ويستقر بلا ارتداد مزعج
+function spring(get, set, onFrame) {
+  let target = get(), v = 0, raf = 0;
+  const step = () => {
+    const x = get(), k = 0.14, d = 0.74;
+    v = v * d + (target - x) * k;
+    set(x + v);
+    onFrame();
+    if (Math.abs(target - get()) > 0.0005 || Math.abs(v) > 0.0005) raf = requestAnimationFrame(step);
+    else { set(target); onFrame(); raf = 0; }
+  };
+  return {
+    to(t) { target = t; if (reduce) { set(t); onFrame(); return; } if (!raf) raf = requestAnimationFrame(step); },
+    // يوقف الحركة عند لمس القارئ، فلا يشدّ النابض ما يسحبه بيده
+    stop() { if (raf) cancelAnimationFrame(raf); raf = 0; v = 0; target = get(); },
+    get target() { return target; },
+  };
+}
+
+// ================= ١) قوس الحقب =================
+(() => {
+  const root = document.getElementById("arc");
+  const track = root.querySelector(".arc-track");
+  const cap = root.querySelector(".arc-caption");
+  const dots = root.querySelector(".arc-dots");
+  const eras = DATA.eras;
+  // ألوان الحقب من القديم (رملي ذهبي) إلى الحديث (أخضر مزرق)، كما في المكعّب
+  const stops = [[204, 150, 74], [196, 100, 56], [150, 92, 170], [56, 150, 142]];
+  const ramp = (t) => { const x = t * (stops.length - 1); const i = Math.min(Math.floor(x), stops.length - 2); const f = x - i; return stops[i].map((c, j) => Math.round(c + (stops[i + 1][j] - c) * f)); };
+  const S = { radius: 520, spacing: 13, cardWidth: 128, activeScale: 1.32, inactiveScale: 0.86, inactiveOpacity: 0.78, lift: 26, tilt: 1 };
+  let pos = 0; // موضع عشري: الحقبة المركّزة
+  let shown = -1;
+  const cards = eras.map((e, i) => {
+    const el = document.createElement("div");
+    el.className = "arc-card";
+    const [r, g, b] = ramp(i / (eras.length - 1));
+    el.style.background = `linear-gradient(160deg, rgb(${Math.min(255, r + 40)},${Math.min(255, g + 40)},${Math.min(255, b + 40)}), rgb(${r},${g},${b}) 55%, rgb(${Math.round(r * .62)},${Math.round(g * .62)},${Math.round(b * .62)}))`;
+    el.innerHTML = `<div class="no">${toArabicDigits(e.id)}</div><div class="yr">${e.span}</div>`;
+    el.addEventListener("click", () => { if (!moved) go(i); });
+    track.appendChild(el);
+    dots.appendChild(document.createElement("i"));
+    return el;
+  });
+  const sp = spring(() => pos, (x) => { pos = x; }, render);
+  function render() {
+    track.style.setProperty("--cw", `${S.cardWidth}px`);
+    cards.forEach((el, i) => {
+      const d = i - pos; // موجب: أحدث من المركّزة، ويُرسم إلى اليسار (الزمن يسير من اليمين إلى اليسار)
+      const a = (d * S.spacing * Math.PI) / 180;
+      const x = -S.radius * Math.sin(a);
+      const y = S.radius * (1 - Math.cos(a)) + (Math.abs(d) < 1 ? -S.lift * (1 - Math.abs(d)) : 0);
+      const near = Math.max(0, 1 - Math.abs(d));
+      const sc = S.inactiveScale + (S.activeScale - S.inactiveScale) * near;
+      const op = Math.abs(d) > 3.5 ? Math.max(0, S.inactiveOpacity * (4.5 - Math.abs(d))) : S.inactiveOpacity + (1 - S.inactiveOpacity) * near;
+      el.style.transform = `translate(${x}px, ${y}px) rotate(${-d * S.spacing * S.tilt}deg) scale(${sc})`;
+      el.style.opacity = op;
+      el.style.zIndex = String(100 - Math.round(Math.abs(d) * 10));
+    });
+    const idx = Math.round(Math.max(0, Math.min(eras.length - 1, pos)));
+    if (idx !== shown) {
+      shown = idx;
+      const e = eras[idx];
+      cap.querySelector("h3").innerHTML = `<span class="swap">${e.label}</span>`;
+      // الوصف بلا السنوات بين القوسين، فالمدة مذكورة قبله
+      const desc = e.desc.replace(/\s*\([^)]*\)\s*$/, "");
+      cap.querySelector("p").innerHTML = `<span class="swap">${e.span}${desc && desc !== e.label ? ` · ${desc}` : ""}</span>`;
+      dots.querySelectorAll("i").forEach((d, j) => d.classList.toggle("on", j === idx));
+    }
+  }
+  const go = (i) => sp.to(Math.max(0, Math.min(eras.length - 1, i)));
+  cap.querySelectorAll("[data-step]").forEach((b) => b.addEventListener("click", () => go(Math.round(sp.target) + Number(b.dataset.step))));
+  cap.querySelector(".go").addEventListener("click", () => toast(`في الأطلس: تنتقل الخريطة إلى «${eras[shown].label}»`));
+  track.addEventListener("keydown", (e) => { if (e.key === "ArrowLeft") go(Math.round(sp.target) + 1); if (e.key === "ArrowRight") go(Math.round(sp.target) - 1); });
+  // السحب: إلى اليسار يتقدم الزمن، وعند الإفلات يستقر على أقرب حقبة مع زخم خفيف
+  let moved = false, startX = 0, startPos = 0, lastX = 0, lastT = 0, vel = 0;
+  track.addEventListener("pointerdown", (e) => { sp.stop(); moved = false; startX = lastX = e.clientX; startPos = pos; lastT = performance.now(); vel = 0; track.setPointerCapture(e.pointerId); track.classList.add("drag"); });
+  track.addEventListener("pointermove", (e) => {
+    if (!track.hasPointerCapture(e.pointerId)) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) moved = true;
+    const per = (S.radius * S.spacing * Math.PI) / 180;
+    pos = Math.max(-0.4, Math.min(eras.length - 0.6, startPos - dx / per));
+    const now = performance.now(); vel = (e.clientX - lastX) / Math.max(1, now - lastT); lastX = e.clientX; lastT = now;
+    render();
+  });
+  const end = (e) => {
+    if (!track.hasPointerCapture(e.pointerId)) return;
+    track.releasePointerCapture(e.pointerId); track.classList.remove("drag");
+    if (moved) { const per = (S.radius * S.spacing * Math.PI) / 180; go(Math.round(pos - (vel * 180) / per)); }
+  };
+  track.addEventListener("pointerup", end); track.addEventListener("pointercancel", end);
+  const replay = () => { pos = eras.length - 1 + 2; render(); sp.to(0); };
+  makePanel(root.querySelector(".panel"), "قوس الحقب", [
+    { group: "القوس", fields: [
+      { key: "radius", label: "نصف القطر", min: 260, max: 1100, step: 10, unit: "" },
+      { key: "spacing", label: "التباعد", min: 6, max: 26, step: 0.5, unit: "°" },
+      { key: "lift", label: "رفع المركّزة", min: 0, max: 70, step: 1, unit: "" },
+      { key: "tilt", label: "ميل البطاقات", min: 0, max: 1.5, step: 0.05, unit: "" } ] },
+    { group: "البطاقات", fields: [
+      { key: "cardWidth", label: "عرض البطاقة", min: 80, max: 190, step: 2, unit: "" },
+      { key: "activeScale", label: "حجم المركّزة", min: 1, max: 1.7, step: 0.02, unit: "×" },
+      { key: "inactiveScale", label: "حجم الباقي", min: 0.5, max: 1, step: 0.02, unit: "×" },
+      { key: "inactiveOpacity", label: "شفافية الباقي", min: 0.2, max: 1, step: 0.02, unit: "" } ] },
+  ], S, render, replay);
+  render();
+  if (!reduce) replay();
+})();
+
+// ================= ٢) دوّار السنن =================
+(() => {
+  const root = document.getElementById("ring");
+  const scene = root.querySelector(".ring-scene");
+  const ring = root.querySelector(".ring");
+  const detail = root.querySelector(".ring-detail");
+  const sunan = DATA.sunan;
+  const S = { radius: 360, perspective: 1100, tilt: -8, cardWidth: 210, depthFade: 0.55, autoSpin: true, speed: 6, light: false };
+  let angle = 0, active = -1, drag = false, idle = 0;
+  const strengthColor = (s) => (s.includes("متعددة") ? "#5BD6A2" : s.includes("قليلة") ? "#E9B44C" : "#E07A6A");
+  const cards = sunan.map((s, i) => {
+    const el = document.createElement("article");
+    el.className = "ring-card";
+    el.innerHTML = `<div class="nm">${s.name}</div><div class="hp">${s.hyp}</div><div class="st"><b style="background:${strengthColor(s.strength)}"></b>${s.strength} · ${s.sup} مؤيد، ${s.lim} مقيِّد</div>`;
+    el.addEventListener("click", () => { if (!moved) focus(i); });
+    ring.appendChild(el);
+    return el;
+  });
+  const step = () => 360 / sunan.length;
+  function render() {
+    scene.style.setProperty("--persp", `${S.perspective}px`);
+    ring.style.setProperty("--rw", `${S.cardWidth}px`);
+    ring.style.transform = `rotateX(${S.tilt}deg) rotateY(${angle}deg)`;
+    cards.forEach((el, i) => {
+      const a = i * step();
+      el.classList.toggle("light", S.light);
+      el.style.transform = `rotateY(${a}deg) translateZ(${S.radius}px)`;
+      // عمق: البطاقة المواجهة كاملة، والبعيدة تخبو
+      const rel = (((a + angle) % 360) + 360) % 360;
+      const facing = Math.cos((rel * Math.PI) / 180);
+      el.style.opacity = String(Math.max(0.08, 1 - S.depthFade * (1 - (facing + 1) / 2) * 1.6));
+      el.classList.toggle("on", i === active);
+    });
+  }
+  function showDetail(i) {
+    const s = sunan[i];
+    detail.innerHTML = `<h3>${s.name}</h3><div>${s.hyp}</div>` +
+      (s.quote ? `<blockquote>«${s.quote}»</blockquote><div class="src">ابن خلدون، المقدمة · ${s.loc}</div>` : "") +
+      `<div class="chips"><span>${s.strength}</span><span>${s.sup} شاهد مؤيد</span><span>${s.lim} شاهد مقيِّد</span></div>`;
+  }
+  // التركيز: يدور الدوّار حتى تواجه السنّة القارئ بأقصر طريق
+  const sp = spring(() => angle, (x) => { angle = x; }, render);
+  function focus(i) {
+    active = i;
+    let target = -i * step();
+    while (target - angle > 180) target -= 360;
+    while (target - angle < -180) target += 360;
+    sp.to(target);
+    showDetail(i);
+    idle = performance.now();
+  }
+  let moved = false, sx = 0, sa = 0, lx = 0, lt = 0, vel = 0;
+  scene.addEventListener("pointerdown", (e) => { sp.stop(); drag = true; moved = false; sx = lx = e.clientX; sa = angle; lt = performance.now(); vel = 0; scene.setPointerCapture(e.pointerId); scene.classList.add("drag"); });
+  scene.addEventListener("pointermove", (e) => {
+    if (!drag) return;
+    const dx = e.clientX - sx;
+    if (Math.abs(dx) > 4) moved = true;
+    angle = sa + dx * 0.35;
+    const now = performance.now(); vel = (e.clientX - lx) / Math.max(1, now - lt); lx = e.clientX; lt = now;
+    render();
+  });
+  const end = (e) => {
+    if (!drag) return;
+    drag = false; scene.classList.remove("drag");
+    try { scene.releasePointerCapture(e.pointerId); } catch {}
+    idle = performance.now();
+    if (moved) {
+      // يستقر على أقرب سنّة بعد زخم الرمية
+      const thrown = angle + vel * 140;
+      const i = ((Math.round(-thrown / step()) % sunan.length) + sunan.length) % sunan.length;
+      focus(i);
+    }
+  };
+  scene.addEventListener("pointerup", end); scene.addEventListener("pointercancel", end);
+  scene.addEventListener("keydown", (e) => { if (e.key === "ArrowLeft") focus((Math.max(active, 0) + 1) % sunan.length); if (e.key === "ArrowRight") focus((Math.max(active, 0) - 1 + sunan.length) % sunan.length); });
+  // دوران تلقائي هادئ يتوقف عند اللمس، ويعود بعد أربع ثوانٍ من السكون
+  let last = performance.now();
+  const tick = (t) => {
+    const dt = (t - last) / 1000; last = t;
+    if (S.autoSpin && !reduce && !drag && t - idle > 4000) { angle -= S.speed * dt; sp.to(angle); render(); }
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+  const replay = () => { angle = 220; render(); focus(0); };
+  makePanel(root.querySelector(".panel"), "دوّار السنن", [
+    { group: "الدوّار", fields: [
+      { key: "radius", label: "نصف القطر", min: 180, max: 620, step: 5, unit: "" },
+      { key: "perspective", label: "العمق المنظوري", min: 500, max: 2400, step: 20, unit: "" },
+      { key: "tilt", label: "الميل", min: -25, max: 15, step: 0.5, unit: "°" } ] },
+    { group: "البطاقات", fields: [
+      { key: "cardWidth", label: "عرض البطاقة", min: 150, max: 280, step: 2, unit: "" },
+      { key: "depthFade", label: "خفوت البعيدة", min: 0, max: 1, step: 0.02, unit: "" },
+      { key: "light", label: "بطاقات فاتحة", type: "check" } ] },
+    { group: "الحركة", fields: [
+      { key: "autoSpin", label: "دوران تلقائي", type: "check" },
+      { key: "speed", label: "سرعة الدوران", min: 1, max: 30, step: 0.5, unit: "°/ث" } ] },
+  ], S, render, replay);
+  render();
+  replay();
+})();
+
+// ================= ٣) أبواب الدخول =================
+(() => {
+  const root = document.getElementById("doors");
+  const host = root.querySelector(".doors");
+  // الرسوم مولّدة بالشيفرة: لا صور خارجية ولا حقوق
+  const art = {
+    globe: `<svg viewBox="0 0 220 130" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="g1" cx="35%" cy="30%"><stop offset="0" stop-color="#7FD3FF"/><stop offset=".55" stop-color="#2B5FD9"/><stop offset="1" stop-color="#0B1A4A"/></radialGradient><linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2A1B6E"/><stop offset="1" stop-color="#0B1230"/></linearGradient></defs><rect width="220" height="130" fill="url(#bg1)"/><circle cx="150" cy="78" r="62" fill="url(#g1)"/><g fill="none" stroke="#BFE6FF" stroke-opacity=".45"><ellipse cx="150" cy="78" rx="62" ry="22"/><ellipse cx="150" cy="78" rx="30" ry="62"/><path d="M88 78h124"/></g><circle cx="40" cy="30" r="1.6" fill="#fff"/><circle cx="70" cy="18" r="1" fill="#fff"/><circle cx="24" cy="70" r="1.2" fill="#fff"/></svg>`,
+    time: `<svg viewBox="0 0 220 130" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A5B"/><stop offset="1" stop-color="#E9B44C"/></linearGradient></defs><rect width="220" height="130" fill="url(#bg2)"/><g fill="#fff">${[18, 34, 26, 48, 40, 62, 52, 74].map((h, i) => `<rect x="${20 + i * 24}" y="${110 - h}" width="12" height="${h}" rx="3" fill-opacity="${0.45 + i * 0.07}"/>`).join("")}</g><path d="M14 112h192" stroke="#fff" stroke-opacity=".7"/></svg>`,
+    sunna: `<svg viewBox="0 0 220 130" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D8E6F7"/><stop offset="1" stop-color="#A9C1E2"/></linearGradient></defs><rect width="220" height="130" fill="url(#bg3)"/><text x="110" y="92" text-anchor="middle" font-family="Noto Kufi Arabic, serif" font-size="74" fill="#12192B" fill-opacity=".85">«»</text></svg>`,
+  };
+  const doors = [
+    { no: 1, title: "شاهد العرض", text: "جولة سينمائية تعبر الحقب الثماني على كرة واحدة.", art: art.globe, light: false },
+    { no: 2, title: "تجوّل في الزمن", text: "من 4000 ق.م إلى اليوم، خريطة بعد خريطة.", art: art.time, light: true },
+    { no: 3, title: "اختبر سُنّة", text: "نص ابن خلدون، وشواهده المؤيدة والمقيِّدة.", art: art.sunna, light: false },
+  ];
+  const S = { cardWidth: 210, radius: 18, notch: 22, tab: 46, gap: 22, lift: 14, tilt: 9 };
+  const els = doors.map((d) => {
+    const el = document.createElement("div");
+    el.className = `door${d.light ? " light" : ""}`;
+    el.tabIndex = 0;
+    el.setAttribute("role", "button");
+    el.innerHTML = `<div class="art">${d.art}</div><div class="arrow">↖</div><div class="no">${toArabicDigits(d.no)}</div><div class="tx"><h3>${d.title}</h3><p>${d.text}</p></div>`;
+    // ميل يتبع المؤشر، ورفع خفيف: يُحسّ الباب شيئاً يُدفع
+    el.addEventListener("pointermove", (e) => {
+      if (reduce) return;
+      const r = el.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5;
+      el.style.transform = `translateY(${-S.lift}px) rotateX(${-py * S.tilt}deg) rotateY(${px * S.tilt}deg)`;
+    });
+    el.addEventListener("pointerleave", () => { el.style.transform = ""; });
+    el.addEventListener("focus", () => { el.style.transform = `translateY(${-S.lift}px)`; });
+    el.addEventListener("blur", () => { el.style.transform = ""; });
+    el.addEventListener("click", () => toast(`في الأطلس: يفتح «${d.title}»`));
+    host.appendChild(el);
+    return el;
+  });
+  function render() {
+    host.style.setProperty("--gap", `${S.gap}px`);
+    for (const el of els) {
+      el.style.setProperty("--dw", `${S.cardWidth}px`);
+      el.style.setProperty("--dr", `${S.radius}px`);
+      el.style.setProperty("--notch", `${S.notch}px`);
+      el.style.setProperty("--tab", `${S.tab}%`);
+    }
+  }
+  const replay = () => {
+    if (reduce) return;
+    els.forEach((el, i) => el.animate([{ opacity: 0, transform: "translateY(26px) rotateX(14deg)" }, { opacity: 1, transform: "none" }], { duration: 620, delay: i * 110, easing: "cubic-bezier(.2,.8,.2,1)", fill: "backwards" }));
+  };
+  makePanel(root.querySelector(".panel"), "أبواب الدخول", [
+    { group: "الشكل", fields: [
+      { key: "cardWidth", label: "عرض الباب", min: 160, max: 260, step: 2, unit: "" },
+      { key: "radius", label: "استدارة الزوايا", min: 0, max: 32, step: 1, unit: "" },
+      { key: "notch", label: "عمق اللسان", min: 0, max: 40, step: 1, unit: "" },
+      { key: "tab", label: "عرض اللسان", min: 25, max: 75, step: 1, unit: "%" },
+      { key: "gap", label: "المسافة بين الأبواب", min: 8, max: 48, step: 1, unit: "" } ] },
+    { group: "الحركة", fields: [
+      { key: "lift", label: "الارتفاع عند المرور", min: 0, max: 30, step: 1, unit: "" },
+      { key: "tilt", label: "الميل مع المؤشر", min: 0, max: 20, step: 0.5, unit: "°" } ] },
+  ], S, render, replay);
+  render();
+  replay();
+})();
+</script>
+</body>
+</html>
