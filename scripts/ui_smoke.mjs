@@ -147,8 +147,8 @@ try {
       step = `${name}: ${key}`;
       const btns = await page.$$(sel);
       counts[key] = btns.length;
-      // بطاقات الدوّار خلف المواجهة لا تُنقر بالإحداثيات (تعترضها البطاقة الأمامية)، فتُنقر برمجياً كما يفعل النقر نفسه
-      for (const b of btns) { if (key === "sunan") await b.evaluate((el) => el.click()); else await b.click(); await page.waitForTimeout(300); await settle(); }
+      // بطاقات الدوّار والقوس خلف المواجهة لا تُنقر بالإحداثيات (تعترضها البطاقة الأمامية)، فتُنقر برمجياً كما يفعل النقر نفسه
+      for (const b of btns) { if (key === "sunan" || key === "eras") await b.evaluate((el) => el.click()); else await b.click(); await page.waitForTimeout(300); await settle(); }
     }
     const opts = await page.$$eval("#demo-select option", (os) => os.map((o) => o.value).filter(Boolean));
     counts.demo = opts.length;
