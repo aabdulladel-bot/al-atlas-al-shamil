@@ -1,0 +1,458 @@
+{
+ "_meta": {
+  "source": "Wikidata (CC0) عبر wbgetentities",
+  "retrieved_at": "2026-11-10T08:37:02.262323+00:00"
+ },
+ "entities": {
+  "Q11767": {
+   "ar": "بلاد الرافدين",
+   "en": "Mesopotamia",
+   "desc_ar": "منطقة تاريخية يقع معظمها في العراق حاليا",
+   "desc_en": "historical region within the Tigris–Euphrates river system",
+   "aliases_ar": [
+    "ما بين النهرين",
+    "حضارة بلاد الرافدين",
+    "بلاد ما بين النهرين",
+    "ميسوبوتاميا",
+    "بين النهرين",
+    "تاريخ العراق القديم",
+    "وادي الرافدين",
+    "بلاد ما بين الرافدين",
+    "ميزوبوتاميا",
+    "بلاد ما بين النهرين ( آلهة الموت السومرية )",
+    "بلاد النهرين",
+    "دجلة و الفرات"
+   ],
+   "aliases_en": [
+    "ancient Mesopotamia",
+    "Jazeera",
+    "Two Rivers"
+   ],
+   "coords": [
+    43.5,
+    33.7
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "بلاد الرافدين",
+   "enwiki": "Mesopotamia"
+  },
+  "Q123559": {
+   "ar": "الأندلس",
+   "en": "al-Andalus",
+   "desc_ar": "إقليم وحضارة إسلامية قامت في أوروبا الغربية وتحديداً في شبه الجزيرة الأيبيرية على الأراضي التي تشكل اليوم إسبانيا والبرتغال",
+   "desc_en": "Muslim-ruled territories of the Iberian Peninsula (711–1492), encompassing various Islamic states; at its greatest extent occupied most of the peninsula before shrinking through the Reconquista to the Emirate of Granada",
+   "aliases_ar": [
+    "أندلس",
+    "أندلسية",
+    "أندلسي",
+    "إسبانيا الإسلامية",
+    "الاندلس"
+   ],
+   "aliases_en": [
+    "Muslim Spain",
+    "Muslim Iberia",
+    "Islamic Iberia",
+    "Iberian Peninsula under Islamic rule",
+    "Islamic Spain"
+   ],
+   "coords": [
+    -4,
+    37
+   ],
+   "inception": [],
+   "dissolved": [
+    "+1492-01-02T00:00:00Z"
+   ],
+   "arwiki": "الأندلس",
+   "enwiki": "Al-Andalus"
+  },
+  "Q12490507": {
+   "ar": "الخلافة الراشدة",
+   "en": "Rashidun Caliphate",
+   "desc_ar": "دولة إسلامية سابقة، تأسست بالبيعة لأبي بكر الصديق واستمرت ما بين (11 – 41هـ / 632 – 661م)",
+   "desc_en": "first caliphate established after the death of the Islamic prophet Muhammad (632–661)",
+   "aliases_ar": [
+    "دولة الخلافة الراشدة",
+    "دولة الخلفاء الراشدين",
+    "الدولة العربية الإسلامية الأولى"
+   ],
+   "aliases_en": [
+    "al-Khilāfat ar-Rāshidah"
+   ],
+   "coords": null,
+   "inception": [
+    "+0632-06-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0661-07-28T00:00:00Z"
+   ],
+   "arwiki": "الخلافة الراشدة",
+   "enwiki": "Rashidun Caliphate"
+  },
+  "Q12536": {
+   "ar": "الدولة العباسية",
+   "en": "Abbasid Caliphate",
+   "desc_ar": "دولة إسلامية سابقة، أسسها أبو العباس السفاح، واستمرت ما بين (132 – 923هـ / 750 – 1517م)",
+   "desc_en": "third Islamic caliphate (750–1517)",
+   "aliases_ar": [
+    "الخلافة العباسية",
+    "دولة بني العباس"
+   ],
+   "aliases_en": [
+    "Abbasid Empire",
+    "Abbasid period",
+    "Abbasids",
+    "Abbasides"
+   ],
+   "coords": [
+    44.366,
+    33.315
+   ],
+   "inception": [
+    "+0750-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1258-02-10T00:00:00Z"
+   ],
+   "arwiki": "الدولة العباسية",
+   "enwiki": "Abbasid Caliphate"
+  },
+  "Q135028": {
+   "ar": "النوبة",
+   "en": "Nubia",
+   "desc_ar": "منطقة ممتدة على طول نهر النيل في جنوب مصر وشمال السودان",
+   "desc_en": "region along the Nile river, which is located in northern Sudan and southern Egypt",
+   "aliases_ar": [
+    "النوبيون",
+    "بلاد النوبة الشمالية",
+    "نوبيين",
+    "النوبيين",
+    "نوبه",
+    "النوبه",
+    "نوبيّون",
+    "نوبيا",
+    "بلاد النوبة",
+    "نوبي"
+   ],
+   "aliases_en": [],
+   "coords": [
+    32.256,
+    18.951
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "النوبة",
+   "enwiki": "Nubia"
+  },
+  "Q169977": {
+   "ar": "الحجاز",
+   "en": "Hejaz",
+   "desc_ar": "منطقة جغرافية في غرب شبه الجزيرة العربية",
+   "desc_en": "geographic region in western Arabia",
+   "aliases_ar": [
+    "منطقة الحجاز",
+    "حجاز"
+   ],
+   "aliases_en": [
+    "Hijaz"
+   ],
+   "coords": [
+    40.86,
+    23.504
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "الحجاز",
+   "enwiki": "Hejaz"
+  },
+  "Q180114": {
+   "ar": "الدولة الأيوبية",
+   "en": "Ayyubid dynasty",
+   "desc_ar": "دولة إسلامية سابقة، أسسها صلاح الدين الأيوبي واستمرت ما بين (569 – 648هـ / 1174 – 1250م)",
+   "desc_en": "Islamic dynasty from 1171 to 1341",
+   "aliases_ar": [
+    "ايوبيون",
+    "الأيوبي",
+    "أيوبيين",
+    "الأيوبيين",
+    "الحكم الأيوبي",
+    "الأيوبيون",
+    "العصر الأيوبي",
+    "سلطنة أيوبية",
+    "دولة الأيوبيين",
+    "الايوبيين",
+    "دولة أيوبية",
+    "السلطنة الأيوبية"
+   ],
+   "aliases_en": [
+    "Ayyubid Sultanate",
+    "Ayyubid Sultanate of Egypt"
+   ],
+   "coords": null,
+   "inception": [
+    "+1171-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1341-01-01T00:00:00Z"
+   ],
+   "arwiki": "الدولة الأيوبية",
+   "enwiki": "Ayyubid dynasty"
+  },
+  "Q183324": {
+   "ar": "بلاد ما وراء النهر",
+   "en": "Transoxiana",
+   "desc_ar": "منطقة تاريخية تشمل جزء من آسيا الوسطى، أي أوزبكستان وما حولها",
+   "desc_en": "Ancient name used for the portion of Central Asia",
+   "aliases_ar": [
+    "ماوراء النهر"
+   ],
+   "aliases_en": [],
+   "coords": [
+    63.9,
+    42.43
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "بلاد ما وراء النهر",
+   "enwiki": "Transoxiana"
+  },
+  "Q2352322": {
+   "ar": "خراسان الكبرى",
+   "en": "Khorasan",
+   "desc_ar": "المعروفة في التراث الإسلامي بخراسان",
+   "desc_en": "historical region in Asia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Greater Khurasan",
+    "Khurasan",
+    "Ancient Khorasan",
+    "Historical Khorasan",
+    "Greater Khorasan",
+    "Khorasan (historical region)"
+   ],
+   "coords": [
+    62,
+    36
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "خراسان الكبرى",
+   "enwiki": "Khorasan"
+  },
+  "Q28227": {
+   "ar": "المغرب العربي",
+   "en": "Maghreb",
+   "desc_ar": "منطقة في شمال إفريقيا",
+   "desc_en": "part of North Africa",
+   "aliases_ar": [
+    "المغارب",
+    "بلاد المغرب",
+    "المغرب الكبير",
+    "تامزغا",
+    "تامزغة",
+    "بلاد البربر",
+    "المنطقة المغاربية",
+    "ليبيا",
+    "بربرستان"
+   ],
+   "aliases_en": [
+    "The Maghreb",
+    "Barbary",
+    "Berbery"
+   ],
+   "coords": [
+    5,
+    30
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "المغرب العربي",
+   "enwiki": "Maghreb"
+  },
+  "Q282428": {
+   "ar": "الدولة المملوكية",
+   "en": "Mamluk Sultanate of Egypt",
+   "desc_ar": "دولة إسلامية سابقة (648 – 923هـ / 1250 – 1517م)",
+   "desc_en": "Egyptian state spanning in Hejaz and the Levant (1250–1517)",
+   "aliases_ar": [
+    "الدولة المماليكية",
+    "دولة المماليك المصرية",
+    "سلطنة المماليك في مصر",
+    "السلطنة المصرية",
+    "السلطنة المملوكية المصرية",
+    "السلطنة المصرية المملوكية"
+   ],
+   "aliases_en": [
+    "Egyptian Mamluk Empire",
+    "Egyptian Mamluk Sultanate"
+   ],
+   "coords": [
+    31.367,
+    30.083
+   ],
+   "inception": [
+    "+1250-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1517-00-00T00:00:00Z"
+   ],
+   "arwiki": "الدولة المملوكية",
+   "enwiki": "Mamluk Sultanate"
+  },
+  "Q3708094": {
+   "ar": "الدولة السلجوقية",
+   "en": "Seljuk Empire",
+   "desc_ar": "دولة إسلامية سابقة، أسسها طغرل بك واستمرت ما بين (429 – 590هـ / 1037 – 1194م)",
+   "desc_en": "Turco-Persian Sunni Muslim empire (1037–1194)",
+   "aliases_ar": [
+    "دولة بني سلجوق",
+    "دولة السَّلاجقة العظام",
+    "الإمبراطورية السلجوقية",
+    "آل سلجوق",
+    "الإمبراطورية السلجوقية الكبرى"
+   ],
+   "aliases_en": [
+    "Great Seljuk Empire",
+    "Saljuqid Empire",
+    "Seljukid Empire",
+    "Saljuq Empire",
+    "Seljuk Sultanate"
+   ],
+   "coords": [
+    58.8,
+    36.2
+   ],
+   "inception": [
+    "+1037-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1194-03-19T00:00:00Z"
+   ],
+   "arwiki": "الدولة السلجوقية",
+   "enwiki": "Seljuk Empire"
+  },
+  "Q484195": {
+   "ar": "الدولة التيمورية",
+   "en": "Timurid Empire",
+   "desc_ar": "سلالة تركمانية حكمت في بلاد ماوراء النهرين",
+   "desc_en": "Central Asian Persianate Turco-Mongol empire (1370–1507)",
+   "aliases_ar": [
+    "التيموريون",
+    "التيموريين"
+   ],
+   "aliases_en": [
+    "Timurid empire",
+    "Gurkani"
+   ],
+   "coords": [
+    62.203,
+    34.341
+   ],
+   "inception": [
+    "+1370-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1507-00-00T00:00:00Z"
+   ],
+   "arwiki": "الدولة التيمورية",
+   "enwiki": "Timurid Empire"
+  },
+  "Q51614": {
+   "ar": "الأناضول",
+   "en": "Anatolia",
+   "desc_ar": "شبه جزيرة في تركيا",
+   "desc_en": "peninsula in Western Asia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Asian Turkey",
+    "Anatolian Peninsula",
+    "Asia Minor",
+    "Anadolu",
+    "Asiatic Turkey",
+    "Natolia",
+    "Turkey in Asia"
+   ],
+   "coords": [
+    35,
+    39
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "الأناضول",
+   "enwiki": "Anatolia"
+  },
+  "Q55502": {
+   "ar": "مملكة بيت المقدس",
+   "en": "Kingdom of Jerusalem",
+   "desc_ar": "مملكة مسيحية في الشرق الأوسط خلال فترة العصور الوسطى",
+   "desc_en": "medieval Christian kingdom in the Middle East",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Latin Kingdom of Jerusalem",
+    "Jerusalem",
+    "Crusader Kingdom"
+   ],
+   "coords": null,
+   "inception": [
+    "+1099-07-15T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1291-05-18T00:00:00Z"
+   ],
+   "arwiki": "مملكة بيت المقدس",
+   "enwiki": "Kingdom of Jerusalem"
+  },
+  "Q75613": {
+   "ar": "الدولة المرابطية",
+   "en": "Almoravid dynasty",
+   "desc_ar": "سلالة إسلامية أمازيغية حكمت بلاد المغرب والأندلس",
+   "desc_en": "Berber dynasty that once ruled over Al-Andalus and Maghreb",
+   "aliases_ar": [
+    "دولة المرابطين",
+    "سلالة المرابطين",
+    "مرابطون",
+    "المرابطين",
+    "سلالة المرابطون",
+    "مرابطين"
+   ],
+   "aliases_en": [
+    "Almoravids",
+    "Almoravid Empire",
+    "Almoravides",
+    "Almoravid Emirate"
+   ],
+   "coords": null,
+   "inception": [
+    "+1040-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1147-01-01T00:00:00Z"
+   ],
+   "arwiki": "الدولة المرابطية",
+   "enwiki": "Almoravid dynasty"
+  },
+  "Q81483": {
+   "ar": "الشام",
+   "en": "Levant",
+   "desc_ar": "منطقة جغرافية وثقافية تتكون من شرق البحر الأبيض المتوسط بين الأناضول وشبه جزيرة سيناء",
+   "desc_en": "geographic and cultural region consisting of the eastern Mediterranean between Anatolia and the Sinai Peninsula",
+   "aliases_ar": [
+    "سوريا الطبيعية",
+    "شرق المتوسط",
+    "سوريا القديمة"
+   ],
+   "aliases_en": [
+    "Eastern Mediterranean"
+   ],
+   "coords": [
+    36,
+    34
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "المشرق (الشرق الأدنى)",
+   "enwiki": "Levant"
+  }
+ }
+}

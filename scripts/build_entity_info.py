@@ -9,6 +9,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "web/data/names/entity_info.json"
+# الأقاليم التاريخية والكيانات الغائبة عن الخرائط، للبحث (fetch_wikidata_extras.py)
+EXTRAS_RAW = ROOT / "data/raw/wikidata/search_extras.json"
+EXTRAS_CFG = ROOT / "scripts/config/search_extras.json"
+EXTRAS_OUT = ROOT / "web/data/names/search_extras.json"
 spec = importlib.util.spec_from_file_location("wt", ROOT / "scripts/wikidata_titles.py")
 wt = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(wt)
@@ -39,6 +43,10 @@ def build():
         for k_out, k_in in (("d_ar", "desc_ar"), ("d_en", "desc_en"), ("arwiki", "arwiki"), ("enwiki", "enwiki")):
             if e.get(k_in):
                 rec[k_out] = e[k_in]
+        # الأسماء البديلة للبحث وحده (لا تُعرض): العربية، ثم الإنجليزية
+        al = [a for a in (e.get("aliases_ar") or []) if a and a != e.get("ar")] + (e.get("aliases_en") or [])[:4]
+        if al:
+            rec["al"] = al
         if set(types) & set(groupings["types"]):
             rec["g"] = 1
         if t.get("identity_override"):
@@ -55,14 +63,63 @@ def build():
     }
 
 
+def wd_year(t):
+    try:
+        y = int(t[1:].split("-")[0])
+    except (ValueError, IndexError):
+        return None
+    return -y if t.startswith("-") else y
+
+
+def build_extras():
+    if not EXTRAS_RAW.exists():
+        return {"regions": [], "absent": []}
+    ents = json.loads(EXTRAS_RAW.read_text(encoding="utf-8"))["entities"]
+    cfg = json.loads(EXTRAS_CFG.read_text(encoding="utf-8"))
+
+    def base(q):
+        e = ents[q]
+        rec = {"q": q, "ar": e["ar"] or e["en"], "en": e["en"]}
+        for k_out, k_in in (("d_ar", "desc_ar"), ("d_en", "desc_en"), ("arwiki", "arwiki"), ("enwiki", "enwiki")):
+            if e.get(k_in):
+                rec[k_out] = e[k_in]
+        al = [a for a in e.get("aliases_ar") or [] if a != e["ar"]] + (e.get("aliases_en") or [])[:4]
+        if al:
+            rec["al"] = al
+        return rec
+
+    regions = []
+    for r in cfg["regions"]:
+        e = ents.get(r["qid"])
+        if not e or not e.get("coords"):
+            raise SystemExit(f"الإقليم {r['qid']} بلا إحداثيات في ويكي بيانات: يُحذف من scripts/config/search_extras.json أو يُعاد الجلب")
+        regions.append({**base(r["qid"]), "coords": e["coords"], "zoom": r.get("zoom", 4.6)})
+    absent = []
+    for a in cfg["absent"]:
+        e = ents.get(a["qid"])
+        if not e:
+            raise SystemExit(f"الكيان {a['qid']} بلا بيانات: أعد الجلب")
+        inc = [y for y in map(wd_year, e["inception"]) if y is not None]
+        dis = [y for y in map(wd_year, e["dissolved"]) if y is not None]
+        absent.append({**base(a["qid"]), "from": min(inc) if inc else None, "to": max(dis) if dis else None})
+    return {"_meta": {"source": "Wikidata (CC0)، بمستخلص data/raw/wikidata/search_extras.json والقائمة في scripts/config/search_extras.json",
+                      "note": "أقاليم تاريخية ليست كيانات في الخرائط، وكيانات غائبة عن خرائط الأطلس، للبحث وحده."},
+            "regions": regions, "absent": absent}
+
+
 def main():
     text = json.dumps(build(), ensure_ascii=False, separators=(",", ":")) + "\n"
+    extras = json.dumps(build_extras(), ensure_ascii=False, separators=(",", ":")) + "\n"
     if "--check" in sys.argv:
         if not OUT.exists() or OUT.read_text(encoding="utf-8") != text:
             raise SystemExit("web/data/names/entity_info.json لا يطابق مولّده: شغّل npm run build:entities")
-        print("البطاقة التعريفية: مطابقة")
+        if EXTRAS_RAW.exists() and (not EXTRAS_OUT.exists() or EXTRAS_OUT.read_text(encoding="utf-8") != extras):
+            raise SystemExit("web/data/names/search_extras.json لا يطابق مولّده: شغّل npm run build:entities")
+        print("البطاقة التعريفية وإضافات البحث: مطابقة")
         return
     OUT.write_text(text, encoding="utf-8")
+    if EXTRAS_RAW.exists():
+        EXTRAS_OUT.write_text(extras, encoding="utf-8")
     d = json.loads(text)
     print(json.dumps({"كيانات بوصف": len(d["entities"]), "أنواع": len(d["types"]),
                       "بوصف عربي": sum(1 for v in d["entities"].values() if "d_ar" in v),

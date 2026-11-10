@@ -1563,17 +1563,43 @@
       "attribution": "Wikidata (CC0): وصف كيانات Historical Basemaps ونوعها للبطاقة التعريفية",
       "note": "التسمية والوصف (عربي وإنجليزي) والنوع P31 وتاريخا النشأة والزوال وعنوانا مقالتي ويكيبيديا، لـ 310 معرّفات، مع تصحيحات scripts/config/hb_qid_overrides.json.",
       "status": "ok",
-      "retrieved_at": "2026-11-09T10:50:12.041865+00:00",
-      "sha256": "91940004f6a1300b7460ea057ce194a062301050dee0ddc235ef4cdc43723961",
-      "bytes": 128545,
+      "retrieved_at": "2026-11-10T09:00:56.621768+00:00",
+      "sha256": "3b3695e5eaac0a189a7762912ce94bd729f7f46f28e87ccd22e6d70f027e44b5",
+      "bytes": 174314,
       "files": [
         {
           "file": "data/raw/wikidata/hb_entities.json",
-          "sha256": "91940004f6a1300b7460ea057ce194a062301050dee0ddc235ef4cdc43723961",
-          "bytes": 128545
+          "sha256": "3b3695e5eaac0a189a7762912ce94bd729f7f46f28e87ccd22e6d70f027e44b5",
+          "bytes": 174314
         }
       ],
       "license_verified_at": "2026-11-09",
+      "license_evidence": {
+        "url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+        "quote": "All data in Wikidata has a CC0 license."
+      }
+    },
+    {
+      "id": "wikidata-search-extras",
+      "file": "data/raw/wikidata/search_extras.json",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData (scripts/fetch_wikidata_extras.py)",
+      "license": "CC0 1.0 (Wikidata)",
+      "tier": "A",
+      "landing": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "attribution": "Wikidata (CC0): أقاليم تاريخية وكيانات غائبة عن خرائط الأطلس، للبحث",
+      "note": "9 أقاليم و8 كيانات، معرّفاتها في scripts/config/search_extras.json، اختيرت بعناوين مقالات ويكيبيديا الإنجليزية وروجعت تسمياتها وأوصافها.",
+      "status": "ok",
+      "retrieved_at": "2026-11-10T08:37:02.262323+00:00",
+      "sha256": "c70d591910a77d8429c550290abb08f73fb7b5a595840cb42bf9970297b4def2",
+      "bytes": 12498,
+      "files": [
+        {
+          "file": "data/raw/wikidata/search_extras.json",
+          "sha256": "c70d591910a77d8429c550290abb08f73fb7b5a595840cb42bf9970297b4def2",
+          "bytes": 12498
+        }
+      ],
+      "license_verified_at": "2026-11-10",
       "license_evidence": {
         "url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
         "quote": "All data in Wikidata has a CC0 license."
