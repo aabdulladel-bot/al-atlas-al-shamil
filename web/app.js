@@ -2122,12 +2122,12 @@ function renderSunna(s, placesLinked) {
 }
 function clearSunna() {
   activeSunna = null;
-  for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", "false");
+  sunanRing?.show(null);
   writeHash();
 }
 async function selectSunna(s) {
   if (typeof passportNote === "function") passportNote("sunna", s.id);
-  for (const b of sunanListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.sunna === s.id));
+  sunanRing?.show(s.id); // يدوّر الدوّار إلى السُّنّة، ويضبط aria-pressed
   const ids = [...s.supporting, ...s.limiting].filter((x) => x.id).map((x) => x.id);
   activeSunna = { id: s.id, ids };
   writeHash();
@@ -2142,6 +2142,122 @@ async function selectSunna(s) {
   }
   renderSunna(s, linked.length > 0);
 }
+// دوّار السنن: بطاقات على أسطوانة تدوّرها اليد أو الأسهم، والسُّنّة المواجهة هي المختارة.
+// كل تفاعل يمرّ على onPick نفسه الذي كان يستدعيه زرّ السُّنّة، فلا يتكرر المنطق.
+let sunanRing = null;
+const strengthKind = (s) => (s.includes("متعددة") ? "m" : s.includes("قليلة") ? "f" : "n");
+function buildSunanRing(list, sunnas, onPick) {
+  const rot = document.createElement("div");
+  rot.className = "sunan-rot";
+  list.appendChild(rot);
+  const n = sunnas.length, step = 360 / n;
+  const cards = sunnas.map((s, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "sunan-card";
+    b.title = s.name;
+    b.dataset.sunna = s.id;
+    b.setAttribute("aria-pressed", "false");
+    b.innerHTML =
+      `<span class="sc-name">${escapeHtml(s.name.replace("سُنّة ", ""))}</span>` +
+      `<span class="sc-hyp">${escapeHtml(s.hypothesis)}</span>` +
+      `<span class="sc-st"><i class="sc-dot ${strengthKind(s.strength)}"></i>${escapeHtml(s.strength)} · ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>`;
+    b.addEventListener("click", () => { if (!dragMoved) onPick(s, "click"); });
+    rot.appendChild(b);
+    return b;
+  });
+  let angle = 0, target = 0, raf = 0, activeIdx = -1, radius = 190, dragMoved = false, drag = null;
+
+  // كل بطاقة تحمل تحويلها الكامل، فلا سياق ثلاثي متداخل يُفسد الترتيب؛ وترتيب الطبقات من درجة المواجهة
+  function render() {
+    cards.forEach((b, i) => {
+      const a = angle + i * step;
+      const rel = (((a % 360) + 360) % 360);
+      const facing = Math.cos((rel * Math.PI) / 180); // 1 مواجهة، و-1 في الخلف
+      b.style.transform = `translate(-50%, -50%) rotateX(-6deg) rotateY(${a}deg) translateZ(${radius}px)`;
+      b.style.zIndex = String(Math.round(100 * facing) + 200);
+      b.style.opacity = String(facing < -0.35 ? 0 : 0.3 + 0.7 * Math.max(0, facing));
+      b.style.pointerEvents = facing > -0.2 ? "auto" : "none";
+    });
+  }
+  function layout() {
+    const w = list.clientWidth;
+    if (w < 120) return; // مطويّة: تُحسب عند ظهورها (ResizeObserver)
+    // نصف قطر يُبقي الجيران الحاليين داخل الإطار فيُنقرون، والبطاقة المواجهة تبقى مقروءة
+    radius = Math.round(Math.min(200, w * 0.44));
+    list.style.setProperty("--sr", `${radius}px`);
+    list.style.setProperty("--sw", `${Math.round(Math.min(176, w * 0.46))}px`);
+    render();
+  }
+  function tick() {
+    const d = target - angle;
+    if (Math.abs(d) < 0.05) { angle = target; render(); raf = 0; return; }
+    angle += d * 0.14;
+    render();
+    raf = requestAnimationFrame(tick);
+  }
+  // أقصر طريق إلى الزاوية المطلوبة، ثم انزلاق ناعم (أو قفزة عند تقليل الحركة)
+  function rotateTo(i) {
+    let t = -i * step;
+    while (t - angle > 180) t -= 360;
+    while (t - angle < -180) t += 360;
+    target = t;
+    if (reduceMotion) { angle = t; render(); return; }
+    if (!raf) raf = requestAnimationFrame(tick);
+  }
+  function show(id) {
+    activeIdx = id ? sunnas.findIndex((s) => s.id === id) : -1;
+    cards.forEach((b, i) => {
+      b.setAttribute("aria-pressed", String(i === activeIdx));
+      b.classList.toggle("on", i === activeIdx);
+      b.tabIndex = i === Math.max(activeIdx, 0) ? 0 : -1;
+    });
+    if (activeIdx >= 0) rotateTo(activeIdx);
+  }
+
+  list.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0) return;
+    cancelAnimationFrame(raf); raf = 0;
+    dragMoved = false;
+    drag = { x0: e.clientX, a0: angle, x: e.clientX, t: performance.now(), v: 0, id: e.pointerId };
+  });
+  list.addEventListener("pointermove", (e) => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x0;
+    if (!dragMoved && Math.abs(dx) > 6) { dragMoved = true; list.setPointerCapture(e.pointerId); list.classList.add("drag"); }
+    if (!dragMoved) return;
+    angle = target = drag.a0 + dx * 0.3;
+    const now = performance.now();
+    drag.v = (e.clientX - drag.x) / Math.max(1, now - drag.t);
+    drag.x = e.clientX; drag.t = now;
+    render();
+  });
+  const endDrag = () => {
+    if (!drag) return;
+    const moved = dragMoved, v = drag.v;
+    drag = null;
+    list.classList.remove("drag");
+    if (!moved) return;
+    // يستقر الدوّار على السُّنّة الأقرب بعد زخم الرمية
+    const thrown = angle + v * 260;
+    const i = (((Math.round(-thrown / step)) % n) + n) % n;
+    onPick(sunnas[i], "focus");
+  };
+  list.addEventListener("pointerup", endDrag);
+  list.addEventListener("pointercancel", () => { drag = null; list.classList.remove("drag"); });
+  list.addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+    e.preventDefault();
+    const cur = cards.indexOf(document.activeElement);
+    const base = cur >= 0 ? cur : Math.max(activeIdx, 0);
+    const next = (base + (e.key === "ArrowLeft" ? 1 : -1) + n) % n;
+    cards[next].focus({ preventScroll: true });
+    onPick(sunnas[next], "focus");
+  });
+  if (window.ResizeObserver) new ResizeObserver(layout).observe(list);
+  else layout();
+  return { show };
+}
 function loadSunan() {
   sunanReady ??= loadSunanNow();
   return sunanReady;
@@ -2153,19 +2269,13 @@ async function loadSunanNow() {
     for (const c of s.limiting) if (c.id) { const r = claimSunnaRoles.get(c.id) ?? { sup: [], lim: [] }; r.lim.push(s.id); claimSunnaRoles.set(c.id, r); }
     for (const c of s.supporting) if (c.id) claimRoles.set(c.id, [...(claimRoles.get(c.id) ?? []), { name: s.name, role: "support" }]);
     for (const c of s.limiting) if (c.id) claimRoles.set(c.id, [...(claimRoles.get(c.id) ?? []), { name: s.name, role: "limit" }]);
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.textContent = s.name.replace("سُنّة ", "");
-    btn.title = s.name;
-    btn.dataset.sunna = s.id;
-    btn.setAttribute("aria-pressed", "false");
-    // الضغط على السُّنّة المختارة يلغي اختيارها ويعيد أماكن الشواهد إلى حقبة الزمن الحالي
-    btn.addEventListener("click", () => {
-      if (activeSunna?.id === s.id) { clearSunna(); showClaimPoints(false); sunanDetailEl.textContent = ""; return; }
-      selectSunna(s);
-    });
-    sunanListEl.appendChild(btn);
   }
+  sunanRing = buildSunanRing(sunanListEl, sunanData.sunan, (s, how) => {
+    // الضغط على السُّنّة المختارة يلغي اختيارها ويعيد أماكن الشواهد إلى حقبة الزمن الحالي
+    if (how === "click" && activeSunna?.id === s.id) { clearSunna(); showClaimPoints(false); sunanDetailEl.textContent = ""; return; }
+    if (activeSunna?.id === s.id) { sunanRing.show(s.id); return; }
+    selectSunna(s);
+  });
 }
 
 map.on("load", () => { loadSunan(); });
