@@ -147,7 +147,8 @@ try {
       step = `${name}: ${key}`;
       const btns = await page.$$(sel);
       counts[key] = btns.length;
-      for (const b of btns) { await b.click(); await page.waitForTimeout(300); await settle(); }
+      // بطاقات الدوّار خلف المواجهة لا تُنقر بالإحداثيات (تعترضها البطاقة الأمامية)، فتُنقر برمجياً كما يفعل النقر نفسه
+      for (const b of btns) { if (key === "sunan") await b.evaluate((el) => el.click()); else await b.click(); await page.waitForTimeout(300); await settle(); }
     }
     const opts = await page.$$eval("#demo-select option", (os) => os.map((o) => o.value).filter(Boolean));
     counts.demo = opts.length;
@@ -324,7 +325,7 @@ try {
     // لكل سُنّة رحلة، وزرّها في تفاصيل السُّنّة يبدؤها
     counts.journeys = await page.$$eval("#journey-list button", (b) => b.length);
     await page.evaluate(() => { clearSunna(); document.getElementById("sunan-list").closest("details").open = true; });
-    await page.click('#sunan-list button[data-sunna="sn_luxury"]');
+    await page.$eval('#sunan-list button[data-sunna="sn_luxury"]', (el) => el.click());
     await page.waitForSelector("#sunan-detail [data-start-journey]", { timeout: 30000 });
     // لغة الطبقات: أماكن الشواهد بدورها في السُّنّة المختارة، والمفتاح الحيّ يذكر الأدوار، والمواقع رموز بحسب نوعها
     await page.waitForFunction(() => document.getElementById("legend-body").textContent.includes("مقيِّد"), null, { timeout: 10000 }).catch(() => {});

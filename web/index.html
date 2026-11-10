@@ -265,6 +265,21 @@
     .row { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
     .row button, .mode button { font: inherit; font-size: 13px; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
     .row button[aria-pressed="true"], .mode button[aria-pressed="true"] { background: var(--accent); color: var(--panel); }
+    /* دوّار السنن: بطاقات على أسطوانة، والمواجهة هي المختارة (ينظر buildSunanRing في app.js) */
+    #sunan-list.sunan-ring { position: relative; height: 196px; margin: 6px -4px 2px; overflow: hidden; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+    #sunan-list.sunan-ring.drag { cursor: grabbing; }
+    #sunan-list .sunan-rot { position: absolute; inset: 0; perspective: 900px; perspective-origin: 50% 40%; }
+    #sunan-list .sunan-card { position: absolute; left: 50%; top: 50%; width: var(--sw, 160px); height: 150px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; padding: 11px 12px; margin: 0; border-radius: 14px; border: 1px solid var(--line); background: linear-gradient(165deg, #16244A, #0B1430); color: var(--ink); font: inherit; text-align: start; cursor: pointer; backface-visibility: hidden; box-shadow: 0 12px 26px rgba(0, 0, 0, .35); transition: box-shadow .3s, border-color .3s; }
+    #sunan-list .sunan-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    #sunan-list .sunan-card.on { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent), 0 16px 34px rgba(0, 0, 0, .45); }
+    #sunan-list .sc-name { font-weight: 700; font-size: 13px; line-height: 1.5; }
+    #sunan-list .sc-hyp { font-size: 11px; line-height: 1.7; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    #sunan-list .sc-st { margin-top: auto; font-size: 10px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+    #sunan-list .sc-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); flex: none; }
+    #sunan-list .sc-dot.m { background: #5BD6A2; }
+    #sunan-list .sc-dot.f { background: var(--accent); }
+    #sunan-list .sc-dot.n { background: #E07A6A; }
+    @media (prefers-reduced-motion: reduce) { #sunan-list .sunan-card { transition: none; } }
     .mode { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
     select { font: inherit; font-size: 14px; padding: 6px; border-radius: 6px; border: 1px solid var(--accent); background: var(--panel); color: var(--ink); width: 100%; }
     .warn { color: var(--accent); font-weight: 600; }
@@ -663,8 +678,8 @@
 
     <details class="section" open>
       <summary>السنن</summary>
-      <p>اختر سُنّة لترى نص ابن خلدون وشواهدها، وأماكن الشواهد على الخريطة.</p>
-      <div class="row" id="sunan-list"></div>
+      <p>اسحب الدوّار، أو اضغط سُنّة، لترى نص ابن خلدون وشواهدها، وأماكن الشواهد على الخريطة.</p>
+      <div id="sunan-list" class="sunan-ring" role="group" aria-label="سنن ابن خلدون"></div>
       <div id="sunan-detail" class="card"></div>
     </details>
 
