@@ -1,7 +1,7 @@
 {
  "_meta": {
   "source": "Wikidata (CC0) عبر wbgetentities",
-  "retrieved_at": "2026-11-09T10:50:12.041865+00:00",
+  "retrieved_at": "2026-11-10T09:00:56.621768+00:00",
   "note": "مستخلص للبطاقة التعريفية: لا يُحفظ من ويكي بيانات إلا الحقول المذكورة في fetch_wikidata_entities.py"
  },
  "entities": {
@@ -10,6 +10,18 @@
    "en": "Gabon",
    "desc_ar": "دولة في غرب وسط أفريقيا",
    "desc_en": "country on the Atlantic coast of Central Africa",
+   "aliases_ar": [
+    "الجابون",
+    "الجمهورية الغابونية",
+    "جمهورية الغابون"
+   ],
+   "aliases_en": [
+    "Gabonese Republic",
+    "République Gabonaise",
+    "ga",
+    "Republique Gabonaise",
+    "GAB"
+   ],
    "p31": [
     "Q6256",
     "Q3624078",
@@ -27,6 +39,15 @@
    "en": "Guinea",
    "desc_ar": "دولة في غرب أفريقيا",
    "desc_en": "sovereign state in West Africa",
+   "aliases_ar": [
+    "جمهورية غينيا"
+   ],
+   "aliases_en": [
+    "Guinea-Conakry",
+    "Republic of Guinea",
+    "gn",
+    "GUI"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -43,6 +64,21 @@
    "en": "Ivory Coast",
    "desc_ar": "دولة في غرب أفريقيا",
    "desc_en": "sovereign state in West Africa",
+   "aliases_ar": [
+    "كوت ديفوار",
+    "جمهورية ساحل العاج",
+    "جمهورية كوت ديفوار"
+   ],
+   "aliases_en": [
+    "Republic of Côte d'Ivoire",
+    "ci",
+    "Cote d'Ivoire",
+    "Republic of Cote d'Ivoire",
+    "Côte-d'Ivoire",
+    "Cote d'lvoire",
+    "Cote Ivoire",
+    "Republic of Ivory Coast"
+   ],
    "p31": [
     "Q3624078",
     "Q7270",
@@ -60,6 +96,10 @@
    "en": "Mysore",
    "desc_ar": "مدينة في جنوب الهند",
    "desc_en": "city in Karnataka, India",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Mysuru"
+   ],
    "p31": [
     "Q515",
     "Q1549591"
@@ -74,6 +114,14 @@
    "en": "Cameroon",
    "desc_ar": "دولة في وسط إفريقيا غربا",
    "desc_en": "sovereign state in West-Central Africa",
+   "aliases_ar": [
+    "جمهورية الكمرون",
+    "كمرون",
+    "جمهورية الكاميرون"
+   ],
+   "aliases_en": [
+    "Republic of Cameroon"
+   ],
    "p31": [
     "Q6256",
     "Q7270",
@@ -91,6 +139,21 @@
    "en": "Libya",
    "desc_ar": "دولة في شمال إفريقيا",
    "desc_en": "sovereign state in North Africa",
+   "aliases_ar": [
+    "ليبية",
+    "ليبي",
+    "ليببيا",
+    "الليبية",
+    "الليبي",
+    "الليبين",
+    "الجمهورية الليبية",
+    "دولة ليبيا"
+   ],
+   "aliases_en": [
+    "State of Libya",
+    "ly",
+    "LBA"
+   ],
    "p31": [
     "Q3624078",
     "Q51576574",
@@ -111,6 +174,15 @@
    "en": "Madagascar",
    "desc_ar": "دولة جزرية في جنوب شرق أفريقيا بالمحيط الهندي",
    "desc_en": "island sovereign state off the coast of Southeast Africa, in the Indian Ocean",
+   "aliases_ar": [
+    "ملجاش"
+   ],
+   "aliases_en": [
+    "mg",
+    "Republic of Madagascar",
+    "Malagaskar",
+    "Malagascar"
+   ],
    "p31": [
     "Q3624078",
     "Q112099",
@@ -129,6 +201,15 @@
    "en": "Malawi",
    "desc_ar": "دولة في جنوب شرق أفريقيا",
    "desc_en": "sovereign state in Africa",
+   "aliases_ar": [
+    "جمهورية مالاوي",
+    "مالاوي"
+   ],
+   "aliases_en": [
+    "Republic of Malawi",
+    "mw",
+    "MAW"
+   ],
    "p31": [
     "Q7270",
     "Q3624078",
@@ -147,6 +228,13 @@
    "en": "Apache",
    "desc_ar": null,
    "desc_en": "several culturally related groups of indigenous peoples of the United States",
+   "aliases_ar": [
+    "اباتشي"
+   ],
+   "aliases_en": [
+    "Apache tribe",
+    "Apaches"
+   ],
    "p31": [
     "Q103817",
     "Q41710"
@@ -161,6 +249,20 @@
    "en": "Mauritania",
    "desc_ar": "دولة عربية في شمال غرب أفريقيا",
    "desc_en": "sovereign state in West Africa and North Africa",
+   "aliases_ar": [
+    "الجمهورية الإسلامية الموريتانية",
+    "🇲🇷"
+   ],
+   "aliases_en": [
+    "Islamic Republic of Mauritania",
+    "Muritanya",
+    "Agawej",
+    "Gànnaar",
+    "Murutaane",
+    "Moritani",
+    "mr",
+    "Gannaar"
+   ],
    "p31": [
     "Q672729",
     "Q3624078",
@@ -178,6 +280,16 @@
    "en": "Morocco",
    "desc_ar": "دولة في شمال إفريقيا",
    "desc_en": "sovereign state in North Africa",
+   "aliases_ar": [
+    "المملكة المغربية"
+   ],
+   "aliases_en": [
+    "Kingdom of Morocco",
+    "Marocco",
+    "al-Maġrib",
+    "Lmaġrib",
+    "Maroc"
+   ],
    "p31": [
     "Q41614",
     "Q3624078",
@@ -200,6 +312,13 @@
    "en": "Mozambique",
    "desc_ar": "دولة في جنوب شرق أفريقيا",
    "desc_en": "country in Southeastern Africa; the current form of Mozambique since 1975",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Moçambique",
+    "República de Moçambique",
+    "mz",
+    "Republic of Mozambique"
+   ],
    "p31": [
     "Q7270",
     "Q3624078",
@@ -217,6 +336,14 @@
    "en": "Namibia",
    "desc_ar": "دولة في جنوب غرب أفريقيا",
    "desc_en": "country in Southern Africa",
+   "aliases_ar": [
+    "نامبيا",
+    "ناميبي"
+   ],
+   "aliases_en": [
+    "Republic of Namibia",
+    "na"
+   ],
    "p31": [
     "Q7270",
     "Q3624078",
@@ -234,6 +361,21 @@
    "en": "Niger",
    "desc_ar": "دولة في غرب أفريقيا",
    "desc_en": "sovereign state in western Africa",
+   "aliases_ar": [
+    "منطقة حضارية نيامي",
+    "نيجر",
+    "قائمة جزر النيجر",
+    "زندر",
+    "عاصمة النيجر",
+    "جمهورية النيجر"
+   ],
+   "aliases_en": [
+    "Republic of Niger",
+    "Republic Niger",
+    "ne",
+    "The Niger",
+    "Republic of the Niger"
+   ],
    "p31": [
     "Q7270",
     "Q3624078",
@@ -252,6 +394,13 @@
    "en": "Nigeria",
    "desc_ar": "دولة في غرب إفريقيا",
    "desc_en": "sovereign state in West Africa",
+   "aliases_ar": [
+    "جمهورية نيجيريا الاتحادية"
+   ],
+   "aliases_en": [
+    "Federal Republic of Nigeria",
+    "Naija"
+   ],
    "p31": [
     "Q3624078",
     "Q512187",
@@ -269,6 +418,18 @@
    "en": "Uganda",
    "desc_ar": "دولة في شرق أفريقيا",
    "desc_en": "country in East Africa",
+   "aliases_ar": [
+    "جمهورية أوغندا"
+   ],
+   "aliases_en": [
+    "Republic of Uganda",
+    "ug",
+    "The Republic of Uganda",
+    "Ugandah",
+    "+256",
+    "Ouganda",
+    "Pearl of Africa"
+   ],
    "p31": [
     "Q3624078",
     "Q7270",
@@ -287,6 +448,18 @@
    "en": "Senegal",
    "desc_ar": "دولة في غرب أفريقيا",
    "desc_en": "country on the coast of West Africa",
+   "aliases_ar": [
+    "سينيغال",
+    "سنغال",
+    "سنغالي",
+    "السينغال",
+    "السنيغال",
+    "السينيغال",
+    "جمهورية السنغال"
+   ],
+   "aliases_en": [
+    "Republic of Senegal"
+   ],
    "p31": [
     "Q3624078",
     "Q7270",
@@ -305,6 +478,14 @@
    "en": "Somalia",
    "desc_ar": "دولة في شرق أفريقيا",
    "desc_en": "sovereign state in Africa",
+   "aliases_ar": [
+    "صومال",
+    "جمهورية الصومال",
+    "جمهورية الصومال الديموقراطية"
+   ],
+   "aliases_en": [
+    "Federal Republic of Somalia"
+   ],
    "p31": [
     "Q7270",
     "Q3624078",
@@ -323,6 +504,19 @@
    "en": "Sudan",
    "desc_ar": "دولة عربية تقع في شمال شرق إفريقيا",
    "desc_en": "country in Northeast Africa",
+   "aliases_ar": [
+    "جمهورية السودان"
+   ],
+   "aliases_en": [
+    "Republic of the Sudan",
+    "as-Sūdān",
+    "sd",
+    "North Sudan",
+    "the Sudan",
+    "Republic of Sudan",
+    "SUD",
+    "Soudan"
+   ],
    "p31": [
     "Q7270",
     "Q3624078",
@@ -341,6 +535,8 @@
    "en": "Kingdom of Kashmir",
    "desc_ar": null,
    "desc_en": null,
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [],
    "inception": [],
    "dissolved": [],
@@ -352,6 +548,15 @@
    "en": "Potawatomi",
    "desc_ar": null,
    "desc_en": "Native American people of the Great Plains",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Neshnabé",
+    "Bodéwadme",
+    "Pottawatomi",
+    "Pottawatomie",
+    "Pottowatomies",
+    "Potawatomi people"
+   ],
    "p31": [
     "Q41710",
     "Q36747"
@@ -366,6 +571,10 @@
    "en": "Neustria",
    "desc_ar": null,
    "desc_en": "western part of the Kingdom of the Franks",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Neustrasia"
+   ],
    "p31": [
     "Q3024240"
    ],
@@ -384,6 +593,11 @@
    "en": "Chiricahua",
    "desc_ar": null,
    "desc_en": "band of Apache Native Americans",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Mimbreno",
+    "Chiricahua Apache"
+   ],
    "p31": [
     "Q102090",
     "Q36747"
@@ -398,6 +612,8 @@
    "en": "Kush",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -411,6 +627,8 @@
    "en": "Bulgars",
    "desc_ar": "تحالف قَبَلي تركي بائد",
    "desc_en": "extinct Turkic tribal confederation",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4204501"
    ],
@@ -424,6 +642,11 @@
    "en": "Kenya",
    "desc_ar": "دولة في شرق أفريقيا",
    "desc_en": "country in Eastern Africa",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Republic of Kenya",
+    "ke"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -440,6 +663,8 @@
    "en": "Enets",
    "desc_ar": null,
    "desc_en": "Uralic ethnic group",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q41710"
    ],
@@ -453,6 +678,14 @@
    "en": "Ethiopia",
    "desc_ar": "دولة في شرق إفريقيا",
    "desc_en": "country in the Horn of Africa",
+   "aliases_ar": [
+    "الجمهورية الفدرالية الديمقراطية لإثيوبيا",
+    "جمهورية إثيوبيا الفيدرالية الديمقراطية"
+   ],
+   "aliases_en": [
+    "Federal Democratic Republic of Ethiopia",
+    "et"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -472,6 +705,10 @@
    "en": "Ghana",
    "desc_ar": "دولة في غرب أفريقيا",
    "desc_en": "country in West Africa",
+   "aliases_ar": [
+    "جمهورية غانا"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -488,6 +725,16 @@
    "en": "Kiowa people",
    "desc_ar": null,
    "desc_en": "Native American Nation",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Kiowas",
+    "Kiowa",
+    "Kiawas",
+    "Wetepahatoes",
+    "Gaigwu",
+    "Kiowa Indian Tribe of Oklahoma",
+    "Cáuigú"
+   ],
    "p31": [
     "Q41710",
     "Q7840353"
@@ -502,6 +749,14 @@
    "en": "Comanche",
    "desc_ar": null,
    "desc_en": "Plains Indian tribe whose historic territory consisted of eastern New Mexico, southeastern Colorado, southwestern Kansas, western Oklahoma, and northwest Texas",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Comanches",
+    "Kwahadi",
+    "Penateka",
+    "Yamparika",
+    "Comanche Nation, Oklahoma"
+   ],
    "p31": [
     "Q133311",
     "Q7840353"
@@ -516,6 +771,19 @@
    "en": "Cree",
    "desc_ar": null,
    "desc_en": "group of First Nations peoples",
+   "aliases_ar": [
+    "الكري"
+   ],
+   "aliases_en": [
+    "Nehiyawak",
+    "Néhiyawak",
+    "néhinaw",
+    "néhiyaw",
+    "nihithaw",
+    "ᓀᐦᐃᓇᐤ",
+    "ᓀᐦᐃᔭᐤ",
+    "Eeyou"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -529,6 +797,8 @@
    "en": "Norte Chico",
    "desc_ar": null,
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -542,6 +812,8 @@
    "en": "Kamarupa",
    "desc_ar": null,
    "desc_en": "kingdom based around Assam (350-1140)",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q3024240"
    ],
@@ -559,6 +831,8 @@
    "en": "Burmese",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -572,6 +846,20 @@
    "en": "Illinois",
    "desc_ar": "ولاية الولايات المتحدة الأمريكية",
    "desc_en": "state of the United States of America",
+   "aliases_ar": [
+    "إلنوي",
+    "إلينويز"
+   ],
+   "aliases_en": [
+    "US-IL",
+    "Illinois, United States",
+    "IL",
+    "Lincoln State",
+    "The Prairie State",
+    "Ill.",
+    "Ills.",
+    "State of Illinois"
+   ],
    "p31": [
     "Q35657"
    ],
@@ -587,6 +875,8 @@
    "en": "Arrernte",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -600,6 +890,8 @@
    "en": "Yankton",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -613,6 +905,8 @@
    "en": "Teton",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -626,6 +920,28 @@
    "en": "Byzantine Empire",
    "desc_ar": "دولة سابقة، أسسها قسطنطين العظيم واستمرت ما بين (330 – 1453م)",
    "desc_en": "Roman Empire during Late Antiquity and the Middle Ages",
+   "aliases_ar": [
+    "الامبراطورية البيزنطية",
+    "الدولة البيزنطية",
+    "الإمبراطورية الرومانية الشرقية",
+    "امبراطورية رومانية شرقية",
+    "الحضارة البيزنطية",
+    "الأمبراطورية البيزنطية",
+    "إمبراطورية رومانية شرقية",
+    "العصر البيزنطي",
+    "العهد البيزنطي",
+    "إمبراطورية بيزنطية",
+    "بيزنطية"
+   ],
+   "aliases_en": [
+    "Byzantium",
+    "Eastern Roman Empire",
+    "Roman Empire",
+    "Lower Empire",
+    "Romanía",
+    "Greek Empire",
+    "Empire of the Greeks"
+   ],
    "p31": [
     "Q48349",
     "Q3024240",
@@ -651,6 +967,22 @@
    "en": "Holy Roman Empire",
    "desc_ar": "أمبراطورية أوروبية سابقة",
    "desc_en": "multi-ethnic complex of territories in Western and Central Europe (800/962–1806)",
+   "aliases_ar": [
+    "الامبراطورية الرومانية المقدسة",
+    "الامبراطورية الرومية",
+    "الامبراطوريه الرومانيه المقدسة",
+    "الامبراطوريه الرومانيه المقدسة الاولى",
+    "إمبراطورية رومانية مقدسة",
+    "الإمبراطوريه الرومانيه المقدسه"
+   ],
+   "aliases_en": [
+    "First Reich",
+    "Reich",
+    "HRE",
+    "Roman-German Empire",
+    "Old Empire",
+    "Holy Roman Empire of the German Nation"
+   ],
    "p31": [
     "Q48349",
     "Q3624078",
@@ -670,6 +1002,13 @@
    "en": "Mongol Empire",
    "desc_ar": "إمبراطورية تشكلت في ما يُعرف اليوم بدولة منغوليا وهي ثاني أضخم إمبراطورية بالتاريخ والأضخم ككتلة قارية واحدة",
    "desc_en": "13th- and 14th-century empire originating in Mongolia",
+   "aliases_ar": [
+    "الإمبراطورية المغولية"
+   ],
+   "aliases_en": [
+    "Mongolian Empire",
+    "Great Mongol Nation"
+   ],
    "p31": [
     "Q3024240",
     "Q48349",
@@ -689,6 +1028,19 @@
    "en": "Ottoman Empire",
    "desc_ar": "دولة إسلامية سابقة، أسسها عثمان الأول واستمرت ما بين (687 – 1341هـ / 1299 – 1922م)",
    "desc_en": "empire with the monarchs from the Ottoman dynasty (1299–1922)",
+   "aliases_ar": [
+    "الخلافة العثمانية",
+    "الدولة العلية العثمانية",
+    "الإمبراطورية العثمانية",
+    "السلطنة العثمانية",
+    "دولة آل عثمان",
+    "دولة بني عثمان"
+   ],
+   "aliases_en": [
+    "Ottoman State",
+    "Turkish Empire",
+    "Sublime Ottoman State"
+   ],
    "p31": [
     "Q48349",
     "Q3024240",
@@ -710,6 +1062,13 @@
    "en": "Quapaw",
    "desc_ar": null,
    "desc_en": "Native American people indigenous to Arkansas and Oklahoma",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Quapaw Nation",
+    "Quapaw Nation of Indians",
+    "Quapaw Tribe of Oklahoma",
+    "Quapaws"
+   ],
    "p31": [
     "Q41710",
     "Q7840353"
@@ -724,6 +1083,21 @@
    "en": "Elam",
    "desc_ar": "حضارة قديمة في الشرق الأدنى، تركزت في سهل سوسيانا ومرتفعات عيلام",
    "desc_en": "ancient civilization of the Near East, centered in the Susiana plain and the Elamite highlands",
+   "aliases_ar": [
+    "عيلاميون",
+    "عيلاميين",
+    "حضارة عيلام",
+    "بلاد عيلام",
+    "العيلاميون",
+    "حضارة إيلام",
+    "علاميون",
+    "حضاره عيلام",
+    "علاميين"
+   ],
+   "aliases_en": [
+    "Elamites",
+    "Susiana"
+   ],
    "p31": [
     "Q28171280",
     "Q3024240"
@@ -742,6 +1116,8 @@
    "en": "Karasuk culture",
    "desc_ar": null,
    "desc_en": "archaeological culture",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q465299"
    ],
@@ -755,6 +1131,21 @@
    "en": "British Raj",
    "desc_ar": null,
    "desc_en": "British colonial rule on the Indian subcontinent (1858–1947)",
+   "aliases_ar": [
+    "الهند البريطانيه",
+    "حكومة الهند البريطانية",
+    "بريطانيا وآسيا"
+   ],
+   "aliases_en": [
+    "Indian Empire",
+    "Crown rule in India",
+    "Direct rule in India",
+    "British Indian Empire",
+    "the Raj",
+    "Hindustan",
+    "Hindoostan",
+    "Indian Raj"
+   ],
    "p31": [
     "Q133156",
     "Q3024240",
@@ -774,6 +1165,8 @@
    "en": "Papuans",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -787,6 +1180,12 @@
    "en": "Austrian Empire",
    "desc_ar": "دولة أوروبية سابقة",
    "desc_en": "Central European multinational Empire from 1804 to 1867",
+   "aliases_ar": [
+    "الأمبراطورية النمساوية"
+   ],
+   "aliases_en": [
+    "Austria"
+   ],
    "p31": [
     "Q3624078",
     "Q3024240"
@@ -805,6 +1204,8 @@
    "en": "Sámi",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -818,6 +1219,8 @@
    "en": "Kushites",
    "desc_ar": null,
    "desc_en": "ancient people on present-day Sudan",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4204501"
    ],
@@ -831,6 +1234,10 @@
    "en": "France",
    "desc_ar": "دولة في غرب أوروبا",
    "desc_en": "country in Western Europe and other continents (through its overseas territories in America, Africa and Oceania)",
+   "aliases_ar": [],
+   "aliases_en": [
+    "French Republic"
+   ],
    "p31": [
     "Q3624078",
     "Q20181813",
@@ -854,6 +1261,21 @@
    "en": "United Kingdom",
    "desc_ar": "دولة في شمال غرب أوروبا",
    "desc_en": "island country in north-west Europe",
+   "aliases_ar": [
+    "المملكة المتحدة في بريطانيا وشمال إيرلندا",
+    "بريطانيا العظمى",
+    "المملكة المتحدة لبريطانيا العظمى وأيرلندا الشمالية"
+   ],
+   "aliases_en": [
+    "United Kingdom of Great Britain and Northern Ireland",
+    "U K",
+    "G B",
+    "Great Britain",
+    "Great Britain and Northern Ireland",
+    "the United Kingdom of Great Britain and Northern Ireland",
+    "the UK",
+    "the United Kingdom"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -873,6 +1295,10 @@
    "en": "Illyrians",
    "desc_ar": "مجموعة من القبائل الهندية الأوروبية عاشت في العصور القديمة",
    "desc_en": "ancient Western Balkanic tribes",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Illyrii"
+   ],
    "p31": [
     "Q4204501"
    ],
@@ -886,6 +1312,20 @@
    "en": "People's Republic of China",
    "desc_ar": "دولة في شرق آسيا",
    "desc_en": "country in East Asia",
+   "aliases_ar": [
+    "الصين الشعبية",
+    "جمهورية الصين الشعبية"
+   ],
+   "aliases_en": [
+    "Red China",
+    "PR China",
+    "Communist China",
+    "China PR",
+    "cn",
+    "The PRC",
+    "P.R.C.",
+    "the People's Republic of China"
+   ],
    "p31": [
     "Q3624078",
     "Q842112",
@@ -910,6 +1350,11 @@
    "en": "Tonkawa",
    "desc_ar": null,
    "desc_en": "Native American Nation",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Tonkawas",
+    "Tonkawa Tribe of Indians of Oklahoma"
+   ],
    "p31": [
     "Q7840353",
     "Q41710"
@@ -924,6 +1369,8 @@
    "en": "Phrygians",
    "desc_ar": null,
    "desc_en": "ancient Indo-European speaking people",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4204501"
    ],
@@ -937,6 +1384,10 @@
    "en": "Malese",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Malays"
+   ],
    "p31": [
     "Q4167410"
    ],
@@ -950,6 +1401,15 @@
    "en": "Iowa",
    "desc_ar": "ولاية أمريكية في الغرب الأوسط الأمريكي",
    "desc_en": "state of the United States of America",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Iowa, United States",
+    "State of Iowa",
+    "The Land Between Two Rivers",
+    "Hawk-eye State",
+    "IA",
+    "US-IA"
+   ],
    "p31": [
     "Q35657"
    ],
@@ -965,6 +1425,21 @@
    "en": "Brazil",
    "desc_ar": "دولة فدرالية في أمريكا الجنوبية وتعد اكبر دولة في القارة",
    "desc_en": "country in South America",
+   "aliases_ar": [
+    "برازيلي",
+    "برازيل",
+    "برازيلية",
+    "البرازيلي",
+    "شرق أمريكا الجنوبية",
+    "جمهورية البرازيل الإتحادية",
+    "جمهورية البرازيل الاتحادية",
+    "البرازیل",
+    "برازیل",
+    "الجمهورية البرازيلية"
+   ],
+   "aliases_en": [
+    "Federative Republic of Brazil"
+   ],
    "p31": [
     "Q3624078",
     "Q859563",
@@ -983,6 +1458,8 @@
    "en": "Osage",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -996,6 +1473,13 @@
    "en": "Russia",
    "desc_ar": "دولة تقع في شمال أوراسيا",
    "desc_en": "country in Eastern Europe and Northern Asia, the largest in the world by area",
+   "aliases_ar": [
+    "روسيا الاتحادية",
+    "الاتحاد الروسي"
+   ],
+   "aliases_en": [
+    "Russian Federation"
+   ],
    "p31": [
     "Q3624078",
     "Q859563",
@@ -1018,6 +1502,11 @@
    "en": "Canada",
    "desc_ar": "دولة في أمريكا الشمالية",
    "desc_en": "country in North America",
+   "aliases_ar": [],
+   "aliases_en": [
+    "CA",
+    "CAN"
+   ],
    "p31": [
     "Q223832",
     "Q202686",
@@ -1037,6 +1526,24 @@
    "en": "Fatimid Caliphate",
    "desc_ar": "دولة إسلامية سابقة، استمرت ما بين (297 – 567هـ / 909 – 1171م)",
    "desc_en": "Egyptian Shia Islamic caliphate (909–1171)",
+   "aliases_ar": [
+    "الفاطميين",
+    "الفاطمي",
+    "عبيديون",
+    "العهد الفاطمي",
+    "العصر الفاطمي",
+    "فاطميين",
+    "الفاطميون",
+    "الخلافة الفاطمية",
+    "العهد الفاطمى",
+    "العبيديون",
+    "الدولة العبيدية",
+    "خلافه فاطميه"
+   ],
+   "aliases_en": [
+    "Fatimid empire",
+    "Fatimid dynasty"
+   ],
    "p31": [
     "Q131401",
     "Q1323642",
@@ -1057,6 +1564,13 @@
    "en": "Crimean Khanate",
    "desc_ar": "دولة سابقة ظهرت في شبه جزيرة القرم من 1441 حتى 1783",
    "desc_en": "former state at the Crimean Peninsula until April 1783",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Little Tartaria",
+    "Khanate of the Crimea",
+    "Crimea",
+    "Kuban Tartary"
+   ],
    "p31": [
     "Q3024240",
     "Q331644"
@@ -1075,6 +1589,10 @@
    "en": "Valdivia",
    "desc_ar": "مدينة في جنوب تشيلي",
    "desc_en": "city in Chile",
+   "aliases_ar": [
+    "مدينة فالديفيا"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q25412763",
     "Q1549591"
@@ -1091,6 +1609,10 @@
    "en": "Togoland",
    "desc_ar": null,
    "desc_en": "former protectorate of the German colonial empire in West Africa (1884–1914), divided between present-day Ghana and Togo",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Togo"
+   ],
    "p31": [
     "Q164142"
    ],
@@ -1108,6 +1630,10 @@
    "en": "Vijayanagara",
    "desc_ar": "مستوطنة بشرية",
    "desc_en": "now ruins, previously the capital of Vijayanagara Empire founded in the 14th century",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Bijanagara"
+   ],
    "p31": [
     "Q839954",
     "Q11514315"
@@ -1122,6 +1648,8 @@
    "en": "Mirning people",
    "desc_ar": null,
    "desc_en": "Aboriginal Australian people",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q41710"
    ],
@@ -1135,6 +1663,12 @@
    "en": "Nyasaland",
    "desc_ar": null,
    "desc_en": "a British protectorate in Africa that was established in 1907 when the former British Central Africa Protectorate changed its name",
+   "aliases_ar": [
+    "نياسالاند"
+   ],
+   "aliases_en": [
+    "Nyasaland Protectorate"
+   ],
    "p31": [
     "Q21479969"
    ],
@@ -1152,6 +1686,11 @@
    "en": "Swedes",
    "desc_ar": null,
    "desc_en": "ethnic group in Northern Europe",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Swedish people",
+    "Swedish"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -1165,6 +1704,8 @@
    "en": "Ifat",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -1178,6 +1719,13 @@
    "en": "Hejaz",
    "desc_ar": "منطقة جغرافية في غرب شبه الجزيرة العربية",
    "desc_en": "geographic region in western Arabia",
+   "aliases_ar": [
+    "منطقة الحجاز",
+    "حجاز"
+   ],
+   "aliases_en": [
+    "Hijaz"
+   ],
    "p31": [
     "Q82794",
     "Q1620908"
@@ -1192,6 +1740,19 @@
    "en": "Japan",
    "desc_ar": "دولة جزرية في شرق آسيا",
    "desc_en": "island country in East Asia",
+   "aliases_ar": [
+    "يابان",
+    "دولة اليابان"
+   ],
+   "aliases_en": [
+    "State of Japan",
+    "Land of the Rising Sun",
+    "Nippon-koku",
+    "Nihon-koku",
+    "Iapan",
+    "Iapon",
+    "Land of Rising Sun"
+   ],
    "p31": [
     "Q3624078",
     "Q112099",
@@ -1211,6 +1772,21 @@
    "en": "Tibet",
    "desc_ar": "منطقة جغرافية في آسيا",
    "desc_en": "plateau region in west China",
+   "aliases_ar": [
+    "تيبت",
+    "التيبت",
+    "تبت"
+   ],
+   "aliases_en": [
+    "Thibet",
+    "Greater Tibet",
+    "Tibetan cultural zone",
+    "Tibetan Highland",
+    "Tibetan Tableland",
+    "Tibetan Plateau",
+    "Tubet",
+    "Tangut"
+   ],
    "p31": [
     "Q82794",
     "Q878223",
@@ -1227,6 +1803,10 @@
    "en": "Kingdom of Italy",
    "desc_ar": "مملكة في جنوب أوروبا من عام 1861 إلى عام 1946",
    "desc_en": "kingdom in Southern Europe from 1861 to 1946",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Italy"
+   ],
    "p31": [
     "Q3624078",
     "Q3024240",
@@ -1246,6 +1826,8 @@
    "en": "Dacia",
    "desc_ar": "منطقة تاريخية موجودة في رومانيا",
    "desc_en": "Balkan kingdom of the Dacians (168 BC-106 AD)",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q3024240",
     "Q28171280",
@@ -1265,6 +1847,13 @@
    "en": "Khazars",
    "desc_ar": "شعب تركي قديم",
    "desc_en": "historical semi-nomadic Turkic ethnic group",
+   "aliases_ar": [
+    "الخزر",
+    "بلاد الخزر"
+   ],
+   "aliases_en": [
+    "Khazaria"
+   ],
    "p31": [
     "Q4204501"
    ],
@@ -1282,6 +1871,19 @@
    "en": "Bantu people",
    "desc_ar": "مجموعات عرقية أفريقية",
    "desc_en": "family of ethnolinguistic groups in Africa",
+   "aliases_ar": [
+    "شعوب البانتو",
+    "شعب بانتويون",
+    "بنتو",
+    "البانتويون",
+    "شعوب البنتو",
+    "شعب بنتويون",
+    "بتويوين"
+   ],
+   "aliases_en": [
+    "Bantu peoples",
+    "Bantu"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -1295,6 +1897,16 @@
    "en": "United Kingdom of Great Britain and Ireland",
    "desc_ar": "دولة تاريخية ذات سيادة",
    "desc_en": "historical sovereign state (1801–1922)",
+   "aliases_ar": [
+    "المملكة المتحدة لبريطانيا العظمى وأيرلندة",
+    "مملكة بريطانيا العظمى و إيرلندا المتحدة"
+   ],
+   "aliases_en": [
+    "United Kingdom",
+    "UKGBI",
+    "Great Britain and Ireland",
+    "UK"
+   ],
    "p31": [
     "Q3624078",
     "Q3024240",
@@ -1314,6 +1926,11 @@
    "en": "Arameans",
    "desc_ar": null,
    "desc_en": "ancient Semitic-speaking people in the Near East",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Aramæans",
+    "Aramaeans"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -1327,6 +1944,18 @@
    "en": "Quebec",
    "desc_ar": "إقليم كندي",
    "desc_en": "province of Canada",
+   "aliases_ar": [
+    "الكبك",
+    "كباك"
+   ],
+   "aliases_en": [
+    "Québec",
+    "QC",
+    "Province of Quebec",
+    "Quebec Province",
+    "PQ",
+    "P.Q."
+   ],
    "p31": [
     "Q11828004"
    ],
@@ -1342,6 +1971,10 @@
    "en": "Zanzibar Islands",
    "desc_ar": "جزر في شرق افريقيا",
    "desc_en": "semi-autonomous part of Tanzania",
+   "aliases_ar": [
+    "زنزيبار"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q107390",
     "Q56061"
@@ -1358,6 +1991,8 @@
    "en": "Saami",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -1371,6 +2006,10 @@
    "en": "Korea",
    "desc_ar": "منطقة جغرافية تقع في شرق آسيا",
    "desc_en": "region in East Asia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Corea"
+   ],
    "p31": [
     "Q82794",
     "Q7275",
@@ -1387,6 +2026,8 @@
    "en": "Pintupi",
    "desc_ar": null,
    "desc_en": "Australian Aboriginal group who are part of the Western Desert cultural group",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q41710"
    ],
@@ -1400,6 +2041,16 @@
    "en": "Germany",
    "desc_ar": "دولة في وسط غرب أوروبا",
    "desc_en": "country in Central Europe",
+   "aliases_ar": [
+    "جمهورية ألمانيا اﻻتحادية"
+   ],
+   "aliases_en": [
+    "Federal Republic of Germany",
+    "DE",
+    "DEU",
+    "FRG",
+    "BRD"
+   ],
    "p31": [
     "Q3624078",
     "Q619610",
@@ -1425,6 +2076,10 @@
    "en": "Urartu",
    "desc_ar": "مملكة تعود للعصر الحديدي، تقع في الهضبة الأرمينية",
    "desc_en": "Iron Age kingdom located in a large region around Lake Van",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Kingdom of Urartu"
+   ],
    "p31": [
     "Q3024240",
     "Q28171280"
@@ -1443,6 +2098,12 @@
    "en": "Malacca",
    "desc_ar": "ثالث أصغر أقاليم ماليزيا",
    "desc_en": "state of Malaysia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Melaka",
+    "Melaka Negeri Bersejarah",
+    "Historic State of Malacca"
+   ],
    "p31": [
     "Q15063586"
    ],
@@ -1458,6 +2119,11 @@
    "en": "French Indochina",
    "desc_ar": "منطقة نفوذ الاستعمار الفرنسي في جنوب شرق آسيا (1887 - 1954)",
    "desc_en": "federal state in Southeast Asia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Indochinese Union",
+    "Indochinese Federation"
+   ],
    "p31": [
     "Q43702",
     "Q3024240",
@@ -1477,6 +2143,16 @@
    "en": "Tibetan people",
    "desc_ar": null,
    "desc_en": "East Asian ethnic group native to Tibet",
+   "aliases_ar": [
+    "تبتيون"
+   ],
+   "aliases_en": [
+    "Tibetans",
+    "Bhod-pa",
+    "Sifen",
+    "Sifan",
+    "Xifan"
+   ],
    "p31": [
     "Q41710",
     "Q858804"
@@ -1491,6 +2167,16 @@
    "en": "Dutch East Indies",
    "desc_ar": null,
    "desc_en": "Dutch colony in Southeast Asia and Oceania (1800–1949)",
+   "aliases_ar": [
+    "جزر الهند الشرقية الهولندية"
+   ],
+   "aliases_en": [
+    "Netherlands East Indies",
+    "Dutch Indies",
+    "Nederlands-Indië",
+    "Netherlands Indies",
+    "Insulinde"
+   ],
    "p31": [
     "Q3024240",
     "Q133156"
@@ -1510,6 +2196,19 @@
    "en": "Empire of Japan",
    "desc_ar": "إمبراطورية في آسيا المحيط الهادئ بين 1868-1947",
    "desc_en": "empire in the Asia-Pacific region from 1868 to 1947",
+   "aliases_ar": [
+    "القيصرية اليابانية",
+    "امبراطورية اليابان",
+    "الإمبراطورية اليابانية",
+    "إمبراطوريه اليابان"
+   ],
+   "aliases_en": [
+    "Japanese Empire",
+    "Imperial Japan",
+    "Great Empire of Japan",
+    "Great Japanese Empire",
+    "Japan"
+   ],
    "p31": [
     "Q3024240",
     "Q48349"
@@ -1528,6 +2227,12 @@
    "en": "Xiongnu",
    "desc_ar": null,
    "desc_en": "Ancient steppe empire north of China.",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Great Hun Empire",
+    "Xunnu",
+    "Xiongnu Empire"
+   ],
    "p31": [
     "Q3024240",
     "Q4204501"
@@ -1546,6 +2251,15 @@
    "en": "Iceland",
    "desc_ar": "إحدى الدول الإسكندنافية الجزرية الواقعة في شمال أوروبا",
    "desc_en": "Nordic island country in the North Atlantic Ocean",
+   "aliases_ar": [
+    "جمهورية آيسلندا"
+   ],
+   "aliases_en": [
+    "Republic of Iceland",
+    "Ysland",
+    "Isl.",
+    "Icelandic republic"
+   ],
    "p31": [
     "Q112099",
     "Q3624078",
@@ -1565,6 +2279,24 @@
    "en": "Parthian Empire",
    "desc_ar": "إمبراطورية ساسية سكيثية تأسست سنة 247ق.م وسميت بالإمبراطورية الفرثية نسبة إلى مقاطعة فرثيا و انتهت في سنة 224م",
    "desc_en": "second ancient Iranian Empire (247 BC–224 AD)",
+   "aliases_ar": [
+    "أرشكيون",
+    "ارشيكون",
+    "أرشيكونين",
+    "ارشيكونين",
+    "البارثيين",
+    "أرشيكون",
+    "الفرثيين",
+    "إمبراطورية بارثية",
+    "اشكانيون",
+    "ارشكيون",
+    "أشكانيين",
+    "الأشكانيين"
+   ],
+   "aliases_en": [
+    "Arsacid dynasty of Parthia",
+    "Arsacid Empire"
+   ],
    "p31": [
     "Q3024240",
     "Q48349",
@@ -1584,6 +2316,20 @@
    "en": "Almohad Caliphate",
    "desc_ar": "دولة أمازيغية حكمت بلاد المغرب (شمال إفريقيا) والأندلس (1121 – 1269م)",
    "desc_en": "1121–1269 Berber empire in North Africa and Iberia",
+   "aliases_ar": [
+    "الخلافة الموحدية",
+    "سلالة الموحدون",
+    "دولة الموحدين",
+    "الموحدين",
+    "الدوله الموحديه",
+    "الموحدون"
+   ],
+   "aliases_en": [
+    "Almohads",
+    "Almohad Empire",
+    "Almohades",
+    "al-Muwaḥḥidūn"
+   ],
    "p31": [
     "Q131401",
     "Q3024240"
@@ -1602,6 +2348,12 @@
    "en": "Norway",
    "desc_ar": "إحدى الدول الإسكندنافية الواقعة في شمال أوروبا",
    "desc_en": "country in Northern Europe",
+   "aliases_ar": [
+    "مملكة النرويج"
+   ],
+   "aliases_en": [
+    "Kingdom of Norway"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -1621,6 +2373,12 @@
    "en": "Khmer Empire",
    "desc_ar": null,
    "desc_en": "802–1431 empire in Southeast Asia",
+   "aliases_ar": [
+    "إمبراطورية خميرية"
+   ],
+   "aliases_en": [
+    "Khmer"
+   ],
    "p31": [
     "Q48349",
     "Q11042",
@@ -1641,6 +2399,18 @@
    "en": "Göktürks",
    "desc_ar": "شعوب بدوية من الشعوب التركية في آسيا الداخلية في العصور الوسطى",
    "desc_en": "Turkic people organized as a state in medieval Inner Asia",
+   "aliases_ar": [
+    "الكوكتورك",
+    "كوك تورك",
+    "الكوك تورك"
+   ],
+   "aliases_en": [
+    "Ashina Türks",
+    "Celestial Turks",
+    "Kok Turks",
+    "Gökturks",
+    "Sky Turks"
+   ],
    "p31": [
     "Q3024240",
     "Q331644"
@@ -1659,6 +2429,10 @@
    "en": "Balts",
    "desc_ar": null,
    "desc_en": "ethnic group",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Baltic people"
+   ],
    "p31": [
     "Q4533081"
    ],
@@ -1672,6 +2446,10 @@
    "en": "Great Zimbabwe",
    "desc_ar": "موقع أثري في منطقة ماسفينغو، زيمبابوي",
    "desc_en": "ruined city in the south-eastern hills of Zimbabwe near Lake Mutirikwe and the town of Masvingo, was once the capital of the Kingdom of Zimbabwe during the country's Late Iron Age",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Zimbabye"
+   ],
    "p31": [
     "Q109607",
     "Q839954",
@@ -1687,6 +2465,10 @@
    "en": "Viceroyalty of the Río de la Plata",
    "desc_ar": "نيابة ملكية تابعة للإمبراطورية الإسبانية في الأمريكتين (1776-1814)",
    "desc_en": "(1776-1814) Viceroyalty of the Spanish Empire in America",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Virreinato del Río de la Plata"
+   ],
    "p31": [
     "Q20203507"
    ],
@@ -1704,6 +2486,13 @@
    "en": "French West Africa",
    "desc_ar": "الاتحاد الاستعماري الفرنسي في غرب إفريقيا من عام 1895 إلى عام 1958",
    "desc_en": "French colonial federation in west Africa from 1895 to 1958",
+   "aliases_ar": [
+    "غرب إفريقيا الفرنسية"
+   ],
+   "aliases_en": [
+    "Afrique occidentale française",
+    "AOF"
+   ],
    "p31": [
     "Q43702",
     "Q56061",
@@ -1723,6 +2512,13 @@
    "en": "Viceroyalty of Peru",
    "desc_ar": null,
    "desc_en": "viceroyalty of the Spanish Empire",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Viceroyalty of Perú",
+    "Peru",
+    "Kingdom of Peru",
+    "Perú"
+   ],
    "p31": [
     "Q20203507"
    ],
@@ -1740,6 +2536,12 @@
    "en": "Ukraine",
    "desc_ar": "دولة في شرق أوروبا",
    "desc_en": "country in Eastern Europe",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Ukrainia",
+    "Ukr.",
+    "Ukraïna"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -1766,6 +2568,11 @@
    "en": "Belgian Congo",
    "desc_ar": null,
    "desc_en": "Belgian colony in Central Africa (1908–1960), established after international pressure forced Belgium to annex the Congo Free State following King Leopold II's brutal personal rule; now the Democratic Republic of the Congo",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Congo Belge",
+    "Belgisch-Congo"
+   ],
    "p31": [
     "Q133156",
     "Q19953632"
@@ -1784,6 +2591,8 @@
    "en": "Wu",
    "desc_ar": "صفحة توضيح ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -1797,6 +2606,14 @@
    "en": "Champa",
    "desc_ar": "مملكة قديمة والتي تشكل اليوم جزء من فيتنام",
    "desc_en": "Civilization, comprised of multiple kingdoms, sometimes unified, sometimes not, in South-East Asia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Campā",
+    "Champā",
+    "Kingdom of Champā",
+    "Champā Empire",
+    "Campā Civilization"
+   ],
    "p31": [
     "Q1250464",
     "Q48349",
@@ -1818,6 +2635,10 @@
    "en": "Rhodesia",
    "desc_ar": null,
    "desc_en": "unrecognised state in Southern Africa (1965–1979)",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Republic of Rhodesia"
+   ],
    "p31": [
     "Q99541706",
     "Q10711424"
@@ -1836,6 +2657,8 @@
    "en": "Yamato",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -1849,6 +2672,14 @@
    "en": "Romania",
    "desc_ar": "دولة في جنوب شرق أوربا",
    "desc_en": "country in Southeast Europe",
+   "aliases_ar": [
+    "جمهورية رومانيا",
+    "رومانية"
+   ],
+   "aliases_en": [
+    "Roumania",
+    "Rumania"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -1866,6 +2697,16 @@
    "en": "Bulgaria",
    "desc_ar": "دولة في جنوب شرق أوروبا",
    "desc_en": "country in southeast Europe",
+   "aliases_ar": [
+    "بلغاري",
+    "بلقاريا",
+    "البلغاري",
+    "بلغارية"
+   ],
+   "aliases_en": [
+    "Republic of Bulgaria",
+    "Bulgarian Republic"
+   ],
    "p31": [
     "Q6256",
     "Q179164",
@@ -1884,6 +2725,10 @@
    "en": "Segu",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [
+    "SEGU"
+   ],
    "p31": [
     "Q4167410"
    ],
@@ -1897,6 +2742,17 @@
    "en": "Greenland",
    "desc_ar": "إقليم تابع لمملكة الدنمارك",
    "desc_en": "autonomous territory of the Kingdom of Denmark and world's largest island",
+   "aliases_ar": [
+    "جرينلاند",
+    "جرينلند"
+   ],
+   "aliases_en": [
+    "Groenland",
+    "Kalaallit Nunaat",
+    "Greenlandia",
+    "GL",
+    "GRL"
+   ],
    "p31": [
     "Q66724388",
     "Q192611",
@@ -1915,6 +2771,8 @@
    "en": "Ainu",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -1928,6 +2786,15 @@
    "en": "Roman Empire",
    "desc_ar": "مرحلة ما بعد الجمهورية الرومانية، في الفتره ( 27 ق.م -395 ب.م )",
    "desc_en": "period of Ancient Rome following the Republic",
+   "aliases_ar": [
+    "الرومان"
+   ],
+   "aliases_en": [
+    "Imperium Romanum",
+    "Romanum imperium",
+    "imperium romanum",
+    "Roman period"
+   ],
    "p31": [
     "Q48349",
     "Q11514315",
@@ -1947,6 +2814,8 @@
    "en": "Zulu",
    "desc_ar": "صفحة توضيح ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -1960,6 +2829,8 @@
    "en": "Gold Coast",
    "desc_ar": "صفحة توضيح ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -1973,6 +2844,10 @@
    "en": "Dorset",
    "desc_ar": "مقاطعة في إنجلترا",
    "desc_en": "ceremonial county in South West England, UK",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Dorsetshire"
+   ],
    "p31": [
     "Q180673"
    ],
@@ -1986,6 +2861,15 @@
    "en": "Kazakhstan",
    "desc_ar": "دولة في آسيا الوسطى",
    "desc_en": "sovereign state in Eastern Europe and Central Asia",
+   "aliases_ar": [
+    "قازاقستان"
+   ],
+   "aliases_en": [
+    "Republic of Kazakhstan",
+    "kz",
+    "Qazaqstan",
+    "Republic of Qazaqstan"
+   ],
    "p31": [
     "Q3624078",
     "Q179164",
@@ -2006,6 +2890,10 @@
    "en": "Ancient Semitic-speaking peoples",
    "desc_ar": null,
    "desc_en": "Western Asian people who resided in the ancient Near East until the end of antiquity",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Ancient Semites"
+   ],
    "p31": [
     "Q851990",
     "Q15893266"
@@ -2020,6 +2908,13 @@
    "en": "Cuba",
    "desc_ar": "دولة جزرية في منطقة البحر الكاريبي",
    "desc_en": "sovereign state situated on an island in the Caribbean Sea",
+   "aliases_ar": [
+    "جمهورية كوبا"
+   ],
+   "aliases_en": [
+    "Republic of Cuba",
+    "cu"
+   ],
    "p31": [
     "Q112099",
     "Q3624078",
@@ -2039,6 +2934,8 @@
    "en": "Wichita",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2052,6 +2949,8 @@
    "en": "Suren Kingdom",
    "desc_ar": null,
    "desc_en": null,
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q417175"
    ],
@@ -2065,6 +2964,8 @@
    "en": "Saba",
    "desc_ar": "صفحة توضيح ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2078,6 +2979,13 @@
    "en": "Indonesia",
    "desc_ar": "دولة عابرة للقارات تقع في جنوب شرق آسيا و في أوقيانوسيا",
    "desc_en": "island country in Southeast Asia and Oceania",
+   "aliases_ar": [
+    "جمهورية إندونيسيا"
+   ],
+   "aliases_en": [
+    "Republic of Indonesia",
+    "id"
+   ],
    "p31": [
     "Q3624078",
     "Q11815167",
@@ -2100,6 +3008,14 @@
    "en": "Shawnee",
    "desc_ar": null,
    "desc_en": "federally recognized Native American Nation in Oklahoma, USA",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Shawnee Indians",
+    "Ša˙wano˙ki",
+    "Shaawanwaki",
+    "Shawnees",
+    "Shawnee Tribe"
+   ],
    "p31": [
     "Q3117863",
     "Q41710",
@@ -2115,6 +3031,16 @@
    "en": "South Africa",
    "desc_ar": "دولة في جنوب إفريقيا",
    "desc_en": "country in southern Africa",
+   "aliases_ar": [
+    "جنوب أفريقيا"
+   ],
+   "aliases_en": [
+    "Republic of South Africa",
+    "RSA",
+    "SA",
+    "zaf",
+    "R.S.A."
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -2131,6 +3057,16 @@
    "en": "Algeria",
    "desc_ar": "دولة في شمال إفريقيا",
    "desc_en": "country in North Africa",
+   "aliases_ar": [
+    "الدزاير",
+    "دزاير",
+    "الجزاير"
+   ],
+   "aliases_en": [
+    "People's Democratic Republic of Algeria",
+    "Dzayer",
+    "Djazaïr"
+   ],
    "p31": [
     "Q3624078",
     "Q51576574",
@@ -2149,6 +3085,10 @@
    "en": "Gandhara grave culture",
    "desc_ar": null,
    "desc_en": "aspect of Pakistani history",
+   "aliases_ar": [
+    "حضارة قبر غاندهارا"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q465299"
    ],
@@ -2162,6 +3102,8 @@
    "en": "Oromo",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2175,6 +3117,12 @@
    "en": "Uzbekistan",
    "desc_ar": "دولة في آسيا الوسطى",
    "desc_en": "sovereign state in Central Asia",
+   "aliases_ar": [
+    "جمهورية أوزبكستان"
+   ],
+   "aliases_en": [
+    "Republic of Uzbekistan"
+   ],
    "p31": [
     "Q3624078",
     "Q136361597",
@@ -2192,6 +3140,13 @@
    "en": "French Equatorial Africa",
    "desc_ar": null,
    "desc_en": "former federation of French colonial possessions in Central Africa",
+   "aliases_ar": [
+    "أفريقيا الإستوائية الفرنسية"
+   ],
+   "aliases_en": [
+    "Afrique équatoriale française",
+    "A.E.F."
+   ],
    "p31": [
     "Q133156"
    ],
@@ -2209,6 +3164,21 @@
    "en": "Buyid dynasty",
    "desc_ar": "سلالة من الديلم هيمنت على الخلافة العبَّاسيَّة ودام حكمهم ما بين سنتيّ 934 و 1062م",
    "desc_en": "Iranian dynasty ruling of central and western Iran (934–1062)",
+   "aliases_ar": [
+    "البويهيون",
+    "بني بويه",
+    "البويهيين",
+    "بنو بويه",
+    "آل بوية",
+    "دولة بني بويه"
+   ],
+   "aliases_en": [
+    "Buyids",
+    "Al-e Buya",
+    "Al-i Buya",
+    "Buyid Empire",
+    "Buyyids"
+   ],
    "p31": [
     "Q164950",
     "Q3024240",
@@ -2228,6 +3198,11 @@
    "en": "Hungary",
    "desc_ar": "دولة في وسط أوروبا",
    "desc_en": "country in Central Europe",
+   "aliases_ar": [
+    "هنغاريا",
+    "هنجاريا"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -2246,6 +3221,8 @@
    "en": "Koryaks",
    "desc_ar": null,
    "desc_en": "ethnic group",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q41710"
    ],
@@ -2259,6 +3236,14 @@
    "en": "Goryeo",
    "desc_ar": null,
    "desc_en": "ancient kingdom in the Korean peninsula (918–1392)",
+   "aliases_ar": [
+    "جوريو",
+    "غوريو"
+   ],
+   "aliases_en": [
+    "Koryŏ",
+    "Goryeoguk"
+   ],
    "p31": [
     "Q3024240",
     "Q164950"
@@ -2277,6 +3262,22 @@
    "en": "Inca Empire",
    "desc_ar": "إمبراطورية قديمة في أمريكا الجنوبية",
    "desc_en": "1438–1533 empire in South America",
+   "aliases_ar": [
+    "انكا",
+    "أنكا",
+    "الانكا",
+    "حضارة الإنكا",
+    "الأنكا",
+    "الإنكا"
+   ],
+   "aliases_en": [
+    "Tawantinsuyu",
+    "Tahuantinsuyo",
+    "Incan empire",
+    "Quechuan empire",
+    "Empire of the incas",
+    "Tawantin Suyu"
+   ],
    "p31": [
     "Q3024240"
    ],
@@ -2295,6 +3296,13 @@
    "en": "Spain",
    "desc_ar": "دولة في جنوب غرب أوروبا في شبه الجزيرة الأيبيرية",
    "desc_en": "country in southwestern Europe with territories in Africa",
+   "aliases_ar": [
+    "مملكة إسبانيا",
+    "اسبانيا"
+   ],
+   "aliases_en": [
+    "Kingdom of Spain"
+   ],
    "p31": [
     "Q3624078",
     "Q1250464",
@@ -2318,6 +3326,11 @@
    "en": "Viceroyalty of Brazil",
    "desc_ar": null,
    "desc_en": "Portuguese viceroyalty in Brazil 1763-1815",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Brazil",
+    "Brasil"
+   ],
    "p31": [
     "Q12356456"
    ],
@@ -2335,6 +3348,10 @@
    "en": "Bagan",
    "desc_ar": "موقع أثري في منطقة ماندالاي، ميانمار",
    "desc_en": "ancient city in Myanmar",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Pagan"
+   ],
    "p31": [
     "Q7830262",
     "Q839954",
@@ -2352,6 +3369,13 @@
    "en": "Chile",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "country in South America",
+   "aliases_ar": [
+    "جمهورية تشيلي"
+   ],
+   "aliases_en": [
+    "Republic of Chile",
+    "CHI"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -2371,6 +3395,10 @@
    "en": "UTE",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Ute"
+   ],
    "p31": [
     "Q4167410"
    ],
@@ -2384,6 +3412,24 @@
    "en": "United States",
    "desc_ar": "دولة في أمريكا الشمالية",
    "desc_en": "country located primarily in North America",
+   "aliases_ar": [
+    "أمريكا",
+    "و م أ",
+    "الولايات المتحدة الأمريكية",
+    "و.م.أ",
+    "و م",
+    "و.م"
+   ],
+   "aliases_en": [
+    "the States",
+    "the United States of America",
+    "US of America",
+    "the US",
+    "the U.S.",
+    "the US of A",
+    "U.S. of America",
+    "the US of America"
+   ],
    "p31": [
     "Q3624078",
     "Q1489259",
@@ -2405,6 +3451,11 @@
    "en": "Vazimba",
    "desc_ar": null,
    "desc_en": "ethnic group from Madagascar",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Bazimba",
+    "Vazimbas"
+   ],
    "p31": [
     "Q41710",
     "Q27863646"
@@ -2419,6 +3470,16 @@
    "en": "Italian Somaliland",
    "desc_ar": "مستعمرة أفريقية",
    "desc_en": "colony of the Kingdom of Italy in Somalia",
+   "aliases_ar": [
+    "إيطاليا الصومالية"
+   ],
+   "aliases_en": [
+    "Somalia italiana",
+    "Al-Sumal Al-Italiy",
+    "Dhulka Talyaaniga ee Soomaaliya",
+    "Somalia",
+    "Italian Somalia"
+   ],
    "p31": [
     "Q133156",
     "Q19953632"
@@ -2437,6 +3498,8 @@
    "en": "Warumungu people",
    "desc_ar": null,
    "desc_en": "Australian Indigenous people",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q41710"
    ],
@@ -2450,6 +3513,19 @@
    "en": "Choctaw",
    "desc_ar": null,
    "desc_en": "Native American people originally from the Southeastern United States",
+   "aliases_ar": [
+    "التشوكتاو"
+   ],
+   "aliases_en": [
+    "Chahta",
+    "Chactas",
+    "Tchakta",
+    "Chocktaw",
+    "Chactaw",
+    "Chactaw Indians",
+    "Chactaws",
+    "The Choctaw Nation of Oklahoma"
+   ],
    "p31": [
     "Q133311"
    ],
@@ -2463,6 +3539,15 @@
    "en": "Finland",
    "desc_ar": "دولة في أوروبا الشمالية",
    "desc_en": "country in Northern Europe",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Republic of Finland",
+    "Finnia",
+    "Land of Thousand Lakes",
+    "fi",
+    "Suomen tasavalta",
+    "Republiken Finland"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -2481,6 +3566,15 @@
    "en": "Crow Nation",
    "desc_ar": null,
    "desc_en": "federally recognized Native American Nation",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Crow",
+    "Crow people",
+    "Crow Indians",
+    "Crows",
+    "Apsaalooke",
+    "Crow Tribe of Montana"
+   ],
    "p31": [
     "Q41710",
     "Q7840353"
@@ -2495,6 +3589,25 @@
    "en": "Mughal Empire",
    "desc_ar": "أخر الدول والامبراطوريات الاسلامية في الهند، أسسها ظهير الدين بابر 1526م",
    "desc_en": "great Turkic descent empire ruling India (1526–1857)",
+   "aliases_ar": [
+    "امبراطورية مغول الهند",
+    "إمبراطوريه مغول الهند",
+    "مغول",
+    "موغال",
+    "مغول الهند",
+    "المغول الكبار",
+    "الأسرة المغولية"
+   ],
+   "aliases_en": [
+    "Mogul Empire",
+    "Mughal India",
+    "Moghul Empire",
+    "Mogul India",
+    "Moghul India",
+    "Mogol Empire",
+    "Mogol India",
+    "Moghol Empire"
+   ],
    "p31": [
     "Q48349",
     "Q7275",
@@ -2514,6 +3627,20 @@
    "en": "Czechoslovakia",
    "desc_ar": "دولة زائلة كانت ذات سيادة في أوروبا الوسطى (1918-1992)",
    "desc_en": "country in Central Europe (1918–1992)",
+   "aliases_ar": [
+    "تشيكوسلوفاكي",
+    "تشكسلوفاكيا",
+    "تشكوسلوفاكيا",
+    "تشيكسلوفاكيا"
+   ],
+   "aliases_en": [
+    "Czecho-Slovakia",
+    "cs",
+    "TCH",
+    "Československo",
+    "Federation of Czechoslovakia",
+    "People's Republic of Czechoslovakia"
+   ],
    "p31": [
     "Q3624078",
     "Q3024240"
@@ -2532,6 +3659,14 @@
    "en": "Sweden",
    "desc_ar": "دولة في أوروبا",
    "desc_en": "country in Northern Europe",
+   "aliases_ar": [
+    "مملكة السويد"
+   ],
+   "aliases_en": [
+    "Kingdom of Sweden",
+    "se",
+    "Swedish Kingdom"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -2551,6 +3686,22 @@
    "en": "Russian Empire",
    "desc_ar": "إمبراطورية شملت روسيا وما جاورها",
    "desc_en": "former empire in Eurasia and North America (1721–1917)",
+   "aliases_ar": [
+    "الإمبراطوريه الروسيه",
+    "روسيا الإمبراطورية",
+    "الامبراطورية الروسية",
+    "إمبراطورية روسية"
+   ],
+   "aliases_en": [
+    "Tsarist Russia",
+    "Imperial Russia",
+    "Russia",
+    "Empire of Russia",
+    "Moscovy",
+    "Moscovy or Russia",
+    "Russia or Moscovy",
+    "Rossia"
+   ],
    "p31": [
     "Q48349",
     "Q3624078",
@@ -2572,6 +3723,8 @@
    "en": "Adal",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2585,6 +3738,30 @@
    "en": "Xinjiang",
    "desc_ar": "إحدى مقاطعات الصين وأكبرهم بالمساحة وذات غالبية مسلمة",
    "desc_en": "autonomous region in China",
+   "aliases_ar": [
+    "تركستان الصينية",
+    "شنغيانغ",
+    "تركستان الشرقية",
+    "مقاطعة شنغيانغ",
+    "شينكيانغ",
+    "Xin jiang",
+    "شرق تركستان",
+    "سنكاينج",
+    "شينجانغ",
+    "سينجيانغ",
+    "سينجانغ",
+    "سنكيانغ"
+   ],
+   "aliases_en": [
+    "Xinjiang Uyghur Autonomous Region",
+    "Xinjiang Uighur Autonomous Region",
+    "XUAR",
+    "Xinjiang Province",
+    "Sinkiang",
+    "Sinkeang",
+    "Hsin-chiang",
+    "Chinese Turkestan"
+   ],
    "p31": [
     "Q57362"
    ],
@@ -2600,6 +3777,16 @@
    "en": "Denmark",
    "desc_ar": "إحدى الدول الإسكندنافية الواقعة في شمال أوروبا",
    "desc_en": "country in Northern Europe",
+   "aliases_ar": [],
+   "aliases_en": [
+    "dk",
+    "TAN",
+    "Denmark proper",
+    "metropolitan Denmark",
+    "Dania",
+    "Danmark",
+    "Danemark"
+   ],
    "p31": [
     "Q7275",
     "Q20181813",
@@ -2619,6 +3806,10 @@
    "en": "Caddo",
    "desc_ar": "اتحاد عدة قبائل من السكان الأصليين في جنوب شرق أمريكا",
    "desc_en": "confederacy of several Southeastern Native American tribes",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Caddo Nation of Oklahoma"
+   ],
    "p31": [
     "Q133311",
     "Q26883974",
@@ -2634,6 +3825,8 @@
    "en": "Malaya",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2647,6 +3840,8 @@
    "en": "Luba",
    "desc_ar": "صفحة توضيح ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2660,6 +3855,10 @@
    "en": "Algiers",
    "desc_ar": "عاصمة الجزائر",
    "desc_en": "capital city of Algeria",
+   "aliases_ar": [
+    "مدينة الجزائر"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q486972",
     "Q515",
@@ -2677,6 +3876,8 @@
    "en": "Kalinga",
    "desc_ar": "صفحة توضيح ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2690,6 +3891,19 @@
    "en": "East Java",
    "desc_ar": "إقليم إندونيسي في جزيرة جاوة",
    "desc_en": "province of Indonesia, on island of Java",
+   "aliases_ar": [
+    "شرق جاوة",
+    "جاوة شرق",
+    "جاوا الشرقية",
+    "جاوه الشرقيه"
+   ],
+   "aliases_en": [
+    "Jatim",
+    "Province of East Java",
+    "East Java province",
+    "Jawa Timur",
+    "East Java Province"
+   ],
    "p31": [
     "Q5098"
    ],
@@ -2705,6 +3919,13 @@
    "en": "Congo",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [
+    "الكنغو",
+    "الكونغو",
+    "كونجو",
+    "الكونجو"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2718,6 +3939,12 @@
    "en": "Poland",
    "desc_ar": "دولة في أوروبا الوسطى",
    "desc_en": "country in Central Europe",
+   "aliases_ar": [
+    "الجمهورية البولندية"
+   ],
+   "aliases_en": [
+    "Republic of Poland"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -2745,6 +3972,8 @@
    "en": "Bega",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2758,6 +3987,10 @@
    "en": "Vijayapura",
    "desc_ar": "مستوطنة في الهند",
    "desc_en": "city in Karnataka, India",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Bijapur"
+   ],
    "p31": [
     "Q486972",
     "Q515",
@@ -2773,6 +4006,16 @@
    "en": "Yugoslavia",
    "desc_ar": "دولة سابقة في جنوب شرق أوروبا",
    "desc_en": "1918–1992 country in Southeastern Europe",
+   "aliases_ar": [
+    "يوغسلافية",
+    "يوغسلافيا",
+    "اليوغوسلافي",
+    "الاتحاد اليوغسلافي",
+    "يوجوسلافيا",
+    "الإتحاد اليوغوسلافي",
+    "الاتحاد اليوغوسلافي"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q3024240",
     "Q3624078",
@@ -2792,6 +4035,17 @@
    "en": "Sindh",
    "desc_ar": "أحد أقاليم باكستان الأربع يقع في جنوب شرق باكستان، عاصمته كراتشي",
    "desc_en": "province of Pakistan",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Mehran",
+    "Sind",
+    "Sinde",
+    "Sindh Province",
+    "Sind Province",
+    "Sinde Province",
+    "Province of Sindh",
+    "Province of Sind"
+   ],
    "p31": [
     "Q15058985"
    ],
@@ -2807,6 +4061,11 @@
    "en": "Italy",
    "desc_ar": "دولة في جنوب غرب أوروبا",
    "desc_en": "country in southern Europe",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Italian Republic",
+    "Republic of Italy"
+   ],
    "p31": [
     "Q6256",
     "Q3624078",
@@ -2829,6 +4088,10 @@
    "en": "Mardu",
    "desc_ar": "قرية في المملكة المتحدة",
    "desc_en": "village in Shropshire, United Kingdom",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Mardu, Shropshire"
+   ],
    "p31": [
     "Q532"
    ],
@@ -2842,6 +4105,13 @@
    "en": "crow",
    "desc_ar": "طائر من جنس الغراب",
    "desc_en": "bird of the genus Corvus, or more broadly a synonym for all of Corvus",
+   "aliases_ar": [
+    "الزاغ"
+   ],
+   "aliases_en": [
+    "Corvus",
+    "crows"
+   ],
    "p31": [
     "Q55983715"
    ],
@@ -2855,6 +4125,12 @@
    "en": "Prussia",
    "desc_ar": "دولة فى أوروبا المركزية ما بين عامي (1525) و (1947)",
    "desc_en": "common term for the Duchy, the Kingdom and the Free State of Prussia (1525–1947)",
+   "aliases_ar": [
+    "بروسية"
+   ],
+   "aliases_en": [
+    "Prussia (Germany)"
+   ],
    "p31": [
     "Q3024240",
     "Q3624078",
@@ -2875,6 +4151,8 @@
    "en": "Rajputana",
    "desc_ar": "إقليمٌ يقع شمال غرب الهند",
    "desc_en": "extensive region in the northwest of India",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4835091"
    ],
@@ -2888,6 +4166,10 @@
    "en": "Chukchi",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Chukcha"
+   ],
    "p31": [
     "Q4167410"
    ],
@@ -2901,6 +4183,8 @@
    "en": "Bantu",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2914,6 +4198,10 @@
    "en": "Maori",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Māori"
+   ],
    "p31": [
     "Q4167410"
    ],
@@ -2927,6 +4215,16 @@
    "en": "Armenia",
    "desc_ar": "دولة في غرب آسيا و شرق أوروبا",
    "desc_en": "sovereign state in the South Caucasus region of Eurasia",
+   "aliases_ar": [
+    "جمهورية أرمينيا",
+    "أرمنيا"
+   ],
+   "aliases_en": [
+    "Hayastan",
+    "Republic of Armenia",
+    "Hayastani Hanrapetut’yun",
+    "Հայաստան"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -2945,6 +4243,8 @@
    "en": "Songhai",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2958,6 +4258,8 @@
    "en": "Warlpiri",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2971,6 +4273,8 @@
    "en": "Catawba",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2984,6 +4288,8 @@
    "en": "Santee",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -2997,6 +4303,21 @@
    "en": "Australia",
    "desc_ar": "دولة في أوقيانوسيا",
    "desc_en": "country in Oceania",
+   "aliases_ar": [
+    "أوستراليا",
+    "كومنولث أستراليا",
+    "كومنولث أوستراليا"
+   ],
+   "aliases_en": [
+    "Commonwealth of Australia",
+    "Straya",
+    "Aussieland",
+    "Oz",
+    "Stralia",
+    "New Holland",
+    "New Hollandia",
+    "Nova Hollandia"
+   ],
    "p31": [
     "Q202686",
     "Q223832",
@@ -3016,6 +4337,8 @@
    "en": "Pawnee",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3029,6 +4352,16 @@
    "en": "Greece",
    "desc_ar": "دولة في جنوب شرق أوروبا",
    "desc_en": "country in Southeast Europe",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Hellenic Republic",
+    "Hellas",
+    "gr",
+    "el",
+    "Greek Republic",
+    "Ellada",
+    "Hellas, Greece"
+   ],
    "p31": [
     "Q3624078",
     "Q179164",
@@ -3050,6 +4383,24 @@
    "en": "Assyrian Empire",
    "desc_ar": "حضارة قديمة قامت في العراق",
    "desc_en": "major Mesopotamian East Semitic kingdom",
+   "aliases_ar": [
+    "آشوريون قدماء",
+    "الاشوريون",
+    "أشوريون",
+    "الأشوريين",
+    "الاشورية",
+    "الإمبراطورية الآشورية",
+    "الحضارة الآشورية",
+    "الدولة الآشورية",
+    "إمبراطورية آشورية",
+    "آشور (مملكة)",
+    "الامبراطورية الآشورية",
+    "الأمبراطورية الأشورية"
+   ],
+   "aliases_en": [
+    "Early Period",
+    "Assyria"
+   ],
    "p31": [
     "Q3024240",
     "Q48349"
@@ -3068,6 +4419,8 @@
    "en": "Muskogee",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3081,6 +4434,17 @@
    "en": "Argentina",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "country in South America",
+   "aliases_ar": [
+    "ارجنتين",
+    "أرجنتين",
+    "الارجنتين",
+    "جمهورية الأرجنتين"
+   ],
+   "aliases_en": [
+    "Argentine Republic",
+    "Republic of Argentina",
+    "Republica Argentina"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -3100,6 +4464,8 @@
    "en": "Liao",
    "desc_ar": "صفحة توضيح ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3113,6 +4479,8 @@
    "en": "Lunda",
    "desc_ar": "صفحة توضيح ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3126,6 +4494,12 @@
    "en": "Thrace",
    "desc_ar": "منطقة تاريخية وجغرافية تقع جنوب شرقي البلقان",
    "desc_en": "geographical and historical region in Southeast Europe",
+   "aliases_ar": [
+    "تراقية"
+   ],
+   "aliases_en": [
+    "Ancient Thrace and Ancient Thracians"
+   ],
    "p31": [
     "Q1620908",
     "Q28171280"
@@ -3140,6 +4514,15 @@
    "en": "Peru",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "sovereign state in South America",
+   "aliases_ar": [
+    "جمهورية بيرو"
+   ],
+   "aliases_en": [
+    "pe",
+    "Republic of Peru",
+    "Republica del Peru",
+    "per"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -3156,6 +4539,8 @@
    "en": "Kanem",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3169,6 +4554,18 @@
    "en": "Cambodia",
    "desc_ar": "دولة في جنوب شرق آسيا",
    "desc_en": "country in Southeast Asia",
+   "aliases_ar": [
+    "كامبوديا"
+   ],
+   "aliases_en": [
+    "Kingdom of Cambodia",
+    "kh",
+    "Kampuchea",
+    "Camboya",
+    "Campuchia",
+    "Kamboja",
+    "Kambodzha"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -3186,6 +4583,10 @@
    "en": "Brushed Ceramics Culture",
    "desc_ar": null,
    "desc_en": "European Bronze Age archaeological culture",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Brushed Ceramics culture"
+   ],
    "p31": [
     "Q465299"
    ],
@@ -3199,6 +4600,13 @@
    "en": "Turkey",
    "desc_ar": "دولة يقع معظمها في غرب آسيا و جزء منها في جنوب شرق أوروبا",
    "desc_en": "country in West Asia and Southeast Europe",
+   "aliases_ar": [
+    "جمهورية تركيا"
+   ],
+   "aliases_en": [
+    "Republic of Türkiye",
+    "Republic of Turkey"
+   ],
    "p31": [
     "Q3624078",
     "Q1323642",
@@ -3221,6 +4629,17 @@
    "en": "Dai Viet",
    "desc_ar": null,
    "desc_en": "Name of Vietnamese monarchy (1054 - 1400; 1428 - 1804)",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Great Viet",
+    "Vietnam",
+    "Viet Nam",
+    "Daiviet",
+    "Annam",
+    "Annan",
+    "An Nam",
+    "An Nan"
+   ],
    "p31": [
     "Q417175",
     "Q3024240"
@@ -3241,6 +4660,22 @@
    "en": "German Empire",
    "desc_ar": "إمبراطورية في وسط أوروبا بين 1871-1918",
    "desc_en": "German nation-state in Central Europe from 1871 to 1918",
+   "aliases_ar": [
+    "قيصرية ألمانية",
+    "إمبراطورية ألمانية",
+    "الإمبراطوريه الألمانيه",
+    "امبراطورية ألمانيا",
+    "الرايخ الثاني",
+    "الامبراطورية الألمانية",
+    "الأمبراطورية الألمانية",
+    "الامبراطورية الالمانية"
+   ],
+   "aliases_en": [
+    "German Reich",
+    "Imperial Germany",
+    "Second Reich",
+    "German Empire (1871-1918)"
+   ],
    "p31": [
     "Q11514315",
     "Q3024240",
@@ -3261,6 +4696,8 @@
    "en": "Alwa",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3274,6 +4711,13 @@
    "en": "Portugal",
    "desc_ar": "دولة في جنوب غرب أوروبا في شبه الجزيرة الأيبيرية",
    "desc_en": "country in Southwestern Europe",
+   "aliases_ar": [
+    "الجمهورية البرتغالية"
+   ],
+   "aliases_en": [
+    "Portuguese Republic",
+    "POR"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -3296,6 +4740,25 @@
    "en": "Berbers",
    "desc_ar": "مجموعة عرقية في شمال إفريقيا",
    "desc_en": "ethnic group indigenous to North Africa",
+   "aliases_ar": [
+    "امازيغ",
+    "الامازيغ",
+    "الامازيغي",
+    "قبائل أمازيغية",
+    "الأمازيغي",
+    "أمازيغي",
+    "تاريخ الأمازيغ",
+    "أمازيع",
+    "بربر",
+    "مازيغ",
+    "ماكسير",
+    "ماكلير"
+   ],
+   "aliases_en": [
+    "Imazighen",
+    "Amazigh",
+    "Berber"
+   ],
    "p31": [
     "Q41710",
     "Q4533081"
@@ -3310,6 +4773,10 @@
    "en": "Khoisan",
    "desc_ar": "من أهالي جنوب إفريقيا",
    "desc_en": "African ethnic group",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Hottentots"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -3323,6 +4790,30 @@
    "en": "Uyghurs",
    "desc_ar": "أقلية تركية تنتمي ثقافيًا وجغرافيًا لوسط آسيا وشرقها",
    "desc_en": "Turkic ethnic group of Central and East Asia",
+   "aliases_ar": [
+    "إيغور",
+    "اليوغور",
+    "الإيغور",
+    "ويغور",
+    "الويغور",
+    "شعب الأويغور",
+    "قومية اليوغور",
+    "الايغور",
+    "اويغور",
+    "الأويغور",
+    "قومية الويغور",
+    "الويجور"
+   ],
+   "aliases_en": [
+    "East Turkestani",
+    "Turki",
+    "Uigurs",
+    "Weiwuer",
+    "Uighurs",
+    "Uygur",
+    "Uigur",
+    "Weiwu'er"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -3336,6 +4827,12 @@
    "en": "Darfur",
    "desc_ar": "إقليم دارفور",
    "desc_en": "region of Sudan",
+   "aliases_ar": [
+    "ولايةدارفور الفاشر",
+    "دار فور",
+    "إقليم دارفور"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q28070554"
    ],
@@ -3349,6 +4846,12 @@
    "en": "Abyssinia",
    "desc_ar": "منطقة تاريخية في المرتفعات الشمالية لإثيوبيا وإرتريا",
    "desc_en": "ancient region in the northern highlands of Ethiopia and Eritrea",
+   "aliases_ar": [
+    "بلاد الحبشة"
+   ],
+   "aliases_en": [
+    "Al-Habash"
+   ],
    "p31": [
     "Q82794"
    ],
@@ -3362,6 +4865,10 @@
    "en": "Babylonia",
    "desc_ar": "دولة قديمة قامت في جنوب بلاد ما بين النهرين",
    "desc_en": "historical country",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Babylonian Kingdom"
+   ],
    "p31": [
     "Q7275",
     "Q3024240",
@@ -3383,6 +4890,8 @@
    "en": "Iningai",
    "desc_ar": null,
    "desc_en": "Aboriginal Australian people",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q41710"
    ],
@@ -3396,6 +4905,13 @@
    "en": "Innu people",
    "desc_ar": null,
    "desc_en": "First Nation in North America",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Nehilaw",
+    "Ilniw",
+    "Montagnais",
+    "Neenoilno"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -3409,6 +4925,11 @@
    "en": "Celtiberians",
    "desc_ar": null,
    "desc_en": "ancient Celtic peoples of the Iberian Peninsula",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Celtiberian people",
+    "Celtiberi"
+   ],
    "p31": [
     "Q4204501"
    ],
@@ -3422,6 +4943,13 @@
    "en": "Angevin Empire",
    "desc_ar": null,
    "desc_en": "former collection of states in north-western Europe during the High Middle Ages",
+   "aliases_ar": [
+    "الإمبراطورية الأنجيفية"
+   ],
+   "aliases_en": [
+    "L'Empire Plantagenêt",
+    "Plantagenet Empire"
+   ],
    "p31": [
     "Q417175",
     "Q188800",
@@ -3441,6 +4969,13 @@
    "en": "Hittites",
    "desc_ar": "شعب عاش في الأناضول وذكر في الكتاب المقدس العبري",
    "desc_en": "Anatolian ethnic group who built kingdoms at Kussara & Hattusa (c. 2000-700 BCE)",
+   "aliases_ar": [
+    "مملكة الحثيين"
+   ],
+   "aliases_en": [
+    "Hittite",
+    "Hettites"
+   ],
    "p31": [
     "Q4204501"
    ],
@@ -3456,6 +4991,16 @@
    "en": "Anglo-Egyptian Sudan",
    "desc_ar": "السودان تحت الحكم المشترك بين بريطانيا ومصر 1899 - 1956",
    "desc_en": "Joint British and Egyptian rule between 1899-1956",
+   "aliases_ar": [
+    "السودان البريطاني المصري",
+    "السودان الأنجلو مصرية",
+    "السودان الأنجلو مصري",
+    "السودان المصري الإنجليزي",
+    "السودان المصري"
+   ],
+   "aliases_en": [
+    "Anglo-Egyptian occupation of Sudan"
+   ],
    "p31": [
     "Q3024240",
     "Q734818"
@@ -3474,6 +5019,8 @@
    "en": "Annam",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3487,6 +5034,11 @@
    "en": "Mescalero",
    "desc_ar": null,
    "desc_en": "ethnic group in New Mexico, United States",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Mescalero Apache",
+    "Mescalero Apache Tribe of the Mescalero Apache Reservation"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -3500,6 +5052,10 @@
    "en": "Nobatia",
    "desc_ar": "مملكة مسيحية قديمة في السودان",
    "desc_en": "former country in modern-day Sudan",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Nobadia"
+   ],
    "p31": [
     "Q3024240",
     "Q417175"
@@ -3518,6 +5074,10 @@
    "en": "Ur",
    "desc_ar": "موقع أثري جنوب العراق",
    "desc_en": "ancient Mesopotamian city-state",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Tell al-Muqayyar"
+   ],
    "p31": [
     "Q15661340",
     "Q839954"
@@ -3536,6 +5096,8 @@
    "en": "Ngaanyatjarra",
    "desc_ar": null,
    "desc_en": "indigenous people in Western Australia",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q41710"
    ],
@@ -3549,6 +5111,10 @@
    "en": "Sikh",
    "desc_ar": "مجموعة دينية في وسط آسيا",
    "desc_en": "Religious group",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Sikhs"
+   ],
    "p31": [
     "Q11197007"
    ],
@@ -3562,6 +5128,13 @@
    "en": "Axum",
    "desc_ar": "مدينه في إثيوبيا",
    "desc_en": "town in Tigray Region, Ethiopia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Aksum",
+    "ኣኽሱም?",
+    "Mint of Axum",
+    "Axum town"
+   ],
    "p31": [
     "Q515",
     "Q690840"
@@ -3576,6 +5149,8 @@
    "en": "Wirangu",
    "desc_ar": null,
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3589,6 +5164,13 @@
    "en": "Chickasaw",
    "desc_ar": null,
    "desc_en": "indigenous people of Southeastern Woodlands of the US",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Chickkasaw",
+    "Chickasaw (etnická skupina)",
+    "Chickasaw Indian",
+    "Chickasaws"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -3602,6 +5184,12 @@
    "en": "Tonkin",
    "desc_ar": "منطقة في فيتنام",
    "desc_en": "northern part of Vietnam, to the west of the Gulf of Tonkin",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Tongkin",
+    "Tongking",
+    "Tonquin"
+   ],
    "p31": [
     "Q82794",
     "Q56061"
@@ -3616,6 +5204,17 @@
    "en": "Western Sahara",
    "desc_ar": "منطقة مُتنازع عليها بشمال غرب إفريقيا",
    "desc_en": "territory in North and West Africa",
+   "aliases_ar": [
+    "الصحراء المغربية",
+    "الصحراء الإسبانية",
+    "الأقاليم الجنوبية",
+    "الصحراء الغربية (المغرب)"
+   ],
+   "aliases_en": [
+    "West Sahara",
+    "Spanish Sahara",
+    "Southern Provinces"
+   ],
    "p31": [
     "Q15239622",
     "Q900119",
@@ -3631,6 +5230,14 @@
    "en": "Arapaho people",
    "desc_ar": null,
    "desc_en": "tribe of Native Americans historically living on the plains of Colorado and Wyoming",
+   "aliases_ar": [
+    "اراباهو"
+   ],
+   "aliases_en": [
+    "Arapahoe",
+    "Arapahos",
+    "Arapaho"
+   ],
    "p31": [
     "Q133311"
    ],
@@ -3644,6 +5251,8 @@
    "en": "Nogai Horde",
    "desc_ar": null,
    "desc_en": "former country",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q3024240",
     "Q1345055"
@@ -3662,6 +5271,8 @@
    "en": "Kingdom of Kapisi",
    "desc_ar": null,
    "desc_en": "former country",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q3024240",
     "Q1250464"
@@ -3676,6 +5287,8 @@
    "en": "Kokatha Mula",
    "desc_ar": null,
    "desc_en": "an Aboriginal Australian people of remote western South Australia",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q41710"
    ],
@@ -3689,6 +5302,8 @@
    "en": "Han",
    "desc_ar": "صفحة توضيح في ويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3702,6 +5317,8 @@
    "en": "Laurel Complex",
    "desc_ar": null,
    "desc_en": "former Native American culture in upper midwest and Canada",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q465299"
    ],
@@ -3715,6 +5332,10 @@
    "en": "Zaire",
    "desc_ar": "اسم قديم لجمهورية الكونغو الديمقراطية في الوقت الحالي والتي عاصمتها كينشاسا",
    "desc_en": "one-party military dictatorship in Central Africa (1965–1997) under Mobutu Sese Seko; renamed Republic of Zaire in 1971 as part of Mobutu's Authenticité policy; formerly Belgian Congo, now Democratic Republic of the Congo",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Republic of Zaire"
+   ],
    "p31": [
     "Q3024240",
     "Q3624078",
@@ -3735,6 +5356,16 @@
    "en": "Chad",
    "desc_ar": "دولة في وسط أفريقيا",
    "desc_en": "sovereign state in central Africa",
+   "aliases_ar": [
+    "جمهورية تشاد",
+    "تَشَاد"
+   ],
+   "aliases_en": [
+    "Republic of Chad",
+    "td",
+    "CHA",
+    "GUM"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -3752,6 +5383,10 @@
    "en": "Beothuk people",
    "desc_ar": null,
    "desc_en": "extinct indigenous people",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Beothuck"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -3765,6 +5400,14 @@
    "en": "British Somaliland",
    "desc_ar": "محمية بريطانية سابقة تقع في شرق إفريقيا",
    "desc_en": "former British protectorate",
+   "aliases_ar": [
+    "الصومال البريطانية",
+    "ولاية الصومال البريطانية",
+    "بريطانيا الصومالية"
+   ],
+   "aliases_en": [
+    "Somaliland"
+   ],
    "p31": [
     "Q3024240",
     "Q164142"
@@ -3783,6 +5426,17 @@
    "en": "New Zealand",
    "desc_ar": "دولة جزرية في جنوب المحيط الهادئ",
    "desc_en": "island country in the southwest Pacific Ocean",
+   "aliases_ar": [
+    "نيو زيلندا",
+    "نيوزيلاندا",
+    "زيلاندا الجديدة",
+    "زلندة الجديدة"
+   ],
+   "aliases_en": [
+    "Dominion of New Zealand",
+    "nz",
+    "Aotearoa New Zealand"
+   ],
    "p31": [
     "Q202686",
     "Q223832",
@@ -3807,6 +5461,19 @@
    "en": "India",
    "desc_ar": "دولة في جنوب آسيا",
    "desc_en": "country in South Asia",
+   "aliases_ar": [
+    "جمهورية الهند"
+   ],
+   "aliases_en": [
+    "Republic of India",
+    "Bharatvarsh",
+    "Hindustan",
+    "Bharata",
+    "Hindoostan",
+    "Indostan",
+    "Bharat Ganarajya",
+    "Al Hind"
+   ],
    "p31": [
     "Q6256",
     "Q3624078",
@@ -3824,6 +5491,10 @@
    "en": "Kamerun",
    "desc_ar": "الكاميرون الألمانية ‏ مستعمرة للإمبراطورية الألمانية بغرب أفريقيا من 1884-1916 في المنطقة التي هي اليوم جمهورية الكاميرون",
    "desc_en": "West African colony of the German Empire from 1884 to 1916",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Cameroon"
+   ],
    "p31": [
     "Q3024240",
     "Q133156"
@@ -3842,6 +5513,12 @@
    "en": "Thule",
    "desc_ar": null,
    "desc_en": "island in the far north in classical European literature",
+   "aliases_ar": [],
+   "aliases_en": [
+    "ultima Thule",
+    "Thoúlē",
+    "Thūlē"
+   ],
    "p31": [
     "Q129264"
    ],
@@ -3855,6 +5532,8 @@
    "en": "Mahra",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3868,6 +5547,8 @@
    "en": "Manchu Empire",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3881,6 +5562,8 @@
    "en": "Mauri people",
    "desc_ar": "سكان موريطنية القديمة",
    "desc_en": "Latin designation for the Berber population of Mauretania",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q3117863",
     "Q2472587"
@@ -3895,6 +5578,12 @@
    "en": "Chola Empire",
    "desc_ar": null,
    "desc_en": "South Indian kingdom (848 CE–1070 CE)",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Medieval Cholas",
+    "Imperial Cholas",
+    "Chola empire"
+   ],
    "p31": [
     "Q48349",
     "Q3024240"
@@ -3913,6 +5602,14 @@
    "en": "Spanish Sahara",
    "desc_ar": "منطقة الصحراء التي كانت تحت السيطرة الإسبانية من 1884 إلى 1976",
    "desc_en": "former Spanish North African colonial possession",
+   "aliases_ar": [
+    "الأملاك الإسبانية في الصحراء",
+    "الأملاك الإسبانية الصحراوية"
+   ],
+   "aliases_en": [
+    "Sáhara Español",
+    "Spanish Possessions in the Sahara"
+   ],
    "p31": [
     "Q183366",
     "Q3024240",
@@ -3933,6 +5630,15 @@
    "en": "Papua New Guinea",
    "desc_ar": "دولة في جنوب شرق آسيا",
    "desc_en": "country in Oceania",
+   "aliases_ar": [
+    "بابوا وغينيا الجديدة",
+    "بابوا نيو غينيا",
+    "بابوا غينيا الجديده",
+    "بابوا نيوغينيا"
+   ],
+   "aliases_en": [
+    "Independent State of Papua New Guinea"
+   ],
    "p31": [
     "Q202686",
     "Q112099",
@@ -3953,6 +5659,10 @@
    "en": null,
    "desc_ar": "بلدية في لاغونا، الفلبين",
    "desc_en": "municipality of the Philippines in the province of Laguna",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Municipality of Luisiana"
+   ],
    "p31": [
     "Q24764"
    ],
@@ -3968,6 +5678,8 @@
    "en": "Nganasan",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -3981,6 +5693,12 @@
    "en": "Kingdom of France",
    "desc_ar": "مملكة في غرب أوروبا (987 - 1791)",
    "desc_en": "monarchical state that ruled France from 987 to 1792, and again from 1814 to 1848 (except during the Hundred Days in 1815)",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Kingdom of France and Navarre",
+    "França e Navarra",
+    "French kingdom"
+   ],
    "p31": [
     "Q3624078",
     "Q3024240",
@@ -4001,6 +5719,11 @@
    "en": "Mongolia",
    "desc_ar": "دولة في آسيا الوسطى و شرق آسيا",
    "desc_en": "country in East Asia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Mongol State",
+    "State of Mongolia"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -4019,6 +5742,12 @@
    "en": "Venezuela",
    "desc_ar": "دولة في أمريكا الجنوبية تطل على منطقة البحر الكاريبي",
    "desc_en": "country in South America",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Bolivarian Republic of Venezuela",
+    "BR Venezuela",
+    "Republic of Venezuela"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -4036,6 +5765,8 @@
    "en": "Asante",
    "desc_ar": "صفحة توضيح لويكيميديا",
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -4049,6 +5780,17 @@
    "en": "Suriname",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "country in South America",
+   "aliases_ar": [
+    "جمهورية سورينام"
+   ],
+   "aliases_en": [
+    "Surinam",
+    "Republic of Suriname",
+    "Republic of Surinam",
+    "Dutch Guiana",
+    "sr",
+    "Surrinam"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -4066,6 +5808,11 @@
    "en": "Paraguay",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "sovereign state in South America",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Republic of Paraguay",
+    "Heart of South America"
+   ],
    "p31": [
     "Q7270",
     "Q3624078",
@@ -4084,6 +5831,17 @@
    "en": "Guyana",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "country in South America",
+   "aliases_ar": [
+    "جمهورية التعاونية غيانا",
+    "جمهورية غيانا التعاونية",
+    "غويانا",
+    "جمهورية التعاونية غويانا"
+   ],
+   "aliases_en": [
+    "Co-operative Republic of Guyana",
+    "gy",
+    "Republic of Guyana"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -4100,6 +5858,21 @@
    "en": "Ecuador",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "sovereign state in South America",
+   "aliases_ar": [
+    "اكوادور",
+    "أكوادور",
+    "الأكوادور",
+    "الاكوادور",
+    "إكوادور",
+    "إکوادور",
+    "أكوادوري"
+   ],
+   "aliases_en": [
+    "Republic of Ecuador",
+    "Republic of the Equator",
+    "Republic of Equator",
+    "The Ecuadorian State"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -4120,6 +5893,8 @@
    "en": "Rupert's Land",
    "desc_ar": null,
    "desc_en": "territory in British North America",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q183366"
    ],
@@ -4137,6 +5912,12 @@
    "en": "Colombia",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "country in South America",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Republic of Colombia",
+    "The Republic of Colombia",
+    "Colombiá"
+   ],
    "p31": [
     "Q3624078",
     "Q7270",
@@ -4156,6 +5937,8 @@
    "en": "air",
    "desc_ar": "غاز",
    "desc_en": "homogeneous mixture of the gaseous substances nitrogen, oxygen, and smaller amounts of other substances; gas mixture present in the Earth's atmosphere",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q11432",
     "Q169336",
@@ -4171,6 +5954,16 @@
    "en": "Bolivia",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "sovereign state in South America",
+   "aliases_ar": [
+    "البوليفية",
+    "بولیفیا",
+    "بوليفي"
+   ],
+   "aliases_en": [
+    "Plurinational State of Bolivia",
+    "Republic of Bolivia",
+    "Bolivia (Plurinational State of)"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -4188,6 +5981,17 @@
    "en": "Uruguay",
    "desc_ar": "دولة في أمريكا الجنوبية",
    "desc_en": "sovereign state in South America",
+   "aliases_ar": [
+    "أوروغواي",
+    "جمهورية الأوروغواي الشرقية",
+    "الجمهورية الشرقية للأوروغواي"
+   ],
+   "aliases_en": [
+    "uy",
+    "URU",
+    "Oriental Republic of Uruguay",
+    "Eastern Republic of Uruguay"
+   ],
    "p31": [
     "Q3624078",
     "Q859563",
@@ -4206,6 +6010,16 @@
    "en": "Guatemala",
    "desc_ar": "دولة في أمريكا الوسطى",
    "desc_en": "sovereign state in Central America",
+   "aliases_ar": [
+    "جواتيمالا",
+    "جمهورية غواتيمالا"
+   ],
+   "aliases_en": [
+    "gt",
+    "Republic of Guatemala",
+    "GTM",
+    "GT"
+   ],
    "p31": [
     "Q3624078",
     "Q7270",
@@ -4224,6 +6038,13 @@
    "en": "Honduras",
    "desc_ar": "دولة في أمريكا الوسطى",
    "desc_en": "sovereign state in Central America",
+   "aliases_ar": [],
+   "aliases_en": [
+    "hn",
+    "Republic of Honduras",
+    "Honduran Republic",
+    "HON"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -4240,6 +6061,16 @@
    "en": "Egypt",
    "desc_ar": "دولة عربية تقع في شمال شرق إفريقيا وجنوب غرب آسيا",
    "desc_en": "country in Northeast Africa and Southwest Asia",
+   "aliases_ar": [
+    "جمهوريّة مصر العربيّة"
+   ],
+   "aliases_en": [
+    "Republic of Egypt",
+    "Arab Republic of Egypt",
+    "Arab Rep. Egypt",
+    "Rep. Egypt",
+    "Misr"
+   ],
    "p31": [
     "Q3624078",
     "Q1323642",
@@ -4258,6 +6089,8 @@
    "en": "Ayutthaya",
    "desc_ar": null,
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4167410"
    ],
@@ -4271,6 +6104,26 @@
    "en": "Iran",
    "desc_ar": "دولة في الشرق الأوسط",
    "desc_en": "country in Western Asia",
+   "aliases_ar": [
+    "ايران",
+    "الجمهورية الإسلامية الإيرانية",
+    "ایران",
+    "الجمهورية الإسلامية في إيران",
+    "الجمهور الإسلامية الإيرانية",
+    "جمهوریة إیران الإسلامیة",
+    "جمهورية إيران الإسلامية",
+    "جمهورية إيران",
+    "الجمهورية الاسلامية الايرانية",
+    "جمهوريّة إيران الإسلامية",
+    "الجمهورية الإسلامية الايرانية",
+    "ايران الأکبر"
+   ],
+   "aliases_en": [
+    "Islamic Republic of Iran",
+    "ir",
+    "Islamic Rep. Iran",
+    "IRI"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -4294,6 +6147,16 @@
    "en": "Iraq",
    "desc_ar": "دولة عربية في غرب آسيا",
    "desc_en": "sovereign state in Western Asia",
+   "aliases_ar": [
+    "جمهورية العراق",
+    "الجمهورية العراقية",
+    "جُمْهُوريَّة العِرَاق",
+    "عراق"
+   ],
+   "aliases_en": [
+    "Republic of Iraq",
+    "iq"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -4310,6 +6173,10 @@
    "en": "Bengal",
    "desc_ar": "منطقة تاريخية في الراج البريطاني تقع حاليا شرق الهند ودولة بنغلاديش",
    "desc_en": "historical and geographical region in the east region of the Indian subcontinent",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Bangal"
+   ],
    "p31": [
     "Q1620908",
     "Q82794"
@@ -4324,6 +6191,15 @@
    "en": "Yemen",
    "desc_ar": "دولة عربية تقع في شبه الجزيرة العربية",
    "desc_en": "country in West Asia",
+   "aliases_ar": [
+    "الجمهورية اليمنية",
+    "دولة اليمن"
+   ],
+   "aliases_en": [
+    "Republic of Yemen",
+    "ye",
+    "Rep. Yemen"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -4340,6 +6216,8 @@
    "en": "Zhoa",
    "desc_ar": "بلدة في الكاميرون",
    "desc_en": "commune of Cameroon",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q3076994"
    ],
@@ -4353,6 +6231,10 @@
    "en": "Barghawata",
    "desc_ar": "إمارة نشأت في المغرب من 744 إلى 1058",
    "desc_en": "Amazigh (berber) ethnic group",
+   "aliases_ar": [
+    "برغواطة"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q41710",
     "Q107410977"
@@ -4371,6 +6253,16 @@
    "en": "Nicaragua",
    "desc_ar": "دولة في أمريكا الوسطى",
    "desc_en": "sovereign state in Central America",
+   "aliases_ar": [
+    "نيكاراجوا"
+   ],
+   "aliases_en": [
+    "ni",
+    "Republic of Nicaragua",
+    "NIC",
+    "NI",
+    "NCA"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -4387,6 +6279,19 @@
    "en": "Manchuria",
    "desc_ar": "منطقة جغرافية واسعة في شرق آسيا في الصين وروسيا",
    "desc_en": "geographic region in Northeast Asia",
+   "aliases_ar": [
+    "مانشوريا"
+   ],
+   "aliases_en": [
+    "Mandchuria",
+    "Manzhou",
+    "Man-chou",
+    "Manchouria",
+    "Mandchouria",
+    "Manchooria",
+    "Dongbei",
+    "Northeast"
+   ],
    "p31": [
     "Q1620908"
    ],
@@ -4400,6 +6305,14 @@
    "en": "Kyrgyzstan",
    "desc_ar": "دولة في آسيا الوسطى",
    "desc_en": "sovereign state in Central Asia",
+   "aliases_ar": [
+    "قرغيزيا",
+    "قيرغيزستان"
+   ],
+   "aliases_en": [
+    "Kyrgyz Republic",
+    "kg"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -4418,6 +6331,10 @@
    "en": "Karluks",
    "desc_ar": null,
    "desc_en": "ethnic group",
+   "aliases_ar": [
+    "القارلوق"
+   ],
+   "aliases_en": [],
    "p31": [
     "Q41710"
    ],
@@ -4431,6 +6348,12 @@
    "en": "Laos",
    "desc_ar": "دولة في جنوب شرق آسيا",
    "desc_en": "country in Southeast Asia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Lao People's Democratic Republic",
+    "la",
+    "Lao PDR"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -4450,6 +6373,8 @@
    "en": "palas",
    "desc_ar": null,
    "desc_en": "German medieval castle hall",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [],
    "inception": [],
    "dissolved": [],
@@ -4461,6 +6386,13 @@
    "en": "Malaysia",
    "desc_ar": "دولة في جنوب شرق آسيا",
    "desc_en": "country in Southeast Asia",
+   "aliases_ar": [
+    "🇲🇾"
+   ],
+   "aliases_en": [
+    "Federation of Malaysia",
+    "Malaysia Federation"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -4478,6 +6410,20 @@
    "en": "Nepal",
    "desc_ar": "دولة في جنوب آسيا",
    "desc_en": "country in South Asia",
+   "aliases_ar": [
+    "النيبال",
+    "جمهورية نيبال الديمقراطية الاتحادية"
+   ],
+   "aliases_en": [
+    "Federal Democratic Republic of Nepal",
+    "Nipal",
+    "Nekbal",
+    "Nehpal",
+    "Palpou",
+    "Naipala",
+    "Naipála",
+    "Pa-lo-pou"
+   ],
    "p31": [
     "Q123480",
     "Q3624078",
@@ -4498,6 +6444,30 @@
    "en": "Sasanian Empire",
    "desc_ar": "إمبراطورية فارسية استمرت لأكثر من أربعة قرون من 224 إلى 651 م",
    "desc_en": "last pre-Islamic Iranian empire (224–651 AD)",
+   "aliases_ar": [
+    "آل ساسان",
+    "الساساني",
+    "الساسانيون",
+    "الدولة الساسانية",
+    "العهود الساسانية",
+    "أكاسرة",
+    "الفرس الساسانيين",
+    "الساسانيين",
+    "العهد الساساني",
+    "ساسانيين",
+    "العصر الساساني",
+    "الساسانية"
+   ],
+   "aliases_en": [
+    "Neo-Persian Empire",
+    "Ērānshahr",
+    "Ērān",
+    "Second Persian Empire",
+    "Sassanid Empire",
+    "Sasanid Empire",
+    "Sassanid Persia",
+    "Sasanid Persia"
+   ],
    "p31": [
     "Q83311",
     "Q3024240",
@@ -4517,6 +6487,15 @@
    "en": "Oman",
    "desc_ar": "دولة في غرب آسيا",
    "desc_en": "sovereign state in western Asia",
+   "aliases_ar": [
+    "عُمان"
+   ],
+   "aliases_en": [
+    "om",
+    "Sultanate of Oman",
+    "omn",
+    "Uman"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -4534,6 +6513,16 @@
    "en": "Pakistan",
    "desc_ar": "دولة في جنوب آسيا",
    "desc_en": "sovereign state in South Asia",
+   "aliases_ar": [
+    "جمهورية باكستان الإسلامية"
+   ],
+   "aliases_en": [
+    "Islamic Republic of Pakistan",
+    "Republic of Pakistan",
+    "pk",
+    "Hồi Quốc",
+    "Tây Hồi"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -4550,6 +6539,24 @@
    "en": "Saudi Arabia",
    "desc_ar": "دولة عربية تقع في شبه الجزيرة العربية غرب اسيا",
    "desc_en": "country in West Asia",
+   "aliases_ar": [
+    "السعوديه",
+    "المملكة العربيّة السُعودِيَة",
+    "المملكه العربيه السعوديه",
+    "الدولة السعودية",
+    "الدوله السعوديه",
+    "مهبط الوحي",
+    "منبع الرسالة",
+    "سعودية",
+    "سعوديه",
+    "المملكة السعودية",
+    "المملكة العربية",
+    "دولة آل سعود"
+   ],
+   "aliases_en": [
+    "Kingdom of Saudi Arabia",
+    "Saudi"
+   ],
    "p31": [
     "Q3624078",
     "Q417175",
@@ -4569,6 +6576,11 @@
    "en": "Bundelkhand",
    "desc_ar": "منطقة جغرافية لوسط الهند",
    "desc_en": "geographic region of central India",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Jejakabhukti",
+    "Mekala"
+   ],
    "p31": [
     "Q82794"
    ],
@@ -4582,6 +6594,15 @@
    "en": "Umayyad Caliphate",
    "desc_ar": "دولة إسلامية سابقة، أسسها معاوية بن أبي سفيان واستمرت ما بين (41 – 132هـ / 661 – 750م)",
    "desc_en": "second Islamic caliphate (661–750 CE)",
+   "aliases_ar": [
+    "دولة بني أمية",
+    "دولة الأمويين",
+    "الخلافة الأموية"
+   ],
+   "aliases_en": [
+    "Umayyad Empire",
+    "Caliphate of Damascus"
+   ],
    "p31": [
     "Q1323642",
     "Q131401",
@@ -4604,6 +6625,15 @@
    "en": "Syria",
    "desc_ar": "دولة عربية تقع في الشرق الأوسط",
    "desc_en": "country in West Asia",
+   "aliases_ar": [
+    "سورية",
+    "الجمهورية العربية السورية",
+    "الجمهوريّة العربيّة السّوريّة"
+   ],
+   "aliases_en": [
+    "Syrian Arab Republic",
+    "Sūriyā"
+   ],
    "p31": [
     "Q6256",
     "Q3624078",
@@ -4621,6 +6651,13 @@
    "en": "Tajikistan",
    "desc_ar": "دولة في آسيا الوسطى",
    "desc_en": "sovereign state in Central Asia",
+   "aliases_ar": [
+    "تاجیکستان"
+   ],
+   "aliases_en": [
+    "Republic of Tajikistan",
+    "tj"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -4641,6 +6678,20 @@
    "en": "Thailand",
    "desc_ar": "دولة في جنوب شرق آسيا",
    "desc_en": "country in Southeast Asia",
+   "aliases_ar": [
+    "مملكة تايلاند",
+    "تايلند"
+   ],
+   "aliases_en": [
+    "Kingdom of Thailand",
+    "th",
+    "Kingdom of Siam",
+    "The Kingdom of Thailand",
+    "The Kingdom of Siam",
+    "Thai",
+    "Ratcha-anachak Thai",
+    "Prathet Thai"
+   ],
    "p31": [
     "Q41614",
     "Q3624078",
@@ -4660,6 +6711,14 @@
    "en": "Turkmenistan",
    "desc_ar": "دولة في آسيا الوسطى",
    "desc_en": "country in Central Asia",
+   "aliases_ar": [
+    "تركمانيا"
+   ],
+   "aliases_en": [
+    "Turkmenia",
+    "tm",
+    "TKM"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -4677,6 +6736,20 @@
    "en": "United Arab Emirates",
    "desc_ar": "دولة تقع في الساحل الشرقي لشبه الجزيرة العربية",
    "desc_en": "country in Western Asia",
+   "aliases_ar": [
+    "دولة الإمارات العربية المتحدة",
+    "الامارات",
+    "الإمارات"
+   ],
+   "aliases_en": [
+    "U.A.E.",
+    "ae",
+    "Emirates",
+    "the United Arab Emirates",
+    "the UAE",
+    "the U.A.E.",
+    "the Emirates"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -4693,6 +6766,19 @@
    "en": "Vietnam",
    "desc_ar": "دولة في جنوب شرق آسيا",
    "desc_en": "country in Southeast Asia",
+   "aliases_ar": [
+    "جمهورية فيتنام الاشتراكية"
+   ],
+   "aliases_en": [
+    "Socialist Republic of Vietnam",
+    "VN",
+    "VIE",
+    "Việt Nam",
+    "SRV",
+    "VNM",
+    "Viet Nam",
+    "Socialist Republic of Viet Nam"
+   ],
    "p31": [
     "Q3624078",
     "Q849866",
@@ -4712,6 +6798,16 @@
    "en": "Afghanistan",
    "desc_ar": "دولة في آسيا الوسطى",
    "desc_en": "country in Central and South Asia",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Affghanistan",
+    "Afghania",
+    "Affghanisthan",
+    "Affghaunistan",
+    "Afghanisthan",
+    "Afghaunistan",
+    "Afghaunistaun"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -4739,6 +6835,11 @@
    "en": "Bidjara",
    "desc_ar": null,
    "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Pitjara",
+    "Bidyara"
+   ],
    "p31": [
     "Q4167410"
    ],
@@ -4752,6 +6853,17 @@
    "en": "Viceroyalty of New Granada",
    "desc_ar": "نائبية الإمبراطورية الإسبانية في الأمريكتين (1717-1819)",
    "desc_en": "viceroyalty of the Spanish Empire in the Americas (1717-1819)",
+   "aliases_ar": [],
+   "aliases_en": [
+    "New Granada",
+    "Terra Firma",
+    "Terra Ferma",
+    "Nueva Granada",
+    "Spanish Colombia",
+    "Spanish Venezuela",
+    "Spanish Ecuador",
+    "Colonial Colombia"
+   ],
    "p31": [
     "Q20203507",
     "Q15893266"
@@ -4770,6 +6882,17 @@
    "en": "Bangladesh",
    "desc_ar": "دولة في جنوب آسيا",
    "desc_en": "country in South Asia",
+   "aliases_ar": [
+    "جمهورية بنغلاديش الشعبية",
+    "بنجلاديش"
+   ],
+   "aliases_en": [
+    "People's Republic of Bangladesh",
+    "bd",
+    "Bangla Desh",
+    "Land of Bengal",
+    "Country of Bengal"
+   ],
    "p31": [
     "Q3624078",
     "Q465613",
@@ -4787,6 +6910,13 @@
    "en": "Mali",
    "desc_ar": "دولة في غرب إفريقيا",
    "desc_en": "country in West Africa",
+   "aliases_ar": [
+    "جمهورية مالي"
+   ],
+   "aliases_en": [
+    "Republic of Mali",
+    "ml"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -4804,6 +6934,15 @@
    "en": "Angola",
    "desc_ar": "دولة ساحلية في جنوب وسط أفريقيا",
    "desc_en": "country on the west coast of Southern Africa",
+   "aliases_ar": [
+    "أنجولا",
+    "جمهورية أنغولا"
+   ],
+   "aliases_en": [
+    "Republic of Angola",
+    "ao",
+    "Ngola"
+   ],
    "p31": [
     "Q3624078",
     "Q200464",
@@ -4823,6 +6962,10 @@
    "en": "British Guiana",
    "desc_ar": null,
    "desc_en": "British possession in the Guianas region between 1814–1966",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Colonial Guyana"
+   ],
    "p31": [
     "Q1351282"
    ],
@@ -4840,6 +6983,10 @@
    "en": "Kaarta",
    "desc_ar": null,
    "desc_en": "Bambara kingdom",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Ka'arta"
+   ],
    "p31": [
     "Q3024240"
    ],
@@ -4857,6 +7004,15 @@
    "en": "Philippines",
    "desc_ar": "دولة في جنوب شرق آسيا",
    "desc_en": "archipelagic country in Southeast Asia",
+   "aliases_ar": [
+    "جمهورية الفلبين"
+   ],
+   "aliases_en": [
+    "Republic of the Philippines",
+    "The Philippines",
+    "Philippine Islands",
+    "RP"
+   ],
    "p31": [
     "Q3624078",
     "Q11815167",
@@ -4878,6 +7034,11 @@
    "en": "Central African Republic",
    "desc_ar": "دولة في وسط إفريقيا",
    "desc_en": "country in Central Africa",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Central Africa",
+    "cf"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -4896,6 +7057,8 @@
    "en": "Blemmyes",
    "desc_ar": null,
    "desc_en": "ancient nomadic African kingdom",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q4204501"
    ],
@@ -4909,6 +7072,17 @@
    "en": "Tunisia",
    "desc_ar": "دولة عربية تقع في شمال إفريقيا",
    "desc_en": "country in North Africa",
+   "aliases_ar": [
+    "تُوْنِس",
+    "تونس الخضراء",
+    "الجمهورية التونسية",
+    "تُوْنُس"
+   ],
+   "aliases_en": [
+    "Republic of Tunisia",
+    "Tunisian Republic",
+    "tn"
+   ],
    "p31": [
     "Q6256",
     "Q3624078",
@@ -4927,6 +7101,13 @@
    "en": "Zambia",
    "desc_ar": "دولة في جنوب شرق أفريقيا",
    "desc_en": "country at the crossroads of Central and Southern Africa",
+   "aliases_ar": [
+    "جمهورية زامبيا"
+   ],
+   "aliases_en": [
+    "Republic of Zambia",
+    "Zed"
+   ],
    "p31": [
     "Q3624078",
     "Q7270",
@@ -4945,6 +7126,8 @@
    "en": "Northern Rhodesia",
    "desc_ar": null,
    "desc_en": "1911–1964 British protectorate in Southern Africa",
+   "aliases_ar": [],
+   "aliases_en": [],
    "p31": [
     "Q164142",
     "Q21479969"
@@ -4963,6 +7146,15 @@
    "en": "Zimbabwe",
    "desc_ar": "دولة في جنوب شرق أفريقيا",
    "desc_en": "sovereign state in southern Africa",
+   "aliases_ar": [
+    "جمهورية زيمبابوي"
+   ],
+   "aliases_en": [
+    "Republic of Zimbabwe",
+    "Southern Rhodesia",
+    "Rhodesia",
+    "Zimbabwe Rhodesia"
+   ],
    "p31": [
     "Q7270",
     "Q3624078",
@@ -4981,6 +7173,17 @@
    "en": "Wiradjuri",
    "desc_ar": null,
    "desc_en": "Indigenous Australian people including family groups and clans throughout central New South Wales.",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Wirraayjuurray",
+    "Waradgeri",
+    "Warandgeri",
+    "Waradajhi",
+    "Werogery",
+    "Wiiratheri",
+    "Wira-Athoree",
+    "Wiradhuri"
+   ],
    "p31": [
     "Q41710"
    ],
@@ -4994,6 +7197,18 @@
    "en": "Mexico",
    "desc_ar": "دولة في أمريكا الشمالية",
    "desc_en": "country in North America",
+   "aliases_ar": [
+    "الولايات المتحدة المكسيكية"
+   ],
+   "aliases_en": [
+    "Mexican United States",
+    "Mexican Republic",
+    "US of M",
+    "United States of Mexico",
+    "mx",
+    "United Mexican States",
+    "MXN"
+   ],
    "p31": [
     "Q3624078",
     "Q6256",
@@ -5016,6 +7231,10 @@
    "en": "Benin",
    "desc_ar": "دولة في أفريقيا الغربية",
    "desc_en": "sovereign state in West Africa",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Republic of Benin"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
@@ -5032,6 +7251,12 @@
    "en": "Botswana",
    "desc_ar": "دولة في افريقيا الجنوبية",
    "desc_en": "sovereign state in Southern Africa",
+   "aliases_ar": [],
+   "aliases_en": [
+    "bw",
+    "Republic of Botswana",
+    "Lefatshe la Botswana"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -5049,6 +7274,23 @@
    "en": "Burkina Faso",
    "desc_ar": "دولة في غرب أفريقيا",
    "desc_en": "sovereign state in Africa",
+   "aliases_ar": [
+    "بوركينافاسو",
+    "بوركينا فاصو",
+    "بوركينافاصو",
+    "بركينا فاسو",
+    "بوركينياني",
+    "بورکینا فاسو",
+    "فولطا العليا",
+    "بوركينفاسو",
+    "قائمة جزر بوركينا فاسو",
+    "بوركینا فاسو"
+   ],
+   "aliases_en": [
+    "bf",
+    "Republic of Upper Volta (-1984)",
+    "Republic of Burkina Faso"
+   ],
    "p31": [
     "Q3624078",
     "Q123480",
@@ -5066,6 +7308,18 @@
    "en": "Eritrea",
    "desc_ar": "دولة في شرق أفريقيا",
    "desc_en": "country in the Horn of Africa",
+   "aliases_ar": [
+    "دولة إرتريا",
+    "دولة إريتريا",
+    "إريتريا",
+    "ارتريا"
+   ],
+   "aliases_en": [
+    "State of Eritrea",
+    "Ertrā",
+    "Iritriyā",
+    "er"
+   ],
    "p31": [
     "Q3624078",
     "Q6256"
