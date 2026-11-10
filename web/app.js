@@ -979,7 +979,7 @@ const warnEl = document.getElementById("era-warn");
 const countEl = document.getElementById("count");
 
 function markEra(id) {
-  for (const btn of erasEl.querySelectorAll("button")) btn.setAttribute("aria-pressed", String(Number(btn.dataset.era) === id));
+  eraArc?.show(id);
 }
 const PRECISION_LABEL = { 1: "تقريبية", 2: "دقة متوسطة", 3: "محددة بالقانون الدولي" };
 // طبقة الشعوب والقبائل: مضلعات يصنّفها ويكي بيانات شعوباً لا دولاً، ترسمها فوق الحدود بلون ونقط مختلفين.
@@ -1219,15 +1219,136 @@ const borderSelect = document.getElementById("border-select");
 const borderNoteEl = document.getElementById("border-note");
 borderSelect.innerHTML = `<option value="modern">الدول اليوم (Natural Earth)</option>` + BORDER_YEARS.map((y) => `<option value="${y}">${escapeHtml(yearLabel(y))}</option>`).join("");
 borderSelect.addEventListener("change", () => loadBorders(borderSelect.value));
-for (const era of ERAS) {
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.textContent = era.label;
-  btn.dataset.era = era.id;
-  btn.setAttribute("aria-pressed", "false");
-  btn.addEventListener("click", () => loadEra(era));
-  erasEl.appendChild(btn);
+// قوس الحقب: الحقب الثماني على قوس تُديره اليد أو الأسهم، والحقبة المركّزة يظهر وصفها.
+// «ادخل الحقبة» والنقر على بطاقة يستدعيان loadEra نفسها، فلا منطق مكرر. الحقبة المحمّلة في الخريطة
+// تُعلَّم (aria-pressed)، ويدور القوس إليها حين يغيّرها الشريط الزمني.
+let eraArc = null;
+const eraSpan = (e) => `${yearLabel(e.from)} – ${yearLabel(e.to)}`;
+function buildEraArc() {
+  const track = erasEl;
+  const root = document.getElementById("eras-arc");
+  const titleEl = document.getElementById("era-title");
+  const spanEl = document.getElementById("era-span");
+  const dotsEl = document.getElementById("era-dots");
+  const enterEl = document.getElementById("era-enter");
+  const n = ERAS.length;
+  // ألوان الحقب من القديم (رملي ذهبي) إلى الحديث (أخضر مزرق)، كما في المكعّب
+  const stops = [[204, 150, 74], [196, 100, 56], [150, 92, 170], [56, 150, 142]];
+  const ramp = (t) => { const x = t * (stops.length - 1); const i = Math.min(Math.floor(x), stops.length - 2); const f = x - i; return stops[i].map((c, j) => Math.round(c + (stops[i + 1][j] - c) * f)); };
+  const S = { spacing: 13, activeScale: 1.32, inactiveScale: 0.86, inactiveOpacity: 0.78, lift: 26, tilt: 1 };
+  let R = 220, pos = 0, target = 0, raf = 0, shown = -1, loaded = -1, moved = false, drag = null, dragEnd = 0;
+  const cards = ERAS.map((e, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "arc-card";
+    b.dataset.era = String(e.id);
+    b.setAttribute("aria-pressed", "false");
+    b.setAttribute("aria-label", `${e.label}، ${eraSpan(e)}`);
+    const [r, g, bl] = ramp(i / (n - 1));
+    b.style.background = `linear-gradient(160deg, rgb(${Math.min(255, r + 40)},${Math.min(255, g + 40)},${Math.min(255, bl + 40)}), rgb(${r},${g},${bl}) 55%, rgb(${Math.round(r * .62)},${Math.round(g * .62)},${Math.round(bl * .62)}))`;
+    b.innerHTML = `<span class="no">${String(e.id).padStart(2, "0")}</span><span class="yr">${escapeHtml(eraSpan(e))}</span>`;
+    b.addEventListener("click", () => { if (performance.now() - dragEnd < 300) return; go(i); loadEra(e); });
+    track.appendChild(b);
+    dotsEl.appendChild(document.createElement("i"));
+    return b;
+  });
+
+  function render() {
+    cards.forEach((el, i) => {
+      const d = i - pos; // موجب: أحدث من المركّزة، ويُرسم إلى اليسار (الزمن يسير من اليمين إلى اليسار)
+      const a = (d * S.spacing * Math.PI) / 180;
+      const x = -R * Math.sin(a);
+      const y = R * (1 - Math.cos(a)) + (Math.abs(d) < 1 ? -S.lift * (1 - Math.abs(d)) : 0);
+      const near = Math.max(0, 1 - Math.abs(d));
+      const sc = S.inactiveScale + (S.activeScale - S.inactiveScale) * near;
+      const op = Math.abs(d) > 3.5 ? Math.max(0, S.inactiveOpacity * (4.5 - Math.abs(d))) : S.inactiveOpacity + (1 - S.inactiveOpacity) * near;
+      el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) rotate(${(-d * S.spacing * S.tilt).toFixed(2)}deg) scale(${sc.toFixed(3)})`;
+      el.style.opacity = op.toFixed(3);
+      el.style.zIndex = String(100 - Math.round(Math.abs(d) * 10));
+    });
+    const idx = Math.round(Math.max(0, Math.min(n - 1, pos)));
+    if (idx !== shown) {
+      shown = idx;
+      const e = ERAS[idx];
+      titleEl.textContent = e.label;
+      spanEl.textContent = eraSpan(e);
+      descEl.textContent = e.desc;
+      [...dotsEl.children].forEach((d, j) => d.classList.toggle("on", j === idx));
+      cards.forEach((b, j) => { b.tabIndex = j === idx ? 0 : -1; });
+    }
+    enterEl.disabled = idx === loaded;
+    enterEl.textContent = idx === loaded ? "في الخريطة" : "ادخل الحقبة";
+  }
+  function tick() {
+    const d = target - pos;
+    if (Math.abs(d) < 0.001) { pos = target; render(); raf = 0; return; }
+    pos += d * 0.16;
+    render();
+    raf = requestAnimationFrame(tick);
+  }
+  function go(i) {
+    target = Math.max(0, Math.min(n - 1, i));
+    if (reduceMotion) { pos = target; render(); return; }
+    if (!raf) raf = requestAnimationFrame(tick);
+  }
+  function layout() {
+    const w = track.clientWidth;
+    if (w < 120) return; // مطويّة: تُحسب عند ظهورها (ResizeObserver)
+    R = Math.round(Math.min(260, w * 0.62));
+    track.style.setProperty("--cw", `${Math.round(Math.min(120, w * 0.3))}px`);
+    render();
+  }
+  function show(id) {
+    const i = ERAS.findIndex((e) => e.id === Number(id));
+    loaded = i;
+    cards.forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+    if (i >= 0) go(i);
+    else render();
+  }
+
+  root.querySelectorAll("[data-step]").forEach((b) => b.addEventListener("click", () => go(Math.round(target) + Number(b.dataset.step))));
+  enterEl.addEventListener("click", () => loadEra(ERAS[Math.round(Math.max(0, Math.min(n - 1, target)))]));
+  track.addEventListener("keydown", (e) => {
+    // اتجاه الصفحة عربي: السهم الأيسر يتقدّم في الزمن
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(Math.round(target) + 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); go(Math.round(target) - 1); }
+  });
+  track.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0) return;
+    cancelAnimationFrame(raf); raf = 0;
+    moved = false;
+    drag = { x0: e.clientX, p0: pos, x: e.clientX, t: performance.now(), v: 0 };
+  });
+  track.addEventListener("pointermove", (e) => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x0;
+    if (!moved && Math.abs(dx) > 6) { moved = true; track.setPointerCapture(e.pointerId); track.classList.add("drag"); }
+    if (!moved) return;
+    const per = (R * S.spacing * Math.PI) / 180;
+    pos = target = Math.max(-0.4, Math.min(n - 0.6, drag.p0 - dx / per));
+    const now = performance.now();
+    drag.v = (e.clientX - drag.x) / Math.max(1, now - drag.t);
+    drag.x = e.clientX; drag.t = now;
+    render();
+  });
+  const endDrag = () => {
+    if (!drag) return;
+    const wasMoved = moved, v = drag.v;
+    drag = null;
+    track.classList.remove("drag");
+    if (!wasMoved) return;
+    dragEnd = performance.now(); // النقرة التي تلي السحب تُتجاهل، أما لوحة المفاتيح فلا
+    // يستقر القوس على أقرب حقبة بعد زخم الرمية
+    const per = (R * S.spacing * Math.PI) / 180;
+    go(Math.round(pos - (v * 180) / per));
+  };
+  track.addEventListener("pointerup", endDrag);
+  track.addEventListener("pointercancel", endDrag);
+  if (window.ResizeObserver) new ResizeObserver(layout).observe(track);
+  else layout();
+  return { show };
 }
+eraArc = buildEraArc();
 
 // ---------- السكان ----------
 const DEMO = [
@@ -2162,11 +2283,11 @@ function buildSunanRing(list, sunnas, onPick) {
       `<span class="sc-name">${escapeHtml(s.name.replace("سُنّة ", ""))}</span>` +
       `<span class="sc-hyp">${escapeHtml(s.hypothesis)}</span>` +
       `<span class="sc-st"><i class="sc-dot ${strengthKind(s.strength)}"></i>${escapeHtml(s.strength)} · ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>`;
-    b.addEventListener("click", () => { if (!dragMoved) onPick(s, "click"); });
+    b.addEventListener("click", () => { if (performance.now() - dragEnd < 300) return; onPick(s, "click"); });
     rot.appendChild(b);
     return b;
   });
-  let angle = 0, target = 0, raf = 0, activeIdx = -1, radius = 190, dragMoved = false, drag = null;
+  let angle = 0, target = 0, raf = 0, activeIdx = -1, radius = 190, dragMoved = false, drag = null, dragEnd = 0;
 
   // كل بطاقة تحمل تحويلها الكامل، فلا سياق ثلاثي متداخل يُفسد الترتيب؛ وترتيب الطبقات من درجة المواجهة
   function render() {
@@ -2238,6 +2359,7 @@ function buildSunanRing(list, sunnas, onPick) {
     drag = null;
     list.classList.remove("drag");
     if (!moved) return;
+    dragEnd = performance.now(); // النقرة التي تلي السحب تُتجاهل، أما لوحة المفاتيح فلا
     // يستقر الدوّار على السُّنّة الأقرب بعد زخم الرمية
     const thrown = angle + v * 260;
     const i = (((Math.round(-thrown / step)) % n) + n) % n;

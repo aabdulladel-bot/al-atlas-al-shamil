@@ -265,6 +265,25 @@
     .row { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
     .row button, .mode button { font: inherit; font-size: 13px; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
     .row button[aria-pressed="true"], .mode button[aria-pressed="true"] { background: var(--accent); color: var(--panel); }
+    /* قوس الحقب (ينظر buildEraArc في app.js): البطاقات تُحسب مواضعها في الشيفرة */
+    #eras.arc-track { position: relative; height: 252px; overflow: hidden; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+    #eras.arc-track.drag { cursor: grabbing; }
+    #eras .arc-card { position: absolute; left: 50%; top: 22%; width: var(--cw, 110px); aspect-ratio: 3 / 4; margin: 0 0 0 calc(var(--cw, 110px) / -2); padding: 10px; border: 0; border-radius: 16px; color: #fff; font: inherit; text-align: start; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; overflow: hidden; box-shadow: 0 14px 30px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .35); transform-origin: 50% 50%; will-change: transform, opacity; }
+    #eras .arc-card .no { font-weight: 800; font-size: 20px; letter-spacing: .02em; }
+    #eras .arc-card .yr { font-size: 10px; opacity: .92; line-height: 1.5; }
+    #eras .arc-card[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent), 0 16px 34px rgba(0, 0, 0, .45); }
+    #eras .arc-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .arc-caption { text-align: center; margin-top: 2px; }
+    .arc-caption h3 { font-size: 16px; line-height: 1.5; margin: 0; color: var(--ink); }
+    .arc-caption #era-span { margin: 2px 0 0; }
+    .arc-nav { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 8px; }
+    .arc-nav button { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--accent); background: transparent; color: var(--ink); font: inherit; font-size: 16px; cursor: pointer; }
+    .arc-nav #era-enter { width: auto; height: 32px; padding: 0 14px; border-radius: 999px; background: var(--accent); color: var(--panel); font-size: 13px; font-weight: 700; }
+    .arc-nav #era-enter:disabled { opacity: .6; cursor: default; }
+    .arc-nav button:focus-visible, .arc-caption button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .arc-dots { display: flex; justify-content: center; gap: 5px; margin-top: 8px; }
+    .arc-dots i { width: 6px; height: 6px; border-radius: 3px; background: var(--line); transition: width .3s, background .3s; }
+    .arc-dots i.on { width: 16px; background: var(--accent); }
     /* دوّار السنن: بطاقات على أسطوانة، والمواجهة هي المختارة (ينظر buildSunanRing في app.js) */
     #sunan-list.sunan-ring { position: relative; height: 196px; margin: 6px -4px 2px; overflow: hidden; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
     #sunan-list.sunan-ring.drag { cursor: grabbing; }
@@ -716,7 +735,15 @@
     <details class="section research-only">
       <summary>الحقب والمواقع</summary>
       <p class="sub">شريط الزمن أسفل الشاشة يغيّر الحدود والمواقع والسكان والشواهد معاً. وهنا تفاصيل المصدر.</p>
-      <div class="row" id="eras"></div>
+      <div id="eras-arc" class="era-arc">
+        <div id="eras" class="arc-track" role="group" aria-label="الحقب الثماني، اسحب القوس أو استعمل الأسهم"></div>
+        <div class="arc-caption" aria-live="polite">
+          <h3 id="era-title"></h3>
+          <p class="sub" id="era-span"></p>
+          <div class="arc-nav"><button type="button" data-step="-1" aria-label="الحقبة السابقة">›</button><button type="button" id="era-enter">ادخل الحقبة</button><button type="button" data-step="1" aria-label="الحقبة التالية">‹</button></div>
+          <div class="arc-dots" id="era-dots" aria-hidden="true"></div>
+        </div>
+      </div>
       <p id="era-desc"></p>
       <p class="warn" id="era-warn"></p>
       <p id="count"></p>
