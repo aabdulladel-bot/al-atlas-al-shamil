@@ -210,7 +210,7 @@ map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bott
 const LAYER_GROUPS = {
   hillshade: ["hillshade", "relief"],
   water: ["lakes", "rivers"],
-  borders: ["borders-prev-fill", "borders-prev-line", "borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-highlight"],
+  borders: ["borders-prev-fill", "borders-prev-line", "borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-highlight", "nominal-line"],
   peoples: ["peoples-fill", "peoples-line"],
   places: ["places"],
   claims: ["claim-halo", "claim-points"],
@@ -988,6 +988,17 @@ const PRECISION_LABEL = { 1: "تقريبية", 2: "دقة متوسطة", 3: "م�
 // تقريبية كما في المصدر، ولا تُعدّ دولاً في الإحصاء ولا في الشواهد السياسية.
 const PEOPLE_COLOR = "#7d4f8f";
 let peoplesData = null;
+// النفوذ الاسمي للخلافة: مضلع الدولة الفعلية بخط منقّط، لا ملء ولا ملكية (scripts/build_nominal.mjs)
+async function loadNominal(key) {
+  let data = { type: "FeatureCollection", features: [] };
+  try { data = await getJson(`data/borders/nominal_${key}.geojson`); } catch {}
+  if (map.getSource("nominal")) { map.getSource("nominal").setData(data); }
+  else {
+    map.addSource("nominal", { type: "geojson", data });
+    map.addLayer({ id: "nominal-line", type: "line", source: "nominal", paint: { "line-color": "#E9B44C", "line-width": 1.6, "line-dasharray": [1.2, 1.6], "line-opacity": 0.9 } });
+  }
+  for (const id of LAYER_GROUPS.borders) setVis(id, true);
+}
 // تهشير مائل للشعوب: انتماء بشري لا سيادة، فلا تُملأ مثل الدول
 function peoplePattern() {
   if (map.hasImage("people-hatch")) return;
@@ -1129,6 +1140,7 @@ async function loadBorders(key) {
   const names = new Set(namedFeats.map((f) => f.properties.NAME)).size;
   setLayerCount("borders", `الكيانات: ${fmtInt(names)}`);
   await loadPeoples(key);
+  await loadNominal(key);
   if (token !== time.token) return data;
   const era = eraOf(key);
   markEra(era.id);
