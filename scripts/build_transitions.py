@@ -76,6 +76,10 @@ def clean(geom):
     return shapely.MultiPolygon(parts) if parts else None
 
 
+# تصحيحات تاريخية معلنة: كيانات تُسقط من طبقة سنتها لأن سجلها يقع خارجها (scripts/config/historical_corrections.json)
+DROPPED = {(c["year"], c["name"]) for c in json.loads((ROOT / "scripts/config/historical_corrections.json").read_text(encoding="utf-8"))["drop"]}
+
+
 def load(key):
     shown = {}  # الاسم الإنجليزي المعروض بدل اسم المصدر (scripts/config/hb_name_overrides.json عبر hb_names.json)
     if key == "modern":
@@ -107,6 +111,8 @@ def load(key):
         if not nm:
             unnamed.append(g)
             continue
+        if key != "modern" and (int(key), nm) in DROPPED:
+            continue  # أرضه تبقى بلا كيان مسمّى (historical_corrections.json)
         groups.setdefault(nm, []).append(g)
         if po and po != nm:
             partof.setdefault(nm, set()).add(po)

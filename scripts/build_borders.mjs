@@ -19,6 +19,8 @@ const roundGeom = (g) => {
 };
 
 fs.mkdirSync(OUT, { recursive: true });
+// تصحيحات تاريخية معلنة: كيانات تُسقط من طبقة سنتها لأن سجلها يقع خارجها (scripts/config/historical_corrections.json)
+const DROPPED = new Set(JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/historical_corrections.json"), "utf8")).drop.map((c) => `${c.year}|${c.name}`));
 // حدود الدول اليوم من Natural Earth (ملك عام): تُعامل كالدقة الثالثة (محددة بالقانون الدولي)
 {
   const ne = JSON.parse(fs.readFileSync(path.join(ROOT, "data/raw/naturalearth/ne_50m_admin_0_countries.geojson"), "utf8"));
@@ -61,6 +63,7 @@ for (const year of YEARS) {
   for (const f of src.features) {
     const geometry = roundGeom(f.geometry);
     if (!geometry) continue;
+    if (DROPPED.has(`${year}|${f.properties.NAME}`)) continue; // أرضه بلا كيان مسمّى (historical_corrections.json)
     const hn = hbNames[f.properties.NAME];
     // الاسم العربي في سنوات قيام الكيان المطابَق فقط، وفي غيرها التعريب التقديري المعلن (fill) إن وُجد
     const ar = hn?.ar && hn.years_ar?.includes(year) ? hn.ar : hn?.fill?.years.includes(year) ? hn.fill.ar : null;
