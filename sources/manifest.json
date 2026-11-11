@@ -526,6 +526,21 @@
           "file": "data/raw/historical-basemaps/LICENSE",
           "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
           "bytes": 35147
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_800.geojson",
+          "sha256": "9d046cdc4662109c3f803ae46e2c8cba941aa092ec86eccc7823e6cf1554920c",
+          "bytes": 977296
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_900.geojson",
+          "sha256": "f483b93e799d6518830ed6da6c3772c49170872d0f07515981a53e71d8dbc74c",
+          "bytes": 1056118
+        },
+        {
+          "file": "data/raw/historical-basemaps/world_1000.geojson",
+          "sha256": "2140776fd7888c1d4a30e8f6debdaf56192cdf49587f3b6bb67841930ca82d29",
+          "bytes": 1040461
         }
       ],
       "license_verified_at": "2026-11-09",

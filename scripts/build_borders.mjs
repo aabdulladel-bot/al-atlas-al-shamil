@@ -9,7 +9,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const RAW = path.join(ROOT, "data/raw/historical-basemaps");
 const OUT = path.join(ROOT, "web/data/borders");
 // السنة التي تمثّل كل حقبة (من الملفات المتاحة في الفهرس)
-const YEARS = [-4000, -1000, -1, 700, 1200, 1600, 1800, 1914, 1945, 2010];
+const YEARS = [-4000, -1000, -1, 700, 800, 900, 1000, 1200, 1600, 1800, 1914, 1945, 2010];
 const r4 = (n) => Math.round(n * 1e4) / 1e4;
 const roundRing = (ring) => ring.map(([x, y]) => [r4(x), r4(y)]);
 const roundGeom = (g) => {

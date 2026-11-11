@@ -3,11 +3,31 @@
   "fields": "qid، التسمية العربية والإنجليزية، عنوان المقالة العربية، P31، P571 (النشأة)، P576 (الزوال)",
   "license": "CC0 1.0",
   "priority_rule": "الكيانات التي تغطي 90% من الأرض المسمّاة في كل خريطة، وكل كيان مساحته 100 ألف كم² فأكثر",
-  "retrieved_at": "2026-10-28T12:18:49+00:00",
+  "retrieved_at": "2026-11-11T07:13:13+00:00",
   "source": "Wikidata (CC0)، wbgetentities بعناوين ويكيبيديا الإنجليزية"
  },
  "titles": {
   "Aaniiih": null,
+  "Abbasid Caliphate": {
+   "ar": "الدولة العباسية",
+   "arwiki": "الدولة العباسية",
+   "dissolved": [
+    "+1258-02-10T00:00:00Z"
+   ],
+   "en": "Abbasid Caliphate",
+   "inception": [
+    "+0750-01-01T00:00:00Z"
+   ],
+   "p31": [
+    "Q131401",
+    "Q7275",
+    "Q3024240",
+    "Q4204060",
+    "Q7275",
+    "Q6256"
+   ],
+   "qid": "Q12536"
+  },
   "Abnaki": null,
   "Aboriginal tribes": null,
   "Abyssinia": {
@@ -57,6 +77,7 @@
    ],
    "qid": "Q889"
   },
+  "Aghlabid Emirate": null,
   "Ahmadnagar": null,
   "Ainu": {
    "ar": null,
@@ -141,6 +162,7 @@
    "qid": "Q449615"
   },
   "Amazon hunter-gatherers": null,
+  "Anasazi": null,
   "Andean hunter-gatherers": null,
   "Angevin Empire": {
    "ar": "أنجيفن",
@@ -377,6 +399,7 @@
    ],
    "qid": "Q793363"
   },
+  "Azandes": null,
   "Babylonia": {
    "ar": "بلاد بابل",
    "arwiki": "بلاد بابل",
@@ -412,6 +435,8 @@
    "qid": "Q29317"
   },
   "Bagirmi": null,
+  "Balhae": null,
+  "Baltic tribes": null,
   "Balts": {
    "ar": "شعب البلطيق",
    "arwiki": "شعوب البلطيق",
@@ -422,6 +447,17 @@
     "Q4533081"
    ],
    "qid": "Q207761"
+  },
+  "Banas": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Banas",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q806113"
   },
   "Bangladesh": {
    "ar": "بنغلاديش",
@@ -476,6 +512,19 @@
    ],
    "qid": "Q808139"
   },
+  "Bashkirs": {
+   "ar": "باشكير",
+   "arwiki": "باشكير",
+   "dissolved": [],
+   "en": "Bashkir people",
+   "inception": [],
+   "p31": [
+    "Q41710",
+    "Q2472587"
+   ],
+   "qid": "Q485348"
+  },
+  "Bedouins": null,
   "Bega": {
    "ar": null,
    "arwiki": null,
@@ -486,6 +535,17 @@
     "Q4167410"
    ],
    "qid": "Q361392"
+  },
+  "Beja people": {
+   "ar": "شعب البجا",
+   "arwiki": "شعب البجا",
+   "dissolved": [],
+   "en": "Beja people",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q813961"
   },
   "Belgian Congo": {
    "ar": "الكونغو البلجيكية",
@@ -766,6 +826,7 @@
   },
   "Burmese kingdoms": null,
   "Buwayhid Emirates": null,
+  "Buyid Emirate": null,
   "Buyid dynasty": {
    "ar": "الدولة البويهية",
    "arwiki": "الدولة البويهية",
@@ -820,6 +881,22 @@
    ],
    "qid": "Q35170"
   },
+  "Caliphate of Córdoba": {
+   "ar": "خلافة قرطبة",
+   "arwiki": "خلافة قرطبة",
+   "dissolved": [
+    "+1031-00-00T00:00:00Z"
+   ],
+   "en": "Caliphate of Córdoba",
+   "inception": [
+    "+0929-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q4204060",
+    "Q3024240"
+   ],
+   "qid": "Q171740"
+  },
   "Cambodia": {
    "ar": "كمبوديا",
    "arwiki": "كمبوديا",
@@ -868,6 +945,22 @@
    "qid": "Q16"
   },
   "Caribbean hunter-gatherers": null,
+  "Carolingian Empire": {
+   "ar": "الإمبراطورية الكارولنجية",
+   "arwiki": "الإمبراطورية الكارولنجية",
+   "dissolved": [
+    "+0887-00-00T00:00:00Z"
+   ],
+   "en": "Carolingian Empire",
+   "inception": [
+    "+0800-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q48349"
+   ],
+   "qid": "Q31929"
+  },
   "Catawba": {
    "ar": "كاتاوبا",
    "arwiki": "كاتاوبا (توضيح)",
@@ -922,6 +1015,7 @@
    ],
    "qid": "Q657"
   },
+  "Chalukya Empire": null,
   "Chalukyas": null,
   "Champa": {
    "ar": "تشامبا",
@@ -943,6 +1037,7 @@
    "qid": "Q216786"
   },
   "Champa City States": null,
+  "Chauhans": null,
   "Chen-La": null,
   "Chickasaw": {
    "ar": "تشيكاساو",
@@ -1045,9 +1140,31 @@
    ],
    "qid": "Q396480"
   },
+  "Ciboney": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Ciboney people",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q726722"
+  },
   "Cimerians": null,
   "Circars": null,
   "Coahuiltec": null,
+  "Cochimí": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Cochimí people",
+   "inception": [],
+   "p31": [
+    "Q3631316"
+   ],
+   "qid": "Q2661428"
+  },
   "Colombia": {
    "ar": "كولومبيا",
    "arwiki": "كولومبيا",
@@ -1115,6 +1232,7 @@
    ],
    "qid": "Q160440"
   },
+  "Croatian kingdom": null,
   "Crow": {
    "ar": "زاغ",
    "arwiki": "زاغ",
@@ -1145,6 +1263,7 @@
   },
   "Cuba (Spain)": null,
   "Cuman Khanates": null,
+  "Cushites": null,
   "Cyraneica (UK Lybia)": null,
   "Czechoslovakia": {
    "ar": "تشيكوسلوفاكيا",
@@ -1178,6 +1297,19 @@
     "Q1620908"
    ],
    "qid": "Q173082"
+  },
+  "Danes": {
+   "ar": "دنماركيون",
+   "arwiki": "دنماركيون",
+   "dissolved": [],
+   "en": "Danes",
+   "inception": [],
+   "p31": [
+    "Q33829",
+    "Q6266",
+    "Q41710"
+   ],
+   "qid": "Q164714"
   },
   "Danube Bulgars": null,
   "Darfur": {
@@ -1241,6 +1373,22 @@
   },
   "Dutch Guinea": null,
   "Dutch settlements": null,
+  "East Francia": {
+   "ar": "مملكة الفرنجة الشرقية",
+   "arwiki": "مملكة الفرنجة الشرقية",
+   "dissolved": [
+    "+0962-00-00T00:00:00Z"
+   ],
+   "en": "East Francia",
+   "inception": [
+    "+0843-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q3024240"
+   ],
+   "qid": "Q153080"
+  },
   "East Java": {
    "ar": "جاوة الشرقية",
    "arwiki": "جاوة الشرقية",
@@ -1307,6 +1455,7 @@
    ],
    "qid": "Q128904"
   },
+  "Emirate of Córdoba": null,
   "Empire of Ghana": null,
   "Empire of Japan": {
    "ar": "إمبراطورية اليابان",
@@ -1334,6 +1483,23 @@
     "Q41710"
    ],
    "qid": "Q1141752"
+  },
+  "England": {
+   "ar": "إنجلترا",
+   "arwiki": "إنجلترا",
+   "dissolved": [],
+   "en": "England",
+   "inception": [
+    "+0927-07-12T00:00:00Z",
+    "+0886-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3336843",
+    "Q518261",
+    "Q6266",
+    "Q6256"
+   ],
+   "qid": "Q21"
   },
   "England and Ireland": null,
   "Erie": null,
@@ -1407,6 +1573,17 @@
    "qid": "Q33"
   },
   "Finno-Ugric taiga hunter-gatherers": null,
+  "Finns": {
+   "ar": "فنلنديون",
+   "arwiki": "فنلنديون",
+   "dissolved": [],
+   "en": "Finns",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q170284"
+  },
   "France": {
    "ar": "فرنسا",
    "arwiki": "فرنسا",
@@ -1594,6 +1771,23 @@
    ],
    "qid": "Q28208"
   },
+  "Great Moravia": {
+   "ar": "مورافيا العظمى",
+   "arwiki": "مورافيا العظمى",
+   "dissolved": [
+    "+0907-01-01T00:00:00Z"
+   ],
+   "en": "Great Moravia",
+   "inception": [
+    "+0833-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q3624078",
+    "Q208500"
+   ],
+   "qid": "Q193152"
+  },
   "Great Zimbabwe": {
    "ar": "زيمبابوي العظمى",
    "arwiki": "زيمبابوي العظمى",
@@ -1675,6 +1869,7 @@
    ],
    "qid": "Q1006"
   },
+  "Gurjara Pratihara": null,
   "Guyana": {
    "ar": "غيانا",
    "arwiki": "غيانا",
@@ -1718,6 +1913,7 @@
    "qid": "Q644137"
   },
   "Harapunchai": null,
+  "Haripunjaya": null,
   "Hausa States": null,
   "Hejaz": {
    "ar": "الحجاز",
@@ -1732,6 +1928,17 @@
    "qid": "Q169977"
   },
   "Himyarite Kingdom": null,
+  "Hindu Shahis": {
+   "ar": "سلاطين الهندوس",
+   "arwiki": "سلاطين الهندوس",
+   "dissolved": [],
+   "en": "Hindu Shahis",
+   "inception": [],
+   "p31": [
+    "Q164950"
+   ],
+   "qid": "Q4955540"
+  },
   "Hindu kingdoms": null,
   "Hindu states": null,
   "Hispaniola (Spain)": null,
@@ -1816,6 +2023,23 @@
    ],
    "qid": "Q189"
   },
+  "Icelandic Commonwealth": {
+   "ar": "كومنولث آيسلندي",
+   "arwiki": "كومنولث آيسلندا",
+   "dissolved": [
+    "+1262-00-00T00:00:00Z"
+   ],
+   "en": "Icelandic Commonwealth",
+   "inception": [
+    "+0930-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q3624078"
+   ],
+   "qid": "Q62389"
+  },
+  "Idrisid Caliphate": null,
   "Ifat": {
    "ar": null,
    "arwiki": null,
@@ -2133,6 +2357,17 @@
    ],
    "qid": "Q129282"
   },
+  "Karelians": {
+   "ar": "كاريليون",
+   "arwiki": "كاريليون",
+   "dissolved": [],
+   "en": "Karelians",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q213470"
+  },
   "Karluks": {
    "ar": "قارلوق",
    "arwiki": "قارلوق",
@@ -2191,6 +2426,7 @@
    ],
    "qid": "Q173282"
   },
+  "Khitans": null,
   "Khiva Khanate": null,
   "Khmer Empire": {
    "ar": "إمبراطورية الخمير",
@@ -2222,6 +2458,7 @@
    "qid": "Q459387"
   },
   "Khwarazmian dynasty": null,
+  "Kimek-Kipchak khaganate": null,
   "Kingdom of David and Solomon": null,
   "Kingdom of France": {
    "ar": "مملكة فرنسا",
@@ -2279,6 +2516,8 @@
    "p31": [],
    "qid": "Q105985268"
   },
+  "Kingdom of Norway": null,
+  "Kingdom of Pagan": null,
   "Kingdom of Sind": null,
   "Kiowa": {
    "ar": "كيوا (قبيلة)",
@@ -2352,6 +2591,7 @@
    ],
    "qid": "Q137367476"
   },
+  "Kyivan Rus": null,
   "Kyrgyzstan": {
    "ar": "قرغيزستان",
    "arwiki": "قرغيزستان",
@@ -2398,6 +2638,7 @@
    ],
    "qid": "Q6499777"
   },
+  "León": null,
   "Liao": {
    "ar": null,
    "arwiki": null,
@@ -2480,6 +2721,7 @@
    "qid": "Q1019"
   },
   "Madagascar (France)": null,
+  "Magyars": null,
   "Mahra": {
    "ar": null,
    "arwiki": null,
@@ -2507,6 +2749,17 @@
    ],
    "qid": "Q185221"
   },
+  "Malagasy": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Malagasy",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q1179711"
+  },
   "Malawi": {
    "ar": "ملاوي",
    "arwiki": "ملاوي",
@@ -2522,6 +2775,17 @@
     "Q6256"
    ],
    "qid": "Q1020"
+  },
+  "Malay": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Malay",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q226265"
   },
   "Malaya": {
    "ar": null,
@@ -2598,6 +2862,18 @@
    ],
    "qid": "Q81126"
   },
+  "Mandes": null,
+  "Mandjindja": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Mandjindja",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q48801298"
+  },
   "Manioc farmers": null,
   "Maoris": null,
   "Maratha Confederacy": null,
@@ -2614,6 +2890,17 @@
   },
   "Marksville Culture": null,
   "Mascat": null,
+  "Mataram": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Mataram",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q292392"
+  },
   "Mauri": {
    "ar": "موريطنيون",
    "arwiki": "موريطنيون",
@@ -2692,6 +2979,17 @@
    ],
    "qid": "Q16210895"
   },
+  "Mogollon": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Mogollon",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q1797382"
+  },
   "Mongol Empire": {
    "ar": "إمبراطورية المغول",
    "arwiki": "إمبراطورية المغول",
@@ -2726,6 +3024,7 @@
    "qid": "Q711"
   },
   "Montagnais Innu": null,
+  "Mordvinians": null,
   "Morocco": {
    "ar": "المغرب",
    "arwiki": "المغرب",
@@ -2779,6 +3078,18 @@
     "Q3024240"
    ],
    "qid": "Q33296"
+  },
+  "Multan": {
+   "ar": "ملتان",
+   "arwiki": "ملتان",
+   "dissolved": [],
+   "en": "Multan",
+   "inception": [],
+   "p31": [
+    "Q515",
+    "Q1549591"
+   ],
+   "qid": "Q185453"
   },
   "Muskogee": {
    "ar": null,
@@ -3024,6 +3335,7 @@
    ],
    "qid": "Q953903"
   },
+  "Northmen": null,
   "Norway": {
    "ar": "النرويج",
    "arwiki": "النرويج",
@@ -3059,6 +3371,17 @@
    "qid": "Q1649306"
   },
   "Obiwa": null,
+  "Oghuz Turks": {
+   "ar": "أوغوز",
+   "arwiki": "أتراك الأوغوز",
+   "dissolved": [],
+   "en": "Oghuz Turks",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q494462"
+  },
   "Oman": {
    "ar": "سلطنة عمان",
    "arwiki": "سلطنة عمان",
@@ -3116,6 +3439,19 @@
    ],
    "qid": "Q12560"
   },
+  "Pagan": {
+   "ar": "وثني",
+   "arwiki": null,
+   "dissolved": [],
+   "en": "pagan",
+   "inception": [],
+   "p31": [
+    "Q4392985",
+    "Q16334295",
+    "Q12812139"
+   ],
+   "qid": "Q2060071"
+  },
   "Pakistan": {
    "ar": "باكستان",
    "arwiki": "باكستان",
@@ -3142,6 +3478,8 @@
   "Paleo-Inuit": null,
   "Paleo-Koreans": null,
   "Paleo-Siberian hunter-gatherers": null,
+  "Pallava": null,
+  "Pallava state": null,
   "Pallavas": null,
   "Pampas cultures": null,
   "Papua New Guinea": {
@@ -3190,6 +3528,21 @@
    ],
    "qid": "Q733"
   },
+  "Parhae": {
+   "ar": "مملكة بالهاي",
+   "arwiki": "مملكة بالهاي",
+   "dissolved": [
+    "+0926-01-01T00:00:00Z"
+   ],
+   "en": "Balhae",
+   "inception": [
+    "+0698-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240"
+   ],
+   "qid": "Q28322"
+  },
   "Parthian Empire": {
    "ar": "الإمبراطورية الفرثية",
    "arwiki": "الإمبراطورية الفرثية",
@@ -3220,6 +3573,17 @@
    "qid": "Q408474"
   },
   "Pegu": null,
+  "Permians": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Permians",
+   "inception": [],
+   "p31": [
+    "Q41710"
+   ],
+   "qid": "Q2634718"
+  },
   "Persia": null,
   "Peru": {
    "ar": "بيرو",
@@ -3235,6 +3599,7 @@
    ],
    "qid": "Q419"
   },
+  "Peshemegs": null,
   "Philippines": {
    "ar": "الفلبين",
    "arwiki": "الفلبين",
@@ -3338,6 +3703,7 @@
    ],
    "qid": "Q1065583"
   },
+  "Pratiharas": null,
   "Principality of Galicia-Volhynia": null,
   "Principality of Kyiv": null,
   "Principality of Novgorod": null,
@@ -3390,6 +3756,7 @@
    ],
    "qid": "Q176"
   },
+  "Rajput Clans and Small States": null,
   "Rajput kingdoms": null,
   "Rajputana": {
    "ar": "راجفوتانة",
@@ -3403,6 +3770,8 @@
    "qid": "Q3929733"
   },
   "Rajputs": null,
+  "Rashtrakuta": null,
+  "Rashtrakuta state": null,
   "Rattanakosin Kingdom": null,
   "Rhodesia": {
    "ar": "رودسيا",
@@ -3470,6 +3839,22 @@
    ],
    "qid": "Q738395"
   },
+  "Rus' Khaganate": {
+   "ar": "الخاقانية الروسية",
+   "arwiki": "الخاقانية الروسية",
+   "dissolved": [
+    "+0900-00-00T00:00:00Z"
+   ],
+   "en": "Rus' Khaganate",
+   "inception": [
+    "+0700-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q25537045"
+   ],
+   "qid": "Q1618896"
+  },
   "Russia": {
    "ar": "روسيا",
    "arwiki": "روسيا",
@@ -3532,9 +3917,38 @@
    "qid": "Q251075"
   },
   "Safavid Empire": null,
+  "Saffarids": null,
   "Saharan Nomadic Tribes": null,
   "Saharan pastoral nomads": null,
   "Saka Kingdom": null,
+  "Samanid Empire": {
+   "ar": "الدولة السامانية",
+   "arwiki": "الدولة السامانية",
+   "dissolved": [
+    "+0999-00-00T00:00:00Z"
+   ],
+   "en": "Samanid Empire",
+   "inception": [
+    "+0819-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q12536"
+   ],
+   "qid": "Q12150341"
+  },
+  "Sami": {
+   "ar": "سامي",
+   "arwiki": "سامي (توضيح)",
+   "dissolved": [],
+   "en": "Sami",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q925943"
+  },
+  "Samis": null,
   "Samoyèdes": null,
   "Santee": {
    "ar": "سانتي",
@@ -3596,6 +4010,7 @@
    "qid": "Q2205751"
   },
   "Semites": null,
+  "Senas": null,
   "Senegal": {
    "ar": "السنغال",
    "arwiki": "السنغال",
@@ -3639,6 +4054,24 @@
    ],
    "qid": "Q582779"
   },
+  "Silia": null,
+  "Silla": {
+   "ar": "مملكة شلا",
+   "arwiki": "مملكة شلا",
+   "dissolved": [
+    "+0935-01-01T00:00:00Z",
+    "+0892-00-00T00:00:00Z"
+   ],
+   "en": "Silla",
+   "inception": [
+    "-0057-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q1250464"
+   ],
+   "qid": "Q28456"
+  },
   "Sindh": {
    "ar": "السند",
    "arwiki": "السند (باكستان)",
@@ -3653,6 +4086,8 @@
    "qid": "Q37211"
   },
   "Sinic": null,
+  "Slavic tribes": null,
+  "Slavonic tribes": null,
   "Somalia": {
    "ar": "الصومال",
    "arwiki": "الصومال",
@@ -3857,6 +4292,7 @@
    ],
    "qid": "Q863"
   },
+  "Tang Empire": null,
   "Tanzania, United Republic of": null,
   "Teton": {
    "ar": "تيتون",
@@ -3925,6 +4361,22 @@
    ],
    "qid": "Q17252"
   },
+  "Tibetan Empire": {
+   "ar": "الإمبراطورية التبتية",
+   "arwiki": "الإمبراطورية التبتية",
+   "dissolved": [
+    "+0842-00-00T00:00:00Z"
+   ],
+   "en": "Tibetan Empire",
+   "inception": [
+    "+0618-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q48349"
+   ],
+   "qid": "Q2431480"
+  },
   "Tibetans": {
    "ar": "شعب التبت",
    "arwiki": "شعب التبت",
@@ -3979,6 +4431,7 @@
   "Tripolitana (UK Lybia)": null,
   "Tsardom of Muscovy": null,
   "Tuareg Nomadic Tribes": null,
+  "Tuaregs": null,
   "Tufan Empire": null,
   "Tungus": null,
   "Tungusic Tribes": null,
@@ -3998,6 +4451,7 @@
    ],
    "qid": "Q948"
   },
+  "Tupis": null,
   "Turkey": {
    "ar": "تركيا",
    "arwiki": "تركيا",
@@ -4290,6 +4744,17 @@
    ],
    "qid": "Q717"
   },
+  "Veps": {
+   "ar": null,
+   "arwiki": null,
+   "dissolved": [],
+   "en": "Veps",
+   "inception": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "qid": "Q7920712"
+  },
   "Veracruz civilization": null,
   "Viceroyalty of Brazil": {
    "ar": null,
@@ -4411,6 +4876,21 @@
   "Watjarri": null,
   "Wawula": null,
   "West African cereal farmers": null,
+  "West Francia": {
+   "ar": "مملكة الفرنجة الغربية",
+   "arwiki": "مملكة الفرنجة الغربية",
+   "dissolved": [
+    "+0987-00-00T00:00:00Z"
+   ],
+   "en": "West Francia",
+   "inception": [
+    "+0843-00-00T00:00:00Z"
+   ],
+   "p31": [
+    "Q3024240"
+   ],
+   "qid": "Q46370"
+  },
   "Western Gokturk Khaganate": null,
   "Western Sahara": {
    "ar": "الصحراء الغربية",
@@ -4669,6 +5149,10 @@
   "Aaniiih": [
    "1600"
   ],
+  "Abbasid Caliphate": [
+   "800",
+   "900"
+  ],
   "Abnaki": [
    "1600"
   ],
@@ -4687,6 +5171,10 @@
    "1945",
    "2010"
   ],
+  "Aghlabid Emirate": [
+   "800",
+   "900"
+  ],
   "Ahmadnagar": [
    "1600"
   ],
@@ -4695,6 +5183,9 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600"
   ],
@@ -4714,19 +5205,32 @@
   ],
   "Alwa": [
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Amazon hunter-gatherers": [
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600"
+  ],
+  "Anasazi": [
+   "800",
+   "900"
   ],
   "Andean hunter-gatherers": [
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600"
   ],
@@ -4744,6 +5248,7 @@
    "1945"
   ],
   "Annam": [
+   "1000",
    "1945"
   ],
   "Apache": [
@@ -4765,6 +5270,9 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Argentina": [
@@ -4774,6 +5282,7 @@
   ],
   "Armenia": [
    "-1",
+   "1000",
    "1200"
   ],
   "Arrernte": [
@@ -4790,6 +5299,9 @@
    "-1000"
   ],
   "Athabaskan": [
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600"
   ],
@@ -4805,6 +5317,9 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600",
    "1800"
@@ -4823,16 +5338,23 @@
    "-1000"
   ],
   "Avars": [
-   "700"
+   "700",
+   "800",
+   "900"
   ],
   "Awsa": [
    "1800"
   ],
   "Axum": [
-   "700"
+   "700",
+   "800",
+   "900"
   ],
   "Ayutthaya": [
    "1600"
+  ],
+  "Azandes": [
+   "900"
   ],
   "Babylonia": [
    "-1000"
@@ -4844,8 +5366,19 @@
    "1600",
    "1800"
   ],
+  "Balhae": [
+   "900"
+  ],
+  "Baltic tribes": [
+   "800",
+   "900",
+   "1000"
+  ],
   "Balts": [
    "700"
+  ],
+  "Banas": [
+   "900"
   ],
   "Bangladesh": [
    "1945",
@@ -4855,13 +5388,22 @@
    "-4000"
   ],
   "Bantu peoples": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
-  "Barghawata": [
-   "700"
+  "Bashkirs": [
+   "800"
+  ],
+  "Bedouins": [
+   "900"
   ],
   "Bega": [
    "700"
+  ],
+  "Beja people": [
+   "900"
   ],
   "Belgian Congo": [
    "1914"
@@ -4878,13 +5420,16 @@
    "2010"
   ],
   "Beothuk": [
+   "800",
+   "900",
    "1600"
   ],
   "Berber Tribes": [
    "1200"
   ],
   "Berbers": [
-   "-1000"
+   "-1000",
+   "900"
   ],
   "Bidjara": [
    "1600",
@@ -4901,6 +5446,7 @@
    "700"
   ],
   "Boethuk": [
+   "1000",
    "1200"
   ],
   "Bolivia": [
@@ -4938,6 +5484,7 @@
    "-1"
   ],
   "Bulgar Khanate": [
+   "1000",
    "1200"
   ],
   "Bulgaria": [
@@ -4946,7 +5493,9 @@
    "2010"
   ],
   "Bulgars": [
-   "700"
+   "700",
+   "800",
+   "900"
   ],
   "Bundelkhand": [
    "1800"
@@ -4967,19 +5516,25 @@
    "1600"
   ],
   "Buwayhid Emirates": [
-   "1200"
+   "1000"
   ],
-  "Buyid dynasty": [
-   "1200"
+  "Buyid Emirate": [
+   "1000"
   ],
   "Byelarus": [
    "2010"
   ],
   "Byzantine Empire": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Caddo": [
    "1600"
+  ],
+  "Caliphate of Córdoba": [
+   "1000"
   ],
   "Cambodia": [
    "1600",
@@ -5000,8 +5555,15 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600"
+  ],
+  "Carolingian Empire": [
+   "800",
+   "900"
   ],
   "Catawba": [
    "1600"
@@ -5010,6 +5572,7 @@
    "-1000"
   ],
   "Celtic kingdoms": [
+   "1000",
    "1200"
   ],
   "Central African Republic": [
@@ -5020,17 +5583,29 @@
    "1945",
    "2010"
   ],
+  "Chalukya Empire": [
+   "1000"
+  ],
   "Chalukyas": [
    "700"
   ],
   "Champa": [
-   "700"
+   "700",
+   "800",
+   "900",
+   "1000"
   ],
   "Champa City States": [
    "1200"
   ],
+  "Chauhans": [
+   "800",
+   "900",
+   "1000"
+  ],
   "Chen-La": [
-   "700"
+   "700",
+   "800"
   ],
   "Chickasaw": [
    "1600"
@@ -5051,6 +5626,7 @@
    "1600"
   ],
   "Chola Empire": [
+   "1000",
    "1200"
   ],
   "Chorrera": [
@@ -5059,6 +5635,10 @@
   "Chukchi": [
    "1600"
   ],
+  "Ciboney": [
+   "800",
+   "900"
+  ],
   "Cimerians": [
    "-1000"
   ],
@@ -5066,6 +5646,9 @@
    "1800"
   ],
   "Coahuiltec": [
+   "1600"
+  ],
+  "Cochimí": [
    "1600"
   ],
   "Colombia": [
@@ -5087,6 +5670,9 @@
   "Crimean Khanate": [
    "1600"
   ],
+  "Croatian kingdom": [
+   "900"
+  ],
   "Crow": [
    "1600"
   ],
@@ -5101,6 +5687,9 @@
   "Cuman Khanates": [
    "1200"
   ],
+  "Cushites": [
+   "900"
+  ],
   "Cyraneica (UK Lybia)": [
    "1945"
   ],
@@ -5109,6 +5698,9 @@
   ],
   "Dacia": [
    "-1"
+  ],
+  "Danes": [
+   "800"
   ],
   "Danube Bulgars": [
    "700"
@@ -5122,6 +5714,7 @@
    "1945"
   ],
   "Denmark-Norway": [
+   "1000",
    "1600",
    "1800"
   ],
@@ -5129,9 +5722,15 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Dorset": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Dravidians": [
@@ -5147,12 +5746,19 @@
   "Dutch settlements": [
    "1800"
   ],
+  "East Francia": [
+   "900"
+  ],
   "East Java": [
+   "1000",
    "1200"
   ],
   "Eastern North American hunter-gatherers": [
    "-1000",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Eastern Roman Empire": [
@@ -5177,6 +5783,10 @@
    "-4000",
    "-1000"
   ],
+  "Emirate of Córdoba": [
+   "800",
+   "900"
+  ],
   "Empire of Ghana": [
    "700"
   ],
@@ -5185,6 +5795,9 @@
   ],
   "Enets": [
    "1600"
+  ],
+  "England": [
+   "1000"
   ],
   "England and Ireland": [
    "1600"
@@ -5213,7 +5826,7 @@
    "1600"
   ],
   "Fatimid Caliphate": [
-   "1200"
+   "1000"
   ],
   "Fezzan (Frech Lybia)": [
    "1945"
@@ -5227,7 +5840,13 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
+  ],
+  "Finns": [
+   "800"
   ],
   "France": [
    "1600",
@@ -5277,6 +5896,9 @@
    "1945"
   ],
   "Ghana": [
+   "800",
+   "900",
+   "1000",
    "1200",
    "2010"
   ],
@@ -5284,6 +5906,7 @@
    "1600"
   ],
   "Ghaznavid Emirate": [
+   "1000",
    "1200"
   ],
   "Gold Coast": [
@@ -5296,7 +5919,11 @@
   "Goryeo": [
    "1200"
   ],
+  "Great Moravia": [
+   "900"
+  ],
   "Great Zimbabwe": [
+   "1000",
    "1200"
   ],
   "Greece": [
@@ -5321,6 +5948,10 @@
    "1945",
    "2010"
   ],
+  "Gurjara Pratihara": [
+   "800",
+   "900"
+  ],
   "Guyana": [
    "1914",
    "1945",
@@ -5331,6 +5962,7 @@
   ],
   "Hadramaut": [
    "-1",
+   "1000",
    "1200",
    "1600"
   ],
@@ -5339,6 +5971,9 @@
   ],
   "Harapunchai": [
    "1200"
+  ],
+  "Haripunjaya": [
+   "1000"
   ],
   "Hausa States": [
    "1600",
@@ -5350,12 +5985,16 @@
   "Himyarite Kingdom": [
    "-1"
   ],
+  "Hindu Shahis": [
+   "900"
+  ],
   "Hindu kingdoms": [
    "-1",
    "700"
   ],
   "Hindu states": [
-   "700"
+   "700",
+   "800"
   ],
   "Hispaniola (Spain)": [
    "1600"
@@ -5364,6 +6003,7 @@
    "-1000"
   ],
   "Holy Roman Empire": [
+   "1000",
    "1200",
    "1600"
   ],
@@ -5377,6 +6017,9 @@
   ],
   "Huari Empire": [
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Hungary": [
@@ -5393,6 +6036,13 @@
    "1945",
    "2010"
   ],
+  "Icelandic Commonwealth": [
+   "1000"
+  ],
+  "Idrisid Caliphate": [
+   "800",
+   "900"
+  ],
   "Ifat": [
    "1200"
   ],
@@ -5403,10 +6053,8 @@
    "-1000"
   ],
   "Imperial Japan (Fujiwara)": [
+   "1000",
    "1200"
-  ],
-  "Inca Empire": [
-   "1600"
   ],
   "India": [
    "1945",
@@ -5423,6 +6071,9 @@
    "1600"
   ],
   "Innu": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Inupiaq": [
@@ -5450,6 +6101,7 @@
    "1600"
   ],
   "Islamic city-states": [
+   "1000",
    "1200",
    "1600"
   ],
@@ -5468,6 +6120,7 @@
    "2010"
   ],
   "Japan": [
+   "800",
    "1800",
    "2010"
   ],
@@ -5488,10 +6141,8 @@
    "1800"
   ],
   "Kalinga": [
-   "-1"
-  ],
-  "Kamarupa": [
-   "1200"
+   "-1",
+   "1000"
   ],
   "Kamerun": [
    "1914"
@@ -5504,6 +6155,9 @@
    "700"
   ],
   "Kanem": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Kanem-Bornu": [
@@ -5516,8 +6170,13 @@
   "Karasuk culture": [
    "-1000"
   ],
+  "Karelians": [
+   "800",
+   "1000"
+  ],
   "Karluks": [
-   "700"
+   "700",
+   "900"
   ],
   "Kazakhstan": [
    "2010"
@@ -5527,12 +6186,20 @@
    "2010"
   ],
   "Khazars": [
-   "700"
+   "700",
+   "800",
+   "900",
+   "1000"
+  ],
+  "Khitans": [
+   "900"
   ],
   "Khiva Khanate": [
    "1600"
   ],
   "Khmer Empire": [
+   "900",
+   "1000",
    "1200"
   ],
   "Khoisan": [
@@ -5540,15 +6207,22 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Khwarazmian dynasty": [
    "1200"
   ],
+  "Kimek-Kipchak khaganate": [
+   "1000"
+  ],
   "Kingdom of David and Solomon": [
    "-1000"
   ],
   "Kingdom of France": [
+   "1000",
    "1200"
   ],
   "Kingdom of Italy": [
@@ -5559,6 +6233,12 @@
   ],
   "Kingdom of Kashmir": [
    "700"
+  ],
+  "Kingdom of Norway": [
+   "900"
+  ],
+  "Kingdom of Pagan": [
+   "1000"
   ],
   "Kingdom of Sind": [
    "700"
@@ -5575,6 +6255,7 @@
    "1800"
   ],
   "Korea": [
+   "1000",
    "1600",
    "1800"
   ],
@@ -5596,6 +6277,10 @@
   "Kushites": [
    "700"
   ],
+  "Kyivan Rus": [
+   "900",
+   "1000"
+  ],
   "Kyrgyzstan": [
    "2010"
   ],
@@ -5613,7 +6298,11 @@
   "Laurel complex": [
    "-1"
   ],
+  "León": [
+   "1000"
+  ],
   "Liao": [
+   "1000",
    "1200"
   ],
   "Libya": [
@@ -5635,6 +6324,7 @@
    "1800"
   ],
   "Madagascar": [
+   "1000",
    "1200",
    "1600",
    "1800",
@@ -5643,6 +6333,11 @@
   "Madagascar (France)": [
    "1914",
    "1945"
+  ],
+  "Magyars": [
+   "800",
+   "900",
+   "1000"
   ],
   "Mahra": [
    "1600"
@@ -5655,14 +6350,25 @@
   ],
   "Makkura": [
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Malacca": [
    "1600"
   ],
+  "Malagasy": [
+   "800",
+   "900"
+  ],
   "Malawi": [
    "1914",
    "2010"
+  ],
+  "Malay": [
+   "800",
+   "900"
   ],
   "Malaya": [
    "1800",
@@ -5679,6 +6385,7 @@
    "1600"
   ],
   "Mali": [
+   "1000",
    "1200",
    "1945",
    "2010"
@@ -5688,6 +6395,12 @@
   ],
   "Manchuria": [
    "1945"
+  ],
+  "Mandes": [
+   "900"
+  ],
+  "Mandjindja": [
+   "1600"
   ],
   "Manioc farmers": [
    "-1000"
@@ -5708,6 +6421,10 @@
   "Mascat": [
    "-1"
   ],
+  "Mataram": [
+   "800",
+   "900"
+  ],
   "Mauri": [
    "700"
   ],
@@ -5719,6 +6436,9 @@
    "-1"
   ],
   "Maya city-states": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Maya states": [
@@ -5728,6 +6448,7 @@
    "1600"
   ],
   "Merina Kingdom": [
+   "1000",
    "1200",
    "1600",
    "1800"
@@ -5739,6 +6460,9 @@
    "1600"
   ],
   "Mesoamerican city-states and chiefdoms": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Mexico": [
@@ -5756,8 +6480,9 @@
    "1600",
    "1800"
   ],
-  "Mongol Empire": [
-   "1200"
+  "Mogollon": [
+   "800",
+   "900"
   ],
   "Mongolia": [
    "1914",
@@ -5766,6 +6491,9 @@
   ],
   "Montagnais Innu": [
    "1600"
+  ],
+  "Mordvinians": [
+   "800"
   ],
   "Morocco": [
    "1800",
@@ -5786,6 +6514,9 @@
   ],
   "Mughal Empire": [
    "1600"
+  ],
+  "Multan": [
+   "900"
   ],
   "Muskogee": [
    "1600"
@@ -5810,6 +6541,9 @@
    "2010"
   ],
   "Nan Chao": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Nan-Zhao": [
@@ -5880,6 +6614,9 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Northern Paiute": [
@@ -5887,6 +6624,9 @@
   ],
   "Northern Rhodesia": [
    "1945"
+  ],
+  "Northmen": [
+   "800"
   ],
   "Norway": [
    "1200",
@@ -5908,6 +6648,9 @@
   "Obiwa": [
    "1600"
   ],
+  "Oghuz Turks": [
+   "900"
+  ],
   "Oman": [
    "1945",
    "2010"
@@ -5927,12 +6670,18 @@
    "1800",
    "1914"
   ],
+  "Pagan": [
+   "900"
+  ],
   "Pakistan": [
    "1945",
    "2010"
   ],
   "Palas": [
-   "700"
+   "700",
+   "800",
+   "900",
+   "1000"
   ],
   "Paleo-Inuit": [
    "-1"
@@ -5944,7 +6693,16 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
+  ],
+  "Pallava": [
+   "900"
+  ],
+  "Pallava state": [
+   "800"
   ],
   "Pallavas": [
    "700"
@@ -5953,6 +6711,9 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600",
    "1800"
@@ -5967,6 +6728,8 @@
    "-1000"
   ],
   "Papuans": [
+   "800",
+   "900",
    "1200",
    "1600"
   ],
@@ -5976,6 +6739,9 @@
    "1945",
    "2010"
   ],
+  "Parhae": [
+   "800"
+  ],
   "Parthian Empire": [
    "-1"
   ],
@@ -5983,6 +6749,9 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600",
    "1800"
@@ -5993,6 +6762,9 @@
   "Pegu": [
    "1600"
   ],
+  "Permians": [
+   "800"
+  ],
   "Persia": [
    "1800",
    "1914"
@@ -6001,6 +6773,9 @@
    "1914",
    "1945",
    "2010"
+  ],
+  "Peshemegs": [
+   "1000"
   ],
   "Philippines": [
    "1800",
@@ -6019,6 +6794,9 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Plain-Pottery culture": [
@@ -6028,12 +6806,16 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Point Peninsula": [
    "-1"
   ],
   "Poland": [
+   "1000",
    "1200",
    "1945",
    "2010"
@@ -6046,6 +6828,9 @@
   ],
   "Potawatomi": [
    "1600"
+  ],
+  "Pratiharas": [
+   "1000"
   ],
   "Principality of Galicia-Volhynia": [
    "1200"
@@ -6069,6 +6854,7 @@
    "1800"
   ],
   "Pyu state": [
+   "800",
    "1200"
   ],
   "Qing Empire": [
@@ -6083,7 +6869,11 @@
   "Quebec": [
    "1800"
   ],
+  "Rajput Clans and Small States": [
+   "800"
+  ],
   "Rajput kingdoms": [
+   "1000",
    "1200"
   ],
   "Rajputana": [
@@ -6091,6 +6881,12 @@
   ],
   "Rajputs": [
    "1800"
+  ],
+  "Rashtrakuta": [
+   "900"
+  ],
+  "Rashtrakuta state": [
+   "800"
   ],
   "Rattanakosin Kingdom": [
    "1800",
@@ -6120,6 +6916,9 @@
   "Rupert's Land": [
    "1800"
   ],
+  "Rus' Khaganate": [
+   "800"
+  ],
   "Russia": [
    "2010"
   ],
@@ -6138,6 +6937,9 @@
   "Safavid Empire": [
    "1600"
   ],
+  "Saffarids": [
+   "900"
+  ],
   "Saharan Nomadic Tribes": [
    "700"
   ],
@@ -6147,14 +6949,20 @@
   "Saka Kingdom": [
    "-1"
   ],
+  "Samanid Empire": [
+   "900"
+  ],
+  "Sami": [
+   "900"
+  ],
+  "Samis": [
+   "1000"
+  ],
   "Samoyèdes": [
    "700"
   ],
   "Santee": [
    "1600"
-  ],
-  "Sasanian Empire": [
-   "700"
   ],
   "Sasanian dependencies": [
    "700"
@@ -6170,6 +6978,9 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600"
   ],
@@ -6178,6 +6989,9 @@
   ],
   "Semites": [
    "-4000"
+  ],
+  "Senas": [
+   "1000"
   ],
   "Senegal": [
    "1600",
@@ -6201,17 +7015,31 @@
   "Sikhs": [
    "1800"
   ],
+  "Silia": [
+   "800"
+  ],
+  "Silla": [
+   "900"
+  ],
   "Sindh": [
+   "900",
    "1800"
   ],
   "Sinic": [
    "-1000"
+  ],
+  "Slavic tribes": [
+   "900"
+  ],
+  "Slavonic tribes": [
+   "800"
   ],
   "Somalia": [
    "1945",
    "2010"
   ],
   "Song Empire": [
+   "1000",
    "1200"
   ],
   "Songhai": [
@@ -6236,12 +7064,18 @@
    "1914"
   ],
   "Srivijaya Empire": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Subarctic forest hunter-gatherers": [
    "-1000",
    "-1",
    "700",
+   "800",
+   "900",
+   "1000",
    "1200",
    "1600"
   ],
@@ -6267,6 +7101,7 @@
    "1600"
   ],
   "Sweden": [
+   "1000",
    "1200",
    "1600",
    "1800",
@@ -6285,6 +7120,7 @@
    "2010"
   ],
   "Sámi": [
+   "800",
    "1200"
   ],
   "T'atsaot'ine": [
@@ -6292,10 +7128,15 @@
    "1800"
   ],
   "Taino": [
+   "1000",
    "1200"
   ],
   "Tajikistan": [
    "2010"
+  ],
+  "Tang Empire": [
+   "800",
+   "900"
   ],
   "Tanzania, United Republic of": [
    "1945",
@@ -6315,17 +7156,28 @@
    "-1000"
   ],
   "Thule": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Tiahuanaco Empire": [
    "700",
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Tibet": [
+   "1000",
    "1200",
    "1600",
    "1914",
    "1945"
+  ],
+  "Tibetan Empire": [
+   "800",
+   "900"
   ],
   "Tibetans": [
    "-1000"
@@ -6348,11 +7200,16 @@
   "Tuareg Nomadic Tribes": [
    "1200"
   ],
+  "Tuaregs": [
+   "900"
+  ],
   "Tufan Empire": [
    "700"
   ],
   "Tungus": [
-   "700"
+   "700",
+   "800",
+   "900"
   ],
   "Tungusic Tribes": [
    "1200"
@@ -6361,6 +7218,10 @@
    "1914",
    "1945",
    "2010"
+  ],
+  "Tupis": [
+   "800",
+   "900"
   ],
   "Turkey": [
    "1945",
@@ -6421,7 +7282,9 @@
    "1600"
   ],
   "Uyghurs": [
-   "700"
+   "700",
+   "800",
+   "900"
   ],
   "Uzbekistan": [
    "2010"
@@ -6439,6 +7302,9 @@
    "1914",
    "1945",
    "2010"
+  ],
+  "Veps": [
+   "800"
   ],
   "Veracruz civilization": [
    "700"
@@ -6466,6 +7332,9 @@
    "1600"
   ],
   "Volga Bulgars": [
+   "800",
+   "900",
+   "1000",
    "1200"
   ],
   "Wadai": [
@@ -6496,7 +7365,12 @@
    "-1000",
    "-1",
    "700",
+   "800",
+   "1000",
    "1200"
+  ],
+  "West Francia": [
+   "900"
   ],
   "Western Gokturk Khaganate": [
    "700"
@@ -6526,10 +7400,12 @@
    "-1"
   ],
   "Xixia": [
+   "1000",
    "1200"
   ],
   "Yamato": [
-   "700"
+   "700",
+   "900"
   ],
   "Yankontai": [
    "1600"
@@ -6538,6 +7414,7 @@
    "1600"
   ],
   "Yemen": [
+   "1000",
    "1200",
    "1945",
    "2010"
@@ -6579,6 +7456,8 @@
    "-4000"
   ],
   "minor Hindu and Buddhist states": [
+   "800",
+   "1000",
    "1200"
   ],
   "minor states under Indian influence": [

@@ -11,7 +11,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CHECK = process.argv.includes("--check");
 const KINDS = new Set(["khaldun", "evidence", "limits", "quant", "end"]);
 const TITLES = { khaldun: "ابن خلدون", limits: "ما يقيّد السُّنّة", quant: "الاختبار الكمي", end: "خلاصة" };
-const BORDERS = new Set([-4000, -1000, -1, 700, 1200, 1600, 1800, 1914, 1945, 2010, "modern"]);
+const BORDERS = new Set([-4000, -1000, -1, 700, 800, 900, 1000, 1200, 1600, 1800, 1914, 1945, 2010, "modern"]);
 const DIGITS = /[0-9٠-٩۰-۹]/;
 const MAX_WORDS = 25;
 const read = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, p), "utf8"));
