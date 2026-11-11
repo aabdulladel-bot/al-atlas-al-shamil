@@ -18,7 +18,15 @@ for (const ph of phases.phases) {
   if (!ph.refs?.length) errors.push(`العهد ${ph.id}: بلا مراجع`);
   for (const id of ph.refs ?? []) if (!byId.has(id)) errors.push(`العهد ${ph.id}: مرجع غير معروف ${id}`);
 }
-console.log(`مراجع العهود: ${refs.references.length} مرجع، ${phases.phases.length} عهود`);
+// نصوص المقدمة: كل اقتباس يطابق الملف حرفياً مرة واحدة، ومعرّفه في المراجع
+const kh = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/abbasid_khaldun_passages.json"), "utf8"));
+const khText = fs.readFileSync(path.join(ROOT, kh._meta.file), "utf8");
+for (const p of kh.passages) {
+  const n = khText.split(p.quote).length - 1;
+  if (n !== 1) errors.push(`${p.id}: الاقتباس يطابق الملف ${n} مرة، والمطلوب مرة واحدة`);
+  if (p.supports_phase !== null && !phases.phases.some((ph) => ph.id === p.supports_phase)) errors.push(`${p.id}: عهد غير معروف ${p.supports_phase}`);
+}
+console.log(`مراجع العهود: ${refs.references.length} مرجع، ${phases.phases.length} عهود، ${kh.passages.length} اقتباس من المقدمة`);
 if (errors.length) {
   console.error(`مراجع العهود: ${errors.length} مشكلة`);
   for (const e of errors) console.error(`- ${e}`);
