@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data/raw/wikidata/hb_titles.json"
-KEYS = ["-4000", "-1000", "-1", "700", "1200", "1600", "1800", "1914", "1945", "2010"]
+KEYS = ["-4000", "-1000", "-1", "700", "800", "900", "1000", "1200", "1600", "1800", "1914", "1945", "2010"]
 UA = "AlAtlasAlShamil/0.1 (https://github.com/aabdulladel-bot/al-atlas-al-shamil; non-commercial research)"
 API = "https://www.wikidata.org/w/api.php"
 BATCH = 50
