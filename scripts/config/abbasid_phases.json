@@ -20,6 +20,10 @@
           "name_ar": "الخلافة العباسية",
           "kind": "territorial"
         }
+      ],
+      "refs": [
+        "wikidata-q12536",
+        "ibn-khaldun-muqaddima"
       ]
     },
     {
@@ -33,6 +37,11 @@
           "name_ar": "الخلافة العباسية",
           "kind": "territorial, reduced"
         }
+      ],
+      "refs": [
+        "al-tabari-tarikh",
+        "ibn-al-athir-kamil",
+        "tawqosh-abbasid"
       ]
     },
     {
@@ -58,6 +67,11 @@
           "name_ar": "الخلافة العباسية",
           "kind": "nominal, to be drawn as overlay"
         }
+      ],
+      "refs": [
+        "ibn-al-athir-kamil",
+        "wikidata-q12536",
+        "tawqosh-abbasid"
       ]
     }
   ],
