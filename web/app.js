@@ -2643,10 +2643,19 @@ tbStops.innerHTML = TIME_STOPS.map((k, i) => {
   return `<div class="tb-stop${edge}" data-k="${k}" style="inset-inline-start:${(tbPos(k) * 100).toFixed(2)}%"><i></i><span>${escapeHtml(stopLabel(k))}</span></div>`;
 }).join("");
 let tbPreview = null; // المحطة أثناء السحب، قبل الإفلات
+// فراغات مقصودة على الخريطة: لا تُسمّى أرضٌ لا نعرف كيانها، وسببها في scripts/config/historical_corrections.json
+const GAP_NOTES = {
+  "700": "أرض العراق وإيران بلا كيان مسمّى: الساسانيون زالوا سنة 651 ولا نعرض الدولة التي خلفتهم بلا مصدر.",
+  "1200": "فراغات مقصودة: البويهيون والفاطميون زالوا قبل هذه السنة، والعباسيون والأيوبيون لا مضلعات لهم في المصدر بعد.",
+  "1600": "الإمبراطورية الإنكاوية زالت سنة 1572، فلا تُرسم في 1600.",
+};
 function renderTime() {
   const k = tbPreview ?? time.key;
   if (k == null) return;
   const era = eraOf(k);
+  const gap = document.getElementById("tb-gap");
+  if (gap) { gap.textContent = GAP_NOTES[String(k)] ?? ""; gap.hidden = !GAP_NOTES[String(k)]; }
+  tbEra.title = GAP_NOTES[String(k)] ?? "";
   tbThumb.style.insetInlineStart = `${(tbPos(k) * 100).toFixed(2)}%`;
   tbYear.textContent = yearText(k);
   tbEra.textContent = `الحقبة ${era.id}: ${era.label}`;
