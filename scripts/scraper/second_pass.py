@@ -25,7 +25,7 @@ spec.loader.exec_module(wm)
 REVIEW = ROOT / "review" / "names_verification.json"
 OUT_JSON = ROOT / "review" / "names_second_pass.json"
 OUT_CSV = ROOT / "review" / "names_second_pass.csv"
-FACTS_CACHE = ROOT / "review" / "names_second_pass_facts.json"
+FACTS_CACHE = ROOT / ".cache" / "scraper" / "second_pass_facts.json"  # ذاكرة مؤقتة، لا تُلتزم
 
 POLITY = re.compile(r"state|kingdom|empire|dynast|sultanate|khanate|khaganate|emirate|principalit|duchy|republic|"
                     r"country|colony|protectorate|caliphate|confederation|realm|monarchy|horde|sovereign|"
