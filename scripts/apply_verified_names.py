@@ -36,12 +36,43 @@ def load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def apply_second(dry):
+    """يطبّق قرارات الجولة الثانية (review/names_second_pass.json، عمود accept=yes) على الإعدادات نفسها."""
+    rows = load(ROOT / "review" / "names_second_pass.json")
+    names = load(NAME_OVR)
+    ov = names["overrides"]
+    added, skipped = [], []
+    for r in rows:
+        if r.get("accept") != "yes":
+            continue
+        name = r["name"]
+        if name in ov:
+            skipped.append(name)
+            continue
+        ar = r.get("proposed_ar") or r.get("current_ar")
+        why = (f"الجولة الثانية للأسماء بلا نوع في ويكي بيانات ({DATE}): الكيان {r.get('en')} ({r['qid']})، "
+               f"والاسم العربي عنوان مقالته ({r.get('arwiki') or ar}). {r.get('review_note', '')}").strip()
+        ov[name] = {"ar": ar, "why": why}
+        added.append(name)
+    print(f"سيُضاف {len(added)} مفتاح، ويُتخطى {len(skipped)}")
+    if skipped:
+        print("المتخطى:", ", ".join(skipped))
+    if dry:
+        print("وضع الاختبار: لم يُكتب شيء.")
+        return
+    NAME_OVR.write_text(json.dumps(names, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print("كُتبت الإعدادات.")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tier", default="عالية")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--source", default="verification", choices=["verification", "second"])
     a = ap.parse_args()
     dry, tier = a.dry_run, a.tier
+    if a.source == "second":
+        return apply_second(dry)
     rows = load(REVIEW)
     names = load(NAME_OVR)
     qids = load(QID_OVR)
