@@ -37,6 +37,7 @@
     "test:ui": "node scripts/ui_smoke.mjs",
     "test:search": "node scripts/search_check.mjs",
     "fetch:extras": "python3 -I scripts/fetch_wikidata_extras.py",
+    "verify:names": "python3 -I -u scripts/scraper/run.py verify-names",
     "review:import": "node scripts/import_review.mjs",
     "build:precedents": "node scripts/build_precedents.mjs",
     "check:precedents": "node scripts/check_precedents.mjs",

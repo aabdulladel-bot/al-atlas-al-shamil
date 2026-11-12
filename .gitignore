@@ -4,3 +4,6 @@ out/
 .env
 __pycache__/
 private/
+
+# ذاكرة السكرابر المؤقتة (scripts/scraper)
+.cache/
