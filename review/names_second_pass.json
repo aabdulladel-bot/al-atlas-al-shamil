@@ -16,7 +16,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Central_Asia",
   "url_ar": "https://ar.wikipedia.org/wiki/آسيا_الوسطى",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q27275"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q27275",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Saharan pastoral nomads",
@@ -35,7 +37,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/pastoralism",
   "url_ar": "https://ar.wikipedia.org/wiki/نشاط_رعوي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q9056738"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q9056738",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Saharan Nomadic Tribes",
@@ -54,7 +58,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Sahara",
   "url_ar": "https://ar.wikipedia.org/wiki/الصحراء_الكبرى",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6583"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6583",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Aboriginal tribes",
@@ -73,7 +79,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/North_Sentinel_Island",
   "url_ar": "https://ar.wikipedia.org/wiki/جزيرة_سينتينل",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1260331"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1260331",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Australian aboriginal hunter-gatherers",
@@ -92,7 +100,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Aboriginal_Australians",
   "url_ar": "https://ar.wikipedia.org/wiki/أستراليون_أصليون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q12060728"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q12060728",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Paleo-Siberian hunter-gatherers",
@@ -111,7 +121,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Ancient_North_Eurasian",
   "url_ar": "https://ar.wikipedia.org/wiki/شمال_أوراسيا_القديم",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q60790291"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q60790291",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Manchu Empire",
@@ -130,7 +142,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Qing_dynasty",
   "url_ar": "https://ar.wikipedia.org/wiki/سلالة_تشينغ_الحاكمة",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q8733"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q8733",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "West African cereal farmers",
@@ -149,7 +163,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/West_Africa",
   "url_ar": "https://ar.wikipedia.org/wiki/غرب_إفريقيا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4412"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4412",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ming Chinese Empire",
@@ -168,7 +184,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Chinese_Empire",
   "url_ar": "https://ar.wikipedia.org/wiki/الإمبراطورية_الصينية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q12060881"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q12060881",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Arctic marine mammal hunters",
@@ -187,7 +205,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/walrus",
   "url_ar": "https://ar.wikipedia.org/wiki/فظ_(حيوان)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q40994"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q40994",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Proto-Altaic pastoralists",
@@ -206,7 +226,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Altaic",
   "url_ar": "https://ar.wikipedia.org/wiki/لغات_آلتائية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q37845"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q37845",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Savanna hunter-gatherers",
@@ -225,7 +247,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/hunter-gatherer",
   "url_ar": "https://ar.wikipedia.org/wiki/صياد_وجامع",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q27443"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q27443",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Manioc farmers",
@@ -244,7 +268,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/cassava",
   "url_ar": "https://ar.wikipedia.org/wiki/بفرة",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q83124"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q83124",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Subarctic forest hunter-gatherers",
@@ -263,7 +289,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Eskimo",
   "url_ar": "https://ar.wikipedia.org/wiki/الإسكيمو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q131242"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q131242",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kara Khitai Khaganate",
@@ -282,7 +310,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Karakhanid_Khanate",
   "url_ar": "https://ar.wikipedia.org/wiki/الدولة_القراخانية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q494354"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q494354",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Amazon hunter-gatherers",
@@ -301,7 +331,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Panará_people",
   "url_ar": "https://ar.wikipedia.org/wiki/بانارا_(شعب)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q545219"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q545219",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Han",
@@ -320,7 +352,9 @@
   "reasons": "مستوفٍ للشروط",
   "url_en": "https://en.wikipedia.org/wiki/Han_dynasty",
   "url_ar": "https://ar.wikipedia.org/wiki/سلالة_هان_الحاكمة",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7209"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7209",
+  "accept": "yes",
+  "review_note": "مقترح آلياً ومستوفٍ للشروط"
  },
  {
   "name": "Eastern North American hunter-gatherers",
@@ -339,7 +373,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Eastern_Hunter-Gatherer",
   "url_ar": "https://ar.wikipedia.org/wiki/صياد_وجامع_شرقي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q84405903"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q84405903",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Finno-Ugric taiga hunter-gatherers",
@@ -358,7 +394,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Proto-Uralic",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q288765"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q288765",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kimek-Kipchak khaganate",
@@ -377,7 +415,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Kipchaks",
   "url_ar": "https://ar.wikipedia.org/wiki/قفجاق",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q682597"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q682597",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Plain bison hunters",
@@ -396,7 +436,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/plains_bison",
   "url_ar": "https://ar.wikipedia.org/wiki/بيسون_السهول",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2447861"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2447861",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Iranian pastoralists",
@@ -415,7 +457,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Iranian_peoples",
   "url_ar": "https://ar.wikipedia.org/wiki/إيرانيون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1672477"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1672477",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mandes",
@@ -434,7 +478,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mandé_peoples",
   "url_ar": "https://ar.wikipedia.org/wiki/شعوب_ماندي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1407391"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1407391",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Cuman Khanates",
@@ -453,7 +499,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Cumans",
   "url_ar": "https://ar.wikipedia.org/wiki/قمانيون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1035516"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1035516",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Tufan Empire",
@@ -472,7 +520,9 @@
   "reasons": "التسمية في ويكي بيانات تختلف عن الاسم في المصدر (قد يكون تعريباً مختلفاً)",
   "url_en": "https://en.wikipedia.org/wiki/Tibetan_Empire",
   "url_ar": "https://ar.wikipedia.org/wiki/الإمبراطورية_التبتية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2431480"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2431480",
+  "accept": "yes",
+  "review_note": "الإمبراطورية التبتية هي نفسها توفان؛ الاسم في المصدر تعريب لها، والمدة 618–842 تغطي 700."
  },
  {
   "name": "Desert hunter-gatherers",
@@ -491,7 +541,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/hunter-gatherer",
   "url_ar": "https://ar.wikipedia.org/wiki/صياد_وجامع",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q27443"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q27443",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Austro-Asiatic rice cultures",
@@ -510,7 +562,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Austroasiatic",
   "url_ar": "https://ar.wikipedia.org/wiki/لغات_أسترو_آسيوية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q33199"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q33199",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Islamic and Hindu states",
@@ -529,7 +583,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Persecution_of_Hindus",
   "url_ar": "https://ar.wikipedia.org/wiki/اضطهاد_الهندوس",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7170065"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7170065",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Pampas cultures",
@@ -548,7 +604,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Pampas_deer",
   "url_ar": "https://ar.wikipedia.org/wiki/أيل_البمبات",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q674003"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q674003",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Arabia (Nejd)",
@@ -567,7 +625,9 @@
   "reasons": "التسمية في ويكي بيانات تختلف عن الاسم في المصدر (قد يكون تعريباً مختلفاً)",
   "url_en": "https://en.wikipedia.org/wiki/Third_Saudi_State",
   "url_ar": "https://ar.wikipedia.org/wiki/الدولة_السعودية_الثالثة",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2011891"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2011891",
+  "accept": "yes",
+  "review_note": "نجد في 1914 هي الدولة السعودية الثالثة (1902–)؛ المدة تغطي 1914."
  },
  {
   "name": "Sinic",
@@ -586,7 +646,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/sine_wave",
   "url_ar": "https://ar.wikipedia.org/wiki/موجة_جيبية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q207527"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q207527",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Azandes",
@@ -605,7 +667,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Zande_people",
   "url_ar": "https://ar.wikipedia.org/wiki/أزاندي_(قومية)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q793575"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q793575",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Western Gokturk Khaganate",
@@ -624,7 +688,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/First_Turkic_Khaganate",
   "url_ar": "https://ar.wikipedia.org/wiki/خاقانية_الترك_الأولى",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q15146034"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q15146034",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Maize farmers",
@@ -643,7 +709,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Zea",
   "url_ar": "https://ar.wikipedia.org/wiki/ذرة_شامية_(جنس)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q542456"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q542456",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Malaysian Islamic states",
@@ -662,7 +730,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Islam_in_Malaysia",
   "url_ar": "https://ar.wikipedia.org/wiki/الإسلام_في_ماليزيا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3137595"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3137595",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Samoyèdes",
@@ -681,7 +751,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Samoyeds",
   "url_ar": "https://ar.wikipedia.org/wiki/ساموديون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q941253"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q941253",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Hindu kingdoms",
@@ -700,7 +772,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Greater_India",
   "url_ar": "https://ar.wikipedia.org/wiki/الهند_الكبرى",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q11014588"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q11014588",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ghaznavid Emirate",
@@ -719,7 +793,9 @@
   "reasons": "بعض سنوات الخريطة خارج فترة الكيان، وقد يكون الاسم لكيان آخر في تلك السنوات",
   "url_en": "https://en.wikipedia.org/wiki/Emirate_of_Multan",
   "url_ar": "https://ar.wikipedia.org/wiki/إمارة_ملتان",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q110442854"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q110442854",
+  "accept": "no",
+  "review_note": "المعرّف Emirate of Multan لا الغزنويون؛ هوية خاطئة."
  },
  {
   "name": "Papuan neolithic farmers",
@@ -738,7 +814,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/neolithic_revolution",
   "url_ar": "https://ar.wikipedia.org/wiki/ثورة_العصر_الحجري_الحديث",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q180548"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q180548",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "German E. Africa (Tanganyika)",
@@ -757,7 +835,9 @@
   "reasons": "مستوفٍ للشروط",
   "url_en": "https://en.wikipedia.org/wiki/German_East_Africa",
   "url_ar": "https://ar.wikipedia.org/wiki/شرق_إفريقيا_الألمانية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q153963"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q153963",
+  "accept": "yes",
+  "review_note": "مقترح آلياً ومستوفٍ للشروط"
  },
  {
   "name": "Tungusic Tribes",
@@ -776,7 +856,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Tungusic",
   "url_ar": "https://ar.wikipedia.org/wiki/لغات_تونغوسية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q34230"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q34230",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Burmese",
@@ -795,7 +877,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Burmese_python",
   "url_ar": "https://ar.wikipedia.org/wiki/أصلة_بورمية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2716137"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2716137",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Hindu states",
@@ -814,7 +898,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Hinduism",
   "url_ar": "https://ar.wikipedia.org/wiki/الهندوسية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q9089"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q9089",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ifat",
@@ -833,7 +919,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Ifat_Sultanate",
   "url_ar": "https://ar.wikipedia.org/wiki/سلطنة_عفت",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q157727"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q157727",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Papuans",
@@ -852,7 +940,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Papuan_people",
   "url_ar": "https://ar.wikipedia.org/wiki/بابواويون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q424129"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q424129",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Liao",
@@ -871,7 +961,9 @@
   "reasons": "بعض سنوات الخريطة خارج فترة الكيان، وقد يكون الاسم لكيان آخر في تلك السنوات",
   "url_en": "https://en.wikipedia.org/wiki/Liao_dynasty",
   "url_ar": "https://ar.wikipedia.org/wiki/مملكة_لياو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4958"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4958",
+  "accept": "no",
+  "review_note": "الاسم يظهر في 1000 (لياو) وفي 1200، وقد تكون 1200 لياو الغربية، وهي كيان آخر. يبقى الاسم الحالي."
  },
  {
   "name": "Malays",
@@ -890,7 +982,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Malays",
   "url_ar": "https://ar.wikipedia.org/wiki/الملايو_(شعب)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q142702"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q142702",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Chukchi",
@@ -909,7 +1003,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Chukchis",
   "url_ar": "https://ar.wikipedia.org/wiki/شعب_تشوكشي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q106991"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q106991",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Andean hunter-gatherers",
@@ -928,7 +1024,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/hunter-gatherer",
   "url_ar": "https://ar.wikipedia.org/wiki/صياد_وجامع",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q27443"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q27443",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ayutthaya",
@@ -947,7 +1045,9 @@
   "reasons": "مستوفٍ للشروط",
   "url_en": "https://en.wikipedia.org/wiki/Ayutthaya_Kingdom",
   "url_ar": "https://ar.wikipedia.org/wiki/مملكة_أيوثايا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q841364"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q841364",
+  "accept": "yes",
+  "review_note": "مقترح آلياً ومستوفٍ للشروط"
  },
  {
   "name": "Cushites",
@@ -966,7 +1066,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Cush",
   "url_ar": "https://ar.wikipedia.org/wiki/كوش_بن_حام",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1138595"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1138595",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Songhai",
@@ -985,7 +1087,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Songhai_Empire",
   "url_ar": "https://ar.wikipedia.org/wiki/سلطنة_صنغاي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q202687"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q202687",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Satavahanihara",
@@ -1004,7 +1108,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Satavahana_dynasty",
   "url_ar": "https://ar.wikipedia.org/wiki/ساتافاهانا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5257"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5257",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Saami",
@@ -1023,7 +1129,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Sporting_Arms_and_Ammunition_Manufacturers'_Institute",
   "url_ar": "https://ar.wikipedia.org/wiki/معهد_مصنعي_الأسلحة_الرياضية_والذخيرة",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1579119"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1579119",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Avars",
@@ -1042,7 +1150,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Pannonian_Avars",
   "url_ar": "https://ar.wikipedia.org/wiki/آفار_أوراسيا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q68962"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q68962",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Hunters-gatherers",
@@ -1061,7 +1171,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/hunter-gatherer",
   "url_ar": "https://ar.wikipedia.org/wiki/صياد_وجامع",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q27443"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q27443",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Madagascar (France)",
@@ -1080,7 +1192,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/France–Madagascar_relations",
   "url_ar": "https://ar.wikipedia.org/wiki/العلاقات_الفرنسية_المدغشقرية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3424162"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3424162",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Oromo",
@@ -1099,7 +1213,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Oromo_people",
   "url_ar": "https://ar.wikipedia.org/wiki/شعب_أورومو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q318674"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q318674",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Obiwa",
@@ -1118,7 +1234,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mount_Togakushi",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q11496659"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q11496659",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "North American Pacific foraging, hunting and fishing peoples",
@@ -1137,7 +1255,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/North_Pacific_giant_octopus",
   "url_ar": "https://ar.wikipedia.org/wiki/أخطبوط_المحيط_الهادئ_العملاق",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q912404"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q912404",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Caribbean hunter-gatherers",
@@ -1156,7 +1276,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Guanajatabey",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3118725"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3118725",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Tiahuanaco Empire",
@@ -1175,7 +1297,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Inca_Empire",
   "url_ar": "https://ar.wikipedia.org/wiki/إمبراطورية_الإنكا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28573"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28573",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kingdom of Sind",
@@ -1194,7 +1318,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Sind",
   "url_ar": "https://ar.wikipedia.org/wiki/ولاية_السند",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6608704"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6608704",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Palas",
@@ -1213,7 +1339,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/palas",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q829300"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q829300",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Segu",
@@ -1232,7 +1360,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/José_Joaquín_de_Olmedo_International_Airport",
   "url_ar": "https://ar.wikipedia.org/wiki/مطار_خوسيه_خواكين_دي_أولميدو_الدولي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1422154"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1422154",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mesoamerican city-states and chiefdoms",
@@ -1251,7 +1381,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mesoamerica",
   "url_ar": "https://ar.wikipedia.org/wiki/وسط_أمريكا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q13703"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q13703",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Maya city-states",
@@ -1270,7 +1402,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Maya_civilization",
   "url_ar": "https://ar.wikipedia.org/wiki/حضارة_المايا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28567"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28567",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ethiopian highland farmers",
@@ -1289,7 +1423,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Canis_simensis",
   "url_ar": "https://ar.wikipedia.org/wiki/ذئب_حبشي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q188957"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q188957",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "minor states under Indian influence",
@@ -1308,7 +1444,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/princely_state",
   "url_ar": "https://ar.wikipedia.org/wiki/ولاية_أميرية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1336152"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1336152",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "state societies and Aramaean kingdoms",
@@ -1327,7 +1465,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Hasmonean_Judea",
   "url_ar": "https://ar.wikipedia.org/wiki/المملكة_الحشمونية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q10359001"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q10359001",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Watassid Morocco",
@@ -1346,7 +1486,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Campaign_of_Tlemcen",
   "url_ar": "https://ar.wikipedia.org/wiki/حملة_تلمسان_(1557)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q86684978"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q86684978",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Maya chiefdoms and states",
@@ -1365,7 +1507,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Maya_civilization",
   "url_ar": "https://ar.wikipedia.org/wiki/حضارة_المايا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28567"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28567",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Japan (USA)",
@@ -1384,7 +1528,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Usa",
   "url_ar": "https://ar.wikipedia.org/wiki/يوسا_(أويتا)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q114147"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q114147",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Luba",
@@ -1403,7 +1549,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Luba_people",
   "url_ar": "https://ar.wikipedia.org/wiki/شعب_لوبا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q805841"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q805841",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Alwa",
@@ -1422,7 +1570,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Lulu",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q837545"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q837545",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Maya states",
@@ -1441,7 +1591,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Maya_civilization",
   "url_ar": "https://ar.wikipedia.org/wiki/حضارة_المايا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28567"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28567",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Sasanian dependencies",
@@ -1460,7 +1612,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Roman–Persian_Wars",
   "url_ar": "https://ar.wikipedia.org/wiki/حروب_الروم_والفرس",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q500409"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q500409",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Adal",
@@ -1479,7 +1633,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Adal_Sultanate",
   "url_ar": "https://ar.wikipedia.org/wiki/سلطنة_عدل",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2365048"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2365048",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Islamic city-states",
@@ -1498,7 +1654,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Islam_in_the_United_States",
   "url_ar": "https://ar.wikipedia.org/wiki/الإسلام_في_الولايات_المتحدة",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2735001"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2735001",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Congo",
@@ -1517,7 +1675,9 @@
   "reasons": "بعض سنوات الخريطة خارج فترة الكيان، وقد يكون الاسم لكيان آخر في تلك السنوات",
   "url_en": "https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo",
   "url_ar": "https://ar.wikipedia.org/wiki/جمهورية_الكونغو_الديمقراطية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q974"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q974",
+  "accept": "no",
+  "review_note": "الاسم يشمل مملكة الكونغو (1600) والكونغو البلجيكية (1945) وجمهورية الكونغو الديمقراطية (2010). يبقى الاسم الحالي."
  },
  {
   "name": "Maitraka Kingdom",
@@ -1536,7 +1696,9 @@
   "reasons": "لا مقالة عربية",
   "url_en": "https://en.wikipedia.org/wiki/Maitraka_dynasty",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6737189"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6737189",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Malaya",
@@ -1555,7 +1717,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Federation_of_Malaya",
   "url_ar": "https://ar.wikipedia.org/wiki/اتحاد_مالايا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1479726"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1479726",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "minor Hindu and Buddhist states",
@@ -1574,7 +1738,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Persecution_of_Hindus",
   "url_ar": "https://ar.wikipedia.org/wiki/اضطهاد_الهندوس",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7170065"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7170065",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kalinga",
@@ -1593,7 +1759,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Kalinga",
   "url_ar": "https://ar.wikipedia.org/wiki/كالينغا_(منطقة_تاريخية)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1150706"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1150706",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Thai Kingdoms",
@@ -1612,7 +1780,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Thai_people",
   "url_ar": "https://ar.wikipedia.org/wiki/تايلانديون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q472834"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q472834",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ethiopian Highland Peoples",
@@ -1631,7 +1801,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Ethiopian_Highlands",
   "url_ar": "https://ar.wikipedia.org/wiki/مرتفعات_إثيوبيا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q319288"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q319288",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Norte Chico",
@@ -1650,7 +1822,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Caral–Supe_civilization",
   "url_ar": "https://ar.wikipedia.org/wiki/حضارة_نورتي_شيكو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q153836"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q153836",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ute",
@@ -1669,7 +1843,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Ute",
   "url_ar": "https://ar.wikipedia.org/wiki/شعب_يوت",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1253290"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1253290",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Imperial Japan (Fujiwara)",
@@ -1688,7 +1864,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Fujiwara_clan",
   "url_ar": "https://ar.wikipedia.org/wiki/فوجيوارا_(عشيرة)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q641628"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q641628",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Japan (Warring States)",
@@ -1707,7 +1885,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Warring_States_period",
   "url_ar": "https://ar.wikipedia.org/wiki/حقبة_الممالك_المتحاربة",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q185063"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q185063",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Lunda",
@@ -1726,7 +1906,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Lunda_Lubanza",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28223193"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28223193",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yamato",
@@ -1745,7 +1927,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Japanese_battleship_Yamato",
   "url_ar": "https://ar.wikipedia.org/wiki/البارجة_اليابانية_ياماتو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q215010"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q215010",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Patagonian shellfish and marine mammal hunters",
@@ -1764,7 +1948,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/seafood",
   "url_ar": "https://ar.wikipedia.org/wiki/مأكولات_بحرية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q192935"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q192935",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Point Peninsula",
@@ -1783,7 +1969,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Hut_Point_Peninsula",
   "url_ar": "https://ar.wikipedia.org/wiki/شبه_جزيرة_هت_بوينت",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1372609"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1372609",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gold Coast",
@@ -1802,7 +1990,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Gold_Coast",
   "url_ar": "https://ar.wikipedia.org/wiki/غولد_كوست",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q140075"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q140075",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "England and Ireland",
@@ -1821,7 +2011,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/William_III_of_England",
   "url_ar": "https://ar.wikipedia.org/wiki/وليم_الثالث_(ملك_إنجلترا)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q129987"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q129987",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nan-Zhao",
@@ -1840,7 +2032,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Zhang_Nan",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q197261"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q197261",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wu",
@@ -1859,7 +2053,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Constance_Wu",
   "url_ar": "https://ar.wikipedia.org/wiki/كونستانس_وو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5163596"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5163596",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yup'ik & Cup'ik",
@@ -1878,7 +2074,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yup'ik_cuisine",
   "url_ar": "https://ar.wikipedia.org/wiki/مطبخ_يوبيك",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q29561309"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q29561309",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Osage",
@@ -1897,7 +2095,9 @@
   "reasons": "مستوفٍ للشروط",
   "url_en": "https://en.wikipedia.org/wiki/Osage_Nation",
   "url_ar": "https://ar.wikipedia.org/wiki/أوساج_(قبيلة)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q947650"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q947650",
+  "accept": "yes",
+  "review_note": "مقترح آلياً ومستوفٍ للشروط"
  },
  {
   "name": "Burmese kingdoms",
@@ -1916,7 +2116,9 @@
   "reasons": "التسمية في ويكي بيانات تختلف عن الاسم في المصدر (قد يكون تعريباً مختلفاً)",
   "url_en": "https://en.wikipedia.org/wiki/history_of_Myanmar",
   "url_ar": "https://ar.wikipedia.org/wiki/تاريخ_ميانمار",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q216841"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q216841",
+  "accept": "no",
+  "review_note": "المعرّف تاريخ ميانمار (مقالة عامة) لا كياناً سياسياً واحداً."
  },
  {
   "name": "Ainu",
@@ -1935,7 +2137,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Ainu_people",
   "url_ar": "https://ar.wikipedia.org/wiki/آينو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q101828"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q101828",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nganasan",
@@ -1954,7 +2158,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Nganasan_people",
   "url_ar": "https://ar.wikipedia.org/wiki/شعب_نغاناسان",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1163044"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1163044",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Rift Valley States",
@@ -1973,7 +2179,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Great_Rift_Valley",
   "url_ar": "https://ar.wikipedia.org/wiki/الوادي_المتصدع_الكبير",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q81591"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q81591",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bagirmi",
@@ -1992,7 +2200,9 @@
   "reasons": "التسمية في ويكي بيانات تختلف عن الاسم في المصدر (قد يكون تعريباً مختلفاً)",
   "url_en": "https://en.wikipedia.org/wiki/Kingdom_of_Baguirmi",
   "url_ar": "https://ar.wikipedia.org/wiki/مملكة_باقرمي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1472873"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1472873",
+  "accept": "yes",
+  "review_note": "باقرمي هو الكيان نفسه بتعريب مختلف (Kingdom of Baguirmi)؛ المدة 1513–1897 تغطي 1600 و1800."
  },
  {
   "name": "Annam",
@@ -2011,7 +2221,9 @@
   "reasons": "بعض سنوات الخريطة خارج فترة الكيان، وقد يكون الاسم لكيان آخر في تلك السنوات",
   "url_en": "https://en.wikipedia.org/wiki/French_Annam",
   "url_ar": "https://ar.wikipedia.org/wiki/أنام_(محمية_فرنسية)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q10828323"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q10828323",
+  "accept": "no",
+  "review_note": "الاسم يظهر في 1000 لأنام الفيتنامية القديمة، وفي 1945 لأنام الفرنسية. يبقى الاسم الحالي."
  },
  {
   "name": "Danube Bulgars",
@@ -2030,7 +2242,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Bulgarian_lands_across_the_Danube",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q12289452"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q12289452",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "El Paraiso",
@@ -2049,7 +2263,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/El_Paraíso_Verde",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q111944909"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q111944909",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kingdom of David and Solomon",
@@ -2068,7 +2284,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/The_Kingdom_of_Solomon",
   "url_ar": "https://ar.wikipedia.org/wiki/مملكة_سليمان_(فلم)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3031303"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3031303",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Asante",
@@ -2087,7 +2305,9 @@
   "reasons": "التسمية في ويكي بيانات تختلف عن الاسم في المصدر (قد يكون تعريباً مختلفاً)",
   "url_en": "https://en.wikipedia.org/wiki/Ashanti_Empire",
   "url_ar": "https://ar.wikipedia.org/wiki/إمبراطورية_آشانتي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q722071"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q722071",
+  "accept": "yes",
+  "review_note": "آشانتي هي الإمبراطورية الأشانتية نفسها بتعريب مختلف؛ المدة 1670–1902 تغطي 1800."
  },
  {
   "name": "Paleo-Koreans",
@@ -2106,7 +2326,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/paleoconservatism",
   "url_ar": "https://ar.wikipedia.org/wiki/محافظون_أصليون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1074954"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1074954",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Shellfish gatherers",
@@ -2125,7 +2347,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/gumbo",
   "url_ar": "https://ar.wikipedia.org/wiki/جومبو_(طبق)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1160522"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1160522",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Awsa",
@@ -2144,7 +2368,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/American_Woman_Suffrage_Association",
   "url_ar": "https://ar.wikipedia.org/wiki/الجمعية_الأمريكية_المطالبة_بحق_المرأة_في_الاقتراع",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2843069"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2843069",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Silia",
@@ -2163,7 +2389,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Silia_Kapsis",
   "url_ar": "https://ar.wikipedia.org/wiki/سيليا_كابسيس",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q122818445"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q122818445",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Arrernte",
@@ -2182,7 +2410,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Arrernte",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q699483"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q699483",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Santee",
@@ -2201,7 +2431,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Dakota_people",
   "url_ar": "https://ar.wikipedia.org/wiki/قبيلة_داكوتا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q16148367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q16148367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Lombard principalities",
@@ -2220,7 +2452,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Lombards",
   "url_ar": "https://ar.wikipedia.org/wiki/لومبارديون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q130900"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q130900",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bega",
@@ -2239,7 +2473,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Lou_Bega",
   "url_ar": "https://ar.wikipedia.org/wiki/لو_بيجا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q60268"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q60268",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Warlpiri",
@@ -2258,7 +2494,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Warlpiri_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4989843"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4989843",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Dutch settlements",
@@ -2277,7 +2515,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Dutch_colonization_of_the_Americas",
   "url_ar": "https://ar.wikipedia.org/wiki/الاستعمار_الهولندي_للأمريكتين",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5556538"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5556538",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Korea (USSR)",
@@ -2296,7 +2536,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/North_Korea–Russia_border",
   "url_ar": "https://ar.wikipedia.org/wiki/الحدود_الروسية_الكورية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q631348"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q631348",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Teton",
@@ -2315,7 +2557,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Grand_Teton_National_Park",
   "url_ar": "https://ar.wikipedia.org/wiki/متنزه_غراند_تيتون_الوطني",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q222695"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q222695",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Coahuiltec",
@@ -2334,7 +2578,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Coahuilteco",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2008062"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2008062",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mataram",
@@ -2353,7 +2599,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mataram",
   "url_ar": "https://ar.wikipedia.org/wiki/ماتارام_(مدينة)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q14126"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q14126",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Catawba",
@@ -2372,7 +2620,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Catawba_people",
   "url_ar": "https://ar.wikipedia.org/wiki/كاتاوبا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q55290"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q55290",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nyanganyatjara",
@@ -2391,7 +2641,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Western_Desert",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4536460"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4536460",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wichita",
@@ -2410,7 +2662,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wichita",
   "url_ar": "https://ar.wikipedia.org/wiki/ويتشيتا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q49266"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q49266",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Chauhans",
@@ -2429,7 +2683,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Sunidhi_Chauhan",
   "url_ar": "https://ar.wikipedia.org/wiki/سندهي_شاوهان",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2722933"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2722933",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bidjara",
@@ -2448,7 +2704,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Southern_Maric",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4904194"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4904194",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mahra",
@@ -2467,7 +2725,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mahra_Al_Maktoum",
   "url_ar": "https://ar.wikipedia.org/wiki/مهرة_بنت_محمد_بن_راشد_ال_مكتوم",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q20422754"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q20422754",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Germany (Soviet)",
@@ -2486,7 +2746,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Molotov–Ribbentrop_Pact",
   "url_ar": "https://ar.wikipedia.org/wiki/الاتفاق_الألماني_السوفيتي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q130796"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q130796",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Pawnee",
@@ -2505,7 +2767,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Pawnee_Nation",
   "url_ar": "https://ar.wikipedia.org/wiki/باوني",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q750947"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q750947",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wadai",
@@ -2524,7 +2788,9 @@
   "reasons": "بعض سنوات الخريطة خارج فترة الكيان، وقد يكون الاسم لكيان آخر في تلك السنوات",
   "url_en": "https://en.wikipedia.org/wiki/Ouaddai_Empire",
   "url_ar": "https://ar.wikipedia.org/wiki/سلطنة_وداي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1132786"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1132786",
+  "accept": "no",
+  "review_note": "المدة تبدأ 1635، والاسم يظهر في 1600 قبل قيام الكيان. يبقى الاسم الحالي."
  },
  {
   "name": "Zulu",
@@ -2543,7 +2809,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Zulu",
   "url_ar": "https://ar.wikipedia.org/wiki/اللغة_الزولوية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q10179"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q10179",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Croatian kingdom",
@@ -2562,7 +2830,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Kingdom_of_Croatia",
   "url_ar": "https://ar.wikipedia.org/wiki/مملكة_كرواتيا_(هابسبورغ)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q623573"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q623573",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Muskogee",
@@ -2581,7 +2851,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Muskogee",
   "url_ar": "https://ar.wikipedia.org/wiki/موسكوغي_(أوكلاهوما)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q524233"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q524233",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Champa City States",
@@ -2600,7 +2872,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Champa",
   "url_ar": "https://ar.wikipedia.org/wiki/تشامبا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q216786"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q216786",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "León",
@@ -2619,7 +2893,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Nuevo_León",
   "url_ar": "https://ar.wikipedia.org/wiki/ولاية_نويفو_ليون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q15282"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q15282",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Saba",
@@ -2638,7 +2914,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Saba",
   "url_ar": "https://ar.wikipedia.org/wiki/سابا_(جزيرة)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q25528"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q25528",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Pyu state",
@@ -2657,7 +2935,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Pyu_city-states",
   "url_ar": "https://ar.wikipedia.org/wiki/دول_مدينة_بيو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1627675"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1627675",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Celtic kingdoms",
@@ -2676,7 +2956,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Celtic_Britons",
   "url_ar": "https://ar.wikipedia.org/wiki/بريطونيون_كلتيون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q849967"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q849967",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nyangumarda",
@@ -2695,7 +2977,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Nyangumarta_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7070890"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7070890",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Germany (USA)",
@@ -2714,7 +2998,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/German_Empire",
   "url_ar": "https://ar.wikipedia.org/wiki/الإمبراطورية_الألمانية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q43287"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q43287",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Cuba (Spain)",
@@ -2733,7 +3019,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Cuba–Spain_relations",
   "url_ar": "https://ar.wikipedia.org/wiki/العلاقات_الإسبانية_الكوبية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q15949035"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q15949035",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Germany (UK)",
@@ -2752,7 +3040,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Germany–United_Kingdom_relations",
   "url_ar": "https://ar.wikipedia.org/wiki/العلاقات_الألمانية_البريطانية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5552216"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5552216",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Moche",
@@ -2771,7 +3061,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Moche_culture",
   "url_ar": "https://ar.wikipedia.org/wiki/حضارة_موتشي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q208188"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q208188",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Carnatic",
@@ -2790,7 +3082,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Carnatic_music",
   "url_ar": "https://ar.wikipedia.org/wiki/الموسيقى_الكارناتيكية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q956883"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q956883",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gharra",
@@ -2809,7 +3103,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Abdel_Hussein_Charafeddine_al-Musawi",
   "url_ar": "https://ar.wikipedia.org/wiki/عبد_الحسين_شرف_الدين",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q97259290"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q97259290",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Comté de Toulouse",
@@ -2828,7 +3124,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Louis_Alexandre,_Count_of_Toulouse",
   "url_ar": "https://ar.wikipedia.org/wiki/لويس_ألكسندر،_كونت_تولوز",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q448174"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q448174",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Zacatecs",
@@ -2847,7 +3145,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Lophophora_williamsii",
   "url_ar": "https://ar.wikipedia.org/wiki/صبار_وليمز",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q271937"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q271937",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Hispaniola (Spain)",
@@ -2866,7 +3166,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Hispaniola",
   "url_ar": "https://ar.wikipedia.org/wiki/هسبنيولا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q25277"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q25277",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kingdom of Zunbil",
@@ -2885,7 +3187,9 @@
   "reasons": "التسمية في ويكي بيانات تختلف عن الاسم في المصدر (قد يكون تعريباً مختلفاً)",
   "url_en": "https://en.wikipedia.org/wiki/Zunbils",
   "url_ar": "https://ar.wikipedia.org/wiki/سلالة_رتبيل",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q229780"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q229780",
+  "accept": "yes",
+  "review_note": "رتبيل (Zunbil) سلالة الشاهية الكابولية نفسها؛ المدة 650–870 تغطي 700."
  },
  {
   "name": "Wawula",
@@ -2904,7 +3208,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wawula",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q124391460"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q124391460",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yankton",
@@ -2923,7 +3229,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Dakota_people",
   "url_ar": "https://ar.wikipedia.org/wiki/قبيلة_داكوتا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q16148367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q16148367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Chavin",
@@ -2942,7 +3250,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Chavín_culture",
   "url_ar": "https://ar.wikipedia.org/wiki/ثقافة_شافين",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q13341477"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q13341477",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Lozi",
@@ -2961,7 +3271,9 @@
   "reasons": "التسمية في ويكي بيانات تختلف عن الاسم في المصدر (قد يكون تعريباً مختلفاً)",
   "url_en": "https://en.wikipedia.org/wiki/Barotseland",
   "url_ar": "https://ar.wikipedia.org/wiki/بروتسلاند",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q808750"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q808750",
+  "accept": "yes",
+  "review_note": "اللوزي والمملكة الباروتسية هي Barotseland؛ المدة تنتهي 1889 وتغطي 1800."
  },
  {
   "name": "Wirangu",
@@ -2980,7 +3292,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wirangu",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48815936"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48815936",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Oyo",
@@ -2999,7 +3313,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/OYO_Rooms",
   "url_ar": "https://ar.wikipedia.org/wiki/أويو_رومز",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q24906315"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q24906315",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Hurrian Kingdoms",
@@ -3018,7 +3334,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Hurrians",
   "url_ar": "https://ar.wikipedia.org/wiki/حوريون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q190394"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q190394",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Eastern Masurian culture",
@@ -3037,7 +3355,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Eastern_Front",
   "url_ar": "https://ar.wikipedia.org/wiki/الجبهة_الشرقية_(الحرب_العالمية_الثانية)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q189266"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q189266",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Polanes",
@@ -3056,7 +3376,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/hydrogen_peroxide",
   "url_ar": "https://ar.wikipedia.org/wiki/بيروكسيد_الهيدروجين",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q171877"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q171877",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Fourche Maline Culture",
@@ -3075,7 +3397,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mississippian_culture",
   "url_ar": "https://ar.wikipedia.org/wiki/حضارة_المسيسيبي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1052095"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1052095",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wangkangurru",
@@ -3094,7 +3418,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Wongkanguru",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48807082"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48807082",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yankuntjatjara",
@@ -3113,7 +3439,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yankunytjatjara",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48805138"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48805138",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kalaako/Malpa",
@@ -3132,7 +3460,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Dowak",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q131545629"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q131545629",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Susquehanna",
@@ -3151,7 +3481,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Susquehanna_River",
   "url_ar": "https://ar.wikipedia.org/wiki/نهر_سسكويهانا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q27538"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q27538",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Akan",
@@ -3170,7 +3502,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Akan_people",
   "url_ar": "https://ar.wikipedia.org/wiki/أكانيون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q415693"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q415693",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Tepehuane",
@@ -3189,7 +3523,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Tepehuanes_Municipality",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3893888"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3893888",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Flathead",
@@ -3208,7 +3544,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Flathead_Indian_Reservation",
   "url_ar": "https://ar.wikipedia.org/wiki/محمية_فلاتهيد",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q503543"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q503543",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kaytej",
@@ -3227,7 +3565,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Kaytetye",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6380709"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6380709",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Lipan",
@@ -3246,7 +3586,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Lipan_Apache_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1402468"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1402468",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mazun",
@@ -3265,7 +3607,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Mazun_(Sasanian_province)",
   "url_ar": "https://ar.wikipedia.org/wiki/مازون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q60788299"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q60788299",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Glades Culture",
@@ -3284,7 +3628,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Glades_culture",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5566240"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5566240",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wakaya",
@@ -3303,7 +3649,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/David_Gilmour",
   "url_ar": "https://ar.wikipedia.org/wiki/ديفيد_غيلمور_(رجل_أعمال)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5234145"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5234145",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Cahitas",
@@ -3322,7 +3670,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Catostomus_cahita",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q306901"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q306901",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Guachimis",
@@ -3341,7 +3691,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Baja_California",
   "url_ar": "https://ar.wikipedia.org/wiki/باخا_كاليفورنيا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q58731"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q58731",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Sotho",
@@ -3360,7 +3712,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Sesotho",
   "url_ar": "https://ar.wikipedia.org/wiki/اللغة_السوتية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q34340"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q34340",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Xhosa",
@@ -3379,7 +3733,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Xhosa",
   "url_ar": "https://ar.wikipedia.org/wiki/اللغة_الكوسية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q13218"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q13218",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Antakarinja",
@@ -3398,7 +3754,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Antakirinja_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48805897"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48805897",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Couture Complex",
@@ -3417,7 +3775,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Cuyahoga_River",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1146724"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1146724",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Porter",
@@ -3436,7 +3796,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Cole_Porter",
   "url_ar": "https://ar.wikipedia.org/wiki/كول_بورتر",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q215120"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q215120",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Goodall Focus",
@@ -3455,7 +3817,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Goodall_Focus",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5583172"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5583172",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Papago",
@@ -3474,7 +3838,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Papago_Park",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7132387"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7132387",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Southern Cameroon",
@@ -3493,7 +3859,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Southern_Cameroons",
   "url_ar": "https://ar.wikipedia.org/wiki/جنوب_الكاميرون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1542471"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1542471",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kija",
@@ -3512,7 +3880,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Gojoseon",
   "url_ar": "https://ar.wikipedia.org/wiki/غوجوسون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28405"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28405",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Chinchoros",
@@ -3531,7 +3901,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Bicolano_people",
   "url_ar": "https://ar.wikipedia.org/wiki/شعب_البيكولانو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1293737"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1293737",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nyaki-nyaki",
@@ -3550,7 +3922,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Ngel_Nyaki_Forest_Reserve",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7022253"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7022253",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Acadian Peninsula (UK)",
@@ -3569,7 +3943,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Caledonian_orogeny",
   "url_ar": "https://ar.wikipedia.org/wiki/تجبل_كاليدوني",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q846077"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q846077",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Pitta-Pitta",
@@ -3588,7 +3964,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Pittidae",
   "url_ar": "https://ar.wikipedia.org/wiki/غناجيات",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q217472"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q217472",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ngalea",
@@ -3607,7 +3985,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/witchetty_grub",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1476479"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1476479",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wangkumara",
@@ -3626,7 +4006,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Wongkumara",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48808196"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48808196",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gunggari",
@@ -3645,7 +4027,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Gunggari_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48779708"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48779708",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Castilla",
@@ -3664,7 +4048,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Real_Madrid_Castilla",
   "url_ar": "https://ar.wikipedia.org/wiki/ريال_مدريد_كاستيا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q12217"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q12217",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Pima",
@@ -3683,7 +4069,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Pima_County",
   "url_ar": "https://ar.wikipedia.org/wiki/مقاطعة_بيما_(أريزونا)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q58688"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q58688",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Jaru",
@@ -3702,7 +4090,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Jaru",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q988755"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q988755",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "West Getaes",
@@ -3721,7 +4111,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Dacians",
   "url_ar": "https://ar.wikipedia.org/wiki/داقيون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q212853"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q212853",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ceylon (Dutch)",
@@ -3740,7 +4132,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Dutch_Ceylon",
   "url_ar": "https://ar.wikipedia.org/wiki/سيلان_الهولندية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1841483"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1841483",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mecklenburg-Strelitz",
@@ -3759,7 +4153,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Charlotte_of_Mecklenburg-Strelitz",
   "url_ar": "https://ar.wikipedia.org/wiki/شارلوت_من_مكلنبورغ-ستريليتس",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q161159"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q161159",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Alawa",
@@ -3778,7 +4174,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Alawa_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4708893"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4708893",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wangkamana",
@@ -3797,7 +4195,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Wongkamala",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48807089"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48807089",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kansa",
@@ -3816,7 +4216,9 @@
   "reasons": "لا مقالة عربية",
   "url_en": "https://en.wikipedia.org/wiki/Kaw_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1723904"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1723904",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Tjalkanti",
@@ -3835,7 +4237,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Meru",
@@ -3854,7 +4258,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mount_Meru",
   "url_ar": "https://ar.wikipedia.org/wiki/جبل_ميرو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q652550"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q652550",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mudburra",
@@ -3873,7 +4279,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Mudburra",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q55624041"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q55624041",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Taiwanese Tribes",
@@ -3892,7 +4300,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Taiwanese_indigenous_peoples",
   "url_ar": "https://ar.wikipedia.org/wiki/تايوانيون_أصليون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q216839"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q216839",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Danggali",
@@ -3911,7 +4321,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Danggali",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q24090097"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q24090097",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Germany (France)",
@@ -3930,7 +4342,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/France–Germany_relations",
   "url_ar": "https://ar.wikipedia.org/wiki/العلاقات_الألمانية_الفرنسية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q567497"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q567497",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Malyangaba",
@@ -3949,7 +4363,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nana",
@@ -3968,7 +4384,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Nana",
   "url_ar": "https://ar.wikipedia.org/wiki/نانا_(مانغا)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q423658"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q423658",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Sakhalin (RU)",
@@ -3987,7 +4405,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Sakhalin_Oblast",
   "url_ar": "https://ar.wikipedia.org/wiki/مقاطعة_ساخالين",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7797"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7797",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gurindji",
@@ -4006,7 +4426,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Gurindji_strike",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q246080"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q246080",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Saugeen Complex",
@@ -4025,7 +4447,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Saugeen_Complex",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7427204"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7427204",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ngatjumay",
@@ -4044,7 +4468,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Ngadjunmaya",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7021846"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7021846",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "East Getaes",
@@ -4063,7 +4489,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Getae",
   "url_ar": "https://ar.wikipedia.org/wiki/غيتيون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q19012"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q19012",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yandruwandha",
@@ -4082,7 +4510,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yandruwandha_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28224663"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28224663",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ngargad",
@@ -4101,7 +4531,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Ngarkat",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48774280"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48774280",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Andegerebenha",
@@ -4120,7 +4552,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Andegerebinha",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3508123"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3508123",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Venetia",
@@ -4139,7 +4573,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Kingdom_of_Lombardy–Venetia",
   "url_ar": "https://ar.wikipedia.org/wiki/مملكة_لومبارديا_فينيشيا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q209857"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q209857",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Guwa",
@@ -4158,7 +4594,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Guwa",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5621992"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5621992",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bundjalung",
@@ -4177,7 +4615,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Bundjalung",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48767841"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48767841",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Macedonia",
@@ -4196,7 +4636,9 @@
   "reasons": "مستوفٍ للشروط",
   "url_en": "https://en.wikipedia.org/wiki/North_Macedonia",
   "url_ar": "https://ar.wikipedia.org/wiki/مقدونيا_الشمالية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q221"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q221",
+  "accept": "yes",
+  "review_note": "مقترح آلياً ومستوفٍ للشروط"
  },
  {
   "name": "Yawarawarka",
@@ -4215,7 +4657,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yandruwandha",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q8048335"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q8048335",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Banjima",
@@ -4234,7 +4678,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wittenoom",
   "url_ar": "https://ar.wikipedia.org/wiki/ويتنوم_(أستراليا_الغربية)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3569521"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3569521",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mill Creek Culture",
@@ -4253,7 +4699,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Mill_Creek_chert",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q12061792"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q12061792",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Natchez",
@@ -4272,7 +4720,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Natchez",
   "url_ar": "https://ar.wikipedia.org/wiki/ناتشيز_(مسيسيبي)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q944044"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q944044",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kalkadoon",
@@ -4291,7 +4741,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Kalkadoon_Wars",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q16979864"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q16979864",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Biri",
@@ -4310,7 +4762,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Bambaşka_Biri",
   "url_ar": "https://ar.wikipedia.org/wiki/شخص_آخر",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q117468960"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q117468960",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nhanta",
@@ -4329,7 +4783,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Nhanda",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3339380"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3339380",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Britany",
@@ -4348,7 +4804,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Brittany_Murphy",
   "url_ar": "https://ar.wikipedia.org/wiki/بريتاني_ميرفي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q168847"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q168847",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gayiri",
@@ -4367,7 +4825,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Kairi_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48810594"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48810594",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Jingili",
@@ -4386,7 +4846,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Jingili",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q55615091"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q55615091",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Chumash",
@@ -4405,7 +4867,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Chumash_people",
   "url_ar": "https://ar.wikipedia.org/wiki/تشوماش",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q24251468"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q24251468",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Garawa",
@@ -4424,7 +4888,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Garawa",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2524022"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2524022",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Guanahatabeyes",
@@ -4443,7 +4909,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Dominican_art",
   "url_ar": "https://ar.wikipedia.org/wiki/فن_دومينيكاني",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q105973554"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q105973554",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mbara",
@@ -4462,7 +4930,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mbara",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3912770"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3912770",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wik",
@@ -4481,7 +4951,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wikmean",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48814529"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48814529",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Xecora",
@@ -4500,7 +4972,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Del_Nayar_Municipality",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1324427"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1324427",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yuat",
@@ -4519,7 +4993,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yuat_River",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q60795346"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q60795346",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wambaya",
@@ -4538,7 +5014,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wambaya",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2083197"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2083197",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Minang",
@@ -4557,7 +5035,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Minangkabau",
   "url_ar": "https://ar.wikipedia.org/wiki/المينانغكابو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1130350"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1130350",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kokowarra",
@@ -4576,7 +5056,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ngalawangka",
@@ -4595,7 +5077,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Doolboong/Miriwoong",
@@ -4614,7 +5098,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Doolboong",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5297022"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5297022",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Conoy",
@@ -4633,7 +5119,9 @@
   "reasons": "لا مقالة عربية",
   "url_en": "https://en.wikipedia.org/wiki/Piscataway-Conoy_Tribe_of_Maryland",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q110895847"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q110895847",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mecklenburg-Schwerin",
@@ -4652,7 +5140,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/House_of_Mecklenburg",
   "url_ar": "https://ar.wikipedia.org/wiki/آل_مكلنبورغ",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q700158"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q700158",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Toboso",
@@ -4671,7 +5161,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yana_Toboso",
   "url_ar": "https://ar.wikipedia.org/wiki/يانا_توبوسو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q194556"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q194556",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yilba",
@@ -4690,7 +5182,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Yilba",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48815001"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48815001",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Maya",
@@ -4709,7 +5203,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Maya_civilization",
   "url_ar": "https://ar.wikipedia.org/wiki/حضارة_المايا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28567"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28567",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wardaman",
@@ -4728,7 +5224,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wardaman",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7969102"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7969102",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Dyungungoo (Gubbi Gubbi)",
@@ -4747,7 +5245,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Kabi",
   "url_ar": "https://ar.wikipedia.org/wiki/شعب_غوبي_غوبي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3191655"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3191655",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Tenimo",
@@ -4766,7 +5266,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Adaeseño_Spanish",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q99527013"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q99527013",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Maiou",
@@ -4785,7 +5287,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Greek_genocide",
   "url_ar": "https://ar.wikipedia.org/wiki/الإبادة_الجماعية_لليونانيين",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q911233"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q911233",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yuma",
@@ -4804,7 +5308,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yuma",
   "url_ar": "https://ar.wikipedia.org/wiki/يوما",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q79820"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q79820",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Chtimacha",
@@ -4823,7 +5329,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Sarah_Sense",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q121344548"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q121344548",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wagiman",
@@ -4842,7 +5350,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Wagoman",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q55637326"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q55637326",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Cayuse",
@@ -4861,7 +5371,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Hughes_OH-6_Cayuse",
   "url_ar": "https://ar.wikipedia.org/wiki/هيوز_أو_أتش-6",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1050858"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1050858",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kamia",
@@ -4880,7 +5392,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Kamia_Brown",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q59656192"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q59656192",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kunja",
@@ -4899,7 +5413,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Kunja_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q47633645"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q47633645",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Tunica",
@@ -4918,7 +5434,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Tunica",
   "url_ar": "https://ar.wikipedia.org/wiki/تونيكا_(مسيسيبي)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q658447"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q658447",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Oto",
@@ -4937,7 +5455,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/OTO_Melara_76_mm_gun",
   "url_ar": "https://ar.wikipedia.org/wiki/أوتو_ميلارا_76_ملم",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1465760"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1465760",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Goreng",
@@ -4956,7 +5476,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/nasi_goreng",
   "url_ar": "https://ar.wikipedia.org/wiki/نازي_جورينج",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q510666"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q510666",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ganggalida",
@@ -4975,7 +5497,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Yokula",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48815345"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48815345",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Irritilas",
@@ -4994,7 +5518,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Rodrigo_Ruiz",
   "url_ar": "https://ar.wikipedia.org/wiki/رودريغو_رويز_(لاعب_كرة_قدم)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2435915"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2435915",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yiman",
@@ -5013,7 +5539,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Zhao_Yiman",
   "url_ar": "https://ar.wikipedia.org/wiki/تشاوي_مان",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q8070584"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q8070584",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Warluwarra",
@@ -5032,7 +5560,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Warluwara",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3913761"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3913761",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Winebago",
@@ -5051,7 +5581,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Winnebago",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1957108"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1957108",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Lagunero",
@@ -5070,7 +5602,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Atlético_Lagunero",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4816982"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4816982",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gabalbara",
@@ -5089,7 +5623,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Baraba Baraba",
@@ -5108,7 +5644,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Siberian_Tatars",
   "url_ar": "https://ar.wikipedia.org/wiki/تتار_سيبيريون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1983600"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1983600",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mayi-Thakurti",
@@ -5127,7 +5665,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Maithakari",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48810052"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48810052",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Caxcane",
@@ -5146,7 +5686,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mixtón_War",
   "url_ar": "https://ar.wikipedia.org/wiki/حرب_ميكستون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q528758"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q528758",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kullilla",
@@ -5165,7 +5707,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Garlali",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5523396"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5523396",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Thalanyji",
@@ -5184,7 +5728,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Thalandji",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48796546"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48796546",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Takalak",
@@ -5203,7 +5749,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Oktay_Takalak",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q23664808"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q23664808",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Miyan",
@@ -5222,7 +5770,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Bade_Miyan_Chote_Miyan",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q118067937"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q118067937",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Malabar",
@@ -5241,7 +5791,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Malabar_Coast",
   "url_ar": "https://ar.wikipedia.org/wiki/ساحل_مليبار",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q473181"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q473181",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bidwell",
@@ -5260,7 +5812,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/John_Bidwell",
   "url_ar": "https://ar.wikipedia.org/wiki/جون_بيدويل",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1699334"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1699334",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Saunan",
@@ -5279,7 +5833,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Children_of_Bodom",
   "url_ar": "https://ar.wikipedia.org/wiki/تشلدرن_أوف_بودوم",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q171718"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q171718",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bakanh",
@@ -5298,7 +5854,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yanga",
@@ -5317,7 +5875,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Young_Africans_S.C.",
   "url_ar": "https://ar.wikipedia.org/wiki/يانغ_أفريكانز",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1630751"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1630751",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bibbulman",
@@ -5336,7 +5896,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Bibbulman",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4902980"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4902980",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Pocumtuk",
@@ -5355,7 +5917,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/population_history_of_the_Indigenous_peoples_of_the_Americas",
   "url_ar": "https://ar.wikipedia.org/wiki/تاريخ_شعوب_الأمريكتين_الأصلية_السكاني",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2638531"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2638531",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mara",
@@ -5374,7 +5938,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Rooney_Mara",
   "url_ar": "https://ar.wikipedia.org/wiki/روني_مارا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q228766"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q228766",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gunu",
@@ -5393,7 +5959,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/James_Gunu",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q131990902"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q131990902",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Riro",
@@ -5412,7 +5980,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Efo_riro",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q25043246"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q25043246",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Modoc",
@@ -5431,7 +6001,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Modoc_County",
   "url_ar": "https://ar.wikipedia.org/wiki/مقاطعة_مودوك_(كاليفورنيا)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q109695"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q109695",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Jamaica (UK)",
@@ -5450,7 +6022,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Kingston",
   "url_ar": "https://ar.wikipedia.org/wiki/كينغستون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q34692"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q34692",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Rembarnga",
@@ -5469,7 +6043,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Rembarunga",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7311553"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7311553",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Dainggatti",
@@ -5488,7 +6064,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kokomini",
@@ -5507,7 +6085,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Kokomini",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48818005"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48818005",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kureinji",
@@ -5526,7 +6106,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Kureinji",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28224577"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28224577",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wunambul",
@@ -5545,7 +6127,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wunambal",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3913805"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3913805",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yalarrnga",
@@ -5564,7 +6148,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Gulf_of_Carpentaria",
   "url_ar": "https://ar.wikipedia.org/wiki/خليج_كربنتاريا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q180844"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q180844",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wuli-wuli",
@@ -5583,7 +6169,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wuliwuli",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q8039208"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q8039208",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kaurna Pangkarra",
@@ -5602,7 +6190,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Kaurna_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1737166"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1737166",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Zuni",
@@ -5621,7 +6211,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Zuni_people",
   "url_ar": "https://ar.wikipedia.org/wiki/زوني",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q231317"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q231317",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wangan",
@@ -5640,7 +6232,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wangan_Midnight",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2633503"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2633503",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Djabwurung",
@@ -5659,7 +6253,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Djabwurrung",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5285187"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5285187",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Umatilla",
@@ -5678,7 +6274,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Umatilla_County",
   "url_ar": "https://ar.wikipedia.org/wiki/مقاطعة_أوماتيلا_(أوريغون)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q495344"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q495344",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Anggamudi",
@@ -5697,7 +6295,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Cape_York_Peninsula",
   "url_ar": "https://ar.wikipedia.org/wiki/شبه_جزيرة_كيب_يورك",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q233770"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q233770",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Dangbon",
@@ -5716,7 +6316,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Maningrida",
   "url_ar": "https://ar.wikipedia.org/wiki/مانينجريدا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q17988"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q17988",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yanda",
@@ -5735,7 +6337,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Marshal_Yanda",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1029708"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1029708",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kungarakany",
@@ -5754,7 +6358,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Kungarakan_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48815534"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48815534",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kwini",
@@ -5773,7 +6379,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wunambal",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3913805"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3913805",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Jurruru",
@@ -5792,7 +6400,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Jurruru",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3913834"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3913834",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yugambeh",
@@ -5811,7 +6421,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yugambeh_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q24189583"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q24189583",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ngan’giwumirri",
@@ -5830,7 +6442,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Ngan'gimerri",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28224574"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28224574",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kadjerong",
@@ -5849,7 +6463,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Gadjerong",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48783782"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48783782",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wandjiwalgu",
@@ -5868,7 +6484,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Pisones",
@@ -5887,7 +6505,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Ars_Poetica",
   "url_ar": "https://ar.wikipedia.org/wiki/فن_الشعر_(هوراس)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q677997"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q677997",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nari Nari",
@@ -5906,7 +6526,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Nari-Nari",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6965901"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6965901",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Houma",
@@ -5925,7 +6547,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Houma",
   "url_ar": "https://ar.wikipedia.org/wiki/هوما",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q388503"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q388503",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bindjali",
@@ -5944,7 +6568,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yaran_language",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q131293350"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q131293350",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yanyuwa",
@@ -5963,7 +6589,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Yanyuwa",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q34241"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q34241",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Wuningangk",
@@ -5982,7 +6610,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Kakadu_National_Park",
   "url_ar": "https://ar.wikipedia.org/wiki/متنزه_كاكادو_الوطني",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q189657"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q189657",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Guugu-Yimidhirr",
@@ -6001,7 +6631,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Guugu_Yimithirr",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q56543"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q56543",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Lamalama",
@@ -6020,7 +6652,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Tiki_torch",
   "url_ar": "https://ar.wikipedia.org/wiki/مشعل_تيكي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7801934"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7801934",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Oldenburg",
@@ -6039,7 +6673,9 @@
   "reasons": "أسرة لا دولة",
   "url_en": "https://en.wikipedia.org/wiki/House_of_Oldenburg",
   "url_ar": "https://ar.wikipedia.org/wiki/أسرة_أولدنبورغ",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q155594"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q155594",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nunggubuyu",
@@ -6058,7 +6694,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Nunggubuyu_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28943038"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28943038",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Giraiwurung",
@@ -6077,7 +6715,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Dhauwurd_Wurrung",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6448731"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6448731",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Malak malak",
@@ -6096,7 +6736,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Melek_Taus",
   "url_ar": "https://ar.wikipedia.org/wiki/الملك_الطاووس",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1433459"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1433459",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Limilngan",
@@ -6115,7 +6757,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Puneitja",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q55630777"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q55630777",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Tano",
@@ -6134,7 +6778,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Ahsoka_Tano",
   "url_ar": "https://ar.wikipedia.org/wiki/أسوكا_تانو",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q51755"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q51755",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Turkish Cypriot-administered area",
@@ -6153,7 +6799,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Akrotiri_and_Dhekelia",
   "url_ar": "https://ar.wikipedia.org/wiki/أكروتيري_وديكيليا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q37362"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q37362",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gamberre",
@@ -6172,7 +6820,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Wunambal",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3913805"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3913805",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Larrakia",
@@ -6191,7 +6841,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Larrakia_people",
   "url_ar": "https://ar.wikipedia.org/wiki/شعب_لاراكيا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6489790"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6489790",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Murrinh-patha",
@@ -6210,7 +6862,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Australian_Aboriginal_mythology",
   "url_ar": "https://ar.wikipedia.org/wiki/أساطير_سكان_أستراليا_الأصليين",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q376608"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q376608",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Guta",
@@ -6229,7 +6883,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Nicolae_Guță",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2606502"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2606502",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yuwi",
@@ -6248,7 +6904,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Sarina",
   "url_ar": "https://ar.wikipedia.org/wiki/سارينا_(كوينزلاند)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2386484"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2386484",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Winda Winda",
@@ -6267,7 +6925,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Howard_the_Duck",
   "url_ar": "https://ar.wikipedia.org/wiki/هوارد_البطة",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2708105"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2708105",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yiiji",
@@ -6286,7 +6946,9 @@
   "reasons": "لا نوع في البيانات المجلوبة",
   "url_en": "https://en.wikipedia.org/wiki/Yeidji",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48797821"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48797821",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Djabuganjdji",
@@ -6305,7 +6967,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Cairns",
   "url_ar": "https://ar.wikipedia.org/wiki/كيرنز_(ولاية_كوينزلاند)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q189133"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q189133",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bayali",
@@ -6324,7 +6988,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Bayali",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4874263"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4874263",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Thul Garrie Waja (Bindal)",
@@ -6343,7 +7009,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Townsville",
   "url_ar": "https://ar.wikipedia.org/wiki/تاونسفيل",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q190021"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q190021",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kuuku-ya’u",
@@ -6362,7 +7030,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Umpila",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q12953954"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q12953954",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Maratines",
@@ -6381,7 +7051,9 @@
   "reasons": "الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة",
   "url_en": "https://en.wikipedia.org/wiki/Tamaulipas",
   "url_ar": "https://ar.wikipedia.org/wiki/ولاية_تاماوليباس",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q80007"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q80007",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Marrithiyel",
@@ -6400,7 +7072,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Marrithiyel",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6773014"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6773014",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Jukun",
@@ -6419,7 +7093,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Jukun_people",
   "url_ar": "https://ar.wikipedia.org/wiki/شعب_جوكون_(غرب_أفريقيا)",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q2664002"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q2664002",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Koko-bera",
@@ -6438,7 +7114,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Koko-Bera",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6426699"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6426699",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Thompson",
@@ -6457,7 +7135,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Thompson",
   "url_ar": "https://ar.wikipedia.org/wiki/كلاي_تومسون",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q29342"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q29342",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kundjey’mi",
@@ -6476,7 +7156,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Bininj_Gun-Wok_peoples",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28225105"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28225105",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mbeiwum",
@@ -6495,7 +7177,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mbiywom",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6799701"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6799701",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mbabaram",
@@ -6514,7 +7198,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mbabaram_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q28225080"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q28225080",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nyul Nyul",
@@ -6533,7 +7219,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Sook_Nyul_Choi",
   "url_ar": "https://ar.wikipedia.org/wiki/سوك_نيول_تشوي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q7562648"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q7562648",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Mingin",
@@ -6552,7 +7240,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Mingin_people",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48816909"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48816909",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Konbudj",
@@ -6571,7 +7261,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yidinjdji",
@@ -6590,7 +7282,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Meringa_Sugar_Experiment_Station",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q48804632"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q48804632",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Brunswick",
@@ -6609,7 +7303,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/New_Brunswick",
   "url_ar": "https://ar.wikipedia.org/wiki/نيو_برونزويك",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1965"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1965",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ngombur",
@@ -6628,7 +7324,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yuru",
@@ -6647,7 +7345,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/YuruYuri",
   "url_ar": "https://ar.wikipedia.org/wiki/يورو_يوري",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q881797"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q881797",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Waldeck",
@@ -6666,7 +7366,9 @@
   "reasons": "مستوفٍ للشروط",
   "url_en": "https://en.wikipedia.org/wiki/Principality_of_Waldeck",
   "url_ar": "https://ar.wikipedia.org/wiki/فالدك",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q165763"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q165763",
+  "accept": "yes",
+  "review_note": "مقترح آلياً ومستوفٍ للشروط"
  },
  {
   "name": "Kuuku-yani",
@@ -6685,7 +7387,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Umpila",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q12953954"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q12953954",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Ngan’gikurunggurr",
@@ -6704,7 +7408,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Ngan’gityemerri",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3298041"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3298041",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gunbalang",
@@ -6723,7 +7429,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Gunbarlang",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q5618523"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q5618523",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Maung",
@@ -6742,7 +7450,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Maung_Maung",
   "url_ar": "https://ar.wikipedia.org/wiki/مونغ_مونغ",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q586850"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q586850",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Marramaninjsji",
@@ -6761,7 +7471,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_language_families",
   "url_ar": "https://ar.wikipedia.org/wiki/قائمة_العائلات_اللغوية",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q33898"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q33898",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Gunibidji",
@@ -6780,7 +7492,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Kuwema",
@@ -6799,7 +7513,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Malak-Malak",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q6741120"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q6741120",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Bardi",
@@ -6818,7 +7534,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Cardi_B",
   "url_ar": "https://ar.wikipedia.org/wiki/كاردي_بي",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q29033668"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q29033668",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Massa",
@@ -6837,7 +7555,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Felipe_Massa",
   "url_ar": "https://ar.wikipedia.org/wiki/فيليبي_ماسا",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q82652"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q82652",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Burarra",
@@ -6856,7 +7576,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Burarra",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q4998122"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q4998122",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Yupangathi",
@@ -6875,7 +7597,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Shire_of_Cook",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q1069392"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q1069392",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Nakara",
@@ -6894,7 +7618,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Rak_Nakara",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q13019408"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q13019408",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Tjerratj",
@@ -6913,7 +7639,9 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/list_of_Indigenous_Australian_group_names",
   "url_ar": "",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q3329367",
+  "accept": "no",
+  "review_note": ""
  },
  {
   "name": "Saint Martin",
@@ -6932,6 +7660,8 @@
   "reasons": "النوع ليس سياسياً",
   "url_en": "https://en.wikipedia.org/wiki/Saint_Martin",
   "url_ar": "https://ar.wikipedia.org/wiki/سانت_مارتن",
-  "url_wikidata": "https://www.wikidata.org/wiki/Q25596"
+  "url_wikidata": "https://www.wikidata.org/wiki/Q25596",
+  "accept": "no",
+  "review_note": ""
  }
 ]
