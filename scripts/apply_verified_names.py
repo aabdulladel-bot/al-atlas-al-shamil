@@ -2,9 +2,10 @@
 # تطبيق قرارات مراجعة الأسماء «العالية» (review/names_verification.json، عمود accept=yes) على الإعدادات.
 # يكتب إلى scripts/config/hb_name_overrides.json و scripts/config/hb_qid_overrides.json فقط، ولا يمس الأطلس مباشرة.
 # يتخطى أي مفتاح موجود مسبقاً ويذكره، فلا يستبدل تعديلاً يدوياً سابقاً.
-# الاستعمال: python3 -I scripts/apply_verified_names.py [--dry-run]
+# الاستعمال: python3 -I scripts/apply_verified_names.py [--tier عالية|متوسطة] [--dry-run]
+# البدائل الثلاثة للمدن تُطبَّق مع مستوى «عالية» فقط.
+import argparse
 import json
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,7 +37,11 @@ def load(path):
 
 
 def main():
-    dry = "--dry-run" in sys.argv
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--tier", default="عالية")
+    ap.add_argument("--dry-run", action="store_true")
+    a = ap.parse_args()
+    dry, tier = a.dry_run, a.tier
     rows = load(REVIEW)
     names = load(NAME_OVR)
     qids = load(QID_OVR)
@@ -45,7 +50,7 @@ def main():
     added, skipped = [], []
 
     for r in rows:
-        if r.get("tier") != "عالية" or r.get("accept") != "yes":
+        if r.get("tier") != tier or r.get("accept") != "yes":
             continue
         name = r["name"]
         if name in ALTERNATIVES:  # تُعالج عبر البدائل أدناه
@@ -63,7 +68,7 @@ def main():
         ov[name] = {"ar": ar, "why": why}
         added.append(name)
 
-    for name, alt in ALTERNATIVES.items():
+    for name, alt in (ALTERNATIVES.items() if tier == "عالية" else []):
         if name in ov or name in qov:
             skipped.append(name)
             continue
