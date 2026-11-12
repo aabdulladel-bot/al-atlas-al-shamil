@@ -1,7 +1,7 @@
 {
  "_meta": {
   "source": "Wikidata (CC0) عبر wbgetentities",
-  "retrieved_at": "2026-11-10T09:00:56.621768+00:00",
+  "retrieved_at": "2026-11-12T10:11:54.738417+00:00",
   "note": "مستخلص للبطاقة التعريفية: لا يُحفظ من ويكي بيانات إلا الحقول المذكورة في fetch_wikidata_entities.py"
  },
  "entities": {
@@ -792,6 +792,21 @@
    "arwiki": "كري",
    "enwiki": "Cree"
   },
+  "Q1179711": {
+   "ar": null,
+   "en": "Malagasy",
+   "desc_ar": null,
+   "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Malagasy"
+  },
   "Q1180689": {
    "ar": null,
    "en": "Norte Chico",
@@ -885,6 +900,26 @@
    "arwiki": null,
    "enwiki": "Arrernte"
   },
+  "Q12150341": {
+   "ar": "الدولة السامانية",
+   "en": "Samanid Empire",
+   "desc_ar": "ولاية إسلامية مرتبطة بالخلافة العباسية",
+   "desc_en": "former state in Central Asia",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q3024240",
+    "Q12536"
+   ],
+   "inception": [
+    "+0819-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0999-00-00T00:00:00Z"
+   ],
+   "arwiki": "الدولة السامانية",
+   "enwiki": "Samanid Empire"
+  },
   "Q1220215": {
    "ar": null,
    "en": "Yankton",
@@ -914,6 +949,38 @@
    "dissolved": [],
    "arwiki": "تيتون (توضيح)",
    "enwiki": "Teton"
+  },
+  "Q12536": {
+   "ar": "الدولة العباسية",
+   "en": "Abbasid Caliphate",
+   "desc_ar": "دولة إسلامية سابقة، أسسها أبو العباس السفاح، واستمرت ما بين (132 – 923هـ / 750 – 1517م)",
+   "desc_en": "third Islamic caliphate (750–1517)",
+   "aliases_ar": [
+    "الخلافة العباسية",
+    "دولة بني العباس"
+   ],
+   "aliases_en": [
+    "Abbasid Empire",
+    "Abbasid period",
+    "Abbasids",
+    "Abbasides"
+   ],
+   "p31": [
+    "Q131401",
+    "Q7275",
+    "Q3024240",
+    "Q4204060",
+    "Q7275",
+    "Q6256"
+   ],
+   "inception": [
+    "+0750-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1258-02-10T00:00:00Z"
+   ],
+   "arwiki": "الدولة العباسية",
+   "enwiki": "Abbasid Caliphate"
   },
   "Q12544": {
    "ar": "الإمبراطورية البيزنطية",
@@ -1396,6 +1463,49 @@
    "arwiki": null,
    "enwiki": "Malays"
   },
+  "Q153080": {
+   "ar": "مملكة الفرنجة الشرقية",
+   "en": "East Francia",
+   "desc_ar": null,
+   "desc_en": "country in Western Europe from 843 to 962; predecessor to the Kingdom of Germany",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Kingdom of the East Franks"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q3024240"
+   ],
+   "inception": [
+    "+0843-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0962-00-00T00:00:00Z"
+   ],
+   "arwiki": "مملكة الفرنجة الشرقية",
+   "enwiki": "East Francia"
+  },
+  "Q153529": {
+   "ar": "دوقية ميلانو",
+   "en": "Duchy of Milan",
+   "desc_ar": null,
+   "desc_en": "former duchy in Italy (1395–1447; 1450–1796)",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q3024240",
+    "Q154547",
+    "Q26830017"
+   ],
+   "inception": [
+    "+1395-05-11T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1797-10-17T00:00:00Z"
+   ],
+   "arwiki": "دوقية ميلانو",
+   "enwiki": "Duchy of Milan"
+  },
   "Q1546": {
    "ar": "آيوا",
    "en": "Iowa",
@@ -1643,6 +1753,30 @@
    "arwiki": null,
    "enwiki": "Vijayanagara"
   },
+  "Q1618896": {
+   "ar": "الخاقانية الروسية",
+   "en": "Rus' Khaganate",
+   "desc_ar": null,
+   "desc_en": "hypothetical 8th–9th century polity in Eastern Europe",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Rus Khaganate",
+    "Khaganate of Rus",
+    "Khaganate of Rus'"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q25537045"
+   ],
+   "inception": [
+    "+0700-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0900-00-00T00:00:00Z"
+   ],
+   "arwiki": "الخاقانية الروسية",
+   "enwiki": "Rus' Khaganate"
+  },
   "Q16210895": {
    "ar": null,
    "en": "Mirning people",
@@ -1657,6 +1791,25 @@
    "dissolved": [],
    "arwiki": null,
    "enwiki": "Mirning"
+  },
+  "Q164714": {
+   "ar": "دنماركيون",
+   "en": "Danes",
+   "desc_ar": null,
+   "desc_en": "citizens or residents of Denmark",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Danish people"
+   ],
+   "p31": [
+    "Q33829",
+    "Q6266",
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "دنماركيون",
+   "enwiki": "Danes"
   },
   "Q1649306": {
    "ar": "نياسالند",
@@ -1766,6 +1919,60 @@
    "dissolved": [],
    "arwiki": "اليابان",
    "enwiki": "Japan"
+  },
+  "Q170284": {
+   "ar": "فنلنديون",
+   "en": "Finns",
+   "desc_ar": null,
+   "desc_en": "Baltic Finnic ethnic group indigenous to Finland",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Finnish people"
+   ],
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "فنلنديون",
+   "enwiki": "Finns"
+  },
+  "Q171740": {
+   "ar": "خلافة قرطبة",
+   "en": "Caliphate of Córdoba",
+   "desc_ar": "دولة إسلامية أموية قامت في الأندلس بهيئة إمارة ثُمَّ خلافة",
+   "desc_en": "state in Islamic Iberia (929–1031)",
+   "aliases_ar": [
+    "خلافة أموية في الأندلس",
+    "خلافة قرطبية",
+    "الخلافة القرطبية",
+    "الخلافة الاموية في الاندلس",
+    "الخلافة الأموية في الاندلس",
+    "خلافه أمويه في الأندلس",
+    "خلافة قرطبه"
+   ],
+   "aliases_en": [
+    "Caliphate of Cordoba",
+    "Califato de Córdova",
+    "Western Caliphate",
+    "Caliphate of Qurṭubah",
+    "Umayyad Caliphate of Qurṭubah",
+    "Umayyad Caliphate of Córdoba",
+    "Umayyad state in al-Andalus",
+    "Umayyad state of al-Andalus"
+   ],
+   "p31": [
+    "Q4204060",
+    "Q3024240"
+   ],
+   "inception": [
+    "+0929-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1031-00-00T00:00:00Z"
+   ],
+   "arwiki": "خلافة قرطبة",
+   "enwiki": "Caliphate of Córdoba"
   },
   "Q17252": {
    "ar": "التبت",
@@ -1986,6 +2193,21 @@
    "arwiki": "زنجبار",
    "enwiki": "Zanzibar"
   },
+  "Q1797382": {
+   "ar": null,
+   "en": "Mogollon",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Mogollon"
+  },
   "Q1801538": {
    "ar": null,
    "en": "Saami",
@@ -2113,6 +2335,29 @@
    "dissolved": [],
    "arwiki": "ملقا",
    "enwiki": "Malacca"
+  },
+  "Q185453": {
+   "ar": "ملتان",
+   "en": "Multan",
+   "desc_ar": "مدينة في وسط باكستان",
+   "desc_en": "city in Punjab, Pakistan",
+   "aliases_ar": [
+    "المولتان",
+    "مولتان",
+    "الملتان"
+   ],
+   "aliases_en": [
+    "Mooltan",
+    "Moultan"
+   ],
+   "p31": [
+    "Q515",
+    "Q1549591"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "ملتان",
+   "enwiki": "Multan"
   },
   "Q185682": {
    "ar": "الهند الصينية الفرنسية",
@@ -2274,6 +2519,29 @@
    "arwiki": "آيسلندا",
    "enwiki": "Iceland"
   },
+  "Q193152": {
+   "ar": "مورافيا العظمى",
+   "en": "Great Moravia",
+   "desc_ar": null,
+   "desc_en": "9th-century Slavic state",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Great Moravian Empire"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q3624078",
+    "Q208500"
+   ],
+   "inception": [
+    "+0833-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0907-01-01T00:00:00Z"
+   ],
+   "arwiki": "مورافيا العظمى",
+   "enwiki": "Great Moravia"
+  },
   "Q1986139": {
    "ar": "الإمبراطورية الفرثية",
    "en": "Parthian Empire",
@@ -2424,6 +2692,26 @@
    "arwiki": "كوكتورك",
    "enwiki": "Göktürks"
   },
+  "Q2060071": {
+   "ar": "وثني",
+   "en": "pagan",
+   "desc_ar": null,
+   "desc_en": "term for a polytheist, non-monotheist or non-Christian",
+   "aliases_ar": [],
+   "aliases_en": [
+    "heathen",
+    "Heathen"
+   ],
+   "p31": [
+    "Q4392985",
+    "Q16334295",
+    "Q12812139"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Pagan"
+  },
   "Q207761": {
    "ar": "شعب البلطيق",
    "en": "Balts",
@@ -2459,6 +2747,35 @@
    "dissolved": [],
    "arwiki": "زيمبابوي العظمى",
    "enwiki": "Great Zimbabwe"
+  },
+  "Q21": {
+   "ar": "إنجلترا",
+   "en": "England",
+   "desc_ar": "دولة أوربية ضمن المملكة المتحدة في غرب أوروبا",
+   "desc_en": "country in north-west Europe, part of the United Kingdom",
+   "aliases_ar": [
+    "إنغلترا",
+    "إنگلترا",
+    "إنكلترا",
+    "إنقلترا"
+   ],
+   "aliases_en": [
+    "England, United Kingdom",
+    "England, UK"
+   ],
+   "p31": [
+    "Q3336843",
+    "Q518261",
+    "Q6266",
+    "Q6256"
+   ],
+   "inception": [
+    "+0927-07-12T00:00:00Z",
+    "+0886-00-00T00:00:00Z"
+   ],
+   "dissolved": [],
+   "arwiki": "إنجلترا",
+   "enwiki": "England"
   },
   "Q210551": {
    "ar": "النيابة الملكية على ريو دي لا بلاتا",
@@ -2562,6 +2879,21 @@
    "dissolved": [],
    "arwiki": "أوكرانيا",
    "enwiki": "Ukraine"
+  },
+  "Q213470": {
+   "ar": "كاريليون",
+   "en": "Karelians",
+   "desc_ar": null,
+   "desc_en": "ethnic group",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "كاريليون",
+   "enwiki": "Karelians"
   },
   "Q213510": {
    "ar": "الكونغو البلجيكية",
@@ -2766,6 +3098,21 @@
    "arwiki": "جرينلاند",
    "enwiki": "Greenland"
   },
+  "Q226265": {
+   "ar": null,
+   "en": "Malay",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Malay"
+  },
   "Q226570": {
    "ar": null,
    "en": "Ainu",
@@ -2928,6 +3275,31 @@
    "dissolved": [],
    "arwiki": "كوبا",
    "enwiki": "Cuba"
+  },
+  "Q2431480": {
+   "ar": "الإمبراطورية التبتية",
+   "en": "Tibetan Empire",
+   "desc_ar": null,
+   "desc_en": "former empire (618–842) centered on the Tibetan Plateau",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Great Tibet",
+    "bod chen po",
+    "བོད་ཆེན་པོ",
+    "Bod"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q48349"
+   ],
+   "inception": [
+    "+0618-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0842-00-00T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية التبتية",
+   "enwiki": "Tibetan Empire"
   },
   "Q249598": {
    "ar": null,
@@ -3097,6 +3469,21 @@
    "arwiki": null,
    "enwiki": "Gandhara grave culture"
   },
+  "Q2634718": {
+   "ar": null,
+   "en": "Permians",
+   "desc_ar": null,
+   "desc_en": "early Caucasian tribes / anglonations",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Permians"
+  },
   "Q264942": {
    "ar": null,
    "en": "Oromo",
@@ -3134,6 +3521,23 @@
    "dissolved": [],
    "arwiki": "أوزبكستان",
    "enwiki": "Uzbekistan"
+  },
+  "Q2661428": {
+   "ar": null,
+   "en": "Cochimí people",
+   "desc_ar": null,
+   "desc_en": "aboriginal inhabitants of the central part of the Baja California peninsula, from El Rosario in the north to San Javier in the south",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Cochimi people"
+   ],
+   "p31": [
+    "Q3631316"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Cochimí"
   },
   "Q271894": {
    "ar": "أفريقيا الاستوائية الفرنسية",
@@ -3257,6 +3661,62 @@
    "arwiki": "مملكة غوريو",
    "enwiki": "Goryeo"
   },
+  "Q28322": {
+   "ar": "مملكة بالهاي",
+   "en": "Balhae",
+   "desc_ar": null,
+   "desc_en": "ancient kingdom in Asia (698–926)",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Bohai",
+    "Parhae",
+    "Palhae",
+    "Haedongsongguk"
+   ],
+   "p31": [
+    "Q3024240"
+   ],
+   "inception": [
+    "+0698-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0926-01-01T00:00:00Z"
+   ],
+   "arwiki": "مملكة بالهاي",
+   "enwiki": "Parhae"
+  },
+  "Q28456": {
+   "ar": "مملكة شلا",
+   "en": "Silla",
+   "desc_ar": null,
+   "desc_en": "kingdom on the Korean Peninsula (c.57 BCE-935 CE)",
+   "aliases_ar": [
+    "سارا"
+   ],
+   "aliases_en": [
+    "Seora",
+    "Seorabeol",
+    "Sara",
+    "Saro",
+    "Gyerim",
+    "Shilla",
+    "Silla (Kingdom)",
+    "Kingdom of Silla"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q1250464"
+   ],
+   "inception": [
+    "-0057-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0935-01-01T00:00:00Z",
+    "+0892-00-00T00:00:00Z"
+   ],
+   "arwiki": "مملكة شلا",
+   "enwiki": "Silla"
+  },
   "Q28573": {
    "ar": "إنكا",
    "en": "Inca Empire",
@@ -3342,6 +3802,21 @@
    ],
    "arwiki": null,
    "enwiki": "Viceroyalty of Brazil"
+  },
+  "Q292392": {
+   "ar": null,
+   "en": "Mataram",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Mataram"
   },
   "Q29317": {
    "ar": "باغان",
@@ -3464,6 +3939,37 @@
    "dissolved": [],
    "arwiki": null,
    "enwiki": "Vazimba"
+  },
+  "Q31929": {
+   "ar": "الإمبراطورية الكارولنجية",
+   "en": "Carolingian Empire",
+   "desc_ar": "مملكة أوربية سابقة بالعصور الوسطى",
+   "desc_en": "800–843 final stage in the history of the early medieval realm of the Franks, ruled by the Carolingian dynasty",
+   "aliases_ar": [
+    "إمبراطورية كارولينجيه",
+    "إمبراطورية كارولانجية",
+    "إمبراطوريه كارولنجيه",
+    "إمبراطورية كارولينجية",
+    "الكارولنجيون",
+    "إمبراطورية كارولنجية",
+    "الامبراطوريه الكارولانجيه",
+    "الامبراطوريه الكارولينجيه"
+   ],
+   "aliases_en": [
+    "Frankish Empire"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q48349"
+   ],
+   "inception": [
+    "+0800-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0887-00-00T00:00:00Z"
+   ],
+   "arwiki": "الإمبراطورية الكارولنجية",
+   "enwiki": "Carolingian Empire"
   },
   "Q319984": {
    "ar": "الصومال الإيطالي",
@@ -4822,6 +5328,27 @@
    "arwiki": "أويغور",
    "enwiki": "Uyghurs"
   },
+  "Q46370": {
+   "ar": "مملكة الفرنجة الغربية",
+   "en": "West Francia",
+   "desc_ar": null,
+   "desc_en": "former kingdom (843–987)",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Kingdom of the West Franks"
+   ],
+   "p31": [
+    "Q3024240"
+   ],
+   "inception": [
+    "+0843-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0987-00-00T00:00:00Z"
+   ],
+   "arwiki": "مملكة الفرنجة الغربية",
+   "enwiki": "West Francia"
+  },
   "Q46733": {
    "ar": "دارفور",
    "en": "Darfur",
@@ -4885,6 +5412,48 @@
    "arwiki": "بلاد بابل",
    "enwiki": "Babylonia"
   },
+  "Q485348": {
+   "ar": "باشكير",
+   "en": "Bashkir people",
+   "desc_ar": "شعوب تركيّة تعيش على ضفاف ووادي نهر أوفا وجبال الأورال",
+   "desc_en": "Turkic ethnic group",
+   "aliases_ar": [
+    "بشكيريون"
+   ],
+   "aliases_en": [
+    "Bashkirs",
+    "Bachkirs",
+    "Bachkir",
+    "Baschkirs",
+    "Башкиры",
+    "Башкирцы",
+    "Башҡорттар",
+    "Башҡорт"
+   ],
+   "p31": [
+    "Q41710",
+    "Q2472587"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "باشكير",
+   "enwiki": "Bashkirs"
+  },
+  "Q48801298": {
+   "ar": null,
+   "en": "Mandjindja",
+   "desc_ar": null,
+   "desc_en": "Aboriginal Australian people of Western Australia",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Mandjindja"
+  },
   "Q48815031": {
    "ar": null,
    "en": "Iningai",
@@ -4899,6 +5468,73 @@
    "dissolved": [],
    "arwiki": null,
    "enwiki": "Iningai"
+  },
+  "Q494462": {
+   "ar": "أوغوز",
+   "en": "Oghuz Turks",
+   "desc_ar": "مصطلح سابق لمجموعة من الشعب التركي الغربي",
+   "desc_en": "Western Turkic people",
+   "aliases_ar": [
+    "اوغوز",
+    "غز",
+    "الاوغوز",
+    "اغوز",
+    "الغز",
+    "الأوغوز"
+   ],
+   "aliases_en": [],
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "أتراك الأوغوز",
+   "enwiki": "Oghuz Turks"
+  },
+  "Q4948": {
+   "ar": "جمهورية البندقية",
+   "en": "Republic of Venice",
+   "desc_ar": "الدولة السابقة في شمال شرق إيطاليا (697–1797)",
+   "desc_en": "former state (697–1797) controlling, at various times, parts of northeastern Italy, the Balkans, and Mediterranean islands",
+   "aliases_ar": [],
+   "aliases_en": [
+    "The Most Serene Republic of Venice",
+    "The Republic of Venice",
+    "Repulic of Venice",
+    "Venezia Republic",
+    "Venetian Republic",
+    "Venetian Empire",
+    "Republic of Venezia",
+    "Most Serene Republic of Venice"
+   ],
+   "p31": [
+    "Q3624078",
+    "Q62825",
+    "Q3024240"
+   ],
+   "inception": [
+    "+0697-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1797-05-12T00:00:00Z"
+   ],
+   "arwiki": "جمهورية البندقية",
+   "enwiki": "Republic of Venice"
+  },
+  "Q4955540": {
+   "ar": "سلاطين الهندوس",
+   "en": "Hindu Shahis",
+   "desc_ar": null,
+   "desc_en": "former dynasty in Pakistan and Afghanistan",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q164950"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "سلاطين الهندوس",
+   "enwiki": "Hindu Shahis"
   },
   "Q497568": {
    "ar": null,
@@ -5198,6 +5834,30 @@
    "dissolved": [],
    "arwiki": "تونكين (مدينة)",
    "enwiki": "Tonkin"
+  },
+  "Q62389": {
+   "ar": "كومنولث آيسلندي",
+   "en": "Icelandic Commonwealth",
+   "desc_ar": null,
+   "desc_en": "predecessor state of Iceland",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Þjóðveldið Ísland",
+    "Icelandic Free State",
+    "Free State of Iceland"
+   ],
+   "p31": [
+    "Q3024240",
+    "Q3624078"
+   ],
+   "inception": [
+    "+0930-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1262-00-00T00:00:00Z"
+   ],
+   "arwiki": "كومنولث آيسلندا",
+   "enwiki": "Icelandic Commonwealth"
   },
   "Q6250": {
    "ar": "الصحراء الغربية",
@@ -5688,6 +6348,29 @@
    "arwiki": null,
    "enwiki": "Nganasan"
   },
+  "Q706018": {
+   "ar": "إمارة هانوفر الناخبة",
+   "en": "Electorate of Hanover",
+   "desc_ar": null,
+   "desc_en": "former principality of the Holy Roman Empire",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Electorate of Brunswick-Lüneburg"
+   ],
+   "p31": [
+    "Q1621034",
+    "Q26830017",
+    "Q20521456"
+   ],
+   "inception": [
+    "+1692-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1814-01-01T00:00:00Z"
+   ],
+   "arwiki": "إمارة هانوفر الناخبة",
+   "enwiki": "Electorate of Hanover"
+  },
   "Q70972": {
    "ar": "مملكة فرنسا",
    "en": "Kingdom of France",
@@ -5774,6 +6457,21 @@
    "dissolved": [],
    "arwiki": null,
    "enwiki": "Asante"
+  },
+  "Q726722": {
+   "ar": null,
+   "en": "Ciboney people",
+   "desc_ar": null,
+   "desc_en": "Taíno people of western Cuba, Jamaica, and the Tiburon Peninsula of Haiti",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Ciboney"
   },
   "Q730": {
    "ar": "سورينام",
@@ -6084,6 +6782,21 @@
    "arwiki": "مصر",
    "enwiki": "Egypt"
   },
+  "Q7920712": {
+   "ar": null,
+   "en": "Veps",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Veps"
+  },
   "Q793363": {
    "ar": null,
    "en": "Ayutthaya",
@@ -6211,6 +6924,21 @@
    "arwiki": "اليمن",
    "enwiki": "Yemen"
   },
+  "Q806113": {
+   "ar": null,
+   "en": "Banas",
+   "desc_ar": "صفحة توضيح ويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": null,
+   "enwiki": "Banas"
+  },
   "Q8070884": {
    "ar": null,
    "en": "Zhoa",
@@ -6325,6 +7053,34 @@
    "dissolved": [],
    "arwiki": "قرغيزستان",
    "enwiki": "Kyrgyzstan"
+  },
+  "Q813961": {
+   "ar": "شعب البجا",
+   "en": "Beja people",
+   "desc_ar": "مجموعة عرقية في جبال البحر الأحمر و التاكا و سواحل مصوع و سواكن",
+   "desc_en": "ethnic group of Red Sea Hills",
+   "aliases_ar": [
+    "لغة البجا",
+    "لغة البجة",
+    "بجا (لغة)",
+    "لغات البيجا",
+    "لغات البجا",
+    "بيجا",
+    "لغة بجاوية",
+    "بجا",
+    "بجة",
+    "البجة",
+    "قبائل البجا",
+    "البجاة"
+   ],
+   "aliases_en": [],
+   "p31": [
+    "Q41710"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "شعب البجا",
+   "enwiki": "Beja people"
   },
   "Q815677": {
    "ar": "قارلوق",
@@ -6999,6 +7755,21 @@
    "arwiki": null,
    "enwiki": "Kaarta"
   },
+  "Q925943": {
+   "ar": "سامي",
+   "en": "Sami",
+   "desc_ar": "صفحة توضيح لويكيميديا",
+   "desc_en": "Wikimedia disambiguation page",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q4167410"
+   ],
+   "inception": [],
+   "dissolved": [],
+   "arwiki": "سامي (توضيح)",
+   "enwiki": "Sami"
+  },
   "Q928": {
    "ar": "الفلبين",
    "en": "Philippines",
@@ -7421,6 +8192,10 @@
    "ar": "مملكة",
    "en": "realm"
   },
+  "Q12536": {
+   "ar": "الدولة العباسية",
+   "en": "Abbasid Caliphate"
+  },
   "Q12759805": {
    "ar": "سلطنة",
    "en": "sultanate"
@@ -7428,6 +8203,10 @@
   "Q127693126": {
    "ar": null,
    "en": "successor state"
+  },
+  "Q12812139": {
+   "ar": "مصطلح تقني",
+   "en": "specialized term"
   },
   "Q129264": {
    "ar": "جزيرة شبح",
@@ -7489,6 +8268,10 @@
    "ar": "منطقة متنازع عليها",
    "en": "disputed territory"
   },
+  "Q154547": {
+   "ar": "دوقية",
+   "en": "duchy"
+  },
   "Q1549591": {
    "ar": "مدينة كبيرة (>100,000)",
    "en": "big city"
@@ -7508,6 +8291,14 @@
   "Q1620908": {
    "ar": "منطقة تاريخية",
    "en": "historical region"
+  },
+  "Q1621034": {
+   "ar": null,
+   "en": "historical territory"
+  },
+  "Q16334295": {
+   "ar": "مجموعة بشرية",
+   "en": "group of humans"
   },
   "Q164142": {
    "ar": "محمية",
@@ -7585,6 +8376,14 @@
    "ar": "عالم كومنولث",
    "en": "Commonwealth realm"
   },
+  "Q20521456": {
+   "ar": null,
+   "en": "electoral principate"
+  },
+  "Q208500": {
+   "ar": "إمارة",
+   "en": "principality"
+  },
   "Q21479969": {
    "ar": "محمية بريطانية",
    "en": "British protectorate"
@@ -7605,9 +8404,17 @@
    "ar": "مدينة في تشيلي",
    "en": "city in Chile"
   },
+  "Q25537045": {
+   "ar": "خقانات",
+   "en": "khaganate"
+  },
   "Q2577883": {
    "ar": "أرض محتلة",
    "en": "occupied territory"
+  },
+  "Q26830017": {
+   "ar": "دول في الإمبراطورية الرومانية المقدسة",
+   "en": "state in the Holy Roman Empire"
   },
   "Q26883974": {
    "ar": null,
@@ -7645,6 +8452,14 @@
    "ar": null,
    "en": "overseas province of Portugal"
   },
+  "Q3336843": {
+   "ar": "دولة مكونة في المملكة المتحدة",
+   "en": "constituent country of the United Kingdom"
+  },
+  "Q33829": {
+   "ar": "تجمع سكاني",
+   "en": "human population"
+  },
   "Q339834": {
    "ar": "قوة إقليمية",
    "en": "regional power"
@@ -7660,6 +8475,10 @@
   "Q3624078": {
    "ar": "دولة ذات سيادة",
    "en": "sovereign state"
+  },
+  "Q3631316": {
+   "ar": null,
+   "en": "Punjabi University"
   },
   "Q36747": {
    "ar": "الشعوب الأصلية في الأمريكتين",
@@ -7704,6 +8523,10 @@
   "Q43702": {
    "ar": "اتحاد",
    "en": "federation"
+  },
+  "Q4392985": {
+   "ar": "هوية دينية",
+   "en": "religious identity"
   },
   "Q4533081": {
    "ar": "مجموعة إثنية لغوية",
@@ -7753,6 +8576,10 @@
    "ar": "بلد متوسطي",
    "en": "Mediterranean country"
   },
+  "Q518261": {
+   "ar": "منطقة ثقافية",
+   "en": "cultural area"
+  },
   "Q5255892": {
    "ar": "الجمهورية الديمقراطية",
    "en": "democratic republic"
@@ -7788,6 +8615,10 @@
   "Q6266": {
    "ar": "أمة",
    "en": "nation"
+  },
+  "Q62825": {
+   "ar": "الجمهوريات البحرية",
+   "en": "maritime republics"
   },
   "Q63791824": {
    "ar": "بلد ذو حدود على بحر البلطيق",
