@@ -27,31 +27,48 @@ OUT_JSON = ROOT / "review" / "names_second_pass.json"
 OUT_CSV = ROOT / "review" / "names_second_pass.csv"
 FACTS_CACHE = ROOT / ".cache" / "scraper" / "second_pass_facts.json"  # ذاكرة مؤقتة، لا تُلتزم
 
-POLITY = re.compile(r"state|kingdom|empire|dynast|sultanate|khanate|khaganate|emirate|principalit|duchy|republic|"
-                    r"country|colony|protectorate|caliphate|confederation|realm|monarchy|horde|sovereign|"
-                    r"federally recognized|native american tribe|tribe", re.I)
-NOT_POLITY = re.compile(r"ethnic|culture|civilization|people|language|human|settlement|city|village|"
-                        r"archaeolog|hunter|nomad|population|linguistic|ethnolinguistic|agricultur|site", re.I)
+POLITY = re.compile(r"\b(state|kingdom|empire|dynast\w*|sultanate|khanate|khaganate|emirate|principalit\w*|duchy|"
+                    r"republic|country|colony|protectorate|caliphate|confederation|realm|monarchy|horde|sovereign|"
+                    r"countship|federally recognized|tribe)\b", re.I)
+NOT_POLITY = re.compile(r"\b(ethnic|culture|civilization|people|language|human|settlement|city|town|village|"
+                        r"archaeolog\w*|hunter\w*|nomad\w*|population|linguistic|agricultur\w*|site|county)\b", re.I)
 STOP = {"empire", "kingdom", "state", "states", "the", "of", "dynasty", "republic", "people", "peoples",
-        "chiefdom", "region", "tribe", "tribes", "emirate", "sultanate", "khanate", "culture", "and", "in", "rulers"}
+        "chiefdom", "region", "tribe", "tribes", "emirate", "sultanate", "khanate", "culture", "and", "in",
+        "rulers", "house", "nation", "states"}
 
 
 def keywords(text):
-    return {w for w in re.findall(r"[a-zāēīōūʻ'’\-]+", (text or "").lower()) if len(w) >= 4 and w not in STOP}
+    """كلمات مفتاحية للمقارنة: ثلاثة أحرف فأكثر، دون الكلمات العامة."""
+    return {w for w in re.findall(r"[a-zāēīōūʻ'’\-]+", (text or "").lower()) if len(w) >= 3 and w not in STOP}
 
 
 def years_of(row):
-    ys = [int(x) for x in (row.get("map_years") or "").split() if re.fullmatch(r"-?\d+", x)]
-    return ys
+    """سنوات ظهور الاسم على الخرائط، من الصف."""
+    return [int(x) for x in (row.get("map_years") or "").split() if re.fullmatch(r"-?\d+", x)]
 
 
-def overlaps(row, frm, to):
-    ys = years_of(row)
-    if not ys or (frm is None and to is None):
-        return None  # لا تواريخ للمقارنة
-    lo = frm if frm is not None else -10**6
-    hi = to if to is not None else 10**6
-    return any(lo <= y <= hi for y in ys)
+def classify(name, map_years, en, types, arwiki, frm, to):
+    """يعيد (القرار، الأسباب): accept، أو reject، أو manual (تحتاج مراجعة يدوية).
+    القاعدة الزمنية تُطبَّق على كل سنة ظهر فيها الاسم: إن خرجت كلها فالرفض، وإن خرج بعضها فالمراجعة."""
+    reasons = []
+    if not types:
+        return "reject", ["لا نوع في البيانات المجلوبة"]
+    if NOT_POLITY.search(types) or not POLITY.search(types):
+        return "reject", ["النوع ليس سياسياً"]
+    if re.match(r"house of", en or "", re.I):
+        return "reject", ["أسرة لا دولة"]
+    if not arwiki:
+        return "reject", ["لا مقالة عربية"]
+    if map_years and (frm is not None or to is not None):
+        inside = [y for y in map_years if (frm is None or y >= frm) and (to is None or y <= to)]
+        if not inside:
+            return "reject", ["الكيان لم يكن موجوداً بهذا الاسم في أي سنة من سنوات الخريطة"]
+        if len(inside) < len(map_years):
+            return "manual", ["بعض سنوات الخريطة خارج فترة الكيان، وقد يكون الاسم لكيان آخر في تلك السنوات"]
+    shared = keywords(name) & keywords(en)
+    if not shared:
+        return "manual", ["التسمية في ويكي بيانات تختلف عن الاسم في المصدر (قد يكون تعريباً مختلفاً)"]
+    return "accept", ["مستوفٍ للشروط"]
 
 
 def main():
@@ -74,29 +91,15 @@ def main():
         f = facts.get(r["qid"], {})
         types = " ; ".join(f.get("types", {}).values())
         en = f.get("en") or ""
-        reasons = []
-        ok_type = bool(types) and bool(POLITY.search(types)) and not NOT_POLITY.search(types)
-        if not types:
-            reasons.append("لا نوع في البيانات المجلوبة")
-        elif not ok_type:
-            reasons.append("النوع ليس سياسياً")
-        ok_arwiki = bool(f.get("arwiki"))
-        if not ok_arwiki:
-            reasons.append("لا مقالة عربية")
+        decision, reasons = classify(r["name"], years_of(r), en, types, f.get("arwiki"), f.get("from"), f.get("to"))
         shared = keywords(r["name"]) & keywords(en)
-        ok_name = bool(shared)
-        if not ok_name:
-            reasons.append("التسمية في ويكي بيانات لا تشترك في كلمة مفتاحية مع الاسم")
-        ov = overlaps(r, f.get("from"), f.get("to"))
-        if ov is False:
-            reasons.append("التواريخ لا تغطي سنوات الخريطة")
-        accept = ok_type and ok_arwiki and ok_name and ov is not False
         out.append({
             "name": r["name"], "tier": "منخفضة-ثانية", "map_years": r.get("map_years", ""),
             "qid": r["qid"], "en": en, "arwiki": f.get("arwiki") or "", "proposed_ar": f.get("arwiki") or "",
             "current_ar": r.get("current_ar", ""), "from": f.get("from"), "to": f.get("to"),
-            "types": types, "shared_keywords": " ".join(sorted(shared)), "dates_cover": ov,
-            "proposal": "yes" if accept else "no", "reasons": "؛ ".join(reasons) if reasons else "مستوفٍ للشروط",
+            "types": types, "shared_keywords": " ".join(sorted(shared)),
+            "proposal": {"accept": "yes", "reject": "no", "manual": "manual"}[decision],
+            "reasons": "؛ ".join(reasons),
             "url_en": f"https://en.wikipedia.org/wiki/{(en or r['name']).replace(' ', '_')}",
             "url_ar": f"https://ar.wikipedia.org/wiki/{f.get('arwiki', '').replace(' ', '_')}" if f.get("arwiki") else "",
             "url_wikidata": f"https://www.wikidata.org/wiki/{r['qid']}",
@@ -107,7 +110,8 @@ def main():
         w.writeheader()
         w.writerows(out)
     yes = sum(1 for o in out if o["proposal"] == "yes")
-    print(f"اقتراحات بقبول: {yes} من {len(out)}", flush=True)
+    man = sum(1 for o in out if o["proposal"] == "manual")
+    print(f"قبول مقترح: {yes}، مراجعة يدوية: {man}، من {len(out)}", flush=True)
 
 
 if __name__ == "__main__":
