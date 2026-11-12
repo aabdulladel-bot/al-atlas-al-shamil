@@ -76,11 +76,11 @@ def score(cand, facts, years, how):
     return s, reasons
 
 
-def tier(s, facts, reasons):
+def tier(s, facts, reasons, how="title"):
     contradict = any(r.startswith("تاريخه خارج") or r == "صفحة توضيح" for r in reasons)
     has_ar = bool(facts.get("arwiki") or facts.get("ar"))
-    # العالية تشترط معرفة النوع والتاريخ؛ بلا ويكي بيانات (مؤجَّلة) لا تتجاوز المتوسطة
-    if s >= 6 and has_ar and not contradict and facts.get("types"):
+    # العالية تشترط: تطابق تام للعنوان (لا تحويل، فالتحويل قد يربط كياناً مختلفاً)، ونوع وتاريخ معروفان، واسم عربي
+    if s >= 6 and has_ar and not contradict and facts.get("types") and how == "title":
         return "عالية"
     if s >= 3 and has_ar and not contradict:
         return "متوسطة"
@@ -100,6 +100,10 @@ def run(wm, statuses, limit, out):
     for n, t in titles.items():
         if t["qid"] and not t["disambiguation"]:
             cands[n].append((t["qid"], "redirect" if t["redirected"] else "title"))
+    # مرشح واحد لكل اسم: الأقوى (عنوان، ثم تحويل، ثم بحث بالاسم، ثم بحث النص). تكلفة الطلبات تتناسب مع عدد الأسماء لا المرشحين
+    rank = {"title": 0, "redirect": 1, "label": 2, "search": 3}
+    for n in todo:
+        cands[n] = sorted(cands[n], key=lambda c: rank.get(c[1], 9))[:1]
     rest = [n for n in todo if not cands[n]]
     print(f"بالعنوان: {len(todo) - len(rest)}، وللبحث بالاسم: {len(rest)}")
     pending = []
@@ -108,11 +112,17 @@ def run(wm, statuses, limit, out):
             cands[n] += [(q, "label") for q in qs]
     except wm.core.RateLimited as e:
         pending.append(f"البحث بالاسم: {e}")
+    qids = [q for cs in cands.values() for q, _ in cs]
     try:
-        facts = wm.entity_facts([q for cs in cands.values() for q, _ in cs])
+        facts = wm.entity_facts(qids)
     except wm.core.RateLimited as e:
-        pending.append(f"التواريخ والأنواع: {e}")
-        facts = {}
+        # البديل: بيانات الكيان مباشرة (EntityData) حين يُحجب SPARQL
+        print(f"SPARQL محجوب ({e})، ننتقل إلى بيانات الكيان مباشرة")
+        try:
+            facts = wm.entity_facts_ed(qids)
+        except wm.core.RateLimited as e2:
+            pending.append(f"التواريخ والأنواع: {e2}")
+            facts = {}
     # بديل غير مقيّد: بحث ويكيبيديا لما بقي بلا مرشح، اقتراحات تمر بالمراجعة إلزاماً
     still = [n for n in todo if not cands[n]]
     hits = wm.wiki_search(still)
@@ -147,13 +157,32 @@ def run(wm, statuses, limit, out):
             s, q, f, reasons = best
             row.update({"qid": q, "en": f.get("en") or "", "ar_label": f.get("ar") or "", "arwiki": f.get("arwiki") or "",
                         "proposed_ar": f.get("arwiki") or f.get("ar") or "", "from": f.get("from"), "to": f.get("to"),
-                        "types": "; ".join(f.get("types", {}).values()), "score": s, "tier": tier(s, f, reasons),
+                        "types": "; ".join(f.get("types", {}).values()), "score": s, "tier": tier(s, f, reasons, how),
+                        "match": how,
                         "reasons": "؛ ".join(reasons), "candidates": len(cands[n])})
         else:
             row.update({"qid": "", "en": "", "ar_label": "", "arwiki": "", "proposed_ar": "", "from": None, "to": None,
                         "types": "", "score": 0, "tier": "لا مرشح", "reasons": "لا مقالة ولا مطابقة اسم", "candidates": 0})
         row["accept"] = ""  # يملؤه صاحب المشروع: yes لقبول المرشح
+        # روابط التحقق لكل صف: يفتحها القارئ ليرى المصدر بنفسه
+        q = row.get("qid", "")
+        en_title = titles.get(n, {}).get("resolved", "") if (q and cands[n] and cands[n][0][1] in ("title", "redirect")) else ""
+        row["url_en"] = f"https://en.wikipedia.org/wiki/{en_title.replace(' ', '_')}" if en_title else ""
+        row["url_ar"] = f"https://ar.wikipedia.org/wiki/{row['arwiki'].replace(' ', '_')}" if row.get("arwiki") else ""
+        row["url_wikidata"] = f"https://www.wikidata.org/wiki/{q}" if q else ""
+        # التعارض: اسم موثّق حالياً يختلف عمّا يقترحه المرشح
+        row["conflict"] = ""
+        if names[n].get("status") in ("verified", "override") and row.get("proposed_ar") and names[n].get("ar") and row["proposed_ar"] != names[n]["ar"]:
+            row["conflict"] = f"الاسم الموثّق الحالي «{names[n]['ar']}» يختلف عن المقترح"
         rows.append(row)
+    # التكرار: معرّف واحد يقترحه أكثر من اسم، فيحتاج قراراً واحداً لا قرارات متعارضة
+    seen = {}
+    for r in rows:
+        if r.get("qid"):
+            seen.setdefault(r["qid"], []).append(r["name"])
+    for r in rows:
+        group = seen.get(r.get("qid", ""), [])
+        r["duplicate_of"] = "؛ ".join(x for x in group if x != r["name"]) if len(group) > 1 else ""
     out = Path(out)
     out.parent.mkdir(parents=True, exist_ok=True)
     with open(out.with_suffix(".csv"), "w", encoding="utf-8-sig", newline="") as fh:

@@ -121,3 +121,44 @@ def label_candidates(names, per_name=5):
             if lab in out and qid not in out[lab] and len(out[lab]) < per_name:
                 out[lab].append(qid)
     return out
+
+
+def _claim_ids(ent, prop):
+    out = []
+    for c in ent.get("claims", {}).get(prop, []):
+        v = c.get("mainsnak", {}).get("datavalue", {}).get("value")
+        if isinstance(v, dict) and "id" in v:
+            out.append(v["id"])
+        elif isinstance(v, dict) and "time" in v:
+            out.append(v["time"])
+    return out
+
+
+def _entity(qid):
+    body = core.fetch(f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json", ttl_days=30)
+    return json.loads(body)["entities"][qid]
+
+
+def entity_facts_ed(qids, type_labels=None):
+    """المسار البديل حين يُحجب SPARQL: بيانات الكيان الكاملة لكل معرّف (تُحفظ في الذاكرة المؤقتة).
+    يعيد نفس بنية entity_facts. تسميات الأنواع (P31) تُجلب مرة واحدة لكل نوع."""
+    type_labels = type_labels if type_labels is not None else {}
+    facts = {}
+    for qid in dict.fromkeys(q for q in qids if q):
+        ent = _entity(qid)
+        f = {"qid": qid, "en": ent.get("labels", {}).get("en", {}).get("value"),
+             "ar": ent.get("labels", {}).get("ar", {}).get("value"),
+             "arwiki": ent.get("sitelinks", {}).get("arwiki", {}).get("title"),
+             "from": None, "to": None, "types": {}}
+        ys_from = [_year(t) for t in _claim_ids(ent, "P571") + _claim_ids(ent, "P580") if isinstance(t, str) and t[:1] in "+-"]
+        ys_to = [_year(t) for t in _claim_ids(ent, "P576") + _claim_ids(ent, "P582") if isinstance(t, str) and t[:1] in "+-"]
+        ys_from = [y for y in ys_from if y is not None]
+        ys_to = [y for y in ys_to if y is not None]
+        f["from"] = min(ys_from) if ys_from else None
+        f["to"] = max(ys_to) if ys_to else None
+        for tq in _claim_ids(ent, "P31"):
+            if tq not in type_labels:
+                type_labels[tq] = _entity(tq).get("labels", {}).get("en", {}).get("value", "")
+            f["types"][tq] = type_labels[tq]
+        facts[qid] = f
+    return facts
