@@ -1,7 +1,7 @@
 {
  "_meta": {
   "source": "Wikidata (CC0) عبر wbgetentities",
-  "retrieved_at": "2026-11-12T16:01:17.643867+00:00",
+  "retrieved_at": "2026-11-13T17:02:01.245346+00:00",
   "note": "مستخلص للبطاقة التعريفية: لا يُحفظ من ويكي بيانات إلا الحقول المذكورة في fetch_wikidata_entities.py"
  },
  "entities": {
@@ -2172,6 +2172,31 @@
    "dissolved": [],
    "arwiki": "كيبك",
    "enwiki": "Quebec"
+  },
+  "Q1772596": {
+   "ar": "رئاسة مدراس",
+   "en": "Madras Presidency",
+   "desc_ar": null,
+   "desc_en": "administrative unit in British India",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Presidency of Fort St. George",
+    "Madras Province",
+    "Fort St George Presidency"
+   ],
+   "p31": [
+    "Q17319258",
+    "Q27612211"
+   ],
+   "inception": [
+    "+1652-00-00T00:00:00Z",
+    "+1947-08-14T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1950-01-26T00:00:00Z"
+   ],
+   "arwiki": "رئاسة مدراس",
+   "enwiki": "Madras Presidency"
   },
   "Q1774": {
    "ar": "زنجبار",
@@ -5187,6 +5212,26 @@
    "arwiki": null,
    "enwiki": "Đại Việt"
   },
+  "Q431575": {
+   "ar": "الأدارسة",
+   "en": "Idrisid dynasty",
+   "desc_ar": "سلالة عربية مسلمة حكمت أجزاء من المغرب الحالي وأجزاء من غرب الجزائر الحالية.",
+   "desc_en": "Arab Muslim dynasty that ruled parts of present-day Morocco and parts of western Algeria",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q164950",
+    "Q3024240"
+   ],
+   "inception": [
+    "+0788-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+0974-00-00T00:00:00Z"
+   ],
+   "arwiki": "الدولة الإدريسية",
+   "enwiki": "Idrisid dynasty"
+  },
   "Q43287": {
    "ar": "الإمبراطورية الألمانية",
    "en": "German Empire",
@@ -5599,6 +5644,27 @@
    "dissolved": [],
    "arwiki": "سلتيأيبيرون",
    "enwiki": "Celtiberians"
+  },
+  "Q5324": {
+   "ar": "سلالة غورجارا براتيهارا",
+   "en": "Gurjara-Pratihara",
+   "desc_ar": null,
+   "desc_en": "dynasty that ruled northern India from 6th to 11th century",
+   "aliases_ar": [],
+   "aliases_en": [],
+   "p31": [
+    "Q13417114",
+    "Q3024240",
+    "Q11514315"
+   ],
+   "inception": [
+    "+0800-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1036-01-01T00:00:00Z"
+   ],
+   "arwiki": "سلالة غورجارا براتيهارا",
+   "enwiki": "Pratihara dynasty"
   },
   "Q538677": {
    "ar": "أنجيفن",
@@ -6906,6 +6972,29 @@
    "dissolved": [],
    "arwiki": "العراق",
    "enwiki": "Iraq"
+  },
+  "Q800236": {
+   "ar": "مملكة بهاولبور",
+   "en": "Bahawalpur State",
+   "desc_ar": null,
+   "desc_en": "princely state of the British Raj",
+   "aliases_ar": [],
+   "aliases_en": [
+    "Bahawalpur",
+    "State of Bahawalpur"
+   ],
+   "p31": [
+    "Q1336152",
+    "Q3024240"
+   ],
+   "inception": [
+    "+1690-01-01T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1955-01-01T00:00:00Z"
+   ],
+   "arwiki": "مملكة بهاولبور",
+   "enwiki": "Bahawalpur (princely state)"
   },
   "Q80338": {
    "ar": "بنغال",
@@ -8258,6 +8347,14 @@
    "ar": "قبيلة",
    "en": "tribe"
   },
+  "Q1336152": {
+   "ar": "ولاية أميرية",
+   "en": "princely state"
+  },
+  "Q13417114": {
+   "ar": "عائلة نبيلة",
+   "en": "noble family"
+  },
   "Q1345055": {
    "ar": null,
    "en": "horde"
@@ -8345,6 +8442,10 @@
   "Q17259945": {
    "ar": null,
    "en": "province of the Spanish Empire"
+  },
+  "Q17319258": {
+   "ar": null,
+   "en": "presidency of British India"
   },
   "Q17524420": {
    "ar": "وصف تاريخ",
@@ -8445,6 +8546,10 @@
   "Q26883974": {
    "ar": null,
    "en": "nomadic confederacy"
+  },
+  "Q27612211": {
+   "ar": null,
+   "en": "province of India"
   },
   "Q27863646": {
    "ar": "شعب خرافي",
