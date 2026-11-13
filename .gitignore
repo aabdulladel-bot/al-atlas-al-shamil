@@ -7,3 +7,7 @@ private/
 
 # ذاكرة السكرابر المؤقتة (scripts/scraper)
 .cache/
+
+# ذاكرات مؤقتة للسكرابر وبايثون، لا تُلتزم
+.cache/
+__pycache__/
