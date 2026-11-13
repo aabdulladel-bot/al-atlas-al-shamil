@@ -1,7 +1,7 @@
 {
  "_meta": {
   "source": "Wikidata (CC0) عبر wbgetentities",
-  "retrieved_at": "2026-11-12T10:11:54.738417+00:00",
+  "retrieved_at": "2026-11-12T16:01:17.643867+00:00",
   "note": "مستخلص للبطاقة التعريفية: لا يُحفظ من ويكي بيانات إلا الحقول المذكورة في fetch_wikidata_entities.py"
  },
  "entities": {
@@ -2635,6 +2635,32 @@
    "dissolved": [],
    "arwiki": "النرويج",
    "enwiki": "Norway"
+  },
+  "Q200262": {
+   "ar": "مملكة نبرة",
+   "en": "Kingdom of Navarre",
+   "desc_ar": "مملكة أوربية سابقة حاليا هي شمال إسبانيا",
+   "desc_en": "Basque medieval kingdom that occupied lands on either side of the western Pyrenees, alongside the Atlantic Ocean (1162–1512)",
+   "aliases_ar": [
+    "مملكه نافارا",
+    "مملكة نافار"
+   ],
+   "aliases_en": [
+    "Kingdom of Pamplona"
+   ],
+   "p31": [
+    "Q1250464",
+    "Q3024240",
+    "Q1088391"
+   ],
+   "inception": [
+    "+1162-00-00T00:00:00Z"
+   ],
+   "dissolved": [
+    "+1841-00-00T00:00:00Z"
+   ],
+   "arwiki": "مملكة نبرة",
+   "enwiki": "Kingdom of Navarre"
   },
   "Q201705": {
    "ar": "إمبراطورية الخمير",
