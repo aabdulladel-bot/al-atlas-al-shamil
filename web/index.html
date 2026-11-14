@@ -249,10 +249,12 @@
     /* كومة الشواهد: مكدّسة، تتفرّق عند الفتح */
     .ev-pile > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 6px 0 10px; }
     .ev-pile > summary::-webkit-details-marker { display: none; }
-    .ev-pile-stack { position: relative; width: 74px; height: 46px; flex: 0 0 auto; }
-    .ev-pile-card { position: absolute; inset-inline-start: calc(var(--i) * 6px); top: calc(var(--i) * 4px); width: 56px; height: 36px; border-radius: 6px; background: var(--card2); border: 1px solid var(--line); transform: rotate(calc(var(--i) * -4deg)); box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+    .ev-pile-stack { position: relative; width: min(260px, 100%); height: 58px; flex: 0 0 auto; }
+    .ev-pile-card { position: absolute; inset-inline-start: calc(var(--i) * 6px); top: calc(var(--i) * 4px); width: calc(100% - var(--i) * 12px); height: 46px; border-radius: 6px; background: var(--card2); border: 1px solid var(--line); transform: rotate(calc(var(--i) * -4deg)); box-shadow: 0 2px 6px rgba(0,0,0,.25); }
     .ev-pile-card:nth-child(1) { background: var(--card); }
     .ev-pile-label { font-size: 12.5px; color: var(--muted); }
+    .ev-pile-front { display: flex; align-items: center; padding: 4px 10px; border-inline-start: 3px solid var(--accent); font-size: 12px; line-height: 1.5; color: var(--ink); overflow: hidden; }
+    .ev-pile-text { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .ev-pile[open] > summary .ev-pile-stack { opacity: .35; }
     .ev-pile[open] .ev-card { animation: ev-in .32s ease both; animation-delay: calc(var(--i) * 70ms); }
     @keyframes ev-in { from { opacity: 0; transform: translateY(-8px) scale(.985); } to { opacity: 1; transform: none; } }
