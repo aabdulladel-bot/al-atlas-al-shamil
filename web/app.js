@@ -656,6 +656,12 @@ const CARD_ICON = {
   claim: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 17h5l2-5V5H4v7h3l-3 5zm9 0h5l2-5V5h-7v7h3l-3 5z"/></svg>',
   demo: '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="11" width="4" height="9" rx="1"/><rect x="10" y="5" width="4" height="15" rx="1"/><rect x="16" y="9" width="4" height="11" rx="1"/></svg>',
 };
+// ملخص المستويات في الكومة: عدد كل مستوى، من الحقول نفسها، بلا تقدير
+function pileTally(list) {
+  const counts = {};
+  for (const c of list) counts[c.tier] = (counts[c.tier] ?? 0) + 1;
+  return Object.entries(counts).map(([t, n]) => `<span class="chip ${TIER_CLASS[t] ?? ""}">${escapeHtml(t)} ${fmtInt(n)}</span>`).join("");
+}
 function linkedEvidenceHtml(name, links) {
   const list = links?.[name] ?? [];
   if (!list.length) return `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">لا شاهد موثّقاً يقع على أرضه في هذه الخريطة بعد.</p></section>`;
@@ -668,7 +674,7 @@ function linkedEvidenceHtml(name, links) {
   const front = `<span class="ev-pile-card ev-pile-front ${TIER_CLASS[list[0].tier] ?? ""}" style="--i:0"><span class="ev-pile-text">${escapeHtml(list[0].statement.slice(0, 96))}${list[0].statement.length > 96 ? "…" : ""}</span></span>`;
   const stack = front + list.slice(1, 3).map((_, i) => `<span class="ev-pile-card" style="--i:${i + 1}"></span>`).join("");
   return `<section class="card-sec"><h3>الشواهد على أرضه (${fmtInt(list.length)})</h3><p class="sub">ربط مكاني محسوب على حدود المصدر، يُصنَّف كل شاهد بمستواه وسببه، ولا يُعدّ حكماً تاريخياً.</p>` +
-    `<details class="ev-pile"><summary><span class="ev-pile-stack" aria-hidden="true">${stack}</span><span class="ev-pile-label">اضغط لتفريق الشواهد (${fmtInt(list.length)})</span></summary>${rows}</details></section>`;
+    `<details class="ev-pile"><summary><span class="ev-pile-stack" aria-hidden="true">${stack}</span><span class="ev-pile-label">اضغط لتفريق الشواهد (${fmtInt(list.length)})</span><span class="ev-pile-tally">${pileTally(list)}</span></summary>${rows}</details></section>`;
 }
 
 // ما لا نعرفه: فجوات الكيان في هذه الخريطة. كل فجوة تُقرأ من بيان معروض أصلاً، فلا تُضاف معلومة ولا تُقدَّر
