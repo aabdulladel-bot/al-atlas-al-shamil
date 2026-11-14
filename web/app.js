@@ -659,11 +659,14 @@ const CARD_ICON = {
 function linkedEvidenceHtml(name, links) {
   const list = links?.[name] ?? [];
   if (!list.length) return `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">لا شاهد موثّقاً يقع على أرضه في هذه الخريطة بعد.</p></section>`;
-  const rows = list.map((c) => `<article class="ev-card"><div class="ev-st">${escapeHtml(c.statement)}</div>` +
+  const rows = list.map((c, j) => `<article class="ev-card" style="--i:${j}"><div class="ev-st">${escapeHtml(c.statement)}</div>` +
     `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi> · <bdi>${escapeHtml(c.place_ar)}</bdi>${c.place_note ? ` (${escapeHtml(c.place_note)})` : ""}</div>` +
     `<div class="chips">${chip(c.tier, TIER_CLASS[c.tier] ?? "")}${c.sunan.map((s) => chip(s)).join("")}</div>` +
     `<div class="ev-by">${escapeHtml(c.tier_reason)}</div></article>`).join("");
-  return `<section class="card-sec"><h3>الشواهد على أرضه (${fmtInt(list.length)})</h3><p class="sub">ربط مكاني محسوب على حدود المصدر، يُصنَّف كل شاهد بمستواه وسببه، ولا يُعدّ حكماً تاريخياً.</p>${rows}</section>`;
+  // كومة الشواهد: تُعرض مكدّسة، وتتفرّق عند النقر لتقرأ كل بطاقة. لا تُضاف أي معلومة، والعدد من القائمة نفسها
+  const stack = list.slice(0, 3).map((_, i) => `<span class="ev-pile-card" style="--i:${i}"></span>`).join("");
+  return `<section class="card-sec"><h3>الشواهد على أرضه (${fmtInt(list.length)})</h3><p class="sub">ربط مكاني محسوب على حدود المصدر، يُصنَّف كل شاهد بمستواه وسببه، ولا يُعدّ حكماً تاريخياً.</p>` +
+    `<details class="ev-pile"><summary><span class="ev-pile-stack" aria-hidden="true">${stack}</span><span class="ev-pile-label">اضغط لتفريق الشواهد (${fmtInt(list.length)})</span></summary>${rows}</details></section>`;
 }
 
 // ما لا نعرفه: فجوات الكيان في هذه الخريطة. كل فجوة تُقرأ من بيان معروض أصلاً، فلا تُضاف معلومة ولا تُقدَّر
