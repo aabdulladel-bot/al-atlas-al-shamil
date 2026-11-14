@@ -665,7 +665,7 @@ function linkedEvidenceHtml(name, links) {
     `<div class="ev-by">${escapeHtml(c.tier_reason)}</div></article>`).join("");
   // كومة الشواهد: تُعرض مكدّسة، وتتفرّق عند النقر لتقرأ كل بطاقة. لا تُضاف أي معلومة، والعدد من القائمة نفسها
   // البطاقة الأمامية تحمل بداية أول شاهد، والخلفيتان بطاقتان فارغتان تعطيان العمق
-  const front = `<span class="ev-pile-card ev-pile-front" style="--i:0"><span class="ev-pile-text">${escapeHtml(list[0].statement.slice(0, 96))}${list[0].statement.length > 96 ? "…" : ""}</span></span>`;
+  const front = `<span class="ev-pile-card ev-pile-front ${TIER_CLASS[list[0].tier] ?? ""}" style="--i:0"><span class="ev-pile-text">${escapeHtml(list[0].statement.slice(0, 96))}${list[0].statement.length > 96 ? "…" : ""}</span></span>`;
   const stack = front + list.slice(1, 3).map((_, i) => `<span class="ev-pile-card" style="--i:${i + 1}"></span>`).join("");
   return `<section class="card-sec"><h3>الشواهد على أرضه (${fmtInt(list.length)})</h3><p class="sub">ربط مكاني محسوب على حدود المصدر، يُصنَّف كل شاهد بمستواه وسببه، ولا يُعدّ حكماً تاريخياً.</p>` +
     `<details class="ev-pile"><summary><span class="ev-pile-stack" aria-hidden="true">${stack}</span><span class="ev-pile-label">اضغط لتفريق الشواهد (${fmtInt(list.length)})</span></summary>${rows}</details></section>`;
