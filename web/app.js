@@ -662,8 +662,10 @@ function pileTally(list) {
   for (const c of list) counts[c.tier] = (counts[c.tier] ?? 0) + 1;
   return Object.entries(counts).map(([t, n]) => `<span class="chip ${TIER_CLASS[t] ?? ""}">${escapeHtml(t)} ${fmtInt(n)}</span>`).join("");
 }
+// ترتيب الكومة: الأعلى مستوى أولاً (متحقق، ثم قريب من الحد، ثم شعب، ثم محل خلاف، ثم غير متحقق). ترتيب عرض فقط
+const TIER_RANK = { "متحقق": 0, "قريب من الحد": 1, "شعب": 2, "محل خلاف": 3, "غير متحقق": 4 };
 function linkedEvidenceHtml(name, links) {
-  const list = links?.[name] ?? [];
+  const list = [...(links?.[name] ?? [])].sort((a, b) => (TIER_RANK[a.tier] ?? 9) - (TIER_RANK[b.tier] ?? 9));
   if (!list.length) return `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">لا شاهد موثّقاً يقع على أرضه في هذه الخريطة بعد.</p></section>`;
   const rows = list.map((c, j) => `<article class="ev-card" style="--i:${j}"><div class="ev-st">${escapeHtml(c.statement)}</div>` +
     `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi> · <bdi>${escapeHtml(c.place_ar)}</bdi>${c.place_note ? ` (${escapeHtml(c.place_note)})` : ""}</div>` +
