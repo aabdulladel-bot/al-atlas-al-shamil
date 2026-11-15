@@ -322,6 +322,29 @@ try {
     await page.click('#journey-box button[data-act="exit"]');
     await page.waitForTimeout(300);
     if (!(await page.$eval("#journey-box", (b) => b.hidden))) problems.push(`[${name}] صندوق الرحلة لم يُغلق`);
+    // كل الرحلات: تُجتاز كل واحدة حتى آخرها، ويُقارَن عدد الخطوات المارّة بعدد خطوات ملف الفهرس
+    {
+      const expected = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, "web", "data", "journeys", "index.json"), "utf8")).map((j) => [j.id, j.steps]));
+      const ids = await page.$$eval("#journey-list button", (bs) => bs.map((b) => b.dataset.journey));
+      let walkedOk = 0;
+      for (const id of ids) {
+        await page.click(`#journey-list button[data-journey="${id}"]`);
+        await page.waitForSelector('#journey-box button[data-act="next"]', { timeout: 15000 });
+        await settle();
+        let n = 1;
+        while (await page.$eval('#journey-box button[data-act="next"]', (b) => !b.disabled)) {
+          await page.click('#journey-box button[data-act="next"]');
+          await settle();
+          n++;
+        }
+        if (n === expected[id]) walkedOk++;
+        else problems.push(`[${name}] رحلة ${id}: مرّ بـ${n} خطوات والمتوقع ${expected[id]}`);
+        await page.click('#journey-box button[data-act="exit"]');
+        await page.waitForTimeout(300);
+      }
+      counts.journeysWalked = walkedOk;
+      counts.journeysTotal = ids.length;
+    }
     // لكل سُنّة رحلة، وزرّها في تفاصيل السُّنّة يبدؤها
     counts.journeys = await page.$$eval("#journey-list button", (b) => b.length);
     await page.evaluate(() => { clearSunna(); document.getElementById("sunan-list").closest("details").open = true; });
