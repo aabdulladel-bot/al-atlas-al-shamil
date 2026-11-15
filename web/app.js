@@ -668,7 +668,8 @@ function linkedEvidenceHtml(name, links) {
   const list = [...(links?.[name] ?? [])].sort((a, b) => (TIER_RANK[a.tier] ?? 9) - (TIER_RANK[b.tier] ?? 9));
   if (!list.length) return `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">لا شاهد موثّقاً يقع على أرضه في هذه الخريطة بعد.</p></section>`;
   const rows = list.map((c, j) => `<article class="ev-card" style="--i:${j}"><div class="ev-st">${escapeHtml(c.statement)}</div>` +
-    `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi> · <bdi>${escapeHtml(c.place_ar)}</bdi>${c.place_note ? ` (${escapeHtml(c.place_note)})` : ""}</div>` +
+    `<div class="ev-by"><bdi dir="auto">— ${escapeHtml(c.attributed_to)}</bdi></div>` +
+    `<div class="ev-by"><bdi dir="auto">${escapeHtml(c.place_ar)}</bdi>${c.place_note ? ` (${escapeHtml(c.place_note)})` : ""}</div>` +
     `<div class="chips">${chip(c.tier, TIER_CLASS[c.tier] ?? "")}${c.sunan.map((s) => chip(s)).join("")}</div>` +
     `<div class="ev-by">${escapeHtml(c.tier_reason)}</div></article>`).join("");
   // كومة الشواهد: تُعرض مكدّسة، وتتفرّق عند النقر لتقرأ كل بطاقة. لا تُضاف أي معلومة، والعدد من القائمة نفسها
