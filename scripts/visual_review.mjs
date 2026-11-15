@@ -57,8 +57,8 @@ try {
   {
     const p = await open({ width: 390, height: 844 }, "journey");
     await p.evaluate(() => { document.getElementById("journey-panel").open = true; });
-    await p.waitForSelector('#journey-list button[data-journey="trade"]', { timeout: 15000 });
-    await p.click('#journey-list button[data-journey="trade"]');
+    await p.waitForSelector('#journey-list button[data-journey="trade"]', { state: "attached", timeout: 15000 });
+    await p.click('#journey-list button[data-journey="trade"]', { force: true });
     await p.waitForSelector('#journey-box button[data-act="next"]', { timeout: 15000 });
     await p.waitForTimeout(1500);
     for (let i = 0; i < 4; i++) { await p.click('#journey-box button[data-act="next"]'); await p.waitForTimeout(900); }
