@@ -36,6 +36,24 @@
     "steps": 8
   },
   {
+    "id": "state_market",
+    "title": "رحلة: الدولة والسوق الأعظم",
+    "sunna": "sn_state_market",
+    "steps": 3
+  },
+  {
+    "id": "sultan_trade",
+    "title": "رحلة: تجارة السلطان",
+    "sunna": "sn_sultan_trade",
+    "steps": 4
+  },
+  {
+    "id": "taxation",
+    "title": "رحلة: الجباية وكثرة الجملة",
+    "sunna": "sn_taxation",
+    "steps": 5
+  },
+  {
     "id": "trade",
     "title": "رحلة: التجارة ومراكزها",
     "sunna": "sn_trade",
