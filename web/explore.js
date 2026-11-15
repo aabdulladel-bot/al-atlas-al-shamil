@@ -17,7 +17,8 @@ const STEM_PRE = ["وال", "بال", "فال", "كال", "لل", "ال"];
 const STEM_SUF = ["يون", "يين", "يات", "ون", "ين", "ات", "يه", "ه", "ي"];
 function stem(w) {
   for (const p of STEM_PRE) if (w.startsWith(p) && w.length - p.length >= 3) { w = w.slice(p.length); break; }
-  for (const x of STEM_SUF) if (w.endsWith(x) && w.length - x.length >= 3) { w = w.slice(0, -x.length); break; }
+  // اللواحق القصيرة (ي وه) لا تُنزع إلا إن بقي جذر من أربعة أحرف، فلا يتطابق «المال» مع «مالي» (الدولة)
+  for (const x of STEM_SUF) if (w.endsWith(x) && w.length - x.length >= (x.length === 1 ? 4 : 3)) { w = w.slice(0, -x.length); break; }
   return w;
 }
 const stems = (t) => t.split(" ").filter(Boolean).map(stem);
@@ -246,7 +247,8 @@ function score(it, toks) {
     const t = toks[i];
     const st = qs[i];
     if (ps.some((w) => w === st)) s += 3.5;
-    else if (p.startsWith(t) || ps.some((w) => w.startsWith(st))) s += 3;
+    // البادئة على الجذر لا تُقبل إن كان الجذر ثلاثة أحرف فأقل، فلا يطابق «المال» مع «مالي» أو «مالين»
+    else if (p.startsWith(t) || ps.some((w) => w.startsWith(st) && st.length >= 4)) s += 3;
     else if (p.includes(t)) s += 0.4; // داخل كلمة لا في أولها: «شام» داخل «تشامبا» تطابق ضعيف
     else if (rs.some((ws) => ws.some((w) => w === st))) s += 1.4;
     else if (rs.some((ws) => ws.some((w) => w.startsWith(st))) || rest.some((r) => r.includes(t))) s += 0.6;
@@ -256,6 +258,15 @@ function score(it, toks) {
   const at = it.coords ?? (it.x != null ? [it.x, it.y] : null);
   const boost = activeRegion && at && inBox(activeRegion.bbox, at[0], at[1]) ? 1.5 : 0;
   return s + it.weight / 10 + boost;
+}
+// للاستعلام المتعدد: مجموع ما يطابق من الكلمات فقط، ولا يُقبل إن لم يطابق شيء، وبوزن أدنى
+function looseScore(it, toks) {
+  let s = 0;
+  for (const t of toks) {
+    const one = score(it, [t]);
+    if (one > 0) s += one;
+  }
+  return s > 0 ? s * 0.6 : 0;
 }
 // ---------- الأوامر: تُكتب في خانة البحث نفسها، وتظهر وحدها بعد «>» ----------
 // تُبنى عند كل بحث لأن عنوان بعضها يتبع الحالة الراهنة (إظهار أو إخفاء). وكل أمر يمرّ بالأداة التي يستعملها القارئ بيده.
@@ -306,7 +317,11 @@ async function search(q) {
   if (!toks.length || norm(q).length < 2) return [];
   const items = await buildIndex();
   // إن وُجد تطابق قوي (في الأول أو في الكلمة كلها) تُحذف المطابقات الداخلية الضعيفة، فلا تزاحمه
-  const raw = items.map((it) => [score(it, toks), it]).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]);
+  let raw = items.map((it) => [score(it, toks), it]).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]);
+  // استعلام متعدد الكلمات لا تطابق كل كلماته (مثل «طريق الحرير») يُقبل إن طابق بعض كلماته، بوزن أدنى
+  if (!raw.length && toks.length > 1) {
+    raw = items.map((it) => [looseScore(it, toks), it]).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]);
+  }
   const floor = raw.length && raw[0][0] >= 3 ? 1 : 0;
   const scored = raw.filter(([s]) => s >= floor);
   const byType = new Map();
