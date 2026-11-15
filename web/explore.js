@@ -247,7 +247,7 @@ function score(it, toks) {
     const st = qs[i];
     if (ps.some((w) => w === st)) s += 3.5;
     else if (p.startsWith(t) || ps.some((w) => w.startsWith(st))) s += 3;
-    else if (p.includes(t)) s += 1.5;
+    else if (p.includes(t)) s += 0.4; // داخل كلمة لا في أولها: «شام» داخل «تشامبا» تطابق ضعيف
     else if (rs.some((ws) => ws.some((w) => w === st))) s += 1.4;
     else if (rs.some((ws) => ws.some((w) => w.startsWith(st))) || rest.some((r) => r.includes(t))) s += 0.6;
     else return 0;
@@ -305,7 +305,10 @@ async function search(q) {
   const toks = core.length ? core : all;
   if (!toks.length || norm(q).length < 2) return [];
   const items = await buildIndex();
-  const scored = items.map((it) => [score(it, toks), it]).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]);
+  // إن وُجد تطابق قوي (في الأول أو في الكلمة كلها) تُحذف المطابقات الداخلية الضعيفة، فلا تزاحمه
+  const raw = items.map((it) => [score(it, toks), it]).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]);
+  const floor = raw.length && raw[0][0] >= 3 ? 1 : 0;
+  const scored = raw.filter(([s]) => s >= floor);
   const byType = new Map();
   for (const [, it] of scored) {
     const list = byType.get(it.type) ?? [];

@@ -44,7 +44,8 @@
     "build:observatory": "python3 -I scripts/build_observatory.py",
     "build:khaldun": "python3 -I scripts/build_khaldun.py",
     "build:khaldun-sensitivity": "python3 -I scripts/build_khaldun_sensitivity.py",
-    "build:dossier": "python3 -I scripts/build_dossier.py"
+    "build:dossier": "python3 -I scripts/build_dossier.py",
+    "check:search": "node scripts/search_golden.mjs"
   },
   "keywords": [],
   "author": "",
