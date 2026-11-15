@@ -243,7 +243,9 @@
     .ev-card:last-child { border-bottom: 0; }
     .ev-st { font-weight: 600; }
     .ev-q { margin: 6px 0; padding: 4px 10px; border-inline-start: 3px solid var(--evidence); font-family: "Amiri", Georgia, serif; font-size: 14px; color: var(--ink); background: color-mix(in srgb, var(--evidence) 6%, transparent); border-radius: 0 6px 6px 0; }
-    .ev-by { font-size: 12px; color: var(--muted); }
+    .ev-by { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; min-width: 0; }
+    .ev-pile, .ev-pile .ev-card, .ev-card { min-width: 0; max-width: 100%; }
+    .ev-by bdi { display: inline-block; max-width: 100%; overflow-wrap: anywhere; vertical-align: top; }
     .ev-hedge { font-size: 12px; color: var(--limit); margin-top: 2px; }
     .ev-card .chips { margin-top: 6px; }
     /* كومة الشواهد: مكدّسة، تتفرّق عند الفتح */
