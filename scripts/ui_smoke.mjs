@@ -49,7 +49,7 @@ async function visualCheck(browser, name, viewport) {
   await page.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
   await page.route(/fonts\.(googleapis|gstatic)\.com/, (route) => route.fulfill({ status: 200, contentType: "text/css", body: "" }));
   await page.goto(URL, { waitUntil: "networkidle" });
-  await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 60000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
+  await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 3000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
   await page.waitForFunction(() => typeof time !== "undefined" && time.key === 1200 && document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 90000 });
   const settle = async () => { await page.evaluate(() => window.__settle()); await page.waitForTimeout(400); await page.evaluate(() => window.__settle()); };
   await page.evaluate(() => { terrainState.on = false; applyTerrain(); });
@@ -122,7 +122,7 @@ try {
     // انتظار سكون الخريطة (انتهاء الحركة وتحميل البلاطات) بعد كل نقرة، كما ينتظر القارئ، بدل مهلة ثابتة:
     // في العرض البرمجي تستغرق أُولى إطارات التضاريس في منطقة جديدة ثوانيَ، فكانت النقرة التالية تقع وسطها.
     // map معرّفة في نطاق الصفحة لا في window، فتُعرَّف دالة الانتظار بوسم سكربت.
-    await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 60000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
+    await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 3000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
     const settle = () => page.evaluate(() => window.__settle());
     // التضاريس تُطفأ لبقية الفحوص (غايتها أخطاء الواجهة لا سرعة الرسم البرمجي)، وتُختبر وحدها في خطوة لوحة الطبقات
     await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 60000 });
