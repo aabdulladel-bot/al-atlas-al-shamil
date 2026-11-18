@@ -127,10 +127,11 @@ maplibregl.addProtocol("dem0", async (params, abortController) => {
   return { data: await (await canvas.convertToBlob({ type: "image/png" })).arrayBuffer() };
 });
 const DEM_ATTRIBUTION = "التضاريس: Terrain Tiles (USGS 3DEP/SRTM/GMTED2010، NOAA ETOPO1، Copernicus EU-DEM، وغيرها)";
-// صور الأقمار الصناعية: NASA Blue Marble: Next Generation (مركّب صور MODIS الحقيقية، 500 م للبكسل) من خدمة NASA GIBS،
-// ملك عام. تُجلب وقت العرض حتى المستوى 8، وبعده تُكبَّر البلاطات.
-const SAT_TILES = PACKS?.sat ? "pack://sat/{z}/{x}/{y}" : "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg";
-const SAT_ATTRIBUTION = "صور الأقمار الصناعية: NASA Blue Marble: Next Generation (Reto Stöckli، NASA Earth Observatory) عبر NASA GIBS";
+// صور الأقمار الصناعية: NASA Blue Marble مع تظليل التضاريس وأعماق المحيطات (Shaded Relief and Bathymetry)
+// من خدمة NASA GIBS، ملك عام. أساسها مركّب Blue Marble: Next Generation (MODIS، 500 م للبكسل)، وتُظهر قاع البحر
+// وسلاسل الجبال كما في الأطالس المرئية. تُجلب وقت العرض حتى المستوى 8، وبعده تُكبَّر البلاطات.
+const SAT_TILES = PACKS?.sat ? "pack://sat/{z}/{x}/{y}" : "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg";
+const SAT_ATTRIBUTION = "صور الأقمار الصناعية: NASA Blue Marble مع تظليل التضاريس وأعماق المحيطات (Reto Stöckli، NASA Earth Observatory) عبر NASA GIBS";
 // أضواء الليل: مركّب NASA Black Marble لسنة 2016 (VIIRS)، ملك عام. صورة حديثة للعمران، فلا تُعرض إلا عند محطتي 2010 واليوم
 const LIGHTS_TILES = PACKS?.lights ? "pack://lights/{z}/{x}/{y}" : "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2016-01-01/GoogleMapsCompatible_Level8/{z}/{y}/{x}.png";
 const LIGHTS_ATTRIBUTION = "أضواء الليل: NASA Black Marble 2016 (VIIRS، Suomi NPP) عبر NASA GIBS";
