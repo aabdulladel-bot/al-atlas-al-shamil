@@ -28,11 +28,14 @@ async function startJourney(id) {
   journeyState = { journey, index: 0 };
   if (typeof passportNote === "function") passportNote("journey", id);
   for (const b of journeyListEl.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.journey === id));
+  // العرض السينمائي هو الافتراضي (web/cinema.js)، ووضع القراءة لمن اختاره آخر مرة
+  if (typeof cinemaStart === "function" && cinemaPreferred()) return cinemaStart();
   journeyBox.hidden = false;
   await showJourneyStep();
 }
 
 function endJourney() {
+  if (typeof cinemaStop === "function") cinemaStop();
   journeyToken++;
   journeyState = null;
   journeyBox.hidden = true;
@@ -71,7 +74,7 @@ function renderJourneyBox(journey, st, index) {
   const total = journey.steps.length;
   const num = (n) => n.toLocaleString("ar");
   journeyBox.innerHTML = `
-    <div class="jb-head"><span class="jb-count">${num(index + 1)} من ${num(total)}</span><button type="button" data-act="exit">إنهاء</button></div>
+    <div class="jb-head"><span class="jb-count">${num(index + 1)} من ${num(total)}</span><span class="jb-acts"><button type="button" data-act="cinema" title="العرض السينمائي: الخريطة كاملة والنص مقاطع متتابعة">▶ عرض</button><button type="button" data-act="exit">إنهاء</button></span></div>
     <h2 class="jb-title">${escapeHtml(st.title)}</h2>
     <p class="jb-frame">${escapeHtml(st.frame)}</p>
     <div class="jb-items">${st.items.map(journeyItemHtml).join("")}</div>
@@ -96,6 +99,7 @@ journeyBox.addEventListener("click", (e) => {
   const act = e.target.closest("button")?.dataset.act;
   if (!act || !journeyState) return;
   if (act === "exit") return endJourney();
+  if (act === "cinema") return cinemaStart();
   const next = journeyState.index + (act === "next" ? 1 : -1);
   if (next < 0 || next >= journeyState.journey.steps.length) return;
   journeyState.index = next;
@@ -103,7 +107,7 @@ journeyBox.addEventListener("click", (e) => {
 });
 
 document.addEventListener("keydown", (e) => {
-  if (!journeyState || e.target.closest("input, select, textarea")) return;
+  if (!journeyState || document.body.classList.contains("cinema") || e.target.closest("input, select, textarea")) return;
   if (e.key === "Escape") return endJourney();
   // اتجاه الصفحة عربي: السهم الأيسر يتقدّم
   if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;

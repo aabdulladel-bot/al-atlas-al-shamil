@@ -20,7 +20,7 @@ const DEM_LEVELS = { 0: "global", 1: "global", 2: "global", 3: "global", 4: [-20
 const MAX_FILE = 16 * 1024 * 1024;
 const CHUNK_RAW = Math.floor((MAX_FILE * 3) / 4) - 65536; // ما يتّسع له ملف واحد قبل الترميز
 const UA = "al-atlas-al-shamil/1.0 (artifact bundle)";
-const SAT_URL = (z, x, y) => `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/${z}/${y}/${x}.jpeg`;
+const SAT_URL = (z, x, y) => `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/${z}/${y}/${x}.jpeg`;
 const DEM_URL = (z, x, y) => `https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${z}/${x}/${y}.png`;
 const LIGHTS_URL = (z, x, y) => `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2016-01-01/GoogleMapsCompatible_Level8/${z}/${y}/${x}.png`;
 // أضواء الليل (NASA Black Marble 2016): العالم حتى 4 والإقليم في 5، وتُحوَّل PNG إلى JPEG لأن أكثرها سواد
