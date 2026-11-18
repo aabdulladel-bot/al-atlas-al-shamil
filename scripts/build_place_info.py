@@ -143,7 +143,15 @@ def build():
         w = wiki.get(p["name_en"], {}) if p["name_en"] else {}
         per_place[p["id"]] = w.get("qid")
     need = [p for p in places if p["name_en"] and (wiki.get(p["name_en"], {}).get("disambig") or wiki.get(p["name_en"], {}).get("missing"))]
-    cands = {p["name_en"]: search_candidates(p["name_en"]) for p in need}
+    cands = {}
+    for p in need:
+        # فشل البحث في موضع لا يوقف الباقي؛ يبقى ذلك الموضع بسببه الأصلي ويُعاد تشغيل البناء لاحقاً
+        try:
+            cands[p["name_en"]] = search_candidates(p["name_en"])
+        except RuntimeError as e:
+            cands[p["name_en"]] = []
+            print(f"تعذّر البحث عن {p['name_en']}: {str(e)[-60:]}", flush=True)
+        time.sleep(8)
     cand_ents = wd_entities({q for qs in cands.values() for q in qs})
     for p in need:
         tol = TOL_KM.get(p["coord_status"], DEFAULT_TOL)
