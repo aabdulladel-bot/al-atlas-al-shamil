@@ -381,9 +381,10 @@ async function runStep() {
     for (const f of places) {
       const pin = pinEl(f.properties.name_ar, places.length < 4 ? era : "");
       addMarker(pin, f.geometry.coordinates);
-      // التسمية يمين النقطة كما في الخرائط المرئية، وتنتقل إلى يسارها إن قاربت حافة الشاشة
-      if (map.project(f.geometry.coordinates).x > window.innerWidth * 0.62) pin.classList.add("flip");
-      if (st.kind === "limits") addMarker(crossEl(), f.geometry.coordinates);
+      // التسمية تقع في الجهة الأوسع من الشاشة، فلا تُقصّ عند الحافة (كانت تُقصّ قرب الحافة اليسرى)
+      if (map.project(f.geometry.coordinates).x > window.innerWidth / 2) pin.classList.add("flip");
+      // على خطوة القيد تبتعد التسمية عن علامة ✕ التي تغطي النقطة (نصف عرضها 32 بكسل)
+      if (st.kind === "limits") { pin.classList.add("beside-cross"); addMarker(crossEl(), f.geometry.coordinates); }
     }
     if (anchor && st.kind === "evidence") {
       const region = await regionAt(st.border, places[0].geometry.coordinates);
