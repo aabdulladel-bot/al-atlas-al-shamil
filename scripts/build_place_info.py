@@ -173,7 +173,7 @@ def build():
     counts = {"verified": 0, "unverified": 0}
     for p in places:
         w = wiki.get(p["name_en"], {}) if p["name_en"] else {}
-        rec = {"era": p["era"]}
+        rec = {}  # السجل للموضع نفسه، والموضع قد يتكرر في أكثر من حقبة بالمعرّف نفسه
         reason = None
         qid = per_place.get(p["id"])
         ent = ents.get(qid) if qid else None
@@ -210,10 +210,10 @@ def build():
                     })
         if reason:
             rec.update({"status": "unverified", "reason": reason})
-            counts["unverified"] += 1
-        else:
-            counts["verified"] += 1
         records[p["id"]] = rec
+    # العدّ للمواضع الفريدة لا لظهورها في الحقب
+    for rec in records.values():
+        counts[rec["status"]] += 1
     return {
         "_meta": {
             "source": "Wikidata (CC0)، المقالات الإنجليزية للإحالة فقط، ويُتحقق من كل ربط بالإحداثيات",

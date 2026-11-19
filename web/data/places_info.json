@@ -1,0 +1,8147 @@
+{
+ "_meta": {
+  "source": "Wikidata (CC0)، المقالات الإنجليزية للإحالة فقط، ويُتحقق من كل ربط بالإحداثيات",
+  "note": "الوصف والنوع والتواريخ كما في ويكي بيانات، لا من الأطلس. الموضع الذي لم يُربط يُعرض بلا وصف مع سببه.",
+  "counts": {
+   "verified": 279,
+   "unverified": 4
+  }
+ },
+ "places": {
+  "babylon": {
+   "qid": "Q5684",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بابل",
+   "en": "Babylon",
+   "desc_ar": "إحْدَى مُدُن الْعَالَمِ الْقَدِيم",
+   "desc_en": "capital city of Babylonia and an archaeological site in modern-day Iraq",
+   "types": [
+    {
+     "id": "Q133442",
+     "ar": "دولة مدينة",
+     "en": "city-state"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": -1894,
+   "end": null,
+   "arwiki": "بابل",
+   "enwiki": "Babylon",
+   "linked_by": "article"
+  },
+  "nippur": {
+   "qid": "Q188395",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "نفر",
+   "en": "Nippur",
+   "desc_ar": "مستوطنة في العراق",
+   "desc_en": "ancient city in modern day Iraq",
+   "types": [
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "نفر",
+   "enwiki": "Nippur",
+   "linked_by": "article"
+  },
+  "ur": {
+   "qid": "Q5699",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "أور",
+   "en": "Ur",
+   "desc_ar": "موقع أثري جنوب العراق",
+   "desc_en": "ancient Mesopotamian city-state",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": -3800,
+   "end": -500,
+   "arwiki": "أور",
+   "enwiki": "Ur",
+   "linked_by": "article"
+  },
+  "uruk": {
+   "qid": "Q168518",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "الوركاء",
+   "en": "Uruk",
+   "desc_ar": "منطقة أثرية في جنوب العراق",
+   "desc_en": "ancient city of Sumer and Babylonia",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q3247173",
+     "ar": "موقع نموذجي",
+     "en": "type site"
+    }
+   ],
+   "start": -3200,
+   "end": null,
+   "arwiki": "الوركاء",
+   "enwiki": "Uruk",
+   "linked_by": "article"
+  },
+  "sippar": {
+   "qid": "Q619707",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "سيبار",
+   "en": "Sippar",
+   "desc_ar": "بلدة أثرية في وسط العراق",
+   "desc_en": "archaeological site in Iraq",
+   "types": [
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "سيبار",
+   "enwiki": "Sippar",
+   "linked_by": "article"
+  },
+  "mari": {
+   "status": "unverified",
+   "reason": "عنوان المقالة صفحة توضيح، ولم يتطابق أي مرشح من ويكي بيانات مع الإحداثيات"
+  },
+  "memphis": {
+   "qid": "Q5715",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "منف",
+   "en": "Memphis",
+   "desc_ar": "مدينة مصرية",
+   "desc_en": "ancient capital of Egypt",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q125866553",
+     "ar": "موقع آثار مصرية قديم",
+     "en": "Ancient Egyptian archaeological site"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "منف",
+   "enwiki": "Memphis",
+   "linked_by": "search"
+  },
+  "thebes": {
+   "status": "unverified",
+   "reason": "لا مقالة إنجليزية بمعرّف ويكي بيانات"
+  },
+  "tyre": {
+   "qid": "Q82070",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "صور",
+   "en": "Tyre",
+   "desc_ar": "مدينة لبنانية",
+   "desc_en": "city in the South Governorate of Lebanon, also an ancient Phoenician city and the legendary birthplace of Europa and Elissa (Dido)",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q23828039",
+     "ar": "قرية أو بلدة أو مدينة في لبنان",
+     "en": "village/town/city in Lebanon"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": -2750,
+   "end": null,
+   "arwiki": "صور (لبنان)",
+   "enwiki": "Tyre",
+   "linked_by": "search"
+  },
+  "sidon": {
+   "qid": "Q163490",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "صيدا",
+   "en": "Sidon",
+   "desc_ar": "مدينة في لبنان",
+   "desc_en": "capital city of South Governorate, Lebanon",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "صيدا",
+   "enwiki": "Sidon",
+   "linked_by": "article"
+  },
+  "byblos": {
+   "qid": "Q173532",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "جبيل",
+   "en": "Byblos",
+   "desc_ar": "مستوطنة في لبنان",
+   "desc_en": "Mediterranean city in the Mount Lebanon Governorate, Lebanon, a main Canaanite-Phoenician city",
+   "types": [
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "جبيل",
+   "enwiki": "Byblos",
+   "linked_by": "article"
+  },
+  "ugarit": {
+   "qid": "Q191369",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "أوغاريت",
+   "en": "Ugarit",
+   "desc_ar": "موقع أثري في محافظة اللاذقية، سوريا",
+   "desc_en": "ancient port city in northern Syria",
+   "types": [
+    {
+     "id": "Q133442",
+     "ar": "دولة مدينة",
+     "en": "city-state"
+    },
+    {
+     "id": "Q3024240",
+     "ar": "بلد سابق",
+     "en": "historical country"
+    },
+    {
+     "id": "Q3241965",
+     "ar": "دولة خاضعة",
+     "en": "tributary state"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "أوغاريت",
+   "enwiki": "Ugarit",
+   "linked_by": "article"
+  },
+  "jerusalem": {
+   "qid": "Q1218",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "القدس",
+   "en": "Jerusalem",
+   "desc_ar": "مدينة في الشرق الأوسط، مقدسة لدى الديانات الإبراهيمية الثلاث",
+   "desc_en": "city in the Middle East, holy to the three Abrahamic religions",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q116291627",
+     "ar": null,
+     "en": "holy city of Abrahamic religion"
+    },
+    {
+     "id": "Q1200957",
+     "ar": "مقصد سياحي",
+     "en": "tourist destination"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "القدس",
+   "enwiki": "Jerusalem",
+   "linked_by": "article"
+  },
+  "megiddo": {
+   "qid": "Q208379",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "مجدو",
+   "en": "Tel Megiddo",
+   "desc_ar": "موقع أثري في إسرائيل يعود تاريخه إلى الألف الثالثة قبل الميلاد",
+   "desc_en": "site of an ancient city in northern Israel's Jezreel valley",
+   "types": [
+    {
+     "id": "Q755017",
+     "ar": "تل",
+     "en": "tell"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": -7000,
+   "end": -586,
+   "arwiki": "مجيدو",
+   "enwiki": "Megiddo",
+   "linked_by": "search"
+  },
+  "kition": {
+   "qid": "Q1743884",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "كتيون",
+   "en": "Kition",
+   "desc_ar": "مدينة فينيقية قديمة في قبرص",
+   "desc_en": "ancient Phoenician city and kingdom in Cyprus",
+   "types": [
+    {
+     "id": "Q3024240",
+     "ar": "بلد سابق",
+     "en": "historical country"
+    },
+    {
+     "id": "Q148837",
+     "ar": "بوليس",
+     "en": "polis"
+    },
+    {
+     "id": "Q2561694",
+     "ar": null,
+     "en": "City-kingdom of Cyprus"
+    }
+   ],
+   "start": -450,
+   "end": -312,
+   "arwiki": "كتيون",
+   "enwiki": "Kition",
+   "linked_by": "article"
+  },
+  "carthage": {
+   "qid": "Q6343",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "قرطاج",
+   "en": "Carthage",
+   "desc_ar": "عاصمة جمهورية قرطاج التاريخية",
+   "desc_en": "historical city in Tunisia",
+   "types": [
+    {
+     "id": "Q133442",
+     "ar": "دولة مدينة",
+     "en": "city-state"
+    },
+    {
+     "id": "Q655593",
+     "ar": "سوق",
+     "en": "emporium"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": null,
+   "end": -146,
+   "arwiki": "قرطاج",
+   "enwiki": "Carthage",
+   "linked_by": "article"
+  },
+  "nineveh": {
+   "qid": "Q5680",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "نينوى",
+   "en": "Nineveh",
+   "desc_ar": "مدينة أثرية في العراق",
+   "desc_en": "ancient Assyrian city, capital of the Neo-Assyrian Empire",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q755017",
+     "ar": "تل",
+     "en": "tell"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": null,
+   "end": -612,
+   "arwiki": "نينوى",
+   "enwiki": "Nineveh",
+   "linked_by": "article"
+  },
+  "ashur": {
+   "qid": "Q200200",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "آشور",
+   "en": "Assur",
+   "desc_ar": "بلدة في شمال العراق",
+   "desc_en": "archaeological site in Iraq, former capital of Assyria",
+   "types": [
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": -2500,
+   "end": null,
+   "arwiki": "آشور (مدينة)",
+   "enwiki": "Ashur",
+   "linked_by": "search"
+  },
+  "nimrud": {
+   "qid": "Q237614",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "كالح",
+   "en": "Nimrud",
+   "desc_ar": "موقع أثري في محافظة نينوى، العراق",
+   "desc_en": "ancient Assyrian city",
+   "types": [
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": null,
+   "end": -612,
+   "arwiki": "كالح",
+   "enwiki": "Nimrud",
+   "linked_by": "article"
+  },
+  "hattusa": {
+   "qid": "Q181007",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "حتوساس",
+   "en": "Hattusa",
+   "desc_ar": "موقع أثري في بوغاز كوي، تركيا",
+   "desc_en": "capital of Hittite empire",
+   "types": [
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": null,
+   "end": -1200,
+   "arwiki": "خاتوشا",
+   "enwiki": "Hattusa",
+   "linked_by": "article"
+  },
+  "gordion": {
+   "qid": "Q542854",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "غورديوم",
+   "en": "Gordion",
+   "desc_ar": "موقع أثري في أنقرة، تركيا",
+   "desc_en": "capital city of ancient Phrygia",
+   "types": [
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "غورديوم",
+   "enwiki": "Gordion",
+   "linked_by": "article"
+  },
+  "sardis": {
+   "qid": "Q232615",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "سارد",
+   "en": "Sardis",
+   "desc_ar": "موقع أثري في مانيسا، تركيا",
+   "desc_en": "ancient city in Anatolia, today an archaeological site at Sart, Turkey",
+   "types": [
+    {
+     "id": "Q3257686",
+     "ar": "محلية",
+     "en": "locality"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "سارد",
+   "enwiki": "Sardis",
+   "linked_by": "article"
+  },
+  "miletus": {
+   "qid": "Q169460",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "ملطية",
+   "en": "Miletus",
+   "desc_ar": "مدينة إغريقية في تركيا حاليًا",
+   "desc_en": "ancient city of Ionia, in modern-day Turkey",
+   "types": [
+    {
+     "id": "Q148837",
+     "ar": "بوليس",
+     "en": "polis"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "ملطية (مدينة إغريقية)",
+   "enwiki": "Miletus",
+   "linked_by": "article"
+  },
+  "athens": {
+   "qid": "Q1524",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "أثينا",
+   "en": "Athens",
+   "desc_ar": "عاصمة اليونان",
+   "desc_en": "capital and largest city of Greece",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "أثينا",
+   "enwiki": "Athens",
+   "linked_by": "article"
+  },
+  "susa": {
+   "qid": "Q180773",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "شوشان",
+   "en": "Susa",
+   "desc_ar": "مدينة قديمة في إيران",
+   "desc_en": "ancient city in Iran, World Heritage site in Iran",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q2319498",
+     "ar": "معلم",
+     "en": "architectural landmark"
+    }
+   ],
+   "start": -4000,
+   "end": 1218,
+   "arwiki": "شوشان",
+   "enwiki": "Susa",
+   "linked_by": "article"
+  },
+  "ecbatana": {
+   "qid": "Q696193",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "إكباتان",
+   "en": "Ecbatana",
+   "desc_ar": "موقع أثري في مدينة همدان، إيران",
+   "desc_en": "ancient city that was the capital of the Median empire",
+   "types": [
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q3257686",
+     "ar": "محلية",
+     "en": "locality"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "إكباتان",
+   "enwiki": "Ecbatana",
+   "linked_by": "article"
+  },
+  "persepolis": {
+   "qid": "Q129072",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "تخت جمشيد",
+   "en": "Persepolis",
+   "desc_ar": "معلم تاريخي، القصر الأخميني، التراث الوطني الإيراني، موقع تراث عالمي لليونسكو.",
+   "desc_en": "ancient city in Marvdasht County, Iranian national heritage site and World heritage site",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q2065736",
+     "ar": "ملك ثقافي",
+     "en": "cultural property"
+    }
+   ],
+   "start": null,
+   "end": -330,
+   "arwiki": "تخت جمشيد",
+   "enwiki": "Persepolis",
+   "linked_by": "article"
+  },
+  "rome": {
+   "qid": "Q220",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "روما",
+   "en": "Rome",
+   "desc_ar": "عاصمة إيطاليا",
+   "desc_en": "capital and largest city of Italy",
+   "types": [
+    {
+     "id": "Q902814",
+     "ar": "مدينة حدودية",
+     "en": "border city"
+    },
+    {
+     "id": "Q3685476",
+     "ar": null,
+     "en": "abolished municipality in Italy"
+    },
+    {
+     "id": "Q1200957",
+     "ar": "مقصد سياحي",
+     "en": "tourist destination"
+    }
+   ],
+   "start": -753,
+   "end": null,
+   "arwiki": "روما",
+   "enwiki": "Rome",
+   "linked_by": "article"
+  },
+  "syracuse": {
+   "qid": "Q13670",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "سرقوسة",
+   "en": "Syracuse",
+   "desc_ar": "مدينة في جزيرة صقلية الإيطالية",
+   "desc_en": "Italian municipality",
+   "types": [
+    {
+     "id": "Q747074",
+     "ar": "بلدية إيطالية",
+     "en": "comune of Italy"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": -733,
+   "end": null,
+   "arwiki": "سرقوسة",
+   "enwiki": "Syracuse",
+   "linked_by": "search"
+  },
+  "alexandria": {
+   "qid": "Q87",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "الإسكندرية",
+   "en": "Alexandria",
+   "desc_ar": "العاصمة الثانية لمصر وكانت عاصمتها قديمًا",
+   "desc_en": "port city on the Mediterranean coast of Egypt",
+   "types": [
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q15284",
+     "ar": "بلدية",
+     "en": "municipality"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": -331,
+   "end": null,
+   "arwiki": "الإسكندرية",
+   "enwiki": "Alexandria",
+   "linked_by": "article"
+  },
+  "ctesiphon": {
+   "qid": "Q192541",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "قطيسفون",
+   "en": "Ctesiphon",
+   "desc_ar": "وهي عاصمة أمبراطورية الساسانيين وكانت تعرف ساسپايى وتعني عاصمة الساسانيين",
+   "desc_en": "capital of the Iranian empire in the Parthian and Sasanian eras in present Iraq",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": null,
+   "end": 637,
+   "arwiki": "طيسفون",
+   "enwiki": "Ctesiphon",
+   "linked_by": "article"
+  },
+  "palmyra": {
+   "qid": "Q5747",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "تدمر",
+   "en": "Palmyra",
+   "desc_ar": "مدينة أثرية تقع في محافظة حمص السورية",
+   "desc_en": "ancient city in Homs Governorate, Syria",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q109607",
+     "ar": "أطلال",
+     "en": "ruins"
+    },
+    {
+     "id": "Q93342462",
+     "ar": "موقع أثري يوناني قديم",
+     "en": "Ancient Greek archaeological site"
+    }
+   ],
+   "start": null,
+   "end": 1929,
+   "arwiki": "تدمر",
+   "enwiki": "Palmyra",
+   "linked_by": "article"
+  },
+  "petra": {
+   "qid": "Q5788",
+   "status": "verified",
+   "distance_km": 6,
+   "ar": "البتراء",
+   "en": "Petra",
+   "desc_ar": "مدينة أثرية وتاريخية تقع في محافظة معان في جنوب المملكة الأردنية الهاشمية",
+   "desc_en": "ancient rock-cut historical city in Jordan",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": -800,
+   "end": null,
+   "arwiki": "البتراء",
+   "enwiki": "Petra",
+   "linked_by": "article"
+  },
+  "ephesus": {
+   "qid": "Q47611",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "أفسس",
+   "en": "Ephesus",
+   "desc_ar": "مستوطنة في تركيا",
+   "desc_en": "ancient Greek city in Anatolia",
+   "types": [
+    {
+     "id": "Q1708422",
+     "ar": null,
+     "en": "settlement site"
+    },
+    {
+     "id": "Q93342462",
+     "ar": "موقع أثري يوناني قديم",
+     "en": "Ancient Greek archaeological site"
+    },
+    {
+     "id": "Q148837",
+     "ar": "بوليس",
+     "en": "polis"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "أفسس",
+   "enwiki": "Ephesus",
+   "linked_by": "article"
+  },
+  "gades": {
+   "qid": "Q3094251",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": null,
+   "en": "Gades",
+   "desc_ar": null,
+   "desc_en": "Phoenician city, precursor to Cadíz, Spain",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": null,
+   "enwiki": "Gades",
+   "linked_by": "search"
+  },
+  "lepcis": {
+   "qid": "Q191504",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "لبدة الكبرى",
+   "en": "Leptis Magna",
+   "desc_ar": "موقع أثري في الخمس، ليبيا",
+   "desc_en": "ancient city in modern Libya",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q655593",
+     "ar": "سوق",
+     "en": "emporium"
+    }
+   ],
+   "start": null,
+   "end": 637,
+   "arwiki": "لبدة الكبرى",
+   "enwiki": "Leptis Magna",
+   "linked_by": "article"
+  },
+  "londinium": {
+   "qid": "Q927198",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "لندينيوم",
+   "en": "Londinium",
+   "desc_ar": "موقع أثري في بريطانيا الرومانية، روما القديمة",
+   "desc_en": "London during the Roman era",
+   "types": [
+    {
+     "id": "Q2202509",
+     "ar": "مدينة رومانية",
+     "en": "Roman city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "لندينيوم",
+   "enwiki": "Londinium",
+   "linked_by": "article"
+  },
+  "pataliputra": {
+   "qid": "Q389755",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "باتاليبوترا",
+   "en": "Pataliputra",
+   "desc_ar": "مدينة هندية",
+   "desc_en": "ancient Indian city, Emperor Asoka’s classic capital city; present day Patna, the capital city of state of Bihar in India",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": -490,
+   "end": null,
+   "arwiki": null,
+   "enwiki": "Pataliputra",
+   "linked_by": "article"
+  },
+  "taxila": {
+   "qid": "Q156093",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "تاكسيلا",
+   "en": "Taxila",
+   "desc_ar": "مستوطنة في باكستان",
+   "desc_en": "archaeological site of the ancient Indian subcontinent, at Taxila, Punjab, Pakistan",
+   "types": [
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "تاكسيلا",
+   "enwiki": "Taxila",
+   "linked_by": "article"
+  },
+  "marakanda": {
+   "qid": "Q5753",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "سمرقند",
+   "en": "Samarkand",
+   "desc_ar": "ثاني أكبر مدينة في أوزبكستان",
+   "desc_en": "city in southeastern Uzbekistan",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "سمرقند",
+   "enwiki": "Samarkand",
+   "linked_by": "article"
+  },
+  "constantinople": {
+   "qid": "Q16869",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "القسطنطينية",
+   "en": "Constantinople",
+   "desc_ar": "عاصمة الإمبراطورية البيزنطية",
+   "desc_en": "capital of the Eastern Roman, Latin and Ottoman Empires, currently Istanbul, Turkey",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    },
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    }
+   ],
+   "start": 330,
+   "end": 1922,
+   "arwiki": "القسطنطينية",
+   "enwiki": "Constantinople",
+   "linked_by": "article"
+  },
+  "damascus": {
+   "qid": "Q3766",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "دمشق",
+   "en": "Damascus",
+   "desc_ar": "عاصمة سوريا",
+   "desc_en": "capital and largest city of Syria",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q16127605",
+     "ar": "تجمع سكاني في سوريا",
+     "en": "populated place in Syria"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "دمشق",
+   "enwiki": "Damascus",
+   "linked_by": "article"
+  },
+  "ravenna": {
+   "qid": "Q13364",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "ربنة",
+   "en": "Ravenna",
+   "desc_ar": "مدينة إيطالية",
+   "desc_en": "city in northern Italy",
+   "types": [
+    {
+     "id": "Q747074",
+     "ar": "بلدية إيطالية",
+     "en": "comune of Italy"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "ربنة",
+   "enwiki": "Ravenna",
+   "linked_by": "article"
+  },
+  "cordoba": {
+   "qid": "Q5818",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "قرطبة",
+   "en": "Córdoba",
+   "desc_ar": "مدينة في جنوب إسبانيا",
+   "desc_en": "municipality in the province of Córdoba, Spain",
+   "types": [
+    {
+     "id": "Q2074737",
+     "ar": "بلدية في إسبانيا",
+     "en": "municipality of Spain"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "قرطبة",
+   "enwiki": "Córdoba",
+   "linked_by": "search"
+  },
+  "toledo": {
+   "qid": "Q5836",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "طليطلة",
+   "en": "Toledo",
+   "desc_ar": "مدينة في إسبانيا",
+   "desc_en": "municipality in central Spain",
+   "types": [
+    {
+     "id": "Q2074737",
+     "ar": "بلدية في إسبانيا",
+     "en": "municipality of Spain"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "طليطلة",
+   "enwiki": "Toledo",
+   "linked_by": "search"
+  },
+  "edessa": {
+   "qid": "Q1190403",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "الرها",
+   "en": "Edessa",
+   "desc_ar": "موقع أثري في أورفة، تركيا",
+   "desc_en": "ancient city in upper Mesopotamia, modern day Urfa, Southeast Turkey",
+   "types": [
+    {
+     "id": "Q15661340",
+     "ar": "مدينة قديمة",
+     "en": "ancient city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q148837",
+     "ar": "بوليس",
+     "en": "polis"
+    }
+   ],
+   "start": -302,
+   "end": null,
+   "arwiki": "الرها",
+   "enwiki": "Edessa",
+   "linked_by": "article"
+  },
+  "bostra": {
+   "qid": "Q272680",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "بصرى",
+   "en": "Bosra",
+   "desc_ar": "مدينة سورية",
+   "desc_en": "town in Daraa, Syria",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q16127605",
+     "ar": "تجمع سكاني في سوريا",
+     "en": "populated place in Syria"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بصرى",
+   "enwiki": "Bosra",
+   "linked_by": "article"
+  },
+  "baghdad": {
+   "qid": "Q1530",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "بغداد",
+   "en": "Baghdad",
+   "desc_ar": "عاصمة العراق",
+   "desc_en": "capital city of Iraq",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q257391",
+     "ar": "عاصمة فيدرالية",
+     "en": "federal capital"
+    }
+   ],
+   "start": 762,
+   "end": null,
+   "arwiki": "بغداد",
+   "enwiki": "Baghdad",
+   "linked_by": "article"
+  },
+  "basra": {
+   "qid": "Q48195",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "البصرة",
+   "en": "Basra",
+   "desc_ar": "مدينة في جنوب العراق",
+   "desc_en": "capital of Basra Governorate, in southern Iraq",
+   "types": [
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 638,
+   "end": null,
+   "arwiki": "البصرة",
+   "enwiki": "Basra",
+   "linked_by": "article"
+  },
+  "samarra": {
+   "qid": "Q170047",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "سامراء",
+   "en": "Samarra",
+   "desc_ar": "مدينة عراقية",
+   "desc_en": "city in Iraq",
+   "types": [
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "سامراء",
+   "enwiki": "Samarra",
+   "linked_by": "article"
+  },
+  "kairouan": {
+   "qid": "Q179570",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "القيروان",
+   "en": "Kairouan",
+   "desc_ar": "مدينة تونسية",
+   "desc_en": "Tunisian town",
+   "types": [
+    {
+     "id": "Q41067667",
+     "ar": "بلدية في تونس",
+     "en": "municipality of Tunisia"
+    }
+   ],
+   "start": 670,
+   "end": null,
+   "arwiki": "القيروان",
+   "enwiki": "Kairouan",
+   "linked_by": "article"
+  },
+  "fustat": {
+   "qid": "Q839456",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "الفسطاط",
+   "en": "El-Fustat",
+   "desc_ar": "مدينة مصرية",
+   "desc_en": "first capital of Islamic Egypt, in Old Cairo",
+   "types": [
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    },
+    {
+     "id": "Q2983893",
+     "ar": "منطقة حضرية",
+     "en": "quarter"
+    },
+    {
+     "id": "Q839954",
+     "ar": "موقع أثري",
+     "en": "archaeological site"
+    }
+   ],
+   "start": 641,
+   "end": 1168,
+   "arwiki": "الفسطاط",
+   "enwiki": "Fustat",
+   "linked_by": "article"
+  },
+  "kufa": {
+   "qid": "Q186234",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "الكوفة",
+   "en": "Kufa",
+   "desc_ar": "مدينة عراقية",
+   "desc_en": "city in Iraq",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "الكوفة",
+   "enwiki": "Kufa",
+   "linked_by": "article"
+  },
+  "cairo": {
+   "qid": "Q85",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "القاهرة",
+   "en": "Cairo",
+   "desc_ar": "عاصمة مصر",
+   "desc_en": "capital city of Egypt",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 969,
+   "end": null,
+   "arwiki": "القاهرة",
+   "enwiki": "Cairo",
+   "linked_by": "article"
+  },
+  "tunis": {
+   "qid": "Q3572",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "تونس",
+   "en": "Tunis",
+   "desc_ar": "عاصمة الجمهورية التونسية",
+   "desc_en": "capital of Tunisia",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q41067667",
+     "ar": "بلدية في تونس",
+     "en": "municipality of Tunisia"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "تونس (مدينة)",
+   "enwiki": "Tunis",
+   "linked_by": "article"
+  },
+  "fez": {
+   "qid": "Q80985",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "فاس",
+   "en": "Fez",
+   "desc_ar": "مدينة في المغرب",
+   "desc_en": "city in Morocco",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": 789,
+   "end": null,
+   "arwiki": "فاس",
+   "enwiki": "Fez",
+   "linked_by": "search"
+  },
+  "isfahan": {
+   "qid": "Q42053",
+   "status": "verified",
+   "distance_km": 6,
+   "ar": "أصفهان",
+   "en": "Isfahan",
+   "desc_ar": "إحدى مدن إيران ومرکز محافظة أصفهان",
+   "desc_en": "city in Isfahan Province, Iran",
+   "types": [
+    {
+     "id": "Q56557504",
+     "ar": "مدينة إيرانية",
+     "en": "city of Iran"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "أصفهان",
+   "enwiki": "Isfahan",
+   "linked_by": "article"
+  },
+  "samarkand": {
+   "qid": "Q5753",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "سمرقند",
+   "en": "Samarkand",
+   "desc_ar": "ثاني أكبر مدينة في أوزبكستان",
+   "desc_en": "city in southeastern Uzbekistan",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "سمرقند",
+   "enwiki": "Samarkand",
+   "linked_by": "article"
+  },
+  "aleppo": {
+   "qid": "Q41183",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "حلب",
+   "en": "Aleppo",
+   "desc_ar": "مدينة في سوريا",
+   "desc_en": "city in Aleppo Governorate, Syria",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q16127605",
+     "ar": "تجمع سكاني في سوريا",
+     "en": "populated place in Syria"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "حلب",
+   "enwiki": "Aleppo",
+   "linked_by": "article"
+  },
+  "delhi": {
+   "qid": "Q1353",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "دلهي",
+   "en": "Delhi",
+   "desc_ar": "ثاني أكبر مدينة هندية بعد مومباي، تقع بها العاصمة نيو دلهي",
+   "desc_en": "megacity and union territory of India",
+   "types": [
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "دلهي",
+   "enwiki": "Delhi",
+   "linked_by": "article"
+  },
+  "istanbul-turkey": {
+   "qid": "Q406",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "إسطنبول",
+   "en": "Istanbul",
+   "desc_ar": "أكبر مدينة في تركيا",
+   "desc_en": "largest city in Turkey",
+   "types": [
+    {
+     "id": "Q2716259",
+     "ar": "بلدية كبرى في تركيا",
+     "en": "metropolitan municipality in Turkey"
+    },
+    {
+     "id": "Q27554677",
+     "ar": "العاصمة السابقة",
+     "en": "former capital"
+    },
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    }
+   ],
+   "start": 1453,
+   "end": null,
+   "arwiki": "إسطنبول",
+   "enwiki": "Istanbul",
+   "linked_by": "article"
+  },
+  "cairo-egypt": {
+   "qid": "Q85",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "القاهرة",
+   "en": "Cairo",
+   "desc_ar": "عاصمة مصر",
+   "desc_en": "capital city of Egypt",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 969,
+   "end": null,
+   "arwiki": "القاهرة",
+   "enwiki": "Cairo",
+   "linked_by": "article"
+  },
+  "makkah-saudi-arabia": {
+   "qid": "Q5806",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "مكة المكرمة",
+   "en": "Mecca",
+   "desc_ar": "المدينة الأقدس عند المسلمين ومنها نبع الإسلام",
+   "desc_en": "Saudi Arabian city and capital of the Makkah province",
+   "types": [
+    {
+     "id": "Q116291701",
+     "ar": null,
+     "en": "holy city of Islam"
+    },
+    {
+     "id": "Q692581",
+     "ar": "المدن المقدسة",
+     "en": "holy city"
+    },
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "مكة",
+   "enwiki": "Mecca",
+   "linked_by": "article"
+  },
+  "isfahan-iran": {
+   "qid": "Q42053",
+   "status": "verified",
+   "distance_km": 6,
+   "ar": "أصفهان",
+   "en": "Isfahan",
+   "desc_ar": "إحدى مدن إيران ومرکز محافظة أصفهان",
+   "desc_en": "city in Isfahan Province, Iran",
+   "types": [
+    {
+     "id": "Q56557504",
+     "ar": "مدينة إيرانية",
+     "en": "city of Iran"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "أصفهان",
+   "enwiki": "Isfahan",
+   "linked_by": "article"
+  },
+  "bukhara-uzbekistan": {
+   "qid": "Q5764",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بخارى",
+   "en": "Bukhara",
+   "desc_ar": "مدينة في أوزبكستان",
+   "desc_en": "city in Bukhara Province of Uzbekistan",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q163359",
+     "ar": "الوحدة الإدارية المحلية",
+     "en": "local administrative unit in the NUTS system"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بخارى",
+   "enwiki": "Bukhara",
+   "linked_by": "article"
+  },
+  "agra-india": {
+   "qid": "Q42941",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "أغرة",
+   "en": "Agra",
+   "desc_ar": "مدينة في الهند",
+   "desc_en": "city in Uttar Pradesh, India",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q27554677",
+     "ar": "العاصمة السابقة",
+     "en": "former capital"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "آغرة",
+   "enwiki": "Agra",
+   "linked_by": "article"
+  },
+  "delhi-india": {
+   "qid": "Q1353",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "دلهي",
+   "en": "Delhi",
+   "desc_ar": "ثاني أكبر مدينة هندية بعد مومباي، تقع بها العاصمة نيو دلهي",
+   "desc_en": "megacity and union territory of India",
+   "types": [
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "دلهي",
+   "enwiki": "Delhi",
+   "linked_by": "article"
+  },
+  "beijing-china": {
+   "qid": "Q956",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بكين",
+   "en": "Beijing",
+   "desc_ar": "عاصمة الصين",
+   "desc_en": "capital city of China",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1208802",
+     "ar": "البلديات المركزية الصينية",
+     "en": "direct-administered municipality"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بكين",
+   "enwiki": "Beijing",
+   "linked_by": "article"
+  },
+  "nanjing-china": {
+   "qid": "Q16666",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "نانجينغ",
+   "en": "Nanjing",
+   "desc_ar": "عاصمة للصين سابقًا",
+   "desc_en": "capital city of Jiangsu Province, China, former capital of the Republic of China and China's Ming dynasty",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1208802",
+     "ar": "البلديات المركزية الصينية",
+     "en": "direct-administered municipality"
+    }
+   ],
+   "start": -495,
+   "end": null,
+   "arwiki": "نانجينغ",
+   "enwiki": "Nanjing",
+   "linked_by": "article"
+  },
+  "kyoto-japan": {
+   "qid": "Q34600",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "كيوتو",
+   "en": "Kyoto",
+   "desc_ar": "مدينة في محافظة كيوتو اليابانية",
+   "desc_en": "city in the Kyōto Prefecture, Japan",
+   "types": [
+    {
+     "id": "Q1749269",
+     "ar": "مدن مختارة من قبل الحكومة",
+     "en": "city designated by government ordinance"
+    },
+    {
+     "id": "Q65589340",
+     "ar": null,
+     "en": "prefectural capital of Japan"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1889,
+   "end": null,
+   "arwiki": "كيوتو",
+   "enwiki": "Kyoto",
+   "linked_by": "article"
+  },
+  "moscow-russia": {
+   "qid": "Q649",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "موسكو",
+   "en": "Moscow",
+   "desc_ar": "عاصمة روسيا وأكبر مدنها",
+   "desc_en": "capital and most populous city of Russia",
+   "types": [
+    {
+     "id": "Q4442912",
+     "ar": null,
+     "en": "capital of Russia"
+    },
+    {
+     "id": "Q183342",
+     "ar": "مدن فدرالية في روسيا",
+     "en": "federal city of Russia"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "موسكو",
+   "enwiki": "Moscow",
+   "linked_by": "article"
+  },
+  "venice-italy": {
+   "qid": "Q641",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "البندقية",
+   "en": "Venice",
+   "desc_ar": "مدينة إيطالية",
+   "desc_en": "capital city of Veneto, Italy",
+   "types": [
+    {
+     "id": "Q747074",
+     "ar": "بلدية إيطالية",
+     "en": "comune of Italy"
+    },
+    {
+     "id": "Q581830",
+     "ar": "مدينة من دون سيارة",
+     "en": "carfree city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    }
+   ],
+   "start": 421,
+   "end": null,
+   "arwiki": "البندقية",
+   "enwiki": "Venice",
+   "linked_by": "article"
+  },
+  "lisbon-portugal": {
+   "qid": "Q597",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "لشبونة",
+   "en": "Lisbon",
+   "desc_ar": "عاصمة البرتغال",
+   "desc_en": "municipality and capital city of Portugal",
+   "types": [
+    {
+     "id": "Q15647906",
+     "ar": "مدينة في البرتغال",
+     "en": "city of Portugal"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    },
+    {
+     "id": "Q129676344",
+     "ar": null,
+     "en": "large city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "لشبونة",
+   "enwiki": "Lisbon",
+   "linked_by": "article"
+  },
+  "seville-spain": {
+   "qid": "Q8717",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "إشبيلية",
+   "en": "Seville",
+   "desc_ar": "عاصمة إقليم أندلسيا في إسبانيا",
+   "desc_en": "municipality of Andalusia, Spain",
+   "types": [
+    {
+     "id": "Q2074737",
+     "ar": "بلدية في إسبانيا",
+     "en": "municipality of Spain"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "إشبيلية",
+   "enwiki": "Seville",
+   "linked_by": "article"
+  },
+  "amsterdam-netherlands": {
+   "qid": "Q727",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "أمستردام",
+   "en": "Amsterdam",
+   "desc_ar": "عاصمة مملكة هولندا",
+   "desc_en": "capital and most populous city of the Netherlands",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q13539802",
+     "ar": null,
+     "en": "place with town rights and privileges"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1300,
+   "end": null,
+   "arwiki": "أمستردام",
+   "enwiki": "Amsterdam",
+   "linked_by": "article"
+  },
+  "london-united-kingdom": {
+   "qid": "Q84",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "لندن",
+   "en": "London",
+   "desc_ar": "عاصمة إنجلترا والمملكة المتحدة وأكبر مدينة فيهما",
+   "desc_en": "capital and largest city of England and the United Kingdom",
+   "types": [
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    },
+    {
+     "id": "Q1066984",
+     "ar": "مركز مالي",
+     "en": "financial center"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 47,
+   "end": null,
+   "arwiki": "لندن",
+   "enwiki": "London",
+   "linked_by": "article"
+  },
+  "fez-morocco": {
+   "qid": "Q80985",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "فاس",
+   "en": "Fez",
+   "desc_ar": "مدينة في المغرب",
+   "desc_en": "city in Morocco",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": 789,
+   "end": null,
+   "arwiki": "فاس",
+   "enwiki": "Fez",
+   "linked_by": "search"
+  },
+  "timbuktu-mali": {
+   "qid": "Q9427",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "تمبكتو",
+   "en": "Timbuktu",
+   "desc_ar": "مدينة مالية",
+   "desc_en": "city in Mali",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q702492",
+     "ar": "منطقة حضرية",
+     "en": "urban area"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "تمبكتو",
+   "enwiki": "Timbuktu",
+   "linked_by": "article"
+  },
+  "mexico-city-mexico": {
+   "qid": "Q1489",
+   "status": "verified",
+   "distance_km": 10,
+   "ar": "مدينة مكسيكو",
+   "en": "Mexico City",
+   "desc_ar": "عاصمة جمهورية المكسيك وأكبر مدنها",
+   "desc_en": "capital and largest city of Mexico",
+   "types": [
+    {
+     "id": "Q20528428",
+     "ar": null,
+     "en": "federative entity of Mexico"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1521,
+   "end": null,
+   "arwiki": "مدينة مكسيكو",
+   "enwiki": "Mexico City",
+   "linked_by": "article"
+  },
+  "cusco-peru": {
+   "qid": "Q5582862",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كوسكو",
+   "en": "Cusco",
+   "desc_ar": "مدينة في بيرو",
+   "desc_en": "historic city of Peru, capital of the Department of Cusco",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q15243209",
+     "ar": "مقاطعة تاريخية",
+     "en": "historic district"
+    }
+   ],
+   "start": 1534,
+   "end": null,
+   "arwiki": "كوسكو",
+   "enwiki": "Cusco",
+   "linked_by": "article"
+  },
+  "manchester-united-kingdom": {
+   "qid": "Q18125",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "مانشستر",
+   "en": "Manchester",
+   "desc_ar": "مدينة في إنجلترا",
+   "desc_en": "city in Greater Manchester, England",
+   "types": [
+    {
+     "id": "Q1867820",
+     "ar": null,
+     "en": "city status in the United Kingdom"
+    },
+    {
+     "id": "Q7897276",
+     "ar": null,
+     "en": "unparished area"
+    },
+    {
+     "id": "Q1115575",
+     "ar": "أبرشية مدنية",
+     "en": "civil parish"
+    }
+   ],
+   "start": 1301,
+   "end": null,
+   "arwiki": "مانشستر",
+   "enwiki": "Manchester",
+   "linked_by": "article"
+  },
+  "paris-france": {
+   "qid": "Q90",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "باريس",
+   "en": "Paris",
+   "desc_ar": "عاصمة فرنسا",
+   "desc_en": "capital and most populous city in France",
+   "types": [
+    {
+     "id": "Q484170",
+     "ar": "بلدية فرنسية",
+     "en": "commune of France"
+    },
+    {
+     "id": "Q22923920",
+     "ar": null,
+     "en": "territorial collectivity of France with special status"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "باريس",
+   "enwiki": "Paris",
+   "linked_by": "article"
+  },
+  "berlin-germany": {
+   "qid": "Q64",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "برلين",
+   "en": "Berlin",
+   "desc_ar": "عاصمة جمهورية ألمانيا الاتحادية",
+   "desc_en": "federated state, capital and largest city of Germany",
+   "types": [
+    {
+     "id": "Q1901835",
+     "ar": "مقر الحكومة",
+     "en": "seat of government"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    },
+    {
+     "id": "Q1307779",
+     "ar": null,
+     "en": "integrated municipality"
+    }
+   ],
+   "start": 1244,
+   "end": null,
+   "arwiki": "برلين",
+   "enwiki": "Berlin",
+   "linked_by": "article"
+  },
+  "vienna-austria": {
+   "qid": "Q1741",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "فيينا",
+   "en": "Vienna",
+   "desc_ar": "عاصمة النمسا",
+   "desc_en": "capital of and state in Austria",
+   "types": [
+    {
+     "id": "Q257391",
+     "ar": "عاصمة فيدرالية",
+     "en": "federal capital"
+    },
+    {
+     "id": "Q262882",
+     "ar": null,
+     "en": "statutory city of Austria"
+    },
+    {
+     "id": "Q261543",
+     "ar": "ولاية في النمسا",
+     "en": "federal state of Austria"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "فيينا",
+   "enwiki": "Vienna",
+   "linked_by": "article"
+  },
+  "st-petersburg-russia": {
+   "qid": "Q656",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "سانت بطرسبرغ",
+   "en": "Saint Petersburg",
+   "desc_ar": "ثاني أكبر مدينة في روسيا وعاصمة سابقة",
+   "desc_en": "federal city and former capital of Russia",
+   "types": [
+    {
+     "id": "Q183342",
+     "ar": "مدن فدرالية في روسيا",
+     "en": "federal city of Russia"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q4442912",
+     "ar": null,
+     "en": "capital of Russia"
+    }
+   ],
+   "start": 1703,
+   "end": null,
+   "arwiki": "سانت بطرسبرغ",
+   "enwiki": "Saint Petersburg",
+   "linked_by": "article"
+  },
+  "algiers-algeria": {
+   "qid": "Q3561",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "الجزائر العاصمة",
+   "en": "Algiers",
+   "desc_ar": "عاصمة الجزائر",
+   "desc_en": "capital city of Algeria",
+   "types": [
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    }
+   ],
+   "start": 944,
+   "end": null,
+   "arwiki": "الجزائر (مدينة)",
+   "enwiki": "Algiers",
+   "linked_by": "article"
+  },
+  "tehran-iran": {
+   "qid": "Q3616",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "طهران",
+   "en": "Tehran",
+   "desc_ar": "عاصمة إيران",
+   "desc_en": "capital city of Iran",
+   "types": [
+    {
+     "id": "Q56557504",
+     "ar": "مدينة إيرانية",
+     "en": "city of Iran"
+    },
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    },
+    {
+     "id": "Q208511",
+     "ar": "مدينة عالمية",
+     "en": "global city"
+    }
+   ],
+   "start": 1794,
+   "end": null,
+   "arwiki": "طهران",
+   "enwiki": "Tehran",
+   "linked_by": "article"
+  },
+  "kolkata-india": {
+   "qid": "Q1348",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "كلكتا",
+   "en": "Kolkata",
+   "desc_ar": "مدينة كبيرة شرق الهند",
+   "desc_en": "capital city of West Bengal, India",
+   "types": [
+    {
+     "id": "Q105074756",
+     "ar": null,
+     "en": "municipal corporation of West Bengal"
+    },
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    },
+    {
+     "id": "Q11271835",
+     "ar": "عاصمة الولاية",
+     "en": "state capital"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "كلكتا",
+   "enwiki": "Kolkata",
+   "linked_by": "article"
+  },
+  "mumbai-india": {
+   "qid": "Q1156",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "مومباي",
+   "en": "Mumbai",
+   "desc_ar": "عاصمة ولاية ماهاراشترا ، الهند",
+   "desc_en": "capital city in Maharashtra, India",
+   "types": [
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    },
+    {
+     "id": "Q11271835",
+     "ar": "عاصمة الولاية",
+     "en": "state capital"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1507,
+   "end": null,
+   "arwiki": "مومباي",
+   "enwiki": "Mumbai",
+   "linked_by": "article"
+  },
+  "guangzhou-china": {
+   "qid": "Q16572",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "غوانزو",
+   "en": "Guangzhou",
+   "desc_ar": "مدينة صينية",
+   "desc_en": "capital city of Guangdong Province, China",
+   "types": [
+    {
+     "id": "Q250811",
+     "ar": "منطقة من مستوى المقاطعات الفرعية",
+     "en": "sub-province-level division"
+    },
+    {
+     "id": "Q748149",
+     "ar": "مدينة على مستوى محافظة",
+     "en": "prefecture-level city of China"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "غوانغجو",
+   "enwiki": "Guangzhou",
+   "linked_by": "article"
+  },
+  "tokyo-japan": {
+   "qid": "Q1490",
+   "status": "verified",
+   "distance_km": 5,
+   "ar": "طوكيو",
+   "en": "Tokyo",
+   "desc_ar": "عاصمة اليابان",
+   "desc_en": "capital and largest city of Japan",
+   "types": [
+    {
+     "id": "Q124313007",
+     "ar": null,
+     "en": "metropolitan prefecture"
+    },
+    {
+     "id": "Q1025961",
+     "ar": null,
+     "en": "capital of Japan"
+    },
+    {
+     "id": "Q1200957",
+     "ar": "مقصد سياحي",
+     "en": "tourist destination"
+    }
+   ],
+   "start": 1868,
+   "end": null,
+   "arwiki": "طوكيو",
+   "enwiki": "Tokyo",
+   "linked_by": "article"
+  },
+  "new-york-united-states-of-america": {
+   "qid": "Q60",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "نيويورك",
+   "en": "New York City",
+   "desc_ar": "المدينة الأكثر اكتظاظًا بالسكان في الولايات المتحدة",
+   "desc_en": "most populous city in the United States",
+   "types": [
+    {
+     "id": "Q208511",
+     "ar": "مدينة عالمية",
+     "en": "global city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q1093829",
+     "ar": "مدينة في الولايات المتحدة",
+     "en": "city in the United States"
+    }
+   ],
+   "start": 1624,
+   "end": null,
+   "arwiki": "نيويورك",
+   "enwiki": "New York",
+   "linked_by": "search"
+  },
+  "philadelphia-united-states-of-america": {
+   "qid": "Q1345",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "فيلادلفيا",
+   "en": "Philadelphia",
+   "desc_ar": "مدينة في ولاية بنسيلفانيا الأمريكية",
+   "desc_en": "largest city in the U.S. state of Pennsylvania and seat of Philadelphia County",
+   "types": [
+    {
+     "id": "Q21010817",
+     "ar": null,
+     "en": "city of Pennsylvania"
+    },
+    {
+     "id": "Q62049",
+     "ar": "مقر المقاطعة",
+     "en": "county seat"
+    },
+    {
+     "id": "Q5888666",
+     "ar": null,
+     "en": "home rule municipality of Pennsylvania"
+    }
+   ],
+   "start": 1682,
+   "end": null,
+   "arwiki": "فيلادلفيا",
+   "enwiki": "Philadelphia",
+   "linked_by": "article"
+  },
+  "rio-de-janeiro-brazil": {
+   "qid": "Q8678",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "ريو دي جانيرو",
+   "en": "Rio de Janeiro",
+   "desc_ar": "مدينة في ولاية ريو دي جانيرو ، البرازيل",
+   "desc_en": "city of Rio de Janeiro state, Brazil",
+   "types": [
+    {
+     "id": "Q3184121",
+     "ar": "بلدية البرازيل",
+     "en": "municipality of Brazil"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    }
+   ],
+   "start": 1565,
+   "end": null,
+   "arwiki": "ريو دي جانيرو",
+   "enwiki": "Rio de Janeiro",
+   "linked_by": "article"
+  },
+  "cape-town-south-africa": {
+   "qid": "Q5465",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كيب تاون",
+   "en": "Cape Town",
+   "desc_ar": "مدينة في جنوب إفريقيا",
+   "desc_en": "city in the Western Cape, South Africa",
+   "types": [
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q15042037",
+     "ar": null,
+     "en": "statistical territorial entity"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1652,
+   "end": null,
+   "arwiki": "كيب تاون",
+   "enwiki": "Cape Town",
+   "linked_by": "article"
+  },
+  "vatican-city-vatican": {
+   "qid": "Q237",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "الفاتيكان",
+   "en": "Vatican City",
+   "desc_ar": "أصغر دولة في العالم من حيث المساحة",
+   "desc_en": "Holy See's independent state, an enclave within Rome, Italy",
+   "types": [
+    {
+     "id": "Q133442",
+     "ar": "دولة مدينة",
+     "en": "city-state"
+    },
+    {
+     "id": "Q171441",
+     "ar": "جيب داخلي",
+     "en": "enclave"
+    },
+    {
+     "id": "Q123480",
+     "ar": "دولة غير ساحلية",
+     "en": "landlocked country"
+    }
+   ],
+   "start": 1929,
+   "end": null,
+   "arwiki": "الفاتيكان",
+   "enwiki": "Vatican City",
+   "linked_by": "article"
+  },
+  "san-marino-san-marino": {
+   "qid": "Q238",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "سان مارينو",
+   "en": "San Marino",
+   "desc_ar": "دولة في جنوب أوروبا",
+   "desc_en": "sovereign state in southern Europe, enclaved within Italy",
+   "types": [
+    {
+     "id": "Q3624078",
+     "ar": "دولة ذات سيادة",
+     "en": "sovereign state"
+    },
+    {
+     "id": "Q171441",
+     "ar": "جيب داخلي",
+     "en": "enclave"
+    },
+    {
+     "id": "Q123480",
+     "ar": "دولة غير ساحلية",
+     "en": "landlocked country"
+    }
+   ],
+   "start": 301,
+   "end": null,
+   "arwiki": "سان مارينو",
+   "enwiki": "San Marino",
+   "linked_by": "article"
+  },
+  "vaduz-liechtenstein": {
+   "qid": "Q1844",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "فادوتس",
+   "en": "Vaduz",
+   "desc_ar": "عاصمة ليختنشتاين",
+   "desc_en": "capital of Liechtenstein",
+   "types": [
+    {
+     "id": "Q203300",
+     "ar": "بلدية في ليختنشتاين",
+     "en": "municipality of Liechtenstein"
+    },
+    {
+     "id": "Q902814",
+     "ar": "مدينة حدودية",
+     "en": "border city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": 1150,
+   "end": null,
+   "arwiki": "فادوتس",
+   "enwiki": "Vaduz",
+   "linked_by": "article"
+  },
+  "luxembourg-luxembourg": {
+   "qid": "Q32",
+   "status": "verified",
+   "distance_km": 18,
+   "ar": "لوكسمبورغ",
+   "en": "Luxembourg",
+   "desc_ar": "دولة في أوروبا الوسطى",
+   "desc_en": "country in Western Europe",
+   "types": [
+    {
+     "id": "Q3624078",
+     "ar": "دولة ذات سيادة",
+     "en": "sovereign state"
+    },
+    {
+     "id": "Q179164",
+     "ar": "دولة مركزية",
+     "en": "unitary state"
+    },
+    {
+     "id": "Q165116",
+     "ar": "دوقية كبرى",
+     "en": "grand duchy"
+    }
+   ],
+   "start": 1815,
+   "end": null,
+   "arwiki": "لوكسمبورغ",
+   "enwiki": "Luxembourg",
+   "linked_by": "article"
+  },
+  "palikir-federated-states-of-micronesia": {
+   "qid": "Q42751",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "باليكير",
+   "en": "Palikir",
+   "desc_ar": "هي عاصمة ولايات ميكرونيسيا المتحدة",
+   "desc_en": "capital of Federated States of Micronesia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q257391",
+     "ar": "عاصمة فيدرالية",
+     "en": "federal capital"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "باليكير",
+   "enwiki": "Palikir",
+   "linked_by": "article"
+  },
+  "majuro-marshall-islands": {
+   "qid": "Q12919",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "ماجورو",
+   "en": "Majuro",
+   "desc_ar": "عاصمة جزر مارشال",
+   "desc_en": "capital of the Marshall Islands",
+   "types": [
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "ماجورو",
+   "enwiki": "Majuro",
+   "linked_by": "article"
+  },
+  "funafuti-tuvalu": {
+   "qid": "Q34126",
+   "status": "verified",
+   "distance_km": 11,
+   "ar": "فونافوتي",
+   "en": "Funafuti",
+   "desc_ar": "عاصمة توفالو",
+   "desc_en": "capital of Tuvalu",
+   "types": [
+    {
+     "id": "Q42523",
+     "ar": "شعب حلقي",
+     "en": "atoll"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q59369306",
+     "ar": null,
+     "en": "Council of Tuvalu"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "فونافوتي",
+   "enwiki": "Funafuti",
+   "linked_by": "article"
+  },
+  "melekeok-palau": {
+   "qid": "Q12898552",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "ولاية ميلكيوك",
+   "en": "Melekeok",
+   "desc_ar": null,
+   "desc_en": "state of Palau",
+   "types": [
+    {
+     "id": "Q1044181",
+     "ar": "ولايات بالاو",
+     "en": "state of Palau"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "ولاية ميلكيوك",
+   "enwiki": "Melekeok",
+   "linked_by": "article"
+  },
+  "monaco-monaco": {
+   "qid": "Q235",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "موناكو",
+   "en": "Monaco",
+   "desc_ar": "إمارة فرنسية",
+   "desc_en": "microstate in Western Europe",
+   "types": [
+    {
+     "id": "Q3624078",
+     "ar": "دولة ذات سيادة",
+     "en": "sovereign state"
+    },
+    {
+     "id": "Q179164",
+     "ar": "دولة مركزية",
+     "en": "unitary state"
+    },
+    {
+     "id": "Q208500",
+     "ar": "إمارة",
+     "en": "principality"
+    }
+   ],
+   "start": 1297,
+   "end": null,
+   "arwiki": "موناكو",
+   "enwiki": "Monaco",
+   "linked_by": "article"
+  },
+  "tarawa-kiribati": {
+   "qid": "Q2486",
+   "status": "verified",
+   "distance_km": 11,
+   "ar": "تاراوا",
+   "en": "Tarawa",
+   "desc_ar": "جزيرة في كيريباتي",
+   "desc_en": "atoll in the central Pacific Ocean and the capital of Kiribati",
+   "types": [
+    {
+     "id": "Q42523",
+     "ar": "شعب حلقي",
+     "en": "atoll"
+    },
+    {
+     "id": "Q3957",
+     "ar": "بلدة",
+     "en": "town"
+    },
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "تاراوا",
+   "enwiki": "Tarawa",
+   "linked_by": "article"
+  },
+  "moroni-comoros": {
+   "qid": "Q3901",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "موروني",
+   "en": "Moroni",
+   "desc_ar": "عاصمة جزر القمر",
+   "desc_en": "capital of Comoros",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "موروني",
+   "enwiki": "Moroni",
+   "linked_by": "search"
+  },
+  "andorra-andorra": {
+   "qid": "Q228",
+   "status": "verified",
+   "distance_km": 7,
+   "ar": "أندورا",
+   "en": "Andorra",
+   "desc_ar": "دولة صغيرة في أوروبا",
+   "desc_en": "sovereign microstate between France and Spain, in Western Europe",
+   "types": [
+    {
+     "id": "Q6256",
+     "ar": "بلد",
+     "en": "country"
+    },
+    {
+     "id": "Q3624078",
+     "ar": "دولة ذات سيادة",
+     "en": "sovereign state"
+    },
+    {
+     "id": "Q123480",
+     "ar": "دولة غير ساحلية",
+     "en": "landlocked country"
+    }
+   ],
+   "start": 1278,
+   "end": null,
+   "arwiki": "أندورا",
+   "enwiki": "Andorra",
+   "linked_by": "article"
+  },
+  "port-of-spain-trinidad-and-tobago": {
+   "qid": "Q39178",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "بورت أوف سبين",
+   "en": "Port of Spain",
+   "desc_ar": "عاصمة ترينيداد وتوباغو",
+   "desc_en": "capital of Trinidad and Tobago",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1048835",
+     "ar": "كيان سياسي إقليمي",
+     "en": "political territorial entity"
+    },
+    {
+     "id": "Q1996198",
+     "ar": "أقاليم ترينيداد وتوباغو",
+     "en": "regional corporation or municipality of Trinidad and Tobago"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بورت أوف سبين",
+   "enwiki": "Port of Spain",
+   "linked_by": "article"
+  },
+  "kigali-rwanda": {
+   "qid": "Q3859",
+   "status": "verified",
+   "distance_km": 6,
+   "ar": "كيغالي",
+   "en": "Kigali",
+   "desc_ar": "عاصمة رواندا",
+   "desc_en": "province-level city, capital and largest city of Rwanda",
+   "types": [
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q871217",
+     "ar": "محافظة في رواندا",
+     "en": "province of Rwanda"
+    }
+   ],
+   "start": 1907,
+   "end": null,
+   "arwiki": "كيغالي",
+   "enwiki": "Kigali",
+   "linked_by": "article"
+  },
+  "mbabane-eswatini": {
+   "qid": "Q3904",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "مبابان",
+   "en": "Mbabane",
+   "desc_ar": "عاصمة إسواتيني (سوازيلاند سابقًا)",
+   "desc_en": "capital of Eswatini",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1902,
+   "end": null,
+   "arwiki": "مبابان",
+   "enwiki": "Mbabane",
+   "linked_by": "article"
+  },
+  "juba-south-sudan": {
+   "qid": "Q1947",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "جوبا",
+   "en": "Juba",
+   "desc_ar": "عاصمة جنوب السودان",
+   "desc_en": "capital of the Republic of South Sudan",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": 1922,
+   "end": null,
+   "arwiki": "جوبا",
+   "enwiki": "Juba",
+   "linked_by": "article"
+  },
+  "ljubljana-slovenia": {
+   "qid": "Q437",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "لبلانة",
+   "en": "Ljubljana",
+   "desc_ar": "عاصمة سلوفينيا",
+   "desc_en": "capital city of Slovenia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "ليوبليانا",
+   "enwiki": "Ljubljana",
+   "linked_by": "article"
+  },
+  "bratislava-slovakia": {
+   "qid": "Q1780",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "براتيسلافا",
+   "en": "Bratislava",
+   "desc_ar": "عاصمة سلوفاكيا",
+   "desc_en": "capital city of Slovakia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q6784672",
+     "ar": null,
+     "en": "municipality of Slovakia"
+    }
+   ],
+   "start": 907,
+   "end": null,
+   "arwiki": "براتيسلافا",
+   "enwiki": "Bratislava",
+   "linked_by": "article"
+  },
+  "doha-qatar": {
+   "qid": "Q3861",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "الدوحة",
+   "en": "Doha",
+   "desc_ar": "عاصمة قطر",
+   "desc_en": "capital of Qatar",
+   "types": [
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": 1850,
+   "end": null,
+   "arwiki": "الدوحة",
+   "enwiki": "Doha",
+   "linked_by": "article"
+  },
+  "podgorica-montenegro": {
+   "qid": "Q23564",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "بودغوريتسا",
+   "en": "Podgorica",
+   "desc_ar": "عاصمة الجبل الأسود",
+   "desc_en": "capital city of Montenegro",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بودغوريتسا",
+   "enwiki": "Podgorica",
+   "linked_by": "article"
+  },
+  "bern-switzerland": {
+   "qid": "Q70",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "برن",
+   "en": "Bern",
+   "desc_ar": "عاصمة سويسرا",
+   "desc_en": "city in Switzerland, capital of the canton of Bern and de facto capital of Switzerland",
+   "types": [
+    {
+     "id": "Q70208",
+     "ar": "بلدية في سويسرا",
+     "en": "municipality of Switzerland"
+    },
+    {
+     "id": "Q14770218",
+     "ar": "عاصمة كانتون في سويسرا",
+     "en": "cantonal capital of Switzerland"
+    },
+    {
+     "id": "Q537250",
+     "ar": "مدينة فيدرالية",
+     "en": "federal city"
+    }
+   ],
+   "start": 1191,
+   "end": null,
+   "arwiki": "برن",
+   "enwiki": "Bern",
+   "linked_by": "article"
+  },
+  "pristina-kosovo": {
+   "qid": "Q25270",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "برشتينة",
+   "en": "Pristina",
+   "desc_ar": "عاصمة كوسوفو وأكبر مدنها",
+   "desc_en": "capital and the largest city of Kosovo",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "برشتينا",
+   "enwiki": "Pristina",
+   "linked_by": "article"
+  },
+  "roseau-dominica": {
+   "qid": "Q36281",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "روسو",
+   "en": "Roseau",
+   "desc_ar": "عاصمة وأكبر مدن دومينيكا",
+   "desc_en": "capital of Dominica",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "روسو (دومينيكا)",
+   "enwiki": "Roseau",
+   "linked_by": "article"
+  },
+  "djibouti-djibouti": {
+   "status": "unverified",
+   "reason": "الإحداثيات تبعد 81 كم عن موضع الأطلس (الهامش 60 كم)"
+  },
+  "banjul-the-gambia": {
+   "qid": "Q3726",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "بانجول",
+   "en": "Banjul",
+   "desc_ar": "عاصمة غامبيا",
+   "desc_en": "capital of The Gambia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q15646510",
+     "ar": null,
+     "en": "region of the Gambia"
+    }
+   ],
+   "start": 1816,
+   "end": null,
+   "arwiki": "بانجول",
+   "enwiki": "Banjul",
+   "linked_by": "article"
+  },
+  "skopje-north-macedonia": {
+   "qid": "Q384",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "إسكوبية",
+   "en": "Skopje",
+   "desc_ar": "عاصمة جمهورية شمال مقدونيا",
+   "desc_en": "capital city of North Macedonia",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q1200957",
+     "ar": "مقصد سياحي",
+     "en": "tourist destination"
+    },
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "إسكوبية",
+   "enwiki": "Skopje",
+   "linked_by": "article"
+  },
+  "bridgetown-barbados": {
+   "qid": "Q36168",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بريدج تاون",
+   "en": "Bridgetown",
+   "desc_ar": "عاصمة جمهورية باربادوس بالبحر الكاريبي",
+   "desc_en": "capital of Barbados",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1628,
+   "end": null,
+   "arwiki": "بريدج تاون",
+   "enwiki": "Bridgetown",
+   "linked_by": "article"
+  },
+  "bujumbura-burundi": {
+   "qid": "Q3854",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بوجومبورا",
+   "en": "Bujumbura",
+   "desc_ar": "العاصمة السابقة لبوروندي",
+   "desc_en": "former capital of Burundi",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1871,
+   "end": null,
+   "arwiki": "بوجومبورا",
+   "enwiki": "Bujumbura",
+   "linked_by": "article"
+  },
+  "kingstown-saint-vincent-and-the-grenadines": {
+   "qid": "Q41474",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كينغستاون",
+   "en": "Kingstown",
+   "desc_ar": "عاصمة سانت فنسنت والجرينادين",
+   "desc_en": "capital of Saint Vincent and the Grenadines",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1722,
+   "end": null,
+   "arwiki": "كينغستاون",
+   "enwiki": "Kingstown",
+   "linked_by": "article"
+  },
+  "castries-saint-lucia": {
+   "qid": "Q41699",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "كاستريس",
+   "en": "Castries",
+   "desc_ar": "عاصمة جزيرة سانت لوسيا الكاريبية وأكبر مدينة فيها. بلدة في سانت لوسيا",
+   "desc_en": "capital of Saint Lucia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q3957",
+     "ar": "بلدة",
+     "en": "town"
+    }
+   ],
+   "start": 1650,
+   "end": null,
+   "arwiki": "كاستريس",
+   "enwiki": "Castries",
+   "linked_by": "article"
+  },
+  "basseterre-saint-kitts-and-nevis": {
+   "qid": "Q41295",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "باستير",
+   "en": "Basseterre",
+   "desc_ar": "عاصمة سانت كيتس و نيفيس",
+   "desc_en": "capital of Saint Kitts and Nevis",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q257391",
+     "ar": "عاصمة فيدرالية",
+     "en": "federal capital"
+    }
+   ],
+   "start": 1627,
+   "end": null,
+   "arwiki": "باستير",
+   "enwiki": "Basseterre",
+   "linked_by": "article"
+  },
+  "port-louis-mauritius": {
+   "qid": "Q3929",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بورت لويس",
+   "en": "Port Louis",
+   "desc_ar": "عاصمة موريشيوس",
+   "desc_en": "capital city of Mauritius",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    }
+   ],
+   "start": 1735,
+   "end": null,
+   "arwiki": "بورت لويس",
+   "enwiki": "Port Louis",
+   "linked_by": "article"
+  },
+  "saint-george-s-grenada": {
+   "qid": "Q41547",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "سانت جورجز",
+   "en": "St. George's",
+   "desc_ar": "عاصمة دولة غرينادا",
+   "desc_en": "capital of Grenada",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1650,
+   "end": null,
+   "arwiki": "سانت جورجز",
+   "enwiki": "Saint George (disambiguation)",
+   "linked_by": "search"
+  },
+  "manama-bahrain": {
+   "qid": "Q3882",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "المنامة",
+   "en": "Manama",
+   "desc_ar": "عاصمة مملكة البحرين",
+   "desc_en": "capital of Bahrain",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1345,
+   "end": null,
+   "arwiki": "المنامة",
+   "enwiki": "Manama",
+   "linked_by": "article"
+  },
+  "saint-john-s-antigua-and-barbuda": {
+   "qid": "Q36262",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "سانت جونز",
+   "en": null,
+   "desc_ar": "عاصمة أنتيغوا وبربودا",
+   "desc_en": "capital and largest city of Antigua and Barbuda",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1666,
+   "end": null,
+   "arwiki": "سانت جونز (أنتيغوا وبربودا)",
+   "enwiki": "Saint John's",
+   "linked_by": "search"
+  },
+  "montevideo-uruguay": {
+   "qid": "Q1335",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "مونتفيدو",
+   "en": "Montevideo",
+   "desc_ar": "عاصمة الأوروغواي",
+   "desc_en": "capital and largest city of Uruguay",
+   "types": [
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q1422929",
+     "ar": null,
+     "en": "primate city"
+    }
+   ],
+   "start": 1726,
+   "end": null,
+   "arwiki": "مونتيفيديو",
+   "enwiki": "Montevideo",
+   "linked_by": "article"
+  },
+  "lom-togo": {
+   "qid": "Q3792",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "لومي",
+   "en": "Lomé",
+   "desc_ar": "عاصمة توغو",
+   "desc_en": "capital city of Togo",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q902814",
+     "ar": "مدينة حدودية",
+     "en": "border city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "لومي",
+   "enwiki": "Lomé",
+   "linked_by": "article"
+  },
+  "tunis-tunisia": {
+   "qid": "Q3572",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "تونس",
+   "en": "Tunis",
+   "desc_ar": "عاصمة الجمهورية التونسية",
+   "desc_en": "capital of Tunisia",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q41067667",
+     "ar": "بلدية في تونس",
+     "en": "municipality of Tunisia"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "تونس (مدينة)",
+   "enwiki": "Tunis",
+   "linked_by": "article"
+  },
+  "abu-dhabi-united-arab-emirates": {
+   "qid": "Q1519",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "أبو ظبي",
+   "en": "Abu Dhabi",
+   "desc_ar": "عاصمة الإمارات العربية المتحدة",
+   "desc_en": "capital city of the United Arab Emirates",
+   "types": [
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "أبو ظبي",
+   "enwiki": "Abu Dhabi",
+   "linked_by": "article"
+  },
+  "ashgabat-turkmenistan": {
+   "qid": "Q23438",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "عشق آباد",
+   "en": "Ashgabat",
+   "desc_ar": "عاصمة جمهورية تركمنستان وأكبر المدن فيها",
+   "desc_en": "capital city of Turkmenistan",
+   "types": [
+    {
+     "id": "Q842412",
+     "ar": "التقسيم الإداري في تركمانستان",
+     "en": "administrative territorial entity of Turkmenistan"
+    },
+    {
+     "id": "Q828658",
+     "ar": null,
+     "en": "city of Turkmenistan"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    }
+   ],
+   "start": 1881,
+   "end": null,
+   "arwiki": "عشق آباد",
+   "enwiki": "Ashgabat",
+   "linked_by": "article"
+  },
+  "lusaka-zambia": {
+   "qid": "Q3881",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "لوساكا",
+   "en": "Lusaka",
+   "desc_ar": "عاصمة زامبيا",
+   "desc_en": "capital of Zambia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": 1905,
+   "end": null,
+   "arwiki": "لوساكا",
+   "enwiki": "Lusaka",
+   "linked_by": "article"
+  },
+  "harare-zimbabwe": {
+   "qid": "Q3921",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "هراري",
+   "en": "Harare",
+   "desc_ar": "عاصمة زيمبابوي",
+   "desc_en": "capital and largest city of Zimbabwe",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1890,
+   "end": null,
+   "arwiki": "هراري",
+   "enwiki": "Harare",
+   "linked_by": "article"
+  },
+  "dili-east-timor": {
+   "qid": "Q9310",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "ديلي",
+   "en": "Dili",
+   "desc_ar": "عاصمة تيمور الشرقية",
+   "desc_en": "capital of East Timor",
+   "types": [
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": 1520,
+   "end": null,
+   "arwiki": "ديلي",
+   "enwiki": "Dili",
+   "linked_by": "article"
+  },
+  "port-vila-vanuatu": {
+   "qid": "Q37806",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "بورت فيلا",
+   "en": "Port Vila",
+   "desc_ar": "عاصمة فانواتو",
+   "desc_en": "capital and largest city of Vanuatu",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بورت فيلا",
+   "enwiki": "Port Vila",
+   "linked_by": "article"
+  },
+  "tegucigalpa-honduras": {
+   "qid": "Q3238",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "تيغوسيغالبا",
+   "en": "Tegucigalpa",
+   "desc_ar": "عاصمة هندوراس",
+   "desc_en": "capital and largest city of Honduras",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": 1578,
+   "end": null,
+   "arwiki": "تيغوسيغالبا",
+   "enwiki": "Tegucigalpa",
+   "linked_by": "article"
+  },
+  "georgetown-guyana": {
+   "qid": "Q10717",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "جورج تاون",
+   "en": "Georgetown",
+   "desc_ar": "عاصمة غيانا",
+   "desc_en": "capital city of Guyana",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    }
+   ],
+   "start": 1781,
+   "end": null,
+   "arwiki": "جورج تاون",
+   "enwiki": "Georgetown",
+   "linked_by": "search"
+  },
+  "reykjav-k-iceland": {
+   "qid": "Q1764",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "ريكيافيك",
+   "en": "Reykjavík",
+   "desc_ar": "عاصمة آيسلندا وأكبر مدنها",
+   "desc_en": "capital and largest city in Iceland",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    }
+   ],
+   "start": 1786,
+   "end": null,
+   "arwiki": "ريكيافيك",
+   "enwiki": "Reykjavík",
+   "linked_by": "article"
+  },
+  "port-au-prince-haiti": {
+   "qid": "Q34261",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بورت أو برانس",
+   "en": "Port-au-Prince",
+   "desc_ar": "عاصمة هايتي",
+   "desc_en": "capital of Haiti",
+   "types": [
+    {
+     "id": "Q3685462",
+     "ar": "بلديات هايتي",
+     "en": "commune of Haiti"
+    },
+    {
+     "id": "Q7930989",
+     "ar": "مدينة أو بلدة",
+     "en": "city or town"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1749,
+   "end": null,
+   "arwiki": "بورت أو برانس",
+   "enwiki": "Port-au-Prince",
+   "linked_by": "article"
+  },
+  "kampala-uganda": {
+   "qid": "Q3894",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كامبالا",
+   "en": "Kampala",
+   "desc_ar": "عاصمة أوغندا",
+   "desc_en": "capital and the largest city of Uganda",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "كامبالا",
+   "enwiki": "Kampala",
+   "linked_by": "article"
+  },
+  "paramaribo-suriname": {
+   "qid": "Q3001",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "باراماريبو",
+   "en": "Paramaribo",
+   "desc_ar": "عاصمة سورينام",
+   "desc_en": "capital city of Suriname",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": 1613,
+   "end": null,
+   "arwiki": "باراماريبو",
+   "enwiki": "Paramaribo",
+   "linked_by": "article"
+  },
+  "niamey-niger": {
+   "qid": "Q3674",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "نيامي",
+   "en": "Niamey",
+   "desc_ar": "عاصمة النيجر",
+   "desc_en": "capital of Niger",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q4683538",
+     "ar": "التقسيم الإداري في النيجر",
+     "en": "administrative territorial entity of Niger"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "نيامي",
+   "enwiki": "Niamey",
+   "linked_by": "article"
+  },
+  "dushanbe-tajikistan": {
+   "qid": "Q9365",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "دوشنبة",
+   "en": "Dushanbe",
+   "desc_ar": "عاصمة طاجيكستان وأكبر مدينة في الدولة",
+   "desc_en": "capital of Tajikistan",
+   "types": [
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "دوشنبة",
+   "enwiki": "Dushanbe",
+   "linked_by": "article"
+  },
+  "asunci-n-paraguay": {
+   "qid": "Q2933",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "أسونسيون",
+   "en": "Asunción",
+   "desc_ar": "عاصمة باراغواي",
+   "desc_en": "capital of Paraguay",
+   "types": [
+    {
+     "id": "Q1062177",
+     "ar": "منطقة عاصمة",
+     "en": "capital region"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1537,
+   "end": null,
+   "arwiki": "أسونسيون",
+   "enwiki": "Asunción",
+   "linked_by": "article"
+  },
+  "managua-nicaragua": {
+   "qid": "Q3274",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "ماناغوا",
+   "en": "Managua",
+   "desc_ar": "بلدية على بحيرة ماناغوا في إدارة ماناغوا، نيكاراغوا؛ تضم العاصمة الوطنية ماناغوا",
+   "desc_en": "capital and largest city of Nicaragua",
+   "types": [
+    {
+     "id": "Q318727",
+     "ar": "بلدية في نيكاراغوا",
+     "en": "municipality of Nicaragua"
+    }
+   ],
+   "start": 1819,
+   "end": null,
+   "arwiki": "ماناغوا",
+   "enwiki": "Managua",
+   "linked_by": "article"
+  },
+  "freetown-sierra-leone": {
+   "qid": "Q3780",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "فريتاون",
+   "en": "Freetown",
+   "desc_ar": "عاصمة سيراليون",
+   "desc_en": "capital of Sierra Leone",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1792,
+   "end": null,
+   "arwiki": "فريتاون",
+   "enwiki": "Freetown",
+   "linked_by": "article"
+  },
+  "islamabad-pakistan": {
+   "qid": "Q1362",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "إسلام آباد",
+   "en": "Islamabad",
+   "desc_ar": "عاصمة باكستان",
+   "desc_en": "capital city of Pakistan",
+   "types": [
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q257391",
+     "ar": "عاصمة فيدرالية",
+     "en": "federal capital"
+    }
+   ],
+   "start": 1960,
+   "end": null,
+   "arwiki": "إسلام آباد",
+   "enwiki": "Islamabad",
+   "linked_by": "article"
+  },
+  "kathmandu-nepal": {
+   "qid": "Q3037",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كتمندو",
+   "en": "Kathmandu",
+   "desc_ar": "العاصمة وأكبر مدينة في نيبال",
+   "desc_en": "capital of Nepal",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q15284",
+     "ar": "بلدية",
+     "en": "municipality"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 723,
+   "end": null,
+   "arwiki": "كتمندو",
+   "enwiki": "Kathmandu",
+   "linked_by": "article"
+  },
+  "bloemfontein-south-africa": {
+   "qid": "Q37701",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "بلومفونتين",
+   "en": "Bloemfontein",
+   "desc_ar": "مدينة في جنوب إفريقيا",
+   "desc_en": "judicial capital of South Africa",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q105742499",
+     "ar": null,
+     "en": "judicial capital"
+    }
+   ],
+   "start": 1846,
+   "end": null,
+   "arwiki": "بلومفونتين",
+   "enwiki": "Bloemfontein",
+   "linked_by": "article"
+  },
+  "pretoria-south-africa": {
+   "qid": "Q3926",
+   "status": "verified",
+   "distance_km": 6,
+   "ar": "بريتوريا",
+   "en": "Pretoria",
+   "desc_ar": "عاصمة جنوب إفريقيا",
+   "desc_en": "administrative capital of South Africa located in the Gauteng province",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    },
+    {
+     "id": "Q1306755",
+     "ar": "مركز إداري",
+     "en": "administrative centre"
+    }
+   ],
+   "start": 1855,
+   "end": null,
+   "arwiki": "بريتوريا",
+   "enwiki": "Pretoria",
+   "linked_by": "article"
+  },
+  "port-moresby-papua-new-guinea": {
+   "qid": "Q36526",
+   "status": "verified",
+   "distance_km": 5,
+   "ar": "بورت مورسبي",
+   "en": "Port Moresby",
+   "desc_ar": "عاصمة بابوا غينيا الجديدة",
+   "desc_en": "capital of Papua New Guinea",
+   "types": [
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q7930989",
+     "ar": "مدينة أو بلدة",
+     "en": "city or town"
+    }
+   ],
+   "start": 1873,
+   "end": null,
+   "arwiki": "بورت مورسبي",
+   "enwiki": "Port Moresby",
+   "linked_by": "article"
+  },
+  "honiara-solomon-islands": {
+   "qid": "Q40921",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "هونيارا",
+   "en": "Honiara",
+   "desc_ar": "عاصمة جزر سليمان",
+   "desc_en": "capital of Solomon Islands, on the tropical island Guadalcanal",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "هونيارا",
+   "enwiki": "Honiara",
+   "linked_by": "article"
+  },
+  "panama-city-panama": {
+   "qid": "Q3306",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "مدينة بنما",
+   "en": "Panama City",
+   "desc_ar": "عاصمة جمهورية بنما",
+   "desc_en": "capital of Panama",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1907114",
+     "ar": "تجمع حضري",
+     "en": "metropolitan area"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1519,
+   "end": null,
+   "arwiki": "بنما (مدينة)",
+   "enwiki": "Panama City",
+   "linked_by": "article"
+  },
+  "rabat-morocco": {
+   "qid": "Q3551",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "الرباط",
+   "en": "Rabat",
+   "desc_ar": "عاصمة المغرب",
+   "desc_en": "capital city of Morocco",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": 1146,
+   "end": null,
+   "arwiki": "الرباط",
+   "enwiki": "Rabat",
+   "linked_by": "article"
+  },
+  "chi-in-u-moldova": {
+   "qid": "Q21197",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "كيشيناو",
+   "en": "Chișinău",
+   "desc_ar": "عاصمة مولدوفا",
+   "desc_en": "capital of Moldova",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q15284",
+     "ar": "بلدية",
+     "en": "municipality"
+    }
+   ],
+   "start": 1436,
+   "end": null,
+   "arwiki": "كيشيناو",
+   "enwiki": "Chișinău",
+   "linked_by": "article"
+  },
+  "maputo-mozambique": {
+   "qid": "Q3889",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "مابوتو",
+   "en": "Maputo",
+   "desc_ar": "عاصمة موزمبيق",
+   "desc_en": "capital and chief port of Mozambique",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q56036687",
+     "ar": null,
+     "en": "municipality of Mozambique"
+    }
+   ],
+   "start": 1781,
+   "end": null,
+   "arwiki": "مابوتو",
+   "enwiki": "Maputo",
+   "linked_by": "article"
+  },
+  "mogadishu-somalia": {
+   "qid": "Q2449",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "مقديشو",
+   "en": "Mogadishu",
+   "desc_ar": "عاصمة الصومال",
+   "desc_en": "capital and the largest city of Somalia",
+   "types": [
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "مقديشو",
+   "enwiki": "Mogadishu",
+   "linked_by": "article"
+  },
+  "muscat-oman": {
+   "qid": "Q3826",
+   "status": "verified",
+   "distance_km": 22,
+   "ar": "مسقط",
+   "en": "Muscat",
+   "desc_ar": "عاصمة سلطنة عمان",
+   "desc_en": "capital of Oman",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q3250615",
+     "ar": "ولاية عمانية",
+     "en": "province of Oman"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "مسقط",
+   "enwiki": "Muscat",
+   "linked_by": "article"
+  },
+  "colombo-sri-lanka": {
+   "qid": "Q35381",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كولمبو",
+   "en": "Colombo",
+   "desc_ar": "العاصمة الاقتصادية لسري لانكا",
+   "desc_en": "largest city and de facto capital of Sri Lanka",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "كولمبو",
+   "enwiki": "Colombo",
+   "linked_by": "article"
+  },
+  "ulaanbaatar-mongolia": {
+   "qid": "Q23430",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "أولان باتور",
+   "en": "Ulaanbaatar",
+   "desc_ar": "عاصمة منغوليا",
+   "desc_en": "capital and largest city of Mongolia",
+   "types": [
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 1649,
+   "end": null,
+   "arwiki": "أولان باتور",
+   "enwiki": "Ulaanbaatar",
+   "linked_by": "article"
+  },
+  "windhoek-namibia": {
+   "qid": "Q3935",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "ويندهوك",
+   "en": "Windhoek",
+   "desc_ar": "عاصمة ناميبيا",
+   "desc_en": "capital of the Republic of Namibia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1840,
+   "end": null,
+   "arwiki": "ويندهوك",
+   "enwiki": "Windhoek",
+   "linked_by": "article"
+  },
+  "abuja-nigeria": {
+   "qid": "Q3787",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "أبوجا",
+   "en": "Abuja",
+   "desc_ar": "عاصمة نيجيريا",
+   "desc_en": "capital city of Nigeria",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q257391",
+     "ar": "عاصمة فيدرالية",
+     "en": "federal capital"
+    }
+   ],
+   "start": 1828,
+   "end": null,
+   "arwiki": "أبوجا",
+   "enwiki": "Abuja",
+   "linked_by": "article"
+  },
+  "bissau-guinea-bissau": {
+   "qid": "Q3739",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "بيساو",
+   "en": "Bissau",
+   "desc_ar": "عاصمة غينيا بيساو",
+   "desc_en": "capital city of Guinea-Bissau",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1687,
+   "end": null,
+   "arwiki": "بيساو",
+   "enwiki": "Bissau",
+   "linked_by": "article"
+  },
+  "amman-jordan": {
+   "qid": "Q3805",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "عَمَّان",
+   "en": "Amman",
+   "desc_ar": "عاصمة الأردن",
+   "desc_en": "capital of Jordan",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "عمان (مدينة)",
+   "enwiki": "Amman",
+   "linked_by": "article"
+  },
+  "vilnius-lithuania": {
+   "qid": "Q216",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "فيلنيوس",
+   "en": "Vilnius",
+   "desc_ar": "عاصمة ليتوانيا",
+   "desc_en": "capital and largest city of Lithuania",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": 1323,
+   "end": null,
+   "arwiki": "فيلنيوس",
+   "enwiki": "Vilnius",
+   "linked_by": "article"
+  },
+  "riga-latvia": {
+   "qid": "Q1773",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "ريغا",
+   "en": "Riga",
+   "desc_ar": "عاصمة لاتفيا وأكبر مدنها",
+   "desc_en": "capital and largest city of Latvia",
+   "types": [
+    {
+     "id": "Q109329953",
+     "ar": null,
+     "en": "state city of Latvia"
+    },
+    {
+     "id": "Q707813",
+     "ar": "مدينة هانزية",
+     "en": "Hanseatic city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1201,
+   "end": null,
+   "arwiki": "ريغا",
+   "enwiki": "Riga",
+   "linked_by": "article"
+  },
+  "bishkek-kyrgyzstan": {
+   "qid": "Q9361",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "بيشكك",
+   "en": "Bishkek",
+   "desc_ar": "عاصمة جمهورية قيرغيزستان",
+   "desc_en": "capital city of Kyrgyzstan",
+   "types": [
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1825,
+   "end": null,
+   "arwiki": "بيشكك",
+   "enwiki": "Bishkek",
+   "linked_by": "article"
+  },
+  "maseru-lesotho": {
+   "qid": "Q3909",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "ماسيرو",
+   "en": "Maseru",
+   "desc_ar": "عاصمة ليسوتو",
+   "desc_en": "capital of Lesotho",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q902814",
+     "ar": "مدينة حدودية",
+     "en": "border city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1869,
+   "end": null,
+   "arwiki": "ماسيرو",
+   "enwiki": "Maseru",
+   "linked_by": "article"
+  },
+  "antananarivo-madagascar": {
+   "qid": "Q3915",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "أنتانانريفو",
+   "en": "Antananarivo",
+   "desc_ar": "عاصمة مدغشقر",
+   "desc_en": "capital and largest city of Madagascar",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": 1625,
+   "end": null,
+   "arwiki": "أنتاناناريفو",
+   "enwiki": "Antananarivo",
+   "linked_by": "article"
+  },
+  "quito-ecuador": {
+   "qid": "Q2900",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كيتو",
+   "en": "Quito",
+   "desc_ar": "عاصمة الإكوادور",
+   "desc_en": "capital of Ecuador",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1534,
+   "end": null,
+   "arwiki": "كيتو",
+   "enwiki": "Quito",
+   "linked_by": "article"
+  },
+  "san-jos-costa-rica": {
+   "qid": "Q3070",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "سان خوسيه",
+   "en": "San José",
+   "desc_ar": "عاصمة كوستاريكا",
+   "desc_en": "capital of Costa Rica",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": 1737,
+   "end": null,
+   "arwiki": "سان خوسيه (كوستاريكا)",
+   "enwiki": "San José",
+   "linked_by": "search"
+  },
+  "san-salvador-el-salvador": {
+   "qid": "Q3110",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "سان سلفادور",
+   "en": "San Salvador",
+   "desc_ar": "عاصمة السلفادور",
+   "desc_en": "capital of El Salvador",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    },
+    {
+     "id": "Q127499753",
+     "ar": null,
+     "en": "district of El Salvador"
+    }
+   ],
+   "start": 1525,
+   "end": null,
+   "arwiki": "سان سلفادور",
+   "enwiki": "San Salvador",
+   "linked_by": "article"
+  },
+  "kingston-jamaica": {
+   "qid": "Q34692",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "كينغستون",
+   "en": "Kingston",
+   "desc_ar": "عاصمة جامايكا",
+   "desc_en": "capital of Jamaica",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1692,
+   "end": null,
+   "arwiki": "كينغستون",
+   "enwiki": "Kingston",
+   "linked_by": "search"
+  },
+  "n-djamena-chad": {
+   "qid": "Q3659",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "انجمينا",
+   "en": "N'Djamena",
+   "desc_ar": "عاصمة تشاد وأكبر مدنها",
+   "desc_en": "capital and largest city of Chad",
+   "types": [
+    {
+     "id": "Q20683492",
+     "ar": null,
+     "en": "special statute region of Chad"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q902814",
+     "ar": "مدينة حدودية",
+     "en": "border city"
+    }
+   ],
+   "start": 1900,
+   "end": null,
+   "arwiki": "انجمينا",
+   "enwiki": "N'Djamena",
+   "linked_by": "article"
+  },
+  "malabo-equatorial-guinea": {
+   "qid": "Q3818",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "مالابو",
+   "en": "Malabo",
+   "desc_ar": "عاصمة غينيا الاستوائية",
+   "desc_en": "city and former capital of Equatorial Guinea",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1827,
+   "end": null,
+   "arwiki": "مالابو",
+   "enwiki": "Malabo",
+   "linked_by": "article"
+  },
+  "asmara-eritrea": {
+   "qid": "Q3642",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "أسمرة",
+   "en": "Asmara",
+   "desc_ar": "عاصمة إريتريا",
+   "desc_en": "capital city of Eritrea",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1897,
+   "end": null,
+   "arwiki": "أسمرة",
+   "enwiki": "Asmara",
+   "linked_by": "article"
+  },
+  "zagreb-croatia": {
+   "qid": "Q1435",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "زغرب",
+   "en": "Zagreb",
+   "desc_ar": "عاصمة كرواتيا",
+   "desc_en": "capital city of Croatia",
+   "types": [
+    {
+     "id": "Q15105893",
+     "ar": "مدينة في كرواتيا",
+     "en": "town in Croatia"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q57053",
+     "ar": "مقاطعة في كرواتيا",
+     "en": "county of Croatia"
+    }
+   ],
+   "start": 1094,
+   "end": null,
+   "arwiki": "زغرب",
+   "enwiki": "Zagreb",
+   "linked_by": "article"
+  },
+  "tallinn-estonia": {
+   "qid": "Q1770",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "تالين",
+   "en": "Tallinn",
+   "desc_ar": "عاصمة إستونيا",
+   "desc_en": "capital and most populous city of Estonia",
+   "types": [
+    {
+     "id": "Q707813",
+     "ar": "مدينة هانزية",
+     "en": "Hanseatic city"
+    },
+    {
+     "id": "Q11881845",
+     "ar": "بلدة في استونيا",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "تالين",
+   "enwiki": "Tallinn",
+   "linked_by": "article"
+  },
+  "lilongwe-malawi": {
+   "qid": "Q3876",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "ليلونغوي",
+   "en": "Lilongwe",
+   "desc_ar": "عاصمة مالاوي",
+   "desc_en": "capital of Malawi",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1902,
+   "end": null,
+   "arwiki": "ليلونغوي",
+   "enwiki": "Lilongwe",
+   "linked_by": "article"
+  },
+  "guatemala-city-guatemala": {
+   "qid": "Q1555",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "غواتيمالا العاصمة",
+   "en": "Guatemala City",
+   "desc_ar": "عاصمة جمهورية غواتيمالا وأكبر مُدنها",
+   "desc_en": "capital and largest city of the Republic of Guatemala",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1872284",
+     "ar": "بلدية في غواتيمالا",
+     "en": "municipality of Guatemala"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1524,
+   "end": null,
+   "arwiki": "غواتيمالا (مدينة)",
+   "enwiki": "Guatemala City",
+   "linked_by": "article"
+  },
+  "libreville-gabon": {
+   "qid": "Q3825",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "ليبرفيل",
+   "en": "Libreville",
+   "desc_ar": "عاصمة الغابون",
+   "desc_en": "capital city of Gabon",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1849,
+   "end": null,
+   "arwiki": "ليبرفيل",
+   "enwiki": "Libreville",
+   "linked_by": "article"
+  },
+  "suva-fiji": {
+   "qid": "Q38807",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "سوفا",
+   "en": "Suva",
+   "desc_ar": "عاصمة فيجي",
+   "desc_en": "capital city of Fiji",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "سوفا",
+   "enwiki": "Suva",
+   "linked_by": "article"
+  },
+  "nouakchott-mauritania": {
+   "qid": "Q3688",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "نواكشوط",
+   "en": "Nouakchott",
+   "desc_ar": "عاصمة موريتانيا",
+   "desc_en": "capital of Mauritania",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "نواكشوط",
+   "enwiki": "Nouakchott",
+   "linked_by": "article"
+  },
+  "bamako-mali": {
+   "qid": "Q3703",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "باماكو",
+   "en": "Bamako",
+   "desc_ar": "عاصمة مالي",
+   "desc_en": "capital of Mali",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q1901835",
+     "ar": "مقر الحكومة",
+     "en": "seat of government"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "باماكو",
+   "enwiki": "Bamako",
+   "linked_by": "article"
+  },
+  "beirut-lebanon": {
+   "qid": "Q3820",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "بيروت",
+   "en": "Beirut",
+   "desc_ar": "عاصمة الجمهورية اللبنانية",
+   "desc_en": "capital and largest city of Lebanon",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بيروت",
+   "enwiki": "Beirut",
+   "linked_by": "article"
+  },
+  "tbilisi-georgia": {
+   "qid": "Q994",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "تبليسي",
+   "en": "Tbilisi",
+   "desc_ar": "منطقة في جورجيا",
+   "desc_en": "capital and the largest city of Georgia (country)",
+   "types": [
+    {
+     "id": "Q1210300",
+     "ar": "منطقة في جورجيا",
+     "en": "Mkhare"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 455,
+   "end": null,
+   "arwiki": "تبليسي",
+   "enwiki": "Tbilisi",
+   "linked_by": "article"
+  },
+  "nur-sultan-kazakhstan": {
+   "qid": "Q1520",
+   "status": "verified",
+   "distance_km": 5,
+   "ar": "أستانة",
+   "en": "Astana",
+   "desc_ar": "عاصمة جمهورية قزاقستان",
+   "desc_en": "capital of Kazakhstan",
+   "types": [
+    {
+     "id": "Q7930989",
+     "ar": "مدينة أو بلدة",
+     "en": "city or town"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q12266391",
+     "ar": null,
+     "en": "city of republican significance"
+    }
+   ],
+   "start": 1830,
+   "end": null,
+   "arwiki": "آستانا",
+   "enwiki": "Astana",
+   "linked_by": "article"
+  },
+  "vientiane-laos": {
+   "qid": "Q9326",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "فيينتيان",
+   "en": "Vientiane",
+   "desc_ar": "عاصمة لاوس",
+   "desc_en": "capital of Laos",
+   "types": [
+    {
+     "id": "Q702492",
+     "ar": "منطقة حضرية",
+     "en": "urban area"
+    },
+    {
+     "id": "Q245260",
+     "ar": null,
+     "en": "conurbation"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1560,
+   "end": null,
+   "arwiki": "فيينتيان",
+   "enwiki": "Vientiane",
+   "linked_by": "article"
+  },
+  "brazzaville-congo-brazzaville": {
+   "qid": "Q3844",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "برازافيل",
+   "en": "Brazzaville",
+   "desc_ar": "عاصمة جمهورية ( الكونغو برازافيل) وهي تختلف عن الكونغو الديمقراطية",
+   "desc_en": "capital of the Republic of the Congo",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q902814",
+     "ar": "مدينة حدودية",
+     "en": "border city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1880,
+   "end": null,
+   "arwiki": "برازافيل",
+   "enwiki": "Brazzaville",
+   "linked_by": "article"
+  },
+  "conakry-guinea": {
+   "qid": "Q3733",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "كوناكري",
+   "en": "Conakry",
+   "desc_ar": "عاصمة غينيا",
+   "desc_en": "capital of Guinea",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "كوناكري",
+   "enwiki": "Conakry",
+   "linked_by": "article"
+  },
+  "yamoussoukro-ivory-coast": {
+   "qid": "Q3768",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "ياموسوكرو",
+   "en": "Yamoussoukro",
+   "desc_ar": "عاصمة ساحل العاج",
+   "desc_en": "city of côte d'ivoire",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q2679157",
+     "ar": null,
+     "en": "commune of Ivory Coast"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "ياموسوكرو",
+   "enwiki": "Yamoussoukro",
+   "linked_by": "article"
+  },
+  "ottawa-canada": {
+   "qid": "Q1930",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "أوتاوا",
+   "en": "Ottawa",
+   "desc_ar": "العاصمة الفيدرالية لكندا",
+   "desc_en": "capital city of Canada",
+   "types": [
+    {
+     "id": "Q18810091",
+     "ar": null,
+     "en": "census division of Canada"
+    },
+    {
+     "id": "Q17457753",
+     "ar": null,
+     "en": "census subdivision in Canada"
+    },
+    {
+     "id": "Q14762300",
+     "ar": null,
+     "en": "single-tier municipality"
+    }
+   ],
+   "start": 1855,
+   "end": null,
+   "arwiki": "أوتاوا",
+   "enwiki": "Ottawa",
+   "linked_by": "article"
+  },
+  "belgrade-serbia": {
+   "qid": "Q3711",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بلغراد",
+   "en": "Belgrade",
+   "desc_ar": "عاصمة جمهورية صربيا",
+   "desc_en": "capital and largest city of Serbia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بلغراد",
+   "enwiki": "Belgrade",
+   "linked_by": "article"
+  },
+  "bandar-seri-begawan-brunei": {
+   "qid": "Q9279",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "بندر سري بكاوان",
+   "en": "Bandar Seri Begawan",
+   "desc_ar": null,
+   "desc_en": "capital and largest city of Brunei",
+   "types": [
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    },
+    {
+     "id": "Q15284",
+     "ar": "بلدية",
+     "en": "municipality"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بندر سري بكاوان",
+   "enwiki": "Bandar Seri Begawan",
+   "linked_by": "article"
+  },
+  "sucre-bolivia": {
+   "qid": "Q2907",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "سوكري",
+   "en": "Sucre",
+   "desc_ar": "عاصمة بوليفيا الدستورية",
+   "desc_en": "constitutional capital of Bolivia",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1538,
+   "end": null,
+   "arwiki": "سوكري",
+   "enwiki": "Sucre",
+   "linked_by": "article"
+  },
+  "belmopan-belize": {
+   "qid": "Q3043",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "بلموبان",
+   "en": "Belmopan",
+   "desc_ar": "عاصمة بليز",
+   "desc_en": "capital of Belize",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    }
+   ],
+   "start": 1970,
+   "end": null,
+   "arwiki": "بلموبان",
+   "enwiki": "Belmopan",
+   "linked_by": "article"
+  },
+  "bangui-central-african-republic": {
+   "qid": "Q3832",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بنغي",
+   "en": "Bangui",
+   "desc_ar": "عاصمة جمهورية أفريقيا الوسطى",
+   "desc_en": "capital city of the Central African Republic",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q843886",
+     "ar": "محافظة في جمهورية أفريقيا الوسطى",
+     "en": "prefecture of the Central African Republic"
+    },
+    {
+     "id": "Q902814",
+     "ar": "مدينة حدودية",
+     "en": "border city"
+    }
+   ],
+   "start": 1889,
+   "end": null,
+   "arwiki": "بنغي",
+   "enwiki": "Bangui",
+   "linked_by": "article"
+  },
+  "yaound-cameroon": {
+   "qid": "Q3808",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "ياوندي",
+   "en": "Yaoundé",
+   "desc_ar": "عاصمة الكاميرون وثاني أكبر مدينة فيها",
+   "desc_en": "capital of Cameroon",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1888,
+   "end": null,
+   "arwiki": "ياوندي",
+   "enwiki": "Yaoundé",
+   "linked_by": "article"
+  },
+  "tirana-albania": {
+   "qid": "Q19689",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "تيرانا",
+   "en": "Tirana",
+   "desc_ar": "عاصمة ألبانيا",
+   "desc_en": "capital and the largest city of Albania",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q129676344",
+     "ar": null,
+     "en": "large city"
+    },
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    }
+   ],
+   "start": 1614,
+   "end": null,
+   "arwiki": "تيرانا",
+   "enwiki": "Tirana",
+   "linked_by": "article"
+  },
+  "yerevan-armenia": {
+   "qid": "Q1953",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "يريفان",
+   "en": "Yerevan",
+   "desc_ar": "عاصمة أرمينيا",
+   "desc_en": "capital and largest city of Armenia",
+   "types": [
+    {
+     "id": "Q20724701",
+     "ar": "مدينة أو بلدة في أرمينيا",
+     "en": "city or town in Armenia"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": -782,
+   "end": null,
+   "arwiki": "يريفان",
+   "enwiki": "Yerevan",
+   "linked_by": "article"
+  },
+  "baku-azerbaijan": {
+   "qid": "Q9248",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "باكو",
+   "en": "Baku",
+   "desc_ar": "عاصمة أذربيجان وأكبر مدنها",
+   "desc_en": "capital of Azerbaijan",
+   "types": [
+    {
+     "id": "Q56557664",
+     "ar": null,
+     "en": "şəhər"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "باكو",
+   "enwiki": "Baku",
+   "linked_by": "article"
+  },
+  "phnom-penh-cambodia": {
+   "qid": "Q1850",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "بنوم بنه",
+   "en": "Phnom Penh",
+   "desc_ar": "عاصمة كمبوديا",
+   "desc_en": "capital of Cambodia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q14846916",
+     "ar": null,
+     "en": "provincial municipality of Cambodia"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1372,
+   "end": null,
+   "arwiki": "بنوم بنه",
+   "enwiki": "Phnom Penh",
+   "linked_by": "article"
+  },
+  "la-paz-bolivia": {
+   "qid": "Q1491",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "لاباز",
+   "en": "La Paz",
+   "desc_ar": "عاصمة بوليفيا",
+   "desc_en": "capital city and seat of government of Bolivia",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q1901835",
+     "ar": "مقر الحكومة",
+     "en": "seat of government"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    }
+   ],
+   "start": 1548,
+   "end": null,
+   "arwiki": "لاباز",
+   "enwiki": "La Paz",
+   "linked_by": "article"
+  },
+  "cotonou-benin": {
+   "qid": "Q43595",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كوتونو",
+   "en": "Cotonou",
+   "desc_ar": "العاصمة الاقتصادية للبنين",
+   "desc_en": "city in Benin, seat of the government",
+   "types": [
+    {
+     "id": "Q1780506",
+     "ar": "بلدية في بنين",
+     "en": "commune of Benin"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "كوتونو",
+   "enwiki": "Cotonou",
+   "linked_by": "article"
+  },
+  "sofia-bulgaria": {
+   "qid": "Q472",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "صوفيا",
+   "en": "Sofia",
+   "desc_ar": "عاصمة بلغاريا",
+   "desc_en": "capital city of Bulgaria",
+   "types": [
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    },
+    {
+     "id": "Q15303838",
+     "ar": "مقر البلدية",
+     "en": "municipality seat"
+    },
+    {
+     "id": "Q15344922",
+     "ar": "مقعد الأوبلاست",
+     "en": "oblast seat"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "صوفيا",
+   "enwiki": "Sofia",
+   "linked_by": "article"
+  },
+  "minsk-belarus": {
+   "qid": "Q2280",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "مينسك",
+   "en": "Minsk",
+   "desc_ar": "عاصمة بيلاروسيا",
+   "desc_en": "capital and largest city of Belarus",
+   "types": [
+    {
+     "id": "Q14921981",
+     "ar": "التقسيم الإداري في بيلاروس",
+     "en": "administrative territorial entity of Belarus"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q7930989",
+     "ar": "مدينة أو بلدة",
+     "en": "city or town"
+    }
+   ],
+   "start": 1067,
+   "end": null,
+   "arwiki": "مينسك",
+   "enwiki": "Minsk",
+   "linked_by": "article"
+  },
+  "thimphu-bhutan": {
+   "qid": "Q9270",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "تيمفو",
+   "en": "Thimphu",
+   "desc_ar": "عاصمة مملكة بوتان وأكبر مدنها",
+   "desc_en": "capital of Bhutan",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    }
+   ],
+   "start": 1955,
+   "end": null,
+   "arwiki": "تيمفو",
+   "enwiki": "Thimphu",
+   "linked_by": "article"
+  },
+  "gaborone-botswana": {
+   "qid": "Q3919",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "غابورون",
+   "en": "Gaborone",
+   "desc_ar": "عاصمة بوتسوانا",
+   "desc_en": "capital city of Botswana",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q56061",
+     "ar": "كيان إقليمي إداري",
+     "en": "administrative territorial entity"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1965,
+   "end": null,
+   "arwiki": "غابورون",
+   "enwiki": "Gaborone",
+   "linked_by": "article"
+  },
+  "canberra-australia": {
+   "qid": "Q3114",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كانبرا",
+   "en": "Canberra",
+   "desc_ar": "عاصمة أستراليا",
+   "desc_en": "capital city of Australia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q114496982",
+     "ar": null,
+     "en": "political city"
+    }
+   ],
+   "start": 1913,
+   "end": null,
+   "arwiki": "كانبرا",
+   "enwiki": "Canberra",
+   "linked_by": "article"
+  },
+  "ouagadougou-burkina-faso": {
+   "qid": "Q3777",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "واغادوغو",
+   "en": "Ouagadougou",
+   "desc_ar": "عاصمة بوركينا فاسو",
+   "desc_en": "capital of Burkina Faso",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q3257686",
+     "ar": "محلية",
+     "en": "locality"
+    },
+    {
+     "id": "Q3268571",
+     "ar": "تقسيم إداري لبلد محدد",
+     "en": "administrative territorial entity of a single country"
+    }
+   ],
+   "start": 1050,
+   "end": null,
+   "arwiki": "واغادوغو",
+   "enwiki": "Ouagadougou",
+   "linked_by": "article"
+  },
+  "sarajevo-bosnia-and-herzegovina": {
+   "qid": "Q11194",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "سراييفو",
+   "en": "Sarajevo",
+   "desc_ar": "عاصمة البوسنة والهرسك",
+   "desc_en": "capital city of Bosnia and Herzegovina",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q102104752",
+     "ar": "مدينة في البوسنة والهرسك",
+     "en": "city of Bosnia and Herzegovina"
+    }
+   ],
+   "start": 1462,
+   "end": null,
+   "arwiki": "سراييفو",
+   "enwiki": "Sarajevo",
+   "linked_by": "article"
+  },
+  "naypyidaw-myanmar": {
+   "qid": "Q37400",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "نايبيداو",
+   "en": "Naypyidaw",
+   "desc_ar": "عاصمة ميانمار",
+   "desc_en": "capital city of Myanmar",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q134587884",
+     "ar": null,
+     "en": "town in Myanmar"
+    }
+   ],
+   "start": 2005,
+   "end": null,
+   "arwiki": "نايبيداو",
+   "enwiki": "Naypyidaw",
+   "linked_by": "article"
+  },
+  "nuku-alofa-tonga": {
+   "qid": "Q38834",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "نوكو ألوفا",
+   "en": "Nukuʻalofa",
+   "desc_ar": "عاصمة تونغا",
+   "desc_en": "capital city of Tonga",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1795,
+   "end": null,
+   "arwiki": "نوكو ألوفا",
+   "enwiki": "Nukuʻalofa",
+   "linked_by": "article"
+  },
+  "hargeisa-somaliland": {
+   "qid": "Q168652",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "هرجيسا",
+   "en": "Hargeisa",
+   "desc_ar": "عاصمة أرض الصومال",
+   "desc_en": "capital city of Somaliland",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "هرجيسا",
+   "enwiki": "Hargeisa",
+   "linked_by": "article"
+  },
+  "victoria-seychelles": {
+   "status": "unverified",
+   "reason": "عنوان المقالة صفحة توضيح، ولم يتطابق أي مرشح من ويكي بيانات مع الإحداثيات"
+  },
+  "s-o-tom-sao-tome-and-principe": {
+   "qid": "Q3932",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "ساو تومي",
+   "en": "São Tomé",
+   "desc_ar": "عاصمة ساو تومي و برينسيب",
+   "desc_en": "capital city of São Tomé and Príncipe",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1485,
+   "end": null,
+   "arwiki": "ساو تومي",
+   "enwiki": "São Tomé",
+   "linked_by": "article"
+  },
+  "apia-samoa": {
+   "qid": "Q36260",
+   "status": "verified",
+   "distance_km": 7,
+   "ar": "أبيا",
+   "en": "Apia",
+   "desc_ar": "عاصمة دولة ساموا",
+   "desc_en": "capital of Samoa",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1850,
+   "end": null,
+   "arwiki": "أبيا",
+   "enwiki": "Apia",
+   "linked_by": "article"
+  },
+  "valletta-malta": {
+   "qid": "Q23800",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "البلد",
+   "en": "Valletta",
+   "desc_ar": "عاصمة جمهورية مالطة",
+   "desc_en": "capital of Malta",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q719592",
+     "ar": "بلدية في مالطا",
+     "en": "local council of Malta"
+    }
+   ],
+   "start": 1566,
+   "end": null,
+   "arwiki": "فاليتا",
+   "enwiki": "Valletta",
+   "linked_by": "article"
+  },
+  "mal-maldives": {
+   "qid": "Q9347",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "ماليه",
+   "en": "Malé",
+   "desc_ar": "عاصمة جزر المالديف",
+   "desc_en": "capital of the Maldives",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "ماليه",
+   "enwiki": "Malé",
+   "linked_by": "article"
+  },
+  "jerusalem-israel": {
+   "qid": "Q1218",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "القدس",
+   "en": "Jerusalem",
+   "desc_ar": "مدينة في الشرق الأوسط، مقدسة لدى الديانات الإبراهيمية الثلاث",
+   "desc_en": "city in the Middle East, holy to the three Abrahamic religions",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q116291627",
+     "ar": null,
+     "en": "holy city of Abrahamic religion"
+    },
+    {
+     "id": "Q1200957",
+     "ar": "مقصد سياحي",
+     "en": "tourist destination"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "القدس",
+   "enwiki": "Jerusalem",
+   "linked_by": "article"
+  },
+  "praia-cape-verde": {
+   "qid": "Q3751",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "برايا",
+   "en": "Praia",
+   "desc_ar": "عاصمة الرأس الأخضر",
+   "desc_en": "capital of Cape Verde",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1858,
+   "end": null,
+   "arwiki": "برايا",
+   "enwiki": "Praia",
+   "linked_by": "article"
+  },
+  "nassau-the-bahamas": {
+   "qid": "Q2467",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "ناساو",
+   "en": "Nassau",
+   "desc_ar": "عاصمة جزر بهاماس",
+   "desc_en": "capital and largest city of the Bahamas",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    }
+   ],
+   "start": 1695,
+   "end": null,
+   "arwiki": "ناساو",
+   "enwiki": "Nassau",
+   "linked_by": "search"
+  },
+  "nicosia-cyprus": {
+   "qid": "Q3856",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "نيقوسيا",
+   "en": "Nicosia",
+   "desc_ar": "عاصمة قبرص",
+   "desc_en": "capital of Cyprus",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q29556224",
+     "ar": "مدينة في قبرص",
+     "en": "city in Cyprus"
+    },
+    {
+     "id": "Q67123843",
+     "ar": null,
+     "en": "town divided by border"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "نيقوسيا",
+   "enwiki": "Nicosia",
+   "linked_by": "article"
+  },
+  "wellington-new-zealand": {
+   "qid": "Q23661",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "ويلينغتون",
+   "en": "Wellington",
+   "desc_ar": "عاصمة نيوزيلندا",
+   "desc_en": "capital city of New Zealand",
+   "types": [
+    {
+     "id": "Q702492",
+     "ar": "منطقة حضرية",
+     "en": "urban area"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": 1839,
+   "end": null,
+   "arwiki": "ويلينغتون",
+   "enwiki": "Wellington",
+   "linked_by": "article"
+  },
+  "hanoi-vietnam": {
+   "qid": "Q1858",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "هانوي",
+   "en": "Hanoi",
+   "desc_ar": "عاصمة فيتنام",
+   "desc_en": "capital of Vietnam",
+   "types": [
+    {
+     "id": "Q1381899",
+     "ar": null,
+     "en": "cities in Vietnam"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1010,
+   "end": null,
+   "arwiki": "هانوي",
+   "enwiki": "Hanoi",
+   "linked_by": "article"
+  },
+  "ankara-turkey": {
+   "qid": "Q3640",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "أنقرة",
+   "en": "Ankara",
+   "desc_ar": "عاصمة تركيا",
+   "desc_en": "capital of Turkey",
+   "types": [
+    {
+     "id": "Q2716259",
+     "ar": "بلدية كبرى في تركيا",
+     "en": "metropolitan municipality in Turkey"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "أنقرة",
+   "enwiki": "Ankara",
+   "linked_by": "article"
+  },
+  "budapest-hungary": {
+   "qid": "Q1781",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "بودابست",
+   "en": "Budapest",
+   "desc_ar": "عاصمة المجر وأكبر مدنها",
+   "desc_en": "capital and largest city of Hungary",
+   "types": [
+    {
+     "id": "Q13218690",
+     "ar": "وضع المدينة في المجر",
+     "en": "town in Hungary"
+    },
+    {
+     "id": "Q171441",
+     "ar": "جيب داخلي",
+     "en": "enclave"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 1873,
+   "end": null,
+   "arwiki": "بودابست",
+   "enwiki": "Budapest",
+   "linked_by": "article"
+  },
+  "sanaa-yemen": {
+   "qid": "Q2471",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "صنعاء",
+   "en": "Sanaa",
+   "desc_ar": "عاصمة اليمن وواحدة من أقدم المدن المأهولة بالسكان باستمرار منذ أكثر من 2500 عام",
+   "desc_en": "capital city of Yemen",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "صنعاء",
+   "enwiki": "Sanaa",
+   "linked_by": "article"
+  },
+  "bucharest-romania": {
+   "qid": "Q19660",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "بوخارست",
+   "en": "Bucharest",
+   "desc_ar": "عاصمة رومانيا",
+   "desc_en": "capital and largest city of Romania",
+   "types": [
+    {
+     "id": "Q640364",
+     "ar": "بلدية رومانية",
+     "en": "municipality of Romania"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1459,
+   "end": null,
+   "arwiki": "بوخارست",
+   "enwiki": "Bucharest",
+   "linked_by": "article"
+  },
+  "damascus-syria": {
+   "qid": "Q3766",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "دمشق",
+   "en": "Damascus",
+   "desc_ar": "عاصمة سوريا",
+   "desc_en": "capital and largest city of Syria",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q16127605",
+     "ar": "تجمع سكاني في سوريا",
+     "en": "populated place in Syria"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "دمشق",
+   "enwiki": "Damascus",
+   "linked_by": "article"
+  },
+  "khartoum-sudan": {
+   "qid": "Q1963",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "الخرطوم",
+   "en": "Khartoum",
+   "desc_ar": "عاصمة السودان وحاضرة ولاية الخرطوم",
+   "desc_en": "capital city of Sudan",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q257391",
+     "ar": "عاصمة فيدرالية",
+     "en": "federal capital"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "الخرطوم",
+   "enwiki": "Khartoum",
+   "linked_by": "article"
+  },
+  "oslo-norway": {
+   "qid": "Q585",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "أوسلو",
+   "en": "Oslo",
+   "desc_ar": "عاصمة النرويج وأكبر مدينة فيها",
+   "desc_en": "capital city of Norway",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q1306755",
+     "ar": "مركز إداري",
+     "en": "administrative centre"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 1048,
+   "end": null,
+   "arwiki": "أوسلو",
+   "enwiki": "Oslo",
+   "linked_by": "article"
+  },
+  "warsaw-poland": {
+   "qid": "Q270",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "وارسو",
+   "en": "Warsaw",
+   "desc_ar": "عاصمة بولندا",
+   "desc_en": "capital and largest city of Poland",
+   "types": [
+    {
+     "id": "Q925381",
+     "ar": "مدينة مع صلاحيات بووتيس",
+     "en": "city with powiat rights in Poland"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1901835",
+     "ar": "مقر الحكومة",
+     "en": "seat of government"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "وارسو",
+   "enwiki": "Warsaw",
+   "linked_by": "article"
+  },
+  "pyongyang-north-korea": {
+   "qid": "Q18808",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بيونغيانغ",
+   "en": "Pyongyang",
+   "desc_ar": "عاصمة كوريا الشمالية",
+   "desc_en": "capital city of North Korea",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q499073",
+     "ar": null,
+     "en": "direct-controlled municipality"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "بيونغيانغ",
+   "enwiki": "Pyongyang",
+   "linked_by": "article"
+  },
+  "dar-es-salaam-tanzania": {
+   "qid": "Q1960",
+   "status": "verified",
+   "distance_km": 3,
+   "ar": "دار السلام",
+   "en": "Dar es Salaam",
+   "desc_ar": "العاصمة السابقة لتنزانيا وأكبر مدنها",
+   "desc_en": "largest city in Tanzania and capital of Dar es Salaam Region",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 1862,
+   "end": null,
+   "arwiki": "دار السلام (تنزانيا)",
+   "enwiki": "Dar es Salaam",
+   "linked_by": "article"
+  },
+  "dublin-ireland": {
+   "qid": "Q1761",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "دبلن",
+   "en": "Dublin",
+   "desc_ar": "عاصمة أيرلندا",
+   "desc_en": "capital and largest city of Ireland",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    }
+   ],
+   "start": 841,
+   "end": null,
+   "arwiki": "دبلن",
+   "enwiki": "Dublin",
+   "linked_by": "article"
+  },
+  "monrovia-liberia": {
+   "qid": "Q3748",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "مونروفيا",
+   "en": "Monrovia",
+   "desc_ar": "عاصمة ليبيريا",
+   "desc_en": "capital city of Liberia",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1822,
+   "end": null,
+   "arwiki": "مونروفيا",
+   "enwiki": "Monrovia",
+   "linked_by": "article"
+  },
+  "kuala-lumpur-malaysia": {
+   "qid": "Q1865",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كوالالمبور",
+   "en": "Kuala Lumpur",
+   "desc_ar": "عاصمة ماليزيا وأكبر مدنها",
+   "desc_en": "federal territory and capital city of Malaysia",
+   "types": [
+    {
+     "id": "Q1008803",
+     "ar": "ولاية فدرالية",
+     "en": "federal territory of Malaysia"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1857,
+   "end": null,
+   "arwiki": "كوالالمبور",
+   "enwiki": "Kuala Lumpur",
+   "linked_by": "article"
+  },
+  "havana-cuba": {
+   "qid": "Q1563",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "هافانا",
+   "en": "Havana",
+   "desc_ar": "عاصمة دولة كوبا",
+   "desc_en": "capital and largest city of Cuba",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 1515,
+   "end": null,
+   "arwiki": "هافانا",
+   "enwiki": "Havana",
+   "linked_by": "article"
+  },
+  "prague-czechia": {
+   "qid": "Q1085",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "براغ",
+   "en": "Prague",
+   "desc_ar": "عاصمة جمهورية التشيك وأكبر المدن فيها",
+   "desc_en": "capital city of the Czech Republic",
+   "types": [
+    {
+     "id": "Q15978299",
+     "ar": "بلدية بصلاحيات بلدة في جمهورية التشيك",
+     "en": "municipality with town privileges in the Czech Republic"
+    },
+    {
+     "id": "Q548611",
+     "ar": "مقاطعة في جمهورية التشيك",
+     "en": "district of the Czech Republic"
+    },
+    {
+     "id": "Q192611",
+     "ar": "دائرة انتخابية",
+     "en": "electoral unit"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "براغ",
+   "enwiki": "Prague",
+   "linked_by": "article"
+  },
+  "kuwait-city-kuwait": {
+   "qid": "Q35178",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "مدينة الكويت",
+   "en": "Kuwait City",
+   "desc_ar": "مدينة وعاصمة دولة الكويت",
+   "desc_en": "capital of Kuwait",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1752,
+   "end": null,
+   "arwiki": "مدينة الكويت",
+   "enwiki": "Kuwait City",
+   "linked_by": "article"
+  },
+  "santo-domingo-dominican-republic": {
+   "qid": "Q34820",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "سانتو دومينغو",
+   "en": "Santo Domingo",
+   "desc_ar": "عاصمة جمهورية الدومينيكان",
+   "desc_en": "capital of the Dominican Republic",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1496,
+   "end": null,
+   "arwiki": "سانتو دومينغو",
+   "enwiki": "Santo Domingo",
+   "linked_by": "article"
+  },
+  "accra-ghana": {
+   "qid": "Q3761",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "أكرا",
+   "en": "Accra",
+   "desc_ar": "عاصمة غانا",
+   "desc_en": "capital city of Ghana",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "أكرا",
+   "enwiki": "Accra",
+   "linked_by": "article"
+  },
+  "tripoli-libya": {
+   "qid": "Q3579",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "طرابلس",
+   "en": "Tripoli",
+   "desc_ar": "عاصمة ليبيا وأكبر مدنها",
+   "desc_en": "capital city of Libya",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q16124843",
+     "ar": "بلديات ليبيا",
+     "en": "municipality of Libya"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "طرابلس",
+   "enwiki": "Tripoli",
+   "linked_by": "search"
+  },
+  "helsinki-finland": {
+   "qid": "Q1757",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "هلسنكي",
+   "en": "Helsinki",
+   "desc_ar": "عاصمة فنلندا",
+   "desc_en": "capital and most populous city of Finland",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    },
+    {
+     "id": "Q856076",
+     "ar": "بلديات فنلندا",
+     "en": "municipality of Finland"
+    }
+   ],
+   "start": 1550,
+   "end": null,
+   "arwiki": "هلسنكي",
+   "enwiki": "Helsinki",
+   "linked_by": "article"
+  },
+  "k-benhavn-denmark": {
+   "qid": "Q1748",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كوبنهاغن",
+   "en": "Copenhagen",
+   "desc_ar": "عاصمة الدانمارك",
+   "desc_en": "capital and largest city of Denmark",
+   "types": [
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q1392581",
+     "ar": null,
+     "en": "cycling city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    }
+   ],
+   "start": 1167,
+   "end": null,
+   "arwiki": "كوبنهاغن",
+   "enwiki": "Copenhagen",
+   "linked_by": "article"
+  },
+  "abidjan-ivory-coast": {
+   "qid": "Q1515",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "أبيدجان",
+   "en": "Abidjan",
+   "desc_ar": "أكبر مدينة في ساحل العاج والعاصمة السابقة لها",
+   "desc_en": "major city and economic capital of Côte d'Ivoire",
+   "types": [
+    {
+     "id": "Q2679157",
+     "ar": null,
+     "en": "commune of Ivory Coast"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q27554677",
+     "ar": "العاصمة السابقة",
+     "en": "former capital"
+    }
+   ],
+   "start": 1898,
+   "end": null,
+   "arwiki": "أبيدجان",
+   "enwiki": "Abidjan",
+   "linked_by": "article"
+  },
+  "bras-lia-brazil": {
+   "qid": "Q2844",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "برازيليا",
+   "en": "Brasília",
+   "desc_ar": "العاصمة الجديدة للبرازيل",
+   "desc_en": "federal capital of Brazil",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q15840617",
+     "ar": "عاصمة مخطط لها",
+     "en": "planned national capital"
+    },
+    {
+     "id": "Q114496982",
+     "ar": null,
+     "en": "political city"
+    }
+   ],
+   "start": 1960,
+   "end": null,
+   "arwiki": "برازيليا",
+   "enwiki": "Brasília",
+   "linked_by": "article"
+  },
+  "brussels-belgium": {
+   "qid": "Q240",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "بروكسل",
+   "en": "Brussels-Capital Region",
+   "desc_ar": "عاصمة بلجيكا",
+   "desc_en": "federal region of Belgium including the City of Brussels",
+   "types": [
+    {
+     "id": "Q83057",
+     "ar": "إقليم في بلجيكا",
+     "en": "region"
+    }
+   ],
+   "start": 1989,
+   "end": null,
+   "arwiki": "بروكسل",
+   "enwiki": "Brussels",
+   "linked_by": "article"
+  },
+  "dhaka-bangladesh": {
+   "qid": "Q1354",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "دكا",
+   "en": "Dhaka",
+   "desc_ar": "عاصمة بنغلاديش",
+   "desc_en": "capital and largest city of Bangladesh",
+   "types": [
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    },
+    {
+     "id": "Q1066984",
+     "ar": "مركز مالي",
+     "en": "financial center"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "دكا",
+   "enwiki": "Dhaka",
+   "linked_by": "article"
+  },
+  "luanda-angola": {
+   "qid": "Q3897",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "لواندا",
+   "en": "Luanda",
+   "desc_ar": "عاصمة أنجولا وأكبر مدنها",
+   "desc_en": "capital of Angola",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1575,
+   "end": null,
+   "arwiki": "لواندا",
+   "enwiki": "Luanda",
+   "linked_by": "article"
+  },
+  "yangon-myanmar": {
+   "qid": "Q37995",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "يانغون",
+   "en": "Yangon",
+   "desc_ar": "العاصمة السابقة لميانمار (بورما) والعاصمة الحالية لمنطقة يانغون",
+   "desc_en": "former capital of Myanmar (Burma) and the current capital of Yangon Region",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 1035,
+   "end": null,
+   "arwiki": "يانغون",
+   "enwiki": "Yangon",
+   "linked_by": "article"
+  },
+  "caracas-venezuela": {
+   "qid": "Q1533",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كراكاس",
+   "en": "Caracas",
+   "desc_ar": "عاصمة فنزويلا",
+   "desc_en": "capital and largest city of Venezuela",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 1567,
+   "end": null,
+   "arwiki": "كراكاس",
+   "enwiki": "Caracas",
+   "linked_by": "article"
+  },
+  "kyiv-ukraine": {
+   "qid": "Q1899",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "كييف",
+   "en": "Kyiv",
+   "desc_ar": "عاصمة أوكرانيا وأكبر مدنها",
+   "desc_en": "capital and largest city of Ukraine",
+   "types": [
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q7930989",
+     "ar": "مدينة أو بلدة",
+     "en": "city or town"
+    },
+    {
+     "id": "Q1200957",
+     "ar": "مقصد سياحي",
+     "en": "tourist destination"
+    }
+   ],
+   "start": 482,
+   "end": null,
+   "arwiki": "كييف",
+   "enwiki": "Kyiv",
+   "linked_by": "article"
+  },
+  "tashkent-uzbekistan": {
+   "qid": "Q269",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "طشقند",
+   "en": "Tashkent",
+   "desc_ar": "عاصمة ولاية طشقند وأوزبكستان",
+   "desc_en": "capital of Uzbekistan",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q7631083",
+     "ar": "التقسيم الإداري في أوزبكستان",
+     "en": "administrative territorial entity of Uzbekistan"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "طشقند",
+   "enwiki": "Tashkent",
+   "linked_by": "article"
+  },
+  "madrid-spain": {
+   "qid": "Q2807",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "مدريد",
+   "en": "Madrid",
+   "desc_ar": "عاصمة إسبانيا",
+   "desc_en": "capital of Spain",
+   "types": [
+    {
+     "id": "Q2074737",
+     "ar": "بلدية في إسبانيا",
+     "en": "municipality of Spain"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "مدريد",
+   "enwiki": "Madrid",
+   "linked_by": "article"
+  },
+  "stockholm-sweden": {
+   "qid": "Q1754",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "ستوكهولم",
+   "en": "Stockholm",
+   "desc_ar": "عاصمة مملكة السويد",
+   "desc_en": "capital and largest city of Sweden",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q707813",
+     "ar": "مدينة هانزية",
+     "en": "Hanseatic city"
+    }
+   ],
+   "start": 1187,
+   "end": null,
+   "arwiki": "ستوكهولم",
+   "enwiki": "Stockholm",
+   "linked_by": "article"
+  },
+  "bangkok-thailand": {
+   "qid": "Q1861",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "بانكوك",
+   "en": "Bangkok",
+   "desc_ar": "عاصمة تايلاند",
+   "desc_en": "capital of Thailand",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q15634695",
+     "ar": null,
+     "en": "special administrative area of Thailand"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    }
+   ],
+   "start": 1782,
+   "end": null,
+   "arwiki": "بانكوك",
+   "enwiki": "Bangkok",
+   "linked_by": "article"
+  },
+  "lima-peru": {
+   "qid": "Q2868",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "ليما",
+   "en": "Lima",
+   "desc_ar": "عاصمة دولة بيرو وأكبر المدن فيها",
+   "desc_en": "capital and largest city of Peru",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q618123",
+     "ar": "معلم جغرافي",
+     "en": "geographical feature"
+    }
+   ],
+   "start": 1535,
+   "end": null,
+   "arwiki": "ليما",
+   "enwiki": "Lima",
+   "linked_by": "article"
+  },
+  "dakar-senegal": {
+   "qid": "Q3718",
+   "status": "verified",
+   "distance_km": 7,
+   "ar": "دكار",
+   "en": "Dakar",
+   "desc_ar": "عاصمة السنغال",
+   "desc_en": "capital and the largest city of Senegal",
+   "types": [
+    {
+     "id": "Q2264924",
+     "ar": "مدن الميناء",
+     "en": "port city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q15253706",
+     "ar": null,
+     "en": "city"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "دكار",
+   "enwiki": "Dakar",
+   "linked_by": "article"
+  },
+  "johannesburg-south-africa": {
+   "qid": "Q34647",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "جوهانسبرغ",
+   "en": "Johannesburg",
+   "desc_ar": "أكبر مدينة في جنوب إفريقيا",
+   "desc_en": "largest city in South Africa",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 1886,
+   "end": null,
+   "arwiki": "جوهانسبرغ",
+   "enwiki": "Johannesburg",
+   "linked_by": "article"
+  },
+  "seoul-south-korea": {
+   "qid": "Q8684",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "سول",
+   "en": "Seoul",
+   "desc_ar": "عاصمة وأكبر مدينة في كوريا الجنوبية",
+   "desc_en": "capital and largest city of South Korea",
+   "types": [
+    {
+     "id": "Q7574799",
+     "ar": "مدن كوريا الجنوبية الخاصة",
+     "en": "Special City of Korea"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    }
+   ],
+   "start": 1395,
+   "end": null,
+   "arwiki": "سول",
+   "enwiki": "Seoul",
+   "linked_by": "article"
+  },
+  "manila-philippines": {
+   "qid": "Q1461",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "مانيلا",
+   "en": "Manila",
+   "desc_ar": "عاصمة الفلبين وأكبر مدينة بها",
+   "desc_en": "capital city of the Philippines",
+   "types": [
+    {
+     "id": "Q29946056",
+     "ar": "مدينة عالية التحضر",
+     "en": "highly urbanized city"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1571,
+   "end": null,
+   "arwiki": "مانيلا",
+   "enwiki": "Manila",
+   "linked_by": "article"
+  },
+  "kinshasa-congo-kinshasa": {
+   "qid": "Q3838",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "كينشاسا",
+   "en": "Kinshasa",
+   "desc_ar": "عاصمة جمهورية الكونغو الديمقراطية",
+   "desc_en": "capital and the largest city of the Democratic Republic of the Congo having the status of a province",
+   "types": [
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q902814",
+     "ar": "مدينة حدودية",
+     "en": "border city"
+    },
+    {
+     "id": "Q174844",
+     "ar": "مدينة كبيرة",
+     "en": "megacity"
+    }
+   ],
+   "start": 1881,
+   "end": null,
+   "arwiki": "كينشاسا",
+   "enwiki": "Kinshasa",
+   "linked_by": "article"
+  },
+  "new-delhi-india": {
+   "qid": "Q987",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "نيو دلهي",
+   "en": "New Delhi",
+   "desc_ar": "عاصمة الهند",
+   "desc_en": "capital city of India",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q1901835",
+     "ar": "مقر الحكومة",
+     "en": "seat of government"
+    },
+    {
+     "id": "Q112684326",
+     "ar": null,
+     "en": "municipality of India"
+    }
+   ],
+   "start": 1911,
+   "end": null,
+   "arwiki": "نيو دلهي",
+   "enwiki": "New Delhi",
+   "linked_by": "article"
+  },
+  "athens-greece": {
+   "qid": "Q1524",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "أثينا",
+   "en": "Athens",
+   "desc_ar": "عاصمة اليونان",
+   "desc_en": "capital and largest city of Greece",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    }
+   ],
+   "start": null,
+   "end": null,
+   "arwiki": "أثينا",
+   "enwiki": "Athens",
+   "linked_by": "article"
+  },
+  "baghdad-iraq": {
+   "qid": "Q1530",
+   "status": "verified",
+   "distance_km": 4,
+   "ar": "بغداد",
+   "en": "Baghdad",
+   "desc_ar": "عاصمة العراق",
+   "desc_en": "capital city of Iraq",
+   "types": [
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    },
+    {
+     "id": "Q257391",
+     "ar": "عاصمة فيدرالية",
+     "en": "federal capital"
+    }
+   ],
+   "start": 762,
+   "end": null,
+   "arwiki": "بغداد",
+   "enwiki": "Baghdad",
+   "linked_by": "article"
+  },
+  "addis-ababa-ethiopia": {
+   "qid": "Q3624",
+   "status": "verified",
+   "distance_km": 6,
+   "ar": "أديس أبابا",
+   "en": "Addis Ababa",
+   "desc_ar": "عاصمة إثيوبيا",
+   "desc_en": "capital city of Ethiopia",
+   "types": [
+    {
+     "id": "Q1057504",
+     "ar": "ولايات إثيوبيا",
+     "en": "region of Ethiopia"
+    },
+    {
+     "id": "Q257391",
+     "ar": "عاصمة فيدرالية",
+     "en": "federal capital"
+    },
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    }
+   ],
+   "start": 1886,
+   "end": null,
+   "arwiki": "أديس أبابا",
+   "enwiki": "Addis Ababa",
+   "linked_by": "article"
+  },
+  "buenos-aires-argentina": {
+   "qid": "Q1486",
+   "status": "verified",
+   "distance_km": 5,
+   "ar": "بوينس آيرس",
+   "en": "Buenos Aires",
+   "desc_ar": "عاصمة الأرجنتين",
+   "desc_en": "capital and largest city of Argentina",
+   "types": [
+    {
+     "id": "Q5770918",
+     "ar": "مدينة في الأرجنتين",
+     "en": "city of Argentina"
+    },
+    {
+     "id": "Q192611",
+     "ar": "دائرة انتخابية",
+     "en": "electoral unit"
+    },
+    {
+     "id": "Q475050",
+     "ar": "منطقة فدرالية",
+     "en": "federal district"
+    }
+   ],
+   "start": 1580,
+   "end": null,
+   "arwiki": "بوينس آيرس",
+   "enwiki": "Buenos Aires",
+   "linked_by": "article"
+  },
+  "kabul-afghanistan": {
+   "qid": "Q5838",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "كابل",
+   "en": "Kabul",
+   "desc_ar": "عاصمة أفغانستان وأكبر مدينة في الدولة",
+   "desc_en": "capital and the largest city of Afghanistan",
+   "types": [
+    {
+     "id": "Q5119",
+     "ar": "عاصمة",
+     "en": "capital city"
+    },
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1200,
+   "end": null,
+   "arwiki": "كابل",
+   "enwiki": "Kabul",
+   "linked_by": "article"
+  },
+  "taipei-taiwan": {
+   "qid": "Q1867",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "تايبيه",
+   "en": "Taipei",
+   "desc_ar": "عاصمة تايوان",
+   "desc_en": "special municipality and capital city of Taiwan",
+   "types": [
+    {
+     "id": "Q515",
+     "ar": "مدينة",
+     "en": "city"
+    },
+    {
+     "id": "Q2225003",
+     "ar": "بلدية خاصة",
+     "en": "special municipality"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1967,
+   "end": null,
+   "arwiki": "تايبيه",
+   "enwiki": "Taipei",
+   "linked_by": "article"
+  },
+  "washington-d-c-united-states-of-america": {
+   "qid": "Q61",
+   "status": "verified",
+   "distance_km": 2,
+   "ar": "واشنطن العاصمة",
+   "en": "Washington, D.C.",
+   "desc_ar": "عاصمة الولايات المتحدة",
+   "desc_en": "capital city of the United States of America",
+   "types": [
+    {
+     "id": "Q1093829",
+     "ar": "مدينة في الولايات المتحدة",
+     "en": "city in the United States"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    }
+   ],
+   "start": 1790,
+   "end": null,
+   "arwiki": "واشنطن العاصمة",
+   "enwiki": "Washington, D.C.",
+   "linked_by": "article"
+  },
+  "riyadh-saudi-arabia": {
+   "qid": "Q3692",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "الرياض",
+   "en": "Riyadh",
+   "desc_ar": "عاصمة المملكة العربية السعودية",
+   "desc_en": "capital and largest city of Saudi Arabia",
+   "types": [
+    {
+     "id": "Q486972",
+     "ar": "مستوطنة",
+     "en": "human settlement"
+    },
+    {
+     "id": "Q110571169",
+     "ar": "مدينة في السعودية",
+     "en": "city in Saudi Arabia"
+    },
+    {
+     "id": "Q108178728",
+     "ar": "عاصمة الدولة",
+     "en": "national capital"
+    }
+   ],
+   "start": 1746,
+   "end": null,
+   "arwiki": "الرياض",
+   "enwiki": "Riyadh",
+   "linked_by": "article"
+  },
+  "rome-italy": {
+   "qid": "Q220",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "روما",
+   "en": "Rome",
+   "desc_ar": "عاصمة إيطاليا",
+   "desc_en": "capital and largest city of Italy",
+   "types": [
+    {
+     "id": "Q902814",
+     "ar": "مدينة حدودية",
+     "en": "border city"
+    },
+    {
+     "id": "Q3685476",
+     "ar": null,
+     "en": "abolished municipality in Italy"
+    },
+    {
+     "id": "Q1200957",
+     "ar": "مقصد سياحي",
+     "en": "tourist destination"
+    }
+   ],
+   "start": -753,
+   "end": null,
+   "arwiki": "روما",
+   "enwiki": "Rome",
+   "linked_by": "article"
+  },
+  "nairobi-kenya": {
+   "qid": "Q3870",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "نيروبي",
+   "en": "Nairobi",
+   "desc_ar": "عاصمة كينيا",
+   "desc_en": "capital city of Kenya",
+   "types": [
+    {
+     "id": "Q3976641",
+     "ar": "التقسيم الإداري في كينيا",
+     "en": "administrative territorial entity of Kenya"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    }
+   ],
+   "start": 1899,
+   "end": null,
+   "arwiki": "نيروبي",
+   "enwiki": "Nairobi",
+   "linked_by": "article"
+  },
+  "jakarta-indonesia": {
+   "qid": "Q3630",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "جاكرتا",
+   "en": "Jakarta",
+   "desc_ar": "عاصمة إندونيسيا وأكبر مدنها تقع في جزيرة جاوة",
+   "desc_en": "capital and largest city of Indonesia",
+   "types": [
+    {
+     "id": "Q5098",
+     "ar": "أقاليم إندونيسيا",
+     "en": "province of Indonesia"
+    },
+    {
+     "id": "Q208511",
+     "ar": "مدينة عالمية",
+     "en": "global city"
+    },
+    {
+     "id": "Q200250",
+     "ar": "حاضرة",
+     "en": "metropolis"
+    }
+   ],
+   "start": 1527,
+   "end": null,
+   "arwiki": "جاكرتا",
+   "enwiki": "Jakarta",
+   "linked_by": "article"
+  },
+  "bogota-colombia": {
+   "qid": "Q2841",
+   "status": "verified",
+   "distance_km": 1,
+   "ar": "بوغوتا",
+   "en": "Bogotá",
+   "desc_ar": "عاصمة كولومبيا",
+   "desc_en": "capital city of Colombia",
+   "types": [
+    {
+     "id": "Q2555896",
+     "ar": "بلدية في كولومبيا",
+     "en": "municipality of Colombia"
+    },
+    {
+     "id": "Q10864048",
+     "ar": "المستوى الأول من التقسيم الإداري",
+     "en": "first-level administrative division"
+    },
+    {
+     "id": "Q395994",
+     "ar": "محيط عاصمة",
+     "en": "capital district or territory"
+    }
+   ],
+   "start": 1538,
+   "end": null,
+   "arwiki": "بوغوتا",
+   "enwiki": "Bogotá",
+   "linked_by": "article"
+  },
+  "santiago-chile": {
+   "qid": "Q2887",
+   "status": "verified",
+   "distance_km": 0,
+   "ar": "سانتياغو",
+   "en": "Santiago",
+   "desc_ar": "عاصمة دولة تشيلي وأكبر المدن فيها",
+   "desc_en": "capital city of Chile",
+   "types": [
+    {
+     "id": "Q25412763",
+     "ar": "مدينة في تشيلي",
+     "en": "city in Chile"
+    },
+    {
+     "id": "Q1549591",
+     "ar": "مدينة كبيرة (>100,000)",
+     "en": "big city"
+    },
+    {
+     "id": "Q51929311",
+     "ar": "أكبر مدينة",
+     "en": "largest city"
+    }
+   ],
+   "start": 1541,
+   "end": null,
+   "arwiki": "سانتياغو",
+   "enwiki": "Santiago",
+   "linked_by": "article"
+  },
+  "singapore-singapore": {
+   "qid": "Q334",
+   "status": "verified",
+   "distance_km": 6,
+   "ar": "سنغافورة",
+   "en": "Singapore",
+   "desc_ar": "دولة في جنوب شرق آسيا",
+   "desc_en": "sovereign island country and city-state in maritime Southeast Asia",
+   "types": [
+    {
+     "id": "Q3624078",
+     "ar": "دولة ذات سيادة",
+     "en": "sovereign state"
+    },
+    {
+     "id": "Q133442",
+     "ar": "دولة مدينة",
+     "en": "city-state"
+    },
+    {
+     "id": "Q112099",
+     "ar": "دولة جزرية",
+     "en": "island country"
+    }
+   ],
+   "start": 1965,
+   "end": null,
+   "arwiki": "سنغافورة",
+   "enwiki": "Singapore",
+   "linked_by": "article"
+  }
+ }
+}
