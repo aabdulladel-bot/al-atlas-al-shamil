@@ -648,5 +648,206 @@
     ]
    }
   ]
+ },
+ "profiles": {
+  "أنورادهابورا": {
+   "authority": {
+    "unclear": 1
+   },
+   "cost": {
+    "none": 1
+   },
+   "medium": {
+    "travel": 1
+   },
+   "need": {
+    "money": 1
+   }
+  },
+  "الإسكندرية": {
+   "authority": {
+    "mixed": 1,
+    "unclear": 1
+   },
+   "cost": {
+    "material": 1,
+    "none": 1
+   },
+   "medium": {
+    "commentary": 1,
+    "travel": 1
+   },
+   "need": {
+    "money": 2
+   }
+  },
+  "بريطانيا": {
+   "authority": {
+    "legal_rational": 1,
+    "unclear": 1
+   },
+   "cost": {
+    "symbolic": 2
+   },
+   "medium": {
+    "chronicle": 2
+   },
+   "need": {
+    "dignity": 2
+   }
+  },
+  "بورصة": {
+   "authority": {
+    "legal_rational": 1
+   },
+   "cost": {
+    "none": 1
+   },
+   "medium": {
+    "travel": 1
+   },
+   "need": {
+    "money": 1
+   }
+  },
+  "ترشيش": {
+   "authority": {
+    "unclear": 3
+   },
+   "cost": {
+    "none": 3
+   },
+   "medium": {
+    "scripture": 3
+   },
+   "need": {
+    "money": 3
+   }
+  },
+  "تلاتيلولكو": {
+   "authority": {
+    "unclear": 1
+   },
+   "cost": {
+    "none": 1
+   },
+   "medium": {
+    "chronicle": 1
+   },
+   "need": {
+    "money": 1
+   }
+  },
+  "دمشق": {
+   "authority": {
+    "unclear": 3
+   },
+   "cost": {
+    "none": 3
+   },
+   "medium": {
+    "scripture": 3
+   },
+   "need": {
+    "money": 3
+   }
+  },
+  "روما": {
+   "authority": {
+    "legal_rational": 1,
+    "traditional": 2,
+    "unclear": 3
+   },
+   "cost": {
+    "none": 4,
+    "political": 1,
+    "symbolic": 1
+   },
+   "medium": {
+    "chronicle": 6
+   },
+   "need": {
+    "belonging": 1,
+    "dignity": 1,
+    "money": 1,
+    "security": 1,
+    "values": 2
+   }
+  },
+  "سرقوسة": {
+   "authority": {
+    "traditional": 2,
+    "unclear": 2
+   },
+   "cost": {
+    "none": 2,
+    "standing": 1,
+    "symbolic": 1
+   },
+   "medium": {
+    "chronicle": 4
+   },
+   "need": {
+    "dignity": 3,
+    "values": 1
+   }
+  },
+  "صور": {
+   "authority": {
+    "unclear": 4
+   },
+   "cost": {
+    "none": 4
+   },
+   "medium": {
+    "scripture": 4
+   },
+   "need": {
+    "money": 3,
+    "unclear": 1
+   }
+  },
+  "طرابزون": {
+   "authority": {
+    "mixed": 1
+   },
+   "cost": {
+    "material": 1
+   },
+   "medium": {
+    "commentary": 1
+   },
+   "need": {
+    "money": 1
+   }
+  },
+  "قرطاج": {
+   "authority": {
+    "legal_rational": 1
+   },
+   "cost": {
+    "political": 1
+   },
+   "medium": {
+    "chronicle": 1
+   },
+   "need": {
+    "security": 1
+   }
+  },
+  "يهوذا": {
+   "authority": {
+    "unclear": 3
+   },
+   "cost": {
+    "none": 3
+   },
+   "medium": {
+    "scripture": 3
+   },
+   "need": {
+    "money": 3
+   }
+  }
  }
 }
