@@ -2252,6 +2252,8 @@ let activeSunna = null;
 const LENSES = [
   { file: "authority", title: "عدسة المرجعية (فيبر)", data: null },
   { file: "medium", title: "عدسة الوسيط", data: null },
+  { file: "need", title: "عدسة الحاجة", data: null },
+  { file: "cost", title: "عدسة الكلفة", data: null },
 ];
 lensesReady = Promise.all(LENSES.map((L) => getJson(`data/lenses/${L.file}.json`).then((d) => { L.data = d; return d; }).catch(() => null)))
   .then(() => { if (activeSunna && sunanData) renderSunna(sunanData.sunan.find((x) => x.id === activeSunna.id), activeSunna.placesLinked ?? false); });
@@ -2263,7 +2265,12 @@ function lensSummaryHtml(s) {
     for (const id of ids) { const e = byClaim.get(id); if (e) counts[e.type] = (counts[e.type] ?? 0) + 1; }
     const parts = Object.entries(counts).map(([t, n]) => `${L.data._meta.types[t]} ×${n}`);
     if (!parts.length) return "";
-    return `<div class="lens-authority"><span class="sub"><b>${escapeHtml(L.title)}:</b> ${escapeHtml(parts.join("، "))}. <i>تصنيف تحليلي للمشروع، لا ادعاء من المصدر.</i></span></div>`;
+    // الغياب معلومة بذاته، وتخمين المحرر (إن وُجد) يظهر معلَّماً منفصلاً عن نص الشاهد
+    const guesses = L.data.entries.filter((e) => ids.includes(e.claim) && e.analysis);
+    const guessHtml = guesses.length
+      ? `<details class="lens-guess"><summary class="sub">تخمين المحرر (لا يستند إلى نص الشاهد)</summary>${guesses.map((e) => `<p class="sub">${escapeHtml(e.analysis)}</p>`).join("")}</details>`
+      : "";
+    return `<div class="lens-authority"><span class="sub"><b>${escapeHtml(L.title)}:</b> ${escapeHtml(parts.join("، "))}. <i>تصنيف تحليلي للمشروع، لا ادعاء من المصدر.</i></span>${guessHtml}</div>`;
   }).join("");
 }
 function renderSunna(s, placesLinked) {
