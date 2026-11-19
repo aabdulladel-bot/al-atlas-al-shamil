@@ -142,8 +142,12 @@ const HILLSHADE = {
   drawn: { "hillshade-exaggeration": 0.45, "hillshade-shadow-color": cssVar("--relief-shadow"), "hillshade-highlight-color": cssVar("--relief-light"), "hillshade-accent-color": cssVar("--relief-shadow") },
 };
 // هالة الغلاف الجوي حول الكرة تخفت مع التقريب، والضباب عند الأفق فقط
+// لون ما تحت الصور: يظهر في كل بلاطة لم تُحمَّل بعد أثناء الدوران والتكبير. في وضع الأقمار هو لون أعماق المحيط
+// في صور Blue Marble نفسها، فتختفي الفجوات بدل أن تظهر بقعاً بيضاء (كان لون الخريطة المرسومة الفاتح يظهر فيها).
+const SEA_COLOR = { satellite: "#0f2a4f", drawn: cssVar("--sea") };
+// الأفق والضباب في وضع الأقمار أزرق داكن خفيف: الأفق الفاتح السابق كان يصنع هلالاً أبيض ثقيلاً حول حافة الكرة
 const SKY = {
-  satellite: { "sky-color": "#0b1d3a", "horizon-color": "#9cc3ef", "fog-color": "#9cc3ef", "fog-ground-blend": 0.9, "horizon-fog-blend": 0.4, "sky-horizon-blend": 0.6, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 4, 0.9, 6, 0] },
+  satellite: { "sky-color": "#0b1d3a", "horizon-color": "#1f4677", "fog-color": "#163763", "fog-ground-blend": 0.5, "horizon-fog-blend": 0.5, "sky-horizon-blend": 0.7, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 0.8, 4, 0.6, 6, 0] },
   drawn: { "sky-color": cssVar("--sea"), "horizon-color": cssVar("--bg"), "fog-color": cssVar("--bg"), "fog-ground-blend": 0.9, "horizon-fog-blend": 0.4, "sky-horizon-blend": 0.6, "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 3, 0.8, 5, 0] },
 };
 // لون ثابت لكل كيان عبر السنوات: درجة لون تُشتق من معرّفه في ويكي بيانات إن تحقق، وإلا من اسمه في المصدر،
@@ -184,7 +188,7 @@ const map = new maplibregl.Map({
       lights: { type: "raster", tiles: [LIGHTS_TILES], tileSize: 256, maxzoom: PACKS?.lights?.maxzoom ?? 8, attribution: LIGHTS_ATTRIBUTION },
     },
     layers: [
-      { id: "sea", type: "background", paint: { "background-color": cssVar("--sea") } },
+      { id: "sea", type: "background", paint: { "background-color": SEA_COLOR.satellite } },
       { id: "satellite", type: "raster", source: "satellite", paint: { "raster-fade-duration": 200 } },
       { id: "lights", type: "raster", source: "lights", layout: { visibility: "none" }, paint: { "raster-opacity": 0.92, "raster-fade-duration": 300 } },
       { id: "land", type: "fill", source: "land", layout: { visibility: "none" }, paint: { "fill-color": cssVar("--land") } },
@@ -288,6 +292,7 @@ function applyBasemap(mode) {
   setVis("relief", !sat);
   if (map.getLayer("hillshade")) for (const [k, v] of Object.entries(HILLSHADE[mode])) map.setPaintProperty("hillshade", k, v);
   map.setSky(SKY[mode]);
+  map.setPaintProperty("sea", "background-color", SEA_COLOR[mode]);
   if (map.getLayer("borders-fill")) {
     map.setPaintProperty("borders-fill", "fill-color", entityColor(mode));
     for (const id of ["borders-halo", "borders-line-approx", "borders-line"]) map.setPaintProperty(id, "line-color", entityColor(mode));
