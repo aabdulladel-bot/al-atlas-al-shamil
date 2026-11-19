@@ -2273,6 +2273,53 @@ function lensSummaryHtml(s) {
     return `<div class="lens-authority"><span class="sub"><b>${escapeHtml(L.title)}:</b> ${escapeHtml(parts.join("، "))}. <i>تصنيف تحليلي للمشروع، لا ادعاء من المصدر.</i></span>${guessHtml}</div>`;
   }).join("");
 }
+// روابط التحليل (scripts/build_analysis_links.py): مختبر الفرضية، وتعارض داخل المكان، وخيط الشاهد عبر المكان
+let analysisLinks = null;
+const analysisReady = getJson("data/analysis/links.json").then((d) => { analysisLinks = d; return d; }).catch(() => null);
+function analysisBlockHtml(s) {
+  if (!analysisLinks) return "";
+  const parts = [];
+  const conf = analysisLinks.conflicts.filter((c) => c.sunna === s.id);
+  for (const c of conf) {
+    parts.push(`<div class="ana-conflict"><span class="sub"><b>تعارض داخل المكان:</b> ${escapeHtml(c.place)}: ${c.sup.length} شاهد مؤيد، و${c.lim.length} مقيِّد لهذه السُّنّة في المكان نفسه. <i>تُقرأ الروايتان معاً، فالتعارض لا يُحسم هنا.</i></span></div>`);
+  }
+  const ids = [...s.supporting, ...s.limiting].map((x) => x.id ?? x.claim).filter(Boolean);
+  const places = new Set();
+  for (const id of ids) for (const t of analysisLinks.threads[id] ?? []) places.add(t.place);
+  if (places.size) parts.push(`<div class="ana-thread"><span class="sub"><b>خيط عبر المكان:</b> شواهد هذه السُّنّة تشترك في أماكن مع شواهد أخرى: ${escapeHtml([...places].join("، "))}.</span></div>`);
+  return parts.join("");
+}
+// مختبر الفرضية: جدول السُّنن × الحقب، بعدد المؤيد والمقيِّد في كل خلية. الخلية الفارغة فجوة في الشواهد، وتُعرض كذلك.
+function renderLab() {
+  if (!analysisLinks || !sunanData) return;
+  let lab = document.getElementById("sunan-lab");
+  if (!lab) {
+    lab = document.createElement("details");
+    lab.id = "sunan-lab";
+    lab.className = "lab";
+    lab.innerHTML = `<summary>مختبر الفرضية: الشواهد عبر الحقب</summary><div id="sunan-lab-body"></div>`;
+    sunanDetailEl.before(lab);
+  }
+  const eras = [1, 2, 3, 4, 5, 6, 7, 8];
+  const rows = analysisLinks.matrix.map((r) => {
+    const cells = eras.map((e) => {
+      const c = r.eras[String(e)];
+      if (!c) return `<td class="lab-gap" title="لا شاهد في هذه الحقبة">—</td>`;
+      return `<td><span class="lab-sup">+${c.sup}</span> <span class="lab-lim">−${c.lim}</span></td>`;
+    }).join("");
+    return `<tr data-sunna="${escapeHtml(r.sunna)}"><th scope="row">${escapeHtml(r.name)}</th>${cells}</tr>`;
+  }).join("");
+  document.getElementById("sunan-lab-body").innerHTML =
+    `<p class="sub">عدد الشواهد المؤيدة (+) والمقيِّدة (−) لكل سُنّة في كل حقبة. الفجوات (—) تبيّن ما لم يُوثَّق بعد، وليست نفياً للسُّنّة.</p>` +
+    `<div class="lab-scroll"><table class="lab-table"><thead><tr><th scope="col">السُّنّة</th>${eras.map((e) => `<th scope="col">${e}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table></div>`;
+  for (const tr of document.querySelectorAll("#sunan-lab-body tr[data-sunna]")) {
+    tr.addEventListener("click", () => {
+      const sn = sunanData.sunan.find((x) => x.id === tr.dataset.sunna);
+      if (sn) selectSunna(sn);
+    });
+  }
+}
+analysisReady.then(renderLab);
 function renderSunna(s, placesLinked) {
   const khaldun = s.khaldun.map((k) => `<div class="khaldun">«${escapeHtml(k.quote)}»<div class="sub">ابن خلدون، المقدمة: ${escapeHtml(k.location)}</div></div>`).join("");
   const support = s.supporting.length
@@ -2300,7 +2347,7 @@ function renderSunna(s, placesLinked) {
     (journey ? `<div class="row"><button type="button" data-start-journey="${escapeHtml(journey.id)}">ابدأ رحلة هذه السُّنّة (${journey.steps} خطوات)</button></div>` : "") +
     `<div class="hyp">${escapeHtml(s.hypothesis)}</div>` +
     `<span class="badge">${escapeHtml(s.strength)}: ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>` +
-    lensSummaryHtml(s) + khaldun + quant + mapNote + support + limits + antecedents + modern;
+    lensSummaryHtml(s) + analysisBlockHtml(s) + khaldun + quant + mapNote + support + limits + antecedents + modern;
 }
 function clearSunna() {
   activeSunna = null;
@@ -2443,7 +2490,7 @@ function buildSunanRing(list, sunnas, onPick) {
   return { show };
 }
 function loadSunan() {
-  sunanReady ??= loadSunanNow();
+  sunanReady ??= loadSunanNow().then((x) => { renderLab(); return x; });
   return sunanReady;
 }
 async function loadSunanNow() {
