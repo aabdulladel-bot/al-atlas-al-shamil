@@ -677,6 +677,23 @@
       .cine-pin .ring, .cine-pin .dot, .cine-lbl, .cine-cross { animation: none; }
       .cine-cap.cap-in { animation: none; }
     }
+
+    /* ---------- مختبر الفرضية وروابط التحليل ---------- */
+    details.lab { margin: 10px 0; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+    details.lab > summary { cursor: pointer; font-weight: 600; }
+    .lab-scroll { overflow-x: auto; margin-top: 8px; }
+    .lab-table { border-collapse: collapse; width: 100%; font-size: 12px; }
+    .lab-table th, .lab-table td { border-bottom: 1px solid var(--line); padding: 5px 6px; text-align: center; white-space: nowrap; }
+    .lab-table th[scope="row"] { text-align: start; font-weight: 600; }
+    .lab-table tbody tr[data-sunna] { cursor: pointer; }
+    .lab-table tbody tr[data-sunna]:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+    .lab-sup { color: #2f9e6b; font-weight: 700; }
+    .lab-lim { color: #e3342f; font-weight: 700; }
+    .lab-gap { color: var(--muted); }
+    .ana-conflict, .ana-thread { margin: 6px 0; padding: 6px 10px; border-radius: 8px; }
+    .ana-conflict { background: color-mix(in srgb, #e3342f 10%, transparent); border-inline-start: 3px solid #e3342f; }
+    .ana-thread { background: color-mix(in srgb, var(--accent) 8%, transparent); border-inline-start: 3px solid var(--accent); }
+    .lens-guess summary { cursor: pointer; }
   </style>
 </head>
 <body data-mode="simple">
