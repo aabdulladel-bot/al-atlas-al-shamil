@@ -33,6 +33,7 @@ cineEl.innerHTML = `
     </div>
   </div>
   <div class="cine-cap" id="cine-cap" aria-hidden="true"><div class="cap-box" id="cine-cap-box"></div><div class="cap-src" id="cine-cap-src"></div></div>
+  <div class="cine-card" id="cine-card" hidden></div>
   <div class="cine-ctrl">
     <button type="button" class="cine-btn" data-act="prev" title="السابق (→)">السابق</button>
     <button type="button" class="cine-btn cine-play" data-act="toggle" aria-label="إيقاف مؤقت" title="إيقاف وتشغيل (مسافة)">❚❚</button>
@@ -251,12 +252,12 @@ function flyCamera(pts, ms) {
     map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { ...opts, padding: capPadding(), maxZoom: 3.6 });
   } else if (!pts.length) {
     const c = cine.allAnchors.length ? cine.allAnchors[0] : [30, 22];
-    map.flyTo({ ...opts, center: c, zoom: isNarrow() ? 1.4 : 2, padding: capPadding(), curve: 1.5 });
+    map.flyTo({ ...opts, center: c, zoom: isNarrow() ? 1.4 : 2, padding: capPadding(), curve: 1.2 });
   } else if (pts.length === 1) {
-    map.flyTo({ ...opts, center: pts[0], zoom: isNarrow() ? 4.1 : 4.7, padding: capPadding(), curve: 1.6 });
+    map.flyTo({ ...opts, center: pts[0], zoom: isNarrow() ? 3.9 : 4.3, padding: capPadding(), curve: 1.3 });
   } else {
     const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
-    map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { ...opts, padding: capPadding(), maxZoom: 5 });
+    map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { ...opts, padding: capPadding(), maxZoom: 4.4 });
   }
 }
 
@@ -265,12 +266,52 @@ const capEl = $c("cine-cap"), capBox = $c("cine-cap-box"), capSrc = $c("cine-cap
 // النص يُبدَّل فوراً، ثم تُعاد حركة الظهور؛ فلا يبقى المقطع مخفياً إن تأخر مؤقِّت أو تتابعت الخطوات
 function showChunk(c) {
   capEl.className = `cine-cap k-${c.kind}`;
-  capBox.textContent = c.kind === "quote" ? `«${c.t}»` : c.t;
+  const text = c.kind === "quote" ? `«${c.t}»` : c.t;
+  const words = text.split(/\s+/);
+  const dur = chunkMs(c);
+  // الكلمات تُضاء واحدة بعد أخرى حتى نهاية المقطع، فيقرأ العين مع الصوت دون أن تُكشف الجملة كلها مرة واحدة
+  capBox.innerHTML = reduceMotion ? escapeHtml(text) : words.map((w, i) => `<span class="w" style="--d:${Math.round((i / words.length) * dur * 0.85)}ms">${escapeHtml(w)}</span>`).join(" ");
   capSrc.textContent = c.src ? `— ${c.src}` : "";
   capSrc.hidden = !c.src;
   if (reduceMotion) return;
   void capEl.offsetWidth; // إعادة تشغيل الحركة
   capEl.classList.add("cap-in");
+}
+// بطاقة فوق الخريطة: تُفتح وتُغلق بالتتابع، ولا تلتقط النقر فيمر إلى الخريطة
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+function cardShow(html) {
+  const el = $c("cine-card");
+  el.innerHTML = html;
+  el.hidden = false;
+  el.classList.remove("in");
+  void el.offsetWidth;
+  el.classList.add("in");
+}
+function cardHide() {
+  const el = $c("cine-card");
+  el.classList.remove("in");
+  el.hidden = true;
+}
+function sunnaOf(journey) { return sunanData?.sunan?.find((x) => x.id === journey.sunna) ?? null; }
+function introCardHtml(journey) {
+  const sn = sunnaOf(journey);
+  return `<p class="cc-kicker">رحلة</p><h2>${escapeHtml(journey.title.replace(/^رحلة:\s*/, ""))}</h2>` +
+    (sn ? `<p class="cc-hyp">${escapeHtml(sn.hypothesis)}</p>` : "");
+}
+function closingCardHtml(journey) {
+  const sn = sunnaOf(journey);
+  if (!sn) return `<p class="cc-kicker">خلاصة</p>`;
+  const sup = sn.supporting.length, lim = sn.limiting.filter((x) => x.id).length;
+  return `<p class="cc-kicker">خلاصة</p><p class="cc-hyp">${escapeHtml(sn.hypothesis)}</p>` +
+    `<p class="cc-count">الشواهد الموثّقة: ${sup} مؤيدة، ${lim} مقيِّدة</p>` +
+    `<p class="cc-note">السُّنّة فرضية تختبرها الشواهد، ولا قانون مؤكد.</p>`;
+}
+// الإخفاء التلقائي: الأزرار تختفي بعد لحظات من الإيقاع، وأي لمس يُظهرها
+let idleTimer = null;
+function wake() {
+  cineEl.classList.remove("idle");
+  clearTimeout(idleTimer);
+  if (cine.on && cine.playing) idleTimer = setTimeout(() => { if (cine.on && cine.playing) cineEl.classList.add("idle"); }, 2600);
 }
 function scheduleChunk(token, ms) {
   clearTimeout(cine.timer);
@@ -290,6 +331,7 @@ function scheduleChunk(token, ms) {
 }
 function afterStep(token) {
   const { journey, index } = journeyState;
+  if (index === journey.steps.length - 1 && cine.playing) cardShow(closingCardHtml(journey));
   if (index < journey.steps.length - 1) {
     cine.timer = setTimeout(() => { if (token === cine.token && cine.playing) go(1); }, 700);
   } else {
@@ -298,6 +340,7 @@ function afterStep(token) {
 }
 
 function setPlaying(p, ended = false) {
+  wake();
   const btn = cineEl.querySelector('[data-act="toggle"]');
   if (p && !cine.playing) {
     cine.playing = true;
@@ -338,6 +381,7 @@ function tickBar() {
 // ---------- تشغيل خطوة ----------
 async function runStep() {
   const token = ++cine.token;
+  cardHide();
   const { journey, index } = journeyState;
   const st = journey.steps[index];
   const total = journey.steps.length;
@@ -368,7 +412,7 @@ async function runStep() {
   if (token !== cine.token) return;
   const pts = places.map((f) => f.geometry.coordinates);
   const anchor = pts.length ? centroid(pts) : null;
-  const flight = st.kind === "khaldun" || st.kind === "end" || !pts.length ? 3200 : 2700;
+  const flight = st.kind === "khaldun" || st.kind === "end" || !pts.length ? 4400 : 3600;
 
   flyCamera(st.kind === "end" ? [] : pts, flight);
   if (anchor && cine.prevAnchor && st.kind !== "limits") animateRoute(cine.prevAnchor, anchor, camMs(flight * 0.9), token);
@@ -410,6 +454,7 @@ function go(delta) {
   const next = journeyState.index + delta;
   if (next < 0 || next >= journeyState.journey.steps.length) return;
   journeyState.index = next;
+  wake();
   runStep();
 }
 window.cinemaGo = (d) => (cine.on ? go(d) : null); // للاختبارات وللتصوير الآلي
@@ -429,12 +474,20 @@ async function cinemaStart() {
   ensureCineLayers();
   hideAtlasLayers();
   cine.playing = true;
+  map.dragPan.disable(); // الإيماءة تتقدّم في الفيلم، والسحب يتعارض معها فيُوقف الكاميرا
   cine.allAnchors = [];
   for (const st of journeyState.journey.steps.filter((x) => x.kind === "evidence")) {
     const pts = (await stepPlaces(st)).map((f) => f.geometry.coordinates);
     if (pts.length) cine.allAnchors.push(centroid(pts));
   }
   if (!cine.on) return;
+  // بطاقة الافتتاح قبل الخطوة الأولى، ثم تبدأ الكاميرا
+  if (journeyState.index === 0) {
+    cardShow(introCardHtml(journeyState.journey));
+    await wait(window.CINE_INTRO_MS ?? 3400); // المهلة قابلة للتعديل في الاختبار فقط
+    if (!cine.on) return;
+  }
+  cardHide();
   await runStep();
 }
 
@@ -449,6 +502,10 @@ function cinemaStop() {
   clearMarkers();
   removeCineLayers();
   restoreAtlasLayers();
+  cardHide();
+  cineEl.classList.remove("idle");
+  clearTimeout(idleTimer);
+  map.dragPan.enable();
   cineEl.hidden = true;
   document.body.classList.remove("cinema");
 }
@@ -483,10 +540,22 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") { e.preventDefault(); return go(-1); }
 });
 
-// تحريك القارئ للخريطة بيده يوقف العرض مؤقتاً، فلا تنتزع الرحلة الكاميرا منه
-for (const ev of ["dragstart", "zoomstart", "rotatestart", "pitchstart"]) {
-  map.on(ev, (e) => { if (cine.on && e.originalEvent && cine.playing) setPlaying(false); });
-}
+// الإيماءات: سحب أفقي يتقدّم (يميناً للسابق ويساراً للتالي، كاتجاه القراءة)، ونقرة على الشاشة تُوقف وتُشغّل
+let swipe = null;
+document.addEventListener("pointerdown", (e) => {
+  if (!cine.on) return;
+  wake();
+  swipe = { x: e.clientX, y: e.clientY, t: performance.now(), target: e.target };
+});
+document.addEventListener("pointerup", (e) => {
+  if (!cine.on || !swipe) return;
+  const s0 = swipe;
+  swipe = null;
+  if (s0.target.closest?.("button, input, select, a")) return; // أزرار التحكم تعمل وحدها
+  const dx = e.clientX - s0.x, dy = e.clientY - s0.y, dt = performance.now() - s0.t;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > 1.6 * Math.abs(dy)) go(dx < 0 ? 1 : -1);
+  else if (Math.abs(dx) < 10 && Math.abs(dy) < 10 && dt < 350) setPlaying(!cine.playing);
+});
 
 window.cinemaStart = cinemaStart;
 window.cinemaStop = cinemaStop;
