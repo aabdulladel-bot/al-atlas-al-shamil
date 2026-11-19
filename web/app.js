@@ -906,21 +906,64 @@ function openClaimCard(f) {
   }) + `<section class="card-sec"><h3>ما تقوله المصادر عن هذا المكان</h3><p class="sub">كل اقتباس مطابق لنص مصدره، ومعه قائله وتحفّظه.</p>${rows}</section>` +
     aboutHtml([["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)]]) + alsoHtml());
 }
-function openPlaceCard(f) {
+// سيرة الموضع وتعريفه: من ويكي بيانات (places_info.json) ومن الحدود بالإحداثيات (place_lineage.json)
+let placeInfo = null, placeLineage = null, openedPlace = null;
+// يُحمَّل الملفان عند أول فتح لبطاقة موضع، لا عند بداية الملف: getJson تعتمد على متغيرات تُعلن لاحقاً في الملف
+let placeDataReady = null;
+function ensurePlaceData() {
+  placeDataReady ??= Promise.all([
+    getJson("data/places_info.json").then((d) => { placeInfo = d; }).catch(() => null),
+    getJson("data/place_lineage.json").then((d) => { placeLineage = d; }).catch(() => null),
+  ]).then(() => {
+    // إن بقيت البطاقة مفتوحة لهذا الموضع، تُعاد رسمها بالتعريف والسيرة
+    if (openedPlace && !document.getElementById("card")?.hidden) openCard(placeCardBody(openedPlace));
+  });
+  return placeDataReady;
+}
+const LINEAGE_ORDER = ["-4000", "-1000", "-1", "700", "800", "900", "1000", "1200", "1600", "1800", "1914", "1945", "2010", "modern"];
+const placeId = (f) => f.properties._id ?? f.id;
+function placeInfoHtml(f) {
+  if (!placeInfo || !placeLineage) return `<section class="card-sec"><p class="sub">جارٍ تحميل التعريف والسيرة…</p></section>`;
+  const info = placeInfo.places[placeId(f)];
+  const lin = placeLineage.places[placeId(f)];
+  const def = info?.status === "verified"
+    ? `<p>${escapeHtml(info.desc_ar ?? info.desc_en ?? "")}</p>` + (info.desc_ar ? "" : `<p class="sub">الوصف بالإنجليزية كما في ويكي بيانات.</p>`)
+    : `<p class="sub">لا تعريف موثّق لهذا الموضع: ${escapeHtml(info?.reason ?? "غير مربوط بويكي بيانات")}</p>`;
+  const types = info?.status === "verified" ? info.types.map((t) => chip(t.ar ?? t.en)).join("") : "";
+  const rows = LINEAGE_ORDER.map((k) => {
+    const v = lin?.[k];
+    const en = typeof v === "string" ? v : v?.names ? v.names.join(" / ") : v?.name ?? null;
+    const ar = en ? placeLineage.names_ar?.[k]?.[en] : null;
+    const label = en ? (ar ?? en) : "لا كيان في المصدر";
+    const yr = k === "modern" ? "اليوم" : yearLabel(Number(k));
+    return `<li><span class="sub">${escapeHtml(yr)}</span> ${escapeHtml(label)}${!ar && en ? ` <span class="sub">(بالإنجليزية في المصدر)</span>` : ""}</li>`;
+  }).join("");
+  return `<section class="card-sec place-info"><h3>تعريف</h3>${def}${types ? `<p>${types}</p>` : ""}` +
+    `<details><summary>سيرته عبر الحدود (${escapeHtml(placeLineage._meta.years.length.toString())} سنة)</summary><ol class="lineage">${rows}</ol>` +
+    `<p class="sub">الكيان هنا من حدود المصدر التاريخي عند إحداثيات الموضع وحدها، ولا يعني أن أهله عرفوا أنفسهم به. ${escapeHtml(placeLineage._meta.caution)}</p></details>` +
+    `<p class="sub">التعريف من ويكي بيانات (CC0)، والسيرة من حدود Historical Basemaps (GPL-3) وNatural Earth.</p></section>`;
+}
+function placeCardBody(f) {
   const p = f.properties;
-  markPoint(f.geometry.coordinates);
-  if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
-  cardEntity = null;
   const era = ERAS.find((x) => x.id === Number(p.era));
-  if (typeof passportNote === "function") passportNote("place", `${p.era}|${p.name_ar}`);
-  openCard(cardHead({
+  return cardHead({
     title: p.name_ar, en: p.name_en, icon: "place",
     chips: [era ? chip(`الحقبة ${era.id}: ${era.label}`) : "", chip(COORD_SHORT[p.coord_status] ?? p.coord_status)].filter(Boolean),
   }) + aboutHtml([
     ["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)],
     ["في Pleiades", p.pleiades_id && p.pleiades_id !== "null" ? `<a href="https://pleiades.stoa.org/places/${encodeURIComponent(p.pleiades_id)}" target="_blank" rel="noopener">${escapeHtml(p.pleiades_title || p.pleiades_id)}</a>` : ""],
     ["في المصدر", p.source_name && p.source_name !== "null" ? escapeHtml(`${p.source_name}${p.source_country && !String(p.source_country).startsWith("wikidata") ? `، ${p.source_country}` : ""}`) : ""],
-  ]) + alsoHtml());
+  ]) + placeInfoHtml(f) + alsoHtml();
+}
+function openPlaceCard(f) {
+  const p = f.properties;
+  markPoint(f.geometry.coordinates);
+  if (map.getLayer("borders-highlight")) map.setFilter("borders-highlight", ["==", ["get", "NAME"], ""]);
+  cardEntity = null;
+  openedPlace = f;
+  if (typeof passportNote === "function") passportNote("place", `${p.era}|${p.name_ar}`);
+  ensurePlaceData();
+  openCard(placeCardBody(f));
 }
 // أسماء الأقاليم الستة في سلسلة السكان الإقليمية، وأسماء الدول من أسماء Natural Earth العربية إن طابقت
 const REGION_AR = { Africa: "أفريقيا", Asia: "آسيا", Europe: "أوروبا", "North and Central America": "أمريكا الشمالية والوسطى", "South America": "أمريكا الجنوبية", Oceania: "أوقيانوسيا" };
@@ -1193,6 +1236,8 @@ async function loadPlaces(era) {
   if (!placesCache.has(era.file)) placesCache.set(era.file, getJson(era.file));
   let data;
   try { data = await placesCache.get(era.file); } catch (err) { placesCache.delete(era.file); countEl.textContent = `تعذّر تحميل المواقع: ${err.message}`; return null; }
+  // معرّف الموضع (كما في ملف الحقبة) يُحفظ في الخصائص، لأن MapLibre تعيد للمعالم معرّفاً رقمياً لا نصياً
+  for (const f of data.features) if (f.properties._id === undefined) f.properties._id = f.id;
   placesData = data;
   const matched = data._meta?.matched ?? "";
   warnEl.textContent = matched ? `طابق Pleiades: ${matched}. المواقع التقديرية بمعيّن مفرّغ.` : "";
