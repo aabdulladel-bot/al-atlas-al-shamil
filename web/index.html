@@ -720,6 +720,12 @@
     ol.lineage { margin: 6px 0; padding-inline-start: 18px; font-size: 13px; line-height: 1.7; }
     ol.lineage li { margin: 0; }
     .place-info details summary { cursor: pointer; margin-top: 4px; }
+    .lin-rewind { margin: 6px 0; }
+    #rewind-box { position: fixed; left: 50%; bottom: calc(var(--tb-h) + 18px); transform: translateX(-50%); z-index: 6; max-width: min(560px, 92vw); text-align: center; padding: 10px 16px; border-radius: 12px; background: rgba(12, 14, 20, .82); color: #fff; box-shadow: 0 6px 24px rgba(0,0,0,.4); font: 600 15px/1.6 var(--font-b); }
+    #rewind-box[hidden] { display: none; }
+    #rewind-box .rw-year { display: block; color: #e9b44c; font: 600 13px var(--font-b); }
+    #rewind-box .rw-note { display: block; color: rgba(255,255,255,.75); font: 400 13px var(--font-b); margin-top: 4px; }
+    #rewind-stop { margin-top: 8px; font: 600 12px var(--font-b); color: #fff; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
   </style>
 </head>
 <body data-mode="simple">
@@ -972,6 +978,7 @@
   <script src="cube.js"></script>
   <script src="journey.js"></script>
   <script src="cinema.js"></script>
+  <script src="rewind.js"></script>
   <script src="showcase.js"></script>
   <script src="explore.js"></script>
 </body>
