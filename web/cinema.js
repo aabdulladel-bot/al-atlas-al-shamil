@@ -237,9 +237,11 @@ function restoreAtlasLayers() {
 }
 
 // ---------- الكاميرا ----------
+// الهامش العلوي يتسع لشريط التقدّم وعنوان الخطوة وتسمية المكان فوق نقطته، فلا يقع مكان تحت العنوان
+// (كانت «طرابزون» تقع تحته على الجوال بهامش 90)
 function capPadding() {
   const h = window.innerHeight, w = window.innerWidth;
-  return isNarrow() ? { top: 90, bottom: Math.round(h * 0.34), left: 28, right: 28 } : { top: 90, bottom: Math.round(h * 0.26), left: Math.round(w * 0.08), right: Math.round(w * 0.08) };
+  return isNarrow() ? { top: 140, bottom: Math.round(h * 0.34), left: 28, right: 28 } : { top: 125, bottom: Math.round(h * 0.26), left: Math.round(w * 0.08), right: Math.round(w * 0.08) };
 }
 function flyCamera(pts, ms) {
   const opts = { pitch: 0, bearing: 0, duration: camMs(ms), essential: true };
