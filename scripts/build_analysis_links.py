@@ -62,6 +62,22 @@ for pname, ids in place_claims.items():
         if others:
             threads[cid].append({"place": pname, "claims": sorted(others)})
 
+# بصمة المكان: توزيع أنواع العدسات الأربع على شواهد المكان الواحد (من ملفات sunan/lenses)
+lens_of = {}
+for f in sorted(glob.glob(str(ROOT / "sunan/lenses/*.json"))):
+    lens = json.loads(Path(f).read_text(encoding="utf-8"))
+    name = Path(f).stem
+    for e in lens["entries"]:
+        lens_of.setdefault(e["claim"], {})[name] = e["type"]
+profiles = {}
+for pname, ids in place_claims.items():
+    counts = defaultdict(lambda: defaultdict(int))
+    for cid in ids:
+        for lens, t in lens_of.get(cid, {}).items():
+            counts[lens][t] += 1
+    if counts:
+        profiles[pname] = {l: dict(sorted(v.items())) for l, v in sorted(counts.items())}
+
 data = {
     "_meta": {
         "note": "مشتق من sunan/sunan.json وclaim_points.geojson والادعاءات الموثّقة. لا يُعدَّل يدوياً، ويُعاد بناؤه بالسكربت.",
@@ -70,6 +86,7 @@ data = {
     "matrix": matrix,
     "conflicts": conflicts,
     "threads": {k: v for k, v in sorted(threads.items())},
+    "profiles": dict(sorted(profiles.items())),
 }
 text = json.dumps(data, ensure_ascii=False, indent=1) + "\n"
 if CHECK:

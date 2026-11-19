@@ -2287,6 +2287,18 @@ function analysisBlockHtml(s) {
   const places = new Set();
   for (const id of ids) for (const t of analysisLinks.threads[id] ?? []) places.add(t.place);
   if (places.size) parts.push(`<div class="ana-thread"><span class="sub"><b>خيط عبر المكان:</b> شواهد هذه السُّنّة تشترك في أماكن مع شواهد أخرى: ${escapeHtml([...places].join("، "))}.</span></div>`);
+  // بصمة المكان: توزيع العدسات الأربع على شواهده، ليقرأ الباحث الأماكن بالأدوات لا بالأسماء وحدها
+  for (const pl of places) {
+    const prof = analysisLinks.profiles?.[pl];
+    if (!prof) continue;
+    const lines = Object.entries(prof).map(([lens, types]) => {
+      const L = LENSES.find((x) => x.file === lens);
+      const label = L ? L.title.replace(/^عدسة /, "") : lens;
+      const items = Object.entries(types).map(([t, n]) => `${L?.data?._meta.types[t] ?? t} ×${n}`).join("، ");
+      return `<span class="prof-line">${escapeHtml(label)}: ${escapeHtml(items)}</span>`;
+    }).join("");
+    parts.push(`<div class="ana-profile"><span class="sub"><b>بصمة ${escapeHtml(pl)}:</b></span>${lines}</div>`);
+  }
   return parts.join("");
 }
 // مختبر الفرضية: جدول السُّنن × الحقب، بعدد المؤيد والمقيِّد في كل خلية. الخلية الفارغة فجوة في الشواهد، وتُعرض كذلك.
@@ -2301,18 +2313,19 @@ function renderLab() {
     sunanDetailEl.before(lab);
   }
   const eras = [1, 2, 3, 4, 5, 6, 7, 8];
+  const head = `<div class="lab-head"><span></span>${eras.map((e) => `<span>${e}</span>`).join("")}</div>`;
   const rows = analysisLinks.matrix.map((r) => {
     const cells = eras.map((e) => {
       const c = r.eras[String(e)];
-      if (!c) return `<td class="lab-gap" title="لا شاهد في هذه الحقبة">—</td>`;
-      return `<td><span class="lab-sup">+${c.sup}</span> <span class="lab-lim">−${c.lim}</span></td>`;
+      if (!c) return `<span class="lab-cell lab-gap" title="لا شاهد في هذه الحقبة">—</span>`;
+      return `<span class="lab-cell"><span class="lab-sup">+${c.sup}</span><span class="lab-lim">−${c.lim}</span></span>`;
     }).join("");
-    return `<tr data-sunna="${escapeHtml(r.sunna)}"><th scope="row">${escapeHtml(r.name)}</th>${cells}</tr>`;
+    return `<div class="lab-row" data-sunna="${escapeHtml(r.sunna)}"><div class="lab-name">${escapeHtml(r.name)}</div><div class="lab-cells">${cells}</div></div>`;
   }).join("");
   document.getElementById("sunan-lab-body").innerHTML =
     `<p class="sub">عدد الشواهد المؤيدة (+) والمقيِّدة (−) لكل سُنّة في كل حقبة. الفجوات (—) تبيّن ما لم يُوثَّق بعد، وليست نفياً للسُّنّة.</p>` +
-    `<div class="lab-scroll"><table class="lab-table"><thead><tr><th scope="col">السُّنّة</th>${eras.map((e) => `<th scope="col">${e}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table></div>`;
-  for (const tr of document.querySelectorAll("#sunan-lab-body tr[data-sunna]")) {
+    `<div class="lab-grid">${head}${rows}</div>`;
+  for (const tr of document.querySelectorAll("#sunan-lab-body .lab-row[data-sunna]")) {
     tr.addEventListener("click", () => {
       const sn = sunanData.sunan.find((x) => x.id === tr.dataset.sunna);
       if (sn) selectSunna(sn);
