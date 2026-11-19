@@ -2247,23 +2247,24 @@ const sunanDetailEl = document.getElementById("sunan-detail");
 let sunanData = null;
 let activeSunna = null;
 
-// عدسة المرجعية (فيبر): تصنيف تحليلي للمشروع لكل شاهد، يُعرض ملخصاً بعدد كل نوع في السُّنّة
-let authorityLens = null;
-const authorityLensReady = getJson("data/lenses/authority.json").then((d) => {
-  authorityLens = d;
-  // إن كانت بطاقة سُنّة مفتوحة قبل وصول التصنيف، يُعاد رسمها لتظهر فيها العدسة
-  if (activeSunna && sunanData) renderSunna(sunanData.sunan.find((x) => x.id === activeSunna.id), activeSunna.placesLinked ?? false);
-  return d;
-}).catch(() => null);
-function authoritySummaryHtml(s) {
-  if (!authorityLens) return "";
-  const byClaim = new Map(authorityLens.entries.map((e) => [e.claim, e]));
+// العدسات التحليلية: تصنيف تحليلي للمشروع لكل شاهد، يُعرض في بطاقة السُّنّة ملخصاً بعدد كل نوع.
+// المرجعية (فيبر): من أين تأتي السلطة. الوسيط: القناة التي وصل بها الخطاب. ملفاتها في web/data/lenses/.
+const LENSES = [
+  { file: "authority", title: "عدسة المرجعية (فيبر)", data: null },
+  { file: "medium", title: "عدسة الوسيط", data: null },
+];
+lensesReady = Promise.all(LENSES.map((L) => getJson(`data/lenses/${L.file}.json`).then((d) => { L.data = d; return d; }).catch(() => null)))
+  .then(() => { if (activeSunna && sunanData) renderSunna(sunanData.sunan.find((x) => x.id === activeSunna.id), activeSunna.placesLinked ?? false); });
+function lensSummaryHtml(s) {
   const ids = [...s.supporting, ...s.limiting].map((x) => x.id ?? x.claim).filter(Boolean);
-  const counts = {};
-  for (const id of ids) { const e = byClaim.get(id); if (e) counts[e.type] = (counts[e.type] ?? 0) + 1; }
-  const parts = Object.entries(counts).map(([t, n]) => `${authorityLens._meta.types[t]} ×${n}`);
-  if (!parts.length) return "";
-  return `<div class="lens-authority"><span class="sub"><b>عدسة المرجعية (فيبر):</b> ${escapeHtml(parts.join("، "))}. <i>تصنيف تحليلي للمشروع، لا ادعاء من المصدر.</i></span></div>`;
+  return LENSES.filter((L) => L.data).map((L) => {
+    const byClaim = new Map(L.data.entries.map((e) => [e.claim, e]));
+    const counts = {};
+    for (const id of ids) { const e = byClaim.get(id); if (e) counts[e.type] = (counts[e.type] ?? 0) + 1; }
+    const parts = Object.entries(counts).map(([t, n]) => `${L.data._meta.types[t]} ×${n}`);
+    if (!parts.length) return "";
+    return `<div class="lens-authority"><span class="sub"><b>${escapeHtml(L.title)}:</b> ${escapeHtml(parts.join("، "))}. <i>تصنيف تحليلي للمشروع، لا ادعاء من المصدر.</i></span></div>`;
+  }).join("");
 }
 function renderSunna(s, placesLinked) {
   const khaldun = s.khaldun.map((k) => `<div class="khaldun">«${escapeHtml(k.quote)}»<div class="sub">ابن خلدون، المقدمة: ${escapeHtml(k.location)}</div></div>`).join("");
@@ -2292,7 +2293,7 @@ function renderSunna(s, placesLinked) {
     (journey ? `<div class="row"><button type="button" data-start-journey="${escapeHtml(journey.id)}">ابدأ رحلة هذه السُّنّة (${journey.steps} خطوات)</button></div>` : "") +
     `<div class="hyp">${escapeHtml(s.hypothesis)}</div>` +
     `<span class="badge">${escapeHtml(s.strength)}: ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>` +
-    authoritySummaryHtml(s) + khaldun + quant + mapNote + support + limits + antecedents + modern;
+    lensSummaryHtml(s) + khaldun + quant + mapNote + support + limits + antecedents + modern;
 }
 function clearSunna() {
   activeSunna = null;
