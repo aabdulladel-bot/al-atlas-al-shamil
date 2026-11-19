@@ -2247,6 +2247,24 @@ const sunanDetailEl = document.getElementById("sunan-detail");
 let sunanData = null;
 let activeSunna = null;
 
+// عدسة المرجعية (فيبر): تصنيف تحليلي للمشروع لكل شاهد، يُعرض ملخصاً بعدد كل نوع في السُّنّة
+let authorityLens = null;
+const authorityLensReady = getJson("data/lenses/authority.json").then((d) => {
+  authorityLens = d;
+  // إن كانت بطاقة سُنّة مفتوحة قبل وصول التصنيف، يُعاد رسمها لتظهر فيها العدسة
+  if (activeSunna && sunanData) renderSunna(sunanData.sunan.find((x) => x.id === activeSunna.id), activeSunna.placesLinked ?? false);
+  return d;
+}).catch(() => null);
+function authoritySummaryHtml(s) {
+  if (!authorityLens) return "";
+  const byClaim = new Map(authorityLens.entries.map((e) => [e.claim, e]));
+  const ids = [...s.supporting, ...s.limiting].map((x) => x.id ?? x.claim).filter(Boolean);
+  const counts = {};
+  for (const id of ids) { const e = byClaim.get(id); if (e) counts[e.type] = (counts[e.type] ?? 0) + 1; }
+  const parts = Object.entries(counts).map(([t, n]) => `${authorityLens._meta.types[t]} ×${n}`);
+  if (!parts.length) return "";
+  return `<div class="lens-authority"><span class="sub"><b>عدسة المرجعية (فيبر):</b> ${escapeHtml(parts.join("، "))}. <i>تصنيف تحليلي للمشروع، لا ادعاء من المصدر.</i></span></div>`;
+}
 function renderSunna(s, placesLinked) {
   const khaldun = s.khaldun.map((k) => `<div class="khaldun">«${escapeHtml(k.quote)}»<div class="sub">ابن خلدون، المقدمة: ${escapeHtml(k.location)}</div></div>`).join("");
   const support = s.supporting.length
@@ -2274,7 +2292,7 @@ function renderSunna(s, placesLinked) {
     (journey ? `<div class="row"><button type="button" data-start-journey="${escapeHtml(journey.id)}">ابدأ رحلة هذه السُّنّة (${journey.steps} خطوات)</button></div>` : "") +
     `<div class="hyp">${escapeHtml(s.hypothesis)}</div>` +
     `<span class="badge">${escapeHtml(s.strength)}: ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>` +
-    khaldun + quant + mapNote + support + limits + antecedents + modern;
+    authoritySummaryHtml(s) + khaldun + quant + mapNote + support + limits + antecedents + modern;
 }
 function clearSunna() {
   activeSunna = null;
@@ -2296,6 +2314,7 @@ async function selectSunna(s) {
   } else if (ready) {
     showClaimPoints(false);
   }
+  if (activeSunna) activeSunna.placesLinked = linked.length > 0;
   renderSunna(s, linked.length > 0);
 }
 // دوّار السنن: بطاقات على أسطوانة تدوّرها اليد أو الأسهم، والسُّنّة المواجهة هي المختارة.
