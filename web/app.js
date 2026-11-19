@@ -1953,7 +1953,8 @@ function lineageSectionHtml(key, name, label) {
   const lens = activeLens ? lensById(activeLens) : null;
   const lensNote = lens?.questions?.[0] ? `<p class="sub lin-lens">تقرؤها عدسة «${escapeHtml(lens.ar)}»: ${escapeHtml(lens.questions[0])}</p>` : "";
   const copyBtn = `<button type="button" class="lin-copy" data-lcopy data-lkey="${escapeHtml(String(key))}" data-lname="${escapeHtml(name)}" data-llabel="${escapeHtml(label)}">انسخ السلسلة مع إسنادها</button>`;
-  return `<section class="card-sec lineage"><h3>سلسلة الكيان</h3>${backBtn}${modeBtns}` +
+  const rewindBtn = back.length ? `<button type="button" class="lin-rewind" data-rewind data-rkey="${escapeHtml(String(key))}" data-rname="${escapeHtml(name)}" data-rlabel="${escapeHtml(label)}">▶ عُد بالشريط إلى الجذر</button>` : "";
+  return `<section class="card-sec lineage"><h3>سلسلة الكيان</h3>${backBtn}${modeBtns}${rewindBtn}` +
     `<p class="sub">التطابق بالأرض لا بالاسم: كل صلة تعني أن جزءاً من الأرض مشترك بين الكيانين. «شاهد على الأرض المشتركة» تعني أن موقع شاهد موثّق يقع داخل تلك الأرض، لا أن الشاهد يذكر الصلة نفسها.</p>` +
     lensNote + copyBtn +
     (back.length ? `<h4 class="lin-dir">سبقه</h4>${lineageLevelsHtml(back)}` : "") +
