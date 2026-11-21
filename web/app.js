@@ -2904,6 +2904,7 @@ function renderTime() {
   declutterStops();
   const i = TIME_STOPS.findIndex((s) => String(s) === String(k));
   tbTrack.setAttribute("aria-valuenow", String(i));
+  tbTrack.setAttribute("aria-valuemax", String(TIME_STOPS.length - 1));
   tbTrack.setAttribute("aria-valuetext", `${yearText(k)}، الحقبة ${era.id}: ${era.label}`);
 }
 // تسميات المحطات المتقاربة (1914 و1945 و2010 واليوم) قد تتراكب: تبقى تسمية المحطة الحالية، ثم كل تسمية لا تتراكب مع ما بقي
@@ -2982,14 +2983,12 @@ function stopPlay() {
   document.dispatchEvent(new CustomEvent("atlas:play", { detail: false }));
   tbPlay.setAttribute("aria-pressed", "false");
   tbPlay.textContent = "▶";
-  tbPlay.setAttribute("aria-label", "تشغيل الزمن");
 }
 tbPlay.addEventListener("click", () => {
   if (playTimer) return stopPlay();
   if (String(time.key) === String(TIME_STOPS[TIME_STOPS.length - 1])) loadBorders(TIME_STOPS[0]);
   tbPlay.setAttribute("aria-pressed", "true");
   tbPlay.textContent = "❚❚";
-  tbPlay.setAttribute("aria-label", "إيقاف الزمن");
   playTimer = setInterval(() => { if (!stepTime(1)) stopPlay(); }, PLAY_BASE_MS / playSpeed);
 });
 

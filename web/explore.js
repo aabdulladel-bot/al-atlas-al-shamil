@@ -406,11 +406,14 @@ let qToken = 0;
 function closeResults() {
   qRes.hidden = true;
   qEl.setAttribute("aria-expanded", "false");
+  qEl.removeAttribute("aria-activedescendant");
   qSel = -1;
 }
 function markSel() {
   qRes.querySelectorAll(".qr").forEach((b, i) => b.setAttribute("aria-selected", String(i === qSel)));
-  qRes.querySelector('.qr[aria-selected="true"]')?.scrollIntoView({ block: "nearest" });
+  const cur = qRes.querySelector('.qr[aria-selected="true"]');
+  cur?.scrollIntoView({ block: "nearest" });
+  if (cur) qEl.setAttribute("aria-activedescendant", cur.id); else qEl.removeAttribute("aria-activedescendant");
 }
 async function runSearch() {
   const q = qEl.value;
@@ -420,10 +423,11 @@ async function runSearch() {
   if (token !== qToken) return;
   qItems = groups.flatMap(([, list]) => list);
   qSel = -1;
+  qEl.removeAttribute("aria-activedescendant");
   qRes.innerHTML = groups.length
     ? groups.map(([t, list]) => `<div class="qr-group">${TYPE_AR[t]}</div>` + list.map((it) => {
         const i = qItems.indexOf(it);
-        return `<button type="button" class="qr" role="option" aria-selected="false" data-i="${i}"><span class="qr-ic" aria-hidden="true">${ICONS[it.type]}</span><span class="qr-t"><b>${highlight(it.title, q)}</b><span>${escapeHtml(it.sub ?? "")}</span></span></button>`;
+        return `<button type="button" class="qr" id="qr-${i}" role="option" aria-selected="false" data-i="${i}"><span class="qr-ic" aria-hidden="true">${ICONS[it.type]}</span><span class="qr-t"><b>${highlight(it.title, q)}</b><span>${escapeHtml(it.sub ?? "")}</span></span></button>`;
       }).join("")).join("")
     : `<p>لا نتيجة لـ«${escapeHtml(q)}». جرّب اسماً آخر أو سنة مثل 1600 أو 500 ق.م.</p>`;
   qRes.hidden = false;
@@ -707,7 +711,15 @@ modalEl.addEventListener("click", (e) => {
   }
 });
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !modalEl.hidden) { e.stopImmediatePropagation(); closeModal(); }
+  if (e.key === "Escape" && !modalEl.hidden) { e.stopImmediatePropagation(); closeModal(); return; }
+  // حبس مفتاح Tab داخل النافذة، فلا يصل التركيز إلى ما خلفها وهي مفتوحة
+  if (e.key === "Tab" && !modalEl.hidden) {
+    const f = [...sheetEl.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])")].filter((el) => !el.disabled && el.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && (document.activeElement === first || !sheetEl.contains(document.activeElement))) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && (document.activeElement === last || !sheetEl.contains(document.activeElement))) { e.preventDefault(); first.focus(); }
+  }
 }, true);
 
 // ---------- بطاقة المنطقة: القارة عبر الزمن ----------
