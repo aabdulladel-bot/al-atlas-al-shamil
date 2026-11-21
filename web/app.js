@@ -966,7 +966,7 @@ function placeCardBody(f) {
   const p = f.properties;
   const era = ERAS.find((x) => x.id === Number(p.era));
   return cardHead({
-    title: p.name_ar, en: enAr(p.name_en), icon: "place",
+    title: p.name_ar, en: "", icon: "place",
     chips: [era ? chip(`الحقبة ${era.id}: ${era.label}`) : "", chip(COORD_SHORT[p.coord_status] ?? p.coord_status)].filter(Boolean),
   }) + aboutHtml([
     ["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)],
@@ -996,7 +996,7 @@ function openDemoCard(f) {
   cardEntity = null;
   const region = p.level === "region";
   openCard(cardHead({
-    title: demoTitle(p), en: enAr(p.name_en), icon: "demo",
+    title: demoTitle(p), en: "", icon: "demo",
     chips: [chip(`سنة ${yearLabel(Number(p.year))}`), chip(region ? "إقليم حديث التقسيم" : "دولة بحدودها الحديثة")],
     note: (region ? "الرقم لإقليم حديث التقسيم، وليس لحدود الحقبة." : "الرقم لأرض الدولة بحدودها الحديثة، لا لكيانات الحقبة.") + " ارتفاع العمود بالجذر التربيعي للسكان، بمقياس واحد لكل السنين.",
   }) + statsHtml([["نسمة", fmtBig(Number(p.population)), `${formatPop(p.population)} نسمة`]]) +
