@@ -748,7 +748,7 @@
     <div id="legend-body"></div>
   </aside>
   <div id="journey-box" class="card" hidden></div>
-  <div id="intro" hidden>
+  <div id="intro" role="region" aria-label="مقدمة الأطلس" hidden>
     <h2>الأطلس الشامل</h2>
     <p id="intro-span"></p>
     <div class="intro-doors">
@@ -759,7 +759,7 @@
     </div>
     <button type="button" class="intro-skip" data-door="skip">ادخل مباشرة</button>
   </div>
-  <div id="showcase-box" hidden>
+  <div id="showcase-box" role="region" aria-label="شاهد العرض" hidden>
     <div class="sc-head"><span id="sc-mode"></span><span id="sc-count"></span></div>
     <h2 id="sc-title"></h2>
     <p id="sc-text"></p>
@@ -980,16 +980,16 @@
   </aside>
   <div id="search-box" role="search">
     <svg class="sico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-    <input id="q" type="search" autocomplete="off" placeholder="ابحث عن دولة أو مكان أو شاهد أو سُنّة أو سنة، أو اكتب > للأوامر" aria-label="بحث" aria-controls="q-results" aria-expanded="false">
+    <input id="q" type="search" autocomplete="off" placeholder="ابحث عن دولة أو مكان أو شاهد أو سُنّة أو سنة، أو اكتب > للأوامر" aria-label="بحث" role="combobox" aria-autocomplete="list" aria-controls="q-results" aria-expanded="false">
     <div id="q-results" role="listbox" hidden></div>
   </div>
   <nav id="rail" aria-label="القارات"></nav>
   <div id="modal" hidden><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" id="sheet"></div></div>
-  <div id="timebar" role="group" aria-label="الزمن">
+  <div id="timebar" role="region" aria-label="الزمن">
     <button type="button" id="tb-play" aria-pressed="false" aria-label="تشغيل الزمن">▶</button>
     <button type="button" id="tb-speed" aria-label="سرعة التشغيل ×1" title="سرعة التشغيل الزمني">×1</button>
     <div id="tb-now"><b id="tb-year"></b><span id="tb-era"></span><span id="tb-gap" hidden></span></div>
-    <div id="tb-track" role="slider" tabindex="0" aria-label="سنة الخريطة" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+    <div id="tb-track" role="slider" tabindex="0" aria-label="سنة الخريطة" aria-valuemin="0" aria-valuemax="13" aria-valuenow="0">
       <div id="tb-bands"></div>
       <div id="tb-stops"></div>
       <div id="tb-thumb"></div>
