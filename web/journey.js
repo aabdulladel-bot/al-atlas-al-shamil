@@ -71,6 +71,8 @@ function moveJourneyCamera(cam) {
 }
 
 function renderJourneyBox(journey, st, index) {
+  // الصندوق يُعاد بناؤه كله، فيضيع التركيز من الزر الذي ضُغط (مثل «التالي»). نعيده إلى الزر نفسه إن بقي، وإلا إلى العنوان
+  const act = journeyBox.contains(document.activeElement) ? document.activeElement.dataset.act : null;
   const total = journey.steps.length;
   const num = (n) => n.toLocaleString("ar");
   journeyBox.innerHTML = `
@@ -79,6 +81,9 @@ function renderJourneyBox(journey, st, index) {
     <p class="jb-frame">${escapeHtml(st.frame)}</p>
     <div class="jb-items">${st.items.map(journeyItemHtml).join("")}</div>
     <div class="jb-nav"><button type="button" data-act="prev"${index === 0 ? " disabled" : ""}>السابق</button><button type="button" data-act="next"${index === total - 1 ? " disabled" : ""}>التالي</button></div>`;
+  const keep = act && journeyBox.querySelector(`[data-act="${act}"]:not([disabled])`);
+  if (keep) keep.focus({ preventScroll: true });
+  else { const t = journeyBox.querySelector(".jb-title"); if (t) { t.tabIndex = -1; t.focus({ preventScroll: true }); } }
 }
 
 function journeyItemHtml(it) {
