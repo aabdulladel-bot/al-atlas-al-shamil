@@ -189,7 +189,7 @@ function buildIndex() {
         const p = f.properties;
         for (const c of JSON.parse(p.claims)) {
           placed.add(c.id);
-          items.push({ type: "claim", title: c.statement, sub: `${p.name_ar} · الحقبة ${c.era} · ${c.attributed_to}`, text: [c.statement, p.name_ar, p.name_en, c.attributed_to], era: c.era, coords: f.geometry.coordinates, slug: p.slug, weight: 3 });
+          items.push({ type: "claim", cid: c.id, title: c.statement, sub: `${p.name_ar} · الحقبة ${c.era} · ${c.attributed_to}`, text: [c.statement, p.name_ar, p.name_en, c.attributed_to], era: c.era, coords: f.geometry.coordinates, slug: p.slug, weight: 3 });
         }
       }
     }
@@ -197,7 +197,7 @@ function buildIndex() {
       try {
         for (const c of (await getJson(`data/claims_era${era.id}.json`)).claims) {
           if (placed.has(c.id)) continue;
-          items.push({ type: "claim", title: c.statement, sub: `الحقبة ${era.id} · ${c.attributed_to}`, text: [c.statement, c.attributed_to], era: era.id, claim: c, weight: 2.5 });
+          items.push({ type: "claim", cid: c.id, title: c.statement, sub: `الحقبة ${era.id} · ${c.attributed_to}`, text: [c.statement, c.attributed_to], era: era.id, claim: c, weight: 2.5 });
         }
       } catch {}
     }));
@@ -302,6 +302,39 @@ function buildCommands() {
   return cmds;
 }
 const PER_TYPE = 5;
+// ---------- البحث بالمعنى: قاموس المفاهيم (data/concepts.json)، وتصنيفات العدسات للشواهد ----------
+let conceptsData = null;
+async function ensureConcepts() { conceptsData ??= await getJson("data/concepts.json").catch(() => null); return conceptsData; }
+function lensTypeOf(cid, lensFile) {
+  const L = typeof LENSES !== "undefined" ? LENSES.find((x) => x.file === lensFile) : null;
+  return L?.data?.entries?.find((x) => x.claim === cid)?.type ?? null;
+}
+async function meaningHits(q, items, exact) {
+  const C = await ensureConcepts();
+  if (!C) return [];
+  const qn = norm(q);
+  const toks = qn.split(" ").filter(Boolean);
+  const hit = C.concepts.filter((c) => c.words.some((w) => { const k = norm(w); return k.length >= 3 && (qn.includes(k) || toks.includes(k)); }));
+  if (!hit.length) return [];
+  const exactSet = new Set(exact.map(([, it]) => it));
+  const best = new Map();
+  for (const c of hit) {
+    const words = c.words.map((w) => norm(w).split(" ").filter(Boolean));
+    const [lensFile, wantType] = Object.entries(c.lens)[0];
+    for (const it of items) {
+      if (exactSet.has(it) || (it.type !== "claim" && it.type !== "place")) continue;
+      let s0 = 0;
+      for (const w of words) { const s = score(it, w); if (s > s0) s0 = s; }
+      const lensOK = it.cid != null && lensTypeOf(it.cid, lensFile) === wantType;
+      if (!s0 && !lensOK) continue;
+      const s = s0 * 0.6 + (lensOK ? 2.2 : 0);
+      const prev = best.get(it);
+      if (!prev || s > prev.s) best.set(it, { s, c });
+    }
+  }
+  return [...best.entries()].sort((a, b) => b[1].s - a[1].s).slice(0, 14)
+    .map(([it, { s, c }]) => [s, { ...it, meaning: c.ar, sub: `بالمعنى: ${c.ar}${it.sub ? ` · ${it.sub}` : ""}` }]);
+}
 async function search(q) {
   // «>» في أول الخانة: الأوامر وحدها، وبلا شيء بعدها تُعرض كلها
   if (q.trim().startsWith(">")) {
@@ -336,6 +369,13 @@ async function search(q) {
   // الأوامر المطابقة تظهر في البحث العادي أيضاً، قليلةً: ثلاثة أوامر على الأكثر
   const cmdHits = buildCommands().map((c) => [score(c, toks), c]).filter(([x]) => x >= 2).sort((a, b) => b[0] - a[0]).slice(0, 3).map(([, c]) => c);
   if (cmdHits.length) byType.set("cmd", cmdHits);
+  // ما يطابق المعنى يُضاف بعد ما يطابق الكلمة، بحدّ أعلى، فلا يحل محله
+  const meaning = await meaningHits(q, items, scored);
+  for (const [, it] of meaning) {
+    const list = byType.get(it.type) ?? [];
+    if (list.filter((x) => x.meaning).length < 6) list.push(it);
+    byType.set(it.type, list);
+  }
   return order.filter((t) => byType.has(t)).map((t) => [t, byType.get(t)]);
 }
 function highlight(text, q) {

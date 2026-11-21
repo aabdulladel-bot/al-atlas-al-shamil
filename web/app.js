@@ -978,7 +978,7 @@ function openPlaceCard(f) {
 // أسماء الأقاليم الستة في سلسلة السكان الإقليمية، وأسماء الدول من أسماء Natural Earth العربية إن طابقت
 const REGION_AR = { Africa: "أفريقيا", Asia: "آسيا", Europe: "أوروبا", "North and Central America": "أمريكا الشمالية والوسطى", "South America": "أمريكا الجنوبية", Oceania: "أوقيانوسيا" };
 let modernAr = new Map();
-const demoTitle = (p) => REGION_AR[p.name_en] ?? modernAr.get(p.name_en) ?? p.name_en;
+const demoTitle = (p) => REGION_AR[p.name_en] ?? modernAr.get(p.name_en) ?? enAr(p.name_en);
 function openDemoCard(f) {
   const p = f.properties;
   markPoint([Number(p._lon), Number(p._lat)]);
@@ -986,7 +986,7 @@ function openDemoCard(f) {
   cardEntity = null;
   const region = p.level === "region";
   openCard(cardHead({
-    title: demoTitle(p), en: p.name_en, icon: "demo",
+    title: demoTitle(p), en: enAr(p.name_en), icon: "demo",
     chips: [chip(`سنة ${yearLabel(Number(p.year))}`), chip(region ? "إقليم حديث التقسيم" : "دولة بحدودها الحديثة")],
     note: (region ? "الرقم لإقليم حديث التقسيم، وليس لحدود الحقبة." : "الرقم لأرض الدولة بحدودها الحديثة، لا لكيانات الحقبة.") + " ارتفاع العمود بالجذر التربيعي للسكان، بمقياس واحد لكل السنين.",
   }) + statsHtml([["نسمة", fmtBig(Number(p.population)), `${formatPop(p.population)} نسمة`]]) +
