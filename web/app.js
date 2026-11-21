@@ -2446,22 +2446,28 @@ function renderLab() {
     sunanDetailEl.before(lab);
   }
   const eras = [1, 2, 3, 4, 5, 6, 7, 8];
-  const head = `<div class="lab-head"><span></span>${eras.map((e) => `<span>${e}</span>`).join("")}</div>`;
+  const head = `<div class="lab-head" aria-hidden="true"><span></span>${eras.map((e) => `<span>${e}</span>`).join("")}</div>`;
   const rows = analysisLinks.matrix.map((r) => {
     const cells = eras.map((e) => {
       const c = r.eras[String(e)];
       if (!c) return `<span class="lab-cell lab-gap" title="لا شاهد في هذه الحقبة">—</span>`;
       return `<span class="lab-cell"><span class="lab-sup">+${c.sup}</span><span class="lab-lim">−${c.lim}</span></span>`;
     }).join("");
-    return `<div class="lab-row" data-sunna="${escapeHtml(r.sunna)}"><div class="lab-name">${escapeHtml(r.name)}</div><div class="lab-cells">${cells}</div></div>`;
+    // الصف زرّ لوحي: يُعلن قارئ الشاشة شواهده كاملة، والخلايا المرئية تُخفى عنه تجنباً للتكرار
+    const spoken = eras.map((e) => { const c = r.eras[String(e)]; return c ? `الحقبة ${e}: ${c.sup} مؤيد، ${c.lim} مقيِّد` : `الحقبة ${e}: لا شاهد`; }).join("، ");
+    return `<div class="lab-row" role="button" tabindex="0" aria-label="${escapeHtml(`${r.name}. ${spoken}. افتح السُّنّة`)}" data-sunna="${escapeHtml(r.sunna)}"><div class="lab-name" aria-hidden="true">${escapeHtml(r.name)}</div><div class="lab-cells" aria-hidden="true">${cells}</div></div>`;
   }).join("");
   document.getElementById("sunan-lab-body").innerHTML =
     `<p class="sub">عدد الشواهد المؤيدة (+) والمقيِّدة (−) لكل سُنّة في كل حقبة. الفجوات (—) تبيّن ما لم يُوثَّق بعد، وليست نفياً للسُّنّة.</p>` +
-    `<div class="lab-grid">${head}${rows}</div>`;
+    `<div class="lab-grid" role="group" aria-label="جدول الشواهد: السُّنن والحقب">${head}${rows}</div>`;
+  const openRow = (tr) => {
+    const sn = sunanData.sunan.find((x) => x.id === tr.dataset.sunna);
+    if (sn) selectSunna(sn);
+  };
   for (const tr of document.querySelectorAll("#sunan-lab-body .lab-row[data-sunna]")) {
-    tr.addEventListener("click", () => {
-      const sn = sunanData.sunan.find((x) => x.id === tr.dataset.sunna);
-      if (sn) selectSunna(sn);
+    tr.addEventListener("click", () => openRow(tr));
+    tr.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openRow(tr); }
     });
   }
 }
