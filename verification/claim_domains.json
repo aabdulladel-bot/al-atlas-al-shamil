@@ -1164,6 +1164,60 @@
     "politics"
    ],
    "status": "model_draft"
+  },
+  "cl_000000437": {
+   "domains": [
+    "institutions",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000438": {
+   "domains": [
+    "institutions",
+    "politics"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000439": {
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000440": {
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000441": {
+   "domains": [
+    "institutions",
+    "society"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000442": {
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000443": {
+   "domains": [
+    "institutions"
+   ],
+   "status": "model_draft"
+  },
+  "cl_000000444": {
+   "domains": [
+    "institutions"
+   ],
+   "status": "model_draft"
   }
  }
 }
