@@ -453,13 +453,21 @@ async function runStep() {
 
 // تصدير الخطوة صورةً عمودية 9:16: لقطة الخريطة كما هي لحظة الرسم، وتحتها نص الخطوة وشاهدها وإسناده.
 // كل نص مكتوب هنا يأتي من الرحلة أو الادعاء نفسه، ولا يُضاف شيء من خارجهما.
+// تصدير الخطوة صورة 9:16. المساحة السفلية والعلوية تغطيها واجهات المنصات الاجتماعية، فالنص في المنطقة الآمنة، والإسناد فوقها.
+// القياسات تُحسب أولاً، فإن امتلأت الكتلة النصية تُصغَّر الخطوط بنسب متدرجة بدل أن تتجاوز الإسناد.
+const EXPORT = { W: 1080, H: 1920, textTop: 1000, textBottom: 1540, footBottom: 1660, maxW: 920 };
+const EXPORT_FONTS = ["600 38px 'IBM Plex Sans Arabic'", "700 64px 'Noto Kufi Arabic'", "500 44px 'IBM Plex Sans Arabic'"];
 async function exportStepImage() {
   if (!journeyState) return;
   const { journey, index } = journeyState;
   const st = journey.steps[index];
-  const W = 1080, H = 1920;
+  const { W, H } = EXPORT;
+  // الخطوط تُحمَّل قبل الرسم، وإلا رسم الكانفس بخط احتياطي
+  await Promise.all(EXPORT_FONTS.map((f) => document.fonts?.load(f).catch(() => {})));
   const snap = await new Promise((resolve) => {
+    const t = setTimeout(() => resolve(null), 2000);
     map.once("render", () => {
+      clearTimeout(t);
       try { resolve(map.getCanvas()); } catch { resolve(null); }
     });
     map.triggerRepaint();
@@ -471,7 +479,7 @@ async function exportStepImage() {
   ctx.fillRect(0, 0, W, H);
   if (snap) {
     // الخريطة تملأ الجزء العلوي بنسبتها، مع اقتصاص من الوسط
-    const mh = Math.round(W * snap.height / snap.width) > H * 0.62 ? H * 0.62 : Math.round(W * snap.height / snap.width);
+    const mh = Math.round(H * 0.55); // الخريطة تملأ النصف العلوي، والاقتصاص من الجانبين يبقي المحور المركزي
     const sw = snap.width, sh = snap.height;
     const scale = Math.max(W / sw, mh / sh);
     const dw = sw * scale, dh = sh * scale;
@@ -479,6 +487,12 @@ async function exportStepImage() {
     ctx.beginPath(); ctx.rect(0, 0, W, mh); ctx.clip();
     ctx.drawImage(snap, (W - dw) / 2, (mh - dh) / 2, dw, dh);
     ctx.restore();
+    // حافة الخريطة السفلى تذوب في الخلفية، فلا تنقطع بخط أفقي حاد
+    const fade = ctx.createLinearGradient(0, mh - 260, 0, mh);
+    fade.addColorStop(0, "rgba(7,10,18,0)");
+    fade.addColorStop(1, "rgba(7,10,18,1)");
+    ctx.fillStyle = fade;
+    ctx.fillRect(0, mh - 260, W, 260);
   }
   // تدرّج نحو النص
   const grad = ctx.createLinearGradient(0, 780, 0, H);
@@ -489,27 +503,46 @@ async function exportStepImage() {
   ctx.fillRect(0, 780, W, H - 780);
   ctx.direction = "rtl";
   ctx.textAlign = "right";
-  ctx.fillStyle = "#e9b44c";
-  ctx.font = "600 40px 'IBM Plex Sans Arabic', 'Noto Sans Arabic', sans-serif";
-  ctx.fillText(journey.title.replace(/^رحلة:\s*/, ""), W - 80, 1000);
-  ctx.fillStyle = "#ffffff";
-  ctx.font = "700 60px 'Noto Kufi Arabic', 'IBM Plex Sans Arabic', sans-serif";
-  wrapText(ctx, st.title, W - 80, 1080, W - 160, 76);
-  ctx.font = "500 46px 'IBM Plex Sans Arabic', 'Noto Sans Arabic', sans-serif";
-  ctx.fillStyle = "rgba(255,255,255,0.92)";
-  let y = wrapText(ctx, st.frame, W - 80, 1330, W - 160, 64);
+
   const claim = st.items.find((it) => it.statement);
+  const plain = journey.title.replace(/^رحلة:\s*/, "");
+  const blocks = [
+    { font: (k) => `600 ${k}px 'IBM Plex Sans Arabic', 'Noto Sans Arabic', sans-serif`, px: 38, lh: 50, color: "#e9b44c", text: `${plain} · ${(index + 1).toLocaleString("ar")} من ${journey.steps.length.toLocaleString("ar")}`, gap: 0 },
+    { font: (k) => `700 ${k}px 'Noto Kufi Arabic', 'IBM Plex Sans Arabic', sans-serif`, px: 64, lh: 80, color: "#ffffff", text: st.title, gap: 22 },
+    { font: (k) => `500 ${k}px 'IBM Plex Sans Arabic', 'Noto Sans Arabic', sans-serif`, px: 44, lh: 62, color: "rgba(255,255,255,0.92)", text: st.frame, gap: 30 },
+  ];
   if (claim) {
-    ctx.font = "400 40px 'Amiri', Georgia, serif";
-    ctx.fillStyle = "rgba(255,255,255,0.85)";
-    y = wrapText(ctx, `«${claim.quote}»`, W - 80, y + 40, W - 160, 58);
-    ctx.font = "500 34px 'IBM Plex Sans Arabic', sans-serif";
-    ctx.fillStyle = "rgba(233,180,76,0.95)";
-    y = wrapText(ctx, `— ${claim.attributed_to}`, W - 80, y + 20, W - 160, 48);
+    blocks.push({ font: (k) => `400 ${k}px 'Amiri', Georgia, serif`, px: 40, lh: 58, color: "rgba(255,255,255,0.88)", text: `«${claim.quote}»`, gap: 36 });
+    blocks.push({ font: (k) => `500 ${k}px 'IBM Plex Sans Arabic', 'Noto Sans Arabic', sans-serif`, px: 34, lh: 48, color: "rgba(233,180,76,0.95)", text: `— ${claim.attributed_to}`, gap: 14 });
+    if (claim.hedge) blocks.push({ font: (k) => `500 ${k}px 'IBM Plex Sans Arabic', 'Noto Sans Arabic', sans-serif`, px: 30, lh: 44, color: "rgba(255,255,255,0.7)", text: `تحفظ: ${claim.hedge}`, gap: 12 });
   }
-  ctx.font = "500 28px 'IBM Plex Sans Arabic', sans-serif";
-  ctx.fillStyle = "rgba(255,255,255,0.6)";
-  ctx.fillText("الأطلس الشامل · الشواهد موثّقة بنصوصها، والسُّنن فرضيات تختبرها الشواهد", W - 80, H - 90);
+  // يرسم الكتل من موضع البداية بمقياس معيّن، أو يقيس فقط إن لم يُرسم
+  const place = (k, draw, y0 = EXPORT.textTop) => {
+    let y = y0;
+    for (const b of blocks) {
+      const px = Math.round(b.px * k);
+      const lh = Math.round(b.lh * k);
+      ctx.font = b.font(px);
+      const lines = linesOf(ctx, b.text, EXPORT.maxW);
+      y += b.gap * k;
+      if (draw) { ctx.fillStyle = b.color; lines.forEach((ln, i) => ctx.fillText(ln, W - 80, y + i * lh)); }
+      y += lines.length * lh;
+    }
+    return y;
+  };
+  // الكتلة مرتبطة بالأسفل، فتقف فوق الإسناد مباشرة، ولا تُترك فراغاً تحت الخريطة
+  let k = 1;
+  for (const cand of [1, 0.92, 0.84, 0.76, 0.68]) { k = cand; if (place(cand, false) <= EXPORT.textBottom) break; }
+  const height = place(k, false) - EXPORT.textTop;
+  place(k, true, Math.max(EXPORT.textTop, EXPORT.textBottom - height));
+
+  // الإسناد في المنطقة الآمنة فوق حافة المنصة: المصدر وقيد التقنية
+  ctx.font = "500 28px 'IBM Plex Sans Arabic', 'Noto Sans Arabic', sans-serif";
+  ctx.fillStyle = "rgba(255,255,255,0.65)";
+  const foot = "الأطلس الشامل · الشواهد موثّقة بنصوصها، والسُّنن فرضيات تختبرها الشواهد";
+  const footLines = linesOf(ctx, foot, EXPORT.maxW);
+  footLines.forEach((ln, i) => ctx.fillText(ln, W - 80, EXPORT.footBottom - (footLines.length - 1 - i) * 40));
+
   const url = out.toDataURL("image/png");
   const a = document.createElement("a");
   a.href = url;
@@ -518,17 +551,18 @@ async function exportStepImage() {
   a.click();
   a.remove();
 }
-// يلف النص العربي على عرض محدد، ويعيد موضع السطر التالي
-function wrapText(ctx, text, x, y, maxW, lh) {
+// يقسم النص إلى أسطر على عرض محدد دون رسم، ليُقاس الارتفاع قبل الرسم
+function linesOf(ctx, text, maxW) {
   const words = String(text).split(/\s+/);
+  const lines = [];
   let line = "";
   for (const w of words) {
     const test = line ? `${line} ${w}` : w;
-    if (ctx.measureText(test).width > maxW && line) { ctx.fillText(line, x, y); line = w; y += lh; }
+    if (ctx.measureText(test).width > maxW && line) { lines.push(line); line = w; }
     else line = test;
   }
-  if (line) { ctx.fillText(line, x, y); y += lh; }
-  return y;
+  if (line) lines.push(line);
+  return lines;
 }
 function go(delta) {
   if (!journeyState) return;
