@@ -2,6 +2,7 @@
   "id": "dynasty",
   "title": "رحلة: أعمار الدول",
   "sunna": "sn_dynasty_age",
+  "hook": "هل تعمر الدولة أربعة أجيال فقط؟",
   "steps": [
     {
       "kind": "khaldun",

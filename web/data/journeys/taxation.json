@@ -2,6 +2,7 @@
   "id": "taxation",
   "title": "رحلة: الجباية وكثرة الجملة",
   "sunna": "sn_taxation",
+  "hook": "هل تقتل الضريبة الثقيلة ما تجبيه؟",
   "steps": [
     {
       "kind": "khaldun",

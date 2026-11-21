@@ -2,6 +2,7 @@
   "id": "luxury",
   "title": "رحلة: الترف والهرم",
   "sunna": "sn_luxury",
+  "hook": "متى يصير الترف عبئاً على من بناه؟",
   "steps": [
     {
       "kind": "khaldun",

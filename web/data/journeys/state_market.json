@@ -2,6 +2,7 @@
   "id": "state_market",
   "title": "رحلة: الدولة والسوق الأعظم",
   "sunna": "sn_state_market",
+  "hook": "هل تُنعش الدولة السوق أم تستنزفه؟",
   "steps": [
     {
       "kind": "khaldun",
