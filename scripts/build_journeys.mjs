@@ -105,7 +105,9 @@ for (const file of fs.readdirSync(path.join(ROOT, "journeys")).filter((f) => f.e
   });
 
   for (const id of [...supporting, ...limitingClaims]) if (!covered.has(id)) errors.push(`${spec.id}: الشاهد ${id} لا يظهر في أي خطوة`);
-  journeys.push({ id: spec.id, title: spec.title, sunna: spec.sunna, steps });
+  // سؤال الافتتاح: يُشتق من فرضية السُّنّة، ولا أرقام فيه ولا حكم يتجاوزها
+  if (spec.hook && (DIGITS.test(spec.hook) || spec.hook.trim().split(/\s+/).length > 14)) errors.push(`${spec.id}: سؤال الافتتاح فيه رقم أو أطول من 14 كلمة`);
+  journeys.push({ id: spec.id, title: spec.title, sunna: spec.sunna, hook: spec.hook ?? null, steps });
 }
 
 if (errors.length) {

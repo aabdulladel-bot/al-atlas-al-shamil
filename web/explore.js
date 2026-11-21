@@ -24,7 +24,7 @@ function stem(w) {
 const stems = (t) => t.split(" ").filter(Boolean).map(stem);
 const SOFT_WORDS = new Set(["بلاد", "اقليم", "منطقه", "ارض"]);
 const ICONS = { entity: "◼", people: "◩", place: "●", claim: "❝", sunna: "✦", era: "⧗", year: "⌖", journey: "➜", cmd: "›", region: "◎", absent: "◌" };
-const TYPE_AR = { cmd: "أوامر", region: "الأقاليم التاريخية", absent: "غائبة عن الخرائط", entity: "الدول والكيانات", people: "الشعوب والقبائل", place: "مواقع الحقب", claim: "الشواهد", sunna: "السنن", era: "الحقب", year: "الزمن", journey: "الرحلات" };
+const TYPE_AR = { meaning: "بالمعنى", cmd: "أوامر", region: "الأقاليم التاريخية", absent: "غائبة عن الخرائط", entity: "الدول والكيانات", people: "الشعوب والقبائل", place: "مواقع الحقب", claim: "الشواهد", sunna: "السنن", era: "الحقب", year: "الزمن", journey: "الرحلات" };
 
 // ---------- جواز المستكشف: تقدّم القارئ في متصفحه وحده ----------
 const PASS_KEY = "atlas-passport-v1";
@@ -369,8 +369,18 @@ async function search(q) {
   // الأوامر المطابقة تظهر في البحث العادي أيضاً، قليلةً: ثلاثة أوامر على الأكثر
   const cmdHits = buildCommands().map((c) => [score(c, toks), c]).filter(([x]) => x >= 2).sort((a, b) => b[0] - a[0]).slice(0, 3).map(([, c]) => c);
   if (cmdHits.length) byType.set("cmd", cmdHits);
-  // ما يطابق المعنى يُضاف بعد ما يطابق الكلمة، بحدّ أعلى، فلا يحل محله
+  // ما يطابق المعنى يُضاف بعد ما يطابق الكلمة، بحدّ أعلى، فلا يحل محله.
+  // إن كانت الكلمة نفسها اسم مفهوم («المال») يتقدّم المعنى كله، لأن التشابه اللفظي («مالي»، «المالديف») لا يعني المفهوم.
   const meaning = await meaningHits(q, items, scored);
+  const C = conceptsData;
+  const isConceptWord = C && toks.some((t) => C.concepts.some((c) => c.words.some((w) => norm(w) === t || stem(norm(w)) === stem(t))));
+  if (isConceptWord && meaning.length) {
+    const top = meaning.map(([, it]) => it).slice(0, 8);
+    const key = (it) => `${it.type}|${it.title}`;
+    const topKeys = new Set(top.map(key));
+    const rest = order.filter((t) => byType.has(t)).map((t) => [t, byType.get(t).filter((it) => !topKeys.has(key(it)))]).filter(([, l]) => l.length);
+    return [["meaning", top.map((it) => ({ ...it, sub: it.sub.replace(/^بالمعنى: [^·]*· ?/, "") }))], ...rest];
+  }
   for (const [, it] of meaning) {
     const list = byType.get(it.type) ?? [];
     if (list.filter((x) => x.meaning).length < 6) list.push(it);

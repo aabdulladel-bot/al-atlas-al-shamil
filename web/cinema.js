@@ -295,7 +295,8 @@ function cardHide() {
 function sunnaOf(journey) { return sunanData?.sunan?.find((x) => x.id === journey.sunna) ?? null; }
 function introCardHtml(journey) {
   const sn = sunnaOf(journey);
-  return `<p class="cc-kicker">رحلة</p><h2>${escapeHtml(journey.title.replace(/^رحلة:\s*/, ""))}</h2>` +
+  return (journey.hook ? `<p class="cc-hook">${escapeHtml(journey.hook)}</p>` : "") +
+    `<p class="cc-kicker">رحلة</p><h2>${escapeHtml(journey.title.replace(/^رحلة:\s*/, ""))}</h2>` +
     (sn ? `<p class="cc-hyp">${escapeHtml(sn.hypothesis)}</p>` : "");
 }
 function closingCardHtml(journey) {

@@ -215,7 +215,7 @@ map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bott
 const LAYER_GROUPS = {
   hillshade: ["hillshade", "relief"],
   water: ["lakes", "rivers"],
-  borders: ["borders-prev-fill", "borders-prev-line", "borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-highlight", "nominal-line"],
+  borders: ["borders-prev-fill", "borders-prev-line", "borders-fill", "borders-halo", "borders-line-approx", "borders-line", "borders-disputed", "borders-highlight", "nominal-line"],
   peoples: ["peoples-fill", "peoples-line"],
   places: ["places"],
   claims: ["claim-halo", "claim-points"],
@@ -766,7 +766,7 @@ function openEntityCard(f, kind) {
     if (cardEntity) cardEntity.dossier = links ? () => entityExportText({ p, key, title, info, kind, links, span, gaps: gapsArr }) : null;
     // مقارنة السلسلتين تظهر مع المثبّت من الكيانات السياسية وحدها، وتحتاج بيانات السلسلة المحمّلة
     const lineageCmp = pinned && !pinnedHere && kind !== "people" && pinned.kind !== "people" ? lineageCompareHtml(pinned, { name: p.NAME, key, title }) : "";
-    return head + defineHtml(p.NAME) + top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + (modern && kind !== "people" ? `<div class="card-actions"><button type="button" class="chip" data-dossier="${escapeHtml(p.NAME)}">ملف الدولة</button></div>` + observatoryHtml(p.NAME) + khaldunHtml(p.NAME) : "") + econ + about + alsoHtml();
+    return head + disputedNote(p.NAME) + defineHtml(p.NAME) + top + pinBtn + exportBtn + (pinned && !pinnedHere ? compareHtml(pinned, cardEntity.facts) : "") + lineageCmp + lineage +(links ? linkedEvidenceHtml(p.NAME, links) : `<section class="card-sec"><h3>الشواهد على أرضه</h3><p class="sub">جارٍ التحميل…</p></section>`) + gaps + (modern && kind !== "people" ? `<div class="card-actions"><button type="button" class="chip" data-dossier="${escapeHtml(p.NAME)}">ملف الدولة</button></div>` + observatoryHtml(p.NAME) + khaldunHtml(p.NAME) : "") + econ + about + alsoHtml();
   };
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
@@ -915,6 +915,16 @@ function ensureEnAr() {
 }
 const enAr = (en) => enArMap?.[en] ?? en;
 // سيرة الموضع وتعريفه: من ويكي بيانات (places_info.json) ومن الحدود بالإحداثيات (place_lineage.json)
+// الكيانات المتنازع عليها (data/disputed_territories.json): تُحمَّل مع بداية الصفحة لأنها صغيرة
+let disputedData = null;
+// يُحمَّل عند أول رسم للحدود لا عند بداية الملف (getJson تعتمد على متغيرات تُعلن لاحقاً)
+let disputedReady = null;
+function ensureDisputed() {
+  disputedReady ??= getJson("data/disputed_territories.json").then((d) => { disputedData = d; if (map.getLayer("borders-disputed")) map.setFilter("borders-disputed", ["in", ["get", "NAME"], ["literal", disputedNames()]]); }).catch(() => null);
+  return disputedReady;
+}
+const disputedNames = () => Object.keys(disputedData?.names ?? {});
+const disputedNote = (name) => (disputedData?.names?.[name] ? `<section class="card-sec disputed-note"><p><b>وضع محل خلاف.</b> ${escapeHtml(disputedData.names[name])}</p><p class="sub">الخط المنقّط الكهرماني على الخريطة يمثّل هذا الحد، وليس حكماً من الأطلس.</p></section>` : "");
 let placeInfo = null, placeLineage = null, openedPlace = null;
 // يُحمَّل الملفان عند أول فتح لبطاقة موضع، لا عند بداية الملف: getJson تعتمد على متغيرات تُعلن لاحقاً في الملف
 let placeDataReady = null;
@@ -1155,6 +1165,7 @@ function crossfade(prev, fillOpacity) {
   fadeRaf = requestAnimationFrame(step);
 }
 async function loadBorders(key) {
+  ensureDisputed();
   key = timeKey(key);
   const token = ++time.token;
   time.key = key;
@@ -1192,6 +1203,7 @@ async function loadBorders(key) {
     map.setFilter("borders-line-approx", ["all", named, ["!", precise]]);
     map.setFilter("borders-line", ["all", named, precise]);
     map.setFilter("borders-highlight", ["==", ["get", "NAME"], cardEntity?.kind === "state" ? cardEntity.name : ""]);
+    if (map.getLayer("borders-disputed")) map.setFilter("borders-disputed", ["in", ["get", "NAME"], ["literal", disputedNames()]]);
   } else {
     map.addSource("borders", { type: "geojson", data });
     const before = map.getLayer("places") ? "places" : undefined;
@@ -1205,6 +1217,8 @@ async function loadBorders(key) {
     }, before);
     map.addLayer({ id: "borders-line-approx", type: "line", source: "borders", filter: ["all", named, ["!", precise]], paint: { "line-color": ec, "line-width": 1.1, "line-opacity": 0.7, "line-dasharray": [3, 3] } }, before);
     map.addLayer({ id: "borders-line", type: "line", source: "borders", filter: ["all", named, precise], paint: { "line-color": ec, "line-width": 1.4, "line-opacity": 0.85 } }, before);
+    // المتنازع عليه: خط منقّط كهرماني فوق الحد، فيُرى أن الحد هنا ادعاء لا حكم
+    map.addLayer({ id: "borders-disputed", type: "line", source: "borders", filter: ["in", ["get", "NAME"], ["literal", disputedNames()]], paint: { "line-color": "#e9b44c", "line-width": 2, "line-opacity": 0.9, "line-dasharray": [1.2, 1.6] } }, before);
     map.addLayer({ id: "borders-highlight", type: "line", source: "borders", filter: ["==", ["get", "NAME"], ""], paint: { "line-color": HIGHLIGHT_COLOR[basemap.mode], "line-width": 3 } }, before);
     pointerOn("borders-fill");
     for (const id of LAYER_GROUPS.borders) setVis(id, true);
@@ -2332,9 +2346,25 @@ function lensSummaryHtml(s) {
 // روابط التحليل (scripts/build_analysis_links.py): مختبر الفرضية، وتعارض داخل المكان، وخيط الشاهد عبر المكان
 let analysisLinks = null;
 const analysisReady = getJson("data/analysis/links.json").then((d) => { analysisLinks = d; return d; }).catch(() => null);
+// سجل الادعاءات من تاريخ Git (scripts/build_claim_history.py): متى أُضيفت شواهد السُّنّة، ومتى عُدّلت آخر مرة
+let claimHistory = null;
+let claimHistoryReady = null;
+function ensureClaimHistory() {
+  claimHistoryReady ??= getJson("data/claim_history.json").then((d) => { claimHistory = d.claims; if (activeSunna && sunanData) renderSunna(sunanData.sunan.find((x) => x.id === activeSunna.id), activeSunna.placesLinked ?? false); }).catch(() => null);
+  return claimHistoryReady;
+}
+function historyHtml(s) {
+  if (!claimHistory) { ensureClaimHistory(); return ""; }
+  const ids = [...s.supporting, ...s.limiting].map((x) => x.id ?? x.claim).filter(Boolean);
+  const hs = ids.map((id) => claimHistory[id]).filter(Boolean);
+  if (!hs.length) return "";
+  const first = hs.map((h) => h.added.date).sort()[0];
+  const last = hs.map((h) => h.last.date).sort().reverse()[0];
+  return `<div class="ana-history"><span class="sub"><b>سجل الشواهد:</b> أقدمها أُضيف في ${escapeHtml(first)}، وآخر تعديل في ${escapeHtml(last)}. <i>لا يسجّل الأطلس بعد من راجع كل شاهد.</i></span></div>`;
+}
 function analysisBlockHtml(s) {
   if (!analysisLinks) return "";
-  const parts = [];
+  const parts = [historyHtml(s)];
   const conf = analysisLinks.conflicts.filter((c) => c.sunna === s.id);
   for (const c of conf) {
     parts.push(`<div class="ana-conflict"><span class="sub"><b>تعارض داخل المكان:</b> ${escapeHtml(c.place)}: ${c.sup.length} شاهد مؤيد، و${c.lim.length} مقيِّد لهذه السُّنّة في المكان نفسه. <i>تُقرأ الروايتان معاً، فالتعارض لا يُحسم هنا.</i></span></div>`);

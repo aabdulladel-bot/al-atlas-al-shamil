@@ -2,6 +2,7 @@
   "id": "sultan_trade",
   "title": "رحلة: تجارة السلطان",
   "sunna": "sn_sultan_trade",
+  "hook": "ماذا يحدث حين يتاجر الحاكم بنفسه؟",
   "steps": [
     {
       "kind": "khaldun",

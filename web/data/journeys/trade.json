@@ -2,6 +2,7 @@
   "id": "trade",
   "title": "رحلة: التجارة ومراكزها",
   "sunna": "sn_trade",
+  "hook": "أين تتجمع الثروة حين تتقاطع الطرق؟",
   "steps": [
     {
       "kind": "khaldun",
