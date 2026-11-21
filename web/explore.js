@@ -178,7 +178,7 @@ function buildIndex() {
       try { d = await placesCache.get(era.file); } catch { continue; }
       for (const f of d.features) {
         const p = f.properties;
-        items.push({ type: "place", ar: p.name_ar, title: p.name_ar, sub: `الحقبة ${era.id}: ${era.label}${p.name_en && p.name_en !== p.name_ar ? ` · ${typeof enAr === "function" ? enAr(p.name_en) : p.name_en}` : ""}`, text: [p.name_ar, p.name_en], era: era.id, coords: f.geometry.coordinates, weight: 4 });
+        items.push({ type: "place", ar: p.name_ar, title: p.name_ar, sub: `الحقبة ${era.id}: ${era.label}`, text: [p.name_ar, p.name_en], era: era.id, coords: f.geometry.coordinates, weight: 4 });
       }
     }
     // الشواهد كلها: ما له مكان يُفتح على بطاقة مكانه، وما لا مكان له يُفتح نصاً في بطاقته.
