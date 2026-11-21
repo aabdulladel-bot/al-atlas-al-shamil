@@ -383,9 +383,56 @@ function syncLayerInputs() {
   for (const g of Object.keys(LAYER_GROUPS)) for (const id of LAYER_GROUPS[g]) if (wanted.has(id)) setVis(id, wanted.get(id));
   updateLabels();
 }
+// المشاهد: نقرة واحدة تضبط طبقات السؤال الذي يطرحه القارئ. الطبقات الدقيقة تبقى متاحة في «تخصيص الطبقات».
+const LAYER_GROUP_IDS = ["borders", "labels", "peoples", "places", "claims", "demography", "lights"];
+const SCENES = [
+  { id: "all", ar: "الكل", note: "الوضع الافتتاحي: الحدود والشعوب والمواقع والشواهد", on: ["borders", "labels", "peoples", "places", "claims"] },
+  { id: "states", ar: "الدول", note: "الكيانات وحدودها وأسماؤها فقط", on: ["borders", "labels"] },
+  { id: "peoples", ar: "الناس", note: "الشعوب والقبائل فوق الحدود", on: ["peoples", "labels"] },
+  { id: "evidence", ar: "الشواهد", note: "ما وُثّق من أماكنه وأقواله", on: ["claims", "places", "labels"] },
+  { id: "count", ar: "السكان", note: "أعمدة السكان وأضواء الليل", on: ["demography", "lights", "borders", "labels"] },
+  { id: "land", ar: "الأرض", note: "الصور الفضائية والأسماء دون سياسة", on: ["labels"], basemap: "satellite" },
+];
+let activeScene = "all";
+function markScene() {
+  for (const b of document.querySelectorAll("#scene-row button[data-scene]")) {
+    const on = b.dataset.scene === activeScene;
+    b.setAttribute("aria-pressed", String(on));
+    b.classList.toggle("on", on);
+  }
+  const S = SCENES.find((x) => x.id === activeScene);
+  const note = document.getElementById("scene-note");
+  if (note) note.textContent = S ? S.note : "طبقات مخصّصة، اختيارك الدقيق";
+}
+let scenePushing = false;
+function applyScene(id) {
+  const S = SCENES.find((x) => x.id === id);
+  if (!S) return;
+  scenePushing = true;
+  try {
+    for (const g of LAYER_GROUP_IDS) {
+      const cb = document.querySelector(`#layer-panel input[data-group="${g}"]`);
+      const want = S.on.includes(g);
+      if (cb && !cb.disabled && cb.checked !== want) cb.click();
+    }
+  } finally { scenePushing = false; }
+  if (S.basemap) {
+    const r = document.querySelector(`#layer-panel input[name="basemap"][value="${S.basemap}"]`);
+    if (r && !r.checked) { r.checked = true; r.dispatchEvent(new Event("change", { bubbles: true })); }
+  }
+  activeScene = id;
+  markScene();
+}
+markScene(); // الحالة الابتدائية: «الكل» محدد، وهي مطابقة للطبقات المفتوحة عند البداية
+document.getElementById("scene-row").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-scene]");
+  if (b) applyScene(b.dataset.scene);
+});
 document.getElementById("layer-panel").addEventListener("change", (e) => {
   const t = e.target;
   if (t.dataset.group) {
+    // أي تغيير يدوي يترك المشهد، فيصير الوضع مخصّصاً
+    if (!scenePushing) { activeScene = null; markScene(); }
     if (t.checked) userOff.delete(t.dataset.group); else userOff.add(t.dataset.group);
     for (const id of LAYER_GROUPS[t.dataset.group]) if (wanted.has(id)) setVis(id, wanted.get(id));
     if (t.dataset.group === "labels") updateLabels();

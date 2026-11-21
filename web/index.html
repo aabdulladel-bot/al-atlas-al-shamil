@@ -158,6 +158,15 @@
     .seg input:checked + span { background: var(--accent); color: var(--panel); }
     .seg input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: -3px; }
     .layer-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 8px 0; }
+    /* المشاهد: نقرة تضبط الطبقات بغرض السؤال، وتبقى الدقيقة مطوية */
+    .scene-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 2px; }
+    .scene-row button { font: 600 13px var(--font-d); color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
+    .scene-row button:hover { border-color: var(--accent); }
+    .scene-row button.on { background: var(--accent); color: #111; border-color: var(--accent); }
+    .scene-row button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .scene-note { margin: 2px 0 6px; min-height: 1.4em; }
+    details.layer-custom { margin: 4px 0 8px; }
+    details.layer-custom > summary { cursor: pointer; }
     .lc { display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; align-items: center; column-gap: 7px; padding: 7px 8px; border-radius: 9px; border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); cursor: pointer; font-size: 13px; }
     .lc:has(input:checked) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, transparent); }
     .lc input { grid-row: 1 / 3; grid-column: 3; margin: 0; accent-color: var(--accent); }
@@ -816,6 +825,15 @@
 
     <details class="section" id="layer-panel" open>
       <summary>الطبقات</summary>
+      <div class="scene-row" id="scene-row" role="group" aria-label="المشاهد: ما الذي تسأل عنه الآن">
+        <button type="button" data-scene="all" aria-pressed="true">الكل</button>
+        <button type="button" data-scene="states" aria-pressed="false">الدول</button>
+        <button type="button" data-scene="peoples" aria-pressed="false">الناس</button>
+        <button type="button" data-scene="evidence" aria-pressed="false">الشواهد</button>
+        <button type="button" data-scene="count" aria-pressed="false">السكان</button>
+        <button type="button" data-scene="land" aria-pressed="false">الأرض</button>
+      </div>
+      <p class="sub scene-note" id="scene-note" aria-live="polite"></p>
       <div class="seg-row">
         <div class="seg" role="radiogroup" aria-label="الأساس">
           <label><input type="radio" name="basemap" value="satellite" checked><span>صور فضائية</span></label>
@@ -828,6 +846,8 @@
         <label class="opt"><input type="checkbox" id="terrain-toggle" checked> تضاريس مجسّمة</label>
       </div>
       <p class="sub warn" id="basemap-note"></p>
+      <details class="layer-custom">
+      <summary class="sub">تخصيص الطبقات بدقة</summary>
       <div class="layer-cards">
         <label class="lc"><input type="checkbox" data-group="borders" checked><i class="lc-sw lc-borders"></i><span class="lc-name">الدول والكيانات</span><span class="lc-count" id="lc-borders"></span></label>
         <label class="lc"><input type="checkbox" data-group="labels" checked><i class="lc-sw lc-labels">ع</i><span class="lc-name">الأسماء</span><span class="lc-count" id="lc-labels"></span></label>
@@ -837,6 +857,7 @@
         <label class="lc"><input type="checkbox" data-group="demography"><i class="lc-sw lc-demography"></i><span class="lc-name">السكان (أعمدة)</span><span class="lc-count" id="lc-demography"></span></label>
         <label class="lc"><input type="checkbox" data-group="lights"><i class="lc-sw lc-lights"></i><span class="lc-name">أضواء الليل</span><span class="lc-count" id="lc-lights"></span></label>
       </div>
+      </details>
       <p class="sub warn" id="relief-note"></p>
       <details class="advanced research-only">
         <summary class="sub">إعدادات متقدمة</summary>
