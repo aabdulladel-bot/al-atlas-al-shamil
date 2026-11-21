@@ -445,13 +445,18 @@
       "tier": "A",
       "landing": "https://archive.org/details/treatyofpeacebe00alli",
       "attribution": "The Treaty of Peace between the Allied and Associated Powers and Germany (1919)",
-      "note": "مقطعان فقط: المادة 119 والمادة 231، بالنص الإنجليزي. لا تُستعمل مواد الأمم المتحدة (الطبقة C)، والمعاهدة ليست منها.",
+      "note": "المادة 119 والمادة 231 بالنص الإنجليزي، وعهد عصبة الأمم المادة 22 (الانتداب) من النص نفسه المنشور في الأرشيف. لا تُستعمل مواد الأمم المتحدة (الطبقة C)، والمعاهدة ليست منها.",
       "status": "ok",
       "files": [
         {
           "file": "verification/era8/versailles_1919_excerpt.txt",
           "sha256": "e3c8d06a76a6e13d048486935a12b4d2fe29bcfd6057789f650fb077382d4f39",
           "bytes": 1259
+        },
+        {
+          "file": "verification/era8/versailles_1919_covenant_art22.txt",
+          "sha256": "5ad0ec0ce9ad7c6867f321795f9f2174ed2d170b84cb88ad49bf65d4fb628b6f",
+          "bytes": 5813
         }
       ],
       "retrieved_at": "2026-11-09T08:50:01.680Z",

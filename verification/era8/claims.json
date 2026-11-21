@@ -66,5 +66,277 @@
     },
     "status": "verified",
     "version": 2
+  },
+  {
+    "id": "cl_000000437",
+    "passage_id": "versailles-1919:art22-principle",
+    "quote": "the tutelage of such peoples should be entrusted to advanced nations",
+    "statement": "تنص المادة 22 من عهد عصبة الأمم على أن وصاية الشعوب التي لم تعد تحت سيادة الدول التي كانت تحكمها تُعهد إلى دول متقدمة",
+    "type": "rule",
+    "layer": "material",
+    "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+    "isnad": null,
+    "hedge": "نص عهد يقرر مبدأ الانتداب كما صاغه المنتصرون، ولا يثبت كيف طُبّق في كل إقليم. الإحالة هنا إلى النص لا إلى ممارسة الدول المنتدبة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era8"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era8"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000438",
+    "passage_id": "versailles-1919:art22-mandatories",
+    "quote": "this tutelage should be exercised by them as Mandatories on behalf of the League",
+    "statement": "تنص المادة 22 على أن تُمارس الدول المتقدمة هذه الوصاية بوصفها دولاً منتدبة نيابة عن العصبة",
+    "type": "rule",
+    "layer": "material",
+    "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+    "isnad": null,
+    "hedge": "الانتداب هنا صيغة قانونية للوصاية، وليس وصفاً لسلطة الدول المنتدبة الفعلية على الأرض",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era8"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era8"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000439",
+    "passage_id": "versailles-1919:art22-turkish-communities",
+    "quote": "Certain communities formerly belonging to the Turkish Empire have reached a stage of development",
+    "statement": "تقول المادة 22 إن جماعات كانت تابعة للإمبراطورية العثمانية بلغت مرحلة من التطور تسمح بالاعتراف المؤقت باستقلالها",
+    "type": "judgment",
+    "layer": "material",
+    "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+    "isnad": null,
+    "hedge": "النص يسمّي الجماعات دون أن يعدّدها، ويحكم بأن مرحلتها تسمح بالاعتراف المؤقت. هذا حكم سياسي من واضعي العهد، وليس قياساً محايداً لمستوى التطور",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era8"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era8"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000440",
+    "passage_id": "versailles-1919:art22-wishes",
+    "quote": "The wishes of these communities must be a principal consideration in the selection of the Mandatory",
+    "statement": "تنص المادة 22 على أن رغبات تلك الجماعات تكون اعتباراً أساسياً في اختيار الدولة المنتدبة",
+    "type": "rule",
+    "layer": "material",
+    "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+    "isnad": null,
+    "hedge": "النص يجعل الرغبة اعتباراً أساسياً، ولا يجعلها ملزِمة. ولا يوضح كيف تُقاس هذه الرغبات",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era8"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era8"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000441",
+    "passage_id": "versailles-1919:art22-central-africa",
+    "quote": "guarantee freedom of conscience and religion, subject only to the maintenance of public order and morals",
+    "statement": "تشترط المادة 22 على الدولة المنتدبة في شعوب وسط أفريقيا أن تضمن حرية الضمير والدين، مع قيد واحد هو حفظ النظام العام والآداب",
+    "type": "rule",
+    "layer": "material",
+    "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+    "isnad": null,
+    "hedge": "شرط الضمان والدين وارد في النص، وتطبيقه على الأرض مسألة تاريخية منفصلة تحتاج شواهد أخرى",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era8"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era8"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000442",
+    "passage_id": "versailles-1919:art22-prohibitions",
+    "quote": "the prohibition of abuses such as the slave trade, the arms traffic and the liquor traffic",
+    "statement": "تنص المادة 22 على منع انتهاكات مثل تجارة الرقيق وتجارة السلاح وتجارة المسكرات في الأقاليم المنتدبة",
+    "type": "rule",
+    "layer": "material",
+    "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+    "isnad": null,
+    "hedge": "قائمة الانتهاكات المحظورة في النص لا تعني أن الحظر طُبّق فعلاً، ولا أنها كانت الانتهاكات الوحيدة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era8"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era8"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000443",
+    "passage_id": "versailles-1919:art22-annual-report",
+    "quote": "In every case of mandate, the Mandatory shall render to the Council an annual report in reference to the territory committed to its charge",
+    "statement": "توجب المادة 22 على الدولة المنتدبة أن تقدّم إلى المجلس تقريراً سنوياً عن الإقليم الموكل إليها",
+    "type": "rule",
+    "layer": "material",
+    "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+    "isnad": null,
+    "hedge": "التزام التقرير مكتوب في النص، ومحتوى التقارير وصدقها لا تثبتهما المادة نفسها",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era8"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era8"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000444",
+    "passage_id": "versailles-1919:art22-commission",
+    "quote": "A permanent Commission shall be constituted to receive and examine the annual reports of the Mandatories",
+    "statement": "تنشئ المادة 22 لجنة دائمة تتسلم التقارير السنوية للدول المنتدبة وتفحصها",
+    "type": "rule",
+    "layer": "material",
+    "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+    "isnad": null,
+    "hedge": "النص ينشئ اللجنة ويحدد مهمتها في الفحص والمشورة، ولا يحدد صلاحية لها في إلزام الدول المنتدبة",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era8"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era8"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]
