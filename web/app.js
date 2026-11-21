@@ -588,7 +588,7 @@ const chip = (text, cls = "", attrs = "") => (attrs
   : `<span class="chip ${cls}">${escapeHtml(text)}</span>`);
 function cardHead({ title, en = "", swatch = "", chips = [], note = "", icon = "" }) {
   return `<header class="ch"><div class="ch-row">${icon ? `<span class="ch-ic" aria-hidden="true">${CARD_ICON[icon]}</span>` : ""}${swatch ? `<i class="ch-sw" style="background:${swatch}"></i>` : ""}<h2>${escapeHtml(title)}</h2></div>` +
-    (en && en !== title ? `<div class="ch-en" dir="ltr">${escapeHtml(en)}</div>` : "") +
+    (en && en !== title ? `<div class="ch-en" dir="${/[A-Za-z]/.test(en) ? "ltr" : "rtl"}">${escapeHtml(en)}</div>` : "") +
     (chips.length ? `<div class="chips">${chips.join("")}</div>` : "") +
     (note ? `<p class="ch-note">${note}</p>` : "") + `</header>`;
 }
@@ -906,11 +906,20 @@ function openClaimCard(f) {
   }) + `<section class="card-sec"><h3>ما تقوله المصادر عن هذا المكان</h3><p class="sub">كل اقتباس مطابق لنص مصدره، ومعه قائله وتحفّظه.</p>${rows}</section>` +
     aboutHtml([["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)]]) + alsoHtml());
 }
+// تعريب الأسماء الإنجليزية: نطق عربي تقريبي (data/names/en_ar_phonetic.json) يحل محل الاسم الإنجليزي في العرض
+let enArMap = null;
+let enArReady = null;
+function ensureEnAr() {
+  enArReady ??= getJson("data/names/en_ar_phonetic.json").then((d) => { enArMap = d.names; }).catch(() => null);
+  return enArReady;
+}
+const enAr = (en) => enArMap?.[en] ?? en;
 // سيرة الموضع وتعريفه: من ويكي بيانات (places_info.json) ومن الحدود بالإحداثيات (place_lineage.json)
 let placeInfo = null, placeLineage = null, openedPlace = null;
 // يُحمَّل الملفان عند أول فتح لبطاقة موضع، لا عند بداية الملف: getJson تعتمد على متغيرات تُعلن لاحقاً في الملف
 let placeDataReady = null;
 function ensurePlaceData() {
+  ensureEnAr();
   placeDataReady ??= Promise.all([
     getJson("data/places_info.json").then((d) => { placeInfo = d; }).catch(() => null),
     getJson("data/place_lineage.json").then((d) => { placeLineage = d; }).catch(() => null),
@@ -934,9 +943,9 @@ function placeInfoHtml(f) {
     const v = lin?.[k];
     const en = typeof v === "string" ? v : v?.names ? v.names.join(" / ") : v?.name ?? null;
     const ar = en ? placeLineage.names_ar?.[k]?.[en] : null;
-    const label = en ? (ar ?? en) : "لا كيان في المصدر";
+    const label = en ? (ar ?? enAr(en)) : "لا كيان في المصدر";
     const yr = k === "modern" ? "اليوم" : yearLabel(Number(k));
-    return `<li><span class="sub">${escapeHtml(yr)}</span> ${escapeHtml(label)}${!ar && en ? ` <span class="sub">(بالإنجليزية في المصدر)</span>` : ""}</li>`;
+    return `<li><span class="sub">${escapeHtml(yr)}</span> ${escapeHtml(label)}${!ar && en && !enArMap?.[en] ? ` <span class="sub">(بالإنجليزية في المصدر)</span>` : ""}</li>`;
   }).join("");
   return `<section class="card-sec place-info"><h3>تعريف</h3>${def}${types ? `<p>${types}</p>` : ""}` +
     `<details><summary>سيرته عبر الحدود (${escapeHtml(placeLineage._meta.years.length.toString())} سنة)</summary><ol class="lineage">${rows}</ol>` +
@@ -947,7 +956,7 @@ function placeCardBody(f) {
   const p = f.properties;
   const era = ERAS.find((x) => x.id === Number(p.era));
   return cardHead({
-    title: p.name_ar, en: p.name_en, icon: "place",
+    title: p.name_ar, en: enAr(p.name_en), icon: "place",
     chips: [era ? chip(`الحقبة ${era.id}: ${era.label}`) : "", chip(COORD_SHORT[p.coord_status] ?? p.coord_status)].filter(Boolean),
   }) + aboutHtml([
     ["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)],
@@ -963,6 +972,7 @@ function openPlaceCard(f) {
   openedPlace = f;
   if (typeof passportNote === "function") passportNote("place", `${p.era}|${p.name_ar}`);
   ensurePlaceData();
+  ensureEnAr().then(() => { if (openedPlace === f && !document.getElementById("card")?.hidden) openCard(placeCardBody(f)); });
   openCard(placeCardBody(f));
 }
 // أسماء الأقاليم الستة في سلسلة السكان الإقليمية، وأسماء الدول من أسماء Natural Earth العربية إن طابقت
