@@ -23,6 +23,8 @@ function setCinemaPref(mode) {
 // ---------- عناصر الواجهة ----------
 const cineEl = document.createElement("div");
 cineEl.id = "cine";
+cineEl.setAttribute("role", "region");
+cineEl.setAttribute("aria-label", "العرض السينمائي للرحلة");
 cineEl.hidden = true;
 cineEl.innerHTML = `
   <div class="cine-top">

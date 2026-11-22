@@ -609,7 +609,7 @@
       /* مقبض شريط الزمن أكبر للمس، ومنطقة الضغط حوله أوسع */
       #tb-thumb { width: 20px; height: 20px; margin-inline-start: -10px; bottom: 4px; }
       #tb-track { height: 50px; }
-      .card-grip { width: 56px; height: 7px; }
+      .card-grip { width: 56px; height: 7px; box-sizing: content-box; padding: 9px 0; margin-top: -9px; background-clip: content-box; } /* الشريط 7 بكسل، ومساحة اللمس 25 */
       /* السحب من المقبض ورأس البطاقة للورقة نفسها، والتمرير لبقية محتواها */
       .card-grip, #card .ch { touch-action: none; }
       .tiles { grid-template-columns: repeat(2, 1fr); }
@@ -744,7 +744,7 @@
   <a class="skip" href="#q">انتقل إلى البحث</a>
   <div id="sr-live" class="sr" aria-live="polite"></div>
   <div id="toast" role="status" hidden></div>
-  <div id="map"></div>
+  <div id="map" role="region" aria-label="الخريطة"></div>
   <aside id="legend" aria-label="مفتاح الخريطة">
     <button type="button" id="legend-toggle" aria-expanded="true" aria-controls="legend-body">المفتاح</button>
     <div id="legend-body"></div>

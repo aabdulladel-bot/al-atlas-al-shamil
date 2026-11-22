@@ -539,7 +539,12 @@ async function showLabels(key) {
       el.textContent = l.ar ?? l.en;
       el.title = l.ar ? l.en : "لا اسم عربي موثّق بعد";
     }
-    return { min: l.min, latin: !l.ar, added: false, marker: new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]) };
+    // MapLibre يجعل العلامة «زراً» باسم إنجليزي عام «Map marker» إن لم تحمل اسماً ودوراً، فيحجب الاسم المكتوب.
+    // التسمية للقراءة لا للضغط: دورها صورة نصية، واسمها هو المكتوب نفسه
+    el.setAttribute("role", "img");
+    el.setAttribute("aria-label", l.ar ?? l.en_shown ?? l.en);
+    const marker = new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]);
+    return { min: l.min, latin: !l.ar, added: false, marker };
   });
   // الأسماء العربية أولاً في منع التراكب، ثم ما لا عربي له، مع حفظ ترتيب الأهمية داخل كلٍّ منهما
   countryLabels.sort((a, b) => a.latin - b.latin);
