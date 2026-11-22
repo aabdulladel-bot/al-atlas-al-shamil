@@ -664,6 +664,8 @@
     #cine .cine-top, #cine .cine-ctrl { transition: opacity .35s; }
     #cine.idle .cine-top, #cine.idle .cine-ctrl { opacity: 0; }
     #cine.idle .cine-btn { pointer-events: none; }
+    #cine.idle .cine-top:focus-within, #cine.idle .cine-ctrl:focus-within { opacity: 1; }
+    #cine.idle .cine-top:focus-within .cine-btn, #cine.idle .cine-ctrl:focus-within .cine-btn { pointer-events: auto; }
     /* بطاقة الافتتاح والخاتمة */
     .cine-card { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; background: rgba(8, 10, 16, .5); z-index: 2; pointer-events: none; opacity: 0; transition: opacity .5s; }
     .cine-card[hidden] { display: none; }

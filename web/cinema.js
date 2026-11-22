@@ -310,10 +310,20 @@ function closingCardHtml(journey) {
 }
 // الإخفاء التلقائي: الأزرار تختفي بعد لحظات من الإيقاع، وأي لمس يُظهرها
 let idleTimer = null;
+let overCtrl = false; // المؤشر فوق شريط التحكم: لا تُخفى الأزرار تحته
 function wake() {
   cineEl.classList.remove("idle");
   clearTimeout(idleTimer);
-  if (cine.on && cine.playing) idleTimer = setTimeout(() => { if (cine.on && cine.playing) cineEl.classList.add("idle"); }, 2600);
+  if (cine.on && cine.playing) idleTimer = setTimeout(() => {
+    if (!cine.on || !cine.playing) return;
+    // لا إخفاء والمؤشر أو التركيز على الأزرار، فيبقى النقر ممكناً
+    if (overCtrl || cineEl.querySelector(".cine-ctrl, .cine-top")?.contains(document.activeElement) || cineEl.querySelector(".cine-top:focus-within, .cine-ctrl:focus-within")) return wake();
+    cineEl.classList.add("idle");
+  }, 2600);
+}
+for (const el of cineEl.querySelectorAll(".cine-ctrl, .cine-top")) {
+  el.addEventListener("pointerenter", () => { overCtrl = true; wake(); });
+  el.addEventListener("pointerleave", () => { overCtrl = false; wake(); });
 }
 function scheduleChunk(token, ms) {
   clearTimeout(cine.timer);
@@ -649,6 +659,7 @@ cineEl.addEventListener("click", (e) => {
 
 document.addEventListener("keydown", (e) => {
   if (!cine.on || e.target.closest("input, select, textarea")) return;
+  wake(); // لوحة المفاتيح تُظهر الأزرار المخفية، فلا يقع التركيز على زر غير مرئي
   if (e.key === "Escape") { e.preventDefault(); return endJourney(); }
   // المسافة على زر مركَّز تضغطه المتصفح نفسه، فلا تُعاد هنا
   if (e.key === " " && !e.target.closest("button")) { e.preventDefault(); return setPlaying(!cine.playing); }
@@ -658,6 +669,9 @@ document.addEventListener("keydown", (e) => {
 
 // الإيماءات: سحب أفقي يتقدّم (يميناً للسابق ويساراً للتالي، كاتجاه القراءة)، ونقرة على الشاشة تُوقف وتُشغّل
 let swipe = null;
+// تحريك الفأرة يُظهر الأزرار كما في مشغلات الفيديو، فيصير النقر عليها ممكناً من أول مرة
+document.addEventListener("pointermove", (e) => { if (cine.on && e.pointerType === "mouse") wake(); }, { capture: true, passive: true }); // التقاط قبل الخريطة التي قد توقف انتشار الحدث
+cineEl.addEventListener("focusin", () => { if (cine.on) wake(); });
 document.addEventListener("pointerdown", (e) => {
   if (!cine.on) return;
   wake();
