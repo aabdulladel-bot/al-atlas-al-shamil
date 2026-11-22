@@ -304,6 +304,8 @@ try {
       await page.keyboard.press("Escape");
     }
     step = `${name}: الرحلات`;
+    // اللوحة تُطوى في الزيارة الأولى على المكتب أيضاً، ومنها قائمة الرحلات
+    await togglePanel(true);
     // الرحلة: تُفتح أول رحلة، وتُجتاز خطواتها بالتالي حتى آخرها، ثم تُغلق بزر «إنهاء»
     await page.evaluate(() => { document.getElementById("journey-panel").open = true; });
     await page.waitForSelector("#journey-list button", { timeout: 15000 });
