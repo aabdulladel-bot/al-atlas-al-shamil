@@ -245,12 +245,21 @@ function capPadding() {
   const h = window.innerHeight, w = window.innerWidth;
   return isNarrow() ? { top: 140, bottom: Math.round(h * 0.34), left: 28, right: 28 } : { top: 125, bottom: Math.round(h * 0.26), left: Math.round(w * 0.08), right: Math.round(w * 0.08) };
 }
+// احتواء النطاق في الكاميرا. حساب الكرة في MapLibre قد يفشل على الجوال (نطاق شبه نقطي أو حشوة كبيرة)،
+// فيُلقي خطأ «reading 'center'»؛ عندها يُطار إلى مركز النطاق بدل الاحتواء.
+function fitOrFly(xs, ys, opts, maxZoom) {
+  const w = Math.min(...xs), s = Math.min(...ys), e = Math.max(...xs), n = Math.max(...ys);
+  const center = [(w + e) / 2, (s + n) / 2];
+  const fly = () => map.flyTo({ ...opts, center, zoom: Math.min(maxZoom, isNarrow() ? 3.2 : 3.6), padding: capPadding(), curve: 1.2 });
+  if (e - w < 0.5 && n - s < 0.5) return fly();
+  try { map.fitBounds([[w, s], [e, n]], { ...opts, padding: capPadding(), maxZoom }); } catch { fly(); }
+}
 function flyCamera(pts, ms) {
   const opts = { pitch: 0, bearing: 0, duration: camMs(ms), essential: true };
   if (!pts.length && cine.allAnchors.length > 1) {
     // الافتتاح والخاتمة: نطاق أماكن الرحلة كلها، لا الكرة كاملة
     const xs = cine.allAnchors.map((p) => p[0]), ys = cine.allAnchors.map((p) => p[1]);
-    map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { ...opts, padding: capPadding(), maxZoom: 3.6 });
+    fitOrFly(xs, ys, opts, 3.6);
   } else if (!pts.length) {
     const c = cine.allAnchors.length ? cine.allAnchors[0] : [30, 22];
     map.flyTo({ ...opts, center: c, zoom: isNarrow() ? 1.4 : 2, padding: capPadding(), curve: 1.2 });
@@ -258,7 +267,7 @@ function flyCamera(pts, ms) {
     map.flyTo({ ...opts, center: pts[0], zoom: isNarrow() ? 3.9 : 4.3, padding: capPadding(), curve: 1.3 });
   } else {
     const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
-    map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { ...opts, padding: capPadding(), maxZoom: 4.4 });
+    fitOrFly(xs, ys, opts, 4.4);
   }
 }
 

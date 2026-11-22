@@ -158,7 +158,8 @@ function hueOf(key) {
   return (h >>> 0) % 360;
 }
 const ENTITY_SL = { satellite: "78%, 66%", drawn: "48%, 46%" };
-const entityColor = (mode) => ["to-color", ["concat", "hsl(", ["to-string", ["get", "_h"]], `, ${ENTITY_SL[mode]})`]];
+// المضلعات بلا اسم لا تحمل _h، فكان اللون يُبنى «hsl(, …)» ويفشل تحليله ويسقط إلى الأسود الافتراضي؛ الأسود صار صريحاً هنا، فالمظهر لا يتغير
+const entityColor = (mode) => ["case", ["has", "_h"], ["to-color", ["concat", "hsl(", ["to-string", ["get", "_h"]], `, ${ENTITY_SL[mode]})`]], ["to-color", "#000000"]];
 const swatchColor = (h) => `hsl(${h}, ${ENTITY_SL[basemap.mode]})`;
 const HIGHLIGHT_COLOR = { satellite: "#ffffff", drawn: "#2a2620" };
 const basemap = { mode: "satellite" };

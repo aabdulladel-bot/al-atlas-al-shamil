@@ -54,7 +54,11 @@ async function visualCheck(browser, name, viewport) {
   const settle = async () => { await page.evaluate(() => window.__settle()); await page.waitForTimeout(400); await page.evaluate(() => window.__settle()); };
   await page.evaluate(() => { terrainState.on = false; applyTerrain(); });
   const states = [
-    ["landing", async () => { await page.evaluate(() => map.jumpTo({ center: [35, 32], zoom: 2.8, pitch: 30, bearing: 0 })); }],
+    ["landing", async () => {
+      await page.evaluate(() => map.jumpTo({ center: [35, 32], zoom: 2.8, pitch: 30, bearing: 0 }));
+      // طبقة المواضع تُحمَّل بعد الحدود؛ المرجع يحويها، فلا تُلتقط الصورة قبلها
+      await page.waitForFunction(() => map.getLayer("places") && map.queryRenderedFeatures({ layers: ["places"] }).length > 0, null, { timeout: 30000 });
+    }],
     ["card", async () => {
       await page.evaluate(() => loadBorders(1600));
       await page.evaluate(() => map.jumpTo({ center: [32, 39.5], zoom: 4.2, pitch: 0, bearing: 0 }));
