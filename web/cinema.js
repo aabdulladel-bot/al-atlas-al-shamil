@@ -23,6 +23,8 @@ function setCinemaPref(mode) {
 // ---------- عناصر الواجهة ----------
 const cineEl = document.createElement("div");
 cineEl.id = "cine";
+cineEl.setAttribute("role", "region");
+cineEl.setAttribute("aria-label", "العرض السينمائي للرحلة");
 cineEl.hidden = true;
 cineEl.innerHTML = `
   <div class="cine-top">
@@ -245,12 +247,21 @@ function capPadding() {
   const h = window.innerHeight, w = window.innerWidth;
   return isNarrow() ? { top: 140, bottom: Math.round(h * 0.34), left: 28, right: 28 } : { top: 125, bottom: Math.round(h * 0.26), left: Math.round(w * 0.08), right: Math.round(w * 0.08) };
 }
+// احتواء النطاق في الكاميرا. حساب الكرة في MapLibre قد يفشل على الجوال (نطاق شبه نقطي أو حشوة كبيرة)،
+// فيُلقي خطأ «reading 'center'»؛ عندها يُطار إلى مركز النطاق بدل الاحتواء.
+function fitOrFly(xs, ys, opts, maxZoom) {
+  const w = Math.min(...xs), s = Math.min(...ys), e = Math.max(...xs), n = Math.max(...ys);
+  const center = [(w + e) / 2, (s + n) / 2];
+  const fly = () => map.flyTo({ ...opts, center, zoom: Math.min(maxZoom, isNarrow() ? 3.2 : 3.6), padding: capPadding(), curve: 1.2 });
+  if (e - w < 0.5 && n - s < 0.5) return fly();
+  try { map.fitBounds([[w, s], [e, n]], { ...opts, padding: capPadding(), maxZoom }); } catch { fly(); }
+}
 function flyCamera(pts, ms) {
   const opts = { pitch: 0, bearing: 0, duration: camMs(ms), essential: true };
   if (!pts.length && cine.allAnchors.length > 1) {
     // الافتتاح والخاتمة: نطاق أماكن الرحلة كلها، لا الكرة كاملة
     const xs = cine.allAnchors.map((p) => p[0]), ys = cine.allAnchors.map((p) => p[1]);
-    map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { ...opts, padding: capPadding(), maxZoom: 3.6 });
+    fitOrFly(xs, ys, opts, 3.6);
   } else if (!pts.length) {
     const c = cine.allAnchors.length ? cine.allAnchors[0] : [30, 22];
     map.flyTo({ ...opts, center: c, zoom: isNarrow() ? 1.4 : 2, padding: capPadding(), curve: 1.2 });
@@ -258,7 +269,7 @@ function flyCamera(pts, ms) {
     map.flyTo({ ...opts, center: pts[0], zoom: isNarrow() ? 3.9 : 4.3, padding: capPadding(), curve: 1.3 });
   } else {
     const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
-    map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { ...opts, padding: capPadding(), maxZoom: 4.4 });
+    fitOrFly(xs, ys, opts, 4.4);
   }
 }
 
@@ -310,10 +321,20 @@ function closingCardHtml(journey) {
 }
 // الإخفاء التلقائي: الأزرار تختفي بعد لحظات من الإيقاع، وأي لمس يُظهرها
 let idleTimer = null;
+let overCtrl = false; // المؤشر فوق شريط التحكم: لا تُخفى الأزرار تحته
 function wake() {
   cineEl.classList.remove("idle");
   clearTimeout(idleTimer);
-  if (cine.on && cine.playing) idleTimer = setTimeout(() => { if (cine.on && cine.playing) cineEl.classList.add("idle"); }, 2600);
+  if (cine.on && cine.playing) idleTimer = setTimeout(() => {
+    if (!cine.on || !cine.playing) return;
+    // لا إخفاء والمؤشر أو التركيز على الأزرار، فيبقى النقر ممكناً
+    if (overCtrl || cineEl.querySelector(".cine-ctrl, .cine-top")?.contains(document.activeElement) || cineEl.querySelector(".cine-top:focus-within, .cine-ctrl:focus-within")) return wake();
+    cineEl.classList.add("idle");
+  }, 2600);
+}
+for (const el of cineEl.querySelectorAll(".cine-ctrl, .cine-top")) {
+  el.addEventListener("pointerenter", () => { overCtrl = true; wake(); });
+  el.addEventListener("pointerleave", () => { overCtrl = false; wake(); });
 }
 function scheduleChunk(token, ms) {
   clearTimeout(cine.timer);
@@ -649,6 +670,7 @@ cineEl.addEventListener("click", (e) => {
 
 document.addEventListener("keydown", (e) => {
   if (!cine.on || e.target.closest("input, select, textarea")) return;
+  wake(); // لوحة المفاتيح تُظهر الأزرار المخفية، فلا يقع التركيز على زر غير مرئي
   if (e.key === "Escape") { e.preventDefault(); return endJourney(); }
   // المسافة على زر مركَّز تضغطه المتصفح نفسه، فلا تُعاد هنا
   if (e.key === " " && !e.target.closest("button")) { e.preventDefault(); return setPlaying(!cine.playing); }
@@ -658,6 +680,9 @@ document.addEventListener("keydown", (e) => {
 
 // الإيماءات: سحب أفقي يتقدّم (يميناً للسابق ويساراً للتالي، كاتجاه القراءة)، ونقرة على الشاشة تُوقف وتُشغّل
 let swipe = null;
+// تحريك الفأرة يُظهر الأزرار كما في مشغلات الفيديو، فيصير النقر عليها ممكناً من أول مرة
+document.addEventListener("pointermove", (e) => { if (cine.on && e.pointerType === "mouse") wake(); }, { capture: true, passive: true }); // التقاط قبل الخريطة التي قد توقف انتشار الحدث
+cineEl.addEventListener("focusin", () => { if (cine.on) wake(); });
 document.addEventListener("pointerdown", (e) => {
   if (!cine.on) return;
   wake();

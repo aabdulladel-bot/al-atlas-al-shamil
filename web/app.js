@@ -158,7 +158,8 @@ function hueOf(key) {
   return (h >>> 0) % 360;
 }
 const ENTITY_SL = { satellite: "78%, 66%", drawn: "48%, 46%" };
-const entityColor = (mode) => ["to-color", ["concat", "hsl(", ["to-string", ["get", "_h"]], `, ${ENTITY_SL[mode]})`]];
+// المضلعات بلا اسم لا تحمل _h، فكان اللون يُبنى «hsl(, …)» ويفشل تحليله ويسقط إلى الأسود الافتراضي؛ الأسود صار صريحاً هنا، فالمظهر لا يتغير
+const entityColor = (mode) => ["case", ["has", "_h"], ["to-color", ["concat", "hsl(", ["to-string", ["get", "_h"]], `, ${ENTITY_SL[mode]})`]], ["to-color", "#000000"]];
 const swatchColor = (h) => `hsl(${h}, ${ENTITY_SL[basemap.mode]})`;
 const HIGHLIGHT_COLOR = { satellite: "#ffffff", drawn: "#2a2620" };
 const basemap = { mode: "satellite" };
@@ -538,7 +539,12 @@ async function showLabels(key) {
       el.textContent = l.ar ?? l.en;
       el.title = l.ar ? l.en : "لا اسم عربي موثّق بعد";
     }
-    return { min: l.min, latin: !l.ar, added: false, marker: new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]) };
+    // MapLibre يجعل العلامة «زراً» باسم إنجليزي عام «Map marker» إن لم تحمل اسماً ودوراً، فيحجب الاسم المكتوب.
+    // التسمية للقراءة لا للضغط: دورها صورة نصية، واسمها هو المكتوب نفسه
+    el.setAttribute("role", "img");
+    el.setAttribute("aria-label", l.ar ?? l.en_shown ?? l.en);
+    const marker = new maplibregl.Marker({ element: el, anchor: "center", opacity: "1", opacityWhenCovered: "0" }).setLngLat([l.x, l.y]);
+    return { min: l.min, latin: !l.ar, added: false, marker };
   });
   // الأسماء العربية أولاً في منع التراكب، ثم ما لا عربي له، مع حفظ ترتيب الأهمية داخل كلٍّ منهما
   countryLabels.sort((a, b) => a.latin - b.latin);

@@ -54,7 +54,11 @@ async function visualCheck(browser, name, viewport) {
   const settle = async () => { await page.evaluate(() => window.__settle()); await page.waitForTimeout(400); await page.evaluate(() => window.__settle()); };
   await page.evaluate(() => { terrainState.on = false; applyTerrain(); });
   const states = [
-    ["landing", async () => { await page.evaluate(() => map.jumpTo({ center: [35, 32], zoom: 2.8, pitch: 30, bearing: 0 })); }],
+    ["landing", async () => {
+      await page.evaluate(() => map.jumpTo({ center: [35, 32], zoom: 2.8, pitch: 30, bearing: 0 }));
+      // طبقة المواضع تُحمَّل بعد الحدود؛ المرجع يحويها، فلا تُلتقط الصورة قبلها
+      await page.waitForFunction(() => map.getLayer("places") && map.queryRenderedFeatures({ layers: ["places"] }).length > 0, null, { timeout: 30000 });
+    }],
     ["card", async () => {
       await page.evaluate(() => loadBorders(1600));
       await page.evaluate(() => map.jumpTo({ center: [32, 39.5], zoom: 4.2, pitch: 0, bearing: 0 }));
@@ -111,6 +115,8 @@ try {
       continue;
     }
     const page = await browser.newPage({ viewport });
+    // بطاقة افتتاح الرحلة تنتظر 3.4 ثانية قبل أول ترجمة؛ تُصفَّر في الفحص (المتغير موجود لهذا الغرض في web/cinema.js)
+    await page.addInitScript(() => { window.CINE_INTRO_MS = 0; });
     await page.route("**/elevation-tiles-prod/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: FLAT_TILE, headers: { "access-control-allow-origin": "*" } }));
     await page.route("**/gibs.earthdata.nasa.gov/**", (route) => route.fulfill({ status: 200, contentType: "image/png", body: SAT_STANDIN, headers: { "access-control-allow-origin": "*" } }));
     // خطوط Google تُستبدل بلا شيء، فتُرسم بخطوط النظام نفسها في كل تشغيل
@@ -124,6 +130,13 @@ try {
     // map معرّفة في نطاق الصفحة لا في window، فتُعرَّف دالة الانتظار بوسم سكربت.
     await page.addScriptTag({ content: "window.__settle = () => new Promise((res) => { if (map.loaded() && !map.isMoving()) return res(); const t = setTimeout(res, 3000); map.once('idle', () => { clearTimeout(t); res(); }); });" });
     const settle = () => page.evaluate(() => window.__settle());
+    // أزرار العرض السينمائي تختفي بعد ثوانٍ من الخمول، وتظهر بتحريك الفأرة كما يفعل المستخدم
+    const cineClick = async (sel) => {
+      const box = await page.locator(sel).boundingBox();
+      // حركتان: الأولى تُظهر الأزرار، والثانية تدخل الزر نفسه فيبقى ظاهراً حتى النقر
+      if (box) { await page.mouse.move(box.x + box.width / 2 - 2, box.y + box.height / 2); await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2); }
+      await page.click(sel);
+    };
     // التضاريس تُطفأ لبقية الفحوص (غايتها أخطاء الواجهة لا سرعة الرسم البرمجي)، وتُختبر وحدها في خطوة لوحة الطبقات
     await page.waitForFunction(() => document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 60000 });
     // اللوحة مطويّة على الجوال؛ والفحص يمرّ بأقسام الباحث كلها
@@ -310,26 +323,26 @@ try {
     await page.click('#journey-list button[data-journey="trade"]');
     // الرحلة تبدأ بالعرض السينمائي (web/cinema.js): يُوقف التشغيل التلقائي، ثم تُجتاز الخطوات بزر «التالي»
     await page.waitForSelector('#cine button[data-act="next"]', { timeout: 15000 });
-    await page.click('#cine button[data-act="toggle"]');
+    await cineClick('#cine button[data-act="toggle"]');
     await settle();
     counts.cineCaption = (await page.$eval("#cine-cap-box", (b) => b.textContent.trim().length)) > 0 ? 1 : 0;
     if (!counts.cineCaption) problems.push(`[${name}] العرض السينمائي بلا ترجمة نصية`);
     let passed = 1;
     while (await page.$eval('#cine button[data-act="next"]', (b) => !b.disabled)) {
-      await page.click('#cine button[data-act="next"]');
+      await cineClick('#cine button[data-act="next"]');
       await settle();
       passed++;
     }
     counts.journeySteps = passed;
     await page.screenshot({ path: path.join(ROOT, "out", `journey_${name}.png`) });
     // وضع القراءة على الخطوة نفسها، ثم العودة إلى العرض
-    await page.click('#cine button[data-act="read"]');
+    await cineClick('#cine button[data-act="read"]');
     await page.waitForSelector('#journey-box button[data-act="cinema"]', { timeout: 10000 });
     counts.readMode = (await page.evaluate(() => document.getElementById("cine").hidden && journeyState?.index === journeyState?.journey.steps.length - 1)) ? 1 : 0;
     if (!counts.readMode) problems.push(`[${name}] وضع القراءة لم يفتح على الخطوة نفسها`);
     await page.click('#journey-box button[data-act="cinema"]');
     await page.waitForSelector('#cine button[data-act="exit"]', { timeout: 10000 });
-    await page.click('#cine button[data-act="exit"]');
+    await cineClick('#cine button[data-act="exit"]');
     await page.waitForTimeout(300);
     if (!(await page.$eval("#cine", (b) => b.hidden)) || !(await page.$eval("#journey-box", (b) => b.hidden))) problems.push(`[${name}] الرحلة لم تُغلق`);
     if (await page.evaluate(() => document.body.classList.contains("cinema"))) problems.push(`[${name}] بقيت الواجهة مخفية بعد الخروج من العرض`);
@@ -341,17 +354,17 @@ try {
       for (const id of ids) {
         await page.click(`#journey-list button[data-journey="${id}"]`);
         await page.waitForSelector('#cine button[data-act="next"]', { timeout: 15000 });
-        await page.click('#cine button[data-act="toggle"]');
+        await cineClick('#cine button[data-act="toggle"]');
         await settle();
         let n = 1;
         while (await page.$eval('#cine button[data-act="next"]', (b) => !b.disabled)) {
-          await page.click('#cine button[data-act="next"]');
+          await cineClick('#cine button[data-act="next"]');
           await settle();
           n++;
         }
         if (n === expected[id]) walkedOk++;
         else problems.push(`[${name}] رحلة ${id}: مرّ بـ${n} خطوات والمتوقع ${expected[id]}`);
-        await page.click('#cine button[data-act="exit"]');
+        await cineClick('#cine button[data-act="exit"]');
         await page.waitForTimeout(300);
       }
       counts.journeysWalked = walkedOk;
@@ -380,7 +393,7 @@ try {
     await page.waitForSelector('#cine button[data-act="next"]', { timeout: 15000 });
     counts.sunnaJourney = (await page.evaluate(() => journeyState?.journey.id)) === "luxury" ? 1 : 0;
     await settle();
-    await page.click('#cine button[data-act="exit"]');
+    await cineClick('#cine button[data-act="exit"]');
     await page.waitForTimeout(300);
     step = `${name}: العرض الشامل`;
     // العرض الشامل: كل نمط يبدأ، ويتقدّم مشهدين، ثم يُغلق ويعيد اللوحة
