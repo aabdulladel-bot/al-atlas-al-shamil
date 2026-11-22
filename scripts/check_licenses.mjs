@@ -100,23 +100,31 @@ const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "sources/manifest.js
 const norm = (s) =>
   s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
     .replace(/[^a-z؀-ۿ一-鿿]+/g, " ").trim();
+// المصدر قد يتكون من ملفات متعددة (manifest.files)، فالمقطع يكفي أن يوجد في أي منها.
 function passageCoverage(id) {
   const src = manifest.find((s) => s.id === id);
   if (!src || !src.file) return null;
-  const file = path.join(ROOT, src.file);
-  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return null;
-  const text = norm(fs.readFileSync(file, "utf8"));
+  const listed = [src.file, ...((src.files || []).map((f) => f.file))];
+  const texts = [];
+  for (const rel of [...new Set(listed)]) {
+    const file = path.join(ROOT, rel);
+    if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) continue;
+    texts.push(norm(fs.readFileSync(file, "utf8")));
+  }
+  if (!texts.length) return null;
   let worst = 100;
   for (const p of passagesBySource[id]) {
     const w = norm(p).split(" ");
-    let n = 0, hit = 0;
+    let n = 0;
+    const hits = new Array(texts.length).fill(0);
     for (let i = 0; i + 4 <= w.length; i += 4) {
       n++;
-      if (text.includes(w.slice(i, i + 4).join(" "))) hit++;
+      const win = w.slice(i, i + 4).join(" ");
+      texts.forEach((t, k) => { if (t.includes(win)) hits[k]++; });
     }
-    if (n > 0) worst = Math.min(worst, Math.round((100 * hit) / n));
+    if (n > 0) worst = Math.min(worst, Math.round((100 * Math.max(...hits)) / n));
   }
-  return { file: src.file, worst };
+  return { file: listed.join(" + "), worst };
 }
 
 for (const id of [...passageIds].sort()) {
