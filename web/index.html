@@ -201,7 +201,7 @@
     .lc-claims { background: radial-gradient(circle, var(--evidence) 0 7px, transparent 7px 8px, color-mix(in srgb, var(--evidence) 35%, transparent) 8px 11px, transparent 11px); }
     .lc-demography { background: linear-gradient(90deg, #f1c27d 0 30%, transparent 30% 35%, #c4572a 35% 65%, transparent 65% 70%, #e0913f 70%); clip-path: polygon(0 50%, 30% 50%, 30% 100%, 35% 100%, 35% 8%, 65% 8%, 65% 100%, 70% 100%, 70% 32%, 100% 32%, 100% 100%, 0 100%); border-radius: 0; }
     .lc-lights { background: radial-gradient(circle at 30% 40%, #ffd98a 0 1.5px, transparent 2px), radial-gradient(circle at 65% 55%, #ffe9b8 0 1.2px, transparent 1.8px), radial-gradient(circle at 45% 75%, #ffcf70 0 1px, transparent 1.6px), #0b1020; }
-    .card-actions { margin: 10px 0 0; }
+    .card-actions { display: inline-flex; margin: 10px 0 0; margin-inline-end: 6px; vertical-align: top; } /* أزرار البطاقة في صف واحد */
     .card-actions .chip { border: 1px solid var(--accent); background: transparent; }
     table.cmp { width: 100%; border-collapse: collapse; font-size: 12.5px; }
     table.cmp th { text-align: start; color: var(--muted); font-weight: 500; padding: 4px 6px 4px 0; white-space: nowrap; }
@@ -221,8 +221,10 @@
     .ch-en { font-size: 12.5px; color: var(--muted); margin-top: 1px; }
     .ch .chips { margin-top: 8px; }
     .ch-note { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; line-height: 1.6; }
-    .stats { display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0 2px; }
-    .stat b { display: block; font-size: 19px; }
+    /* الحقائق الأساسية مربعات: الرقم أولاً بخط العناوين، والوصف تحته */
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 8px; margin: 12px 0 4px; }
+    .stat { padding: 8px 10px; border: 1px solid var(--line); border-radius: 12px; background: color-mix(in srgb, var(--accent) 7%, transparent); }
+    .stat b { display: block; font-size: 19px; font-family: var(--font-d); font-variant-numeric: tabular-nums; line-height: 1.35; }
     .stat span { font-size: 11.5px; color: var(--muted); }
     .life { margin: 12px 0 4px; }
     .life-title { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
@@ -233,7 +235,8 @@
     .life-dot.now { outline: 2px solid var(--ink); outline-offset: 2px; }
     .life-labels { display: flex; justify-content: space-between; font-size: 9.5px; color: var(--muted); margin-top: 4px; direction: rtl; }
     .card-sec { margin-top: 14px; border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding-top: 10px; }
-    .card-sec h3 { font-size: 14px; margin: 0 0 6px; }
+    .card-sec h3 { font-size: 14px; margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+    .card-sec h3::before { content: ""; flex: none; width: 3px; height: 14px; border-radius: 2px; background: var(--accent); } /* علامة القسم */
     .define-desc { font-size: 15px; line-height: 1.75; margin: 0 0 8px; }
     .define-links { font-size: 13px; margin: 8px 0 4px; }
     .define-note { border-inline-start: 3px solid var(--accent); padding-inline-start: 8px; margin: 8px 0; }
@@ -484,6 +487,12 @@
     /* البطاقة: تنزلق إلى مكانها، وأيقونة نوعها بجانب العنوان */
     #card:not([hidden]) { animation: card-in 0.28s ease; }
     @keyframes card-in { from { opacity: 0; transform: translateX(18px); } }
+    /* أقسام البطاقة تدخل متتابعة بعد العنوان، فتُقرأ بالترتيب */
+    @keyframes sec-in { from { opacity: 0; transform: translateY(6px); } }
+    #card:not([hidden]) .card-sec { animation: sec-in 0.32s ease both; }
+    #card:not([hidden]) .card-sec:nth-of-type(2) { animation-delay: 0.05s; }
+    #card:not([hidden]) .card-sec:nth-of-type(3) { animation-delay: 0.1s; }
+    #card:not([hidden]) .card-sec:nth-of-type(n+4) { animation-delay: 0.15s; }
     .ch-ic { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: rgba(91, 184, 255, 0.14); color: var(--sky); }
     .ch-ic svg { width: 20px; height: 20px; }
     /* الشارات بأشكال لا بألوان وحدها: متحقق ● قريب ▲ محل خلاف ◆ غير متحقق ○ */
@@ -616,7 +625,7 @@
       @keyframes card-in { from { opacity: 0; transform: translateY(24px); } }
     }
     @media (prefers-reduced-motion: reduce) {
-      #card:not([hidden]), #q-results, .sheet, details.section[open] > :not(summary), [role="tabpanel"]:not([hidden]) { animation: none; }
+      #card:not([hidden]), #card .card-sec, #q-results, .sheet, details.section[open] > :not(summary), [role="tabpanel"]:not([hidden]) { animation: none; }
     }
     /* ---------- العرض السينمائي للرحلات (web/cinema.js): الخريطة كاملة، وترجمة مقطعية، وحركة على المكان ---------- */
     .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -732,7 +741,8 @@
     ol.lineage { margin: 6px 0; padding-inline-start: 18px; font-size: 13px; line-height: 1.7; }
     ol.lineage li { margin: 0; }
     .place-info details summary { cursor: pointer; margin-top: 4px; }
-    .lin-rewind { margin: 6px 0; }
+    .lin-rewind { margin: 6px 0; font: inherit; font-size: 12.5px; color: var(--ink); background: transparent; border: 1px solid var(--accent); border-radius: 999px; padding: 4px 12px; cursor: pointer; } /* مثل بقية أزرار البطاقة */
+    .lin-rewind:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     #rewind-box { position: fixed; left: 50%; bottom: calc(var(--tb-h) + 18px); transform: translateX(-50%); z-index: 6; max-width: min(560px, 92vw); text-align: center; padding: 10px 16px; border-radius: 12px; background: rgba(12, 14, 20, .82); color: #fff; box-shadow: 0 6px 24px rgba(0,0,0,.4); font: 600 15px/1.6 var(--font-b); }
     #rewind-box[hidden] { display: none; }
     #rewind-box .rw-year { display: block; color: #e9b44c; font: 600 13px var(--font-b); }

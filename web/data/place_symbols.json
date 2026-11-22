@@ -1,0 +1,2423 @@
+{
+ "_meta": {
+  "source": "Wikidata (CC0). أسماء ملفات العلم والشعار للإحالة إلى Wikimedia Commons، ولا تُعرض الصور.",
+  "note": "الرموز كما في ويكي بيانات للكيان المربوط بالموضع، لا من الأطلس. غياب رمز لا يعني غيابه في الواقع.",
+  "places_with_symbols": 211,
+  "counts": {
+   "heritage": 38,
+   "patron_saint": 32,
+   "religion": 2,
+   "anthem": 16,
+   "motto": 19,
+   "flag": 152,
+   "coat_of_arms": 152
+  }
+ },
+ "places": {
+  "nippur": {
+   "qid": "Q188395",
+   "heritage": [
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    }
+   ]
+  },
+  "ur": {
+   "qid": "Q5699",
+   "heritage": [
+    {
+     "qid": "Q43113623",
+     "ar": "جزء من مواقع التراث العالمي",
+     "en": "part of UNESCO World Heritage Site"
+    }
+   ]
+  },
+  "uruk": {
+   "qid": "Q168518",
+   "heritage": [
+    {
+     "qid": "Q43113623",
+     "ar": "جزء من مواقع التراث العالمي",
+     "en": "part of UNESCO World Heritage Site"
+    }
+   ]
+  },
+  "memphis": {
+   "qid": "Q5715",
+   "heritage": [
+    {
+     "qid": "Q43113623",
+     "ar": "جزء من مواقع التراث العالمي",
+     "en": "part of UNESCO World Heritage Site"
+    }
+   ]
+  },
+  "sidon": {
+   "qid": "Q163490",
+   "heritage": [
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    }
+   ]
+  },
+  "byblos": {
+   "qid": "Q173532",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "jerusalem": {
+   "qid": "Q1218",
+   "flag": [
+    "Al Quds Flag.jpg"
+   ],
+   "coat_of_arms": [
+    "Al Quds coat of Arms.png"
+   ]
+  },
+  "megiddo": {
+   "qid": "Q208379",
+   "heritage": [
+    {
+     "qid": "Q43113623",
+     "ar": "جزء من مواقع التراث العالمي",
+     "en": "part of UNESCO World Heritage Site"
+    }
+   ]
+  },
+  "nineveh": {
+   "qid": "Q5680",
+   "heritage": [
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    }
+   ]
+  },
+  "ashur": {
+   "qid": "Q200200",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "nimrud": {
+   "qid": "Q237614",
+   "heritage": [
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    }
+   ]
+  },
+  "hattusa": {
+   "qid": "Q181007",
+   "heritage": [
+    {
+     "qid": "Q43113623",
+     "ar": "جزء من مواقع التراث العالمي",
+     "en": "part of UNESCO World Heritage Site"
+    }
+   ]
+  },
+  "gordion": {
+   "qid": "Q542854",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    },
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    }
+   ]
+  },
+  "sardis": {
+   "qid": "Q232615",
+   "heritage": [
+    {
+     "qid": "Q43113623",
+     "ar": "جزء من مواقع التراث العالمي",
+     "en": "part of UNESCO World Heritage Site"
+    }
+   ]
+  },
+  "athens": {
+   "qid": "Q1524",
+   "patron_saint": [
+    {
+     "qid": "Q310686",
+     "ar": null,
+     "en": "Dionysius the Areopagite"
+    }
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Municipality of Athens.svg"
+   ]
+  },
+  "susa": {
+   "qid": "Q180773",
+   "heritage": [
+    {
+     "qid": "Q5958900",
+     "ar": "المعالم الوطنية الإيرانية",
+     "en": "Iranian National Heritage"
+    },
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "ecbatana": {
+   "qid": "Q696193",
+   "heritage": [
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    },
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    },
+    {
+     "qid": "Q5958900",
+     "ar": "المعالم الوطنية الإيرانية",
+     "en": "Iranian National Heritage"
+    }
+   ]
+  },
+  "persepolis": {
+   "qid": "Q129072",
+   "heritage": [
+    {
+     "qid": "Q5958900",
+     "ar": "المعالم الوطنية الإيرانية",
+     "en": "Iranian National Heritage"
+    },
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "rome": {
+   "qid": "Q220",
+   "patron_saint": [
+    {
+     "qid": "Q33923",
+     "ar": "بطرس",
+     "en": "Saint Peter"
+    },
+    {
+     "qid": "Q9200",
+     "ar": "بولس الطرسوسي",
+     "en": "Paul the Apostle"
+    }
+   ],
+   "flag": [
+    "Flag of Rome (with Lesser Arms).svg"
+   ],
+   "coat_of_arms": [
+    "Roma-Stemma-2.svg"
+   ]
+  },
+  "syracuse": {
+   "qid": "Q13670",
+   "patron_saint": [
+    {
+     "qid": "Q183240",
+     "ar": "القديسة لوسي",
+     "en": "Saint Lucy"
+    }
+   ],
+   "flag": [
+    "Flag of Syracuse.svg"
+   ],
+   "coat_of_arms": [
+    "Siracusa-Stemma.svg"
+   ]
+  },
+  "alexandria": {
+   "qid": "Q87",
+   "heritage": [
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    }
+   ],
+   "flag": [
+    "Flag of Alexandria.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms - Alexandria, Egypt.svg"
+   ]
+  },
+  "palmyra": {
+   "qid": "Q5747",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "petra": {
+   "qid": "Q5788",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "ephesus": {
+   "qid": "Q47611",
+   "heritage": [
+    {
+     "qid": "Q43113623",
+     "ar": "جزء من مواقع التراث العالمي",
+     "en": "part of UNESCO World Heritage Site"
+    }
+   ]
+  },
+  "lepcis": {
+   "qid": "Q191504",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "taxila": {
+   "qid": "Q156093",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "marakanda": {
+   "qid": "Q5753",
+   "coat_of_arms": [
+    "Emblem of Samarkand.svg"
+   ]
+  },
+  "damascus": {
+   "qid": "Q3766",
+   "flag": [
+    "Flag of Damascus (until 2024).svg"
+   ]
+  },
+  "ravenna": {
+   "qid": "Q13364",
+   "patron_saint": [
+    {
+     "qid": "Q320199",
+     "ar": null,
+     "en": "Apollinaris of Ravenna"
+    }
+   ],
+   "flag": [
+    "Flag of Ravenna.svg"
+   ],
+   "coat_of_arms": [
+    "Ravenna-Stemma.svg"
+   ]
+  },
+  "cordoba": {
+   "qid": "Q5818",
+   "patron_saint": [
+    {
+     "qid": "Q56951",
+     "ar": "رفائيل",
+     "en": "Raphael"
+    },
+    {
+     "qid": "Q91678158",
+     "ar": null,
+     "en": "Acisclus and Victoria"
+    }
+   ],
+   "flag": [
+    "Flag of Córdoba, Spain.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo oficial de Córdoba (España).svg"
+   ]
+  },
+  "toledo": {
+   "qid": "Q5836",
+   "patron_saint": [
+    {
+     "qid": "Q456069",
+     "ar": null,
+     "en": "Ildephonsus of Toledo"
+    }
+   ],
+   "flag": [
+    "Bandera de Toledo1.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de la ciudad de Toledo.svg"
+   ]
+  },
+  "bostra": {
+   "qid": "Q272680",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "baghdad": {
+   "qid": "Q1530",
+   "flag": [
+    "Flag of Baghdad.svg"
+   ],
+   "coat_of_arms": [
+    "Seal of Baghdad.svg"
+   ]
+  },
+  "samarra": {
+   "qid": "Q170047",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "kairouan": {
+   "qid": "Q179570",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "fustat": {
+   "qid": "Q839456",
+   "heritage": [
+    {
+     "qid": "Q43113623",
+     "ar": "جزء من مواقع التراث العالمي",
+     "en": "part of UNESCO World Heritage Site"
+    }
+   ]
+  },
+  "cairo": {
+   "qid": "Q85",
+   "flag": [
+    "Flag of Cairo.svg"
+   ]
+  },
+  "fez": {
+   "qid": "Q80985",
+   "flag": [
+    "Flag of Fes province.svg"
+   ]
+  },
+  "samarkand": {
+   "qid": "Q5753",
+   "coat_of_arms": [
+    "Emblem of Samarkand.svg"
+   ]
+  },
+  "aleppo": {
+   "qid": "Q41183",
+   "flag": [
+    "Flag of Aleppo.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Aleppo.svg"
+   ]
+  },
+  "istanbul-turkey": {
+   "qid": "Q406",
+   "flag": [
+    "İstanbul Büyükşehir Belediyesi.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms İstanbul.svg"
+   ]
+  },
+  "cairo-egypt": {
+   "qid": "Q85",
+   "flag": [
+    "Flag of Cairo.svg"
+   ]
+  },
+  "kyoto-japan": {
+   "qid": "Q34600",
+   "anthem": [
+    {
+     "qid": "Q18336822",
+     "ar": null,
+     "en": "municipal anthem of Kyoto"
+    }
+   ],
+   "flag": [
+    "Flag of Kyoto City.svg"
+   ],
+   "coat_of_arms": [
+    "Emblem of Kyoto, Kyoto.svg"
+   ]
+  },
+  "moscow-russia": {
+   "qid": "Q649",
+   "patron_saint": [
+    {
+     "qid": "Q48438",
+     "ar": "جرجس",
+     "en": "Saint George"
+    }
+   ],
+   "anthem": [
+    {
+     "qid": "Q2398452",
+     "ar": null,
+     "en": "Moya Moskva"
+    }
+   ],
+   "flag": [
+    "Flag of Moscow, Russia.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Moscow.svg"
+   ]
+  },
+  "venice-italy": {
+   "qid": "Q641",
+   "patron_saint": [
+    {
+     "qid": "Q31966",
+     "ar": "مرقس",
+     "en": "Mark the Evangelist"
+    }
+   ],
+   "flag": [
+    "Flag of Venice.svg"
+   ],
+   "coat_of_arms": [
+    "Venezia-Stemma.svg"
+   ]
+  },
+  "lisbon-portugal": {
+   "qid": "Q597",
+   "patron_saint": [
+    {
+     "qid": "Q167477",
+     "ar": "أنطونيو اللشبوني",
+     "en": "Anthony of Padua"
+    }
+   ],
+   "flag": [
+    "Bandeira municipal de Lisboa.png"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Lisbon.svg"
+   ]
+  },
+  "seville-spain": {
+   "qid": "Q8717",
+   "patron_saint": [
+    {
+     "qid": "Q243122",
+     "ar": "فرناندو الثالث ملك قشتالة",
+     "en": "Ferdinand III of Castille"
+    }
+   ],
+   "flag": [
+    "Flag of Sevilla, Spain.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de Sevilla (Sevilla).svg"
+   ]
+  },
+  "amsterdam-netherlands": {
+   "qid": "Q727",
+   "patron_saint": [
+    {
+     "qid": "Q44269",
+     "ar": "القديس نقولا",
+     "en": "Saint Nicholas"
+    }
+   ],
+   "motto": [
+    {
+     "text": "Heldhaftig, Vastberaden, Barmhartig",
+     "lang": "nl"
+    }
+   ],
+   "flag": [
+    "Flag of Amsterdam.svg"
+   ],
+   "coat_of_arms": [
+    "Wapen van Amsterdam.svg"
+   ]
+  },
+  "fez-morocco": {
+   "qid": "Q80985",
+   "flag": [
+    "Flag of Fes province.svg"
+   ]
+  },
+  "timbuktu-mali": {
+   "qid": "Q9427",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "mexico-city-mexico": {
+   "qid": "Q1489",
+   "patron_saint": [
+    {
+     "qid": "Q2671480",
+     "ar": null,
+     "en": "Philip of Jesus"
+    }
+   ],
+   "motto": [
+    {
+     "text": "Muy Noble e Insigne, Muy Leal e Imperial",
+     "lang": "es"
+    }
+   ],
+   "flag": [
+    "Flag of Mexico City (variant).svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Mexico City, Mexico.svg"
+   ]
+  },
+  "cusco-peru": {
+   "qid": "Q5582862",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ],
+   "flag": [
+    "Flag of Cusco (2021).svg"
+   ],
+   "coat_of_arms": [
+    "Cusco Emblem.svg"
+   ]
+  },
+  "manchester-united-kingdom": {
+   "qid": "Q18125",
+   "motto": [
+    {
+     "text": "Concilio Et Labore",
+     "lang": "la"
+    }
+   ],
+   "coat_of_arms": [
+    "Arms of Manchester.svg"
+   ]
+  },
+  "paris-france": {
+   "qid": "Q90",
+   "patron_saint": [
+    {
+     "qid": "Q235863",
+     "ar": "القديسة جينفيف",
+     "en": "Genevieve of Paris"
+    }
+   ],
+   "motto": [
+    {
+     "text": "Fluctuat nec mergitur",
+     "lang": "la"
+    }
+   ],
+   "flag": [
+    "Flag of Paris with coat of arms.svg"
+   ],
+   "coat_of_arms": [
+    "Grandes Armes de Paris.svg"
+   ]
+  },
+  "berlin-germany": {
+   "qid": "Q64",
+   "flag": [
+    "Flag of Berlin.svg"
+   ],
+   "coat_of_arms": [
+    "DEU Berlin COA.svg"
+   ]
+  },
+  "vienna-austria": {
+   "qid": "Q1741",
+   "flag": [
+    "Flag of Salzburg, Vienna, Vorarlberg.svg"
+   ],
+   "coat_of_arms": [
+    "Wien Wappen.svg"
+   ]
+  },
+  "st-petersburg-russia": {
+   "qid": "Q656",
+   "anthem": [
+    {
+     "qid": "Q4138482",
+     "ar": null,
+     "en": "Anthem of Saint Petersburg"
+    }
+   ],
+   "flag": [
+    "Flag of Saint Petersburg (large).svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Saint Petersburg (2003).svg"
+   ]
+  },
+  "algiers-algeria": {
+   "qid": "Q3561",
+   "flag": [
+    "Flag of Algiers.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Algiers.svg"
+   ]
+  },
+  "tehran-iran": {
+   "qid": "Q3616",
+   "flag": [
+    "Flag of Tehran.svg"
+   ]
+  },
+  "kolkata-india": {
+   "qid": "Q1348",
+   "coat_of_arms": [
+    "Kolkata Municipal Corporation new emblem.png"
+   ]
+  },
+  "mumbai-india": {
+   "qid": "Q1156",
+   "coat_of_arms": [
+    "Emblem of Mumbai.png"
+   ]
+  },
+  "tokyo-japan": {
+   "qid": "Q1490",
+   "anthem": [
+    {
+     "qid": "Q11525332",
+     "ar": null,
+     "en": "Tokyo Metropolitan Song"
+    }
+   ],
+   "flag": [
+    "Flag of Tokyo Metropolis.svg"
+   ],
+   "coat_of_arms": [
+    "Emblem of Tokyo Metropolis.svg"
+   ]
+  },
+  "new-york-united-states-of-america": {
+   "qid": "Q60",
+   "flag": [
+    "Flag of New York City.svg"
+   ],
+   "coat_of_arms": [
+    "Arms of New York City.svg"
+   ]
+  },
+  "philadelphia-united-states-of-america": {
+   "qid": "Q1345",
+   "flag": [
+    "Flag of Philadelphia, Pennsylvania.svg"
+   ],
+   "coat_of_arms": [
+    "Seal of Philadelphia, Pennsylvania.svg"
+   ]
+  },
+  "rio-de-janeiro-brazil": {
+   "qid": "Q8678",
+   "patron_saint": [
+    {
+     "qid": "Q183332",
+     "ar": "سيباستيان",
+     "en": "Saint Sebastian"
+    }
+   ],
+   "anthem": [
+    {
+     "qid": "Q5119495",
+     "ar": null,
+     "en": "Cidade Maravilhosa"
+    },
+    {
+     "qid": "Q19559503",
+     "ar": null,
+     "en": "Junte-se a Nós"
+    }
+   ],
+   "flag": [
+    "Bandeira da cidade do Rio de Janeiro.svg"
+   ],
+   "coat_of_arms": [
+    "Brasão da cidade do Rio de Janeiro.svg"
+   ]
+  },
+  "cape-town-south-africa": {
+   "qid": "Q5465",
+   "flag": [
+    "Flag of Cape Town, South Africa.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Cape Town, South Africa.png"
+   ]
+  },
+  "vatican-city-vatican": {
+   "qid": "Q237",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    },
+    {
+     "qid": "Q26086651",
+     "ar": null,
+     "en": "Cultural property under special protection"
+    }
+   ],
+   "anthem": [
+    {
+     "qid": "Q190226",
+     "ar": "النشيد البابوي",
+     "en": "Inno e Marcia Pontificale"
+    }
+   ],
+   "flag": [
+    "Flag of Vatican City (2023–present).svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Vatican City (2001–2023).svg"
+   ]
+  },
+  "san-marino-san-marino": {
+   "qid": "Q238",
+   "anthem": [
+    {
+     "qid": "Q336291",
+     "ar": "نشيد سان مارينو الوطني",
+     "en": null
+    }
+   ],
+   "motto": [
+    {
+     "text": "Libertas",
+     "lang": "la"
+    },
+    {
+     "text": "Freedom",
+     "lang": "en"
+    }
+   ],
+   "flag": [
+    "Flag of San Marino.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of San Marino.svg"
+   ]
+  },
+  "vaduz-liechtenstein": {
+   "qid": "Q1844",
+   "flag": [
+    "Flag of Vaduz Liechtenstein-1.svg"
+   ],
+   "coat_of_arms": [
+    "LIE Vaduz COA HistLex.svg"
+   ]
+  },
+  "luxembourg-luxembourg": {
+   "qid": "Q32",
+   "anthem": [
+    {
+     "qid": "Q202166",
+     "ar": "أونس هيميشت",
+     "en": "Ons Heemecht"
+    }
+   ],
+   "flag": [
+    "Flag of Luxembourg.svg"
+   ],
+   "coat_of_arms": [
+    "Greater coat of arms of the grand-duchy of Luxembourg.svg"
+   ]
+  },
+  "majuro-marshall-islands": {
+   "qid": "Q12919",
+   "flag": [
+    "Majuro Atoll Flag.svg"
+   ]
+  },
+  "funafuti-tuvalu": {
+   "qid": "Q34126",
+   "heritage": [
+    {
+     "qid": "Q117834546",
+     "ar": null,
+     "en": "IUGS Geological Heritage Site"
+    }
+   ]
+  },
+  "melekeok-palau": {
+   "qid": "Q12898552",
+   "flag": [
+    "Flag of Melekeok.svg"
+   ]
+  },
+  "monaco-monaco": {
+   "qid": "Q235",
+   "patron_saint": [
+    {
+     "qid": "Q469978",
+     "ar": "ديفوتا",
+     "en": "Devota"
+    }
+   ],
+   "anthem": [
+    {
+     "qid": "Q336321",
+     "ar": "نشيد موناكو الوطني",
+     "en": "Hymne monégasque"
+    }
+   ],
+   "motto": [
+    {
+     "text": "Easy going Monaco",
+     "lang": "en"
+    },
+    {
+     "text": "Deo Juvante",
+     "lang": "la"
+    }
+   ],
+   "flag": [
+    "Flag of Monaco.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Monaco.svg"
+   ]
+  },
+  "andorra-andorra": {
+   "qid": "Q228",
+   "anthem": [
+    {
+     "qid": "Q199506",
+     "ar": "إل غران كارلماني",
+     "en": "El gran Carlemany"
+    }
+   ],
+   "motto": [
+    {
+     "text": "Virtus Unita Fortior",
+     "lang": "la"
+    },
+    {
+     "text": "El País dels Pirineus",
+     "lang": "ca"
+    }
+   ],
+   "flag": [
+    "Flag of Andorra.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Andorra.svg"
+   ]
+  },
+  "ljubljana-slovenia": {
+   "qid": "Q437",
+   "flag": [
+    "Flag of Ljubljana.svg"
+   ],
+   "coat_of_arms": [
+    "Blason ville si Ljubljana (Slovénie).svg"
+   ]
+  },
+  "bratislava-slovakia": {
+   "qid": "Q1780",
+   "flag": [
+    "Flag of Bratislava.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Bratislava.svg"
+   ]
+  },
+  "podgorica-montenegro": {
+   "qid": "Q23564",
+   "flag": [
+    "Flag of Podgorica, Montenegro.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Podgorica.svg"
+   ]
+  },
+  "bern-switzerland": {
+   "qid": "Q70",
+   "heritage": [
+    {
+     "qid": "Q12127133",
+     "ar": null,
+     "en": "Swiss townscape worthy of protection"
+    }
+   ],
+   "flag": [
+    "CHE Bern BE Flag.svg"
+   ],
+   "coat_of_arms": [
+    "CHE Bern BE COA.svg"
+   ]
+  },
+  "pristina-kosovo": {
+   "qid": "Q25270",
+   "flag": [
+    "Prishtina-flag.svg"
+   ],
+   "coat_of_arms": [
+    "Prishtina-seal.svg"
+   ]
+  },
+  "banjul-the-gambia": {
+   "qid": "Q3726",
+   "flag": [
+    "Flag of Banjul, The Gambia.svg"
+   ],
+   "coat_of_arms": [
+    "GAM Banjul COA.svg"
+   ]
+  },
+  "skopje-north-macedonia": {
+   "qid": "Q384",
+   "patron_saint": [
+    {
+     "qid": "Q208542",
+     "ar": "والدة الإله",
+     "en": "Theotokos"
+    }
+   ],
+   "flag": [
+    "Flag of Skopje, North Macedonia.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Skopje.svg"
+   ]
+  },
+  "bridgetown-barbados": {
+   "qid": "Q36168",
+   "coat_of_arms": [
+    "Coat of arms of Bridgetown, Barbados.svg"
+   ]
+  },
+  "castries-saint-lucia": {
+   "qid": "Q41699",
+   "motto": [
+    {
+     "text": "Statio Haud Malefida Carinis",
+     "lang": "la"
+    }
+   ],
+   "flag": [
+    "Flag of Castries.svg"
+   ]
+  },
+  "port-louis-mauritius": {
+   "qid": "Q3929",
+   "flag": [
+    "Flag of Port Louis, Mauritius.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Port Louis, Mauritius.svg"
+   ]
+  },
+  "manama-bahrain": {
+   "qid": "Q3882",
+   "heritage": [
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    }
+   ]
+  },
+  "montevideo-uruguay": {
+   "qid": "Q1335",
+   "coat_of_arms": [
+    "Coat of arms of Montevideo Department.svg"
+   ]
+  },
+  "abu-dhabi-united-arab-emirates": {
+   "qid": "Q1519",
+   "flag": [
+    "Flag of Abu Dhabi.svg"
+   ]
+  },
+  "ashgabat-turkmenistan": {
+   "qid": "Q23438",
+   "coat_of_arms": [
+    "Ashgabat (seal).svg"
+   ]
+  },
+  "harare-zimbabwe": {
+   "qid": "Q3921",
+   "flag": [
+    "Flag of Harare.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Harare.svg"
+   ]
+  },
+  "dili-east-timor": {
+   "qid": "Q9310",
+   "flag": [
+    "Bandeira quadrada Dili 1952-1975.svg"
+   ],
+   "coat_of_arms": [
+    "PT Dili 1952-1975 COA.svg"
+   ]
+  },
+  "port-vila-vanuatu": {
+   "qid": "Q37806",
+   "flag": [
+    "Flag of Port Vila.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Port Vila.png"
+   ]
+  },
+  "tegucigalpa-honduras": {
+   "qid": "Q3238",
+   "flag": [
+    "Flag of Tegucigalpa.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de Distrito Central.svg"
+   ]
+  },
+  "georgetown-guyana": {
+   "qid": "Q10717",
+   "flag": [
+    "Flag of Georgetown.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Georgetown.png"
+   ]
+  },
+  "reykjav-k-iceland": {
+   "qid": "Q1764",
+   "flag": [
+    "Flag of Reykjavik, Iceland.svg"
+   ],
+   "coat_of_arms": [
+    "Reykjavik Coat of Arms.svg"
+   ]
+  },
+  "port-au-prince-haiti": {
+   "qid": "Q34261",
+   "flag": [
+    "Local Flag of Port Au Prince.jpg"
+   ],
+   "coat_of_arms": [
+    "Armes de la Ville de Port-au-Prince.svg"
+   ]
+  },
+  "dushanbe-tajikistan": {
+   "qid": "Q9365",
+   "coat_of_arms": [
+    "Coat of Arms of Dushanbe.png"
+   ]
+  },
+  "asunci-n-paraguay": {
+   "qid": "Q2933",
+   "flag": [
+    "Flag of Asunción.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de Asunción (Paraguay).svg"
+   ]
+  },
+  "managua-nicaragua": {
+   "qid": "Q3274",
+   "flag": [
+    "Flag of Managua.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Managua.svg"
+   ]
+  },
+  "freetown-sierra-leone": {
+   "qid": "Q3780",
+   "flag": [
+    "Flag of Freetown, Sierra Leone.png"
+   ],
+   "coat_of_arms": [
+    "Coatofarms freetown.png"
+   ]
+  },
+  "islamabad-pakistan": {
+   "qid": "Q1362",
+   "flag": [
+    "Proposed Flag of Islamabad Capital Territory.svg"
+   ]
+  },
+  "kathmandu-nepal": {
+   "qid": "Q3037",
+   "flag": [
+    "Flag of Kathmandu, Nepal.svg"
+   ]
+  },
+  "bloemfontein-south-africa": {
+   "qid": "Q37701",
+   "coat_of_arms": [
+    "Bloemfontein Coat of Arms.jpg"
+   ]
+  },
+  "pretoria-south-africa": {
+   "qid": "Q3926",
+   "flag": [
+    "Flag of Pretoria, South Africa.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Pretoria.svg"
+   ]
+  },
+  "port-moresby-papua-new-guinea": {
+   "qid": "Q36526",
+   "flag": [
+    "Flag of NCD.svg"
+   ]
+  },
+  "honiara-solomon-islands": {
+   "qid": "Q40921",
+   "flag": [
+    "Flag of Honiara.svg"
+   ]
+  },
+  "panama-city-panama": {
+   "qid": "Q3306",
+   "flag": [
+    "Bandera de Ciudad de Panamá.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Panama City.svg"
+   ]
+  },
+  "rabat-morocco": {
+   "qid": "Q3551",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ]
+  },
+  "chi-in-u-moldova": {
+   "qid": "Q21197",
+   "flag": [
+    "Flag of Chișinău.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Chișinău 1991.svg"
+   ]
+  },
+  "maputo-mozambique": {
+   "qid": "Q3889",
+   "flag": [
+    "Flag of Maputo.png"
+   ]
+  },
+  "muscat-oman": {
+   "qid": "Q3826",
+   "flag": [
+    "Flag of Muscat.svg"
+   ]
+  },
+  "colombo-sri-lanka": {
+   "qid": "Q35381",
+   "flag": [
+    "Flag of Colombo MC.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Colombo Municipal Council.svg"
+   ]
+  },
+  "ulaanbaatar-mongolia": {
+   "qid": "Q23430",
+   "flag": [
+    "Flag of Ulaanbaatar, Mongolia.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Ulaanbaatar, Mongolia.svg"
+   ]
+  },
+  "windhoek-namibia": {
+   "qid": "Q3935",
+   "flag": [
+    "Flag of Windhoek.gif"
+   ],
+   "coat_of_arms": [
+    "Windhoek COA.svg"
+   ]
+  },
+  "abuja-nigeria": {
+   "qid": "Q3787",
+   "flag": [
+    "Flag of Abuja.svg"
+   ]
+  },
+  "bissau-guinea-bissau": {
+   "qid": "Q3739",
+   "flag": [
+    "Bandeira Bissau.PNG"
+   ],
+   "coat_of_arms": [
+    "Blason gw Bissau.svg"
+   ]
+  },
+  "amman-jordan": {
+   "qid": "Q3805",
+   "flag": [
+    "Flag of Amman.svg"
+   ]
+  },
+  "vilnius-lithuania": {
+   "qid": "Q216",
+   "motto": [
+    {
+     "text": "Unitas, Iustitia, Spes",
+     "lang": "la"
+    }
+   ],
+   "flag": [
+    "Flag of Vilnius.svg"
+   ],
+   "coat_of_arms": [
+    "Grand Coat of arms of Vilnius.svg"
+   ]
+  },
+  "riga-latvia": {
+   "qid": "Q1773",
+   "flag": [
+    "Flag of Riga.svg"
+   ],
+   "coat_of_arms": [
+    "Greater Coat of Arms of Riga - for display.svg"
+   ]
+  },
+  "bishkek-kyrgyzstan": {
+   "qid": "Q9361",
+   "flag": [
+    "Flag of Bishkek.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Bishkek Kyrgyzstan.svg"
+   ]
+  },
+  "antananarivo-madagascar": {
+   "qid": "Q3915",
+   "flag": [
+    "Flag of Antananarivo, Madagascar.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Antananarivo.svg"
+   ]
+  },
+  "quito-ecuador": {
+   "qid": "Q2900",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ],
+   "patron_saint": [
+    {
+     "qid": "Q676555",
+     "ar": "فرنسيس الأسيزي",
+     "en": "Francis of Assisi"
+    },
+    {
+     "qid": "Q6163426",
+     "ar": null,
+     "en": "Virgin of Quito"
+    }
+   ],
+   "flag": [
+    "Flag of Quito.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Quito.svg"
+   ]
+  },
+  "san-jos-costa-rica": {
+   "qid": "Q3070",
+   "flag": [
+    "Bandera de San José (Costa Rica).svg"
+   ],
+   "coat_of_arms": [
+    "Blason de San José (Costa Rica).svg"
+   ]
+  },
+  "san-salvador-el-salvador": {
+   "qid": "Q3110",
+   "patron_saint": [
+    {
+     "qid": "Q51625",
+     "ar": "سالفاتور مندي",
+     "en": "Salvator Mundi"
+    }
+   ],
+   "flag": [
+    "Bandera de San Salvador (2021).svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de San Salvador (2021).svg"
+   ]
+  },
+  "kingston-jamaica": {
+   "qid": "Q34692",
+   "motto": [
+    {
+     "text": "A city which hath foundations",
+     "lang": "en"
+    }
+   ]
+  },
+  "n-djamena-chad": {
+   "qid": "Q3659",
+   "coat_of_arms": [
+    "N'Djamena coa.svg"
+   ]
+  },
+  "malabo-equatorial-guinea": {
+   "qid": "Q3818",
+   "flag": [
+    "Former Flag of Santa Isabella City.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Santa Isabel City (Spanish Guinea).svg"
+   ]
+  },
+  "asmara-eritrea": {
+   "qid": "Q3642",
+   "coat_of_arms": [
+    "Asmara coats of arms with transparent background.png"
+   ]
+  },
+  "zagreb-croatia": {
+   "qid": "Q1435",
+   "patron_saint": [
+    {
+     "qid": "Q345",
+     "ar": "مريم العذراء",
+     "en": "Mary"
+    }
+   ],
+   "flag": [
+    "Flag of Zagreb.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Zagreb.svg"
+   ]
+  },
+  "tallinn-estonia": {
+   "qid": "Q1770",
+   "flag": [
+    "Flag of Tallinn.svg"
+   ],
+   "coat_of_arms": [
+    "Tallinn wapen.svg"
+   ]
+  },
+  "guatemala-city-guatemala": {
+   "qid": "Q1555",
+   "flag": [
+    "Bandera de la Ciudad de Guatemala.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Guatemala City (Colonial).svg"
+   ]
+  },
+  "libreville-gabon": {
+   "qid": "Q3825",
+   "coat_of_arms": [
+    "Libreville Coat of Arms.svg"
+   ]
+  },
+  "suva-fiji": {
+   "qid": "Q38807",
+   "flag": [
+    "Suva City Flag.png"
+   ]
+  },
+  "bamako-mali": {
+   "qid": "Q3703",
+   "coat_of_arms": [
+    "Blason ville ml Bamako (Mali).svg"
+   ]
+  },
+  "beirut-lebanon": {
+   "qid": "Q3820",
+   "patron_saint": [
+    {
+     "qid": "Q48438",
+     "ar": "جرجس",
+     "en": "Saint George"
+    }
+   ],
+   "flag": [
+    "Flag of Beirut.svg"
+   ],
+   "coat_of_arms": [
+    "Blason de Beyrouth.png"
+   ]
+  },
+  "tbilisi-georgia": {
+   "qid": "Q994",
+   "flag": [
+    "Flag of Tbilisi.svg"
+   ],
+   "coat_of_arms": [
+    "Seal of Tbilisi, Georgia.svg"
+   ]
+  },
+  "nur-sultan-kazakhstan": {
+   "qid": "Q1520",
+   "flag": [
+    "Flag of Astana, Kazakhstan.svg"
+   ],
+   "coat_of_arms": [
+    "Emblem of Nur-Sultan-1.svg"
+   ]
+  },
+  "vientiane-laos": {
+   "qid": "Q9326",
+   "coat_of_arms": [
+    "Vientiane Emblem.png"
+   ]
+  },
+  "brazzaville-congo-brazzaville": {
+   "qid": "Q3844",
+   "coat_of_arms": [
+    "Coat of arms of Brazzaville.svg"
+   ]
+  },
+  "ottawa-canada": {
+   "qid": "Q1930",
+   "flag": [
+    "Flag of Ottawa, Ontario.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Ottawa, Ontario.png"
+   ]
+  },
+  "belgrade-serbia": {
+   "qid": "Q3711",
+   "flag": [
+    "Flag of Belgrade, Serbia.svg"
+   ],
+   "coat_of_arms": [
+    "Small Coat of Arms Belgrade.svg"
+   ]
+  },
+  "sucre-bolivia": {
+   "qid": "Q2907",
+   "flag": [
+    "Bandera de Chuquisaca y Sucre.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de sucre.JPG"
+   ]
+  },
+  "belmopan-belize": {
+   "qid": "Q3043",
+   "flag": [
+    "Flag of Belmopan, Belize.svg"
+   ]
+  },
+  "tirana-albania": {
+   "qid": "Q19689",
+   "flag": [
+    "Flag of Tirana.svg"
+   ],
+   "coat_of_arms": [
+    "Stema e Bashkisë Tiranë.svg"
+   ]
+  },
+  "yerevan-armenia": {
+   "qid": "Q1953",
+   "flag": [
+    "Flag of Yerevan.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Yerevan.svg"
+   ]
+  },
+  "baku-azerbaijan": {
+   "qid": "Q9248",
+   "flag": [
+    "Flag of Baku, Azerbaijan.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Baku.svg"
+   ]
+  },
+  "la-paz-bolivia": {
+   "qid": "Q1491",
+   "flag": [
+    "Bandera de La Paz.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de La Paz.svg"
+   ]
+  },
+  "cotonou-benin": {
+   "qid": "Q43595",
+   "flag": [
+    "Flag of Cotonou.gif"
+   ],
+   "coat_of_arms": [
+    "Blason de la ville de Cotonou.jpg"
+   ]
+  },
+  "sofia-bulgaria": {
+   "qid": "Q472",
+   "motto": [
+    {
+     "text": "Расте, но не старее",
+     "lang": "bg"
+    }
+   ],
+   "flag": [
+    "BG Sofia flag.svg"
+   ],
+   "coat_of_arms": [
+    "BG Sofia coa.svg"
+   ]
+  },
+  "minsk-belarus": {
+   "qid": "Q2280",
+   "anthem": [
+    {
+     "qid": "Q6485202",
+     "ar": null,
+     "en": "Anthem of Minsk"
+    }
+   ],
+   "flag": [
+    "Flag of Minsk, Belarus.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Minsk.svg"
+   ]
+  },
+  "gaborone-botswana": {
+   "qid": "Q3919",
+   "flag": [
+    "Flag of Gaborone.svg"
+   ]
+  },
+  "canberra-australia": {
+   "qid": "Q3114",
+   "coat_of_arms": [
+    "Coat of Arms of the Australian Capital Territory.svg"
+   ]
+  },
+  "ouagadougou-burkina-faso": {
+   "qid": "Q3777",
+   "coat_of_arms": [
+    "New coat of arms ouaga.png"
+   ]
+  },
+  "sarajevo-bosnia-and-herzegovina": {
+   "qid": "Q11194",
+   "flag": [
+    "Flag of Sarajevo.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Sarajevo.svg"
+   ]
+  },
+  "hargeisa-somaliland": {
+   "qid": "Q168652",
+   "flag": [
+    "Flag of Hargeisa.svg"
+   ],
+   "coat_of_arms": [
+    "Hargeisa Local Government Logo.svg"
+   ]
+  },
+  "s-o-tom-sao-tome-and-principe": {
+   "qid": "Q3932",
+   "flag": [
+    "Bandeira São Tomé.svg"
+   ],
+   "coat_of_arms": [
+    "S.Tomé.PNG"
+   ]
+  },
+  "valletta-malta": {
+   "qid": "Q23800",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ],
+   "patron_saint": [
+    {
+     "qid": "Q44091",
+     "ar": "دومينيك دو غوزمان",
+     "en": "Saint Dominic"
+    }
+   ],
+   "flag": [
+    "Flag of Valletta, Malta.svg"
+   ],
+   "coat_of_arms": [
+    "Insigne Valettae coronatum.svg"
+   ]
+  },
+  "jerusalem-israel": {
+   "qid": "Q1218",
+   "flag": [
+    "Al Quds Flag.jpg"
+   ],
+   "coat_of_arms": [
+    "Al Quds coat of Arms.png"
+   ]
+  },
+  "praia-cape-verde": {
+   "qid": "Q3751",
+   "heritage": [
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    }
+   ],
+   "flag": [
+    "Flag of Praia.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Praia.svg"
+   ]
+  },
+  "nassau-the-bahamas": {
+   "qid": "Q2467",
+   "coat_of_arms": [
+    "Coat of Arms of Nassau, New Providence.jpg"
+   ]
+  },
+  "nicosia-cyprus": {
+   "qid": "Q3856",
+   "flag": [
+    "Flag of Nicosia.svg"
+   ],
+   "coat_of_arms": [
+    "Seal of Nicosia.svg"
+   ]
+  },
+  "wellington-new-zealand": {
+   "qid": "Q23661",
+   "flag": [
+    "Flag of Wellington.svg"
+   ],
+   "coat_of_arms": [
+    "Wellington coat of arms full achievement (based on official emblazonment).svg"
+   ]
+  },
+  "budapest-hungary": {
+   "qid": "Q1781",
+   "flag": [
+    "Flag of Budapest (2011-).svg"
+   ],
+   "coat_of_arms": [
+    "Coa Hungary Town Budapest big.svg"
+   ]
+  },
+  "bucharest-romania": {
+   "qid": "Q19660",
+   "coat_of_arms": [
+    "Coat of arms of Bucharest.svg"
+   ]
+  },
+  "damascus-syria": {
+   "qid": "Q3766",
+   "flag": [
+    "Flag of Damascus (until 2024).svg"
+   ]
+  },
+  "khartoum-sudan": {
+   "qid": "Q1963",
+   "coat_of_arms": [
+    "Khartoum locality.png"
+   ]
+  },
+  "oslo-norway": {
+   "qid": "Q585",
+   "patron_saint": [
+    {
+     "qid": "Q1364981",
+     "ar": null,
+     "en": "Hallvard Vebjørnsson"
+    }
+   ],
+   "flag": [
+    "Flag of Oslo.svg"
+   ],
+   "coat_of_arms": [
+    "Oslo komm.svg"
+   ]
+  },
+  "warsaw-poland": {
+   "qid": "Q270",
+   "flag": [
+    "Flag of Warsaw.svg"
+   ],
+   "coat_of_arms": [
+    "POL Warszawa COA.svg"
+   ]
+  },
+  "pyongyang-north-korea": {
+   "qid": "Q18808",
+   "heritage": [
+    {
+     "qid": "Q1459900",
+     "ar": "موقع التراث العالمي المؤقت",
+     "en": "Tentative World Heritage Site"
+    }
+   ]
+  },
+  "dar-es-salaam-tanzania": {
+   "qid": "Q1960",
+   "coat_of_arms": [
+    "Emblem of Dar es Salaam.svg"
+   ]
+  },
+  "dublin-ireland": {
+   "qid": "Q1761",
+   "motto": [
+    {
+     "text": "Obedientia Civium Urbis Felicitas",
+     "lang": "la"
+    }
+   ],
+   "flag": [
+    "IRL Dublin flag.svg"
+   ],
+   "coat_of_arms": [
+    "Coat-of-arms-of-Dublin.svg"
+   ]
+  },
+  "monrovia-liberia": {
+   "qid": "Q3748",
+   "flag": [
+    "Flag of Monrovia, Liberia.svg"
+   ]
+  },
+  "kuala-lumpur-malaysia": {
+   "qid": "Q1865",
+   "motto": [
+    {
+     "text": "Progress and Prosper",
+     "lang": "en"
+    },
+    {
+     "text": "Maju dan Makmur",
+     "lang": "ms"
+    }
+   ],
+   "flag": [
+    "Flag of Kuala Lumpur, Malaysia.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Kuala Lumpur.svg"
+   ]
+  },
+  "havana-cuba": {
+   "qid": "Q1563",
+   "patron_saint": [
+    {
+     "qid": "Q193507",
+     "ar": "خرسطوفورس اللوقي",
+     "en": "Saint Christopher"
+    }
+   ],
+   "flag": [
+    "Official flag of Havana, Cuba.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of La Habana.svg"
+   ]
+  },
+  "prague-czechia": {
+   "qid": "Q1085",
+   "flag": [
+    "Flag of Prague.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Prague.svg"
+   ]
+  },
+  "kuwait-city-kuwait": {
+   "qid": "Q35178",
+   "coat_of_arms": [
+    "Emblem of Kuwait City.svg"
+   ]
+  },
+  "santo-domingo-dominican-republic": {
+   "qid": "Q34820",
+   "coat_of_arms": [
+    "Escudo del Municipio Santo Domingo.svg"
+   ]
+  },
+  "accra-ghana": {
+   "qid": "Q3761",
+   "flag": [
+    "Flag of Accra.svg"
+   ]
+  },
+  "tripoli-libya": {
+   "qid": "Q3579",
+   "flag": [
+    "Flag of Tripoli, Libya.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of the Municipality of Central Tripoli.svg"
+   ]
+  },
+  "helsinki-finland": {
+   "qid": "Q1757",
+   "flag": [
+    "Flag of Helsinki.svg"
+   ],
+   "coat_of_arms": [
+    "Helsinki.vaakuna.svg"
+   ]
+  },
+  "k-benhavn-denmark": {
+   "qid": "Q1748",
+   "flag": [
+    "Flag of Copenhagen Municipality, Denmark.svg"
+   ],
+   "coat_of_arms": [
+    "Greater coat of arms of Copenhagen.svg"
+   ]
+  },
+  "abidjan-ivory-coast": {
+   "qid": "Q1515",
+   "coat_of_arms": [
+    "AbidjanLogo.svg"
+   ]
+  },
+  "bras-lia-brazil": {
+   "qid": "Q2844",
+   "heritage": [
+    {
+     "qid": "Q9259",
+     "ar": "موقع تراث عالمي",
+     "en": "World Heritage Site"
+    }
+   ],
+   "patron_saint": [
+    {
+     "qid": "Q146183",
+     "ar": "دون بوسكو",
+     "en": "John Bosco"
+    },
+    {
+     "qid": "Q2469225",
+     "ar": null,
+     "en": "Our Lady of Aparecida"
+    }
+   ],
+   "anthem": [
+    {
+     "qid": "Q10295703",
+     "ar": null,
+     "en": "Anthem to Brasilia"
+    }
+   ],
+   "motto": [
+    {
+     "text": "Venturis ventis",
+     "lang": "la"
+    }
+   ],
+   "flag": [
+    "Bandeira do Distrito Federal (Brasil).svg"
+   ],
+   "coat_of_arms": [
+    "Brasão do Distrito Federal (Brasil).svg"
+   ]
+  },
+  "brussels-belgium": {
+   "qid": "Q240",
+   "flag": [
+    "Flag of the Brussels-Capital Region.svg"
+   ],
+   "coat_of_arms": [
+    "Belgium brussels iris.svg"
+   ]
+  },
+  "luanda-angola": {
+   "qid": "Q3897",
+   "patron_saint": [
+    {
+     "qid": "Q9200",
+     "ar": "بولس الطرسوسي",
+     "en": "Paul the Apostle"
+    }
+   ],
+   "flag": [
+    "Flag of Portuguese Luanda.svg"
+   ],
+   "coat_of_arms": [
+    "Brasão de Luanda.png"
+   ]
+  },
+  "caracas-venezuela": {
+   "qid": "Q1533",
+   "flag": [
+    "Flag of Caracas.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Caracas (2022).png"
+   ]
+  },
+  "kyiv-ukraine": {
+   "qid": "Q1899",
+   "patron_saint": [
+    {
+     "qid": "Q45581",
+     "ar": "ميخائيل",
+     "en": "Michael"
+    }
+   ],
+   "anthem": [
+    {
+     "qid": "Q12173434",
+     "ar": null,
+     "en": "Yak tebe ne liubyty, Kyieve mii!"
+    }
+   ],
+   "flag": [
+    "Flag of Kyiv Kurovskyi.svg"
+   ],
+   "coat_of_arms": [
+    "COA of Kyiv Kurovskyi.svg"
+   ]
+  },
+  "tashkent-uzbekistan": {
+   "qid": "Q269",
+   "flag": [
+    "Flag of Tashkent.svg"
+   ],
+   "coat_of_arms": [
+    "Emblem of Tashkent.svg"
+   ]
+  },
+  "madrid-spain": {
+   "qid": "Q2807",
+   "patron_saint": [
+    {
+     "qid": "Q379685",
+     "ar": null,
+     "en": "Isidore the Laborer"
+    },
+    {
+     "qid": "Q1136827",
+     "ar": null,
+     "en": "Virgin of Almudena"
+    },
+    {
+     "qid": "Q2244260",
+     "ar": null,
+     "en": "Mariana de Jesús"
+    }
+   ],
+   "motto": [
+    {
+     "text": "Fui sobre agua edificada, mis muros de fuego son",
+     "lang": "es"
+    }
+   ],
+   "flag": [
+    "Bandera de la ciudad de Madrid.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de Madrid.svg"
+   ]
+  },
+  "stockholm-sweden": {
+   "qid": "Q1754",
+   "patron_saint": [
+    {
+     "qid": "Q310152",
+     "ar": "إريك يدفاردسون",
+     "en": "Eric IX of Sweden"
+    }
+   ],
+   "flag": [
+    "Flag of Stockholm.svg"
+   ],
+   "coat_of_arms": [
+    "Stockholm vapen bra.svg"
+   ]
+  },
+  "bangkok-thailand": {
+   "qid": "Q1861",
+   "religion": [
+    {
+     "qid": "Q748",
+     "ar": "البوذية",
+     "en": "Buddhism"
+    },
+    {
+     "qid": "Q432",
+     "ar": "الإسلام",
+     "en": "Islam"
+    },
+    {
+     "qid": "Q5043",
+     "ar": "المسيحية",
+     "en": "Christianity"
+    },
+    {
+     "qid": "Q9089",
+     "ar": "هندوسية",
+     "en": "Hinduism"
+    },
+    {
+     "qid": "Q9316",
+     "ar": "سيخية",
+     "en": "Sikhism"
+    }
+   ],
+   "motto": [
+    {
+     "text": "กรุงเทพฯ ดุจเทพสร้าง เมืองศูนย์กลางการปกครอง วัดวังงามเรืองรอง เมืองหลวงของประเทศไทย",
+     "lang": "th"
+    }
+   ],
+   "flag": [
+    "Flag of Bangkok.svg"
+   ]
+  },
+  "lima-peru": {
+   "qid": "Q2868",
+   "patron_saint": [
+    {
+     "qid": "Q244383",
+     "ar": "روزا من ليما",
+     "en": "Rose of Lima"
+    }
+   ],
+   "anthem": [
+    {
+     "qid": "Q5898062",
+     "ar": null,
+     "en": "Himno de Lima"
+    }
+   ],
+   "flag": [
+    "Flag of Lima.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Lima.svg"
+   ]
+  },
+  "dakar-senegal": {
+   "qid": "Q3718",
+   "flag": [
+    "Flag of Dakar, Senegal.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Dakar, Senegal.svg"
+   ]
+  },
+  "johannesburg-south-africa": {
+   "qid": "Q34647",
+   "flag": [
+    "Flag of Johannesburg, South Africa.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Johannesburg.svg"
+   ]
+  },
+  "seoul-south-korea": {
+   "qid": "Q8684",
+   "flag": [
+    "Flag of Seoul.svg"
+   ]
+  },
+  "manila-philippines": {
+   "qid": "Q1461",
+   "anthem": [
+    {
+     "qid": "Q20573355",
+     "ar": null,
+     "en": "Awit ng Maynila"
+    }
+   ],
+   "flag": [
+    "Flag of Manila.svg"
+   ]
+  },
+  "kinshasa-congo-kinshasa": {
+   "qid": "Q3838",
+   "flag": [
+    "Flag of Kinshasa, DRC.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Kinshasa.svg"
+   ]
+  },
+  "athens-greece": {
+   "qid": "Q1524",
+   "patron_saint": [
+    {
+     "qid": "Q310686",
+     "ar": null,
+     "en": "Dionysius the Areopagite"
+    }
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Municipality of Athens.svg"
+   ]
+  },
+  "baghdad-iraq": {
+   "qid": "Q1530",
+   "flag": [
+    "Flag of Baghdad.svg"
+   ],
+   "coat_of_arms": [
+    "Seal of Baghdad.svg"
+   ]
+  },
+  "addis-ababa-ethiopia": {
+   "qid": "Q3624",
+   "flag": [
+    "Flag of Addis Ababa.svg"
+   ],
+   "coat_of_arms": [
+    "Emblem of the Addis Ababa City Administration.svg"
+   ]
+  },
+  "buenos-aires-argentina": {
+   "qid": "Q1486",
+   "flag": [
+    "Bandera de la Ciudad de Buenos Aires.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de la Ciudad de Buenos Aires.svg"
+   ]
+  },
+  "kabul-afghanistan": {
+   "qid": "Q5838",
+   "flag": [
+    "Flag of Kabul.svg"
+   ]
+  },
+  "taipei-taiwan": {
+   "qid": "Q1867",
+   "flag": [
+    "Flag of Taipei City.svg"
+   ],
+   "coat_of_arms": [
+    "Emblem of Taipei City.svg"
+   ]
+  },
+  "washington-d-c-united-states-of-america": {
+   "qid": "Q61",
+   "motto": [
+    {
+     "text": "Justitia Omnibus",
+     "lang": "la"
+    }
+   ],
+   "flag": [
+    "Flag of Washington, D.C.svg"
+   ],
+   "coat_of_arms": [
+    "Seal of the District of Columbia.svg"
+   ]
+  },
+  "riyadh-saudi-arabia": {
+   "qid": "Q3692",
+   "coat_of_arms": [
+    "Emblem of Riyadh.png"
+   ]
+  },
+  "rome-italy": {
+   "qid": "Q220",
+   "patron_saint": [
+    {
+     "qid": "Q33923",
+     "ar": "بطرس",
+     "en": "Saint Peter"
+    },
+    {
+     "qid": "Q9200",
+     "ar": "بولس الطرسوسي",
+     "en": "Paul the Apostle"
+    }
+   ],
+   "flag": [
+    "Flag of Rome (with Lesser Arms).svg"
+   ],
+   "coat_of_arms": [
+    "Roma-Stemma-2.svg"
+   ]
+  },
+  "nairobi-kenya": {
+   "qid": "Q3870",
+   "flag": [
+    "Flag of Nairobi.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of Arms of Nairobi.svg"
+   ]
+  },
+  "jakarta-indonesia": {
+   "qid": "Q3630",
+   "motto": [
+    {
+     "text": "Jaya Raya",
+     "lang": "id"
+    }
+   ],
+   "flag": [
+    "Flag of Jakarta (vectorised).svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Jakarta.svg"
+   ]
+  },
+  "bogota-colombia": {
+   "qid": "Q2841",
+   "patron_saint": [
+    {
+     "qid": "Q185606",
+     "ar": "الحبل بلا دنس",
+     "en": "Immaculate Conception of Mary"
+    }
+   ],
+   "flag": [
+    "Flag of Bogotá.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de Armas de Bogota.svg"
+   ]
+  },
+  "santiago-chile": {
+   "qid": "Q2887",
+   "flag": [
+    "Flag of Santiago, Chile.svg"
+   ],
+   "coat_of_arms": [
+    "Escudo de Santiago (Chile).svg"
+   ]
+  },
+  "singapore-singapore": {
+   "qid": "Q334",
+   "religion": [
+    {
+     "qid": "Q748",
+     "ar": "البوذية",
+     "en": "Buddhism"
+    },
+    {
+     "qid": "Q9598",
+     "ar": "طاوية",
+     "en": "Taoism"
+    },
+    {
+     "qid": "Q5043",
+     "ar": "المسيحية",
+     "en": "Christianity"
+    },
+    {
+     "qid": "Q432",
+     "ar": "الإسلام",
+     "en": "Islam"
+    },
+    {
+     "qid": "Q9089",
+     "ar": "هندوسية",
+     "en": "Hinduism"
+    }
+   ],
+   "anthem": [
+    {
+     "qid": "Q209973",
+     "ar": "إلى الأمام سنغافورة",
+     "en": "Onward Singapore"
+    }
+   ],
+   "motto": [
+    {
+     "text": "Majulah Singapura",
+     "lang": "ms"
+    },
+    {
+     "text": "Onward, Singapore",
+     "lang": "en"
+    }
+   ],
+   "flag": [
+    "Flag of Singapore.svg"
+   ],
+   "coat_of_arms": [
+    "Coat of arms of Singapore.svg"
+   ]
+  }
+ }
+}

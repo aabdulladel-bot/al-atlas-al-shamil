@@ -641,7 +641,8 @@ const chip = (text, cls = "", attrs = "") => (attrs
   : `<span class="chip ${cls}">${escapeHtml(text)}</span>`);
 function cardHead({ title, en = "", swatch = "", chips = [], note = "", icon = "" }) {
   return `<header class="ch"><div class="ch-row">${icon ? `<span class="ch-ic" aria-hidden="true">${CARD_ICON[icon]}</span>` : ""}${swatch ? `<i class="ch-sw" style="background:${swatch}"></i>` : ""}<h2>${escapeHtml(title)}</h2></div>` +
-    (en && en !== title ? `<div class="ch-en" dir="${/[A-Za-z]/.test(en) ? "ltr" : "rtl"}">${escapeHtml(en)}</div>` : "") +
+    // الاسم العربي يُعرض بالعربية وحدها (قاعدة صاحب المشروع)؛ الاسم في المصدر يبقى في «عن هذه البيانات»
+    (en && en !== title && !/[\u0600-\u06FF]/.test(title) ? `<div class="ch-en" dir="${/[A-Za-z]/.test(en) ? "ltr" : "rtl"}">${escapeHtml(en)}</div>` : "") +
     (chips.length ? `<div class="chips">${chips.join("")}</div>` : "") +
     (note ? `<p class="ch-note">${note}</p>` : "") + `</header>`;
 }
@@ -936,7 +937,7 @@ function openAbsentCard(a) {
   const desc = a.d_ar ? `<p class="define-desc">${escapeHtml(a.d_ar)}</p>` : a.d_en ? `<p class="define-desc" dir="ltr" lang="en">${escapeHtml(a.d_en)}</p>` : "";
   const links = [
     a.arwiki ? `<a href="https://ar.wikipedia.org/wiki/${encodeURIComponent(a.arwiki)}" target="_blank" rel="noopener">ويكيبيديا العربية</a>` : "",
-    a.enwiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(a.enwiki)}" target="_blank" rel="noopener" lang="en">Wikipedia</a>` : "",
+    a.enwiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(a.enwiki)}" target="_blank" rel="noopener" >ويكيبيديا الإنجليزية</a>` : "",
     `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(a.q)}" target="_blank" rel="noopener">ويكي بيانات <bdi>${escapeHtml(a.q)}</bdi></a>`,
   ].filter(Boolean).join(" · ");
   openCard(cardHead({ title: a.ar, en: a.en, icon: "state", chips: [chip("غائب عن خرائط الأطلس", "tier-u"), chip(`مدته في ويكي بيانات: ${span}`)] }) +
@@ -978,7 +979,7 @@ function ensureDisputed() {
 }
 const disputedNames = () => Object.keys(disputedData?.names ?? {});
 const disputedNote = (name) => (disputedData?.names?.[name] ? `<section class="card-sec disputed-note"><p><b>وضع محل خلاف.</b> ${escapeHtml(disputedData.names[name])}</p><p class="sub">الخط المنقّط الكهرماني على الخريطة يمثّل هذا الحد، وليس حكماً من الأطلس.</p></section>` : "");
-let placeInfo = null, placeLineage = null, openedPlace = null;
+let placeInfo = null, placeLineage = null, placeSymbols = null, openedPlace = null;
 // يُحمَّل الملفان عند أول فتح لبطاقة موضع، لا عند بداية الملف: getJson تعتمد على متغيرات تُعلن لاحقاً في الملف
 let placeDataReady = null;
 function ensurePlaceData() {
@@ -986,6 +987,7 @@ function ensurePlaceData() {
   placeDataReady ??= Promise.all([
     getJson("data/places_info.json").then((d) => { placeInfo = d; }).catch(() => null),
     getJson("data/place_lineage.json").then((d) => { placeLineage = d; }).catch(() => null),
+    getJson("data/place_symbols.json").then((d) => { placeSymbols = d; }).catch(() => null),
   ]).then(() => {
     // إن بقيت البطاقة مفتوحة لهذا الموضع، تُعاد رسمها بالتعريف والسيرة
     if (openedPlace && !document.getElementById("card")?.hidden) openCard(placeCardBody(openedPlace));
@@ -1001,7 +1003,8 @@ function placeInfoHtml(f) {
   const def = info?.status === "verified"
     ? `<p>${escapeHtml(info.desc_ar ?? info.desc_en ?? "")}</p>` + (info.desc_ar ? "" : `<p class="sub">الوصف بالإنجليزية كما في ويكي بيانات.</p>`)
     : `<p class="sub">لا تعريف موثّق لهذا الموضع: ${escapeHtml(info?.reason ?? "غير مربوط بويكي بيانات")}</p>`;
-  const types = info?.status === "verified" ? info.types.map((t) => chip(t.ar ?? t.en)).join("") : "";
+  // أنواع الموضع بالعربية وحدها؛ ما لا اسم عربي له في ويكي بيانات يُترك (يبقى في ويكي بيانات نفسها)
+  const types = info?.status === "verified" ? info.types.filter((t) => t.ar).map((t) => chip(t.ar)).join("") : "";
   const rows = LINEAGE_ORDER.map((k) => {
     const v = lin?.[k];
     const en = typeof v === "string" ? v : v?.names ? v.names.join(" / ") : v?.name ?? null;
@@ -1015,6 +1018,25 @@ function placeInfoHtml(f) {
     `<p class="sub">الكيان هنا من حدود المصدر التاريخي عند إحداثيات الموضع وحدها، ولا يعني أن أهله عرفوا أنفسهم به. ${escapeHtml(placeLineage._meta.caution)}</p></details>` +
     `<p class="sub">التعريف من ويكي بيانات (CC0)، والسيرة من حدود Historical Basemaps (GPL-3) وNatural Earth.</p></section>`;
 }
+// رموز الموضع من ويكي بيانات: التراث، والشفيع، والدين، والنشيد، والشعار المكتوب، والعلم والشعار إحالةً بلا صور
+const symName = (x) => (x.ar ? escapeHtml(x.ar) : `<span lang="en" dir="ltr">${escapeHtml(x.en)}</span>`);
+function placeSymbolsHtml(f) {
+  const s = placeSymbols?.places?.[placeId(f)];
+  if (!s) return "";
+  const rows = [];
+  const items = (key, title) => { if (s[key]?.length) rows.push([title, s[key].map(symName).join("، ") + (s[key].some((x) => !x.ar) ? ` <span class="sub">(بالإنجليزية في ويكي بيانات)</span>` : "")]); };
+  items("heritage", "التصنيف التراثي");
+  items("religion", "الدين");
+  items("patron_saint", "القديس الشفيع");
+  items("anthem", "النشيد");
+  if (s.motto?.length) rows.push(["الشعار المكتوب", s.motto.map((m) => `«<span lang="${escapeHtml(m.lang)}">${escapeHtml(m.text)}</span>»`).join("، ")]);
+  const commons = (file, label) => `<a href="https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file)}" target="_blank" rel="noopener">${label}</a>`;
+  const files = [s.flag?.[0] ? commons(s.flag[0], "العلم") : "", s.coat_of_arms?.[0] ? commons(s.coat_of_arms[0], "الشعار") : ""].filter(Boolean);
+  if (files.length) rows.push(["في ويكيميديا كومنز", files.join(" · ")]);
+  if (!rows.length) return "";
+  return `<section class="card-sec place-symbols"><h3>رموز الموضع</h3><dl class="card-dl">${rows.map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${v}</dd>`).join("")}</dl>` +
+    `<p class="sub">من ويكي بيانات (CC0) للكيان المربوط بالموضع، لا من الأطلس. غياب رمز هنا لا يعني غيابه. الصور غير معروضة لأن تراخيصها تختلف، والروابط للإحالة.</p></section>`;
+}
 function placeCardBody(f) {
   const p = f.properties;
   const era = ERAS.find((x) => x.id === Number(p.era));
@@ -1025,7 +1047,7 @@ function placeCardBody(f) {
     ["الموقع", escapeHtml(COORD_LABEL[p.coord_status] ?? p.coord_status)],
     ["في Pleiades", p.pleiades_id && p.pleiades_id !== "null" ? `<a href="https://pleiades.stoa.org/places/${encodeURIComponent(p.pleiades_id)}" target="_blank" rel="noopener">${escapeHtml(p.pleiades_title || p.pleiades_id)}</a>` : ""],
     ["في المصدر", p.source_name && p.source_name !== "null" ? escapeHtml(`${p.source_name}${p.source_country && !String(p.source_country).startsWith("wikidata") ? `، ${p.source_country}` : ""}`) : ""],
-  ]) + placeInfoHtml(f) + alsoHtml();
+  ]) + placeInfoHtml(f) + placeSymbolsHtml(f) + alsoHtml();
 }
 function openPlaceCard(f) {
   const p = f.properties;
@@ -1997,6 +2019,17 @@ function lineageChain(key, name, dirn, mode, rootLabel) {
   }
   return levels;
 }
+// الاسم العربي لكيان في السلسلة: من عنصره، وإلا من أي عنصر آخر في بيانات السلسلة يحمل الاسم نفسه بالعربية،
+// وإلا من التعريب الصوتي (قاعدة صاحب المشروع: لا يُعرض اسم إنجليزي حيث وُجد له اسم عربي)
+let lineageArMap = null;
+function lineageAr(name) {
+  if (!lineageArMap && lineageData) {
+    lineageArMap = new Map();
+    const walk = (o) => { if (Array.isArray(o)) o.forEach(walk); else if (o && typeof o === "object") { if (o.name && o.name_ar && !lineageArMap.has(o.name)) lineageArMap.set(o.name, o.name_ar); Object.values(o).forEach(walk); } };
+    walk(lineageData);
+  }
+  return lineageArMap?.get(name) ?? enAr(name);
+}
 function lineageLevelsHtml(levels) {
   // الخطوة الأولى (أقرب حقبة) مفتوحة، والباقي مطوي بعدد صلاته، فلا تثقل البطاقة بكل الأزرار دفعة واحدة
   return levels.map((items, i) => {
@@ -2005,7 +2038,7 @@ function lineageLevelsHtml(levels) {
     const rows = items.map((x) => x.more
       ? `<p class="sub">و${fmtInt(x.more)} صلة أخرى في هذه الخريطة</p>`
       : `<button type="button" class="lin-btn" data-lkey="${escapeHtml(String(x.key))}" data-lname="${escapeHtml(x.name)}">` +
-        `<b>${escapeHtml(x.name_ar ?? x.name)}</b>` +
+        `<b>${escapeHtml(x.name_ar ?? lineageAr(x.name))}</b>` +
         `<small>${pct(x.ownShare)} من أرض ${escapeHtml(x.from)} داخل هذا الكيان، و${pct(x.otherShare)} من أرضه داخل ${escapeHtml(x.from)}</small>` +
         (x.places?.length
           ? `<span class="chip tier-v">شاهد على الأرض المشتركة</span><small>${escapeHtml(x.places.join("، "))}</small>`
@@ -2212,7 +2245,7 @@ function defineHtml(name) {
   const fix = e.fix ? `<details class="sub define-fix"><summary>تصحيح هوية معلن</summary><p>${escapeHtml(e.fix)}</p></details>` : "";
   const links = [
     e.arwiki ? `<a href="https://ar.wikipedia.org/wiki/${encodeURIComponent(e.arwiki)}" target="_blank" rel="noopener">ويكيبيديا العربية</a>` : "",
-    e.enwiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(e.enwiki)}" target="_blank" rel="noopener" lang="en">Wikipedia</a>` : "",
+    e.enwiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(e.enwiki)}" target="_blank" rel="noopener" >ويكيبيديا الإنجليزية</a>` : "",
     `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(e.q)}" target="_blank" rel="noopener">ويكي بيانات <bdi>${escapeHtml(e.q)}</bdi></a>`,
   ].filter(Boolean).join(" · ");
   return head + desc + (types ? `<div class="chips" title="النوع في ويكي بيانات">${types}</div>` : "") + note +
