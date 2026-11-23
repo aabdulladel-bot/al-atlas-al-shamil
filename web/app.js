@@ -2299,7 +2299,8 @@ function entityDefHtml(name) {
     .map((q) => { const it = entityDefs.items[q]; const ys = Object.entries(e.by_year).filter(([, s]) => s?.q === q).map(([k]) => yearLabel(Number(k))).join("، "); return `${escapeHtml(it.ar ?? it.en ?? q)} (خريطة ${ys})`; });
   const elsewhere = others.length ? `<p class="sub define-note">الاسم نفسه يدل في خرائط أخرى على: ${others.join("؛ ")}.</p>` : "";
   if (!slot) {
-    return `<section class="card-sec define"><h3>تعريف</h3><p class="sub">لا عنصر في ويكي بيانات يطابق هذا الاسم وتقع سنة هذه الخريطة (${escapeHtml(yearText(y))}) في مدته، فلا يُعرض تعريف لها.</p>${elsewhere}</section>`;
+    const why = e.gaps?.[y] ? `<p class="define-note">${escapeHtml(e.gaps[y])}.</p>` : "";
+    return `<section class="card-sec define"><h3>تعريف</h3><p class="sub">لا عنصر في ويكي بيانات يطابق هذا الاسم وتقع سنة هذه الخريطة (${escapeHtml(yearText(y))}) في مدته، فلا يُعرض تعريف لها.</p>${why}${elsewhere}</section>`;
   }
   const it = entityDefs.items[slot.q];
   const desc = it.d_ar ? `<p class="define-desc">${escapeHtml(it.d_ar)}</p>`
@@ -2308,7 +2309,8 @@ function entityDefHtml(name) {
   const label = it.ar ? chip(it.ar) : it.en ? chip(it.en) : "";
   const span = it.inc != null || it.dis != null ? chip(`${it.inc != null ? yearLabel(it.inc) : "؟"} – ${it.dis != null ? yearLabel(it.dis) : "؟"}`) : "";
   const chips = [label, chip(it.class), span, it.demonym ? chip(`النسبة: ${it.demonym}`) : ""].join("");
-  const match = slot.match === "prefer" ? `<p class="sub define-note">العنصر مختار بمراجعة يدوية معلنة (scripts/config/entity_defs_overrides.json).</p>`
+  const match = slot.match === "pin" ? `<p class="sub define-note">تثبيت معلن لهذه السنة: ${escapeHtml(slot.why)}.</p>`
+    : slot.match === "prefer" ? `<p class="sub define-note">العنصر مختار بمراجعة يدوية معلنة (scripts/config/entity_defs_overrides.json).</p>`
     : slot.match === "label" && slot.n > 1 ? `<p class="sub define-note">لهذه السنة ${fmtInt(slot.n)} عناصر بالاسم نفسه تغطيها، واختير ذو التواريخ ثم الأكثر روابط. قد لا يكون هو المقصود.</p>`
     : slot.match === "label" ? `<p class="sub define-note">مطابقة بالاسم الإنجليزي والصنف والمدة، لا بمعرّف مسجَّل في المصدر.</p>` : "";
   // عنصر قائم إلى اليوم يصف حاضره (الحكم والعاصمة والعملة الآن)، لا حاله في سنة خريطة قديمة

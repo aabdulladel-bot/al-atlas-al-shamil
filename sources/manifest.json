@@ -696,8 +696,8 @@
       "files": [
         {
           "file": "data/raw/wikidata/entity_defs_extract.json",
-          "sha256": "31493231709ac07f43e7eab38d30e6ef0ad422fc6433709fb80b48a37450f218",
-          "bytes": 775532
+          "sha256": "547baaf6d183c8770cf33f7ae8ff0a2c50df632b431d7874a5b2e1890a235a7d",
+          "bytes": 808870
         }
       ],
       "license_verified_at": "2026-11-23",
