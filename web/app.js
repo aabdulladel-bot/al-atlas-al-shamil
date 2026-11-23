@@ -753,8 +753,9 @@ function gapList({ links, econ, modern, approxAll, info, p, kind, key }) {
   else if (info?.st === "arabized") g.push("اسمه العربي تعريب تقديري، لا من مصدر موثّق");
   if (!modern && (approxAll || Number(p.BORDERPRECISION) !== 3)) g.push("حدّه في هذه الخريطة تقريبي بحسب المصدر");
   if (info?.st !== "verified") g.push("لا تواريخ موثّقة له في ويكي بيانات");
-  if (!modern && entityInfo && !entityInfo.entities?.[p.NAME] && !entityDefs?.entities?.[p.NAME]) {
-    g.push(entityDefs?.collective?.[p.NAME] ? "تسمية جامعة لا كيان واحد: تعريفها لنمط العيش والإقليم، لا لجماعة بعينها" : "لا وصف له في ويكي بيانات");
+  if (!modern && entityInfo && !entityInfo.entities?.[p.NAME] && !defSlot(p.NAME)?.slot) {
+    g.push(entityDefs?.collective?.[p.NAME] ? "تسمية جامعة لا كيان واحد: تعريفها لنمط العيش والإقليم، لا لجماعة بعينها"
+      : defSlot(p.NAME) ? "لا عنصر في ويكي بيانات يغطي سنة هذه الخريطة لهذا الاسم" : "لا وصف له في ويكي بيانات");
   }
   if (!(links?.[p.NAME] ?? []).length) g.push("لا شاهد موثّق يقع على أرضه في هذه الخريطة");
   if (kind !== "people") {
@@ -2283,24 +2284,39 @@ function dimsHtml(dims, labels) {
   const rows = DIM_ORDER.filter((k) => dims?.[k]?.length).map((k) => `<li><b>${escapeHtml(labels[k] ?? k)}:</b> ${dims[k].slice(0, 4).map(dimVal).join("، ")}</li>`).join("");
   return rows ? `<ul class="gap-list define-dims">${rows}</ul>` : "";
 }
+// التعريف يُختار لكل سنة خريطة على حدة (by_year): الاسم الواحد قد يدل على دول مختلفة عبر العصور
+// (Albania في 1914 وفي 2010). «اليوم» يأخذ تعريف أحدث سنة. وسنة بلا عنصر يغطيها تبقى بلا تعريف معلَن.
+function defSlot(name) {
+  const e = entityDefs?.entities?.[name];
+  if (!e) return null;
+  const years = Object.keys(e.by_year);
+  const y = String(time.key) === "modern" ? years.reduce((a, b) => (Number(b) > Number(a) ? b : a), years[0]) : String(time.key);
+  return { e, y, slot: e.by_year[y] ?? null };
+}
 function entityDefHtml(name) {
-  const e = entityDefs.entities[name];
-  // العنصر المطابَق قد يكون دولة من حقبة أخرى تحمل الاسم نفسه: لا يُعرض تعريفه على خريطة تقع سنتها خارج مدته
-  const y = Number(time.key);
-  if (Number.isFinite(y) && (e.inc != null || e.dis != null) && ((e.inc != null && y < e.inc - 5) || (e.dis != null && y > e.dis + 5))) {
-    return `<section class="card-sec define"><h3>تعريف</h3><p class="sub">العنصر الذي طوبق به هذا الاسم في ويكي بيانات (${escapeHtml(e.ar ?? e.q)}، ${e.inc != null ? yearLabel(e.inc) : "؟"} – ${e.dis != null ? yearLabel(e.dis) : "؟"}) لا تقع سنة هذه الخريطة في مدته، فلا يُعرض تعريفاً لها.</p><p class="define-links">${wdLink(e.q)}</p></section>`;
+  const { e, y, slot } = defSlot(name);
+  const others = [...new Set(Object.values(e.by_year).filter(Boolean).map((s) => s.q))].filter((q) => q !== slot?.q)
+    .map((q) => { const it = entityDefs.items[q]; const ys = Object.entries(e.by_year).filter(([, s]) => s?.q === q).map(([k]) => yearLabel(Number(k))).join("، "); return `${escapeHtml(it.ar ?? it.en ?? q)} (خريطة ${ys})`; });
+  const elsewhere = others.length ? `<p class="sub define-note">الاسم نفسه يدل في خرائط أخرى على: ${others.join("؛ ")}.</p>` : "";
+  if (!slot) {
+    return `<section class="card-sec define"><h3>تعريف</h3><p class="sub">لا عنصر في ويكي بيانات يطابق هذا الاسم وتقع سنة هذه الخريطة (${escapeHtml(yearText(y))}) في مدته، فلا يُعرض تعريف لها.</p>${elsewhere}</section>`;
   }
-  const desc = e.d_ar ? `<p class="define-desc">${escapeHtml(e.d_ar)}</p>`
-    : e.d_en ? `<p class="define-desc" dir="ltr" lang="en">${escapeHtml(e.d_en)}</p><p class="sub">لا وصف عربي في ويكي بيانات، والمعروض وصفها الإنجليزي.</p>`
+  const it = entityDefs.items[slot.q];
+  const desc = it.d_ar ? `<p class="define-desc">${escapeHtml(it.d_ar)}</p>`
+    : it.d_en ? `<p class="define-desc" dir="ltr" lang="en">${escapeHtml(it.d_en)}</p><p class="sub">لا وصف عربي في ويكي بيانات، والمعروض وصفها الإنجليزي.</p>`
     : "";
-  const span = e.inc != null || e.dis != null ? chip(`${e.inc != null ? yearLabel(e.inc) : "؟"} – ${e.dis != null ? yearLabel(e.dis) : "؟"}`) : "";
-  const chips = [chip(e.class), span, e.demonym ? chip(`النسبة: ${e.demonym}`) : ""].join("");
-  const match = e.match === "label" && e.candidates > 1
-    ? `<p class="sub define-note">طوبق الاسم بـ${fmtInt(e.candidates)} عناصر من الصنف نفسه، واختير أكثرها روابط. قد لا يكون هو المقصود في هذه الخريطة.</p>`
-    : e.match === "label" ? `<p class="sub define-note">مطابقة بالاسم الإنجليزي والصنف والمدة، لا بمعرّف مسجَّل في المصدر.</p>` : "";
-  return `<section class="card-sec define"><h3>تعريف</h3>${desc}<div class="chips">${chips}</div>` +
-    dimsHtml(e.dims, entityDefs._meta.dims_labels) + match +
-    `<p class="define-links">${wikiLinks(e)}</p><p class="sub">الوصف والأبعاد من ويكي بيانات (CC0) كما هي، لا من الأطلس.</p></section>`;
+  const label = it.ar ? chip(it.ar) : it.en ? chip(it.en) : "";
+  const span = it.inc != null || it.dis != null ? chip(`${it.inc != null ? yearLabel(it.inc) : "؟"} – ${it.dis != null ? yearLabel(it.dis) : "؟"}`) : "";
+  const chips = [label, chip(it.class), span, it.demonym ? chip(`النسبة: ${it.demonym}`) : ""].join("");
+  const match = slot.match === "prefer" ? `<p class="sub define-note">العنصر مختار بمراجعة يدوية معلنة (scripts/config/entity_defs_overrides.json).</p>`
+    : slot.match === "label" && slot.n > 1 ? `<p class="sub define-note">لهذه السنة ${fmtInt(slot.n)} عناصر بالاسم نفسه تغطيها، واختير ذو التواريخ ثم الأكثر روابط. قد لا يكون هو المقصود.</p>`
+    : slot.match === "label" ? `<p class="sub define-note">مطابقة بالاسم الإنجليزي والصنف والمدة، لا بمعرّف مسجَّل في المصدر.</p>` : "";
+  // عنصر قائم إلى اليوم يصف حاضره (الحكم والعاصمة والعملة الآن)، لا حاله في سنة خريطة قديمة
+  const present = it.dis == null && Number(y) < new Date().getFullYear() - 30
+    ? `<p class="sub define-note">العنصر قائم إلى اليوم، فوصفه وأبعاده لحاضره، لا لحاله سنة ${escapeHtml(yearText(y))}.</p>` : "";
+  return `<section class="card-sec define"><h3>تعريف</h3>${desc}<div class="chips">${chips}</div>` + present +
+    dimsHtml(it.dims, entityDefs._meta.dims_labels) + match + elsewhere +
+    `<p class="define-links">${wikiLinks(it)}</p><p class="sub">الوصف والأبعاد من ويكي بيانات (CC0) كما هي، لا من الأطلس، والعنصر مختار لسنة هذه الخريطة.</p></section>`;
 }
 function khaldunQuoteHtml(k) {
   return `<blockquote class="khal-q"><p>«${escapeHtml(k.quote)}»</p><cite>${escapeHtml(k.location)}</cite></blockquote>` +
