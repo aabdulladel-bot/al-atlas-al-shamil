@@ -16689,76 +16689,12 @@
   "Rajput Clans and Small States": {
    "ar": "عشائر الراجبوت وإماراتهم الصغيرة",
    "modes": [
-    "tribes",
     "chiefdoms"
    ],
    "years": [
     800
    ],
-   "group": {
-    "ar": "الراجبوت",
-    "en": "Rajput",
-    "q": "Q337487",
-    "d_en": "social community of South Asia",
-    "arwiki": "راجبوت",
-    "enwiki": "Rajput",
-    "dims": {
-     "type": [
-      {
-       "ar": "مجموعة إثنية",
-       "en": "ethnic group"
-      },
-      {
-       "ar": "طائفة إثنية",
-       "en": "caste"
-      },
-      {
-       "ar": "قرابة",
-       "en": "kindred"
-      }
-     ],
-     "religion": [
-      {
-       "ar": "هندوسية",
-       "en": "Hinduism"
-      },
-      {
-       "ar": "الإسلام",
-       "en": "Islam"
-      },
-      {
-       "ar": "سيخية",
-       "en": "Sikhism"
-      },
-      {
-       "ar": "المسيحية",
-       "en": "Christianity"
-      }
-     ],
-     "sources": [
-      {
-       "ar": "قاموس بروكهاوس وإفرون الموسوعي",
-       "en": "Brockhaus and Efron Encyclopedic Dictionary"
-      },
-      {
-       "ar": "موسوعة ناتال",
-       "en": "The Nuttall Encyclopædia"
-      },
-      {
-       "ar": null,
-       "en": "Castes and Tribes of Southern India"
-      },
-      {
-       "ar": "الموسوعة البريطانية الطبعة 11",
-       "en": "Encyclopædia Britannica 11th edition"
-      },
-      {
-       "ar": "قاموس غرانات الموسوعي",
-       "en": "Granat Encyclopedic Dictionary"
-      }
-     ]
-    }
-   }
+   "note_ar": "تنبيه على المصدر: المضلع الذي يحمل هذا الاسم في خريطة 800 يقع في الهند الصينية (شمال تايلاند ولاوس وهضاب شان، بين بيو ومون ودفارافاتي وتشنلا ونانتشاو)، لا في موطن الراجبوت بشمال غرب الهند، حيث تظهر في الخريطة نفسها دولتا التشوهان والغورجارا براتيهارا. والأرجح أن تسمية المضلع خطأ في المصدر. أبقى الأطلس اسم المصدر كما هو ولم يربطه بشعب الراجبوت، والأرض في الغالب لإمارات صغيرة من شعوب الإقليم."
   },
   "Saharan Nomadic Tribes": {
    "ar": "قبائل الصحراء الكبرى الرحّل",

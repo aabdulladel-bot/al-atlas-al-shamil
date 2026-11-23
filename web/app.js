@@ -552,6 +552,11 @@ async function showLabels(key) {
 }
 map.on("zoomend", updateLabels);
 map.on("moveend", declutterLabels);
+// اسم المصدر الإنجليزي تحت التعريب التقديري يظهر من هذا التقريب فما فوق، حيث تتسع المساحة له
+const LAB_EN_ZOOM = 4;
+const syncLabEn = () => map.getContainer().classList.toggle("lab-en", map.getZoom() >= LAB_EN_ZOOM);
+map.on("zoomend", syncLabEn);
+syncLabEn();
 
 // ---------- البطاقة: درج جانبي على المكتب، وورقة سفلية على الجوال ----------
 // النقر على الخريطة يمرّ بحَكَم واحد (آخر الملف) يختار أعلى ما تحت المؤشر أولوية ويفتح بطاقته هنا،
@@ -639,10 +644,11 @@ function markPoint(coords) {
 const chip = (text, cls = "", attrs = "") => (attrs
   ? `<button type="button" class="chip ${cls}" ${attrs}>${escapeHtml(text)}</button>`
   : `<span class="chip ${cls}">${escapeHtml(text)}</span>`);
-function cardHead({ title, en = "", swatch = "", chips = [], note = "", icon = "" }) {
+function cardHead({ title, en = "", swatch = "", chips = [], note = "", icon = "", showEn = false }) {
   return `<header class="ch"><div class="ch-row">${icon ? `<span class="ch-ic" aria-hidden="true">${CARD_ICON[icon]}</span>` : ""}${swatch ? `<i class="ch-sw" style="background:${swatch}"></i>` : ""}<h2>${escapeHtml(title)}</h2></div>` +
-    // الاسم العربي يُعرض بالعربية وحدها (قاعدة صاحب المشروع)؛ الاسم في المصدر يبقى في «عن هذه البيانات»
-    (en && en !== title && !/[\u0600-\u06FF]/.test(title) ? `<div class="ch-en" dir="${/[A-Za-z]/.test(en) ? "ltr" : "rtl"}">${escapeHtml(en)}</div>` : "") +
+    // الاسم العربي يُعرض بالعربية وحدها (قاعدة صاحب المشروع)؛ الاسم في المصدر يبقى في «عن هذه البيانات».
+    // إلا التعريب التقديري (showEn): يُعرض معه اسم المصدر الإنجليزي ليتحقق القارئ من التعريب
+    (en && en !== title && (showEn || !/[\u0600-\u06FF]/.test(title)) ? `<div class="ch-en" dir="${/[A-Za-z]/.test(en) ? "ltr" : "rtl"}">${escapeHtml(en)}</div>` : "") +
     (chips.length ? `<div class="chips">${chips.join("")}</div>` : "") +
     (note ? `<p class="ch-note">${note}</p>` : "") + `</header>`;
 }
@@ -798,7 +804,7 @@ function openEntityCard(f, kind) {
     ? `${info.from != null ? yearLabel(info.from) : "؟"} – ${info.to != null ? yearLabel(info.to) : "؟"}` : "";
   if (typeof passportNote === "function") passportNote("entity", p.NAME);
   // التعريف يلي العنوان مباشرة: أول ما يسأله القارئ «من هؤلاء؟»، ثم المساحة والمدة
-  const head = cardHead({ title, en: info?.en_shown ?? p.NAME, swatch, chips, note: notes.join("<br>"), icon: people ? "people" : "state" });
+  const head = cardHead({ title, en: info?.en_shown ?? p.NAME, swatch, chips, note: notes.join("<br>"), icon: people ? "people" : "state", showEn: info?.st === "arabized" });
   const top = statsHtml([["المساحة على هذه الخريطة (كم²)", info?.a ? fmtBig(info.a) : "", info?.a ? `${fmtInt(info.a)} كم² تقريباً` : ""], ["مدته في ويكي بيانات", span]]) +
     lifeHtml(info?.years, key, swatch);
   const prec = modern ? "محددة (Natural Earth)" : `${PRECISION_LABEL[p.BORDERPRECISION] ?? "غير مذكورة"} بحسب المصدر${approxAll ? "، ويرسمها الأطلس تقريبية" : ""}`;

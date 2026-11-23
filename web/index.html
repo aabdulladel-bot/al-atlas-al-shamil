@@ -462,8 +462,9 @@
     .card-links summary { cursor: pointer; font-weight: 600; }
     .card-links ul { padding-inline-start: 18px; margin: 4px 0; }
     .card-src { font-size: 12px; color: var(--muted); }
-    /* الإنجليزي تحت الاسم المعرّب يبقى في التلميح عند التمرير، لا على الخريطة */
+    /* الإنجليزي تحت الاسم المعرّب تقديرياً: مخفي في نظرة الكرة (قرار #106 لمنع الازدحام)، ويظهر عند التقريب (lab-en) */
     .country-label.arabized small { display: none; }
+    #map.lab-en .country-label.arabized small { display: block; font-size: 0.72em; font-weight: 400; opacity: 0.8; direction: ltr; }
     #tb-gap { display: block; font-size: 10px; color: var(--accent); line-height: 1.4; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
     #tb-gap[hidden] { display: none; }
     @media (max-width: 600px) { #tb-gap { display: none; } }
