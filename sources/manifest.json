@@ -684,6 +684,29 @@
       }
     },
     {
+      "id": "wikidata-entity-defs",
+      "file": "data/raw/wikidata/entity_defs_extract.json",
+      "url": "https://qlever.dev/api/wikidata (SPARQL، نسخة من ويكي بيانات) و https://www.wikidata.org/wiki/Special:EntityData (scripts/build_entity_defs.py)",
+      "license": "CC0 1.0 (Wikidata)",
+      "tier": "A",
+      "landing": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "attribution": "Wikidata (CC0)",
+      "note": "لقطة تعريفات أسماء الخرائط: مرشحو كل اسم (المعرّف والصنف وتاريخا النشأة والزوال وعدد الروابط)، ومختصر العناصر المستعملة (التسميتان والوصفان ورابطا ويكيبيديا وخصائص الأبعاد). يُبنى منها web/data/names/entity_defs.json بلا شبكة، وتُحدَّث بـ --refresh.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/wikidata/entity_defs_extract.json",
+          "sha256": "31493231709ac07f43e7eab38d30e6ef0ad422fc6433709fb80b48a37450f218",
+          "bytes": 775532
+        }
+      ],
+      "license_verified_at": "2026-11-23",
+      "license_evidence": {
+        "url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+        "quote": "All data in Wikidata has a CC0 license."
+      }
+    },
+    {
       "id": "smith-wealth-oup1904-vol1",
       "file": "verification/era7/smith_oup1904_vol1.txt",
       "url": "https://archive.org/stream/inquiryintonatur01smit_3/inquiryintonatur01smit_3_djvu.txt",
