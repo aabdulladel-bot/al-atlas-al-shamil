@@ -2,13 +2,14 @@
  "_meta": {
   "source": "Wikidata (CC0). أسماء ملفات العلم والشعار للإحالة إلى Wikimedia Commons، ولا تُعرض الصور.",
   "note": "الرموز كما في ويكي بيانات للكيان المربوط بالموضع، لا من الأطلس. غياب رمز لا يعني غيابه في الواقع.",
-  "places_with_symbols": 211,
+  "places_with_symbols": 214,
   "counts": {
    "heritage": 38,
    "patron_saint": 32,
    "religion": 2,
    "anthem": 16,
    "motto": 19,
+   "nickname": 37,
    "flag": 152,
    "coat_of_arms": 152
   }
@@ -167,6 +168,20 @@
      "en": "Dionysius the Areopagite"
     }
    ],
+   "nickname": [
+    {
+     "text": "City of the Violet Crown",
+     "lang": "en"
+    },
+    {
+     "text": "The Classic City",
+     "lang": "en"
+    },
+    {
+     "text": "Πόλη του Ιώδους Στέμματος",
+     "lang": "el"
+    }
+   ],
    "coat_of_arms": [
     "Coat of Arms of Municipality of Athens.svg"
    ]
@@ -233,6 +248,20 @@
      "qid": "Q9200",
      "ar": "بولس الطرسوسي",
      "en": "Paul the Apostle"
+    }
+   ],
+   "nickname": [
+    {
+     "text": "The Eternal City",
+     "lang": "en"
+    },
+    {
+     "text": "The City of Seven Hills",
+     "lang": "en"
+    },
+    {
+     "text": "The City of Marble",
+     "lang": "en"
     }
    ],
    "flag": [
@@ -366,6 +395,16 @@
      "en": "Acisclus and Victoria"
     }
    ],
+   "nickname": [
+    {
+     "text": "La Ciudad Califal",
+     "lang": "es"
+    },
+    {
+     "text": "Córdoba la Llana",
+     "lang": "es"
+    }
+   ],
    "flag": [
     "Flag of Córdoba, Spain.svg"
    ],
@@ -450,6 +489,19 @@
     "Flag of Fes province.svg"
    ]
   },
+  "isfahan": {
+   "qid": "Q42053",
+   "nickname": [
+    {
+     "text": "Manchester of Persia",
+     "lang": "en"
+    },
+    {
+     "text": "نصف جهان",
+     "lang": "fa"
+    }
+   ]
+  },
   "samarkand": {
    "qid": "Q5753",
    "coat_of_arms": [
@@ -480,6 +532,28 @@
     "Flag of Cairo.svg"
    ]
   },
+  "makkah-saudi-arabia": {
+   "qid": "Q5806",
+   "nickname": [
+    {
+     "text": "أم القرى",
+     "lang": "ar"
+    }
+   ]
+  },
+  "isfahan-iran": {
+   "qid": "Q42053",
+   "nickname": [
+    {
+     "text": "Manchester of Persia",
+     "lang": "en"
+    },
+    {
+     "text": "نصف جهان",
+     "lang": "fa"
+    }
+   ]
+  },
   "kyoto-japan": {
    "qid": "Q34600",
    "anthem": [
@@ -487,6 +561,16 @@
      "qid": "Q18336822",
      "ar": null,
      "en": "municipal anthem of Kyoto"
+    }
+   ],
+   "nickname": [
+    {
+     "text": "千年の都",
+     "lang": "ja"
+    },
+    {
+     "text": "文化首都",
+     "lang": "ja"
     }
    ],
    "flag": [
@@ -512,6 +596,20 @@
      "en": "Moya Moskva"
     }
    ],
+   "nickname": [
+    {
+     "text": "Third Rome",
+     "lang": "en"
+    },
+    {
+     "text": "The First Throne",
+     "lang": "en"
+    },
+    {
+     "text": "Третий Рим",
+     "lang": "ru"
+    }
+   ],
    "flag": [
     "Flag of Moscow, Russia.svg"
    ],
@@ -528,6 +626,12 @@
      "en": "Mark the Evangelist"
     }
    ],
+   "nickname": [
+    {
+     "text": "Bride of the Sea",
+     "lang": "en"
+    }
+   ],
    "flag": [
     "Flag of Venice.svg"
    ],
@@ -542,6 +646,12 @@
      "qid": "Q167477",
      "ar": "أنطونيو اللشبوني",
      "en": "Anthony of Padua"
+    }
+   ],
+   "nickname": [
+    {
+     "text": "Queen of the Sea",
+     "lang": "en"
     }
    ],
    "flag": [
@@ -582,6 +692,20 @@
      "lang": "nl"
     }
    ],
+   "nickname": [
+    {
+     "text": "Venice of the north",
+     "lang": "en"
+    },
+    {
+     "text": "Mokum",
+     "lang": "nl"
+    },
+    {
+     "text": "מָקוֹם א",
+     "lang": "yi"
+    }
+   ],
    "flag": [
     "Flag of Amsterdam.svg"
    ],
@@ -617,6 +741,16 @@
    "motto": [
     {
      "text": "Muy Noble e Insigne, Muy Leal e Imperial",
+     "lang": "es"
+    }
+   ],
+   "nickname": [
+    {
+     "text": "La Ciudad de los Palacios",
+     "lang": "es"
+    },
+    {
+     "text": "La Ciudad de la Esperanza",
      "lang": "es"
     }
    ],
@@ -670,6 +804,20 @@
      "lang": "la"
     }
    ],
+   "nickname": [
+    {
+     "text": "The City of Light",
+     "lang": "en"
+    },
+    {
+     "text": "The City of Love",
+     "lang": "en"
+    },
+    {
+     "text": "Ville-Lumière",
+     "lang": "fr"
+    }
+   ],
    "flag": [
     "Flag of Paris with coat of arms.svg"
    ],
@@ -679,6 +827,12 @@
   },
   "berlin-germany": {
    "qid": "Q64",
+   "nickname": [
+    {
+     "text": "Spree-Athen",
+     "lang": "de"
+    }
+   ],
    "flag": [
     "Flag of Berlin.svg"
    ],
@@ -704,6 +858,20 @@
      "en": "Anthem of Saint Petersburg"
     }
    ],
+   "nickname": [
+    {
+     "text": "Window to Europe",
+     "lang": "en"
+    },
+    {
+     "text": "Window to the West",
+     "lang": "en"
+    },
+    {
+     "text": "City of White Nights",
+     "lang": "en"
+    }
+   ],
    "flag": [
     "Flag of Saint Petersburg (large).svg"
    ],
@@ -722,6 +890,12 @@
   },
   "tehran-iran": {
    "qid": "Q3616",
+   "nickname": [
+    {
+     "text": "دار السلطنه",
+     "lang": "fa"
+    }
+   ],
    "flag": [
     "Flag of Tehran.svg"
    ]
@@ -756,6 +930,20 @@
   },
   "new-york-united-states-of-america": {
    "qid": "Q60",
+   "nickname": [
+    {
+     "text": "المدينة التي لا تنام",
+     "lang": "ar"
+    },
+    {
+     "text": "التفاحة الكبيرة",
+     "lang": "ar"
+    },
+    {
+     "text": "Big Apple",
+     "lang": "en"
+    }
+   ],
    "flag": [
     "Flag of New York City.svg"
    ],
@@ -765,6 +953,16 @@
   },
   "philadelphia-united-states-of-america": {
    "qid": "Q1345",
+   "nickname": [
+    {
+     "text": "Philly",
+     "lang": "en"
+    },
+    {
+     "text": "City of Brotherly Love",
+     "lang": "en"
+    }
+   ],
    "flag": [
     "Flag of Philadelphia, Pennsylvania.svg"
    ],
@@ -1784,6 +1982,16 @@
   },
   "bucharest-romania": {
    "qid": "Q19660",
+   "nickname": [
+    {
+     "text": "Paris of the Balkans",
+     "lang": "en"
+    },
+    {
+     "text": "Micul Paris",
+     "lang": "ro"
+    }
+   ],
    "coat_of_arms": [
     "Coat of arms of Bucharest.svg"
    ]
@@ -1849,6 +2057,12 @@
      "lang": "la"
     }
    ],
+   "nickname": [
+    {
+     "text": "The Fair City",
+     "lang": "en"
+    }
+   ],
    "flag": [
     "IRL Dublin flag.svg"
    ],
@@ -1890,6 +2104,12 @@
      "en": "Saint Christopher"
     }
    ],
+   "nickname": [
+    {
+     "text": "Ciutat de les columnes",
+     "lang": "ca"
+    }
+   ],
    "flag": [
     "Official flag of Havana, Cuba.svg"
    ],
@@ -1899,6 +2119,20 @@
   },
   "prague-czechia": {
    "qid": "Q1085",
+   "nickname": [
+    {
+     "text": "Mater urbium",
+     "lang": "la"
+    },
+    {
+     "text": "Stověžatá Praha",
+     "lang": "cs"
+    },
+    {
+     "text": "Praga Caput Regni",
+     "lang": "la"
+    }
+   ],
    "flag": [
     "Flag of Prague.svg"
    ],
@@ -1914,6 +2148,12 @@
   },
   "santo-domingo-dominican-republic": {
    "qid": "Q34820",
+   "nickname": [
+    {
+     "text": "Ciudad primada de América",
+     "lang": "ca"
+    }
+   ],
    "coat_of_arms": [
     "Escudo del Municipio Santo Domingo.svg"
    ]
@@ -1935,6 +2175,20 @@
   },
   "helsinki-finland": {
    "qid": "Q1757",
+   "nickname": [
+    {
+     "text": "Stadi",
+     "lang": "fi"
+    },
+    {
+     "text": "Hesa",
+     "lang": "fi"
+    },
+    {
+     "text": "Hesa",
+     "lang": "sv"
+    }
+   ],
    "flag": [
     "Flag of Helsinki.svg"
    ],
@@ -1944,6 +2198,20 @@
   },
   "k-benhavn-denmark": {
    "qid": "Q1748",
+   "nickname": [
+    {
+     "text": "Wonderful Copenhagen",
+     "lang": "en"
+    },
+    {
+     "text": "Tårnenes by",
+     "lang": "da"
+    },
+    {
+     "text": "Kongens København",
+     "lang": "da"
+    }
+   ],
    "flag": [
     "Flag of Copenhagen Municipality, Denmark.svg"
    ],
@@ -2025,6 +2293,20 @@
   },
   "caracas-venezuela": {
    "qid": "Q1533",
+   "nickname": [
+    {
+     "text": "La Sultana del Ávila",
+     "lang": "ca"
+    },
+    {
+     "text": "La Sucursal del Cel",
+     "lang": "ca"
+    },
+    {
+     "text": "La Ciutat dels sostres vermells",
+     "lang": "ca"
+    }
+   ],
    "flag": [
     "Flag of Caracas.svg"
    ],
@@ -2046,6 +2328,20 @@
      "qid": "Q12173434",
      "ar": null,
      "en": "Yak tebe ne liubyty, Kyieve mii!"
+    }
+   ],
+   "nickname": [
+    {
+     "text": "Мати міст Руських",
+     "lang": "uk"
+    },
+    {
+     "text": "Місто, де все починається",
+     "lang": "uk"
+    },
+    {
+     "text": "Мать городов русских",
+     "lang": "ru"
     }
    ],
    "flag": [
@@ -2105,6 +2401,16 @@
      "en": "Eric IX of Sweden"
     }
    ],
+   "nickname": [
+    {
+     "text": "Venice of the North",
+     "lang": "en"
+    },
+    {
+     "text": "Nordens Venedig",
+     "lang": "sv"
+    }
+   ],
    "flag": [
     "Flag of Stockholm.svg"
    ],
@@ -2147,6 +2453,16 @@
      "lang": "th"
     }
    ],
+   "nickname": [
+    {
+     "text": "City of Angels",
+     "lang": "en"
+    },
+    {
+     "text": "The Big Mango",
+     "lang": "en"
+    }
+   ],
    "flag": [
     "Flag of Bangkok.svg"
    ]
@@ -2185,6 +2501,20 @@
   },
   "johannesburg-south-africa": {
    "qid": "Q34647",
+   "nickname": [
+    {
+     "text": "Joburg",
+     "lang": "en"
+    },
+    {
+     "text": "Jozi",
+     "lang": "en"
+    },
+    {
+     "text": "The City of Gold",
+     "lang": "en"
+    }
+   ],
    "flag": [
     "Flag of Johannesburg, South Africa.svg"
    ],
@@ -2207,6 +2537,16 @@
      "en": "Awit ng Maynila"
     }
    ],
+   "nickname": [
+    {
+     "text": "Pearl of the Orient",
+     "lang": "en"
+    },
+    {
+     "text": "Queen City of the Pacific and others",
+     "lang": "en"
+    }
+   ],
    "flag": [
     "Flag of Manila.svg"
    ]
@@ -2227,6 +2567,20 @@
      "qid": "Q310686",
      "ar": null,
      "en": "Dionysius the Areopagite"
+    }
+   ],
+   "nickname": [
+    {
+     "text": "City of the Violet Crown",
+     "lang": "en"
+    },
+    {
+     "text": "The Classic City",
+     "lang": "en"
+    },
+    {
+     "text": "Πόλη του Ιώδους Στέμματος",
+     "lang": "el"
     }
    ],
    "coat_of_arms": [
@@ -2253,6 +2607,16 @@
   },
   "buenos-aires-argentina": {
    "qid": "Q1486",
+   "nickname": [
+    {
+     "text": "La reina del Plata",
+     "lang": "es"
+    },
+    {
+     "text": "Baires",
+     "lang": "es"
+    }
+   ],
    "flag": [
     "Bandera de la Ciudad de Buenos Aires.svg"
    ],
@@ -2283,6 +2647,12 @@
      "lang": "la"
     }
    ],
+   "nickname": [
+    {
+     "text": "Chocolate City",
+     "lang": "en-us"
+    }
+   ],
    "flag": [
     "Flag of Washington, D.C.svg"
    ],
@@ -2310,6 +2680,20 @@
      "en": "Paul the Apostle"
     }
    ],
+   "nickname": [
+    {
+     "text": "The Eternal City",
+     "lang": "en"
+    },
+    {
+     "text": "The City of Seven Hills",
+     "lang": "en"
+    },
+    {
+     "text": "The City of Marble",
+     "lang": "en"
+    }
+   ],
    "flag": [
     "Flag of Rome (with Lesser Arms).svg"
    ],
@@ -2332,6 +2716,16 @@
     {
      "text": "Jaya Raya",
      "lang": "id"
+    }
+   ],
+   "nickname": [
+    {
+     "text": "The Big Durian",
+     "lang": "en"
+    },
+    {
+     "text": "J-Town",
+     "lang": "en"
     }
    ],
    "flag": [
@@ -2410,6 +2804,16 @@
     {
      "text": "Onward, Singapore",
      "lang": "en"
+    }
+   ],
+   "nickname": [
+    {
+     "text": "Lion City",
+     "lang": "en"
+    },
+    {
+     "text": "狮城",
+     "lang": "zh"
     }
    ],
    "flag": [
