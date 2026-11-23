@@ -45,6 +45,7 @@ GENERIC = {"Q6256"}  # الصنف الأعم: يُستعمل وسماً حين �
 COLL = json.loads((ROOT / "scripts/config/collective_names.json").read_text(encoding="utf-8"))
 OVR = json.loads((ROOT / "scripts/config/entity_defs_overrides.json").read_text(encoding="utf-8"))
 REJECT, PREFER = OVR["reject_items"], OVR["prefer_items"]
+PIN, GAPS, ALLOW = OVR.get("pin_years", {}), OVR.get("gap_years", {}), OVR.get("allow_outside", {})
 TOL = 10  # سنوات تسامح حول مدة الكيان، لأن سنة الخريطة لقطة تقريبية
 COLLECTIVE = re.compile(r"\b(tribes|nomads|nomadic|hunter-gatherers|gatherers|pastoral|pastoralists|peoples|farmers|herders|chiefdoms|clans|villages|cultures|bands|foragers|fishermen)\b", re.I)
 DIMS = {
@@ -163,17 +164,19 @@ def entity(q):
         return snap["items"][q]
     need_network(f"العنصر {q}")
     url = f"https://www.wikidata.org/wiki/Special:EntityData/{q}.json"
-    last = None
-    for attempt in range(8):
+    ent = None
+    for attempt in range(3):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60) as r:
                 ent = next(iter(json.load(r)["entities"].values()))
             break
-        except Exception as e:  # noqa: BLE001
-            last = e
+        except Exception:  # noqa: BLE001
             time.sleep(5 + attempt * 10)
-    else:
-        raise RuntimeError(f"EntityData {q}: {last}")
+    if ent is None:
+        slim = entity_sparql(q)  # صفحة العنصر محدودة الطلبات: يُؤخذ المختصر نفسه من QLever
+        snap["items"][q] = slim
+        fetched["items"] += 1
+        return slim
     claims = {}
     for prop, sts in ent.get("claims", {}).items():
         if prop not in KEEP:
@@ -191,6 +194,35 @@ def entity(q):
     snap["items"][q] = slim
     fetched["items"] += 1
     time.sleep(0.4)
+    return slim
+
+
+def entity_sparql(q):
+    """المختصر نفسه عبر SPARQL: wdt يعطي القيم الأعلى رتبة، كما يفعل الجلب من صفحة العنصر (المفضّلة، وإلا غير المهملة)."""
+    props = " ".join(f"wdt:{p}" for p in sorted(KEEP))
+    base = sparql(f"SELECT ?k ?lang ?val WHERE {{ {{ wd:{q} rdfs:label ?val BIND(\"l\" AS ?k) }} UNION {{ wd:{q} schema:description ?val BIND(\"d\" AS ?k) }} "
+                  f"FILTER(lang(?val) IN (\"ar\", \"en\")) BIND(lang(?val) AS ?lang) }}")
+    sw = sparql(f"SELECT ?site ?t WHERE {{ ?a schema:about wd:{q} ; schema:isPartOf ?site ; schema:name ?t . "
+                f"FILTER(?site IN (<https://ar.wikipedia.org/>, <https://en.wikipedia.org/>)) }}")
+    cl = sparql(f"SELECT ?p ?v WHERE {{ VALUES ?p {{ {props} }} wd:{q} ?p ?v }}")
+    slim = {"labels": {}, "desc": {}, "sw": {}, "claims": {}}
+    for b in base:
+        slim["labels" if v(b, "k") == "l" else "desc"].setdefault(v(b, "lang"), v(b, "val"))
+    for b in sw:
+        slim["sw"]["arwiki" if "ar.wikipedia" in v(b, "site") else "enwiki"] = v(b, "t")
+    for b in cl:
+        prop, val, typ = qid(v(b, "p")), b["v"]["value"], b["v"].get("type")
+        if typ == "uri":
+            val = qid(val) if "/entity/Q" in val else None
+        elif b["v"].get("xml:lang"):
+            val = {"text": val, "lang": b["v"]["xml:lang"]}
+        elif re.match(r"^-?\d+-\d\d-\d\dT", val):
+            val = val if val.startswith("-") else "+" + val
+        else:
+            val = None
+        if val is not None and val not in slim["claims"].setdefault(prop, []):
+            slim["claims"][prop].append(val)
+    slim["claims"] = {k: x for k, x in slim["claims"].items() if x}
     return slim
 
 
@@ -265,6 +297,20 @@ def build():
             cands.pop(q_, None)
         per_year = {}
         for y in years[n]:
+            pin = PIN.get(n, {}).get(str(y))
+            if pin:
+                # تثبيت يدوي معلن لسنة بعينها: الشكل الاستعماري أو التاريخي للكيان، ويُفحص وقوع السنة في مدته
+                d = details(pin["q"], used)
+                inside = covers({"c": "Q3024240", "inc": d.get("inc"), "dis": d.get("dis")}, y) or (d.get("inc") is None and d.get("dis") is None)
+                if not inside and str(y) not in ALLOW.get(n, {}):
+                    sys.exit(f"تثبيت خارج مدة العنصر بلا إجازة: {n} {y} {pin['q']} ({d.get('inc')}–{d.get('dis')})")
+                if pin["q"] not in items:
+                    p31 = entity(pin["q"])["claims"].get("P31", [])
+                    own = (d.get("dims", {}).get("type") or [{}])[0]
+                    cls = next((CLASSES[c_] for c_ in p31 if c_ in CLASSES), None) or own.get("ar") or own.get("en") or "كيان سياسي"
+                    items[pin["q"]] = {**d, "kind": "polity", "class": cls}
+                per_year[str(y)] = {"q": pin["q"], "n": 1, "match": "pin", "why": pin["why"]}
+                continue
             pool = [c for c in cands.values() if covers(c, y)]
             if not pool:
                 per_year[str(y)] = None
@@ -278,8 +324,12 @@ def build():
                     continue
                 items[best["q"]] = {**d, "kind": "people" if best["c"] in PEOPLE else "polity", "class": CLASSES[best["c"]]}
             per_year[str(y)] = {"q": best["q"], "n": len(pool), "match": "prefer" if best["q"] in PREFER.get(n, {}) else "hb_qid" if best["q"] == hb[n].get("qid") else "label"}
-        if any(per_year.values()):
-            entities[n] = {"by_year": per_year}
+        gaps = {y: r for y, r in GAPS.get(n, {}).items() if y in per_year and not per_year[y]}
+        stale = [y for y in GAPS.get(n, {}) if per_year.get(y)]
+        if stale:
+            print(f"تنبيه: سبب فراغ لسنة صار لها تعريف: {n} {stale}", flush=True)
+        if any(per_year.values()) or gaps:
+            entities[n] = {"by_year": per_year, **({"gaps": gaps} if gaps else {})}
     wd = {k: w for k, w in COLL["wikidata"].items() if not k.startswith("_")}
 
     def ref(label):
@@ -312,9 +362,10 @@ def build():
             "tolerance_years": TOL,
             "dims_labels": {k: lab for k, (_, lab) in DIMS.items()},
             "collective_unexplained": unexplained,
-            "overrides": {"reject_items": REJECT, "prefer_items": PREFER},
+            "overrides": {"reject_items": REJECT, "prefer_items": PREFER, "pinned_years": sum(len(x) for x in PIN.values()), "explained_gaps": sum(len(x) for x in GAPS.values())},
             "counts": {"names_without_info": len(todo), "names_defined": len(entities), "collective": len(collective),
                        "map_years_defined": sum(1 for s in slots if s), "map_years_undefined": sum(1 for s in slots if not s),
+                       "undefined_explained": sum(len(e.get("gaps", {})) for e in entities.values()),
                        "names_with_several_items": sum(1 for e in entities.values() if len({s["q"] for s in e["by_year"].values() if s}) > 1),
                        "ambiguous_years": sum(1 for s in slots if s and s["n"] > 1), "items": len(items)},
         },

@@ -53,17 +53,20 @@
     "Blackfoot": {
      "Q130285434": "السيكسيكا، وهم البلاكفوت بالمعنى الأخص"
     }
-   }
+   },
+   "pinned_years": 48,
+   "explained_gaps": 21
   },
   "counts": {
    "names_without_info": 1098,
    "names_defined": 398,
    "collective": 41,
-   "map_years_defined": 671,
-   "map_years_undefined": 69,
-   "names_with_several_items": 5,
+   "map_years_defined": 719,
+   "map_years_undefined": 21,
+   "undefined_explained": 21,
+   "names_with_several_items": 33,
    "ambiguous_years": 42,
-   "items": 401
+   "items": 428
   }
  },
  "items": {
@@ -643,6 +646,98 @@
    },
    "kind": "people",
    "class": "جماعة عرقية"
+  },
+  "Q1796551": {
+   "q": "Q1796551",
+   "en": "British Leeward Islands",
+   "d_en": "former British colony (1671–1816), reunited later as a federal colony (1833–1960), located in the Caribbean",
+   "enwiki": "British Leeward Islands",
+   "inc": 1671,
+   "dis": 1960,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     },
+     {
+      "ar": "كيان سياسي إقليمي",
+      "en": "political territorial entity"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "ملكية دستورية",
+      "en": "constitutional monarchy"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "سانت جونز",
+      "en": null
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الإنجليزية",
+      "en": "English"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "الإنجليزية",
+      "en": "English"
+     },
+     {
+      "ar": null,
+      "en": "Dominican Creole French"
+     },
+     {
+      "ar": "الكريولية الأنتيغوية وبربودية",
+      "en": "Antiguan and Barbudan Creole"
+     },
+     {
+      "ar": "الفرنسية",
+      "en": "French"
+     }
+    ],
+    "follows": [
+     {
+      "ar": null,
+      "en": "Antigua-Barbuda-Montserrat"
+     },
+     {
+      "ar": null,
+      "en": "Saint Christopher-Nevis-Anguilla"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": null,
+      "en": "Antigua-Barbuda-Montserrat"
+     },
+     {
+      "ar": null,
+      "en": "Saint Christopher-Nevis-Anguilla"
+     },
+     {
+      "ar": "اتحاد جزر الهند الغربية",
+      "en": "West Indies Federation"
+     },
+     {
+      "ar": "جزر عذراء بريطانية",
+      "en": "British Virgin Islands"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "الموسوعة البريطانية الطبعة 11",
+      "en": "Encyclopædia Britannica 11th edition"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة"
   },
   "Q781": {
    "q": "Q781",
@@ -1298,6 +1393,86 @@
    "kind": "polity",
    "class": "دولة تاريخية"
   },
+  "Q206411": {
+   "q": "Q206411",
+   "ar": "جمهورية أذربيجان الديمقراطية",
+   "en": "Azerbaijan Democratic Republic",
+   "d_en": "former country in the South Caucasus (1918–1920)",
+   "arwiki": "جمهورية أذربيجان الديمقراطية",
+   "enwiki": "Azerbaijan Democratic Republic",
+   "inc": 1918,
+   "dis": 1920,
+   "dims": {
+    "type": [
+     {
+      "ar": "دولة سابقة غير معترف بها",
+      "en": "historical unrecognized state"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "جمهورية برلمانية",
+      "en": "parliamentary republic"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "كنجه",
+      "en": "Ganja"
+     },
+     {
+      "ar": "باكو",
+      "en": "Baku"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الأذرية",
+      "en": "Azerbaijani"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "مانات أذربيجاني",
+      "en": "Azerbaijani manat"
+     },
+     {
+      "ar": null,
+      "en": "Azerbaijani ruble"
+     },
+     {
+      "ar": null,
+      "en": "Baku bon"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": "الجمهورية الترانسقوقازية الديمقراطية الاتحادية",
+      "en": "Transcaucasian Democratic Federative Republic"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": null,
+      "en": "Azerbaijan Socialist Soviet Republic"
+     }
+    ],
+    "follows": [
+     {
+      "ar": "الجمهورية الترانسقوقازية الديمقراطية الاتحادية",
+      "en": "Transcaucasian Democratic Federative Republic"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": null,
+      "en": "Azerbaijan Socialist Soviet Republic"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة سابقة غير معترف بها"
+  },
   "Q227": {
    "q": "Q227",
    "ar": "أذربيجان",
@@ -1496,6 +1671,22 @@
    },
    "kind": "polity",
    "class": "سلطنة"
+  },
+  "Q131612041": {
+   "q": "Q131612041",
+   "en": "British Bahamas",
+   "d_en": "British Crown Colony in the Caribbean (1648–1973)",
+   "enwiki": "British Bahamas",
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة التاج"
   },
   "Q778": {
    "q": "Q778",
@@ -2316,6 +2507,84 @@
    "kind": "polity",
    "class": "بلد"
   },
+  "Q1643555": {
+   "q": "Q1643555",
+   "ar": "هندوراس البريطانية",
+   "en": "British Honduras",
+   "d_en": "UK possession in Central America between 1798 and 1981, today Belize",
+   "arwiki": "هندوراس البريطانية",
+   "enwiki": "British Honduras",
+   "inc": 1862,
+   "dis": 1981,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     },
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     },
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "بلموبان",
+      "en": "Belmopan"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الإنجليزية",
+      "en": "English"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": "بليز",
+      "en": "Belize"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "قاموس بروكهاوس وإفرون الموسوعي",
+      "en": "Brockhaus and Efron Encyclopedic Dictionary"
+     },
+     {
+      "ar": "الموسوعة السوفيتية الكبرى",
+      "en": "Great Soviet Encyclopedia (1926–1947)"
+     },
+     {
+      "ar": "قاموس بروكهاوس وإفرون الموسوعي الصغير",
+      "en": "Small Brockhaus and Efron Encyclopedic Dictionary"
+     },
+     {
+      "ar": "الموسوعة البريطانية الطبعة 11",
+      "en": "Encyclopædia Britannica 11th edition"
+     },
+     {
+      "ar": "المرجع الجديد للطلاب",
+      "en": "The New Student's Reference Work"
+     },
+     {
+      "ar": "قاموس غرانات الموسوعي",
+      "en": "Granat Encyclopedic Dictionary"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة التاج"
+  },
   "Q242": {
    "q": "Q242",
    "ar": "بليز",
@@ -3042,6 +3311,82 @@
    },
    "kind": "people",
    "class": "جماعة عرقية"
+  },
+  "Q590743": {
+   "q": "Q590743",
+   "ar": "رواندا-أوروندي",
+   "en": "Ruanda-Urundi",
+   "d_en": "1922-1962 League of Nations/United Nations mandate in East Africa",
+   "arwiki": "رواندا-أوروندي",
+   "enwiki": "Ruanda-Urundi",
+   "inc": 1922,
+   "dis": 1962,
+   "dims": {
+    "type": [
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     },
+     {
+      "ar": "انتداب",
+      "en": "League of Nations mandate"
+     },
+     {
+      "ar": "وصاية دولية",
+      "en": "United Nations trust territory"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "انتداب",
+      "en": "League of Nations mandate"
+     },
+     {
+      "ar": "وصاية دولية",
+      "en": "United Nations trust territory"
+     },
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "بوجومبورا",
+      "en": "Bujumbura"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الفرنسية",
+      "en": "French"
+     }
+    ],
+    "religion": [
+     {
+      "ar": "كاثوليكية",
+      "en": "Catholicism"
+     },
+     {
+      "ar": "بروتستانتية",
+      "en": "Protestantism"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "فرنك كونغولي",
+      "en": "Congolese franc"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "قاموس غرانات الموسوعي",
+      "en": "Granat Encyclopedic Dictionary"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
   },
   "Q967": {
    "q": "Q967",
@@ -3854,6 +4199,90 @@
    "kind": "polity",
    "class": "دولة تاريخية"
   },
+  "Q1789596": {
+   "q": "Q1789596",
+   "ar": "الاتحاد الكرواتي المجري",
+   "en": "Croatia in personal union with Hungary",
+   "d_en": "personal union of the Kingdom of Croatia and the Kingdom of Hungary from 1102 to 1526",
+   "arwiki": "الاتحاد الكرواتي المجري",
+   "enwiki": "Croatia in personal union with Hungary",
+   "inc": 1102,
+   "dis": 1526,
+   "dims": {
+    "type": [
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     },
+     {
+      "ar": "مملكة",
+      "en": "realm"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "ملكية",
+      "en": "monarchy"
+     }
+    ],
+    "capital": [
+     {
+      "ar": null,
+      "en": "Biograd na Moru"
+     },
+     {
+      "ar": "كنين",
+      "en": "Knin"
+     },
+     {
+      "ar": "بيخاتش",
+      "en": "Bihać"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الكرواتية",
+      "en": "Croatian"
+     },
+     {
+      "ar": "اللاتينية",
+      "en": "Latin"
+     }
+    ],
+    "religion": [
+     {
+      "ar": "الكنيسة الرومانية الكاثوليكية",
+      "en": "Catholic Church"
+     }
+    ],
+    "currency": [
+     {
+      "ar": null,
+      "en": "Frizatik"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "مقاطعة كرواتيا",
+      "en": "Vilayet Croats"
+     }
+    ],
+    "follows": [
+     {
+      "ar": "مملكة كرواتيا (925–1102)",
+      "en": "Kingdom of Croatia"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "معجم التخاطب لماير",
+      "en": "Meyers Konversations-Lexikon, 4th edition (1885–1890)"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
+  },
   "Q224": {
    "q": "Q224",
    "ar": "كرواتيا",
@@ -3990,6 +4419,67 @@
    },
    "kind": "people",
    "class": "قبيلة"
+  },
+  "Q213638": {
+   "q": "Q213638",
+   "ar": "مملكة قبرص",
+   "en": "Kingdom of Cyprus",
+   "d_ar": "مملكة صليبية في جزيرة قبرص (١١٩٢م - ١٤٨٩م)",
+   "d_en": "Mediaeval kingdom",
+   "arwiki": "مملكة قبرص",
+   "enwiki": "Kingdom of Cyprus",
+   "inc": 1192,
+   "dis": 1489,
+   "dims": {
+    "type": [
+     {
+      "ar": "الدول الصليبية",
+      "en": "Crusader states"
+     },
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "ملكية",
+      "en": "monarchy"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "نيقوسيا",
+      "en": "Nicosia"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "اللاتينية",
+      "en": "Latin"
+     }
+    ],
+    "religion": [
+     {
+      "ar": "الكنيسة الرومانية الكاثوليكية",
+      "en": "Catholic Church"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": null,
+      "en": "Venetian Cyprus"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "كتاب العائلة الشمالي",
+      "en": "Nordisk familjebok"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
   },
   "Q229": {
    "q": "Q229",
@@ -4525,6 +5015,86 @@
    "kind": "people",
    "class": "جماعة عرقية"
   },
+  "Q333126": {
+   "q": "Q333126",
+   "ar": "أرض الصومال الفرنسي",
+   "en": "French Somaliland",
+   "d_en": "former French colony in the Horn of Africa",
+   "arwiki": "الصومال الفرنسي",
+   "enwiki": "French Somaliland",
+   "inc": 1896,
+   "dis": 1967,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "في الخارج",
+      "en": "French overseas territory"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "جيبوتي",
+      "en": "Djibouti"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الفرنسية",
+      "en": "French"
+     },
+     {
+      "ar": "العربية",
+      "en": "Arabic"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "الفرنسية",
+      "en": "French"
+     },
+     {
+      "ar": "العربية",
+      "en": "Arabic"
+     }
+    ],
+    "religion": [
+     {
+      "ar": "الإسلام",
+      "en": "Islam"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "فرنك فرنسي",
+      "en": "French franc"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": "سلطنة تاجورة",
+      "en": "Sultanate of Tadjoura"
+     },
+     {
+      "ar": "إقليم أوبوك",
+      "en": "Obock Territory"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "إقليم العفر والعيسي الفرنسي",
+      "en": "French Territory of the Afars and the Issas"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة"
+  },
   "Q977": {
    "q": "Q977",
    "ar": "جيبوتي",
@@ -4595,6 +5165,80 @@
    },
    "kind": "polity",
    "class": "بلد"
+  },
+  "Q2660774": {
+   "q": "Q2660774",
+   "ar": "جزر ويندوارد البريطانية",
+   "en": "British Windward Islands",
+   "d_ar": "مستعمرة بريطانية سابقة (1833-1959)",
+   "d_en": "former British colony (1833–1959)",
+   "enwiki": "British Windward Islands",
+   "inc": 1833,
+   "dis": 1958,
+   "dims": {
+    "type": [
+     {
+      "ar": "كيان سياسي إقليمي",
+      "en": "political territorial entity"
+     },
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "ملكية دستورية",
+      "en": "constitutional monarchy"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "بريدج تاون",
+      "en": "Bridgetown"
+     },
+     {
+      "ar": "سانت جورجز",
+      "en": "St. George's"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الإنجليزية",
+      "en": "English"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "الإنجليزية",
+      "en": "English"
+     }
+    ],
+    "follows": [
+     {
+      "ar": "مستعمرة بربادوس",
+      "en": "Colony of Barbados"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": "ترينيداد وتوباغو",
+      "en": "Trinidad and Tobago"
+     },
+     {
+      "ar": "اتحاد جزر الهند الغربية",
+      "en": "West Indies Federation"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "الموسوعة البريطانية الطبعة 11",
+      "en": "Encyclopædia Britannica 11th edition"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "كيان سياسي إقليمي"
   },
   "Q784": {
    "q": "Q784",
@@ -5296,6 +5940,72 @@
    "kind": "people",
    "class": "جماعة عرقية"
   },
+  "Q1232509": {
+   "q": "Q1232509",
+   "ar": "غينيا الإسبانية",
+   "en": "Spanish Guinea",
+   "d_en": "1926–1968 Spanish possession in West Africa",
+   "arwiki": "غينيا الإسبانية",
+   "enwiki": "Spanish Guinea",
+   "inc": 1926,
+   "dis": 1968,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "مالابو",
+      "en": "Malabo"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الإسبانية",
+      "en": "Spanish"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "الإسبانية",
+      "en": "Spanish"
+     }
+    ],
+    "currency": [
+     {
+      "ar": null,
+      "en": "Spanish Guinea peseta"
+     },
+     {
+      "ar": "بيزيتا إسبانية",
+      "en": "peseta"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "غينيا الاستوائية",
+      "en": "Equatorial Guinea"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": "غينيا الاستوائية",
+      "en": "Equatorial Guinea"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة"
+  },
   "Q983": {
    "q": "Q983",
    "ar": "غينيا الاستوائية",
@@ -5504,6 +6214,56 @@
    },
    "kind": "polity",
    "class": "بلد"
+  },
+  "Q5148320": {
+   "q": "Q5148320",
+   "ar": "مستعمرة فيجي",
+   "en": "Colony of Fiji",
+   "d_en": "British Crown colony (1874–1970), which is now the present-day nation of Fiji",
+   "arwiki": "مستعمرة فيجي",
+   "enwiki": "Colony of Fiji",
+   "inc": 1874,
+   "dis": 1970,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     }
+    ],
+    "capital": [
+     {
+      "ar": null,
+      "en": "Levuka"
+     }
+    ],
+    "currency": [
+     {
+      "ar": null,
+      "en": "Fijian pound"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": null,
+      "en": "Kingdom of Fiji"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "فيجي",
+      "en": "Fiji"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "موسوعة ناتال",
+      "en": "The Nuttall Encyclopædia"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة التاج"
   },
   "Q712": {
    "q": "Q712",
@@ -6103,6 +6863,117 @@
      {
       "ar": "موسوعة ناتال",
       "en": "The Nuttall Encyclopædia"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
+  },
+  "Q245160": {
+   "q": "Q245160",
+   "ar": "جمهورية جورجيا الديمقراطية",
+   "en": "Democratic Republic of Georgia",
+   "d_ar": "دولة سابقة",
+   "d_en": "first modern establishment of Georgia as an independent Country (1918-1921)",
+   "arwiki": "جمهورية جورجيا الديمقراطية",
+   "enwiki": "Democratic Republic of Georgia",
+   "inc": 1918,
+   "dis": 1921,
+   "dims": {
+    "type": [
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "دولة مركزية",
+      "en": "unitary state"
+     },
+     {
+      "ar": "جمهورية برلمانية",
+      "en": "parliamentary republic"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "تبليسي",
+      "en": "Tbilisi"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الجورجية",
+      "en": "Georgian"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "الجورجية",
+      "en": "Georgian"
+     },
+     {
+      "ar": "الروسية",
+      "en": "Russian"
+     },
+     {
+      "ar": "الأرمنية",
+      "en": "Armenian"
+     },
+     {
+      "ar": "الأبخازية",
+      "en": "Abkhaz"
+     },
+     {
+      "ar": "الأذرية",
+      "en": "Azerbaijani"
+     },
+     {
+      "ar": "اليونانية",
+      "en": "Greek"
+     }
+    ],
+    "religion": [
+     {
+      "ar": "الكنيسة الجورجية الأرثوذكسية",
+      "en": "Georgian Orthodox Church"
+     }
+    ],
+    "currency": [
+     {
+      "ar": null,
+      "en": "Georgian maneti"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": "الجمهورية الترانسقوقازية الديمقراطية الاتحادية",
+      "en": "Transcaucasian Democratic Federative Republic"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": null,
+      "en": "Socialist Soviet Republic of Georgia"
+     }
+    ],
+    "follows": [
+     {
+      "ar": "الجمهورية الترانسقوقازية الديمقراطية الاتحادية",
+      "en": "Transcaucasian Democratic Federative Republic"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": null,
+      "en": "Socialist Soviet Republic of Georgia"
+     }
+    ],
+    "sources": [
+     {
+      "ar": null,
+      "en": "Collier's New Encyclopedia, 1921"
      }
     ]
    },
@@ -7151,6 +8022,92 @@
    },
    "kind": "polity",
    "class": "دولة تاريخية"
+  },
+  "Q1054923": {
+   "q": "Q1054923",
+   "ar": "هونغ كونغ البريطانية",
+   "en": "British Hong Kong",
+   "d_en": "British colony and dependent territory from 1841 to 1997",
+   "arwiki": "هونغ كونغ البريطانية",
+   "enwiki": "British Hong Kong",
+   "inc": 1841,
+   "dis": 1997,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     },
+     {
+      "ar": null,
+      "en": "British Dependent Territory"
+     },
+     {
+      "ar": "تقسيم إداري سابق",
+      "en": "former administrative territorial entity"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "مدينة فكتوريا",
+      "en": "Victoria"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الإنجليزية",
+      "en": "English"
+     },
+     {
+      "ar": "الصينية",
+      "en": "Chinese"
+     },
+     {
+      "ar": null,
+      "en": "Hong Kong Cantonese"
+     },
+     {
+      "ar": "صينية يوي",
+      "en": "Yue Chinese"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "دولار هونغ كونغ",
+      "en": "Hong Kong dollar"
+     },
+     {
+      "ar": "دولار إسباني",
+      "en": "Spanish dollar"
+     },
+     {
+      "ar": "كاش صيني (وحدة عملة)",
+      "en": "cash"
+     },
+     {
+      "ar": "دولار التجارة",
+      "en": "trade dollar"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": "هونغ كونغ",
+      "en": "Hong Kong"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "موسوعة ناتال",
+      "en": "The Nuttall Encyclopædia"
+     },
+     {
+      "ar": "قاموس غرانات الموسوعي",
+      "en": "Granat Encyclopedic Dictionary"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة التاج"
   },
   "Q8646": {
    "q": "Q8646",
@@ -9058,6 +10015,71 @@
    "kind": "people",
    "class": "شعب"
   },
+  "Q3480281": {
+   "q": "Q3480281",
+   "ar": "إمارة الكويت",
+   "en": "Sheikhdom of Kuwait",
+   "d_ar": "دولةٌ سابقةٌ في الكُوَيت.",
+   "d_en": "sheikhdom in the Arabian peninsula (1752-1961), precursor of Kuwait",
+   "arwiki": "إمارة الكويت",
+   "enwiki": "Emirate of Kuwait",
+   "inc": 1752,
+   "dis": 1961,
+   "dims": {
+    "type": [
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "مدينة الكويت",
+      "en": "Kuwait City"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "العربية",
+      "en": "Arabic"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "العربية",
+      "en": "Arabic"
+     },
+     {
+      "ar": "الفارسية",
+      "en": "Persian"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "دينار كويتي",
+      "en": "Kuwaiti dinar"
+     },
+     {
+      "ar": "روبية خليجية",
+      "en": "Gulf rupee"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": "الإمارة الخالدية الأولى",
+      "en": "Bani Khalid Emirate"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": "الكويت",
+      "en": "Kuwait"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
+  },
   "Q817": {
    "q": "Q817",
    "ar": "الكويت",
@@ -9526,6 +10548,80 @@
    "kind": "polity",
    "class": "بلد"
   },
+  "Q2340665": {
+   "q": "Q2340665",
+   "ar": "باسوتولاند",
+   "en": "Basutoland",
+   "d_en": "Basutoland was a British Crown colony that existed from 1884 to 1966 in present-day Lesotho, bordered with the Cape Colony, Natal Colony and Orange River Colony until 1910 and completely surrounded by South Africa from 1910",
+   "arwiki": "باسوتولاند",
+   "enwiki": "Basutoland",
+   "inc": 1884,
+   "dis": 1966,
+   "dims": {
+    "type": [
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     },
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     },
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "ماسيرو",
+      "en": "Maseru"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الإنجليزية",
+      "en": "English"
+     }
+    ],
+    "religion": [
+     {
+      "ar": "المسيحية",
+      "en": "Christianity"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "جنيه إسترليني",
+      "en": "pound sterling"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "ليسوتو",
+      "en": "Lesotho"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "موسوعة ناتال",
+      "en": "The Nuttall Encyclopædia"
+     },
+     {
+      "ar": "الموسوعة السوفيتية الكبرى",
+      "en": "Great Soviet Encyclopedia (1926–1947)"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
+  },
   "Q1013": {
    "q": "Q1013",
    "ar": "ليسوتو",
@@ -9730,6 +10826,55 @@
    },
    "kind": "polity",
    "class": "دولة تاريخية"
+  },
+  "Q862304": {
+   "q": "Q862304",
+   "ar": "الدولة القراخطائية",
+   "en": "Qara Khitai",
+   "d_ar": "دولة سابقة",
+   "d_en": "former country in Central Asia",
+   "arwiki": "الدولة القراخطائية",
+   "enwiki": "Qara Khitai",
+   "inc": 1124,
+   "dis": 1218,
+   "dims": {
+    "type": [
+     {
+      "ar": "خانية",
+      "en": "khanate"
+     },
+     {
+      "ar": null,
+      "en": "historical Chinese state"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "بلاساغون",
+      "en": "Balasagun"
+     }
+    ],
+    "religion": [
+     {
+      "ar": "البوذية",
+      "en": "Buddhism"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": "مملكة لياو",
+      "en": "Liao dynasty"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "إمبراطورية المغول",
+      "en": "Mongol Empire"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "خانية"
   },
   "Q1014": {
    "q": "Q1014",
@@ -10155,6 +11300,62 @@
    },
    "kind": "people",
    "class": "شعب"
+  },
+  "Q2719360": {
+   "q": "Q2719360",
+   "ar": "دوقية لوكسمبورغ",
+   "en": "Duchy of Luxembourg",
+   "d_en": "country in Western Europe during Late Middle Ages-Early Modern Ages",
+   "arwiki": "دوقية لوكسمبورغ",
+   "enwiki": "Duchy of Luxembourg",
+   "inc": 1353,
+   "dis": 1795,
+   "dims": {
+    "type": [
+     {
+      "ar": "دوقية",
+      "en": "duchy"
+     },
+     {
+      "ar": "دول في الإمبراطورية الرومانية المقدسة",
+      "en": "state in the Holy Roman Empire"
+     },
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "مدينة لوكسمبورغ",
+      "en": "Luxembourg"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "الجمهورية الفرنسية الأولى",
+      "en": "French First Republic"
+     }
+    ],
+    "follows": [
+     {
+      "ar": null,
+      "en": "County of Chiny"
+     },
+     {
+      "ar": "كونتية لوكسمبورغ",
+      "en": "County of Luxembourg"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": null,
+      "en": "Forêts"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
   },
   "Q32": {
    "q": "Q32",
@@ -10655,6 +11856,48 @@
    },
    "kind": "people",
    "class": "جماعة عرقية"
+  },
+  "Q6744657": {
+   "q": "Q6744657",
+   "en": "Crown Colony of Malta",
+   "d_en": "crown colony of the British Empire (1813-1964)",
+   "enwiki": "Crown Colony of Malta",
+   "inc": 1813,
+   "dis": 1964,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "ملكية",
+      "en": "monarchy"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "البلد",
+      "en": "Valletta"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": null,
+      "en": "Malta Protectorate"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "دولة مالطة",
+      "en": "State of Malta"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة التاج"
   },
   "Q233": {
    "q": "Q233",
@@ -12388,6 +13631,38 @@
    },
    "kind": "polity",
    "class": "بلد"
+  },
+  "Q1953333": {
+   "q": "Q1953333",
+   "ar": "كوراساو والتبعيات",
+   "en": "Curaçao and Dependencies",
+   "d_en": "former Dutch colony in the Caribbean",
+   "arwiki": "كوراساو والتبعيات",
+   "enwiki": "Colony of Curaçao and Dependencies",
+   "inc": 1815,
+   "dis": 1954,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "ويلمستاد",
+      "en": "Willemstad"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": "جزر الأنتيل الهولندية",
+      "en": "Netherlands Antilles"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة"
   },
   "Q25227": {
    "q": "Q25227",
@@ -15214,6 +16489,94 @@
    "kind": "polity",
    "class": "مملكة"
   },
+  "Q701025": {
+   "q": "Q701025",
+   "ar": "ساموا الألمانية",
+   "en": "German Samoa",
+   "d_en": "colony and protectorate of the German Empire in Oceania from 1900 to 1920",
+   "arwiki": "ساموا الألمانية",
+   "enwiki": "German Samoa",
+   "inc": 1900,
+   "dis": 1920,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "ملكية دستورية",
+      "en": "constitutional monarchy"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "أبيا",
+      "en": "Apia"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "الألمانية",
+      "en": "German"
+     },
+     {
+      "ar": "لغات أسترونيزية",
+      "en": "Austronesian"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "مارك ذهبي",
+      "en": "German mark"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": null,
+      "en": "Kingdom of Samoa"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": null,
+      "en": "Western Samoa Trust Territory"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة"
+  },
+  "Q7988268": {
+   "q": "Q7988268",
+   "en": "Western Samoa Trust Territory",
+   "d_en": "League of Nations mandate and later United Nations trust territory in Western Samoa between 1920 and 1962 administered by New Zealand",
+   "enwiki": "Territory of Western Samoa",
+   "inc": 1920,
+   "dis": 1962,
+   "dims": {
+    "type": [
+     {
+      "ar": "وصاية دولية",
+      "en": "United Nations trust territory"
+     },
+     {
+      "ar": "انتداب",
+      "en": "League of Nations mandate"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": "ساموا الألمانية",
+      "en": "German Samoa"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "وصاية دولية"
+  },
   "Q683": {
    "q": "Q683",
    "ar": "ساموا",
@@ -15819,6 +17182,74 @@
    "kind": "polity",
    "class": "إمارة"
   },
+  "Q241748": {
+   "q": "Q241748",
+   "ar": "مملكة صربيا",
+   "en": "Kingdom of Serbia",
+   "d_en": "1882–1918 kingdom in Southeastern Europe",
+   "arwiki": "مملكة صربيا",
+   "enwiki": "Kingdom of Serbia",
+   "inc": 1882,
+   "dis": 1918,
+   "dims": {
+    "type": [
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "ملكية دستورية",
+      "en": "constitutional monarchy"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "بلغراد",
+      "en": "Belgrade"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "الصربية",
+      "en": "Serbian"
+     }
+    ],
+    "religion": [
+     {
+      "ar": "الكنيسة الصربية الأرثوذكسية",
+      "en": "Serbian Orthodox Church"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "دينار صربي",
+      "en": "Serbian dinar"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": "إمارة صربيا",
+      "en": "Principality of Serbia"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "مملكة الصرب والكروات والسلوفينيين",
+      "en": "Kingdom of Serbs, Croats and Slovenes"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "موسوعة ناتال",
+      "en": "The Nuttall Encyclopædia"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
+  },
   "Q403": {
    "q": "Q403",
    "ar": "صربيا",
@@ -16128,6 +17559,64 @@
    },
    "kind": "polity",
    "class": "دولة تاريخية"
+  },
+  "Q30059027": {
+   "q": "Q30059027",
+   "ar": "سيراليون البريطانية",
+   "en": "Sierra Leone Colony and Protectorate",
+   "d_en": "British colony and protectorate in Africa from 1808 until 1961",
+   "arwiki": "سيراليون البريطانية",
+   "enwiki": "Sierra Leone Colony and Protectorate",
+   "inc": 1808,
+   "dis": 1961,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     },
+     {
+      "ar": "محمية",
+      "en": "protectorate"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "فريتاون",
+      "en": "Freetown"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "جنيه إسترليني",
+      "en": "pound sterling"
+     },
+     {
+      "ar": "جنيه غرب أفريقيا البريطاني",
+      "en": "British West African pound"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": null,
+      "en": "Kingdom of Koya"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "سيراليون",
+      "en": "Commonwealth realm of Sierra Leone"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "موسوعة ناتال",
+      "en": "The Nuttall Encyclopædia"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة التاج"
   },
   "Q1044": {
    "q": "Q1044",
@@ -16637,6 +18126,73 @@
    },
    "kind": "people",
    "class": "جماعة عرقية"
+  },
+  "Q918153": {
+   "q": "Q918153",
+   "ar": "سيلان البريطانية",
+   "en": "British Ceylon",
+   "d_ar": "سيلان البريطانية ‏ ، المعروف تاريخيا باسم سيلان، كانت مستعمرة التاج للإمبراطورية البريطانية في الفترة ما بين 1802 و 1948. في البداية المنطقة التي كانت تغطيها لم تشتمل على مملكة كاندي التي كانت محمية منذ عام 1815، وفي الفترة ما بين 1817-1948 أصبحت كام",
+   "d_en": "Sri Lankan British Crown colony",
+   "arwiki": "سيلان البريطانية",
+   "enwiki": "British Ceylon",
+   "inc": 1815,
+   "dis": 1948,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة التاج",
+      "en": "crown colony"
+     },
+     {
+      "ar": "كيان إقليمي إداري",
+      "en": "administrative territorial entity"
+     },
+     {
+      "ar": "كيان سابق",
+      "en": "former entity"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "كولمبو",
+      "en": "Colombo"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "الإنجليزية",
+      "en": "English"
+     },
+     {
+      "ar": "السنهالية",
+      "en": "Sinhala"
+     },
+     {
+      "ar": "التملية",
+      "en": "Tamil"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": "مملكة كاندي",
+      "en": "Kingdom of Kandy"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": "دومينيون سيلان",
+      "en": "Dominion of Ceylon"
+     }
+    ],
+    "sources": [
+     {
+      "ar": null,
+      "en": "Meyer’s Universum, Fünfzehnter Band"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "مستعمرة التاج"
   },
   "Q854": {
    "q": "Q854",
@@ -17375,6 +18931,68 @@
    "kind": "people",
    "class": "شعب"
   },
+  "Q158725": {
+   "q": "Q158725",
+   "ar": "إقليم تنجانيقا",
+   "en": "Tanganyika Territory",
+   "d_ar": "إقليم منتدب من قبل بريطانيا سابقا في شرق إفريقيا",
+   "d_en": "former British mandate territory in East Africa",
+   "enwiki": "Tanganyika Territory",
+   "inc": 1922,
+   "dis": 1961,
+   "dims": {
+    "type": [
+     {
+      "ar": "انتداب",
+      "en": "League of Nations mandate"
+     },
+     {
+      "ar": "وصاية دولية",
+      "en": "United Nations trust territory"
+     },
+     {
+      "ar": "تبعية",
+      "en": "dependent territory"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "دار السلام",
+      "en": "Dar es Salaam"
+     }
+    ],
+    "currency": [
+     {
+      "ar": "شلن شرق أفريقيا",
+      "en": "East African shilling"
+     }
+    ],
+    "replaces": [
+     {
+      "ar": "شرق إفريقيا الألمانية",
+      "en": "German East Africa"
+     },
+     {
+      "ar": null,
+      "en": "Chagga states"
+     }
+    ],
+    "replaced_by": [
+     {
+      "ar": null,
+      "en": "Commonwealth realm of Tanganyika"
+     }
+    ],
+    "sources": [
+     {
+      "ar": "موسوعة بريتانيكا 1922",
+      "en": "1922 Encyclopædia Britannica"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "انتداب"
+  },
   "Q924": {
    "q": "Q924",
    "ar": "تنزانيا",
@@ -17563,6 +19181,63 @@
    "kind": "people",
    "class": "جماعة عرقية"
   },
+  "Q797214": {
+   "q": "Q797214",
+   "ar": "توغو الفرنسية",
+   "en": "French Togoland",
+   "d_ar": "انتداب استعماري فرنسي سابق",
+   "d_en": "former French colonial mandate",
+   "arwiki": "توغو الفرنسية",
+   "enwiki": "French Togoland",
+   "inc": 1916,
+   "dis": 1960,
+   "dims": {
+    "type": [
+     {
+      "ar": "مستعمرة",
+      "en": "colony"
+     },
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     },
+     {
+      "ar": "وصاية دولية",
+      "en": "United Nations trust territory"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "لومي",
+      "en": "Lomé"
+     }
+    ],
+    "lang": [
+     {
+      "ar": "لغة الإيوي",
+      "en": "Ewe"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "لغة الإيوي",
+      "en": "Ewe"
+     },
+     {
+      "ar": "الفرنسية",
+      "en": "French"
+     }
+    ],
+    "followed_by": [
+     {
+      "ar": "توغو",
+      "en": "Togo"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
+  },
   "Q945": {
    "q": "Q945",
    "ar": "توغو",
@@ -17662,6 +19337,60 @@
      {
       "ar": "بلد سابق",
       "en": "historical country"
+     }
+    ]
+   },
+   "kind": "polity",
+   "class": "دولة تاريخية"
+  },
+  "Q23022146": {
+   "q": "Q23022146",
+   "en": "Kingdom of Tonga",
+   "d_en": "protected state of the United Kingdom in Polynesia",
+   "enwiki": "Kingdom of Tonga (1900–1970)",
+   "inc": 1900,
+   "dis": 1970,
+   "dims": {
+    "type": [
+     {
+      "ar": "بلد سابق",
+      "en": "historical country"
+     },
+     {
+      "ar": "مملكة",
+      "en": "realm"
+     },
+     {
+      "ar": "محمية بريطانية",
+      "en": "British protectorate"
+     }
+    ],
+    "gov": [
+     {
+      "ar": "ملكية دستورية",
+      "en": "constitutional monarchy"
+     }
+    ],
+    "capital": [
+     {
+      "ar": "نوكو ألوفا",
+      "en": "Nukuʻalofa"
+     }
+    ],
+    "lang_used": [
+     {
+      "ar": "اللغة التونغية",
+      "en": "Tongan"
+     },
+     {
+      "ar": "الإنجليزية",
+      "en": "English"
+     }
+    ],
+    "currency": [
+     {
+      "ar": null,
+      "en": "Tongan pound"
      }
     ]
    },
@@ -19901,8 +21630,18 @@
   },
   "Antigua and Barbuda": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q1796551",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ليوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
+    "1945": {
+     "q": "Q1796551",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ليوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
     "2010": {
      "q": "Q781",
      "n": 1,
@@ -20043,7 +21782,12 @@
   },
   "Azerbaijan": {
    "by_year": {
-    "1914": null,
+    "1914": {
+     "q": "Q206411",
+     "n": 1,
+     "match": "pin",
+     "why": "أقرب كيان بالاسم: جمهورية أذربيجان الديمقراطية (1918–1920). في 1914 كانت الأرض ضمن الإمبراطورية الروسية، والمصدر يرسمها كياناً"
+    },
     "2010": {
      "q": "Q227",
      "n": 1,
@@ -20081,8 +21825,18 @@
   },
   "Bahamas": {
    "by_year": {
-    "1800": null,
-    "1945": null,
+    "1800": {
+     "q": "Q131612041",
+     "n": 1,
+     "match": "pin",
+     "why": "مستعمرة الباهاماس البريطانية (1648–1973)"
+    },
+    "1945": {
+     "q": "Q131612041",
+     "n": 1,
+     "match": "pin",
+     "why": "مستعمرة الباهاماس البريطانية (1648–1973)"
+    },
     "2010": {
      "q": "Q778",
      "n": 1,
@@ -20245,8 +21999,18 @@
   },
   "Belize": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q1643555",
+     "n": 1,
+     "match": "pin",
+     "why": "هندوراس البريطانية، اسم بليز قبل الاستقلال"
+    },
+    "1945": {
+     "q": "Q1643555",
+     "n": 1,
+     "match": "pin",
+     "why": "هندوراس البريطانية، اسم بليز قبل الاستقلال"
+    },
     "2010": {
      "q": "Q242",
      "n": 1,
@@ -20269,6 +22033,11 @@
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1200": "لا كيان سياسي باسم بوتان قبل توحيدها في القرن السابع عشر",
+    "1800": "دولة الزابدرونغ الثيوقراطية لا عنصر لها في ويكي بيانات بهذا الاسم",
+    "1914": "مملكة بوتان (1907) لا عنصر مستقل لها في ويكي بيانات، والعنصر الحالي يبدأ 1949"
    }
   },
   "Bibbulman": {
@@ -20455,7 +22224,12 @@
   },
   "Burundi": {
    "by_year": {
-    "1945": null,
+    "1945": {
+     "q": "Q590743",
+     "n": 1,
+     "match": "pin",
+     "why": "رواندا-أوروندي، الانتداب الذي ضم بوروندي"
+    },
     "2010": {
      "q": "Q967",
      "n": 1,
@@ -20670,7 +22444,12 @@
      "n": 1,
      "match": "label"
     },
-    "1200": null,
+    "1200": {
+     "q": "Q1789596",
+     "n": 1,
+     "match": "pin",
+     "why": "كرواتيا في اتحاد شخصي مع المجر (1102–1526)"
+    },
     "2010": {
      "q": "Q224",
      "n": 1,
@@ -20692,12 +22471,22 @@
     "800": null,
     "900": null,
     "1000": null,
-    "1200": null,
+    "1200": {
+     "q": "Q213638",
+     "n": 1,
+     "match": "pin",
+     "why": "مملكة قبرص اللاتينية (1192–1489)"
+    },
     "2010": {
      "q": "Q229",
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "800": "قبرص تحت الحكم المشترك العربي البيزنطي، ولا عنصر سياسي لها في ويكي بيانات",
+    "900": "قبرص تحت الحكم المشترك العربي البيزنطي، ولا عنصر سياسي لها في ويكي بيانات",
+    "1000": "قبرص ولاية بيزنطية، ولا عنصر سياسي مستقل لها في ويكي بيانات"
    }
   },
   "Czech Republic": {
@@ -20768,6 +22557,9 @@
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1000": "الاتحاد الدنماركي النرويجي قام سنة 1536، ورسمه في خريطة 1000 مفارقة زمنية في المصدر"
    }
   },
   "Dharug": {
@@ -20786,8 +22578,18 @@
   },
   "Djibouti": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q333126",
+     "n": 1,
+     "match": "pin",
+     "why": "الصومال الفرنسي، اسم جيبوتي قبل الاستقلال"
+    },
+    "1945": {
+     "q": "Q333126",
+     "n": 1,
+     "match": "pin",
+     "why": "الصومال الفرنسي، اسم جيبوتي قبل الاستقلال"
+    },
     "2010": {
      "q": "Q977",
      "n": 1,
@@ -20798,13 +22600,26 @@
   "Dominica": {
    "by_year": {
     "1800": null,
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q1796551",
+     "n": 1,
+     "match": "pin",
+     "why": "دومينيكا ضمن جزر ليوارد البريطانية حتى 1940"
+    },
+    "1945": {
+     "q": "Q2660774",
+     "n": 1,
+     "match": "pin",
+     "why": "دومينيكا نُقلت إلى جزر ويندوارد البريطانية سنة 1940"
+    },
     "2010": {
      "q": "Q784",
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1800": "لا عنصر في ويكي بيانات للمستعمرة البريطانية في دومينيكا قبل ضمها إلى جزر ليوارد"
    }
   },
   "Dominican Republic": {
@@ -20912,12 +22727,20 @@
   "Equatorial Guinea": {
    "by_year": {
     "1914": null,
-    "1945": null,
+    "1945": {
+     "q": "Q1232509",
+     "n": 1,
+     "match": "pin",
+     "why": "غينيا الإسبانية، اسم غينيا الاستوائية قبل الاستقلال"
+    },
     "2010": {
      "q": "Q983",
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1914": "الأقاليم الإسبانية في خليج غينيا قبل 1926 لا عنصر لها بهذا الاسم في ويكي بيانات"
    }
   },
   "Estonia": {
@@ -20931,8 +22754,18 @@
   },
   "Fiji": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q5148320",
+     "n": 1,
+     "match": "pin",
+     "why": "مستعمرة فيجي البريطانية"
+    },
+    "1945": {
+     "q": "Q5148320",
+     "n": 1,
+     "match": "pin",
+     "why": "مستعمرة فيجي البريطانية"
+    },
     "2010": {
      "q": "Q712",
      "n": 1,
@@ -21086,7 +22919,12 @@
      "n": 1,
      "match": "label"
     },
-    "1914": null,
+    "1914": {
+     "q": "Q245160",
+     "n": 1,
+     "match": "pin",
+     "why": "أقرب كيان بالاسم: جمهورية جورجيا الديمقراطية (1918–1921). في 1914 كانت الأرض ضمن الإمبراطورية الروسية، والمصدر يرسمها كياناً"
+    },
     "2010": {
      "q": "Q230",
      "n": 1,
@@ -21160,8 +22998,18 @@
   },
   "Grenada": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q2660774",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ويندوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
+    "1945": {
+     "q": "Q2660774",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ويندوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
     "2010": {
      "q": "Q769",
      "n": 1,
@@ -21373,13 +23221,26 @@
   "Hong Kong": {
    "by_year": {
     "1800": null,
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q1054923",
+     "n": 1,
+     "match": "pin",
+     "why": "هونغ كونغ البريطانية"
+    },
+    "1945": {
+     "q": "Q1054923",
+     "n": 1,
+     "match": "pin",
+     "why": "هونغ كونغ البريطانية"
+    },
     "2010": {
      "q": "Q8646",
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1800": "هونغ كونغ البريطانية قامت سنة 1841، وفي 1800 كانت الأرض ضمن إمبراطورية تشينغ"
    }
   },
   "Houma": {
@@ -21414,6 +23275,9 @@
      "match": "label"
     },
     "1200": null
+   },
+   "gaps": {
+    "1200": "إمبراطورية واري انتهت نحو 1100، ورسمها في خريطة 1200 مفارقة زمنية في المصدر"
    }
   },
   "Huns": {
@@ -21930,8 +23794,18 @@
   },
   "Kuwait": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q3480281",
+     "n": 1,
+     "match": "pin",
+     "why": "إمارة الكويت قبل الاستقلال (1752–1961)"
+    },
+    "1945": {
+     "q": "Q3480281",
+     "n": 1,
+     "match": "pin",
+     "why": "إمارة الكويت قبل الاستقلال (1752–1961)"
+    },
     "2010": {
      "q": "Q817",
      "n": 1,
@@ -22052,8 +23926,18 @@
   },
   "Lesotho": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q2340665",
+     "n": 1,
+     "match": "pin",
+     "why": "باسوتولاند، اسم ليسوتو قبل الاستقلال"
+    },
+    "1945": {
+     "q": "Q2340665",
+     "n": 1,
+     "match": "pin",
+     "why": "باسوتولاند، اسم ليسوتو قبل الاستقلال"
+    },
     "2010": {
      "q": "Q1013",
      "n": 1,
@@ -22068,7 +23952,12 @@
      "n": 1,
      "match": "label"
     },
-    "1200": null
+    "1200": {
+     "q": "Q862304",
+     "n": 1,
+     "match": "pin",
+     "why": "الدولة القراخطائية (لياو الغربية)، خلفت لياو بعد سقوطها سنة 1125"
+    }
    }
   },
   "Liberia": {
@@ -22147,7 +24036,12 @@
   },
   "Luxembourg": {
    "by_year": {
-    "1800": null,
+    "1800": {
+     "q": "Q2719360",
+     "n": 1,
+     "match": "pin",
+     "why": "دوقية لوكسمبورغ (1353–1795)، والخريطة بعد ضمها إلى فرنسا بقليل"
+    },
     "1914": {
      "q": "Q32",
      "n": 1,
@@ -22283,7 +24177,12 @@
   },
   "Malta": {
    "by_year": {
-    "1914": null,
+    "1914": {
+     "q": "Q6744657",
+     "n": 1,
+     "match": "pin",
+     "why": "مستعمرة مالطا البريطانية"
+    },
     "2010": {
      "q": "Q233",
      "n": 1,
@@ -22422,7 +24321,12 @@
   },
   "Mataram": {
    "by_year": {
-    "700": null,
+    "700": {
+     "q": "Q402580",
+     "n": 1,
+     "match": "pin",
+     "why": "مملكة ماتارام (716–1016)؛ خريطة 700 تسبق تأسيسها المسجَّل بست عشرة سنة"
+    },
     "800": {
      "q": "Q402580",
      "n": 1,
@@ -22486,6 +24390,10 @@
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1000": "مملكة ميرينا قامت في القرن السادس عشر، ورسمها في خريطة 1000 مفارقة زمنية في المصدر",
+    "1200": "مملكة ميرينا قامت في القرن السادس عشر، ورسمها في خريطة 1200 مفارقة زمنية في المصدر"
    }
   },
   "Meru": {
@@ -22776,7 +24684,12 @@
   "Netherlands Antilles": {
    "by_year": {
     "1800": null,
-    "1914": null,
+    "1914": {
+     "q": "Q1953333",
+     "n": 1,
+     "match": "pin",
+     "why": "كوراساو والتبعيات، المستعمرة الهولندية قبل جزر الأنتيل الهولندية"
+    },
     "1945": {
      "q": "Q25227",
      "n": 1,
@@ -22787,6 +24700,9 @@
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1800": "كوراساو والتبعيات تبدأ 1815، وقبلها كانت المستعمرات تحت شركة الهند الغربية الهولندية ثم الاحتلال البريطاني"
    }
   },
   "Netherlands Indies": {
@@ -23040,6 +24956,10 @@
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1914": "نييوي تابعة لنيوزيلندا منذ 1901، ولا عنصر مستقل لها في ويكي بيانات قبل الحكم الذاتي 1974",
+    "1945": "نييوي تابعة لنيوزيلندا منذ 1901، ولا عنصر مستقل لها في ويكي بيانات قبل الحكم الذاتي 1974"
    }
   },
   "Nogai Horde": {
@@ -23438,7 +25358,12 @@
   },
   "Rwanda": {
    "by_year": {
-    "1945": null,
+    "1945": {
+     "q": "Q590743",
+     "n": 1,
+     "match": "pin",
+     "why": "رواندا-أوروندي، الانتداب الذي ضم رواندا"
+    },
     "2010": {
      "q": "Q1037",
      "n": 1,
@@ -23484,8 +25409,18 @@
   },
   "Saint Kitts and Nevis": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q1796551",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ليوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
+    "1945": {
+     "q": "Q1796551",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ليوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
     "2010": {
      "q": "Q763",
      "n": 1,
@@ -23495,8 +25430,18 @@
   },
   "Saint Lucia": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q2660774",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ويندوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
+    "1945": {
+     "q": "Q2660774",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ويندوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
     "2010": {
      "q": "Q760",
      "n": 1,
@@ -23514,12 +25459,27 @@
      "n": 1,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1800": "الجزيرة مقسومة بين فرنسا وهولندا منذ 1648، فلا كيان واحد يطابق الاسم",
+    "1914": "الجزيرة مقسومة بين فرنسا وهولندا منذ 1648، فلا كيان واحد يطابق الاسم",
+    "1945": "الجزيرة مقسومة بين فرنسا وهولندا منذ 1648، فلا كيان واحد يطابق الاسم"
    }
   },
   "Saint Vincent and the Grenadines": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q2660774",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ويندوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
+    "1945": {
+     "q": "Q2660774",
+     "n": 1,
+     "match": "pin",
+     "why": "جزر ويندوارد البريطانية: المستعمرة التي كانت الجزيرة جزءاً منها"
+    },
     "2010": {
      "q": "Q757",
      "n": 1,
@@ -23529,8 +25489,18 @@
   },
   "Samoa": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q701025",
+     "n": 1,
+     "match": "pin",
+     "why": "ساموا الألمانية (1900–1914)"
+    },
+    "1945": {
+     "q": "Q7988268",
+     "n": 1,
+     "match": "pin",
+     "why": "ساموا الغربية تحت انتداب نيوزيلندا ثم وصايتها"
+    },
     "2010": {
      "q": "Q683",
      "n": 1,
@@ -23610,12 +25580,20 @@
      "match": "label"
     },
     "1000": null,
-    "1914": null,
+    "1914": {
+     "q": "Q241748",
+     "n": 1,
+     "match": "pin",
+     "why": "مملكة صربيا (1882–1918)"
+    },
     "2010": {
      "q": "Q403",
      "n": 2,
      "match": "label"
     }
+   },
+   "gaps": {
+    "1000": "الأرض بين بيزنطة وإمارات صربية صغيرة (دوكليا وراشكا)، ولا كيان باسم صربيا في 1000"
    }
   },
   "Severians": {
@@ -23661,8 +25639,18 @@
   },
   "Sierra Leone": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q30059027",
+     "n": 1,
+     "match": "pin",
+     "why": "سيراليون البريطانية (مستعمرة ومحمية)"
+    },
+    "1945": {
+     "q": "Q30059027",
+     "n": 1,
+     "match": "pin",
+     "why": "سيراليون البريطانية (مستعمرة ومحمية)"
+    },
     "2010": {
      "q": "Q1044",
      "n": 1,
@@ -23740,7 +25728,12 @@
   },
   "Sri Lanka": {
    "by_year": {
-    "1945": null,
+    "1945": {
+     "q": "Q918153",
+     "n": 1,
+     "match": "pin",
+     "why": "سيلان البريطانية، اسم سريلانكا قبل الاستقلال"
+    },
     "2010": {
      "q": "Q854",
      "n": 1,
@@ -23852,7 +25845,12 @@
   },
   "Tanzania, United Republic of": {
    "by_year": {
-    "1945": null,
+    "1945": {
+     "q": "Q158725",
+     "n": 1,
+     "match": "pin",
+     "why": "إقليم تنجانيقا تحت الانتداب البريطاني"
+    },
     "2010": {
      "q": "Q924",
      "n": 1,
@@ -23917,7 +25915,12 @@
   },
   "Togo": {
    "by_year": {
-    "1945": null,
+    "1945": {
+     "q": "Q797214",
+     "n": 1,
+     "match": "pin",
+     "why": "توغو الفرنسية تحت الانتداب"
+    },
     "2010": {
      "q": "Q945",
      "n": 1,
@@ -23943,12 +25946,25 @@
      "match": "label"
     },
     "1200": null
+   },
+   "gaps": {
+    "1200": "دولة التولتيك انتهت نحو 1122، ورسمها في خريطة 1200 مفارقة زمنية في المصدر"
    }
   },
   "Tonga": {
    "by_year": {
-    "1914": null,
-    "1945": null,
+    "1914": {
+     "q": "Q23022146",
+     "n": 1,
+     "match": "pin",
+     "why": "مملكة تونغا دولة محمية بريطانية (1900–1970)"
+    },
+    "1945": {
+     "q": "Q23022146",
+     "n": 1,
+     "match": "pin",
+     "why": "مملكة تونغا دولة محمية بريطانية (1900–1970)"
+    },
     "2010": {
      "q": "Q678",
      "n": 1,
