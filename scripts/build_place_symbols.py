@@ -1,6 +1,6 @@
 # يبني web/data/place_symbols.json: رموز المواضع الموثّقة من ويكي بيانات (CC0).
 # الرموز المأخوذة: التصنيف التراثي (P1435)، والقديس الشفيع (P417)، والدين (P140)، والنشيد (P85)،
-# والشعار المكتوب (P1451)، وملفات العلم (P41) والشعار (P94) أسماءً فقط بلا صور، لأن تراخيص الصور تختلف من ملف لآخر.
+# والشعار المكتوب (P1451)، والألقاب الشعبية (P1449)، وملفات العلم (P41) والشعار (P94) أسماءً فقط بلا صور، لأن تراخيص الصور تختلف من ملف لآخر.
 # لا يُستنتج رمز ولا يُضاف من خارج ويكي بيانات؛ الموضع بلا رموز لا يظهر في الملف.
 # الاستعمال: python3 -I scripts/build_place_symbols.py [--check]
 import json
@@ -79,7 +79,7 @@ def build():
             refs.update(v["id"] for v in values(e, p) if isinstance(v, dict) and "id" in v)
     labels = entities(refs, "labels") if refs else {}
     lab = {q: {"ar": label(e, "ar"), "en": label(e, "en")} for q, e in labels.items()}
-    records, counts = {}, {k: 0 for k in [*ITEM_PROPS.values(), "motto", *FILE_PROPS.values()]}
+    records, counts = {}, {k: 0 for k in [*ITEM_PROPS.values(), "motto", "nickname", *FILE_PROPS.values()]}
     for pid, q in place_q.items():
         e = ents.get(q)
         if not e:
@@ -93,6 +93,11 @@ def build():
         mottos = [{"text": v["text"], "lang": v["language"]} for v in values(e, "P1451") if isinstance(v, dict) and "text" in v]
         if mottos:
             rec["motto"] = mottos[:2]
+        # الألقاب الشعبية (P1449): العربية أولاً، ثم الإنجليزية، ثم لغة الموضع، وثلاثة على الأكثر
+        nicks = [{"text": v["text"], "lang": v["language"]} for v in values(e, "P1449") if isinstance(v, dict) and "text" in v]
+        if nicks:
+            order = {"ar": 0, "en": 1}
+            rec["nickname"] = sorted(nicks, key=lambda x: order.get(x["lang"], 2))[:3]
         for p, key in FILE_PROPS.items():
             files = [v for v in values(e, p) if isinstance(v, str)]
             if files:

@@ -133,7 +133,7 @@
       "tier": "B",
       "landing": "https://ar.wikisource.org/wiki/مقدمة_ابن_خلدون",
       "attribution": "نص مقدمة ابن خلدون من ويكي مصدر العربي (CC BY-SA)، https://ar.wikisource.org",
-      "note": "الأجزاء 3–6 كاملة، وأربعة فصول من الباب الثاني من صفحاتها المستقلة. التفريغ قد يحوي أخطاء طباعية، والمطابقة بالطبعة الورقية مطلوبة قبل النشر.",
+      "note": "الأجزاء 3–6 كاملة، وثمانية فصول من الباب الثاني من صفحاتها المستقلة (1 و2 و3 و7 في البدو ونحلة المعاش، و15 و17 و18 و23). التفريغ قد يحوي أخطاء طباعية، والمطابقة بالطبعة الورقية مطلوبة قبل النشر.",
       "status": "ok",
       "files": [
         {
@@ -175,6 +175,30 @@
           "file": "data/raw/wikisource_muqaddima/part_السادس.txt",
           "sha256": "ca434ef203fa4edeb3709f13d45c673246e6f802116a0649a060061cbe20cd5a",
           "bytes": 413788
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/bab2_fasl01_badw_hadar.txt",
+          "sha256": "5670ce24df941b8aba2f79fa1be8c97ba8b0f1129a641724467f4546d2d6dd27",
+          "bytes": 3831,
+          "retrieved_at": "2026-11-23T00:00:00.000Z"
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/bab2_fasl02_arab_jil.txt",
+          "sha256": "64295e98140c4ed22d134533551257e9f68c7c94fc8d0a676c9af0c626d07df6",
+          "bytes": 4303,
+          "retrieved_at": "2026-11-23T00:00:00.000Z"
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/bab2_fasl03_badw_older.txt",
+          "sha256": "faef296b7adcce36088ec9c53e2591eacacce32f5b44ccedb64d01cddcf58817",
+          "bytes": 3330,
+          "retrieved_at": "2026-11-23T00:00:00.000Z"
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/bab2_fasl07_badw_asabiyya.txt",
+          "sha256": "ff2188bb688ceb16c4e88b6c14b2a1c133b257909d04d7f688e8e606747a7889",
+          "bytes": 5053,
+          "retrieved_at": "2026-11-23T00:00:00.000Z"
         }
       ],
       "retrieved_at": "2026-10-22T21:09:07.888Z",

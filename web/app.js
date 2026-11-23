@@ -747,7 +747,9 @@ function gapList({ links, econ, modern, approxAll, info, p, kind, key }) {
   else if (info?.st === "arabized") g.push("اسمه العربي تعريب تقديري، لا من مصدر موثّق");
   if (!modern && (approxAll || Number(p.BORDERPRECISION) !== 3)) g.push("حدّه في هذه الخريطة تقريبي بحسب المصدر");
   if (info?.st !== "verified") g.push("لا تواريخ موثّقة له في ويكي بيانات");
-  if (!modern && entityInfo && !entityInfo.entities?.[p.NAME]) g.push("لا وصف له في ويكي بيانات");
+  if (!modern && entityInfo && !entityInfo.entities?.[p.NAME] && !entityDefs?.entities?.[p.NAME]) {
+    g.push(entityDefs?.collective?.[p.NAME] ? "تسمية جامعة لا كيان واحد: تعريفها لنمط العيش والإقليم، لا لجماعة بعينها" : "لا وصف له في ويكي بيانات");
+  }
   if (!(links?.[p.NAME] ?? []).length) g.push("لا شاهد موثّق يقع على أرضه في هذه الخريطة");
   if (kind !== "people") {
     const ent = lineageData?.lineage?.[String(key)]?.[p.NAME];
@@ -762,7 +764,7 @@ function gapsHtml(gaps) {
     `<p class="sub">تُحسب من البيانات المعروضة هنا. الفجوة تعني أن الأطلس لا يملك الدليل، لا أن الكيان لم يوجد.</p>` +
     `<ul class="gap-list">${gaps.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul></section>`;
 }
-const entityTitle = (p) => p.NAME_AR || labelInfo.get(p.NAME)?.ar || p.NAME || "أرض بلا كيان مسمّى";
+const entityTitle = (p) => p.NAME_AR || labelInfo.get(p.NAME)?.ar || entityDefs?.collective?.[p.NAME]?.ar || p.NAME || "أرض بلا كيان مسمّى";
 let lastEntityCard = null;
 function openEntityCard(f, kind) {
   const p = f.properties;
@@ -825,7 +827,7 @@ function openEntityCard(f, kind) {
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
   // الإغلاق قبل وصول البيانات يُلغي التحديث: لا تُبنى البطاقة المغلقة (كان ذلك يرمي خطأ «facts» عند إغلاق سريع)
-  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady, khaldunReady, dossierReady, entityInfoReady]).then(([links, econ]) => {
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady, khaldunReady, dossierReady, entityInfoReady, entityDefsReady]).then(([links, econ]) => {
     if (token !== cardToken || cardEl.hidden) return;
     updateCard(token, render(links, econ));
   });
@@ -1023,19 +1025,21 @@ const symName = (x) => (x.ar ? escapeHtml(x.ar) : `<span lang="en" dir="ltr">${e
 function placeSymbolsHtml(f) {
   const s = placeSymbols?.places?.[placeId(f)];
   if (!s) return "";
-  const rows = [];
-  const items = (key, title) => { if (s[key]?.length) rows.push([title, s[key].map(symName).join("، ") + (s[key].some((x) => !x.ar) ? ` <span class="sub">(بالإنجليزية في ويكي بيانات)</span>` : "")]); };
-  items("heritage", "التصنيف التراثي");
-  items("religion", "الدين");
-  items("patron_saint", "القديس الشفيع");
-  items("anthem", "النشيد");
-  if (s.motto?.length) rows.push(["الشعار المكتوب", s.motto.map((m) => `«<span lang="${escapeHtml(m.lang)}">${escapeHtml(m.text)}</span>»`).join("، ")]);
+  // الفئات بتعريف docs/SYMBOLS.md: دينية، ومدنية وسياسية، وثقافية وتراثية، وشعبية
+  const names = (key) => s[key]?.length ? s[key].map(symName).join("، ") + (s[key].some((x) => !x.ar) ? ` <span class="sub">(بالإنجليزية في ويكي بيانات)</span>` : "") : "";
+  const texts = (key) => s[key]?.length ? s[key].map((m) => `«<span lang="${escapeHtml(m.lang)}">${escapeHtml(m.text)}</span>»`).join("، ") : "";
   const commons = (file, label) => `<a href="https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file)}" target="_blank" rel="noopener">${label}</a>`;
-  const files = [s.flag?.[0] ? commons(s.flag[0], "العلم") : "", s.coat_of_arms?.[0] ? commons(s.coat_of_arms[0], "الشعار") : ""].filter(Boolean);
-  if (files.length) rows.push(["في ويكيميديا كومنز", files.join(" · ")]);
-  if (!rows.length) return "";
-  return `<section class="card-sec place-symbols"><h3>رموز الموضع</h3><dl class="card-dl">${rows.map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${v}</dd>`).join("")}</dl>` +
-    `<p class="sub">من ويكي بيانات (CC0) للكيان المربوط بالموضع، لا من الأطلس. غياب رمز هنا لا يعني غيابه. الصور غير معروضة لأن تراخيصها تختلف، والروابط للإحالة.</p></section>`;
+  const files = [s.flag?.[0] ? commons(s.flag[0], "العلم") : "", s.coat_of_arms?.[0] ? commons(s.coat_of_arms[0], "الشعار") : ""].filter(Boolean).join(" · ");
+  const groups = [
+    ["دينية", [["الدين", names("religion")], ["القديس الشفيع", names("patron_saint")]]],
+    ["مدنية وسياسية", [["النشيد", names("anthem")], ["الشعار المكتوب", texts("motto")], ["العلم والشعار", files]]],
+    ["ثقافية وتراثية", [["التصنيف التراثي", names("heritage")]]],
+    ["شعبية", [["اللقب الشعبي", texts("nickname")]]],
+  ].map(([g, rows]) => [g, rows.filter((r) => r[1])]).filter(([, rows]) => rows.length);
+  if (!groups.length) return "";
+  return `<section class="card-sec place-symbols"><h3>رموز الموضع</h3>` +
+    groups.map(([g, rows]) => `<h4 class="sym-group">${g}</h4><dl class="card-dl">${rows.map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${v}</dd>`).join("")}</dl>`).join("") +
+    `<p class="sub">من ويكي بيانات (CC0) للكيان المربوط بالموضع، لا من الأطلس. غياب رمز هنا لا يعني غيابه. الصور غير معروضة لأن تراخيصها تختلف، والروابط للإحالة. الرموز الفكرية غير معروضة بعد لغياب معيار مكتوب لها.</p></section>`;
 }
 function placeCardBody(f) {
   const p = f.properties;
@@ -2236,7 +2240,11 @@ function defineHtml(name) {
   const head = `<section class="card-sec define"><h3>تعريف</h3>`;
   if (!entityInfo) return `${head}<p class="sub">جارٍ التحميل…</p></section>`;
   const e = entityInfo.entities?.[name];
-  if (!e) return `${head}<p class="sub">لا وصف لهذا الكيان في ويكي بيانات، أو لم يُطابَق اسمه بعنصر فيها.</p></section>`;
+  if (!e) {
+    if (entityDefs?.collective?.[name]) return collectiveDefHtml(name);
+    if (entityDefs?.entities?.[name]) return entityDefHtml(name);
+    return `${head}<p class="sub">${entityDefs ? "لا وصف لهذا الكيان في ويكي بيانات، أو لم يُطابَق اسمه بعنصر فيها مطابقة صارمة." : "جارٍ التحميل…"}</p></section>`;
+  }
   const desc = e.d_ar ? `<p class="define-desc">${escapeHtml(e.d_ar)}</p>`
     : e.d_en ? `<p class="define-desc" dir="ltr" lang="en">${escapeHtml(e.d_en)}</p><p class="sub">لا وصف عربي في ويكي بيانات، والمعروض وصفها الإنجليزي.</p>`
     : `<p class="sub">لا وصف له في ويكي بيانات.</p>`;
@@ -2250,6 +2258,65 @@ function defineHtml(name) {
   ].filter(Boolean).join(" · ");
   return head + desc + (types ? `<div class="chips" title="النوع في ويكي بيانات">${types}</div>` : "") + note +
     `<p class="define-links">${links}</p><p class="sub">الوصف والنوع من ويكي بيانات (CC0) كما هما، لا من الأطلس.</p>${fix}</section>`;
+}
+// تعريفات الأسماء التي لا مدخل لها في entity_info.json (web/data/names/entity_defs.json، من scripts/build_entity_defs.py):
+// (أ) عنصر ويكي بيانات مطابَق بالاسم والصنف والمدة، بوصفه وأبعاده كما هي، (ب) التسميات الجامعة (قبائل، رحّل، صيادون...)
+// بتعريف تحريري معلن لنمط العيش وأبعاده، والإقليم والجماعة من ويكي بيانات، ونص ابن خلدون المطابَق حرفياً.
+let entityDefs = null;
+const entityDefsReady = getJson("data/names/entity_defs.json").then((d) => { entityDefs = d; return d; }).catch(() => null);
+const wdLink = (q) => q ? `<a href="https://www.wikidata.org/wiki/${encodeURIComponent(q)}" target="_blank" rel="noopener">ويكي بيانات <bdi>${escapeHtml(q)}</bdi></a>` : "";
+const wikiLinks = (e) => [
+  e.arwiki ? `<a href="https://ar.wikipedia.org/wiki/${encodeURIComponent(e.arwiki)}" target="_blank" rel="noopener">ويكيبيديا العربية</a>` : "",
+  e.enwiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(e.enwiki)}" target="_blank" rel="noopener">ويكيبيديا الإنجليزية</a>` : "",
+  wdLink(e.q),
+].filter(Boolean).join(" · ");
+const dimVal = (l) => l.ar ? escapeHtml(l.ar) : `<bdi dir="ltr" lang="en">${escapeHtml(l.en)}</bdi>`;
+// أبعاد العنصر من خصائصه في ويكي بيانات، مرتبة من الأقرب إلى سؤال «من هم؟» إلى المصادر
+const DIM_ORDER = ["type", "gov", "capital", "lang", "lang_used", "religion", "currency", "replaces", "follows", "replaced_by", "followed_by", "sources"];
+function dimsHtml(dims, labels) {
+  const rows = DIM_ORDER.filter((k) => dims?.[k]?.length).map((k) => `<li><b>${escapeHtml(labels[k] ?? k)}:</b> ${dims[k].slice(0, 4).map(dimVal).join("، ")}</li>`).join("");
+  return rows ? `<ul class="gap-list define-dims">${rows}</ul>` : "";
+}
+function entityDefHtml(name) {
+  const e = entityDefs.entities[name];
+  // العنصر المطابَق قد يكون دولة من حقبة أخرى تحمل الاسم نفسه: لا يُعرض تعريفه على خريطة تقع سنتها خارج مدته
+  const y = Number(time.key);
+  if (Number.isFinite(y) && (e.inc != null || e.dis != null) && ((e.inc != null && y < e.inc - 5) || (e.dis != null && y > e.dis + 5))) {
+    return `<section class="card-sec define"><h3>تعريف</h3><p class="sub">العنصر الذي طوبق به هذا الاسم في ويكي بيانات (${escapeHtml(e.ar ?? e.q)}، ${e.inc != null ? yearLabel(e.inc) : "؟"} – ${e.dis != null ? yearLabel(e.dis) : "؟"}) لا تقع سنة هذه الخريطة في مدته، فلا يُعرض تعريفاً لها.</p><p class="define-links">${wdLink(e.q)}</p></section>`;
+  }
+  const desc = e.d_ar ? `<p class="define-desc">${escapeHtml(e.d_ar)}</p>`
+    : e.d_en ? `<p class="define-desc" dir="ltr" lang="en">${escapeHtml(e.d_en)}</p><p class="sub">لا وصف عربي في ويكي بيانات، والمعروض وصفها الإنجليزي.</p>`
+    : "";
+  const span = e.inc != null || e.dis != null ? chip(`${e.inc != null ? yearLabel(e.inc) : "؟"} – ${e.dis != null ? yearLabel(e.dis) : "؟"}`) : "";
+  const chips = [chip(e.class), span, e.demonym ? chip(`النسبة: ${e.demonym}`) : ""].join("");
+  const match = e.match === "label" && e.candidates > 1
+    ? `<p class="sub define-note">طوبق الاسم بـ${fmtInt(e.candidates)} عناصر من الصنف نفسه، واختير أكثرها روابط. قد لا يكون هو المقصود في هذه الخريطة.</p>`
+    : e.match === "label" ? `<p class="sub define-note">مطابقة بالاسم الإنجليزي والصنف والمدة، لا بمعرّف مسجَّل في المصدر.</p>` : "";
+  return `<section class="card-sec define"><h3>تعريف</h3>${desc}<div class="chips">${chips}</div>` +
+    dimsHtml(e.dims, entityDefs._meta.dims_labels) + match +
+    `<p class="define-links">${wikiLinks(e)}</p><p class="sub">الوصف والأبعاد من ويكي بيانات (CC0) كما هي، لا من الأطلس.</p></section>`;
+}
+function khaldunQuoteHtml(k) {
+  return `<blockquote class="khal-q"><p>«${escapeHtml(k.quote)}»</p><cite>${escapeHtml(k.location)}</cite></blockquote>` +
+    `<p class="sub">${escapeHtml(k.reading_ar)}${k.hedge_ar ? ` <b>تحفّظ:</b> ${escapeHtml(k.hedge_ar)}` : ""}</p>`;
+}
+function collectiveDefHtml(name) {
+  const c = entityDefs.collective[name];
+  const M = entityDefs.collective_meta;
+  const modes = c.modes.map((id) => M.modes[id]).filter(Boolean);
+  const modeHtml = modes.map((m, i) => `<details class="define-mode"${i === 0 ? " open" : ""}><summary>${escapeHtml(m.label_ar)}</summary>` +
+    `<p>${escapeHtml(m.def_ar)}</p><ul class="gap-list define-dims">${Object.entries(M.dims_labels).map(([k, lab]) => m.dims[k] ? `<li><b>${escapeHtml(lab)}:</b> ${escapeHtml(m.dims[k])}</li>` : "").join("")}</ul></details>`).join("");
+  const refRow = (lab, r) => r ? `<li><b>${lab}:</b> ${escapeHtml(r.ar ?? r.en)}${r.d_ar && lab === "الجماعة" ? `، ${escapeHtml(r.d_ar)}` : ""}${r.q ? ` (${wikiLinks(r)})` : ""}</li>` : "";
+  const refs = refRow("الإقليم", c.region) + refRow("الجماعة", c.group);
+  const groupDims = c.group?.dims ? dimsHtml(c.group.dims, entityDefs._meta.dims_labels) : "";
+  const kh = [M.general_khaldun, ...modes.flatMap((m) => m.khaldun ?? []), ...(c.khaldun_extra ?? [])];
+  const khHtml = `<details class="define-khal"><summary>عند ابن خلدون (${fmtInt(kh.length)})</summary>${kh.map(khaldunQuoteHtml).join("")}` +
+    `<p class="sub">النص من تفريغ ويكي مصدر لمقدمة ابن خلدون، مطابَق حرفياً. وتطبيقه على هذه التسمية قراءة من الأطلس.</p></details>`;
+  return `<section class="card-sec define"><h3>تعريف</h3><p class="define-desc">${escapeHtml(M.what_ar)}</p>` +
+    `<div class="chips">${modes.map((m) => chip(m.label_ar)).join("")}${chip("تسمية جامعة", "tier-r")}</div>` +
+    (c.note_ar ? `<p class="define-note">${escapeHtml(c.note_ar)}</p>` : "") + modeHtml +
+    (refs ? `<ul class="gap-list">${refs}</ul>` : "") + groupDims + khHtml +
+    `<p class="sub">${escapeHtml(M.editorial_note_ar)}</p></section>`;
 }
 function khaldunHtml(name) {
   const c = khaldunData?.countries?.[name];

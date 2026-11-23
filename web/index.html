@@ -33,6 +33,7 @@
     .card-dl { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 6px 0 0; font-size: 12px; line-height: 1.5; }
     .card-dl dt { color: var(--muted); white-space: nowrap; }
     .card-dl dd { margin: 0; }
+    .sym-group { font-size: 12px; color: var(--accent); margin: 10px 0 2px; font-weight: 600; } /* فئة الرمز */
     button.ent.latin { font-style: italic; }
     .country-label.major { font-size: 14px; font-weight: 700; }
     #map:not(.space) .country-label { color: #2a2620; text-shadow: 0 0 3px #fffdf8, 0 0 2px #fffdf8, 0 0 1px #fffdf8; }
@@ -246,6 +247,14 @@
     .cube-row.empty { opacity: 0.6; }
     .cube-row.self { background: color-mix(in srgb, var(--accent) 14%, transparent); }
     details.define-fix > summary { cursor: pointer; }
+    /* التسميات الجامعة: نمط العيش وأبعاده، ونص ابن خلدون */
+    details.define-mode, details.define-khal { margin: 8px 0; border: 1px solid var(--line, rgba(127,127,127,.25)); border-radius: 8px; padding: 6px 10px; }
+    details.define-mode > summary, details.define-khal > summary { cursor: pointer; font-weight: 600; color: var(--accent); min-height: 32px; display: flex; align-items: center; }
+    details.define-mode > p { margin: 6px 0; line-height: 1.7; }
+    .define-dims li { line-height: 1.7; }
+    .khal-q { margin: 8px 0 4px; padding-inline-start: 10px; border-inline-start: 3px solid var(--accent); font-family: "Amiri", Georgia, serif; font-size: 16px; line-height: 1.8; }
+    .khal-q p { margin: 0; }
+    .khal-q cite { display: block; font-family: inherit; font-size: 12px; font-style: normal; opacity: .75; }
     .cube-row .sw { flex: none; }
     .cube-era { min-width: 74px; font-size: 12px; color: var(--muted); }
     button.linkish { background: none; border: 0; padding: 0; font: inherit; font-weight: 700; color: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; text-align: start; }
