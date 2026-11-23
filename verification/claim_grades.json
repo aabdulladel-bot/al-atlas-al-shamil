@@ -1,0 +1,1240 @@
+{
+ "_meta": {
+  "status": "model_draft: درجات اقترحها النموذج، لم يراجعها صاحب المشروع بعد",
+  "rubric": "verification/GRADING.md"
+ },
+ "claims": {
+  "cl_000000101": {
+   "source": "hammurabi",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000102": {
+   "source": "hammurabi",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000103": {
+   "source": "hammurabi",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000104": {
+   "source": "hammurabi",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000105": {
+   "source": "hammurabi",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000106": {
+   "source": "ptahhotep",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000107": {
+   "source": "ptahhotep",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000108": {
+   "source": "gilgamesh",
+   "scope": "attribution",
+   "info": 1,
+   "why": "وصف لمضمون اللوح، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000109": {
+   "source": "gilgamesh",
+   "scope": "attribution",
+   "info": 1,
+   "why": "قراءة لمضمون اللوح الحادي عشر، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000110": {
+   "source": "gilgamesh",
+   "scope": "attribution",
+   "info": 1,
+   "why": "مضمون فهرس اللوح، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000111": {
+   "source": "ptahhotep",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000112": {
+   "source": "hammurabi",
+   "scope": "attribution",
+   "info": 1,
+   "why": "مضمون المادة 56 من القانون، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000113": {
+   "source": "gilgamesh",
+   "scope": "fact",
+   "info": 2,
+   "why": "يتسق مع شكل الألواح البابلية المعروف، ولم يُقابل بوصف مستقل في الأطلس",
+   "status": "model_draft"
+  },
+  "cl_000000114": {
+   "source": "gilgamesh",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000201": {
+   "source": "behistun",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000202": {
+   "source": "behistun",
+   "scope": "attribution",
+   "info": 1,
+   "why": "قائمة الملك لما يعدّه في يده، والاقتباس شاهدها؛ لا تثبت السيطرة الفعلية",
+   "status": "model_draft"
+  },
+  "cl_000000203": {
+   "source": "behistun",
+   "scope": "attribution",
+   "info": 2,
+   "why": "القراءة مترددة في الطبعة بين 21 و23",
+   "status": "model_draft"
+  },
+  "cl_000000204": {
+   "source": "behistun",
+   "scope": "fact",
+   "info": 2,
+   "why": "تتسق ثورات 522–521 ق.م مع النسختين العيلامية والبابلية للنقش ومع هيرودوت، والنقش رواية المنتصر",
+   "status": "model_draft"
+  },
+  "cl_000000205": {
+   "source": "luckenbill",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000206": {
+   "source": "luckenbill",
+   "scope": "attribution",
+   "info": 1,
+   "why": "مضمون اللوائح نفسها، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000207": {
+   "source": "luckenbill",
+   "scope": "fact",
+   "info": 2,
+   "why": "أسماء الملوك مسرودة في النقش نفسه، والعدد رواية ملكية لم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000208": {
+   "source": "luckenbill",
+   "scope": "fact",
+   "info": 3,
+   "why": "رواية ملكية وحيدة في هذه الواقعة",
+   "status": "model_draft"
+  },
+  "cl_000000209": {
+   "source": "luckenbill",
+   "scope": "fact",
+   "info": 3,
+   "why": "رواية ملكية وحيدة في هذه الواقعة",
+   "status": "model_draft"
+  },
+  "cl_000000210": {
+   "source": "kjv1611",
+   "scope": "fact",
+   "info": 6,
+   "why": "ملخص تحريري لسرد ديني، وموضع أوفير مجهول، ولا شاهد مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000211": {
+   "source": "kjv1611",
+   "scope": "fact",
+   "info": 3,
+   "why": "صلة صور بمملكة إسرائيل يرويها يوسيفوس نقلاً عن سجلات صور، وهو نقل متأخر",
+   "status": "model_draft"
+  },
+  "cl_000000212": {
+   "source": "herodotus",
+   "scope": "fact",
+   "info": 1,
+   "why": "تؤيده ألواح برسيبوليس الإدارية في نظام محطات الطريق ومؤنها",
+   "status": "model_draft"
+  },
+  "cl_000000213": {
+   "source": "herodotus",
+   "scope": "fact",
+   "info": 3,
+   "why": "رواية مصدر واحد",
+   "status": "model_draft"
+  },
+  "cl_000000214": {
+   "source": "herodotus",
+   "scope": "fact",
+   "info": 3,
+   "why": "رواية مصدر واحد، والباحثون منقسمون في وقوع الرحلة",
+   "status": "model_draft"
+  },
+  "cl_000000215": {
+   "source": "herodotus",
+   "scope": "fact",
+   "info": 3,
+   "why": "رواية مصدر واحد",
+   "status": "model_draft"
+  },
+  "cl_000000216": {
+   "source": "herodotus",
+   "scope": "fact",
+   "info": 2,
+   "why": "التفصيل الذي كذّبه هيرودوت يتسق مع الإبحار جنوب خط الاستواء، فيعدّه كثير من الباحثين قرينة على صدق الرواية",
+   "status": "model_draft"
+  },
+  "cl_000000217": {
+   "source": "kjv1611",
+   "scope": "attribution",
+   "info": 1,
+   "why": "وصف الملخص لصور، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000218": {
+   "source": "kjv1611",
+   "scope": "attribution",
+   "info": 1,
+   "why": "حكم الملخص النبوئي، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000386": {
+   "source": "kjv1611-1872-vol2",
+   "scope": "fact",
+   "info": 6,
+   "why": "رقم في سرد ديني، ولا شاهد مستقل على ذهب أوفير",
+   "status": "model_draft"
+  },
+  "cl_000000387": {
+   "source": "kjv1611-1872-vol2",
+   "scope": "fact",
+   "info": 3,
+   "why": "صلة صور بمملكة إسرائيل يرويها يوسيفوس نقلاً عن سجلات صور، وهو نقل متأخر",
+   "status": "model_draft"
+  },
+  "cl_000000397": {
+   "source": "kjv1611-1872-vol6",
+   "scope": "fact",
+   "info": 3,
+   "why": "موضع ترشيش مختلف فيه، والعلاقة التجارية معقولة",
+   "status": "model_draft"
+  },
+  "cl_000000398": {
+   "source": "kjv1611-1872-vol6",
+   "scope": "fact",
+   "info": 2,
+   "why": "يتسق مع ما يُعرف من تجارة صور بالحبوب والزيت مع جيرانها",
+   "status": "model_draft"
+  },
+  "cl_000000399": {
+   "source": "kjv1611-1872-vol6",
+   "scope": "fact",
+   "info": 2,
+   "why": "خمر حلبون مذكورة في نصوص بابلية، وتجارة دمشق مع صور معقولة",
+   "status": "model_draft"
+  },
+  "cl_000000301": {
+   "source": "chavannes",
+   "scope": "attribution",
+   "info": 1,
+   "why": "تفسير الباحث، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000302": {
+   "source": "chavannes",
+   "scope": "fact",
+   "info": 2,
+   "why": "يستند إلى رواية سيما تشيان، ولم يُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000303": {
+   "source": "chavannes",
+   "scope": "attribution",
+   "info": 1,
+   "why": "تفسير الباحث، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000304": {
+   "source": "chavannes",
+   "scope": "attribution",
+   "info": 1,
+   "why": "تفسير الباحث، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000305": {
+   "source": "chavannes",
+   "scope": "attribution",
+   "info": 1,
+   "why": "تفسير الباحث، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000306": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 2,
+   "why": "الموقع يتسق مع فرغانة، والمسافة تقدير",
+   "status": "model_draft"
+  },
+  "cl_000000307": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 3,
+   "why": "أعداد تقديرية لا يقابلها مصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000308": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 2,
+   "why": "الزراعة والخمر والخيل تتسق مع ما يُعرف عن فرغانة، و«العرق دماً» وصف أسطوري الطابع",
+   "status": "model_draft"
+  },
+  "cl_000000309": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 3,
+   "why": "رواية مصدر واحد لنوايا أهل البلد",
+   "status": "model_draft"
+  },
+  "cl_000000310": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 2,
+   "why": "جزء من تقرير الرحلة الذي ينقله المؤرخ",
+   "status": "model_draft"
+  },
+  "cl_000000311": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 2,
+   "why": "يرويه تاريخ الهان أيضاً، لكنه ينقل عن سيما تشيان",
+   "status": "model_draft"
+  },
+  "cl_000000312": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 2,
+   "why": "يتسق مع ما يُعرف من تجارة الفرثيين",
+   "status": "model_draft"
+  },
+  "cl_000000313": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 1,
+   "why": "صحيح جغرافياً",
+   "status": "model_draft"
+  },
+  "cl_000000314": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 2,
+   "why": "يرويه تاريخ الهان أيضاً، لكنه ينقل عن سيما تشيان",
+   "status": "model_draft"
+  },
+  "cl_000000315": {
+   "source": "sima-qian-zh",
+   "scope": "attribution",
+   "info": 1,
+   "why": "رأي تشانغ تشيان كما ينقله المؤرخ، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000316": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 1,
+   "why": "تؤيده بقايا حصون الهان وسورهم حتى يومن القائمة أثرياً",
+   "status": "model_draft"
+  },
+  "cl_000000317": {
+   "source": "sima-qian-zh",
+   "scope": "fact",
+   "info": 1,
+   "why": "يؤكده تاريخ الهان وألواح الخشب من الحصون",
+   "status": "model_draft"
+  },
+  "cl_000000318": {
+   "source": "polybius",
+   "scope": "attribution",
+   "info": 2,
+   "why": "دعوى بيثياس لا تصلنا إلا عبر خصمه بوليبيوس",
+   "status": "model_draft"
+  },
+  "cl_000000319": {
+   "source": "polybius",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000320": {
+   "source": "polybius",
+   "scope": "attribution",
+   "info": 2,
+   "why": "دعوى بيثياس لا تصلنا إلا عبر خصمه بوليبيوس",
+   "status": "model_draft"
+  },
+  "cl_000000321": {
+   "source": "polybius",
+   "scope": "attribution",
+   "info": 2,
+   "why": "دعوى بيثياس لا تصلنا إلا عبر خصمه بوليبيوس، ويروي غيره رقماً قريباً",
+   "status": "model_draft"
+  },
+  "cl_000000322": {
+   "source": "thucydides",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية مؤرخ معاصر، متسقة ولم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000323": {
+   "source": "thucydides",
+   "scope": "fact",
+   "info": 1,
+   "why": "تحصين سونيون في 413/412 ق.م ثابت أثرياً",
+   "status": "model_draft"
+  },
+  "cl_000000324": {
+   "source": "thucydides",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية مؤرخ معاصر، متسقة ولم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000325": {
+   "source": "thucydides",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية مؤرخ معاصر، متسقة ولم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000326": {
+   "source": "thucydides",
+   "scope": "fact",
+   "info": 2,
+   "why": "تقدير ملاحي معقول من مؤرخ معاصر",
+   "status": "model_draft"
+  },
+  "cl_000000327": {
+   "source": "tacitus",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية مؤرخ يعتمد على السجلات، ولم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000328": {
+   "source": "tacitus",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية مؤرخ يعتمد على سجلات مجلس الشيوخ، ولم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000329": {
+   "source": "tacitus",
+   "scope": "fact",
+   "info": 1,
+   "why": "تؤيده آثار لندينيوم ومرفئها التجاري",
+   "status": "model_draft"
+  },
+  "cl_000000330": {
+   "source": "tacitus",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية مؤرخ يعتمد على السجلات، ولم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000331": {
+   "source": "asoka",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية الملك عن أعماله في مرسومه، ولا شاهد مستقل على التنفيذ",
+   "status": "model_draft"
+  },
+  "cl_000000332": {
+   "source": "asoka",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية الملك عن أعماله في مرسومه، ولا شاهد مستقل على التنفيذ",
+   "status": "model_draft"
+  },
+  "cl_000000333": {
+   "source": "asoka",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية الملك عن أعماله في مرسومه، وفي متغير من النسخ",
+   "status": "model_draft"
+  },
+  "cl_000000334": {
+   "source": "hanshu-zh",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية التاريخ الرسمي، متسقة مع سيما تشيان",
+   "status": "model_draft"
+  },
+  "cl_000000335": {
+   "source": "hanshu-zh",
+   "scope": "fact",
+   "info": 1,
+   "why": "إقامة الأقاليم الأربعة في ممر هشي وباب اليشم ثابتة بالتاريخ الرسمي والآثار",
+   "status": "model_draft"
+  },
+  "cl_000000336": {
+   "source": "hanshu-zh",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية التاريخ الرسمي لاقتراح إداري",
+   "status": "model_draft"
+  },
+  "cl_000000337": {
+   "source": "hanshu-zh",
+   "scope": "fact",
+   "info": 3,
+   "why": "مسافة رقمية لا يقابلها مصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000338": {
+   "source": "arthashastra",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000339": {
+   "source": "arthashastra",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000340": {
+   "source": "arthashastra",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000341": {
+   "source": "arthashastra",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000342": {
+   "source": "hanshu-zh",
+   "scope": "fact",
+   "info": 1,
+   "why": "مسار الطريق الجنوبي عبر يارقند والبامير ثابت جغرافياً وتاريخياً",
+   "status": "model_draft"
+  },
+  "cl_000000343": {
+   "source": "hanshu-zh",
+   "scope": "fact",
+   "info": 1,
+   "why": "مسار الطريق الشمالي عبر كاشغر والبامير ثابت جغرافياً وتاريخياً",
+   "status": "model_draft"
+  },
+  "cl_000000344": {
+   "source": "hanshu-zh",
+   "scope": "fact",
+   "info": 2,
+   "why": "مسافة تقريبية معقولة إلى لوب نور",
+   "status": "model_draft"
+  },
+  "cl_000000383": {
+   "source": "polybius-paton-1922",
+   "scope": "fact",
+   "info": 2,
+   "why": "يذكر بوليبيوس أنه قرأ النص على البرونز، وتأريخ المعاهدة مختلف فيه",
+   "status": "model_draft"
+  },
+  "cl_000000384": {
+   "source": "polybius-paton-1922",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000385": {
+   "source": "polybius-paton-1922",
+   "scope": "fact",
+   "info": 2,
+   "why": "يذكر بوليبيوس أنه قرأ النص على البرونز",
+   "status": "model_draft"
+  },
+  "cl_000000392": {
+   "source": "polybius-paton-1925",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000393": {
+   "source": "polybius-paton-1925",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000394": {
+   "source": "polybius-paton-1925",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000395": {
+   "source": "polybius-paton-1925",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000396": {
+   "source": "polybius-paton-1925",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000400": {
+   "source": "polybius-paton-1925",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000401": {
+   "source": "polybius-paton-1925",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000402": {
+   "source": "tacitus-agricola-la-ws",
+   "scope": "fact",
+   "info": 2,
+   "why": "تتسق مع الشواهد الأثرية على الترومن في بريطانيا",
+   "status": "model_draft"
+  },
+  "cl_000000403": {
+   "source": "tacitus-agricola-la-ws",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000404": {
+   "source": "sallust-catilina-la-ws",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000405": {
+   "source": "sallust-catilina-la-ws",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000406": {
+   "source": "sallust-catilina-la-ws",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000345": {
+   "source": "xuanzang-beal",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية الرحالة عن نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000346": {
+   "source": "xuanzang-beal",
+   "scope": "fact",
+   "info": 2,
+   "why": "تتسق مع الإبحار بالرياح الموسمية",
+   "status": "model_draft"
+  },
+  "cl_000000347": {
+   "source": "xuanzang-beal",
+   "scope": "fact",
+   "info": 1,
+   "why": "يؤيده كوزماس الرحالة (القرن السادس) في وصف سيلان مركزاً للتجارة",
+   "status": "model_draft"
+  },
+  "cl_000000348": {
+   "source": "xuanzang-beal",
+   "scope": "fact",
+   "info": 2,
+   "why": "الوصف الجغرافي صحيح، والمحيط تقدير",
+   "status": "model_draft"
+  },
+  "cl_000000349": {
+   "source": "gregory-brehaut",
+   "scope": "fact",
+   "info": 3,
+   "why": "حكاية يرويها مؤرخ معادٍ لصاحبها",
+   "status": "model_draft"
+  },
+  "cl_000000350": {
+   "source": "gregory-brehaut",
+   "scope": "fact",
+   "info": 3,
+   "why": "رواية مصدر واحد",
+   "status": "model_draft"
+  },
+  "cl_000000351": {
+   "source": "gregory-brehaut",
+   "scope": "fact",
+   "info": 3,
+   "why": "حكاية من سيرة ناسك",
+   "status": "model_draft"
+  },
+  "cl_000000352": {
+   "source": "gregory-brehaut",
+   "scope": "fact",
+   "info": 2,
+   "why": "تتسق مع الشواهد الأثرية على تجارة الخمر الشرقية في الغال",
+   "status": "model_draft"
+  },
+  "cl_000000353": {
+   "source": "bede-latin-pl95",
+   "scope": "fact",
+   "info": 1,
+   "why": "ميناء روتوبيا (ريتشبورو) ثابت أثرياً وفي المصادر الرومانية",
+   "status": "model_draft"
+  },
+  "cl_000000354": {
+   "source": "bede-latin-pl95",
+   "scope": "fact",
+   "info": 3,
+   "why": "تقدير منقول عن مصادر أقدم، والأرقام متفاوتة",
+   "status": "model_draft"
+  },
+  "cl_000000355": {
+   "source": "bede-latin-pl95",
+   "scope": "fact",
+   "info": 1,
+   "why": "يؤيده قيصر نفسه في حروب الغال (نحو ثمانين سفينة نقل)",
+   "status": "model_draft"
+  },
+  "cl_000000356": {
+   "source": "bede-latin-pl95",
+   "scope": "fact",
+   "info": 3,
+   "why": "حكاية ذات طابع وعظي",
+   "status": "model_draft"
+  },
+  "cl_000000357": {
+   "source": "bede-latin-pl95",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية مؤرخ متحرٍّ، وكوينتافيك ميناء ثابت",
+   "status": "model_draft"
+  },
+  "cl_000000358": {
+   "source": "procopius-dewing-1928",
+   "scope": "fact",
+   "info": 2,
+   "why": "تهريب دود القز في عهد جستنيان ثابت، وتفاصيل رواته تختلف",
+   "status": "model_draft"
+  },
+  "cl_000000359": {
+   "source": "procopius-dewing-1928",
+   "scope": "fact",
+   "info": 2,
+   "why": "تهريب دود القز في عهد جستنيان ثابت، وتفاصيل رواته تختلف",
+   "status": "model_draft"
+  },
+  "cl_000000360": {
+   "source": "procopius-dewing-1928",
+   "scope": "fact",
+   "info": 3,
+   "why": "دافع ينسبه المؤرخ إلى الرهبان",
+   "status": "model_draft"
+  },
+  "cl_000000361": {
+   "source": "procopius-dewing-1928",
+   "scope": "fact",
+   "info": 3,
+   "why": "وعد ينسبه المؤرخ إلى الرهبان",
+   "status": "model_draft"
+  },
+  "cl_000000362": {
+   "source": "procopius-dewing-1928",
+   "scope": "fact",
+   "info": 2,
+   "why": "صحيح أحيائياً في الجملة",
+   "status": "model_draft"
+  },
+  "cl_000000366": {
+   "source": "tabari-turath-9783",
+   "scope": "fact",
+   "info": 2,
+   "why": "رواية مسندة في تاريخ عام، ولم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000367": {
+   "source": "tabari-turath-9783",
+   "scope": "fact",
+   "info": 3,
+   "why": "واقعة محلية برواية واحدة",
+   "status": "model_draft"
+  },
+  "cl_000000363": {
+   "source": "polo-yule-1871",
+   "scope": "fact",
+   "info": 2,
+   "why": "تتسق مع حروب قايدو في آسيا الوسطى",
+   "status": "model_draft"
+  },
+  "cl_000000364": {
+   "source": "polo-yule-1871",
+   "scope": "fact",
+   "info": 1,
+   "why": "عودة المبعوثين بحراً تؤيدها وثيقة صينية تسمّي المبعوثين الثلاثة، ويذكرهم رشيد الدين",
+   "status": "model_draft"
+  },
+  "cl_000000365": {
+   "source": "polo-yule-1871",
+   "scope": "fact",
+   "info": 2,
+   "why": "تعليق ناشر حديث متسق مع ما يُعرف من تجارة الإسكندرية",
+   "status": "model_draft"
+  },
+  "cl_000000368": {
+   "source": "battuta-defremery",
+   "scope": "attribution",
+   "info": 1,
+   "why": "انطباع الرحالة، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000369": {
+   "source": "battuta-defremery",
+   "scope": "attribution",
+   "info": 1,
+   "why": "ترتيب الرحالة للموانئ، والاقتباس شاهده",
+   "status": "model_draft"
+  },
+  "cl_000000377": {
+   "source": "khaldun-slane-1863",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000378": {
+   "source": "khaldun-slane-1863",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000379": {
+   "source": "khaldun-slane-1863",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000380": {
+   "source": "khaldun-slane-1863",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000381": {
+   "source": "khaldun-slane-1863",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000382": {
+   "source": "khaldun-slane-1863",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000421": {
+   "source": "turath-4129-tibr-masbuk",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000422": {
+   "source": "turath-4129-tibr-masbuk",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الاقتباس شاهد على أن النص يورد القول. أما نسبته إلى النبي ﷺ فلا يُعرف له إسناد في كتب الحديث المسندة فيما نعلم، ويُروى حكمةً متداولة",
+   "status": "model_draft"
+  },
+  "cl_000000370": {
+   "source": "garcilaso-rycaut-1688",
+   "scope": "fact",
+   "info": 3,
+   "why": "رواية كاتب يمجّد نظام أجداده، ولم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000371": {
+   "source": "garcilaso-rycaut-1688",
+   "scope": "fact",
+   "info": 3,
+   "why": "مسافات تقديرية برواية واحدة",
+   "status": "model_draft"
+  },
+  "cl_000000372": {
+   "source": "diaz-maudslay",
+   "scope": "fact",
+   "info": 1,
+   "why": "يؤيده كورتيس في رسائله وساهاغون في وصف سوق تلاتيلولكو",
+   "status": "model_draft"
+  },
+  "cl_000000373": {
+   "source": "diaz-maudslay",
+   "scope": "fact",
+   "info": 1,
+   "why": "تجارة الكاكاو في أسواق المكسيك ثابتة بمصادر متعددة",
+   "status": "model_draft"
+  },
+  "cl_000000374": {
+   "source": "gama-hakluyt-1898",
+   "scope": "fact",
+   "info": 1,
+   "why": "حضور التجار المسلمين في كاليكوت ثابت بمصادر متعددة",
+   "status": "model_draft"
+  },
+  "cl_000000375": {
+   "source": "gama-hakluyt-1898",
+   "scope": "fact",
+   "info": 2,
+   "why": "يومية معاصرة، متسقة ولم تُقابل بمصدر مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000376": {
+   "source": "gama-hakluyt-1898",
+   "scope": "fact",
+   "info": 4,
+   "why": "سماع عن أسير سابق، والوفرة «بالسلال» مبالغة ظاهرة",
+   "status": "model_draft"
+  },
+  "cl_000000388": {
+   "source": "ricci-trigault-1615",
+   "scope": "fact",
+   "info": 1,
+   "why": "عاصمتان وثلاثة عشر إقليماً في الصين المينغية ثابتة",
+   "status": "model_draft"
+  },
+  "cl_000000389": {
+   "source": "ricci-trigault-1615",
+   "scope": "fact",
+   "info": 3,
+   "why": "رقم لم يُقابل بإحصاء مستقل",
+   "status": "model_draft"
+  },
+  "cl_000000390": {
+   "source": "evliya-ottoman-1896-v2",
+   "scope": "fact",
+   "info": 4,
+   "why": "أرقام أوليا جلبي معروفة بالمبالغة",
+   "status": "model_draft"
+  },
+  "cl_000000391": {
+   "source": "evliya-ottoman-1896-v2",
+   "scope": "fact",
+   "info": 4,
+   "why": "أرقام أوليا جلبي معروفة بالمبالغة",
+   "status": "model_draft"
+  },
+  "cl_000000423": {
+   "source": "turath-30026-sayrafi",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000424": {
+   "source": "turath-30026-sayrafi",
+   "scope": "fact",
+   "info": 2,
+   "why": "مؤرخ معاصر، وحملات قبرص المملوكية (1424–1426) ثابتة",
+   "status": "model_draft"
+  },
+  "cl_000000425": {
+   "source": "turath-30026-sayrafi",
+   "scope": "attribution",
+   "info": 2,
+   "why": "قول ينسبه المؤرخ إلى السلطان، بلا إسناد إلى سامع",
+   "status": "model_draft"
+  },
+  "cl_000000407": {
+   "source": "tocqueville-reeve-1840-vol3",
+   "scope": "attribution",
+   "info": 1,
+   "why": "ملاحظة الكاتب، والاقتباس شاهدها",
+   "status": "model_draft"
+  },
+  "cl_000000408": {
+   "source": "tocqueville-reeve-1840-vol3",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000409": {
+   "source": "tocqueville-reeve-1840-vol3",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000410": {
+   "source": "tocqueville-reeve-1840-vol3",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000411": {
+   "source": "tocqueville-reeve-1840-vol3",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000412": {
+   "source": "darwin-origin-1859",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000413": {
+   "source": "darwin-origin-1859",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000414": {
+   "source": "darwin-origin-1859",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000415": {
+   "source": "darwin-origin-1859",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000416": {
+   "source": "marx-manifesto-moore-1888-mia",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000417": {
+   "source": "marx-manifesto-moore-1888-mia",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000418": {
+   "source": "marx-manifesto-moore-1888-mia",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000419": {
+   "source": "marx-manifesto-moore-1888-mia",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000420": {
+   "source": "marx-manifesto-moore-1888-mia",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000426": {
+   "source": "tahtawi-takhlis-archive",
+   "scope": "fact",
+   "info": 1,
+   "why": "تؤيده روايات أخرى لثورة يوليو 1830",
+   "status": "model_draft"
+  },
+  "cl_000000427": {
+   "source": "tahtawi-takhlis-archive",
+   "scope": "fact",
+   "info": 1,
+   "why": "تؤيده روايات أخرى لثورة يوليو 1830",
+   "status": "model_draft"
+  },
+  "cl_000000428": {
+   "source": "brinkley-japan-v4-1901",
+   "scope": "fact",
+   "info": 1,
+   "why": "نص القسم الإمبراطوري (1868) معروف ومنشور",
+   "status": "model_draft"
+  },
+  "cl_000000429": {
+   "source": "brinkley-japan-v4-1901",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000432": {
+   "source": "smith-wealth-cannan1904-vol2",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000433": {
+   "source": "smith-wealth-cannan1904-vol2",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000434": {
+   "source": "smith-wealth-cannan1904-vol2",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000435": {
+   "source": "smith-wealth-oup1904-vol1",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000436": {
+   "source": "smith-wealth-oup1904-vol1",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000430": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000431": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000437": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000438": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000439": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000440": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000441": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000442": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000443": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  },
+  "cl_000000444": {
+   "source": "versailles-1919",
+   "scope": "attribution",
+   "info": 1,
+   "why": "الادعاء عن قول صاحبه أو مضمون نصه، والاقتباس المطابق شاهده. الدرجة لصحة النسبة، لا لصحة القول نفسه",
+   "status": "model_draft"
+  }
+ }
+}

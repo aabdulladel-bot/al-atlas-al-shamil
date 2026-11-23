@@ -247,6 +247,13 @@
     .cube-row.empty { opacity: 0.6; }
     .cube-row.self { background: color-mix(in srgb, var(--accent) 14%, transparent); }
     details.define-fix > summary { cursor: pointer; }
+    /* تقييم المصدر والمعلومة: الرمز (B2) ثابت الاتجاه، ولون خفيف بحسب درجة المعلومة */
+    .chip.grade b { font-family: ui-monospace, Menlo, monospace; margin-inline-end: 4px; }
+    .chip.grade-1, .chip.grade-2 { border-color: color-mix(in srgb, var(--sky) 55%, transparent); }
+    .chip.grade-4, .chip.grade-5, .chip.grade-6 { border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+    details.grade-why { margin: 6px 0; font-size: 13px; }
+    details.grade-why > summary { cursor: pointer; color: var(--muted); min-height: 28px; }
+    details.grade-why b[dir="ltr"] { font-family: ui-monospace, Menlo, monospace; }
     /* التسميات الجامعة: نمط العيش وأبعاده، ونص ابن خلدون */
     details.define-mode, details.define-khal { margin: 8px 0; border: 1px solid var(--line, rgba(127,127,127,.25)); border-radius: 8px; padding: 6px 10px; }
     details.define-mode > summary, details.define-khal > summary { cursor: pointer; font-weight: 600; color: var(--accent); min-height: 32px; display: flex; align-items: center; }
