@@ -15,7 +15,7 @@ const sourceGrades = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/so
 const claimGrades = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/claim_grades.json"), "utf8")).claims;
 const gradeOf = (c, sid) => {
   const g = claimGrades[c.id];
-  return g && sourceGrades[sid] ? { source: sid, info: g.info, scope: g.scope, why: g.why, status: g.status } : null;
+  return g && sourceGrades[sid] ? { source: sid, info: g.info, scope: g.scope, why: g.why, status: g.status, ...(g.review ? { review: g.review } : {}) } : null;
 };
 const index = [];
 const grades = {};
