@@ -417,6 +417,15 @@
    "review": {
     "agree": true
    }
+  },
+  "procopius-dewing-1914-vol1": {
+   "grade": "B",
+   "kind": "contemporary_historian",
+   "why": "مؤرخ معاصر كان في القسطنطينية أثناء الطاعون، ووصفه للمرض دقيق",
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   }
  }
 }

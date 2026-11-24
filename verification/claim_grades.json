@@ -1910,6 +1910,98 @@
    "review": {
     "agree": true
    }
+  },
+  "cl_000000445": {
+   "source": "thucydides",
+   "scope": "attribution",
+   "info": 1,
+   "why": "التعليل منسوب إلى ثوكيديديس بنصه المطابق في الكتاب الثاني؛ والدرجة لصحة النسبة",
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "1 (نسبة)",
+    "resolution": "قاعدة النطاق تجعل التعليلات نسبة، كما في تعليلات سالوست وابن خلدون، فيُؤخذ بالتقييم الثاني",
+    "decision": "adopt"
+   }
+  },
+  "cl_000000446": {
+   "source": "thucydides",
+   "scope": "fact",
+   "info": 3,
+   "why": "وصف شاهد عيان بتعميم بلاغي، لا يقابله مصدر مستقل",
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
+  },
+  "cl_000000447": {
+   "source": "thucydides",
+   "scope": "fact",
+   "info": 4,
+   "why": "سماع يصرّح به ثوكيديديس («يقال»)، ولا مصدر مستقل لمسار الوباء",
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "4 (واقعة)",
+    "resolution": "ثوكيديديس يصرّح بأنه ينقل «ما يقال»، والسماع في المقياس 4",
+    "decision": "adopt"
+   }
+  },
+  "cl_000000448": {
+   "source": "procopius-dewing-1914-vol1",
+   "scope": "fact",
+   "info": 3,
+   "why": "تقدير شاهد عيان لا إحصاء، والباحثون مختلفون في حجم الوفيات",
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
+  },
+  "cl_000000449": {
+   "source": "procopius-dewing-1914-vol1",
+   "scope": "fact",
+   "info": 1,
+   "why": "يؤيده يوحنا الأفسسي، شاهد عيان آخر لطاعون القسطنطينية، في وصف توقف الأعمال والأسواق",
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "2 (واقعة)",
+    "resolution": "التقييمان يذكران يوحنا الأفسسي، وهو شاهد عيان مستقل، وذلك شرط الدرجة 1",
+    "decision": "keep"
+   }
+  },
+  "cl_000000450": {
+   "source": "procopius-dewing-1914-vol1",
+   "scope": "fact",
+   "info": 2,
+   "why": "يتسق مع انتقال الطاعون بالسفن والموانئ، ولم يُقابل بمصدر مستقل",
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
+  },
+  "cl_000000451": {
+   "source": "battuta-defremery",
+   "scope": "fact",
+   "info": 2,
+   "why": "القاهرة أكبر من دمشق كثيراً، وكثرة موتاها في 749هـ يرويها مؤرخو مصر، لكن الأرقام مشوهة في هذه النسخة",
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
+  },
+  "cl_000000452": {
+   "source": "battuta-defremery",
+   "scope": "fact",
+   "info": 2,
+   "why": "مشاهدة الرحالة في دمشق، متسقة ولم تُقابل بمصدر مستقل",
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "1 (واقعة)",
+    "resolution": "المؤيد المذكور في التقييم الثاني (ابن كثير) من الذاكرة ولم يُتحقق من نصه، فلا تُرفع إلى مؤكدة",
+    "decision": "keep"
+   }
   }
  }
 }

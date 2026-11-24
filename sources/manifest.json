@@ -133,7 +133,7 @@
       "tier": "B",
       "landing": "https://ar.wikisource.org/wiki/مقدمة_ابن_خلدون",
       "attribution": "نص مقدمة ابن خلدون من ويكي مصدر العربي (CC BY-SA)، https://ar.wikisource.org",
-      "note": "الأجزاء 3–6 كاملة، وثمانية فصول من الباب الثاني من صفحاتها المستقلة (1 و2 و3 و7 في البدو ونحلة المعاش، و15 و17 و18 و23). التفريغ قد يحوي أخطاء طباعية، والمطابقة بالطبعة الورقية مطلوبة قبل النشر.",
+      "note": "الأجزاء 3–6 كاملة، والقسم الثاني من المقدمة (وفيه «الطاعون الجارف»)، وثمانية فصول من الباب الثاني من صفحاتها المستقلة (1 و2 و3 و7 في البدو ونحلة المعاش، و15 و17 و18 و23). التفريغ قد يحوي أخطاء طباعية، والمطابقة بالطبعة الورقية مطلوبة قبل النشر.",
       "status": "ok",
       "files": [
         {
@@ -199,6 +199,12 @@
           "sha256": "ff2188bb688ceb16c4e88b6c14b2a1c133b257909d04d7f688e8e606747a7889",
           "bytes": 5053,
           "retrieved_at": "2026-11-23T00:00:00.000Z"
+        },
+        {
+          "file": "data/raw/wikisource_muqaddima/intro_part2.txt",
+          "sha256": "cab230b78593a81fb81807e7ffd3839f4e241abf4b1a959a7cc6c46be13e4663",
+          "bytes": 84146,
+          "retrieved_at": "2026-11-24T00:00:00.000Z"
         }
       ],
       "retrieved_at": "2026-10-22T21:09:07.888Z",
@@ -1239,6 +1245,28 @@
           "bytes": 959209
         }
       ]
+    },
+    {
+      "id": "procopius-dewing-1914-vol1",
+      "file": "verification/era4/procopius_dewing_vol1.txt",
+      "url": "https://archive.org/details/b24750281_0001",
+      "license": "ملك عام: نُشر سنة 1914، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/b24750281_0001",
+      "attribution": "Procopius، History of the Wars، الكتابان I وII، ترجمة H. B. Dewing، Loeb، المجلد I (1914)",
+      "note": "نص المجلد الأول كاملاً من الأرشيف (نص djvu)، وفيه وصف طاعون 542م في الكتاب الثاني (الفصلان 22 و23).",
+      "status": "ok",
+      "retrieved_at": "2026-11-24T00:00:00.000Z",
+      "sha256": "63b6902cc6e59131c073c14e65fdbbde369576e5df93f4f64f3da476bf4aa15a",
+      "bytes": 1323567,
+      "files": [
+        {
+          "file": "verification/era4/procopius_dewing_vol1.txt",
+          "sha256": "63b6902cc6e59131c073c14e65fdbbde369576e5df93f4f64f3da476bf4aa15a",
+          "bytes": 1323567
+        }
+      ],
+      "license_verified_at": "2026-11-24"
     },
     {
       "id": "ricci-trigault-1615",

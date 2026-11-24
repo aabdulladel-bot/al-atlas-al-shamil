@@ -458,5 +458,35 @@
     "chapter": "سالوست، كاتيلينا 6: نشأة روما",
     "text": "sserere. ==VI.== {{pn|6.1|1}}Urbem Romam, sicuti ego accepi, condidere atque habuere initio Troiani, qui Aenea duce profugi sedibus incertis vagabantur, cumque iis Aborigines, genus hominum agreste, sine legibus, sine imperio, liberum atque solutum. {{pn|6.2|2}}hi postquam in una moenia convenere, dispari genere, dissimili lingua, alius alio more viventes, incredibile memoratu est quam facile coaluerint: < ita brevi multitudo dispersa atque vaga concordia civitas facta erat >. {{pn|6.3|3}}sed postquam res eorum civibus moribus agris aucta satis prospera satisque pollens videbatur, sicuti pleraque mortalium habentur, invidia ex opulentia orta est. {{pn|6.4|4}}igitur reges populique finitumi bello temptare, pauci ex amic",
     "text_hash": "72a9a89e4d48db529011579c2934478417bc0de8c795cad8c0cfc7a1712b8772"
+  },
+  {
+    "id": "thucydides:plague-crowding",
+    "source_id": "thucydides",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الثاني: طاعون أثينا (430 ق.م)",
+    "text": "the sick and the dying found most com- passion. These knew what it was from experience, and had now no fear for themselves; for the same man was never attacked twice—never at least fatally. And such persons not only received the congratulations of others, but themselves alsb, in the elation of the moment, half entertained the vain hope that they were for the future safe from any disease whatsoever. An aggravation of the existing calamity was the influx from the country into the city, and this was especially felt by the new arrivals. As there were no houses to receive them, they had to be lodged at the hot season of the year in stifling cabins, where the, mortality raged without restraint. The bodies of dying men lay one upon another, and half-dead creatures reeled about the streets and gathered round all the fountains in their long- ing for water. The sacred places also in which",
+    "text_hash": "5204857669e7b8f8fdd578acdb4b7068809c2eba2374fafaca3724e4c50abc5d"
+  },
+  {
+    "id": "thucydides:plague-lawlessness",
+    "source_id": "thucydides",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الثاني: طاعون أثينا (430 ق.م)",
+    "text": "had nothing succeeding to their pro- perty. So they resolved to spend quickly and enjoy: themselves, regarding their lives and riches as alike things ofaday. Perseverance in what men called honour was popular with none, it was so uncertain. whether they would be spared to attain the object; but it was settled that present enjoyment, and all that contributed to it, was both honourable and useful. Fear of gods or law of man there was none to restrain them. As for the first, they judged it to be just the same whether they worshipped them or not, as they saw all alike perishing; and for the last, no one expected to live to be brought to trial for his offences, but each felt that a far severer sentence had been already passed upon them all and hung ever over their heads, and before this’ fell it was only reasonable to enjoy life a little. Such was the",
+    "text_hash": "5cbaba7c20e2a52871014bfbd9ab5c8b0b9dd48b06d741656793edaf613ba8b1"
+  },
+  {
+    "id": "thucydides:plague-origin",
+    "source_id": "thucydides",
+    "volume": null,
+    "page": null,
+    "para": null,
+    "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الثاني: طاعون أثينا (430 ق.م)",
+    "text": "Neither were the physicians at first of any Pi#te- service, ignorant as they were of the proper way to treat it, but they died themselves the most thickly, as they visited the .sick most often; nor did any human art succeed any better. Supplications in the temples, divina- tions, and so forth were found equally futile, till the overwhelming nature of the disaster at last put a stop to them altogether. It first began, it is said, in the parts of Ethiopia above Egypt, and thence descended into Egypt and Libya and into most of the king’s country. Suddenly falling upon Athens, it first attacked the population in Pireus,—which was the occasion of their saying that the Peloponnesians had poisoned the reservoirs, there being as yet no wells there—and afterwards appeared in the upper city, when the deaths became much more frequent. All speculation as to its origin and",
+    "text_hash": "3ca17f048ed4fa28a97f5272821142aa9353c1dfb14fb8fe25121cc5d1bcb842"
   }
 ]

@@ -108,8 +108,8 @@
    "about": "أماكن ادعاءات مطابقة الاقتباس لنص مصدرها، بحجم يتبع عدد الشواهد. وفي السُّنّة المختارة تُلوَّن بدورها: مؤيد أو مقيِّد.",
    "coverage": {
     "label": "الادعاءات المعروضة",
-    "text": "176 ادعاءً في 8 حقب",
-    "count": 176
+    "text": "184 ادعاءً في 8 حقب",
+    "count": 184
    },
    "sources": [
     {
@@ -293,6 +293,13 @@
      "license": "ملك عام: الأرشيف يذكر 1914 وREADME يذكر 1928 للمجلد الخامس، وكلاهما ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
      "attribution": "Procopius، ترجمة H. B. Dewing، Loeb، المجلد V",
      "landing": "https://archive.org/details/procopiuswitheng05procuoft"
+    },
+    {
+     "id": "procopius-dewing-1914-vol1",
+     "tier": "A",
+     "license": "ملك عام: نُشر سنة 1914، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Procopius، History of the Wars، الكتابان I وII، ترجمة H. B. Dewing، Loeb، المجلد I (1914)",
+     "landing": "https://archive.org/details/b24750281_0001"
     },
     {
      "id": "ricci-trigault-1615",

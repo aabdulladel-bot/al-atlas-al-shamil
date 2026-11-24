@@ -1,7 +1,7 @@
 {
   "_meta": {
     "era": 4,
-    "count": 20,
+    "count": 23,
     "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
   },
   "claims": [
@@ -322,6 +322,55 @@
       ],
       "domains_status": "delegated_review",
       "reviewed": true
+    },
+    {
+      "id": "cl_000000448",
+      "statement": "يذكر بروكوبيوس أن عدد الموتى بالطاعون في القسطنطينية بلغ خمسة آلاف في اليوم، ثم عشرة آلاف وأكثر",
+      "quote": "the tale of dead reached five thousand each day, and again it even came to ten thousand and still more than that",
+      "attributed_to": "بروكوبيوس، تاريخ الحروب، الكتاب الثاني (ترجمة دوينغ، لوب، المجلد الأول، 1914)",
+      "layer": "contemporary_witness",
+      "type": "quantity",
+      "hedge": "بروكوبيوس كان في المدينة أثناء الوباء، لكن أرقامه تقدير لا إحصاء، والباحثون مختلفون في حجم الوفيات",
+      "chapter": "بروكوبيوس، تاريخ الحروب II.22–23: طاعون 542م في القسطنطينية",
+      "domains": [
+        "health",
+        "population"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000449",
+      "statement": "يصف بروكوبيوس أن كل عمل توقف في القسطنطينية أثناء الطاعون، وترك الصناع حرفهم، حتى عمّ الجوع مدينة كانت تفيض بالخيرات",
+      "quote": "And work of every description ceased, and all the trades were abandoned by the artisans",
+      "attributed_to": "بروكوبيوس، تاريخ الحروب، الكتاب الثاني (ترجمة دوينغ، لوب، المجلد الأول، 1914)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "وصف شاهد عيان لذروة الوباء، لا لمدته كلها",
+      "chapter": "بروكوبيوس، تاريخ الحروب II.22–23: طاعون 542م في القسطنطينية",
+      "domains": [
+        "health",
+        "economy",
+        "industry"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000450",
+      "statement": "يلاحظ بروكوبيوس أن الطاعون كان يبدأ دائماً من الساحل، ثم يصعد منه إلى الداخل",
+      "quote": "And this disease always took its start from the coast, and from there went up to the interior",
+      "attributed_to": "بروكوبيوس، تاريخ الحروب، الكتاب الثاني (ترجمة دوينغ، لوب، المجلد الأول، 1914)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "ملاحظة عامة من شاهد معاصر، تتسق مع انتقال الوباء بالسفن، والمؤلف لا يعلّلها",
+      "chapter": "بروكوبيوس، تاريخ الحروب II.22–23: طاعون 542م في القسطنطينية",
+      "domains": [
+        "health",
+        "trade"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
     }
   ]
 }

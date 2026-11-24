@@ -1,7 +1,7 @@
 {
   "_meta": {
     "era": 5,
-    "count": 13,
+    "count": 15,
     "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
   },
   "claims": [
@@ -207,6 +207,40 @@
       ],
       "domains_status": "delegated_review",
       "reviewed": true
+    },
+    {
+      "id": "cl_000000451",
+      "statement": "يذكر ابن بطوطة أن عدد الموتى في اليوم الواحد في الطاعون الأعظم بلغ في القاهرة ومصر (الفسطاط) أضعاف ما بلغه في دمشق",
+      "quote": "tandis qu’au Caire et à Misr (Fosthâth)",
+      "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول، 1853)",
+      "layer": "contemporary_witness",
+      "type": "quantity",
+      "hedge": "الأرقام في هذه النسخة مشوهة بالمسح الضوئي فلا يُعتمد عليها، والمعتمد المقارنة بين المدينتين. وابن بطوطة كان في دمشق، أما القاهرة فرواية سمعها",
+      "chapter": "ابن بطوطة: الطاعون الأعظم في دمشق سنة 749هـ (1348م)",
+      "domains": [
+        "health",
+        "population",
+        "society"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000452",
+      "statement": "يروي ابن بطوطة أن أهل دمشق خرجوا في الطاعون الأعظم إلى الدعاء جميعاً، والتحق بهم اليهود بالتوراة والنصارى بالإنجيل مع نسائهم وأولادهم",
+      "quote": "et les chrétiens avec leur Évangile",
+      "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول، 1853)",
+      "layer": "contemporary_witness",
+      "type": "event",
+      "hedge": "مشاهدة ابن بطوطة في دمشق، وتقول روايته إن الوباء خفّ بعدها، وذلك تفسيره هو",
+      "chapter": "ابن بطوطة: الطاعون الأعظم في دمشق سنة 749هـ (1348م)",
+      "domains": [
+        "health",
+        "religion",
+        "society"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
     }
   ]
 }

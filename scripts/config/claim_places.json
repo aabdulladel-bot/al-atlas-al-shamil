@@ -137,6 +137,37 @@
       "pleiades_id": "49863",
       "expected_title": "Anurādhapura",
       "note": "النص يذكر مملكة سيلان كلها لا عاصمتها. أنورادهابورا عاصمتها القديمة من القرن الرابع ق.م إلى القرن الحادي عشر م، فهي تمثيل للمملكة لا موقع للشاهد، والجزيرة كلها لا تُمثَّل بنقطة."
+    },
+    {
+      "slug": "athens",
+      "name_ar": "أثينا",
+      "name_en": "Athens",
+      "aliases": [
+        "أثينا"
+      ],
+      "pleiades_id": "579885",
+      "expected_title": "Athenae"
+    },
+    {
+      "slug": "constantinople",
+      "name_ar": "القسطنطينية",
+      "name_en": "Constantinople",
+      "aliases": [
+        "القسطنطينية"
+      ],
+      "pleiades_id": "520998",
+      "expected_title": "Constantinopolis"
+    },
+    {
+      "slug": "fustat",
+      "name_ar": "الفسطاط (مصر القديمة)",
+      "name_en": "al-Fustat (Old Cairo)",
+      "aliases": [
+        "الفسطاط",
+        "القاهرة"
+      ],
+      "pleiades_id": "727082",
+      "expected_title": "Babylon/al-Fusṭāṭ/Old Cairo"
     }
   ]
 }
