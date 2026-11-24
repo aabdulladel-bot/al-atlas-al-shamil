@@ -2628,6 +2628,21 @@ function renderLab() {
   }
 }
 analysisReady.then(renderLab);
+// التقدير (verification/ESTIMATIVE.md): الاحتمال بلفظ من المقياس ومداه، والثقة منفصلة عنه ومحسوبة من الشواهد ودرجاتها
+function assessmentHtml(s) {
+  const a = s.assessment;
+  if (!a) return "";
+  const est = sunanData?._meta?.estimative;
+  if (a.likelihood === "unassessed") return `<div class="assess"><div class="assess-head"><span class="assess-l">${escapeHtml(a.likelihood_ar)}</span></div><p class="sub">${escapeHtml(a.why)}</p></div>`;
+  const b = a.basis;
+  return `<div class="assess"><div class="assess-head"><span class="assess-l">${escapeHtml(a.likelihood_ar)} <bdi dir="ltr">${a.range[0]}–${a.range[1]}%</bdi></span>` +
+    `<span class="assess-c">${escapeHtml(a.confidence_ar)}</span></div>` +
+    `<p class="sub">الاحتمال هنا: ${escapeHtml(est?.proposition ?? "")}. والثقة منفصلة عنه: قوة الشواهد التي يقوم عليها الحكم.</p>` +
+    `<p class="assess-why">${escapeHtml(a.why)}</p>` +
+    `<details class="research-only"><summary class="sub">الافتراضات وأساس الثقة</summary><ul class="gap-list">${a.assumptions.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>` +
+    `<p class="sub">أساس الثقة: ${fmtInt(b.facts)} وقائع مرجّحة أو مؤكدة، و${fmtInt(b.views)} آراء موافقة لا تُحسب وقائع، و${fmtInt(b.limiting)} مقيِّد، و${fmtInt(b.quant_decisive)} من ${fmtInt(b.quant_total)} اختبار كمي حاسم. القاعدة: ${escapeHtml(est?.confidence?.[a.confidence]?.rule ?? "")}.</p></details>` +
+    (a.status !== "reviewed" ? `<p class="sub">تقدير مقترح من النموذج لم يراجعه صاحب المشروع.</p>` : "") + `</div>`;
+}
 function renderSunna(s, placesLinked) {
   const khaldun = s.khaldun.map((k) => `<div class="khaldun">«${escapeHtml(k.quote)}»<div class="sub">ابن خلدون، المقدمة: ${escapeHtml(k.location)}</div></div>`).join("");
   const support = s.supporting.length
@@ -2655,7 +2670,7 @@ function renderSunna(s, placesLinked) {
     (journey ? `<div class="row"><button type="button" data-start-journey="${escapeHtml(journey.id)}">ابدأ رحلة هذه السُّنّة (${journey.steps} خطوات)</button></div>` : "") +
     `<div class="hyp">${escapeHtml(s.hypothesis)}</div>` +
     `<span class="badge">${escapeHtml(s.strength)}: ${s.supporting.length} مؤيد، ${s.limiting.length} مقيِّد</span>` +
-    lensSummaryHtml(s) + analysisBlockHtml(s) + khaldun + quant + mapNote + support + limits + antecedents + modern;
+    assessmentHtml(s) + lensSummaryHtml(s) + analysisBlockHtml(s) + khaldun + quant + mapNote + support + limits + antecedents + modern;
 }
 function clearSunna() {
   activeSunna = null;

@@ -77,6 +77,40 @@ function quantitative(id) {
   return [];
 }
 
+// ---------- التقدير (verification/ESTIMATIVE.md): الاحتمال حكم مكتوب بسببه، والثقة تُحسب من الشواهد ودرجاتها ----------
+const EST = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/estimative.json"), "utf8"));
+const GR = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/claim_grades.json"), "utf8")).claims;
+const SG = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/source_grades.json"), "utf8")).sources;
+const LK = new Map(EST.likelihood.map((x, i) => [x.id, { ...x, rank: i }]));
+const EVEN = LK.get("even").rank, LIKELY = LK.get("likely").rank;
+const isDecisive = (v) => !v.startsWith("غير حاسم");
+function assess(s, supporting, limiting, quant) {
+  const a = s.assessment;
+  if (!a) { errors.push(`${s.id}: بلا تقدير`); return null; }
+  // وقائع مرجّحة أو مؤكدة: نطاقها واقعة، ودرجة معلومتها ≤ 2، ومصدرها في الدرجات المقبولة. الآراء الموافقة لا تُحسب وقائع
+  const facts = supporting.filter((c) => {
+    const g = GR[c.id];
+    return g && g.scope === "fact" && g.info <= EST.fact_threshold.info_max && EST.fact_threshold.source_grades.includes(SG[g.source]?.grade);
+  }).length;
+  const views = supporting.filter((c) => GR[c.id]?.scope === "attribution").length;
+  const decisive = quant.length > 0 && quant.every((q) => isDecisive(q.verdict));
+  const confidence = facts >= 3 && decisive ? "high" : facts >= 3 || decisive ? "moderate" : "low";
+  const basis = { facts, views, limiting: limiting.length, quant_total: quant.length, quant_decisive: quant.filter((q) => isDecisive(q.verdict)).length };
+  if (a.likelihood === "unassessed") {
+    if (supporting.length) errors.push(`${s.id}: لها شواهد مؤيدة ولم تُقدَّر`);
+    return { likelihood: "unassessed", likelihood_ar: EST.unassessed, why: a.why, assumptions: [], confidence: null, basis, status: a.status };
+  }
+  const L = LK.get(a.likelihood);
+  if (!L) { errors.push(`${s.id}: احتمال خارج المقياس ${a.likelihood}`); return null; }
+  if (!supporting.length) errors.push(`${s.id}: قُدّر احتمالها بلا شواهد مؤيدة`);
+  if (!a.why?.trim()) errors.push(`${s.id}: تقدير بلا سبب`);
+  if (!a.assumptions?.length) errors.push(`${s.id}: تقدير بلا افتراضات مكتوبة`);
+  // اتساق الحكم مع الاختبار الكمي: ما لا يؤيده اختبار لا يُرجَّح، وما يؤيده كل اختبار لا يُستبعد
+  if (quant.some((q) => q.verdict === "لا يؤيد") && L.rank > EVEN) errors.push(`${s.id}: «${L.ar}» واختبار كمي لا يؤيدها`);
+  if (quant.length && quant.every((q) => q.verdict.startsWith("يؤيد")) && L.rank < LIKELY) errors.push(`${s.id}: «${L.ar}» وكل اختباراتها الكمية تؤيدها`);
+  return { likelihood: L.id, likelihood_ar: L.ar, range: L.range, confidence, confidence_ar: EST.confidence[confidence].ar, basis, why: a.why, assumptions: a.assumptions, status: a.status };
+}
+
 const out = [];
 for (const s of cfg.sunan) {
   const khaldun = s.khaldun.map((k) => ({ quote: k.quote, location: k.location, match: checkKhaldun(k, s.id) }));
@@ -91,10 +125,11 @@ for (const s of cfg.sunan) {
   const strength = n >= 3 ? "شواهد متعددة" : n >= 1 ? "شواهد قليلة" : "بلا شواهد مؤيدة بعد";
   const eras = [...new Set([...supporting, ...limiting].filter((x) => x.era).map((x) => x.era))].sort((a, b) => a - b);
   const quant = quantitative(s.id);
-  out.push({ id: s.id, name: s.name, hypothesis: s.hypothesis, khaldun, supporting, limiting, antecedents, modern: s.modern, strength, eras, quantitative: quant });
-  console.log(`${s.name}: ابن خلدون ${khaldun.map((k) => k.match).join("/")}، مؤيد ${n}، مقيِّد ${limiting.length}${antecedents.length ? `، سوابق ${antecedents.length}` : ""}، الحقب ${eras.join(",") || "-"}${quant.length ? "، كمي: " + quant.map((q) => q.verdict).join("/") : ""}`);
+  const assessment = assess(s, supporting, limiting, quant);
+  out.push({ id: s.id, name: s.name, hypothesis: s.hypothesis, khaldun, supporting, limiting, antecedents, modern: s.modern, strength, eras, quantitative: quant, assessment });
+  console.log(`${s.name}: ابن خلدون ${khaldun.map((k) => k.match).join("/")}، مؤيد ${n}، مقيِّد ${limiting.length}${antecedents.length ? `، سوابق ${antecedents.length}` : ""}، الحقب ${eras.join(",") || "-"}${quant.length ? "، كمي: " + quant.map((q) => q.verdict).join("/") : ""}، التقدير: ${assessment ? `${assessment.likelihood_ar}${assessment.confidence ? "، " + assessment.confidence_ar : ""}` : "-"}`);
 }
 
 if (errors.length) { console.error("أخطاء:\n" + errors.join("\n")); process.exit(1); }
-fs.writeFileSync(path.join(ROOT, "web/data/sunan.json"), JSON.stringify({ _meta: { note: cfg._note, count: out.length, quantitative_source: seshat ? seshat._source : null }, sunan: out }, null, 2) + "\n");
+fs.writeFileSync(path.join(ROOT, "web/data/sunan.json"), JSON.stringify({ _meta: { note: cfg._note, count: out.length, quantitative_source: seshat ? seshat._source : null, estimative: { proposition: EST.proposition, likelihood: EST.likelihood, confidence: EST.confidence } }, sunan: out }, null, 2) + "\n");
 console.log("كُتب web/data/sunan.json");

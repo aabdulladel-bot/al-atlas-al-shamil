@@ -252,6 +252,13 @@
     .chip.grade-1, .chip.grade-2 { border-color: color-mix(in srgb, var(--sky) 55%, transparent); }
     .chip.grade-4, .chip.grade-5, .chip.grade-6 { border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
     details.grade-why { margin: 6px 0; font-size: 13px; }
+    /* التقدير: لفظ الاحتمال ومداه، والثقة في شارة منفصلة */
+    .assess { margin: 10px 0; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; }
+    .assess-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .assess-l { font-weight: 700; color: var(--accent); }
+    .assess-l bdi { font-weight: 400; font-size: 12px; color: var(--muted); }
+    .assess-c { font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; }
+    .assess-why { margin: 6px 0; line-height: 1.7; }
     details.grade-why > summary { cursor: pointer; color: var(--muted); min-height: 28px; }
     details.grade-why b[dir="ltr"] { font-family: ui-monospace, Menlo, monospace; }
     /* التسميات الجامعة: نمط العيش وأبعاده، ونص ابن خلدون */
