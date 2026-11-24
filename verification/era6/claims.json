@@ -141,12 +141,12 @@
     "id": "cl_000000374",
     "passage_id": "gama:ravenstein1898:merchants-ship",
     "quote": "They are merchants, and have transactions with white Moors",
-    "statement": "تصف اليومية سكان المدينة (كاليكوت حسب سياق اليومية) بأنهم تجار، ويتعاملون مع المور البيض، أي التجار المسلمين",
+    "statement": "تصف اليومية أهل جزيرة موزمبيق بأنهم مسلمون تجار، يتعاملون مع المور البيض، أي التجار المسلمين القادمين بالسفن",
     "type": "description",
     "layer": "contemporary_witness",
     "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
     "isnad": null,
-    "hedge": "المدينة مذكورة في السياق السابق، والنص لا يذكر اسمها في هذه الجملة",
+    "hedge": "الفقرة في قسم اليومية عن موزمبيق (2 مارس 1498)، لا عن كاليكوت التي وصلوها في مايو. صُحّح البيان في 2026-11-24 بعد المراجعة، وكان ينسبها إلى كاليكوت خطأً",
     "author_preference": null,
     "mentions": {
       "places": [],
@@ -169,18 +169,18 @@
       "verified_by": "pilot-era6"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000375",
     "passage_id": "gama:ravenstein1898:merchants-ship",
     "quote": "four of whose vessels were at the time in port, laden with gold, silver, cloves, pepper, ginger",
-    "statement": "تذكر اليومية أن أربع سفن للمور البيض كانت راسية في الميناء محمّلة بالذهب والفضة والقرنفل والفلفل والزنجبيل",
+    "statement": "تذكر اليومية أن أربع سفن للمور البيض كانت راسية في ميناء جزيرة موزمبيق محمّلة بالذهب والفضة والقرنفل والفلفل والزنجبيل",
     "type": "event",
     "layer": "contemporary_witness",
     "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
     "isnad": null,
-    "hedge": "مشاهدة مباشرة من طاقم السفينة وفق اليومية",
+    "hedge": "مشاهدة مباشرة من طاقم السفينة وفق اليومية، في موزمبيق (مارس 1498)",
     "author_preference": null,
     "mentions": {
       "places": [],
@@ -192,7 +192,7 @@
       "quote_match": true,
       "meaning": {
         "status": "independently_reviewed",
-        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)"
+        "reviewer": "عبدالله (اعتمد قراءة النموذج بعد التعديل)؛ وصُحّح الموضع من كاليكوت إلى موزمبيق في 2026-11-24 بتفويض صاحب المشروع (المعنى نفسه)"
       },
       "pass_agreement": {
         "status": "not_run",
@@ -203,18 +203,18 @@
       "verified_by": "pilot-era6"
     },
     "status": "verified",
-    "version": 4
+    "version": 5
   },
   {
     "id": "cl_000000376",
     "passage_id": "gama:ravenstein1898:spices-hearsay",
     "quote": "precious stones, pearls and spices were so plentiful",
-    "statement": "يذكر الطاقم أنهم سمعوا أن الأحجار الكريمة واللؤلؤ والتوابل وفيرة هناك إلى حد جمعها بالسلال، عن بحار كان أسيراً سابقاً عند المور",
+    "statement": "يذكر الطاقم أنهم سمعوا في موزمبيق أن الأحجار الكريمة واللؤلؤ والتوابل وفيرة في البلاد التي يقصدونها إلى حد جمعها بالسلال",
     "type": "event",
     "layer": "contemporary_witness",
     "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
     "isnad": null,
-    "hedge": "رواية مسموعة (hearsay) وليست مشاهدة مباشرة",
+    "hedge": "سماع غير مباشر في موزمبيق عن بلاد الهند التي لم يصلوها بعد، والوفرة «بالسلال» مبالغة ظاهرة",
     "author_preference": null,
     "mentions": {
       "places": [],
@@ -237,7 +237,7 @@
       "verified_by": "pilot-era6"
     },
     "status": "draft",
-    "version": 1
+    "version": 2
   },
   {
     "id": "cl_000000388",
