@@ -1,0 +1,2349 @@
+{
+ "_meta": {
+  "source": "Wikidata (CC0)، اللقطة data/raw/wikidata/crises_qlever_raw.json، عبر scripts/build_crises.mjs",
+  "note": "الأوبئة والمجاعات الموثّقة قبل 1950 التي لها إحداثيات. precision=event: إحداثيات الحدث نفسه في ويكي بيانات. precision=place: إحداثيات المكان الذي وقع فيه الحدث، وهي تقريبية. لا تقدير لموقع حدث بلا إحداثيات.",
+  "cutoff_year": 1950,
+  "counts": {
+   "items_before_cutoff": 212,
+   "with_coordinates": 97,
+   "without_coordinates": 115,
+   "without_year": 0,
+   "by_kind": {
+    "epidemic": 74,
+    "famine": 23
+   },
+   "with_arabic_name": 33
+  }
+ },
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q758173",
+    "kind": "epidemic",
+    "year": -429,
+    "name_ar": "طاعون أثينا",
+    "name_en": "Plague of Athens",
+    "desc_en": "epidemic in Athens, Greece in the 5th century BCE",
+    "desc_ar": null,
+    "arwiki": "طاعون أثينا",
+    "enwiki": "Plague of Athens",
+    "precision": "place",
+    "place_ar": "أثينا الكلاسيكية",
+    "place_en": "Classical Athens"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.7222,
+     37.9722
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q2321578",
+    "kind": "epidemic",
+    "year": 249,
+    "name_ar": "طاعون قبرص",
+    "name_en": "Plague of Cyprian",
+    "desc_en": "pandemic in the Roman Empire (249–262 CE)",
+    "desc_ar": "جائحة أصابت الإمبراطورية الرومانية في الفترة من 249 إلى 262",
+    "arwiki": "طاعون قبرص",
+    "enwiki": "Plague of Cyprian",
+    "precision": "place",
+    "place_ar": "بلاد الرافدين",
+    "place_en": "Mesopotamia"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     43.5,
+     33.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q96377989",
+    "kind": "epidemic",
+    "year": 541,
+    "name_ar": "جائحة الطاعون الأولى",
+    "name_en": "First plague pandemic",
+    "desc_en": "series of pandemics (541–767 c.e.)",
+    "desc_ar": null,
+    "arwiki": "جائحة الطاعون الأولى",
+    "enwiki": "First plague pandemic",
+    "precision": "place",
+    "place_ar": "الإمبراطورية البيزنطية",
+    "place_en": "Byzantine Empire"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.98,
+     41.0125
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q1567823",
+    "kind": "epidemic",
+    "year": 638,
+    "name_ar": "طاعون عمواس",
+    "name_en": "Plague of Amwas",
+    "desc_en": "epidemic in 7th century Syria",
+    "desc_ar": "طاعون وقع في ولاية بلاد الشام الإسلامية التابعة للخلافة الراشدة في أيام خلافة عمر بن الخطاب سنة 18 هـ/639م",
+    "arwiki": "طاعون عمواس",
+    "enwiki": "Plague of Amwas",
+    "precision": "event",
+    "place_ar": null,
+    "place_en": "Emmaus Nicopolis"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.9894,
+     31.8392
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q11666822",
+    "kind": "famine",
+    "year": 1181,
+    "name_ar": null,
+    "name_en": "Yōwa famine",
+    "desc_en": "famine in Japan",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Yōwa famine",
+    "precision": "event",
+    "place_ar": null,
+    "place_en": null
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     135.7683,
+     35.0117
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q11457474",
+    "kind": "famine",
+    "year": 1230,
+    "name_ar": null,
+    "name_en": "Kangi famine",
+    "desc_en": "famine in Japan",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Kanki famine",
+    "precision": "event",
+    "place_ar": null,
+    "place_en": null
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     135.7683,
+     35.0117
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q1988505",
+    "kind": "famine",
+    "year": 1315,
+    "name_ar": "المجاعة الكبرى",
+    "name_en": "Great Famine of 1315–1317",
+    "desc_en": "famine in 14th century medieval Europe",
+    "desc_ar": "أزمة إجتماعية في أوروبا",
+    "arwiki": "المجاعة الكبرى (1315–1317)",
+    "enwiki": "Great Famine of 1315–1317",
+    "precision": "event",
+    "place_ar": "أوروبا",
+    "place_en": "Europe"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.1406,
+     48.691
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q42005",
+    "kind": "epidemic",
+    "year": 1346,
+    "name_ar": "الموت الأسود",
+    "name_en": "Black Death",
+    "desc_en": "1346–1353 pandemic in Eurasia and North Africa",
+    "desc_ar": "طاعون اجتاح أنحاء أوروبا بين الفترة 1346 - 1353",
+    "arwiki": "الموت الأسود",
+    "enwiki": "Black Death",
+    "precision": "place",
+    "place_ar": "أوروبا",
+    "place_en": "Europe"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.5,
+     53.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q4920638",
+    "kind": "epidemic",
+    "year": 1348,
+    "name_ar": "الموت الأسود في إنجلترا",
+    "name_en": "Black Death in England",
+    "desc_en": "pandemic in England in the 14th century",
+    "desc_ar": null,
+    "arwiki": "الموت الأسود في إنجلترا",
+    "enwiki": "Black Death in England",
+    "precision": "place",
+    "place_ar": "إنجلترا",
+    "place_en": "England"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1,
+     53
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q63348899",
+    "kind": "epidemic",
+    "year": 1349,
+    "name_ar": null,
+    "name_en": "Black Death in Wales",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "ويلز",
+    "place_en": "Wales"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.6333,
+     52.35
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q6073271",
+    "kind": "epidemic",
+    "year": 1422,
+    "name_ar": null,
+    "name_en": "Castilian Plague of 1422",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "إشبيلية",
+    "place_en": "Seville"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.995,
+     37.3886
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q15858742",
+    "kind": "famine",
+    "year": 1437,
+    "name_ar": null,
+    "name_en": null,
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "أوروبا الوسطى",
+    "place_en": "Central Europe"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10,
+     51
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q110103570",
+    "kind": "epidemic",
+    "year": 1494,
+    "name_ar": null,
+    "name_en": "1494 Hispaniola yellow fever epidemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "هسبنيولا",
+    "place_en": "Hispaniola"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71,
+     19
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q92056662",
+    "kind": "epidemic",
+    "year": 1510,
+    "name_ar": "جائحة الأنفلونزا في عام 1510",
+    "name_en": "1510 Influenza pandemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": "جائحة الأنفلونزا في عام 1510",
+    "enwiki": "1510 influenza pandemic",
+    "precision": "place",
+    "place_ar": "إفريقيا",
+    "place_en": "Africa"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15,
+     0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q67222266",
+    "kind": "epidemic",
+    "year": 1518,
+    "name_ar": null,
+    "name_en": "1518 Smallpox Epidemic in the Caribbean",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "الكاريبي",
+    "place_en": "Caribbean"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73,
+     15
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q5677417",
+    "kind": "epidemic",
+    "year": 1519,
+    "name_ar": null,
+    "name_en": "smallpox epidemic in Tenochtitlan",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "تينوتشتيتلان",
+    "place_en": "Tenochtitlan"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1314,
+     19.435
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q63472138",
+    "kind": "epidemic",
+    "year": 1545,
+    "name_ar": "أوبئة الكوكوليتزلي",
+    "name_en": "cocoliztli epidemic",
+    "desc_en": "16th century epidemics in New Spain",
+    "desc_ar": null,
+    "arwiki": "أوبئة الكوكوليتزلي",
+    "enwiki": "Cocoliztli epidemics",
+    "precision": "place",
+    "place_ar": "أمريكا الوسطى",
+    "place_en": "Central America"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86,
+     12
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q55074666",
+    "kind": "epidemic",
+    "year": 1545,
+    "name_ar": null,
+    "name_en": "cocoliztli epidemic of 1545-1548",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Cocoliztli Epidemic of 1545–1548",
+    "precision": "place",
+    "place_ar": "إسبانيا الجديدة",
+    "place_en": "New Spain"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1333,
+     19.4333
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q97190564",
+    "kind": "epidemic",
+    "year": 1562,
+    "name_ar": null,
+    "name_en": null,
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "برشلونة",
+    "place_en": "Barcelona"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.1769,
+     41.3825
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q65057558",
+    "kind": "epidemic",
+    "year": 1563,
+    "name_ar": "طاعون لندن 1563",
+    "name_en": "1563 London plague",
+    "desc_en": "disease outbreak in London, England",
+    "desc_ar": null,
+    "arwiki": "طاعون لندن 1563",
+    "enwiki": "1563 London plague",
+    "precision": "place",
+    "place_ar": "لندن",
+    "place_en": "London"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1275,
+     51.5072
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q136296680",
+    "kind": "epidemic",
+    "year": 1568,
+    "name_ar": null,
+    "name_en": null,
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "بوزنان",
+    "place_en": "Poznań"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.9336,
+     52.4083
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q23042713",
+    "kind": "epidemic",
+    "year": 1571,
+    "name_ar": null,
+    "name_en": null,
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "تالين",
+    "place_en": "Tallinn"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     24.745,
+     59.4372
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q5834733",
+    "kind": "epidemic",
+    "year": 1576,
+    "name_ar": null,
+    "name_en": "cocoliztli epidemic of 1576",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "إسبانيا الجديدة",
+    "place_en": "New Spain"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.1333,
+     19.4333
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q84571479",
+    "kind": "epidemic",
+    "year": 1577,
+    "name_ar": null,
+    "name_en": null,
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "سانت أندرياسبرغ",
+    "place_en": "Sankt Andreasberg"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.5183,
+     51.7106
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q84571338",
+    "kind": "epidemic",
+    "year": 1578,
+    "name_ar": null,
+    "name_en": null,
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "غوسلار",
+    "place_en": "Goslar"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.4292,
+     51.906
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q118906467",
+    "kind": "epidemic",
+    "year": 1580,
+    "name_ar": null,
+    "name_en": "1580 influenza pandemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1580 influenza pandemic",
+    "precision": "place",
+    "place_ar": "آسيا",
+    "place_en": "Asia"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     108,
+     35
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q86458874",
+    "kind": "epidemic",
+    "year": 1582,
+    "name_ar": null,
+    "name_en": "1582 San Cristóbal de La Laguna plague",
+    "desc_en": "disease outbreak in Tenerife, Canary Islands",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1582 Tenerife plague epidemic",
+    "precision": "place",
+    "place_ar": "سان كريستوبال دي لا لاغونا",
+    "place_en": "San Cristóbal de La Laguna"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -16.3167,
+     28.4853
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q115800039",
+    "kind": "epidemic",
+    "year": 1599,
+    "name_ar": null,
+    "name_en": "1599 Logroño plague",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "لوغرونيو",
+    "place_en": "Logroño"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.4456,
+     42.47
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q116188912",
+    "kind": "epidemic",
+    "year": 1603,
+    "name_ar": null,
+    "name_en": "1603 London plague",
+    "desc_en": "London plague 1603",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1603 London plague",
+    "precision": "place",
+    "place_ar": "لندن",
+    "place_en": "London"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1275,
+     51.5072
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q4142066",
+    "kind": "famine",
+    "year": 1612,
+    "name_ar": null,
+    "name_en": "1612 Moscow famine",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "موسكو",
+    "place_en": "Moscow"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     37.6175,
+     55.7506
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q141630395",
+    "kind": "epidemic",
+    "year": 1624,
+    "name_ar": null,
+    "name_en": "plague in Palermo in 1624-1625",
+    "desc_en": "plague",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "باليرمو",
+    "place_en": "Palermo"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.3613,
+     38.1157
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q3307987",
+    "kind": "epidemic",
+    "year": 1625,
+    "name_ar": "الطاعون الإيطالي 1629–1631",
+    "name_en": "Italian Plague of 1629-1631",
+    "desc_en": "series of outbreaks of bubonic plague in northern and central Italy",
+    "desc_ar": null,
+    "arwiki": "الطاعون الإيطالي 1629–1631",
+    "enwiki": "1629–1631 Italian plague",
+    "precision": "place",
+    "place_ar": "شبه الجزيرة الإيطالية",
+    "place_en": "Italian Peninsula"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14,
+     42
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q104892373",
+    "kind": "epidemic",
+    "year": 1633,
+    "name_ar": null,
+    "name_en": "Great Plague in late Ming Dynasty",
+    "desc_en": "disease outbreak in China",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Great Plague in the late Ming dynasty",
+    "precision": "place",
+    "place_ar": "شانشي",
+    "place_en": "Shanxi"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     112.5644,
+     37.8733
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q5599762",
+    "kind": "epidemic",
+    "year": 1647,
+    "name_ar": "طاعون إشبيلية العظيم",
+    "name_en": "Great Plague of Seville",
+    "desc_en": "massive outbreak of the disease in Spain that killed up to a quarter of Seville's population",
+    "desc_ar": null,
+    "arwiki": "طاعون إشبيلية العظيم",
+    "enwiki": "Great Plague of Seville",
+    "precision": "place",
+    "place_ar": "إشبيلية",
+    "place_en": "Seville"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.995,
+     37.3886
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q129177598",
+    "kind": "epidemic",
+    "year": 1648,
+    "name_ar": null,
+    "name_en": "1648 Cartagena plague epidemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "قرطاجنة",
+    "place_en": "Cartagena"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.9842,
+     37.6019
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q917048",
+    "kind": "epidemic",
+    "year": 1665,
+    "name_ar": "طاعون لندن العظيم",
+    "name_en": "Great Plague of London",
+    "desc_en": "pandemic lasting from 1665 to 1666, last major epidemic of the bubonic plague to occur in England",
+    "desc_ar": null,
+    "arwiki": "طاعون لندن العظيم",
+    "enwiki": "Great Plague of London",
+    "precision": "place",
+    "place_ar": "لندن",
+    "place_en": "London"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1275,
+     51.5072
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q448015",
+    "kind": "epidemic",
+    "year": 1679,
+    "name_ar": null,
+    "name_en": "Great Plague of Vienna",
+    "desc_en": "epidemic",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Great Plague of Vienna",
+    "precision": "place",
+    "place_ar": "فيينا",
+    "place_en": "Vienna"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.3725,
+     48.2083
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q1936002",
+    "kind": "epidemic",
+    "year": 1720,
+    "name_ar": "طاعون مرسيليا العظيم",
+    "name_en": "Great Plague of Marseille",
+    "desc_en": "Last major outbreak in western Europe.",
+    "desc_ar": "طاعون وقع في فرنسا عام 1720",
+    "arwiki": "طاعون مرسيليا العظيم",
+    "enwiki": "Great Plague of Marseille",
+    "precision": "place",
+    "place_ar": "مرسيليا",
+    "place_en": "Marseille"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.3764,
+     43.2967
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q27926964",
+    "kind": "epidemic",
+    "year": 1721,
+    "name_ar": null,
+    "name_en": "Boston smallpox epidemic of 1721",
+    "desc_en": "epidemic",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1721 Boston smallpox outbreak",
+    "precision": "place",
+    "place_ar": "بوسطن",
+    "place_en": "Boston"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.0578,
+     42.3603
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q5599759",
+    "kind": "epidemic",
+    "year": 1737,
+    "name_ar": "الطاعون العظيم 1738",
+    "name_en": "Great Plague of 1738",
+    "desc_en": "Historical event related to an outbreak of bubonic plague in the Balkan Peninsula",
+    "desc_ar": null,
+    "arwiki": "الطاعون العظيم 1738",
+    "enwiki": "Great Plague of 1738",
+    "precision": "place",
+    "place_ar": "البلقان",
+    "place_en": "Balkans"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22,
+     42
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q55533340",
+    "kind": "famine",
+    "year": 1755,
+    "name_ar": null,
+    "name_en": "Hōreki famine",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "منطقة توهوكو",
+    "place_en": "Tōhoku region"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     140.67,
+     38.9
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q2477522",
+    "kind": "famine",
+    "year": 1767,
+    "name_ar": "مجاعة البنغال 1770",
+    "name_en": "Great Bengal famine of 1770",
+    "desc_en": "famine affecting lower regions of India in 1770",
+    "desc_ar": "مجاعة كارثية وقعت بين 1769 و 1773 تسببت بوفاة 10 ملايين من الأشخاص",
+    "arwiki": "مجاعة البنغال 1770",
+    "enwiki": "Great Bengal famine of 1770",
+    "precision": "event",
+    "place_ar": "بنغال",
+    "place_en": "Bengal"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     88.7311,
+     23.9888
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q9030108",
+    "kind": "famine",
+    "year": 1782,
+    "name_ar": null,
+    "name_en": "Tenmei famine",
+    "desc_en": "famine which affected Japan during the Edo period",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Great Tenmei famine",
+    "precision": "place",
+    "place_ar": "اليابان",
+    "place_en": "Japan"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     136,
+     35
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q3481593",
+    "kind": "famine",
+    "year": 1783,
+    "name_ar": null,
+    "name_en": "Mist Hardships",
+    "desc_en": "disastrous effects of the eruption of Mount Laki on the people of Iceland",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Móðuharðindin",
+    "precision": "place",
+    "place_ar": null,
+    "place_en": "Iceland"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -18.2367,
+     65.0291
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q8051732",
+    "kind": "epidemic",
+    "year": 1793,
+    "name_ar": "وباء الحمى الصفراء في فيلاديلفيا عام 1793",
+    "name_en": "1793 Philadelphia yellow fever epidemic",
+    "desc_en": "epidemic in the United States",
+    "desc_ar": null,
+    "arwiki": "وباء الحمى الصفراء في فيلاديلفيا عام 1793",
+    "enwiki": "1793 Philadelphia yellow fever epidemic",
+    "precision": "event",
+    "place_ar": "فيلادلفيا",
+    "place_en": "Philadelphia"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.14,
+     39.951
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q2925345",
+    "kind": "epidemic",
+    "year": 1793,
+    "name_ar": null,
+    "name_en": "Brigantine",
+    "desc_en": "alleged epidemic during the French Revolution",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "لو مان",
+    "place_en": "Le Mans"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1969,
+     48.0042
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q129092955",
+    "kind": "epidemic",
+    "year": 1804,
+    "name_ar": null,
+    "name_en": "1804 Cartagena yellow fever epidemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "قرطاجنة",
+    "place_en": "Cartagena"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.9842,
+     37.6019
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q96359686",
+    "kind": "epidemic",
+    "year": 1812,
+    "name_ar": "وباء الطاعون العثماني 1812-1819",
+    "name_en": "Ottoman plague of 1812–19",
+    "desc_en": "disease outbreak",
+    "desc_ar": null,
+    "arwiki": "وباء الطاعون العثماني 1812-1819",
+    "enwiki": "1812–1819 Ottoman plague epidemic",
+    "precision": "place",
+    "place_ar": "القسطنطينية",
+    "place_en": "Constantinople"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.976,
+     41.0122
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q87720284",
+    "kind": "epidemic",
+    "year": 1821,
+    "name_ar": null,
+    "name_en": "1821 Barcelona yellow fever epidemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "event",
+    "place_ar": "برشلونة",
+    "place_en": "Barcelona"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.1769,
+     41.3825
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q2361458",
+    "kind": "epidemic",
+    "year": 1826,
+    "name_ar": "وباء خرونينغن",
+    "name_en": "Groningen epidemic",
+    "desc_en": "1826 malaria epidemic",
+    "desc_ar": null,
+    "arwiki": "وباء خرونينغن",
+    "enwiki": "Groningen epidemic",
+    "precision": "event",
+    "place_ar": "خَرُنِنغِن",
+    "place_en": "Groningen"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.5675,
+     53.2189
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q116291690",
+    "kind": "epidemic",
+    "year": 1832,
+    "name_ar": null,
+    "name_en": "Cholera in Paris 1832",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "باريس",
+    "place_en": "Paris"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3522,
+     48.8567
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q2517808",
+    "kind": "famine",
+    "year": 1833,
+    "name_ar": "مجاعة تنبو",
+    "name_en": "Tenpō famine",
+    "desc_en": "famine which affected Japan during the Edo period",
+    "desc_ar": null,
+    "arwiki": "مجاعة تنبو",
+    "enwiki": "Tenpō famine",
+    "precision": "place",
+    "place_ar": "اليابان",
+    "place_en": "Japan"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     136,
+     35
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q88340303",
+    "kind": "epidemic",
+    "year": 1834,
+    "name_ar": null,
+    "name_en": "1834 Catalan cholera epidemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "قطلونية",
+    "place_en": "Catalonia"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.5667,
+     41.85
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q93506197",
+    "kind": "epidemic",
+    "year": 1834,
+    "name_ar": null,
+    "name_en": null,
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "ستوكهولم",
+    "place_en": "Stockholm"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.0686,
+     59.3294
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q4554489",
+    "kind": "epidemic",
+    "year": 1837,
+    "name_ar": "وباء الجدري 1837-1838",
+    "name_en": "1837–1838 smallpox epidemic",
+    "desc_en": "disease outbreak in the United States",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1837 Great Plains smallpox epidemic",
+    "precision": "event",
+    "place_ar": null,
+    "place_en": null
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97,
+     37
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q188371",
+    "kind": "famine",
+    "year": 1845,
+    "name_ar": "مجاعة أيرلندا الكبرى",
+    "name_en": "Great Irish Famine",
+    "desc_en": "1845–1852 famine in Ireland",
+    "desc_ar": "مجاعة البطاطا في إيرلندا بين 1845م و 1852م",
+    "arwiki": "مجاعة أيرلندا الكبرى",
+    "enwiki": "Great Famine (Ireland)",
+    "precision": "event",
+    "place_ar": "أيرلندا",
+    "place_en": "Ireland"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -7.921,
+     53.351
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q3066269",
+    "kind": "famine",
+    "year": 1846,
+    "name_ar": null,
+    "name_en": "Highland Potato Famine",
+    "desc_en": "major agrarian crisis in the Scottish Highlands from 1846 to 1857",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Highland Potato Famine",
+    "precision": "place",
+    "place_ar": "مرتفعات إسكتلندا",
+    "place_en": "Scottish Highlands"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.71,
+     57.12
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q123007605",
+    "kind": "epidemic",
+    "year": 1847,
+    "name_ar": null,
+    "name_en": "Pacific Northwest Measles Epidemic of 1847-1848",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "إقليم الشمال الغربي الهادئ",
+    "place_en": "Pacific Northwest"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.3223,
+     45.8288
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q8051877",
+    "kind": "epidemic",
+    "year": 1852,
+    "name_ar": null,
+    "name_en": "yellow fever in Buenos Aires",
+    "desc_en": "series of yellow fever epidemics in 1852, 1858, 1870, and 1871 in Argentina",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Yellow fever in Buenos Aires",
+    "precision": "event",
+    "place_ar": "بوينس آيرس",
+    "place_en": "Buenos Aires Province"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -60,
+     -37
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q4554867",
+    "kind": "epidemic",
+    "year": 1853,
+    "name_ar": null,
+    "name_en": "1853 Copenhagen cholera outbreak",
+    "desc_en": "cholera pandemic in Denmark",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1853 Copenhagen cholera outbreak",
+    "precision": "place",
+    "place_ar": "كوبنهاغن",
+    "place_en": "Copenhagen"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.5689,
+     55.6761
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q93506189",
+    "kind": "epidemic",
+    "year": 1853,
+    "name_ar": null,
+    "name_en": "1853 Stockholm cholera outbreak",
+    "desc_en": "19th-century disease outbreak in Sweden",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1853 Stockholm cholera outbreak",
+    "precision": "place",
+    "place_ar": "ستوكهولم",
+    "place_en": "Stockholm"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.0686,
+     59.3294
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q2035019",
+    "kind": "epidemic",
+    "year": 1854,
+    "name_ar": "تفشي وباء الكوليرا في شارع برود عام 1854",
+    "name_en": "1854 Broad Street cholera outbreak",
+    "desc_en": "Severe outbreak of cholera that occurred in London in 1854",
+    "desc_ar": "تفشي شديد حدث سنة 1854 بالقرب من شارع برود",
+    "arwiki": "تفشي وباء الكوليرا في شارع برود عام 1854",
+    "enwiki": "1854 Broad Street cholera outbreak",
+    "precision": "event",
+    "place_ar": "سوهو، لندن",
+    "place_en": "Soho"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1367,
+     51.5133
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q97196656",
+    "kind": "epidemic",
+    "year": 1854,
+    "name_ar": null,
+    "name_en": "1854 Catalan cholera epidemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "قطلونية",
+    "place_en": "Catalonia"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.5667,
+     41.85
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q1259178",
+    "kind": "epidemic",
+    "year": 1855,
+    "name_ar": "الوباء الثالث",
+    "name_en": "third plague pandemic",
+    "desc_en": "bubonic plague pandemic that began in Yunnan province in China in 1855",
+    "desc_ar": null,
+    "arwiki": "الوباء الثالث",
+    "enwiki": "Third plague pandemic",
+    "precision": "place",
+    "place_ar": "يونان",
+    "place_en": "Yunnan"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     102.7089,
+     25.0494
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q23542884",
+    "kind": "epidemic",
+    "year": 1857,
+    "name_ar": null,
+    "name_en": null,
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "مونتفيدو",
+    "place_en": "Montevideo"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.1913,
+     -34.9059
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q7898614",
+    "kind": "famine",
+    "year": 1860,
+    "name_ar": null,
+    "name_en": "Upper Doab famine of 1860–1861",
+    "desc_en": "famine in India",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Upper Doab famine of 1860–1861",
+    "precision": "place",
+    "place_ar": null,
+    "place_en": "Ganges–Yamuna Doab"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     81.88,
+     25.42
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q5476234",
+    "kind": "epidemic",
+    "year": 1863,
+    "name_ar": "وباء الكوليرا الرابع",
+    "name_en": "fourth cholera pandemic",
+    "desc_en": "One of several 19th century epidemics",
+    "desc_ar": null,
+    "arwiki": "وباء الكوليرا الرابع",
+    "enwiki": "1863–1875 cholera pandemic",
+    "precision": "place",
+    "place_ar": null,
+    "place_en": "Ganges Delta"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     89.6667,
+     22.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q55683520",
+    "kind": "famine",
+    "year": 1867,
+    "name_ar": "المجاعة السويدية 1867-1869",
+    "name_en": "Swedish famine of 1867-1869",
+    "desc_en": "famine in northern Europe",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Swedish famine of 1867–1869",
+    "precision": "place",
+    "place_ar": "السويد",
+    "place_en": "Sweden"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15,
+     61
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q59466726",
+    "kind": "epidemic",
+    "year": 1870,
+    "name_ar": null,
+    "name_en": "1870 Barcelona yellow fever epidemic",
+    "desc_en": "disease outbreak in Barcelona, Spain",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1870 Barcelona yellow fever epidemic",
+    "precision": "event",
+    "place_ar": "برشلونة",
+    "place_en": "Barcelona"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.1769,
+     41.3825
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q112127821",
+    "kind": "epidemic",
+    "year": 1871,
+    "name_ar": null,
+    "name_en": "1871-1873 Baltimore smallpox epidemic",
+    "desc_en": "outbreak of smallpox in Baltimore",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "بلتيمور",
+    "place_en": "Baltimore"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.615,
+     39.2864
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q138819714",
+    "kind": "epidemic",
+    "year": 1875,
+    "name_ar": null,
+    "name_en": "Measles Epidemic at Fiji",
+    "desc_en": "Fiji measles epidemic of 1875",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Fiji measles epidemic of 1875",
+    "precision": "place",
+    "place_ar": "فيجي",
+    "place_en": "Fiji"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     178,
+     -18
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q138130929",
+    "kind": "epidemic",
+    "year": 1876,
+    "name_ar": null,
+    "name_en": "1876 yellow fever epidemic",
+    "desc_en": "disease outbreak in Savannah, Georgia, United States",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1876 yellow fever epidemic",
+    "precision": "place",
+    "place_ar": "سافانا",
+    "place_en": "Savannah"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.1039,
+     32.0508
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q106574817",
+    "kind": "epidemic",
+    "year": 1878,
+    "name_ar": null,
+    "name_en": "Lower Mississippi Valley yellow fever epidemic of 1878",
+    "desc_en": "disease outbreak in the United States",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Lower Mississippi Valley yellow fever epidemic of 1878",
+    "precision": "place",
+    "place_ar": "ممفيس",
+    "place_en": "Memphis"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.0519,
+     35.1461
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q493814",
+    "kind": "famine",
+    "year": 1879,
+    "name_ar": null,
+    "name_en": "1879 Irish Famine",
+    "desc_en": "1879 famine in Ireland",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Irish Famine (1879)",
+    "precision": "event",
+    "place_ar": null,
+    "place_en": null
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.05,
+     53.78
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q5447588",
+    "kind": "epidemic",
+    "year": 1881,
+    "name_ar": "وباء الكوليرا الخامس",
+    "name_en": "fifth cholera pandemic",
+    "desc_en": "fifth major international outbreak of cholera in the 19th century",
+    "desc_ar": null,
+    "arwiki": "وباء الكوليرا الخامس",
+    "enwiki": "1881–1896 cholera pandemic",
+    "precision": "place",
+    "place_ar": null,
+    "place_en": "Ganges Delta"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     89.6667,
+     22.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q112128752",
+    "kind": "epidemic",
+    "year": 1882,
+    "name_ar": null,
+    "name_en": "1882-1883 Baltimore smallpox epidemic",
+    "desc_en": "outbreak of smallpox in Baltimore",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "بلتيمور",
+    "place_en": "Baltimore"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.615,
+     39.2864
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q130248460",
+    "kind": "epidemic",
+    "year": 1885,
+    "name_ar": null,
+    "name_en": "1885 Cartagena cholera epidemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "قرطاجنة",
+    "place_en": "Cartagena"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.9842,
+     37.6019
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q28502990",
+    "kind": "epidemic",
+    "year": 1885,
+    "name_ar": null,
+    "name_en": "1885 Zaragoza cholera epidemic",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "سرقسطة",
+    "place_en": "Zaragoza Province"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1,
+     41.5833
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q877958",
+    "kind": "epidemic",
+    "year": 1892,
+    "name_ar": null,
+    "name_en": "1892 Hamburg cholera epidemic",
+    "desc_en": "epidemic",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "هامبورغ",
+    "place_en": "Hamburg"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10,
+     53.55
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q1470579",
+    "kind": "epidemic",
+    "year": 1894,
+    "name_ar": null,
+    "name_en": "Otter Valley polio epidemic",
+    "desc_en": "epidemic in Rutland, Vermont",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "روتلاند",
+    "place_en": "Rutland"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.9797,
+     43.6089
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q93509226",
+    "kind": "epidemic",
+    "year": 1896,
+    "name_ar": null,
+    "name_en": "1896 Gloucester smallpox epidemic",
+    "desc_en": "disease outbreak in Gloucester, England",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1896 Gloucester smallpox epidemic",
+    "precision": "place",
+    "place_ar": "غلوستر",
+    "place_en": "Gloucester"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.2458,
+     51.8653
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q4940602",
+    "kind": "epidemic",
+    "year": 1896,
+    "name_ar": null,
+    "name_en": "Bombay plague epidemic",
+    "desc_en": "Bubonic plague epidemic in Bombay, India",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Bombay plague epidemic",
+    "precision": "place",
+    "place_ar": "مومباي",
+    "place_en": "Mumbai"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.8775,
+     19.0758
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q96360043",
+    "kind": "epidemic",
+    "year": 1899,
+    "name_ar": null,
+    "name_en": "1899 Porto plague outbreak",
+    "desc_en": "late 19th-century epidemic in Portugal",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1899 Porto plague outbreak",
+    "precision": "place",
+    "place_ar": "بورتو",
+    "place_en": "Porto"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6108,
+     41.15
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q1637884",
+    "kind": "famine",
+    "year": 1899,
+    "name_ar": null,
+    "name_en": "Central Kenya famine of 1899",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1899 famine in central Kenya",
+    "precision": "place",
+    "place_ar": "محمية شرق إفريقيا",
+    "place_en": "East Africa Protectorate"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.6667,
+     -4.05
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q7533201",
+    "kind": "epidemic",
+    "year": 1899,
+    "name_ar": "وباء الكوليرا السادس",
+    "name_en": "sixth cholera pandemic",
+    "desc_en": "historically sixth cholera pandemic",
+    "desc_ar": null,
+    "arwiki": "وباء الكوليرا السادس",
+    "enwiki": "1899–1923 cholera pandemic",
+    "precision": "place",
+    "place_ar": "الراج البريطاني",
+    "place_en": "British Raj"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     88.3378,
+     22.5411
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q45819176",
+    "kind": "epidemic",
+    "year": 1900,
+    "name_ar": null,
+    "name_en": "Malayan filariasis in Hachijo-Kojima Island",
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "event",
+    "place_ar": null,
+    "place_en": null
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6881,
+     33.1256
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q7414187",
+    "kind": "epidemic",
+    "year": 1900,
+    "name_ar": null,
+    "name_en": "San Francisco plague of 1900–1904",
+    "desc_en": "early 20th-century epidemic in the USA",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1900–1904 San Francisco plague",
+    "precision": "place",
+    "place_ar": "سان فرانسيسكو",
+    "place_en": "San Francisco"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.4194,
+     37.775
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q110614024",
+    "kind": "epidemic",
+    "year": 1915,
+    "name_ar": null,
+    "name_en": "Encephalitis lethargica epidemic of 1915-1926",
+    "desc_en": "epidemic in the early 20th century",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "فيينا",
+    "place_en": "Vienna"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.3725,
+     48.2083
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q19544704",
+    "kind": "famine",
+    "year": 1915,
+    "name_ar": "مجاعة جبل لبنان",
+    "name_en": "Great Famine of Mount Lebanon",
+    "desc_en": "1915–1918 famine in Mount Lebanon area",
+    "desc_ar": null,
+    "arwiki": "مجاعة جبل لبنان",
+    "enwiki": "Great Famine of Mount Lebanon",
+    "precision": "place",
+    "place_ar": "متصرفية جبل لبنان",
+    "place_en": "mutasarrifate of Mount Lebanon"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.7667,
+     33.8333
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q104126427",
+    "kind": "epidemic",
+    "year": 1920,
+    "name_ar": null,
+    "name_en": null,
+    "desc_en": null,
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": null,
+    "precision": "place",
+    "place_ar": "باريس",
+    "place_en": "Paris"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3522,
+     48.8567
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q2172846",
+    "kind": "famine",
+    "year": 1921,
+    "name_ar": "المجاعة الروسية لعام 1921",
+    "name_en": "Russian famine of 1921",
+    "desc_en": "part of the Russian man-made famine of 1921-23 in the Volga region",
+    "desc_ar": null,
+    "arwiki": "المجاعة الروسية لعام 1921",
+    "enwiki": "Russian famine of 1921–1922",
+    "precision": "place",
+    "place_ar": null,
+    "place_en": "Volga Region"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     50,
+     55
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q17107868",
+    "kind": "epidemic",
+    "year": 1924,
+    "name_ar": null,
+    "name_en": "1924 Los Angeles pneumonic plague outbreak",
+    "desc_en": "disease outbreak in Los Angeles, California",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "1924 Los Angeles pneumonic plague outbreak",
+    "precision": "place",
+    "place_ar": "لوس أنجلوس",
+    "place_en": "Los Angeles"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.2437,
+     34.0522
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q26971",
+    "kind": "famine",
+    "year": 1928,
+    "name_ar": null,
+    "name_en": "Chinese famine of 1928–1930",
+    "desc_en": "famine in the Republic of China",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Chinese famine of 1928–1930",
+    "precision": "place",
+    "place_ar": "الصين التاريخية",
+    "place_en": "China"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     105,
+     35
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q165058",
+    "kind": "famine",
+    "year": 1932,
+    "name_ar": "هولودومور",
+    "name_en": "Holodomor",
+    "desc_en": "man-made famine in Soviet Ukraine in 1932–33 that killed as many as seven million Ukrainians",
+    "desc_ar": "الإبادة الجماعية للشعب الأوكراني من قبل قيادة الحزب الشيوعي (ب) وحكومة الاتحاد السوفياتي في 1932-1933 ، منظمة تجويع جماعي مصطنع",
+    "arwiki": "هولودومور",
+    "enwiki": "Holodomor",
+    "precision": "event",
+    "place_ar": "جمهورية أوكرانيا الاشتراكية السوفيتية",
+    "place_en": "Ukrainian Soviet Socialist Republic"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32,
+     49
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q11141749",
+    "kind": "famine",
+    "year": 1942,
+    "name_ar": null,
+    "name_en": "Chinese famine of 1942-43",
+    "desc_en": "1942-1943 famine in Henan, China",
+    "desc_ar": null,
+    "arwiki": null,
+    "enwiki": "Chinese famine of 1942–1943",
+    "precision": "place",
+    "place_ar": "خنان",
+    "place_en": "Henan"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     113.5,
+     33.9
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q522837",
+    "kind": "famine",
+    "year": 1943,
+    "name_ar": "مجاعة البنغال 1943",
+    "name_en": "Bengal famine of 1943",
+    "desc_en": "Famine in British India during World War II",
+    "desc_ar": "مجاعة كبرى في مقاطعة البنغال في الهند خلال الحرب العالمية الثانية",
+    "arwiki": "مجاعة البنغال 1943",
+    "enwiki": "Bengal famine of 1943",
+    "precision": "event",
+    "place_ar": "بنغال",
+    "place_en": "Bengal"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     88.7311,
+     23.9888
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "Q55627151",
+    "kind": "famine",
+    "year": 1949,
+    "name_ar": "مجاعة نياسالاند 1949",
+    "name_en": "Nyasaland Famine 1949",
+    "desc_en": "Famine in protectorate of Nyasaland",
+    "desc_ar": null,
+    "arwiki": "مجاعة نياسالاند 1949",
+    "enwiki": "Nyasaland famine of 1949",
+    "precision": "event",
+    "place_ar": null,
+    "place_en": "Shire Highlands"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.1256,
+     -15.6468
+    ]
+   }
+  }
+ ]
+}

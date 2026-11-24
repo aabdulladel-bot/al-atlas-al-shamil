@@ -713,6 +713,29 @@
       }
     },
     {
+      "id": "wikidata-crises",
+      "file": "data/raw/wikidata/crises_qlever_raw.json",
+      "url": "https://qlever.dev/api/wikidata (SPARQL، نسخة من ويكي بيانات)",
+      "license": "CC0 1.0 (Wikidata)",
+      "tier": "A",
+      "landing": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "attribution": "Wikidata (CC0)",
+      "note": "استعلام الأوبئة والمجاعات قبل الحاضر، خامّاً كما أعاده الاستعلام، ويُبنى منه web/data/crises.json بلا شبكة.",
+      "status": "ok",
+      "files": [
+        {
+          "file": "data/raw/wikidata/crises_qlever_raw.json",
+          "sha256": "6e73bfe1e3c8e1a29d1af07d4a15945ce4577a2f87924b24f79c94717ed8cbfd",
+          "bytes": 306184
+        }
+      ],
+      "license_verified_at": "2026-11-24",
+      "license_evidence": {
+        "url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+        "quote": "All data in Wikidata has a CC0 license."
+      }
+    },
+    {
       "id": "smith-wealth-oup1904-vol1",
       "file": "verification/era7/smith_oup1904_vol1.txt",
       "url": "https://archive.org/stream/inquiryintonatur01smit_3/inquiryintonatur01smit_3_djvu.txt",
