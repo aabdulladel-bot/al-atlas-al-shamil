@@ -1681,10 +1681,17 @@ function gradeDetails(id) {
   const g = gradeOf(id);
   if (!g) return "";
   const sc = gradingData.scale;
-  const draft = g.status !== "reviewed" || g.src_status !== "reviewed";
+  // الحالة المعروضة أضعف الحالتين (المصدر والمعلومة): مسودة، ثم مراجعة مفوَّضة، ثم مراجعة صاحب المشروع
+  const RANK = { model_draft: 0, delegated_review: 1, reviewed: 2 };
+  const status = (RANK[g.status] ?? 0) <= (RANK[g.src_status] ?? 0) ? g.status : g.src_status;
+  const rev = (r, what) => !r ? "" : r.agree
+    ? `<li class="sub">${what}: اتفق التقييمان المستقلان.</li>`
+    : `<li class="sub">${what}: قدّر التقييم الثاني <b dir="ltr">${escapeHtml(r.second)}</b>، والحسم: ${escapeHtml(r.resolution)}</li>`;
+  const s = gradingData.sources[g.source];
   return `<details class="grade-why"><summary>التقييم <b dir="ltr">${g.src}${g.info}</b>: ${escapeHtml(gradeLabel(g))}</summary>` +
     `<ul class="gap-list"><li><b>المصدر (${g.src}):</b> ${escapeHtml(g.src_why)}</li><li><b>المعلومة (${g.info}):</b> ${escapeHtml(g.why)}</li>` +
-    `<li>${escapeHtml(sc.scope_note[g.scope])}.</li></ul>${draft ? `<p class="sub">${escapeHtml(sc.status.model_draft)}.</p>` : ""}</details>`;
+    `<li>${escapeHtml(sc.scope_note[g.scope])}.</li>${rev(s?.review, "المصدر")}${rev(g.review, "المعلومة")}</ul>` +
+    `<p class="sub">${escapeHtml(sc.status[status] ?? sc.status.model_draft)}.</p></details>`;
 }
 function claimHtml(c, extra = "") {
   return `<div class="ev ${extra}">${escapeHtml(c.statement)}${domainChips(c.id)}${gradeChip(c.id)}` +
@@ -2641,7 +2648,8 @@ function assessmentHtml(s) {
     `<p class="assess-why">${escapeHtml(a.why)}</p>` +
     `<details class="research-only"><summary class="sub">الافتراضات وأساس الثقة</summary><ul class="gap-list">${a.assumptions.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>` +
     `<p class="sub">أساس الثقة: ${fmtInt(b.facts)} وقائع مرجّحة أو مؤكدة، و${fmtInt(b.views)} آراء موافقة لا تُحسب وقائع، و${fmtInt(b.limiting)} مقيِّد، و${fmtInt(b.quant_decisive)} من ${fmtInt(b.quant_total)} اختبار كمي حاسم. القاعدة: ${escapeHtml(est?.confidence?.[a.confidence]?.rule ?? "")}.</p></details>` +
-    (a.status !== "reviewed" ? `<p class="sub">تقدير مقترح من النموذج لم يراجعه صاحب المشروع.</p>` : "") + `</div>`;
+    (a.review ? `<p class="sub">${a.review.agree ? "اتفق التقديران المستقلان." : `قدّر التقدير الثاني «${escapeHtml(a.review.second_ar)}»، والحسم: ${escapeHtml(a.review.resolution)}`}</p>` : "") +
+    `<p class="sub">${escapeHtml(est?.status?.[a.status] ?? "")}.</p></div>`;
 }
 function renderSunna(s, placesLinked) {
   const khaldun = s.khaldun.map((k) => `<div class="khaldun">«${escapeHtml(k.quote)}»<div class="sub">ابن خلدون، المقدمة: ${escapeHtml(k.location)}</div></div>`).join("");

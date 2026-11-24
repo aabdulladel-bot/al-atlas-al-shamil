@@ -17,7 +17,7 @@
       "domains": [
         "society"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -30,9 +30,10 @@
       "hedge": "قاعدة يصوغها توكفيل بنفسه عن المجتمعات الديمقراطية، وهي فرضية لم يختبرها بقياس",
       "chapter": "Democracy in America, Part II",
       "domains": [
-        "society"
+        "society",
+        "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -48,7 +49,7 @@
         "society",
         "culture"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -65,7 +66,7 @@
         "society",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -79,9 +80,10 @@
       "chapter": "Democracy in America, Part II",
       "domains": [
         "society",
-        "economy"
+        "economy",
+        "culture"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -96,7 +98,7 @@
       "domains": [
         "knowledge"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -112,7 +114,7 @@
         "knowledge",
         "population"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -127,7 +129,7 @@
       "domains": [
         "knowledge"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -143,7 +145,7 @@
         "knowledge",
         "population"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -159,7 +161,7 @@
         "society",
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -173,9 +175,10 @@
       "chapter": "I. Bourgeois and Proletarians",
       "domains": [
         "economy",
-        "industry"
+        "industry",
+        "society"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -191,7 +194,7 @@
         "society",
         "culture"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -207,7 +210,7 @@
         "economy",
         "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -223,7 +226,7 @@
         "economy",
         "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -239,7 +242,7 @@
         "politics",
         "society"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -255,7 +258,7 @@
         "politics",
         "war"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -271,7 +274,7 @@
         "politics",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -287,7 +290,7 @@
         "politics",
         "society"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -304,7 +307,7 @@
         "trade",
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -321,7 +324,7 @@
         "economy",
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -337,7 +340,7 @@
         "economy",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -354,7 +357,7 @@
         "society",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -368,9 +371,10 @@
       "chapter": "Book II, Chapter III: Of the Accumulation of Capital, or of productive and unproductive Labour",
       "domains": [
         "economy",
-        "politics"
+        "politics",
+        "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     }
   ]

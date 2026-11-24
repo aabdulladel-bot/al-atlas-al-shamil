@@ -15,7 +15,7 @@ const sourceGrades = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/so
 const claimGrades = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/claim_grades.json"), "utf8")).claims;
 const gradeOf = (c, sid) => {
   const g = claimGrades[c.id];
-  return g && sourceGrades[sid] ? { source: sid, info: g.info, scope: g.scope, why: g.why, status: g.status } : null;
+  return g && sourceGrades[sid] ? { source: sid, info: g.info, scope: g.scope, why: g.why, status: g.status, ...(g.review ? { review: g.review } : {}) } : null;
 };
 const index = [];
 const grades = {};
@@ -58,7 +58,7 @@ const shownIds = new Set();
 for (const era of claimEras(ROOT)) for (const c of JSON.parse(fs.readFileSync(path.join(OUT, `claims_era${era}.json`), "utf8")).claims) shownIds.add(c.id);
 const domClaims = Object.fromEntries(Object.entries(domainsOf).filter(([id]) => shownIds.has(id)).map(([id, v]) => [id, v.domains]));
 const counts = Object.fromEntries(taxonomy.map((d) => [d.id, Object.values(domClaims).filter((ds) => ds.includes(d.id)).length]));
-fs.writeFileSync(path.join(OUT, "domains.json"), JSON.stringify({ _meta: { source: "scripts/config/domains.json وverification/claim_domains.json", status: "تصنيف مسودة من النموذج حتى يراجعه صاحب المشروع" }, domains: taxonomy, counts, claims: domClaims }) + "\n");
+fs.writeFileSync(path.join(OUT, "domains.json"), JSON.stringify({ _meta: { source: "scripts/config/domains.json وverification/claim_domains.json", status: "تصنيف بمراجعة مفوَّضة إلى النموذج بتكليف صاحب المشروع: تصنيفان مستقلان والحسم بقاعدة مكتوبة (verification/REVIEW_2026-11-24.md)" }, domains: taxonomy, counts, claims: domClaims }) + "\n");
 console.log(`المجالات: ${Object.keys(domClaims).length} ادعاء مصنّف`);
 // مقياس التقييم للواجهة (scripts/config/admiralty.json)
 // ودرجة كل ادعاء معروض بمعرّفه، فتجدها كل بطاقة أياً كان طريق الادعاء إليها (الحقب، والمواضع، والسنن، والروابط المكانية)

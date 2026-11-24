@@ -98,7 +98,7 @@ function assess(s, supporting, limiting, quant) {
   const basis = { facts, views, limiting: limiting.length, quant_total: quant.length, quant_decisive: quant.filter((q) => isDecisive(q.verdict)).length };
   if (a.likelihood === "unassessed") {
     if (supporting.length) errors.push(`${s.id}: لها شواهد مؤيدة ولم تُقدَّر`);
-    return { likelihood: "unassessed", likelihood_ar: EST.unassessed, why: a.why, assumptions: [], confidence: null, basis, status: a.status };
+    return { likelihood: "unassessed", likelihood_ar: EST.unassessed, why: a.why, assumptions: [], confidence: null, basis, status: a.status, ...(a.review ? { review: { ...a.review, second_ar: a.review.second === "unassessed" ? EST.unassessed : LK.get(a.review.second)?.ar ?? a.review.second } } : {}) };
   }
   const L = LK.get(a.likelihood);
   if (!L) { errors.push(`${s.id}: احتمال خارج المقياس ${a.likelihood}`); return null; }
@@ -108,7 +108,9 @@ function assess(s, supporting, limiting, quant) {
   // اتساق الحكم مع الاختبار الكمي: ما لا يؤيده اختبار لا يُرجَّح، وما يؤيده كل اختبار لا يُستبعد
   if (quant.some((q) => q.verdict === "لا يؤيد") && L.rank > EVEN) errors.push(`${s.id}: «${L.ar}» واختبار كمي لا يؤيدها`);
   if (quant.length && quant.every((q) => q.verdict.startsWith("يؤيد")) && L.rank < LIKELY) errors.push(`${s.id}: «${L.ar}» وكل اختباراتها الكمية تؤيدها`);
-  return { likelihood: L.id, likelihood_ar: L.ar, range: L.range, confidence, confidence_ar: EST.confidence[confidence].ar, basis, why: a.why, assumptions: a.assumptions, status: a.status };
+  if (!EST.status[a.status]) errors.push(`${s.id}: حالة تقدير غير معروفة ${a.status}`);
+  const review = a.review ? { ...a.review, second_ar: a.review.second === "unassessed" ? EST.unassessed : LK.get(a.review.second)?.ar ?? a.review.second } : null;
+  return { likelihood: L.id, likelihood_ar: L.ar, range: L.range, confidence, confidence_ar: EST.confidence[confidence].ar, basis, why: a.why, assumptions: a.assumptions, status: a.status, ...(review ? { review } : {}) };
 }
 
 const out = [];
@@ -131,5 +133,5 @@ for (const s of cfg.sunan) {
 }
 
 if (errors.length) { console.error("أخطاء:\n" + errors.join("\n")); process.exit(1); }
-fs.writeFileSync(path.join(ROOT, "web/data/sunan.json"), JSON.stringify({ _meta: { note: cfg._note, count: out.length, quantitative_source: seshat ? seshat._source : null, estimative: { proposition: EST.proposition, likelihood: EST.likelihood, confidence: EST.confidence } }, sunan: out }, null, 2) + "\n");
+fs.writeFileSync(path.join(ROOT, "web/data/sunan.json"), JSON.stringify({ _meta: { note: cfg._note, count: out.length, quantitative_source: seshat ? seshat._source : null, estimative: { proposition: EST.proposition, likelihood: EST.likelihood, confidence: EST.confidence, status: EST.status } }, sunan: out }, null, 2) + "\n");
 console.log("كُتب web/data/sunan.json");

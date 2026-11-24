@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "status": "model_draft: درجات اقترحها النموذج، لم يراجعها صاحب المشروع بعد",
+  "status": "delegated_review: مراجعة مفوَّضة إلى النموذج بتكليف صاحب المشروع (2026-11-24): تقييمان مستقلان، الثاني أعمى عن الأول، والحسم بسبب مكتوب",
   "rubric": "verification/GRADING.md"
  },
  "sources": {
@@ -8,265 +8,415 @@
    "grade": "C",
    "kind": "normative_treatise",
    "why": "رسالة في الحكم منسوبة إلى كوتيليا، مختلف في تاريخ تدوينها",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "asoka": {
    "grade": "A",
    "kind": "instrument",
    "why": "مرسوم أشوكا المنقوش نفسه، يُستشهد به على مضمونه وعلى ما يرويه الملك عن أعماله",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "battuta-defremery": {
    "grade": "C",
    "kind": "traveler",
    "why": "رحلة مملاة بعد سنين من الوقائع، فيها انطباعات شخصية",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "bede-latin-pl95": {
    "grade": "B",
    "kind": "chronicler",
    "why": "مؤرخ متحرٍّ يذكر مصادره، أدق في عصره منه فيما قبله",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "behistun": {
    "grade": "C",
    "kind": "royal_inscription",
    "why": "رواية الملك المنتصر عن نفسه بنقشه الرسمي؛ تقابلها نسخ بلغات أخرى وهيرودوت، وفيها تمجيد الذات",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "brinkley-japan-v4-1901": {
    "grade": "C",
    "kind": "modern_secondary",
    "why": "دراسة حديثة (1901) لكاتب أجنبي مقيم في اليابان",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "chavannes": {
    "grade": "C",
    "kind": "modern_secondary",
    "why": "دراسة حديثة (1895) لمترجم متخصص؛ مصدر ثانوي يفسّر النص الأصلي",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "darwin-origin-1859": {
    "grade": "B",
    "kind": "scientific_work",
    "why": "عمل علمي يعرض نظرية مؤلفه وشواهدها",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "diaz-maudslay": {
    "grade": "B",
    "kind": "eyewitness_memoir",
    "why": "شاهد عيان من جنود الفتح، كتب بعد عقود",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "evliya-ottoman-1896-v2": {
    "grade": "D",
    "kind": "traveler_exaggeration",
    "why": "رحالة معروف بالمبالغة في الأعداد والأوصاف",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "gama-hakluyt-1898": {
    "grade": "B",
    "kind": "eyewitness_log",
    "why": "يومية رحلة معاصرة لأحد أفراد الطاقم",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "garcilaso-rycaut-1688": {
    "grade": "C",
    "kind": "later_memoir",
    "why": "كاتب من أم إنكية يمجّد دولة أجداده، كتب بعد عقود",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "gilgamesh": {
-   "grade": "F",
+   "grade": "C",
    "kind": "myth_epic",
-   "why": "ملحمة أسطورية في قراءة مكتشفها؛ تشهد على النص والمعتقد، ولا تُختبر شاهداً على وقائع",
-   "status": "model_draft"
+   "why": "مقدمة وفهرس مترجم حديث من القرن التاسع عشر، أي دراسة ثانوية.",
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "C",
+    "resolution": "المصدر هنا دراسة جورج سميث وقراءته (مصدر ثانوي)، لا الملحمة شاهداً على وقائع",
+    "decision": "adopt"
+   }
   },
   "gregory-brehaut": {
-   "grade": "C",
+   "grade": "B",
    "kind": "chronicler_partisan",
-   "why": "أسقف مؤرخ معاصر، طرف في صراعات عصره ومائل إلى الوعظ",
-   "status": "model_draft"
+   "why": "مؤرخ معاصر وشاهد عيان لكثير مما يرويه في غالة.",
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "B",
+    "resolution": "مؤرخ معاصر وشاهد عيان لكثير مما يرويه، وانحيازه محسوب في درجات حكاياته",
+    "decision": "adopt"
+   }
   },
   "hammurabi": {
    "grade": "A",
    "kind": "instrument",
    "why": "نص القانون نفسه منقوشاً على المسلة، يُستشهد به على مضمونه",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "hanshu-zh": {
    "grade": "B",
    "kind": "dynastic_history",
    "why": "تاريخ الهان الرسمي، يعتمد على السجلات وعلى سيما تشيان",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "herodotus": {
    "grade": "C",
    "kind": "historian_traveler",
    "why": "مؤرخ ورحالة يجمع الروايات ويصرّح أحياناً بشكه فيها، متأخر عن بعض ما يرويه",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "khaldun-slane-1863": {
    "grade": "B",
    "kind": "theorist_historian",
    "why": "مؤرخ ومنظّر يعرض قواعده بنصه، بترجمة فرنسية",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "kjv1611": {
    "grade": "D",
    "kind": "editorial_summary",
    "why": "ملخص تحريري وضعه مترجمو 1611 فوق الإصحاح، لا نص الكتاب نفسه",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "kjv1611-1872-vol2": {
    "grade": "F",
    "kind": "sacred_narrative",
    "why": "سرد ديني لا شاهد مستقلاً عليه في هذه الواقعة",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "kjv1611-1872-vol6": {
    "grade": "C",
    "kind": "sacred_narrative",
    "why": "نبوءة حزقيال 27 تحمل قائمة تجارية لصور يعدّها الباحثون شاهداً قيّماً على تجارة الإقليم",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "F",
+    "resolution": "قائمة حزقيال 27 التجارية يعدّها الباحثون شاهداً تاريخياً، لا سرداً معجزاً، فتبقى C",
+    "decision": "keep"
+   }
   },
   "luckenbill": {
    "grade": "C",
    "kind": "royal_inscription",
    "why": "نقوش ملكية آشورية ترويجية بطبيعتها، قيّمة للأسماء والتسلسل وأقل للأعداد",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "marx-manifesto-moore-1888-mia": {
    "grade": "D",
    "kind": "political_pamphlet",
    "why": "بيان سياسي تعبوي؛ يشهد على أفكار كاتبيه لا على الوقائع",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "polo-yule-1871": {
    "grade": "C",
    "kind": "traveler",
    "why": "رحلة مملاة على كاتب، فيها مبالغة وثبت كثير منها بمصادر أخرى، مع تعليق ناشر حديث",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "polybius": {
-   "grade": "C",
+   "grade": "B",
    "kind": "second_hand_report",
-   "why": "نقل بوليبيوس لدعاوى بيثياس وهو يكذّبها، فالرواية بيد خصمها",
-   "status": "model_draft"
+   "why": "مؤرخ معروف بالتدقيق، يُستشهد به على أحكامه وعلى ما نقله.",
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "B",
+    "resolution": "بوليبيوس مؤرخ متحرٍّ، والشك في دعاوى بيثياس محسوب في درجات معلوماتها (2)",
+    "decision": "adopt"
+   }
   },
   "polybius-paton-1922": {
    "grade": "B",
    "kind": "historian_with_documents",
    "why": "يذكر بوليبيوس أنه قرأ نصوص المعاهدات على ألواح البرونز",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "polybius-paton-1925": {
    "grade": "B",
    "kind": "historian_views",
    "why": "مؤرخ يعرض آراءه في السياسة والحرب",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "procopius-dewing-1928": {
    "grade": "B",
    "kind": "contemporary_historian",
    "why": "مؤرخ معاصر لجستنيان وسكرتير قائده، معروف بالتحرّي في التواريخ",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "ptahhotep": {
    "grade": "C",
    "kind": "wisdom_literature",
    "why": "نص حكمة منسوب إلى وزير من الدولة القديمة في نسخ أحدث، يشهد على قيم كاتبه لا على وقائع",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "B",
+    "resolution": "نسبة النص إلى بتاح حتب تقليدية والنسخ أحدث من عصره، فيبقى C",
+    "decision": "keep"
+   }
   },
   "ricci-trigault-1615": {
-   "grade": "C",
+   "grade": "B",
    "kind": "missionary_report",
-   "why": "تقرير مبشّر عاش في الصين، نقله وحرّره تريغو",
-   "status": "model_draft"
+   "why": "شاهد أقام طويلاً في الصين، والنص بتحرير Trigault.",
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "B",
+    "resolution": "شاهد أقام في الصين نحو ثلاثين سنة، والتحرير بيد تريغو",
+    "decision": "adopt"
+   }
   },
   "sallust-catilina-la-ws": {
    "grade": "B",
    "kind": "contemporary_historian",
    "why": "مؤرخ معاصر للمؤامرة وطرف في سياسة عصره",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "sima-qian-zh": {
    "grade": "B",
    "kind": "contemporary_historian",
    "why": "مؤرخ بلاط الهان المعاصر لرحلات تشانغ تشيان، ينقل تقريره",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "smith-wealth-cannan1904-vol2": {
    "grade": "B",
    "kind": "theorist",
    "why": "عمل نظري يعرض قواعد مؤلفه بنصه",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "smith-wealth-oup1904-vol1": {
    "grade": "B",
    "kind": "theorist",
    "why": "عمل نظري يعرض قواعد مؤلفه بنصه",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "tabari-turath-9783": {
    "grade": "B",
    "kind": "isnad_compiler",
    "why": "جامع روايات بأسانيدها، والروايات متفاوتة القوة",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "tacitus": {
    "grade": "B",
    "kind": "near_contemporary_historian",
    "why": "مؤرخ قريب الزمن يعتمد على سجلات مجلس الشيوخ",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "tacitus-agricola-la-ws": {
    "grade": "B",
    "kind": "near_contemporary_historian",
    "why": "سيرة كتبها صهر أغريكولا، معاصرة وفيها انحياز له",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "tahtawi-takhlis-archive": {
    "grade": "B",
    "kind": "eyewitness",
    "why": "شاهد عيان مقيم في باريس أثناء ثورة 1830",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "thucydides": {
    "grade": "B",
    "kind": "contemporary_historian",
    "why": "مؤرخ معاصر للحرب ومشارك فيها، معروف بتحرّي الروايات",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "tocqueville-reeve-1840-vol3": {
    "grade": "B",
    "kind": "observer_theorist",
    "why": "مراقب منهجي زار أمريكا، يعرض ملاحظاته ونظرياته",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "turath-30026-sayrafi": {
    "grade": "B",
    "kind": "contemporary_chronicler",
    "why": "مؤرخ مملوكي معاصر للوقائع وقريب من الدواوين",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "turath-4129-tibr-masbuk": {
    "grade": "C",
    "kind": "mirror_for_princes",
    "why": "نصيحة ملوك منسوبة إلى الغزالي، ونسبتها إليه مختلف فيها",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "versailles-1919": {
    "grade": "A",
    "kind": "instrument",
    "why": "نص المعاهدة المنشور نفسه، يُستشهد به على مضمونه",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "xuanzang-beal": {
    "grade": "C",
    "kind": "traveler_via_translator",
    "why": "رواية رحالة حاج ينقلها مترجم حديث في مقدمته",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   }
  }
 }

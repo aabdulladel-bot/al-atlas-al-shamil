@@ -17,7 +17,7 @@
       "domains": [
         "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -33,7 +33,7 @@
         "trade",
         "environment"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -48,7 +48,7 @@
       "domains": [
         "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -64,7 +64,7 @@
         "environment",
         "agriculture"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -80,7 +80,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -96,7 +96,7 @@
         "economy",
         "health"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -112,7 +112,7 @@
         "trade",
         "religion"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -126,24 +126,25 @@
       "chapter": "غريغوريوس: الخمر الإيطالي والسوري في فخ كلوديوس (الكتاب Tenth، تقريبي)",
       "domains": [
         "religion",
-        "trade"
+        "trade",
+        "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
       "id": "cl_000000353",
-      "statement": "يذكر بيدا أن المرفأ المقابل لبريطانيا على الساحل الغالي كان يسمى روتوبي (Rutubi portus)، ويسميه الإنجليز ريبتاكاستير",
+      "statement": "يذكر بيدا أن المدينة التي يعبر منها المسافرون من بريطانيا إلى أقرب سواحل الغال البلجيكي تسمى ميناء روتوبي (Rutubi portus)، ويسميها الإنجليز ريبتاكاستير",
       "quote": "Rutubi portus",
       "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
       "layer": "later_historian",
       "type": "description",
-      "hedge": "الاسم الإنجليزي لدى بيدا Reptacastir، ويُعرف اليوم بموقع Richborough",
+      "hedge": "روتوبي في بريطانيا لا في الغال: هي ريتشبورو في كنت اليوم، والنص يجعلها المدينة التي «تفتح» للعابرين أقرب ساحل من الغال. والاسم الإنجليزي لدى بيدا Reptacastir. صُحّح البيان في 2026-11-24 بعد المراجعة، وكان يضعها على الساحل الغالي خطأً",
       "chapter": "الكتاب الأول، الفصل 1 (تقريبي): وصف بريطانيا والمعبر",
       "domains": [
         "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -156,9 +157,10 @@
       "hedge": "الأرقام كما وردت عند بيدا، والوحدات رومانية (ميل) وإغريقية (ستاديون)",
       "chapter": "الكتاب الأول، الفصل 1 (تقريبي): المسافة إلى البر الغالي",
       "domains": [
-        "trade"
+        "trade",
+        "environment"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -173,7 +175,7 @@
       "domains": [
         "war"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -188,7 +190,7 @@
       "domains": [
         "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -204,7 +206,7 @@
         "trade",
         "religion"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -218,9 +220,10 @@
       "chapter": "بروكوبيوس: رهبان من الهند ومن سيرِندا (الكتاب الثامن، الفصل 17 تقريباً)",
       "domains": [
         "industry",
-        "knowledge"
+        "knowledge",
+        "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -236,7 +239,7 @@
         "industry",
         "knowledge"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -253,7 +256,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -269,7 +272,7 @@
         "industry",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -285,7 +288,7 @@
         "industry",
         "knowledge"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -301,7 +304,7 @@
         "trade",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -317,7 +320,7 @@
         "war",
         "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     }
   ]
