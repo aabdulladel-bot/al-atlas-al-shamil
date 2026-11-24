@@ -682,5 +682,117 @@
     },
     "status": "verified",
     "version": 3
+  },
+  {
+    "id": "cl_000000448",
+    "passage_id": "procopius-dewing-1914-vol1:plague-deaths-byzantium",
+    "quote": "the tale of dead reached five thousand each day, and again it even came to ten thousand and still more than that",
+    "statement": "يذكر بروكوبيوس أن عدد الموتى بالطاعون في القسطنطينية بلغ خمسة آلاف في اليوم، ثم عشرة آلاف وأكثر",
+    "type": "quantity",
+    "layer": "contemporary_witness",
+    "attributed_to": "بروكوبيوس، تاريخ الحروب، الكتاب الثاني (ترجمة دوينغ، لوب، المجلد الأول، 1914)",
+    "isnad": null,
+    "hedge": "بروكوبيوس كان في المدينة أثناء الوباء، لكن أرقامه تقدير لا إحصاء، والباحثون مختلفون في حجم الوفيات",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "القسطنطينية"
+      ],
+      "persons": [],
+      "dates": [
+        "542م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000449",
+    "passage_id": "procopius-dewing-1914-vol1:plague-work-ceased",
+    "quote": "And work of every description ceased, and all the trades were abandoned by the artisans",
+    "statement": "يصف بروكوبيوس أن كل عمل توقف في القسطنطينية أثناء الطاعون، وترك الصناع حرفهم، حتى عمّ الجوع مدينة كانت تفيض بالخيرات",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "بروكوبيوس، تاريخ الحروب، الكتاب الثاني (ترجمة دوينغ، لوب، المجلد الأول، 1914)",
+    "isnad": null,
+    "hedge": "وصف شاهد عيان لذروة الوباء، لا لمدته كلها",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "القسطنطينية"
+      ],
+      "persons": [],
+      "dates": [
+        "542م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000450",
+    "passage_id": "procopius-dewing-1914-vol1:plague-coast-inland",
+    "quote": "And this disease always took its start from the coast, and from there went up to the interior",
+    "statement": "يلاحظ بروكوبيوس أن الطاعون كان يبدأ دائماً من الساحل، ثم يصعد منه إلى الداخل",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "بروكوبيوس، تاريخ الحروب، الكتاب الثاني (ترجمة دوينغ، لوب، المجلد الأول، 1914)",
+    "isnad": null,
+    "hedge": "ملاحظة عامة من شاهد معاصر، تتسق مع انتقال الوباء بالسفن، والمؤلف لا يعلّلها",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": [
+        "541–542م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]

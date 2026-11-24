@@ -1,7 +1,7 @@
 {
   "_meta": {
     "era": 3,
-    "count": 59,
+    "count": 62,
     "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
   },
   "claims": [
@@ -951,6 +951,56 @@
       ],
       "domains_status": "delegated_review",
       "reviewed": true
+    },
+    {
+      "id": "cl_000000445",
+      "statement": "يذكر ثوكيديديس أن تدفّق أهل الريف إلى أثينا زاد بلاء الطاعون، فالقادمون الجدد أُسكنوا في حرّ الصيف في أكواخ خانقة فاستشرى فيهم الموت",
+      "quote": "An aggravation of the existing calamity was the influx from the country into the city",
+      "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+      "layer": "contemporary_witness",
+      "type": "cause",
+      "hedge": "ثوكيديديس شاهد عيان أصيب بالمرض ونجا. والتكدّس سبب مشدّد في روايته، لا سبب للوباء نفسه، وطبيعة المرض مختلف فيها بين الباحثين",
+      "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الثاني: طاعون أثينا (430 ق.م)",
+      "domains": [
+        "health",
+        "population",
+        "society"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000446",
+      "statement": "يصف ثوكيديديس أن الطاعون أذهب في أثينا خشية الآلهة وقانون البشر، فلم يعد شيء يردع الناس",
+      "quote": "Fear of gods or law of man there was none to restrain them",
+      "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+      "layer": "contemporary_witness",
+      "type": "description",
+      "hedge": "وصف شاهد عيان لأثر الوباء في الأخلاق والنظام، وفيه تعميم بلاغي",
+      "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الثاني: طاعون أثينا (430 ق.م)",
+      "domains": [
+        "health",
+        "society",
+        "institutions"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000447",
+      "statement": "ينقل ثوكيديديس أن الطاعون بدأ في الحبشة فوق مصر، ثم نزل إلى مصر وليبيا وأكثر بلاد الملك (فارس)، ثم وقع على أثينا من مينائها بيرايوس",
+      "quote": "It first began, it is said, in the parts of Ethiopia above Egypt",
+      "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+      "layer": "contemporary_witness",
+      "type": "event",
+      "hedge": "ثوكيديديس يصرّح بأنه ينقل قولاً («يقال»)، فمسار الوباء رواية لا مشاهدة",
+      "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الثاني: طاعون أثينا (430 ق.م)",
+      "domains": [
+        "health",
+        "trade"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
     }
   ]
 }

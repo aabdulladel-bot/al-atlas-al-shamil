@@ -445,5 +445,84 @@
     },
     "status": "verified",
     "version": 2
+  },
+  {
+    "id": "cl_000000451",
+    "passage_id": "battuta-defremery:plague-cairo-damascus",
+    "quote": "tandis qu’au Caire et à Misr (Fosthâth)",
+    "statement": "يذكر ابن بطوطة أن عدد الموتى في اليوم الواحد في الطاعون الأعظم بلغ في القاهرة ومصر (الفسطاط) أضعاف ما بلغه في دمشق",
+    "type": "quantity",
+    "layer": "contemporary_witness",
+    "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول، 1853)",
+    "isnad": null,
+    "hedge": "الأرقام في هذه النسخة مشوهة بالمسح الضوئي فلا يُعتمد عليها، والمعتمد المقارنة بين المدينتين. وابن بطوطة كان في دمشق، أما القاهرة فرواية سمعها",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "دمشق",
+        "القاهرة",
+        "الفسطاط"
+      ],
+      "persons": [],
+      "dates": [
+        "749هـ",
+        "1348م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era5"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era5"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000452",
+    "passage_id": "battuta-defremery:plague-procession",
+    "quote": "et les chrétiens avec leur Évangile",
+    "statement": "يروي ابن بطوطة أن أهل دمشق خرجوا في الطاعون الأعظم إلى الدعاء جميعاً، والتحق بهم اليهود بالتوراة والنصارى بالإنجيل مع نسائهم وأولادهم",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول، 1853)",
+    "isnad": null,
+    "hedge": "مشاهدة ابن بطوطة في دمشق، وتقول روايته إن الوباء خفّ بعدها، وذلك تفسيره هو",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "دمشق"
+      ],
+      "persons": [],
+      "dates": [
+        "749هـ"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era5"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era5"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]

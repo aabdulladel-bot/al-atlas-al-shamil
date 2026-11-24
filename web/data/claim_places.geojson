@@ -5,7 +5,7 @@
     "status": "pleiades-verified",
     "source": "Pleiades (pleiades.stoa.org)، ملف places-latest، ترخيص CC BY 3.0، يتطلب الإسناد",
     "raw_sha256": "aa521b916561a45560249f0bf1b9e5cd53696c5646101906b2ce431d4dd6af82",
-    "matched": "13 من 13",
+    "matched": "16 من 16",
     "generated_by": "scripts/build_places.mjs",
     "note": "الإحداثيات الممثّلة في Pleiades نقاط تمثيلية لا مواقع مساحية."
   },
@@ -267,6 +267,66 @@
         "coord_status": "pleiades-representative",
         "pleiades_id": "49863",
         "pleiades_title": "Anurādhapura",
+        "pleiades_location_precision": "precise"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "athens",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.724,
+          37.9716
+        ]
+      },
+      "properties": {
+        "name_ar": "أثينا",
+        "name_en": "Athens",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "579885",
+        "pleiades_title": "Athenae",
+        "pleiades_location_precision": "related"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "constantinople",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9656,
+          41.0066
+        ]
+      },
+      "properties": {
+        "name_ar": "القسطنطينية",
+        "name_en": "Constantinople",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "520998",
+        "pleiades_title": "Constantinopolis",
+        "pleiades_location_precision": "related"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fustat",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2301,
+          30.0058
+        ]
+      },
+      "properties": {
+        "name_ar": "الفسطاط (مصر القديمة)",
+        "name_en": "al-Fustat (Old Cairo)",
+        "era": 0,
+        "coord_status": "pleiades-representative",
+        "pleiades_id": "727082",
+        "pleiades_title": "Babylon/al-Fusṭāṭ/Old Cairo",
         "pleiades_location_precision": "precise"
       }
     }

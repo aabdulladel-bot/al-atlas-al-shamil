@@ -2253,6 +2253,126 @@
    "review": {
     "agree": true
    }
+  },
+  "cl_000000445": {
+   "domains": [
+    "health",
+    "population",
+    "society"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "health",
+     "population",
+     "society"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
+  },
+  "cl_000000446": {
+   "domains": [
+    "health",
+    "society",
+    "institutions"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "society",
+     "institutions",
+     "religion"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
+  },
+  "cl_000000447": {
+   "domains": [
+    "health",
+    "trade"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
+  },
+  "cl_000000448": {
+   "domains": [
+    "health",
+    "population"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
+  },
+  "cl_000000449": {
+   "domains": [
+    "health",
+    "economy",
+    "industry"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "economy",
+     "industry",
+     "health"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
+  },
+  "cl_000000450": {
+   "domains": [
+    "health",
+    "trade"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
+  },
+  "cl_000000451": {
+   "domains": [
+    "health",
+    "population",
+    "society"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "health",
+     "population",
+     "society"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
+  },
+  "cl_000000452": {
+   "domains": [
+    "health",
+    "religion",
+    "society"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "religion",
+     "society",
+     "health"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
   }
  }
 }

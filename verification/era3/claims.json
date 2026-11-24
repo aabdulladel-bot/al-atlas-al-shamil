@@ -2067,5 +2067,122 @@
     },
     "status": "verified",
     "version": 4
+  },
+  {
+    "id": "cl_000000445",
+    "passage_id": "thucydides:plague-crowding",
+    "quote": "An aggravation of the existing calamity was the influx from the country into the city",
+    "statement": "يذكر ثوكيديديس أن تدفّق أهل الريف إلى أثينا زاد بلاء الطاعون، فالقادمون الجدد أُسكنوا في حرّ الصيف في أكواخ خانقة فاستشرى فيهم الموت",
+    "type": "cause",
+    "layer": "contemporary_witness",
+    "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+    "isnad": null,
+    "hedge": "ثوكيديديس شاهد عيان أصيب بالمرض ونجا. والتكدّس سبب مشدّد في روايته، لا سبب للوباء نفسه، وطبيعة المرض مختلف فيها بين الباحثين",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "أثينا"
+      ],
+      "persons": [],
+      "dates": [
+        "430 ق.م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era3"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era3"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000446",
+    "passage_id": "thucydides:plague-lawlessness",
+    "quote": "Fear of gods or law of man there was none to restrain them",
+    "statement": "يصف ثوكيديديس أن الطاعون أذهب في أثينا خشية الآلهة وقانون البشر، فلم يعد شيء يردع الناس",
+    "type": "description",
+    "layer": "contemporary_witness",
+    "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+    "isnad": null,
+    "hedge": "وصف شاهد عيان لأثر الوباء في الأخلاق والنظام، وفيه تعميم بلاغي",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "أثينا"
+      ],
+      "persons": [],
+      "dates": [
+        "430 ق.م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era3"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era3"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000447",
+    "passage_id": "thucydides:plague-origin",
+    "quote": "It first began, it is said, in the parts of Ethiopia above Egypt",
+    "statement": "ينقل ثوكيديديس أن الطاعون بدأ في الحبشة فوق مصر، ثم نزل إلى مصر وليبيا وأكثر بلاد الملك (فارس)، ثم وقع على أثينا من مينائها بيرايوس",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+    "isnad": null,
+    "hedge": "ثوكيديديس يصرّح بأنه ينقل قولاً («يقال»)، فمسار الوباء رواية لا مشاهدة",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "الحبشة",
+        "مصر",
+        "أثينا",
+        "بيرايوس"
+      ],
+      "persons": [],
+      "dates": [
+        "430 ق.م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era3"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era3"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]
