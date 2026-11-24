@@ -2373,6 +2373,43 @@
     "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
     "decision": "merge"
    }
+  },
+  "cl_000000453": {
+   "domains": [
+    "health",
+    "agriculture"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
+  },
+  "cl_000000454": {
+   "domains": [
+    "agriculture",
+    "health"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
+  },
+  "cl_000000455": {
+   "domains": [
+    "agriculture",
+    "war",
+    "health"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "war",
+     "health"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
   }
  }
 }

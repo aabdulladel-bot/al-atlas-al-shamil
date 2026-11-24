@@ -1,7 +1,7 @@
 {
   "_meta": {
     "era": 3,
-    "count": 62,
+    "count": 63,
     "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
   },
   "claims": [
@@ -998,6 +998,23 @@
       "domains": [
         "health",
         "trade"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000455",
+      "statement": "يروي ثوكيديديس أن أتباع كيلون المحاصرين في الأكروبوليس اشتدّ بهم الحصار حتى مات بعضهم جوعاً",
+      "quote": "some even dying of famine",
+      "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+      "layer": "contemporary_witness",
+      "type": "event",
+      "hedge": "ثوكيديديس ينقل حادثة وقعت قبل قرن ونصف من زمنه، عن رواية الأثينيين، وتفصيل الجوع فيها موجز",
+      "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الأول: حصار كيلون في أثينا",
+      "domains": [
+        "agriculture",
+        "war",
+        "health"
       ],
       "domains_status": "delegated_review",
       "reviewed": false

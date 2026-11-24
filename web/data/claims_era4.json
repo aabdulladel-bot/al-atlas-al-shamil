@@ -1,7 +1,7 @@
 {
   "_meta": {
     "era": 4,
-    "count": 23,
+    "count": 25,
     "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
   },
   "claims": [
@@ -368,6 +368,38 @@
       "domains": [
         "health",
         "trade"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000453",
+      "statement": "يذكر بيدا أن المجاعة اجتاحت القسطنطينية في زمن جستنيان، ولم تتأخر الطاعون بعدها",
+      "quote": "fames Constantinopolim inuasit; nec mora pestis secuta est",
+      "attributed_to": "بيدا، التأريخ الكبير (النص اللاتيني، Patrologia Latina XCV)",
+      "layer": "later_historian",
+      "type": "event",
+      "hedge": "بيدا يكتب بعد قرنين من الحادثة ويعتمد على حوليات سابقة، والنص لا يذكر سنة الحدث. وتسلسل المجاعة ثم الطاعون رواية عامة لا تفصيل فيه",
+      "chapter": "بيدا: حوليات الإمبراطورية الرومانية الشرقية (حوادث القسطنطينية)",
+      "domains": [
+        "health",
+        "agriculture"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000454",
+      "statement": "يذكر بيدا أن مجاعة شديدة عمّت سوريا في السنة نفسها التي بلغ فيها كلوديوس سنته الرابعة، وأنها سبق أن تنبأ بها أغابوس في سفر الأعمال",
+      "quote": "quo etiam anno fames grauissima per Syriam facta est",
+      "attributed_to": "بيدا، التأريخ الكبير (النص اللاتيني، Patrologia Latina XCV)",
+      "layer": "later_historian",
+      "type": "event",
+      "hedge": "نص بيدا متأخر، وتأريخه بالسنة تابع لحساب الحوليات. والمجاعة في سفر الأعمال (11: 28) متنبأ بها في نص ديني، فالتأكيد التاريخي يحتاج مؤيداً مستقلاً",
+      "chapter": "بيدا: حوليات الإمبراطورية الرومانية الشرقية (حوادث القسطنطينية)",
+      "domains": [
+        "agriculture",
+        "health"
       ],
       "domains_status": "delegated_review",
       "reviewed": false

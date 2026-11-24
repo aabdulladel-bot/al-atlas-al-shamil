@@ -2184,5 +2184,46 @@
     },
     "status": "draft",
     "version": 1
+  },
+  {
+    "id": "cl_000000455",
+    "passage_id": "thucydides:famine-siege-cylon",
+    "quote": "some even dying of famine",
+    "statement": "يروي ثوكيديديس أن أتباع كيلون المحاصرين في الأكروبوليس اشتدّ بهم الحصار حتى مات بعضهم جوعاً",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+    "isnad": null,
+    "hedge": "ثوكيديديس ينقل حادثة وقعت قبل قرن ونصف من زمنه، عن رواية الأثينيين، وتفصيل الجوع فيها موجز",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "أثينا",
+        "الأكروبوليس"
+      ],
+      "persons": [
+        "كيلون"
+      ],
+      "dates": [
+        "نحو 632 ق.م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era3"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era3"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]

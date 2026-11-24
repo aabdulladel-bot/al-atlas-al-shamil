@@ -794,5 +794,83 @@
     },
     "status": "draft",
     "version": 1
+  },
+  {
+    "id": "cl_000000453",
+    "passage_id": "bede-latin-pl95:famine-before-plague-constantinople",
+    "quote": "fames Constantinopolim inuasit; nec mora pestis secuta est",
+    "statement": "يذكر بيدا أن المجاعة اجتاحت القسطنطينية في زمن جستنيان، ولم تتأخر الطاعون بعدها",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "بيدا، التأريخ الكبير (النص اللاتيني، Patrologia Latina XCV)",
+    "isnad": null,
+    "hedge": "بيدا يكتب بعد قرنين من الحادثة ويعتمد على حوليات سابقة، والنص لا يذكر سنة الحدث. وتسلسل المجاعة ثم الطاعون رواية عامة لا تفصيل فيه",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "القسطنطينية"
+      ],
+      "persons": [],
+      "dates": [
+        "زمن جستنيان"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000454",
+    "passage_id": "bede-latin-pl95:famine-syria-acts",
+    "quote": "quo etiam anno fames grauissima per Syriam facta est",
+    "statement": "يذكر بيدا أن مجاعة شديدة عمّت سوريا في السنة نفسها التي بلغ فيها كلوديوس سنته الرابعة، وأنها سبق أن تنبأ بها أغابوس في سفر الأعمال",
+    "type": "event",
+    "layer": "later_historian",
+    "attributed_to": "بيدا، التأريخ الكبير (النص اللاتيني، Patrologia Latina XCV)",
+    "isnad": null,
+    "hedge": "نص بيدا متأخر، وتأريخه بالسنة تابع لحساب الحوليات. والمجاعة في سفر الأعمال (11: 28) متنبأ بها في نص ديني، فالتأكيد التاريخي يحتاج مؤيداً مستقلاً",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "سوريا"
+      ],
+      "persons": [
+        "أغابوس"
+      ],
+      "dates": [
+        "نحو 46م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era4"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era4"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]
