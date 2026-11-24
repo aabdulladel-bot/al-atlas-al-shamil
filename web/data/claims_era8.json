@@ -18,7 +18,7 @@
         "politics",
         "war"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -34,7 +34,7 @@
         "politics",
         "war"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -50,7 +50,7 @@
         "institutions",
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -66,7 +66,7 @@
         "institutions",
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -82,7 +82,7 @@
         "politics",
         "society"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -98,7 +98,7 @@
         "politics",
         "society"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -112,9 +112,10 @@
       "chapter": "عهد عصبة الأمم: المادة 22 والانتداب",
       "domains": [
         "institutions",
-        "society"
+        "society",
+        "religion"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -130,7 +131,7 @@
         "trade",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -145,7 +146,7 @@
       "domains": [
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -160,7 +161,7 @@
       "domains": [
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     }
   ]

@@ -17,7 +17,7 @@
       "domains": [
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -32,7 +32,7 @@
       "domains": [
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -47,7 +47,7 @@
       "domains": [
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -63,7 +63,7 @@
         "politics",
         "war"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -77,9 +77,10 @@
       "chapter": "إسارحدون: لوائح الطرق لبعل ملك صور",
       "domains": [
         "trade",
-        "institutions"
+        "institutions",
+        "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -95,7 +96,7 @@
         "trade",
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -110,7 +111,7 @@
       "domains": [
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -123,9 +124,10 @@
       "hedge": "عبارة great beams وغرضها غير مذكور صراحة في الفقرة",
       "chapter": "إسارحدون: ترميم قصر نينوى",
       "domains": [
-        "politics"
+        "politics",
+        "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -140,7 +142,7 @@
       "domains": [
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -156,7 +158,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -170,9 +172,10 @@
       "chapter": "ملخص إصحاح الملوك الأول 5 (طبعة 1611، تحريري)",
       "domains": [
         "trade",
-        "religion"
+        "religion",
+        "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -188,7 +191,7 @@
         "trade",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -201,9 +204,10 @@
       "hedge": "وصف هيرودوت كما بلغه، وليس مسحاً مباشراً",
       "chapter": "الكتاب الخامس 52: الطريق المؤدي إلى الملك",
       "domains": [
-        "trade"
+        "trade",
+        "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -219,7 +223,7 @@
         "knowledge",
         "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -232,9 +236,10 @@
       "hedge": "رواية هيرودوت، وقد لا تكون موثقة بالكامل",
       "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو",
       "domains": [
-        "knowledge"
+        "knowledge",
+        "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -249,7 +254,7 @@
       "domains": [
         "knowledge"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -265,7 +270,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -279,9 +284,10 @@
       "chapter": "ملخص حزقيال 27 (طبعة 1611، تحريري)",
       "domains": [
         "economy",
-        "politics"
+        "politics",
+        "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -297,7 +303,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -311,9 +317,10 @@
       "chapter": "الملوك الأول 5: حيرام وخشب لبنان",
       "domains": [
         "trade",
-        "religion"
+        "religion",
+        "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -329,7 +336,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -346,7 +353,7 @@
         "agriculture",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -362,7 +369,7 @@
         "trade",
         "agriculture"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     }
   ]

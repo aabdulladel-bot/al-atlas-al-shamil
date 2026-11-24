@@ -18,7 +18,7 @@
         "trade",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -34,7 +34,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -50,7 +50,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -66,7 +66,7 @@
         "trade",
         "agriculture"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -80,9 +80,10 @@
       "chapter": "فاسكو دا غاما (يومية الرحلة، ترجمة Hakluyt/Ravenstein 1898): تجار الساحل وسفنهم",
       "domains": [
         "trade",
-        "society"
+        "society",
+        "religion"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -98,7 +99,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -113,7 +114,7 @@
       "domains": [
         "trade"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -129,7 +130,7 @@
         "politics",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -145,7 +146,7 @@
         "population",
         "society"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -161,7 +162,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -177,7 +178,7 @@
         "trade",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -194,7 +195,7 @@
         "institutions",
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -211,7 +212,7 @@
         "agriculture",
         "politics"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -227,7 +228,7 @@
         "politics",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     }
   ]

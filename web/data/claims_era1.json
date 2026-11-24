@@ -19,7 +19,7 @@
         "economy",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -34,10 +34,9 @@
       "domains": [
         "agriculture",
         "economy",
-        "institutions",
-        "environment"
+        "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -52,10 +51,9 @@
       "domains": [
         "agriculture",
         "economy",
-        "institutions",
-        "environment"
+        "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -72,7 +70,7 @@
         "environment",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -89,7 +87,7 @@
         "environment",
         "institutions"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -105,7 +103,7 @@
         "culture",
         "knowledge"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -119,9 +117,10 @@
       "chapter": "التعليم الأول",
       "domains": [
         "industry",
-        "knowledge"
+        "knowledge",
+        "culture"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -137,7 +136,7 @@
         "culture",
         "religion"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -153,7 +152,7 @@
         "culture",
         "religion"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": false
     },
     {
@@ -169,7 +168,7 @@
         "culture",
         "religion"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -184,7 +183,7 @@
       "domains": [
         "culture"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -201,7 +200,7 @@
         "institutions",
         "economy"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -217,7 +216,7 @@
         "knowledge",
         "culture"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     },
     {
@@ -231,9 +230,10 @@
       "chapter": "مقدمة الترجمة",
       "domains": [
         "knowledge",
-        "culture"
+        "culture",
+        "religion"
       ],
-      "domains_status": "model_draft",
+      "domains_status": "delegated_review",
       "reviewed": true
     }
   ]

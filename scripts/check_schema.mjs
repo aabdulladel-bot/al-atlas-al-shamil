@@ -19,7 +19,7 @@ console.log(`المخطط: ${total - bad}/${total} صالح، معرّفات م�
 // كل ادعاء له مجال أو أكثر من التصنيف الحاكم، ولا تصنيف لادعاء غير موجود
 const valid = new Set(JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/domains.json"), "utf8")).domains.map((d) => d.id));
 const dom = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/claim_domains.json"), "utf8")).claims;
-const domBad = [...ids].filter((id) => !dom[id] || !dom[id].domains.length || dom[id].domains.some((d) => !valid.has(d)) || !["model_draft", "reviewed"].includes(dom[id].status));
+const domBad = [...ids].filter((id) => !dom[id] || !dom[id].domains.length || dom[id].domains.some((d) => !valid.has(d)) || !["model_draft", "delegated_review", "reviewed"].includes(dom[id].status));
 const domExtra = Object.keys(dom).filter((id) => !ids.has(id));
 console.log(`المجالات: ${ids.size - domBad.length}/${ids.size} مصنّف، تصنيفات بلا ادعاء: ${domExtra.length}`);
 if (domBad.length) console.log(`بلا مجال صالح: ${domBad.slice(0, 10).join(" ")}`);
