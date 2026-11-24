@@ -439,7 +439,9 @@ try {
       mp.on("pageerror", (e) => problems.push(`[${name}] الحركة pageerror: ${e.message}`));
       await mp.goto(URL, { waitUntil: "load" });
       await mp.waitForFunction(() => typeof time !== "undefined" && time.key === 1200 && document.querySelectorAll("#sunan-list button").length > 0, null, { timeout: 90000 });
-      await mp.evaluate(() => { terrainState.on = false; applyTerrain(); });
+      // دوران الخمول حركة مقصودة تبدأ بعد 45 ثانية بلا تفاعل، وله فحصه الخاص بعد هذا (يُعاد تشغيله هناك). على جهاز بطيء قد يبلغ
+      // انتظار التحميل 45 ثانية فيبدأ الدوران داخل نافذة فحص السكون ويُقرأ حركةً غير مقصودة، فيُوقف هنا ليقيس السكون وحده
+      await mp.evaluate(() => { terrainState.on = false; applyTerrain(); idleSpin.on = false; clearTimeout(idleSpin.timer); spinStop(); });
       await mp.evaluate(() => window.__settle?.()).catch(() => {});
       await mp.waitForFunction(() => map.loaded() && !map.isMoving(), null, { timeout: 90000 });
       // الخريطة تبلغ السكون وتبقى ساكنة: لا حركة مستمرة تُبقيها ترسم بلا قارئ (كان نبض الهالة اللانهائي يمنع ذلك)
