@@ -736,7 +736,7 @@ function linkedEvidenceHtml(name, links) {
   const rows = list.map((c, j) => `<article class="ev-card" style="--i:${j}"><div class="ev-st">${escapeHtml(c.statement)}</div>` +
     `<div class="ev-by"><bdi dir="auto">— ${escapeHtml(c.attributed_to)}</bdi></div>` +
     `<div class="ev-by"><bdi dir="auto">${escapeHtml(c.place_ar)}</bdi>${c.place_note ? ` (${escapeHtml(c.place_note)})` : ""}</div>` +
-    `<div class="chips">${chip(c.tier, TIER_CLASS[c.tier] ?? "")}${c.sunan.map((s) => chip(s)).join("")}</div>` +
+    `<div class="chips">${chip(c.tier, TIER_CLASS[c.tier] ?? "")}${gradeChip(c.id)}${c.sunan.map((s) => chip(s)).join("")}</div>` +
     `<div class="ev-by">${escapeHtml(c.tier_reason)}</div></article>`).join("");
   // كومة الشواهد: تُعرض مكدّسة، وتتفرّق عند النقر لتقرأ كل بطاقة. لا تُضاف أي معلومة، والعدد من القائمة نفسها
   // البطاقة الأمامية تحمل بداية أول شاهد، والخلفيتان بطاقتان فارغتان تعطيان العمق
@@ -834,7 +834,7 @@ function openEntityCard(f, kind) {
   const token = openCard(render(null));
   // الناتج للفرد للدول على خريطة اليوم وحدها: سلاسل Maddison لدول اليوم، ولا تُنسب إلى كيانات الخرائط التاريخية
   // الإغلاق قبل وصول البيانات يُلغي التحديث: لا تُبنى البطاقة المغلقة (كان ذلك يرمي خطأ «facts» عند إغلاق سريع)
-  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady, khaldunReady, dossierReady, entityInfoReady, entityDefsReady]).then(([links, econ]) => {
+  Promise.all([loadLinks(key), modern ? countryEconHtml(p.NAME) : "", ensureLineage(), observatoryReady, khaldunReady, dossierReady, entityInfoReady, entityDefsReady, gradingReady]).then(([links, econ]) => {
     if (token !== cardToken || cardEl.hidden) return;
     updateCard(token, render(links, econ));
   });
@@ -908,7 +908,7 @@ function claimRowHtml(c) {
     `<blockquote class="ev-q" dir="auto">“${escapeHtml(c.quote)}”</blockquote>` +
     `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi></div>` +
     (c.hedge ? `<div class="ev-hedge">تحفّظ: ${escapeHtml(c.hedge)}</div>` : "") +
-    domainChips(c.id) +
+    gradeDetails(c.id) + domainChips(c.id) +
     `<div class="chips">${era ? chip(`الحقبة ${era.id}: ${era.label}${era.id === eraOf(time.key).id ? " (الحقبة المعروضة)" : ""}`, era.id === eraOf(time.key).id ? "now-era" : "", `data-time="${era.border}" title="انقل الخريطة إلى زمنه"`) : ""}${roles.join("")}</div></article>`;
 }
 // شاهد لا مكان له على الخريطة (يجده البحث): يُعرض نصاً، ولا تُوضع له نقطة
@@ -1662,11 +1662,35 @@ function domainChips(id) {
   const ds = domainData?.claims[id];
   return ds?.length ? `<span class="chips dom-chips">${ds.map((d) => chip(domainName(d), "dom")).join("")}</span>` : "";
 }
+// تقييم المصدر والمعلومة (web/data/grading.json، من verification/GRADING.md): حرف لموثوقية المصدر (A–F)
+// ورقم لصحة المعلومة (1–6) بنطاقها: واقعة، أو نسبة قول إلى صاحبه. الدرجتان لا تُدمجان، ولكل منهما سبب مكتوب
+let gradingData = null;
+const gradingReady = getJson("data/grading.json").then((d) => { gradingData = d; return d; }).catch(() => null);
+function gradeOf(id) {
+  const g = gradingData?.claims?.[id];
+  const s = g && gradingData.sources[g.source];
+  return s ? { ...g, src: s.grade, src_why: s.why, src_status: s.status } : null;
+}
+const gradeLabel = (g) => `${gradingData.scale.source[g.src]} · ${gradingData.scale.info[g.scope][g.info]}`;
+function gradeChip(id) {
+  const g = gradeOf(id);
+  if (!g) return "";
+  return `<span class="chip grade grade-${g.info}" title="${escapeHtml(`${gradeLabel(g)}. ${gradingData.scale.scope_note[g.scope]}`)}"><b dir="ltr">${g.src}${g.info}</b> ${escapeHtml(gradingData.scale.info[g.scope][g.info])}</span>`;
+}
+function gradeDetails(id) {
+  const g = gradeOf(id);
+  if (!g) return "";
+  const sc = gradingData.scale;
+  const draft = g.status !== "reviewed" || g.src_status !== "reviewed";
+  return `<details class="grade-why"><summary>التقييم <b dir="ltr">${g.src}${g.info}</b>: ${escapeHtml(gradeLabel(g))}</summary>` +
+    `<ul class="gap-list"><li><b>المصدر (${g.src}):</b> ${escapeHtml(g.src_why)}</li><li><b>المعلومة (${g.info}):</b> ${escapeHtml(g.why)}</li>` +
+    `<li>${escapeHtml(sc.scope_note[g.scope])}.</li></ul>${draft ? `<p class="sub">${escapeHtml(sc.status.model_draft)}.</p>` : ""}</details>`;
+}
 function claimHtml(c, extra = "") {
-  return `<div class="ev ${extra}">${escapeHtml(c.statement)}${domainChips(c.id)}` +
+  return `<div class="ev ${extra}">${escapeHtml(c.statement)}${domainChips(c.id)}${gradeChip(c.id)}` +
     `<div class="sub">${escapeHtml(c.attributed_to)}</div>` +
-    `<details class="research-only"><summary class="sub">الاقتباس والتحفّظ</summary>` +
-    `<div class="src-quote">“${escapeHtml(c.quote)}”</div><div class="sub">تحفّظ: ${escapeHtml(c.hedge)}</div></details></div>`;
+    `<details class="research-only"><summary class="sub">الاقتباس والتحفّظ والتقييم</summary>` +
+    `<div class="src-quote">“${escapeHtml(c.quote)}”</div><div class="sub">تحفّظ: ${escapeHtml(c.hedge)}</div>${gradeDetails(c.id)}</details></div>`;
 }
 // تصفّح المجالات: ادعاءات مجال واحد في كل الحقب
 const claimsDomainsEl = document.getElementById("claims-domains");
@@ -1687,6 +1711,7 @@ async function loadDomainClaims(dom) {
   claimsListEl.textContent = "جارٍ التحميل...";
   try {
     const index = await getJson("data/claims_index.json");
+    await gradingReady;
     const all = (await Promise.all(index.map((x) => getJson(`data/claims_era${x.era}.json`).then((d) => d.claims.map((c) => ({ ...c, era: x.era })))))).flat();
     const hit = all.filter((c) => (domainData?.claims[c.id] ?? []).includes(dom));
     claimsListEl.innerHTML = `<p class="sub">مجال «${escapeHtml(domainName(dom))}»: ${fmtInt(hit.length)} ادعاءً في كل الحقب. ${escapeHtml(domainData._meta.status)}.</p>` +
@@ -1700,6 +1725,7 @@ async function loadClaims(n) {
   claimsListEl.textContent = "جارٍ التحميل...";
   try {
     const data = await getJson(`data/claims_era${n}.json`);
+    await gradingReady;
     claimsListEl.innerHTML = `<p class="sub">${escapeHtml(data._meta.status)} (${data._meta.count})</p>` +
       (data.claims.length ? data.claims.map((c) => claimHtml(c)).join("") : "<p>لا ادعاءات موثّقة لهذه الحقبة بعد.</p>");
   } catch (err) {
@@ -2776,7 +2802,7 @@ function loadSunan() {
   return sunanReady;
 }
 async function loadSunanNow() {
-  try { sunanData = await getJson("data/sunan.json"); } catch (err) { sunanDetailEl.textContent = `تعذّر تحميل السنن: ${err.message}`; return; }
+  try { [sunanData] = await Promise.all([getJson("data/sunan.json"), gradingReady]); } catch (err) { sunanDetailEl.textContent = `تعذّر تحميل السنن: ${err.message}`; return; }
   for (const s of sunanData.sunan) {
     for (const c of s.supporting) if (c.id) { const r = claimSunnaRoles.get(c.id) ?? { sup: [], lim: [] }; r.sup.push(s.id); claimSunnaRoles.set(c.id, r); }
     for (const c of s.limiting) if (c.id) { const r = claimSunnaRoles.get(c.id) ?? { sup: [], lim: [] }; r.lim.push(s.id); claimSunnaRoles.set(c.id, r); }

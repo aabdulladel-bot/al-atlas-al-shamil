@@ -10,11 +10,20 @@ fs.mkdirSync(OUT, { recursive: true });
 
 // مجال كل ادعاء (verification/claim_domains.json، بتصنيف scripts/config/domains.json)
 const domainsOf = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/claim_domains.json"), "utf8")).claims;
+// تقييم المصدر والمعلومة (verification/GRADING.md): حرف المصدر ورقم المعلومة ونطاقها وسببهما
+const sourceGrades = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/source_grades.json"), "utf8")).sources;
+const claimGrades = JSON.parse(fs.readFileSync(path.join(ROOT, "verification/claim_grades.json"), "utf8")).claims;
+const gradeOf = (c, sid) => {
+  const g = claimGrades[c.id];
+  return g && sourceGrades[sid] ? { source: sid, info: g.info, scope: g.scope, why: g.why, status: g.status } : null;
+};
 const index = [];
+const grades = {};
 for (const era of claimEras(ROOT)) {
   const dir = path.join(ROOT, "verification", `era${era}`);
   const claims = JSON.parse(fs.readFileSync(path.join(dir, "claims.json"), "utf8"));
   const passages = new Map(JSON.parse(fs.readFileSync(path.join(dir, "passages.json"), "utf8")).map((p) => [p.id, p]));
+  for (const c of claims) if (c.checks.quote_match === true && c.status !== "rejected") grades[c.id] = gradeOf(c, passages.get(c.passage_id)?.source_id);
   const shown = claims
     .filter((c) => c.checks.quote_match === true && c.status !== "rejected")
     .map((c) => ({
@@ -51,3 +60,7 @@ const domClaims = Object.fromEntries(Object.entries(domainsOf).filter(([id]) => 
 const counts = Object.fromEntries(taxonomy.map((d) => [d.id, Object.values(domClaims).filter((ds) => ds.includes(d.id)).length]));
 fs.writeFileSync(path.join(OUT, "domains.json"), JSON.stringify({ _meta: { source: "scripts/config/domains.json وverification/claim_domains.json", status: "تصنيف مسودة من النموذج حتى يراجعه صاحب المشروع" }, domains: taxonomy, counts, claims: domClaims }) + "\n");
 console.log(`المجالات: ${Object.keys(domClaims).length} ادعاء مصنّف`);
+// مقياس التقييم للواجهة (scripts/config/admiralty.json)
+// ودرجة كل ادعاء معروض بمعرّفه، فتجدها كل بطاقة أياً كان طريق الادعاء إليها (الحقب، والمواضع، والسنن، والروابط المكانية)
+fs.writeFileSync(path.join(OUT, "grading.json"), JSON.stringify({ scale: JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/config/admiralty.json"), "utf8")), sources: Object.fromEntries([...new Set(Object.values(grades).filter(Boolean).map((g) => g.source))].sort().map((sid) => [sid, sourceGrades[sid]])), claims: grades }) + "\n");
+console.log(`التقييم: ${Object.values(grades).filter(Boolean).length} ادعاء مقيَّم`);

@@ -1,0 +1,272 @@
+{
+ "_meta": {
+  "status": "model_draft: درجات اقترحها النموذج، لم يراجعها صاحب المشروع بعد",
+  "rubric": "verification/GRADING.md"
+ },
+ "sources": {
+  "arthashastra": {
+   "grade": "C",
+   "kind": "normative_treatise",
+   "why": "رسالة في الحكم منسوبة إلى كوتيليا، مختلف في تاريخ تدوينها",
+   "status": "model_draft"
+  },
+  "asoka": {
+   "grade": "A",
+   "kind": "instrument",
+   "why": "مرسوم أشوكا المنقوش نفسه، يُستشهد به على مضمونه وعلى ما يرويه الملك عن أعماله",
+   "status": "model_draft"
+  },
+  "battuta-defremery": {
+   "grade": "C",
+   "kind": "traveler",
+   "why": "رحلة مملاة بعد سنين من الوقائع، فيها انطباعات شخصية",
+   "status": "model_draft"
+  },
+  "bede-latin-pl95": {
+   "grade": "B",
+   "kind": "chronicler",
+   "why": "مؤرخ متحرٍّ يذكر مصادره، أدق في عصره منه فيما قبله",
+   "status": "model_draft"
+  },
+  "behistun": {
+   "grade": "C",
+   "kind": "royal_inscription",
+   "why": "رواية الملك المنتصر عن نفسه بنقشه الرسمي؛ تقابلها نسخ بلغات أخرى وهيرودوت، وفيها تمجيد الذات",
+   "status": "model_draft"
+  },
+  "brinkley-japan-v4-1901": {
+   "grade": "C",
+   "kind": "modern_secondary",
+   "why": "دراسة حديثة (1901) لكاتب أجنبي مقيم في اليابان",
+   "status": "model_draft"
+  },
+  "chavannes": {
+   "grade": "C",
+   "kind": "modern_secondary",
+   "why": "دراسة حديثة (1895) لمترجم متخصص؛ مصدر ثانوي يفسّر النص الأصلي",
+   "status": "model_draft"
+  },
+  "darwin-origin-1859": {
+   "grade": "B",
+   "kind": "scientific_work",
+   "why": "عمل علمي يعرض نظرية مؤلفه وشواهدها",
+   "status": "model_draft"
+  },
+  "diaz-maudslay": {
+   "grade": "B",
+   "kind": "eyewitness_memoir",
+   "why": "شاهد عيان من جنود الفتح، كتب بعد عقود",
+   "status": "model_draft"
+  },
+  "evliya-ottoman-1896-v2": {
+   "grade": "D",
+   "kind": "traveler_exaggeration",
+   "why": "رحالة معروف بالمبالغة في الأعداد والأوصاف",
+   "status": "model_draft"
+  },
+  "gama-hakluyt-1898": {
+   "grade": "B",
+   "kind": "eyewitness_log",
+   "why": "يومية رحلة معاصرة لأحد أفراد الطاقم",
+   "status": "model_draft"
+  },
+  "garcilaso-rycaut-1688": {
+   "grade": "C",
+   "kind": "later_memoir",
+   "why": "كاتب من أم إنكية يمجّد دولة أجداده، كتب بعد عقود",
+   "status": "model_draft"
+  },
+  "gilgamesh": {
+   "grade": "F",
+   "kind": "myth_epic",
+   "why": "ملحمة أسطورية في قراءة مكتشفها؛ تشهد على النص والمعتقد، ولا تُختبر شاهداً على وقائع",
+   "status": "model_draft"
+  },
+  "gregory-brehaut": {
+   "grade": "C",
+   "kind": "chronicler_partisan",
+   "why": "أسقف مؤرخ معاصر، طرف في صراعات عصره ومائل إلى الوعظ",
+   "status": "model_draft"
+  },
+  "hammurabi": {
+   "grade": "A",
+   "kind": "instrument",
+   "why": "نص القانون نفسه منقوشاً على المسلة، يُستشهد به على مضمونه",
+   "status": "model_draft"
+  },
+  "hanshu-zh": {
+   "grade": "B",
+   "kind": "dynastic_history",
+   "why": "تاريخ الهان الرسمي، يعتمد على السجلات وعلى سيما تشيان",
+   "status": "model_draft"
+  },
+  "herodotus": {
+   "grade": "C",
+   "kind": "historian_traveler",
+   "why": "مؤرخ ورحالة يجمع الروايات ويصرّح أحياناً بشكه فيها، متأخر عن بعض ما يرويه",
+   "status": "model_draft"
+  },
+  "khaldun-slane-1863": {
+   "grade": "B",
+   "kind": "theorist_historian",
+   "why": "مؤرخ ومنظّر يعرض قواعده بنصه، بترجمة فرنسية",
+   "status": "model_draft"
+  },
+  "kjv1611": {
+   "grade": "D",
+   "kind": "editorial_summary",
+   "why": "ملخص تحريري وضعه مترجمو 1611 فوق الإصحاح، لا نص الكتاب نفسه",
+   "status": "model_draft"
+  },
+  "kjv1611-1872-vol2": {
+   "grade": "F",
+   "kind": "sacred_narrative",
+   "why": "سرد ديني لا شاهد مستقلاً عليه في هذه الواقعة",
+   "status": "model_draft"
+  },
+  "kjv1611-1872-vol6": {
+   "grade": "C",
+   "kind": "sacred_narrative",
+   "why": "نبوءة حزقيال 27 تحمل قائمة تجارية لصور يعدّها الباحثون شاهداً قيّماً على تجارة الإقليم",
+   "status": "model_draft"
+  },
+  "luckenbill": {
+   "grade": "C",
+   "kind": "royal_inscription",
+   "why": "نقوش ملكية آشورية ترويجية بطبيعتها، قيّمة للأسماء والتسلسل وأقل للأعداد",
+   "status": "model_draft"
+  },
+  "marx-manifesto-moore-1888-mia": {
+   "grade": "D",
+   "kind": "political_pamphlet",
+   "why": "بيان سياسي تعبوي؛ يشهد على أفكار كاتبيه لا على الوقائع",
+   "status": "model_draft"
+  },
+  "polo-yule-1871": {
+   "grade": "C",
+   "kind": "traveler",
+   "why": "رحلة مملاة على كاتب، فيها مبالغة وثبت كثير منها بمصادر أخرى، مع تعليق ناشر حديث",
+   "status": "model_draft"
+  },
+  "polybius": {
+   "grade": "C",
+   "kind": "second_hand_report",
+   "why": "نقل بوليبيوس لدعاوى بيثياس وهو يكذّبها، فالرواية بيد خصمها",
+   "status": "model_draft"
+  },
+  "polybius-paton-1922": {
+   "grade": "B",
+   "kind": "historian_with_documents",
+   "why": "يذكر بوليبيوس أنه قرأ نصوص المعاهدات على ألواح البرونز",
+   "status": "model_draft"
+  },
+  "polybius-paton-1925": {
+   "grade": "B",
+   "kind": "historian_views",
+   "why": "مؤرخ يعرض آراءه في السياسة والحرب",
+   "status": "model_draft"
+  },
+  "procopius-dewing-1928": {
+   "grade": "B",
+   "kind": "contemporary_historian",
+   "why": "مؤرخ معاصر لجستنيان وسكرتير قائده، معروف بالتحرّي في التواريخ",
+   "status": "model_draft"
+  },
+  "ptahhotep": {
+   "grade": "C",
+   "kind": "wisdom_literature",
+   "why": "نص حكمة منسوب إلى وزير من الدولة القديمة في نسخ أحدث، يشهد على قيم كاتبه لا على وقائع",
+   "status": "model_draft"
+  },
+  "ricci-trigault-1615": {
+   "grade": "C",
+   "kind": "missionary_report",
+   "why": "تقرير مبشّر عاش في الصين، نقله وحرّره تريغو",
+   "status": "model_draft"
+  },
+  "sallust-catilina-la-ws": {
+   "grade": "B",
+   "kind": "contemporary_historian",
+   "why": "مؤرخ معاصر للمؤامرة وطرف في سياسة عصره",
+   "status": "model_draft"
+  },
+  "sima-qian-zh": {
+   "grade": "B",
+   "kind": "contemporary_historian",
+   "why": "مؤرخ بلاط الهان المعاصر لرحلات تشانغ تشيان، ينقل تقريره",
+   "status": "model_draft"
+  },
+  "smith-wealth-cannan1904-vol2": {
+   "grade": "B",
+   "kind": "theorist",
+   "why": "عمل نظري يعرض قواعد مؤلفه بنصه",
+   "status": "model_draft"
+  },
+  "smith-wealth-oup1904-vol1": {
+   "grade": "B",
+   "kind": "theorist",
+   "why": "عمل نظري يعرض قواعد مؤلفه بنصه",
+   "status": "model_draft"
+  },
+  "tabari-turath-9783": {
+   "grade": "B",
+   "kind": "isnad_compiler",
+   "why": "جامع روايات بأسانيدها، والروايات متفاوتة القوة",
+   "status": "model_draft"
+  },
+  "tacitus": {
+   "grade": "B",
+   "kind": "near_contemporary_historian",
+   "why": "مؤرخ قريب الزمن يعتمد على سجلات مجلس الشيوخ",
+   "status": "model_draft"
+  },
+  "tacitus-agricola-la-ws": {
+   "grade": "B",
+   "kind": "near_contemporary_historian",
+   "why": "سيرة كتبها صهر أغريكولا، معاصرة وفيها انحياز له",
+   "status": "model_draft"
+  },
+  "tahtawi-takhlis-archive": {
+   "grade": "B",
+   "kind": "eyewitness",
+   "why": "شاهد عيان مقيم في باريس أثناء ثورة 1830",
+   "status": "model_draft"
+  },
+  "thucydides": {
+   "grade": "B",
+   "kind": "contemporary_historian",
+   "why": "مؤرخ معاصر للحرب ومشارك فيها، معروف بتحرّي الروايات",
+   "status": "model_draft"
+  },
+  "tocqueville-reeve-1840-vol3": {
+   "grade": "B",
+   "kind": "observer_theorist",
+   "why": "مراقب منهجي زار أمريكا، يعرض ملاحظاته ونظرياته",
+   "status": "model_draft"
+  },
+  "turath-30026-sayrafi": {
+   "grade": "B",
+   "kind": "contemporary_chronicler",
+   "why": "مؤرخ مملوكي معاصر للوقائع وقريب من الدواوين",
+   "status": "model_draft"
+  },
+  "turath-4129-tibr-masbuk": {
+   "grade": "C",
+   "kind": "mirror_for_princes",
+   "why": "نصيحة ملوك منسوبة إلى الغزالي، ونسبتها إليه مختلف فيها",
+   "status": "model_draft"
+  },
+  "versailles-1919": {
+   "grade": "A",
+   "kind": "instrument",
+   "why": "نص المعاهدة المنشور نفسه، يُستشهد به على مضمونه",
+   "status": "model_draft"
+  },
+  "xuanzang-beal": {
+   "grade": "C",
+   "kind": "traveler_via_translator",
+   "why": "رواية رحالة حاج ينقلها مترجم حديث في مقدمته",
+   "status": "model_draft"
+  }
+ }
+}
