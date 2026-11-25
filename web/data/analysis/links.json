@@ -217,6 +217,16 @@
      "lim": 0
     }
    }
+  },
+  {
+   "sunna": "sn_slave_soldiers",
+   "name": "سُنّة المماليك والدولة",
+   "eras": {
+    "5": {
+     "sup": 2,
+     "lim": 0
+    }
+   }
   }
  ],
  "conflicts": [

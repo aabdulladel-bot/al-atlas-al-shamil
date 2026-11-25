@@ -108,8 +108,8 @@
    "about": "أماكن ادعاءات مطابقة الاقتباس لنص مصدرها، بحجم يتبع عدد الشواهد. وفي السُّنّة المختارة تُلوَّن بدورها: مؤيد أو مقيِّد.",
    "coverage": {
     "label": "الادعاءات المعروضة",
-    "text": "187 ادعاءً في 8 حقب",
-    "count": 187
+    "text": "189 ادعاءً في 8 حقب",
+    "count": 189
    },
    "sources": [
     {
@@ -363,6 +363,13 @@
      "license": "ملك عام: نُشر سنة 1853، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
      "attribution": "Defrémery وSanguinetti، Voyages d'Ibn Batoutah، المجلد 1 (1853)",
      "landing": "https://archive.org/details/voyagesdibnbato02sanggoog"
+    },
+    {
+     "id": "battuta-defremery-vol3",
+     "tier": "A",
+     "license": "ملك عام: نُشر المجلد الثالث سنة 1855، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+     "attribution": "Defrémery وSanguinetti، Voyages d'Ibn Batoutah، المجلد الثالث (1855): الهند ودلهي",
+     "landing": "https://archive.org/details/voyagesdibnbato00bagoog"
     },
     {
      "id": "garcilaso-rycaut-1688",
