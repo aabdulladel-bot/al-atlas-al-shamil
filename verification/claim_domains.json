@@ -518,7 +518,7 @@
     "agree": false,
     "second": [
      "agriculture",
-     "society"
+     "trade"
     ],
     "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
     "decision": "merge"
@@ -1537,12 +1537,7 @@
    ],
    "status": "delegated_review",
    "review": {
-    "agree": false,
-    "second": [
-     "society"
-    ],
-    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
-    "decision": "merge"
+    "agree": true
    }
   },
   "cl_000000390": {

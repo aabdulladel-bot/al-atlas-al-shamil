@@ -220,13 +220,50 @@ const LAYER_GROUPS = {
   peoples: ["peoples-fill", "peoples-line"],
   places: ["places"],
   claims: ["claim-halo", "claim-points"],
+  crises: ["crises-circle"],
   demography: ["demography"],
   lights: ["lights"],
   labels: [], // أسماء الدول: عناصر HTML لا طبقات خريطة، تُدار في updateLabels
 };
+// الأوبئة والمجاعات الموثّقة (web/data/crises.json، من scripts/build_crises.mjs): تُحمَّل عند أول طلب، وتُصفّى بنافذة زمنية حول سنة الخريطة
+let crisesData = null, crisesReady = null;
+const CRISIS_WINDOW = 75; // سنوات حول سنة الخريطة، لأن الأحداث كثيرة ومتفرقة
+function updateCrisesFilter() {
+  if (!crisesData || !map.getLayer("crises-circle")) return;
+  const y = Number(time.key);
+  const inWindow = (p) => !Number.isFinite(y) || (p.year >= y - CRISIS_WINDOW && p.year <= y + CRISIS_WINDOW);
+  map.setFilter("crises-circle", Number.isFinite(y) ? ["all", [">=", ["get", "year"], y - CRISIS_WINDOW], ["<=", ["get", "year"], y + CRISIS_WINDOW]] : null);
+  setLayerCount("crises", fmtInt(crisesData.features.filter((f) => inWindow(f.properties)).length));
+}
+function ensureCrises() {
+  crisesReady ??= (async () => {
+    try { crisesData = await getJson("data/crises.json"); } catch { crisesReady = null; return false; }
+    map.addSource("crises", { type: "geojson", data: crisesData });
+    map.addLayer({ id: "crises-circle", type: "circle", source: "crises", layout: { visibility: "none" },
+      paint: {
+        "circle-radius": ["case", ["==", ["get", "precision"], "event"], 5, 3.5],
+        "circle-color": ["match", ["get", "kind"], "famine", "#c4572a", "#7fb8d6"],
+        "circle-stroke-color": "#0b1020", "circle-stroke-width": 1, "circle-opacity": 0.9 } });
+    pointerOn("crises-circle");
+    const popup = new maplibregl.Popup({ closeButton: true, maxWidth: "280px" });
+    map.on("click", "crises-circle", (e) => {
+      const p = e.features[0].properties;
+      const name = p.name_ar ? escapeHtml(p.name_ar) : `<span dir="ltr" lang="en">${escapeHtml(p.name_en ?? p.id)}</span><div class="sub">لا اسم عربي موثّق لهذا الحدث في ويكي بيانات</div>`;
+      const yr = p.year < 0 ? `${-p.year} ق.م` : `${p.year}م`;
+      const where = p.precision === "event" ? "موقع الحدث كما في ويكي بيانات" : `موقع تقريبي: ${escapeHtml(p.place_ar ?? p.place_en ?? "المكان المرتبط")}`;
+      const desc = p.desc_ar ?? p.desc_en;
+      popup.setLngLat(e.lngLat).setHTML(`<div class="crisis-pop"><b>${p.kind === "famine" ? "مجاعة" : "وباء"} ${yr}</b><div>${name}</div>` +
+        (desc ? `<div class="sub" ${p.desc_ar ? "" : 'dir="ltr" lang="en"'}>${escapeHtml(desc)}</div>` : "") +
+        `<div class="sub">${where}</div><div class="sub">الوصف والموقع من ويكي بيانات (CC0).</div></div>`).addTo(map);
+    });
+    updateCrisesFilter();
+    return true;
+  })();
+  return crisesReady;
+}
 const groupOf = (id) => Object.keys(LAYER_GROUPS).find((g) => LAYER_GROUPS[g].includes(id));
 const wanted = new Map(["hillshade", "lakes", "rivers"].map((id) => [id, true])); // طبقات الأساس ظاهرة ابتداءً
-const userOff = new Set(["demography", "lights"]); // السكان وأضواء الليل مطفأة ابتداءً، ويشعلها القارئ من بطاقات الطبقات
+const userOff = new Set(["demography", "lights", "crises"]); // السكان وأضواء الليل مطفأة ابتداءً، ويشعلها القارئ من بطاقات الطبقات
 function setVis(id, on) {
   wanted.set(id, on);
   if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", on && !userOff.has(groupOf(id)) ? "visible" : "none");
@@ -435,6 +472,7 @@ document.getElementById("layer-panel").addEventListener("change", (e) => {
     // أي تغيير يدوي يترك المشهد، فيصير الوضع مخصّصاً
     if (!scenePushing) { activeScene = null; markScene(); }
     if (t.checked) userOff.delete(t.dataset.group); else userOff.add(t.dataset.group);
+    if (t.dataset.group === "crises" && t.checked) { wanted.set("crises-circle", true); ensureCrises().then(() => setVis("crises-circle", true)); }
     for (const id of LAYER_GROUPS[t.dataset.group]) if (wanted.has(id)) setVis(id, wanted.get(id));
     if (t.dataset.group === "labels") updateLabels();
   } else if (t.id === "terrain-toggle") {
@@ -1257,6 +1295,7 @@ async function loadBorders(key) {
   time.key = key;
   borderSelect.value = String(key);
   renderTime();
+  updateCrisesFilter();
   const modern = key === "modern";
   const url = modern ? "data/borders/modern_countries.geojson" : `data/borders/borders_${key}.geojson`;
   let data, labels;
