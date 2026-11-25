@@ -2432,6 +2432,40 @@
    "review": {
     "agree": true
    }
+  },
+  "cl_000000458": {
+   "domains": [
+    "war",
+    "agriculture",
+    "economy"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "war",
+     "agriculture"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
+  },
+  "cl_000000459": {
+   "domains": [
+    "war",
+    "society",
+    "agriculture"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "war",
+     "agriculture"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
   }
  }
 }

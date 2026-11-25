@@ -108,8 +108,8 @@
    "about": "أماكن ادعاءات مطابقة الاقتباس لنص مصدرها، بحجم يتبع عدد الشواهد. وفي السُّنّة المختارة تُلوَّن بدورها: مؤيد أو مقيِّد.",
    "coverage": {
     "label": "الادعاءات المعروضة",
-    "text": "189 ادعاءً في 8 حقب",
-    "count": 189
+    "text": "191 ادعاءً في 8 حقب",
+    "count": 191
    },
    "sources": [
     {
@@ -230,6 +230,13 @@
      "license": "ملك عام: نُشر سنة 1910، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
      "attribution": "Thucydides، The Peloponnesian War، ترجمة R. Crawley، Everyman's Library (1910)",
      "landing": "https://archive.org/details/india.history.resource.91344"
+    },
+    {
+     "id": "caesar-bg7-la",
+     "tier": "A",
+     "license": "النص اللاتيني لقيصر (ت. 44 ق.م) ملك عام. التفريغ في ويكي مصدر بترخيص CC BY-SA، والمسجل هنا النص المفرّغ.",
+     "attribution": "Caesar، Commentarii de bello Gallico، الكتاب السابع (النص اللاتيني من ويكي مصدر، CC BY-SA)",
+     "landing": "https://la.wikisource.org/wiki/Commentarii_de_bello_Gallico/Liber_VII"
     },
     {
      "id": "tacitus",

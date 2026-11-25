@@ -2225,5 +2225,85 @@
     },
     "status": "draft",
     "version": 1
+  },
+  {
+    "id": "cl_000000458",
+    "passage_id": "caesar-bg7-la:alesia-supply-besiegers",
+    "quote": "ut complures dies frumento milites caruerint et pecore ex longinquioribus vicis adacto extremam famem sustentarent",
+    "statement": "يذكر قيصر أن جنوده في حصار ألِيزيا عدموا القمح أياماً عديدة، وعاشوا على الماشية المجلوبة من قرى بعيدة حتى بلغ الجوع حدّه الأقصى",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "قيصر، حرب الغال، الكتاب السابع (النص اللاتيني من ويكي مصدر)",
+    "isnad": null,
+    "hedge": "قيصر طرف في الحصار، وكتابه يمجّد نفسه، والاعتراف بعسر إمداد الجيش هنا يخدم رواية الصمود. وهو يذكر أن عسر الإمداد لم يُضعف الجنود، فالجوع لم يحسم وحده",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "ألِيزيا"
+      ],
+      "persons": [
+        "قيصر"
+      ],
+      "dates": [
+        "52 ق.م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era3"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era3"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000459",
+    "passage_id": "caesar-bg7-la:alesia-prisoners-famine",
+    "quote": "fame et inopia adductos clam ex castris exisse",
+    "statement": "يروي قيصر أن عبيداً أسرى اعترفوا بأن جنوداً خرجوا من المعسكر سراً من الجوع وقلة الزاد يطلبون القمح والماشية في الحقول",
+    "type": "reported_belief",
+    "layer": "contemporary_witness",
+    "attributed_to": "قيصر، حرب الغال، الكتاب السابع (النص اللاتيني من ويكي مصدر)",
+    "isnad": null,
+    "hedge": "اعترافات انتُزعت بالتعذيب، وقد نقلها قيصر في صيغة تخدم روايته، فهي قول منسوب لا وقائع مثبتة",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "ألِيزيا"
+      ],
+      "persons": [
+        "قيصر"
+      ],
+      "dates": [
+        "52 ق.م"
+      ]
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era3"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era3"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]

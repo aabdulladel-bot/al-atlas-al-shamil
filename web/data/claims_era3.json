@@ -1,7 +1,7 @@
 {
   "_meta": {
     "era": 3,
-    "count": 63,
+    "count": 65,
     "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
   },
   "claims": [
@@ -1015,6 +1015,40 @@
         "agriculture",
         "war",
         "health"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000458",
+      "statement": "يذكر قيصر أن جنوده في حصار ألِيزيا عدموا القمح أياماً عديدة، وعاشوا على الماشية المجلوبة من قرى بعيدة حتى بلغ الجوع حدّه الأقصى",
+      "quote": "ut complures dies frumento milites caruerint et pecore ex longinquioribus vicis adacto extremam famem sustentarent",
+      "attributed_to": "قيصر، حرب الغال، الكتاب السابع (النص اللاتيني من ويكي مصدر)",
+      "layer": "contemporary_witness",
+      "type": "event",
+      "hedge": "قيصر طرف في الحصار، وكتابه يمجّد نفسه، والاعتراف بعسر إمداد الجيش هنا يخدم رواية الصمود. وهو يذكر أن عسر الإمداد لم يُضعف الجنود، فالجوع لم يحسم وحده",
+      "chapter": "قيصر: حصار ألِيزيا (52 ق.م)",
+      "domains": [
+        "war",
+        "agriculture",
+        "economy"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000459",
+      "statement": "يروي قيصر أن عبيداً أسرى اعترفوا بأن جنوداً خرجوا من المعسكر سراً من الجوع وقلة الزاد يطلبون القمح والماشية في الحقول",
+      "quote": "fame et inopia adductos clam ex castris exisse",
+      "attributed_to": "قيصر، حرب الغال، الكتاب السابع (النص اللاتيني من ويكي مصدر)",
+      "layer": "contemporary_witness",
+      "type": "reported_belief",
+      "hedge": "اعترافات انتُزعت بالتعذيب، وقد نقلها قيصر في صيغة تخدم روايته، فهي قول منسوب لا وقائع مثبتة",
+      "chapter": "قيصر: حصار ألِيزيا (52 ق.م)",
+      "domains": [
+        "war",
+        "society",
+        "agriculture"
       ],
       "domains_status": "delegated_review",
       "reviewed": false
