@@ -429,6 +429,15 @@
    "review": {
     "agree": true
    }
+  },
+  "battuta-defremery-vol3": {
+   "grade": "C",
+   "kind": "traveller",
+   "why": "رحالة يروي ما رآه وسمعه في بلاط دلهي والسند، والنص ترجمة فرنسية حديثة من مخطوطات تختلف في بعض الأسماء",
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   }
  }
 }

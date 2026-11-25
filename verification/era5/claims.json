@@ -524,5 +524,83 @@
     },
     "status": "draft",
     "version": 1
+  },
+  {
+    "id": "cl_000000456",
+    "passage_id": "battuta-defremery-vol3:delhi-slave-chief-sind",
+    "quote": "le chef des émirs du Sind était un esclave du sultan",
+    "statement": "يذكر ابن بطوطة أن قائد أمراء السند في زمنه كان مملوكاً من مماليك السلطان",
+    "type": "state",
+    "layer": "contemporary_witness",
+    "attributed_to": "ابن بطوطة، ترجمة Defrémery وSanguinetti، المجلد الثالث (1855)",
+    "isnad": null,
+    "hedge": "رحالة نقل ما رآه وسمعه في السند ودلهي، والخبر عن قائد بعينه في زمن الرحلة، لا عن نظام الجند كله",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "السند",
+        "مولتان"
+      ],
+      "persons": [
+        "سرتيز"
+      ],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era5"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era5"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000457",
+    "passage_id": "battuta-defremery-vol3:balaban-slave-water-carrier",
+    "quote": "Balaban fut traité avec mépris et placé parmi les porteurs d'eau",
+    "statement": "يروي ابن بطوطة أن بلبان، وكان مملوكاً للسلطان شمس الدين، عومل بازدراء وجُعل بين السقاة",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "ابن بطوطة، ترجمة Defrémery وSanguinetti، المجلد الثالث (1855)",
+    "isnad": null,
+    "hedge": "رواية ابن بطوطة عن حادثة قديمة في تاريخ دلهي، وحكايته تتضمن نبوءة المنجمين، فلا تُعدّ مشاهدة. ومساره اللاحق إلى الحكم لا يرد في هذه الجملة",
+    "author_preference": null,
+    "mentions": {
+      "places": [
+        "دلهي"
+      ],
+      "persons": [
+        "بلبان",
+        "شمس الدين"
+      ],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era5"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era5"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]

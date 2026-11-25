@@ -1481,6 +1481,28 @@
       ]
     },
     {
+      "id": "battuta-defremery-vol3",
+      "file": "verification/era5/battuta_defremery_vol3.txt",
+      "url": "https://archive.org/details/voyagesdibnbato00bagoog",
+      "license": "ملك عام: نُشر المجلد الثالث سنة 1855، وهو ملك عام في الولايات المتحدة بحسب تاريخ النشر. الأرشيف لا يحمل علامة ترخيص.",
+      "tier": "A",
+      "landing": "https://archive.org/details/voyagesdibnbato00bagoog",
+      "attribution": "Defrémery وSanguinetti، Voyages d'Ibn Batoutah، المجلد الثالث (1855): الهند ودلهي",
+      "note": "نص المجلد الثالث كاملاً من الأرشيف (نص djvu). فيه وصف دلهي ومماليك السلاطين في الهند. الأرقام والأحرف في المسح الضوئي فيها أخطاء؛ الاقتباسات المعتمدة مطابقة حرفياً.",
+      "status": "ok",
+      "retrieved_at": "2026-11-25T00:00:00.000Z",
+      "sha256": "0b3832b9175c35ee90b3b5ea2297f338c039f6a9fc3edcc383b3df6348d4affc",
+      "bytes": 836733,
+      "files": [
+        {
+          "file": "verification/era5/battuta_defremery_vol3.txt",
+          "sha256": "0b3832b9175c35ee90b3b5ea2297f338c039f6a9fc3edcc383b3df6348d4affc",
+          "bytes": 836733
+        }
+      ],
+      "license_verified_at": "2026-11-25"
+    },
+    {
       "id": "garcilaso-rycaut-1688",
       "file": "verification/era6/garcilaso.txt",
       "url": "https://archive.org/details/royalcommentarie00vega_0",

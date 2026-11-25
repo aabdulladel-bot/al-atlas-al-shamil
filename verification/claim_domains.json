@@ -2405,6 +2405,33 @@
     "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
     "decision": "merge"
    }
+  },
+  "cl_000000456": {
+   "domains": [
+    "politics",
+    "institutions",
+    "war"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "politics",
+     "war"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
+  },
+  "cl_000000457": {
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   }
  }
 }
