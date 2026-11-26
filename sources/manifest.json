@@ -1081,6 +1081,28 @@
       ]
     },
     {
+      "id": "caesar-bg7-la",
+      "file": "verification/era3/caesar_bellum_gallicum_7_la.txt",
+      "url": "https://la.wikisource.org/wiki/Commentarii_de_bello_Gallico/Liber_VII",
+      "license": "النص اللاتيني لقيصر (ت. 44 ق.م) ملك عام. التفريغ في ويكي مصدر بترخيص CC BY-SA، والمسجل هنا النص المفرّغ.",
+      "tier": "A",
+      "landing": "https://la.wikisource.org/wiki/Commentarii_de_bello_Gallico/Liber_VII",
+      "attribution": "Caesar، Commentarii de bello Gallico، الكتاب السابع (النص اللاتيني من ويكي مصدر، CC BY-SA)",
+      "note": "الكتاب السابع كاملاً: حصار ألِيزيا وتجويع المحصورين والمحاصِرين. يحوي ترويسات الفصول بين علامات === ===.",
+      "status": "ok",
+      "retrieved_at": "2026-11-25T00:00:00.000Z",
+      "sha256": "b97294f615d640f2025c085b00da03c4be8c798f06ef73bc0294d5774d00ba93",
+      "bytes": 92499,
+      "files": [
+        {
+          "file": "verification/era3/caesar_bellum_gallicum_7_la.txt",
+          "sha256": "b97294f615d640f2025c085b00da03c4be8c798f06ef73bc0294d5774d00ba93",
+          "bytes": 92499
+        }
+      ],
+      "license_verified_at": "2026-11-25"
+    },
+    {
       "id": "tacitus",
       "file": "verification/era3/tacitus.txt",
       "url": "https://archive.org/details/annalsoftacitus0000alfr",

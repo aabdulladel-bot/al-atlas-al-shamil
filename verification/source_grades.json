@@ -438,6 +438,18 @@
    "review": {
     "agree": true
    }
+  },
+  "caesar-bg7-la": {
+   "grade": "C",
+   "kind": "commander_self_account",
+   "why": "قيصر طرف في الحرب يكتب تاريخها ويمجّد نفسه، وإن كان أقرب شهود ألِيزيا وأعلمهم بالإمداد",
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": "B",
+    "resolution": "أُبقي C: قيصر قائد يكتب حربه ويمجّد نفسه، وهذا مثال المعيار لدرجة C، وإن كان شاهد عيان معاصراً",
+    "decision": "keep"
+   }
   }
  }
 }

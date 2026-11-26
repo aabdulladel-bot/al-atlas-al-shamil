@@ -227,6 +227,16 @@
      "lim": 0
     }
    }
+  },
+  {
+   "sunna": "sn_war_supply",
+   "name": "سُنّة الإمداد والحصار",
+   "eras": {
+    "3": {
+     "sup": 2,
+     "lim": 1
+    }
+   }
   }
  ],
  "conflicts": [
