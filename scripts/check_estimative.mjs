@@ -21,6 +21,19 @@ for (const p of read("scripts/config/precedents.json").precedents) {
   for (const t of p.differences ?? []) fields.push([`${p.id}: اختلاف`, t]);
   fields.push([`${p.id}: تحفّظ`, p.hedge]);
 }
+// الاستشراف (analysis/foresight): سرده وآثاره ونقده ومعايير إبطاله نصوص تحليلية
+const FS = "analysis/foresight/scenarios.json";
+if (fs.existsSync(path.join(ROOT, FS))) {
+  const F = read(FS);
+  for (const sc of F.scenarios) {
+    fields.push([`${sc.id}: السرد`, sc.narrative], [`${sc.id}: النقد الأحمر`, sc.red_team]);
+    for (const t of sc.counter ?? []) fields.push([`${sc.id}: نقد مضاد`, t]);
+    for (const t of sc.falsifiers ?? []) fields.push([`${sc.id}: ما يُبطله`, t]);
+    for (const im of sc.implications) fields.push([`${sc.id}: أثر ${im.sunna}`, im.reading]);
+  }
+  for (const sg of F.signposts) fields.push([`${sg.id}: إشارة`, sg.observable]);
+  for (const t of F.global_red_team ?? []) fields.push(["الاستشراف: نقد عام", t]);
+}
 const errors = fields.filter(([, t]) => t && loose.test(t)).map(([where, t]) => `${where}: «${t.match(loose)[2]}» لفظ احتمال مرسل؛ استعمل المقياس في حقل التقدير`);
 console.log(`اللغة التقديرية: ${fields.filter(([, t]) => t).length} نصاً تحليلياً`);
 if (errors.length) { for (const e of errors) console.log("  - " + e); process.exit(1); }
