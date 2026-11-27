@@ -1,7 +1,7 @@
 {
   "_meta": {
     "era": 6,
-    "count": 14,
+    "count": 18,
     "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
   },
   "claims": [
@@ -230,6 +230,73 @@
       ],
       "domains_status": "delegated_review",
       "reviewed": true
+    },
+    {
+      "id": "cl_000000460",
+      "statement": "يذكر غارسيلاسو أن ملوك الإنكا ألزموا رعاياهم جميعاً بتعلّم لغة البلاط",
+      "quote": "a Command and an Injunction Jaid upon all their Vaflals, ob- liging them to learn the Language of the Court",
+      "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+      "layer": "later_historian",
+      "type": "description",
+      "hedge": "يروي غارسيلاسو، وهو ابن أم إنكية، سياسة دولة أجداده بعد عقود من سقوطها، ويمجّدها. والنص مصوّر من ترجمة إنجليزية من القرن السابع عشر، وفيه أخطاء OCR تُترك كما هي.",
+      "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): لغة البلاط عند الإنكا، الكتاب السابع (تقريبي)",
+      "domains": [
+        "culture",
+        "politics",
+        "institutions"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000461",
+      "statement": "يذكر غارسيلاسو أن حضور أبناء السادة التابعين في البلاط جعل لغة البلاط أعمّ انتشاراً وأسهل تعلّماً",
+      "quote": "by which means the Language of the Court became mote general and common, being learned with eafe and pleafure",
+      "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+      "layer": "later_historian",
+      "type": "cause",
+      "hedge": "تعليل غارسيلاسو لانتشار اللغة، لا إحصاء له. وهو يمجّد دولة أجداده، وفي النص المصوّر أخطاء OCR («mote» بدل more).",
+      "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): تربية أبناء السادة في البلاط، الكتاب السابع (تقريبي)",
+      "domains": [
+        "culture",
+        "politics",
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000462",
+      "statement": "يذكر غارسيلاسو أن لغة أهل البلاد، بعد ثمانين سنة من إخضاع إمبراطورية الإنكا، ما زالت تفتقر إلى ألفاظ تعبّر عن أسرار الدين المسيحي",
+      "quote": "when now after eighty years that the Indian Empire hath been fubdued, there ftill want words in the Jadian Language to exprefs the Myfteries of our Holy Faith.",
+      "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+      "layer": "contemporary_witness",
+      "type": "state",
+      "hedge": "ملاحظة كاتب عاش في البيرو بعد الفتح وكتب في إسبانيا. وهي تصف بقاء اللغة المحلية في التعليم الديني، لا مدى انتشار الإسبانية بين الناس.",
+      "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): اللغات بعد الفتح الإسباني (تقريبي)",
+      "domains": [
+        "culture",
+        "religion"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000463",
+      "statement": "يذكر غارسيلاسو أن كتاب تعليم الدين المطبوع سنة 1585 صدر بثلاث لغات: الإسبانية، واللغة العامة في كوزكو، ولغة إقليم أيمارا",
+      "quote": "in the year 1585, in three Languages, viz. in Spanifh, in the general Language of Coz- co, and in the Tongue peculiarly belonging to the Province of Aymara",
+      "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+      "layer": "contemporary_witness",
+      "type": "event",
+      "hedge": "ينسب غارسيلاسو الكتاب إلى راهب بعينه، والسنة كما وردت في الترجمة. والمراد أن كنيسة الفاتحين علّمت بلغات أهل البلاد إلى جانب الإسبانية.",
+      "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): اللغات بعد الفتح الإسباني (تقريبي)",
+      "domains": [
+        "culture",
+        "religion",
+        "knowledge"
+      ],
+      "domains_status": "model_draft",
+      "reviewed": false
     }
   ]
 }

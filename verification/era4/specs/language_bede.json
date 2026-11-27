@@ -1,0 +1,20 @@
+{
+  "era": 4,
+  "source": {
+    "source_id": "bede-latin-pl95",
+    "file": "verification/era4/bede_latin_pl95_wikisource.txt",
+    "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+    "chapter": "الكتاب الأول، الفصل 1 (تقريبي): وصف بريطانيا ولغاتها"
+  },
+  "items": [
+    {
+      "slug": "five-languages-latin-common",
+      "quote": "quinque gentium linguis, unam eandemque summae ueritatis et uerae sublimitatis scientiam scrutatur, et confitetur, Anglorum uidelicet, Brettonum, Scottorum, Pictorum et Latinorum, quae meditatione scripturarum ceteris omnibus est facta communis.",
+      "statement": "يقرر بيدا أن بريطانيا تدرس العلم بالحقيقة الواحدة بلغات خمس أمم: الإنجليز والبريطانيين والإسكتلنديين والبكتيين واللاتين، وأن اللاتينية صارت مشتركة بين الجميع بدراسة الكتاب المقدس",
+      "type": "description",
+      "layer": "later_historian",
+      "hedge": "وصف راهب لحال الجزيرة في القرن الثامن، من داخل الكنيسة. فهو يقدّم اللاتينية لغةً لدراسة الكتاب، لا لغةَ كلام الناس اليومي.",
+      "mentions": { "places": [], "persons": [], "dates": [] }
+    }
+  ]
+}
