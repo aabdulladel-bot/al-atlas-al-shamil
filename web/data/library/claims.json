@@ -3775,7 +3775,7 @@
    "source_grade": "C",
    "info_grade": 3,
    "scope": "fact",
-   "grade_status": "model_draft",
+   "grade_status": "delegated_review",
    "domains": [
     "politics",
     "institutions",

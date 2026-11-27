@@ -2050,7 +2050,10 @@
    "scope": "fact",
    "info": 3,
    "why": "رواية رحالة واحدة عن قائد بعينه، ولا مصدر مستقل يؤيد أن هذا الوصف عام في الجند",
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "cl_000000457": {
    "source": "battuta-defremery-vol3",
