@@ -1,0 +1,3975 @@
+{
+ "_meta": {
+  "title": "مكتبة الأطلس الشامل: الشواهد الموثّقة",
+  "count": 197,
+  "built_by": "scripts/build_library.mjs من verification/era*/claims.json وpassages.json والدرجات والمجالات",
+  "rule": "كل اقتباس مطابق لنص مصدره بـ checkQuote. الشاهد فرضية موثّقة الأصل، لا حكم الأطلس، وتحفّظه جزء منه.",
+  "grading": "source_grade بنظام الأدميرالية (A–F) وinfo_grade (1–6) بنطاقها scope (fact أو attribution)، كما في verification/GRADING.md",
+  "licence": "النصوص المقتبسة تابعة لتراخيص مصادرها في LICENSES.md (القسم ب)، ويُنسب كل اقتباس إلى مصدره عند إعادة استعماله.",
+  "cite": "الأطلس الشامل، الشاهد <المعرّف>، مع رابطه الثابت (عنوان الأطلس متبوعاً بحقل link)."
+ },
+ "claims": [
+  {
+   "id": "cl_000000101",
+   "link": "#c101",
+   "era": 1,
+   "statement": "إذا استأجر رجل حقلاً للزراعة ولم ينتج فيه حبوباً، يُحاسَب، ويعطي صاحب الحقل حبوباً على أساس الحقول المجاورة",
+   "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
+   "quote": "If a man rent a field for cultivation and do not produce any grain in the field",
+   "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
+   "chapter": "قوانين العقود والزراعة",
+   "source_id": "hammurabi",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "economy",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000102",
+   "link": "#c102",
+   "era": 1,
+   "statement": "إذا أجّر رجل حقله لمستأجر بحصة من المحصول، ثم أغرق أدد الحقل وجرف المحصول، تقع الخسارة على المستأجر",
+   "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
+   "quote": "inundate the field and carry away the produce, the loss (falls on) the tenant",
+   "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
+   "chapter": "قوانين العقود والزراعة",
+   "source_id": "hammurabi",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "economy",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000103",
+   "link": "#c103",
+   "era": 1,
+   "statement": "إذا كان على رجل دين، فأغرق أدد حقله وجرف محصوله، أو لم تنبت حبوب فيه لقلة الماء، لا يردّ حبوباً للدائن في تلك السنة، ويُعدَّل عقد الدين، ولا يدفع فائدة تلك السنة",
+   "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
+   "quote": "Adad inundate his field and carry away the produce",
+   "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
+   "chapter": "قوانين الديون والفيضان",
+   "source_id": "hammurabi",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "economy",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000104",
+   "link": "#c104",
+   "era": 1,
+   "statement": "إذا أهمل رجل تقوية سده فانكسر وجرف الماء الأرض الزراعية، يعوّض من انكسر سده الحبوب التي أتلفت",
+   "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
+   "quote": "a break be made in his dyke and the water carry away the farm-land",
+   "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
+   "chapter": "قوانين السدود والري",
+   "source_id": "hammurabi",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "environment",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000105",
+   "link": "#c105",
+   "era": 1,
+   "statement": "إذا فتح رجل قناة للري وأهملها، فجرف الماء حقلاً مجاوراً، يعوّض صاحب الحقل بالحبوب على أساس الحقول المجاورة",
+   "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
+   "quote": "open his canal for irrigation and neglect it",
+   "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
+   "chapter": "قوانين السدود والري",
+   "source_id": "hammurabi",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "environment",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000106",
+   "link": "#c106",
+   "era": 1,
+   "statement": "النصيحة الأولى للابن: لا تفخر بعلمك، وحاور الجاهل كما تحاور الحكيم",
+   "attributed_to": "تعاليم بتاح حتب (ترجمة Gunn، 1912)",
+   "quote": "Be not proud because thou art learned",
+   "hedge": "أدب حكمة يقدّم توجيهاً أخلاقياً، لا وصفاً لواقع مُثبت",
+   "chapter": "التعليم الأول",
+   "source_id": "ptahhotep",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000107",
+   "link": "#c107",
+   "era": 1,
+   "statement": "لا حد للمهارة، ولا صانع يملك المزايا كلها",
+   "attributed_to": "تعاليم بتاح حتب (ترجمة Gunn، 1912)",
+   "quote": "For no limit can be set to skill",
+   "hedge": "أدب حكمة يقدّم توجيهاً أخلاقياً، لا وصفاً لواقع مُثبت",
+   "chapter": "التعليم الأول",
+   "source_id": "ptahhotep",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "industry",
+    "knowledge",
+    "culture"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000108",
+   "link": "#c108",
+   "era": 1,
+   "statement": "وصف جورج سميث، في مقدمته، إرسال الحمامة بعد الطوفان ضمن الرواية البابلية",
+   "attributed_to": "George Smith",
+   "quote": "the sending forth of the dove",
+   "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
+   "chapter": "مقدمة الترجمة",
+   "source_id": "gilgamesh",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "religion"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000109",
+   "link": "#c109",
+   "era": 1,
+   "statement": "قرأ سميث أن السفينة استقرت على جبال نيزير، وهي رواية الطوفان في اللوح الحادي عشر",
+   "attributed_to": "George Smith",
+   "quote": "the ship rested on the mountains of Nizir",
+   "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
+   "chapter": "مقدمة الترجمة",
+   "source_id": "gilgamesh",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "religion"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000110",
+   "link": "#c110",
+   "era": 1,
+   "statement": "في فهرس اللوح الحادي عشر أمر ببناء السفينة قبل الطوفان",
+   "attributed_to": "George Smith، The Chaldean Account of Genesis (1876)",
+   "quote": "Command to build the ark",
+   "hedge": "من فهرس المحرر للوح الحادي عشر، لا من نص الملحمة",
+   "chapter": "فهرس اللوح الحادي عشر",
+   "source_id": "gilgamesh",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "religion"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000111",
+   "link": "#c111",
+   "era": 1,
+   "statement": "الكلام الحسن أندر من الزمرد الذي تجده الجواري على الحجارة",
+   "attributed_to": "تعاليم بتاح حتب (ترجمة Gunn، 1912)",
+   "quote": "Fair speech is more rare than the emerald that is found by slave-maidens on the pebbles.",
+   "hedge": "أدب حكمة يقدّم توجيهاً أخلاقياً، لا وصفاً لواقع مُثبت",
+   "chapter": "التعليم الأول",
+   "source_id": "ptahhotep",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000112",
+   "link": "#c112",
+   "era": 1,
+   "statement": "يذكر قانون حمورابي (§56) أن من فتح الماء فجرف الماء تحسينات حقل جاره يدفع عشرة كور من الحبوب عن كل جريب",
+   "attributed_to": "شريعة حمورابي (ترجمة Harper، 1904)",
+   "quote": "he shall measure out ten GUR of grain per GAN.",
+   "hedge": "نص تشريعي يذكر ما يقرره القانون، ولا يثبت أنه طُبّق بهذه الصورة",
+   "chapter": "قوانين السدود والري",
+   "source_id": "hammurabi",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "institutions",
+    "economy"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000113",
+   "link": "#c113",
+   "era": 1,
+   "statement": "كان النص الأصلي ستة أعمدة من الكتابة",
+   "attributed_to": "George Smith، The Chaldean Account of Genesis (1876)",
+   "quote": "d originally six columns of text; two of these (the third and fourth) were still nearly perfect; two others (the second and fifth) were imperfect, about half remaining, while the remaining columns (the first and sixth) were entirely lost.",
+   "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
+   "chapter": "مقدمة الترجمة",
+   "source_id": "gilgamesh",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "culture"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000114",
+   "link": "#c114",
+   "era": 1,
+   "statement": "رأيت في الحال أنني وجدت هنا جزءاً على الأقل من قصة الطوفان البابلية",
+   "attributed_to": "George Smith، The Chaldean Account of Genesis (1876)",
+   "quote": "I saw at once that I had here discovered a portion at least of the Chaldean account of the Deluge.",
+   "hedge": "من مقدمة المترجم في القرن التاسع عشر، لا من نص الملحمة",
+   "chapter": "مقدمة الترجمة",
+   "source_id": "gilgamesh",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "culture",
+    "religion"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000201",
+   "link": "#c201",
+   "era": 2,
+   "statement": "يلقّب داريوس نفسه ملك الولايات (التابعة)",
+   "attributed_to": "داريوس الأول، نقش بيستون (ترجمة Rawlinson، 1846)",
+   "quote": "the King of (the dependent) provinces",
+   "hedge": "نقش ملكي يعرض رواية داريوس عن نفسه",
+   "chapter": "العمود الأول: ألقاب داريوس",
+   "source_id": "behistun",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000202",
+   "link": "#c202",
+   "era": 2,
+   "statement": "يعدّ داريوس فارس وسوسيانا وبابل وآشور وعربية ومصر من البلدان التي صارت في يده",
+   "attributed_to": "داريوس الأول، نقش بيستون (ترجمة Rawlinson، 1846)",
+   "quote": "Persia, Susiana, Babylonia, Assyria, Arabia, Egypt",
+   "hedge": "نقش ملكي يعرض رواية داريوس عن نفسه",
+   "chapter": "العمود الأول: البلدان التي صارت في يده",
+   "source_id": "behistun",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000203",
+   "link": "#c203",
+   "era": 2,
+   "statement": "يذكر داريوس أن مجموع البلدان واحد وعشرون بلداً، والقراءة في الطبعة 21 أو 23",
+   "attributed_to": "داريوس الأول، نقش بيستون (ترجمة Rawlinson، 1846)",
+   "quote": "the total amount being twenty-one (twenty-three ?) countries",
+   "hedge": "القراءة في الطبعة مشكوك فيها (21 أو 23)",
+   "chapter": "العمود الأول: البلدان التي صارت في يده",
+   "source_id": "behistun",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000204",
+   "link": "#c204",
+   "era": 2,
+   "statement": "ثارت على داريوس بلدان عدة وهو في بابل، منها فارس وسوسيانا وميديا وآشور وأرمينيا وبارثيا",
+   "attributed_to": "داريوس الأول، نقش بيستون (ترجمة Rawlinson، 1846)",
+   "quote": "Persis, Susiana, Media, Assyria, Armenia, Parthia, Margiana, Sattagydia, and Sacia",
+   "hedge": "نقش ملكي يعرض رواية داريوس عن نفسه",
+   "chapter": "العمود الثاني: البلدان التي ثارت",
+   "source_id": "behistun",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "war"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000205",
+   "link": "#c205",
+   "era": 2,
+   "statement": "يسمّي إسارحدون هذه الوثيقة «لوائح الطرق» التي أصدرها لبعل ومدن الساحل",
+   "attributed_to": "إسارحدون، النقوش الملكية (ترجمة Luckenbill، 1927)",
+   "quote": "These are the road regulations",
+   "hedge": "علامة استفهام في الطبعة على \"road regulations\"، والنص مضطرب في أجزاء كثيرة",
+   "chapter": "إسارحدون: لوائح الطرق لبعل ملك صور",
+   "source_id": "luckenbill",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "institutions",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000206",
+   "link": "#c206",
+   "era": 2,
+   "statement": "تشمل اللوائح جبيل (بيبلوس) بين مدن الساحل وجبل لبنان",
+   "attributed_to": "إسارحدون، النقوش الملكية (ترجمة Luckenbill، 1927)",
+   "quote": "Gebail (Gubla, Byblos)",
+   "hedge": "النص مضطرب، والأسماء بين أقواس في الطبعة",
+   "chapter": "إسارحدون: لوائح الطرق لبعل ملك صور",
+   "source_id": "luckenbill",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000207",
+   "link": "#c207",
+   "era": 2,
+   "statement": "يذكر إسارحدون أن مجموع الملوك الذين استدعاهم من سوريا والساحل والجزر 22 ملكاً",
+   "attributed_to": "إسارحدون، النقوش الملكية (ترجمة Luckenbill، 1927)",
+   "quote": "a grand total of 22 kings of the Hittite-land (Syria), the seacoast and the (islands) in the midst of the sea",
+   "hedge": "حولية ملكية يروي فيها الملك إنجازاته",
+   "chapter": "إسارحدون: ترميم قصر نينوى",
+   "source_id": "luckenbill",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000208",
+   "link": "#c208",
+   "era": 2,
+   "statement": "أعطى إسارحدون الملوك أوامره وعوارض كبيرة",
+   "attributed_to": "إسارحدون، النقوش الملكية (ترجمة Luckenbill، 1927)",
+   "quote": "I gave them their orders and great beams",
+   "hedge": "عبارة great beams وغرضها غير مذكور صراحة في الفقرة",
+   "chapter": "إسارحدون: ترميم قصر نينوى",
+   "source_id": "luckenbill",
+   "source_grade": "C",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000209",
+   "link": "#c209",
+   "era": 2,
+   "statement": "جاء حزائيل ملك العرب إلى نينوى بهدايا ثمينة",
+   "attributed_to": "إسارحدون، النقوش الملكية (ترجمة Luckenbill، 1927)",
+   "quote": "Hazael, king of the Arabs, came to Nineveh, my royal city, with his rich (heavy) gifts",
+   "hedge": "الهدايا وصفت بـ rich (heavy) وهو وصف مترجم",
+   "chapter": "إسارحدون: تسوية المسألة العربية",
+   "source_id": "luckenbill",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000210",
+   "link": "#c210",
+   "era": 2,
+   "statement": "يذكر ملخص الإصحاح أن أسطول سليمان يجلب الذهب من أوفير",
+   "attributed_to": "الكتاب المقدس، ترجمة 1611 (ملخص الإصحاح التحريري)",
+   "quote": "His nauie fetcheth golde from Ophir",
+   "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ ومسار أسطول سليمان إلى أوفير موضع خلاف تاريخي",
+   "chapter": "ملخص إصحاح الملوك الأول 9 (طبعة 1611، تحريري؛ يظهر في المسح تحت CHAP. X)",
+   "source_id": "kjv1611",
+   "source_grade": "D",
+   "info_grade": 6,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000211",
+   "link": "#c211",
+   "era": 2,
+   "statement": "يذكر الملخص أن حيرام يزوّد سليمان بالأشجار (الخشب) لبناء الهيكل",
+   "attributed_to": "الكتاب المقدس، ترجمة 1611 (ملخص الإصحاح التحريري)",
+   "quote": "furnifheth him with trees",
+   "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ ومسار أسطول سليمان إلى أوفير موضع خلاف تاريخي",
+   "chapter": "ملخص إصحاح الملوك الأول 5 (طبعة 1611، تحريري)",
+   "source_id": "kjv1611",
+   "source_grade": "D",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "religion",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000212",
+   "link": "#c212",
+   "era": 2,
+   "statement": "يصف هيرودوت الطريق المؤدي إلى الملك بأن على طوله محطات ملكية ونُزُلاً جيداً",
+   "attributed_to": "هيرودوت، التواريخ (ترجمة Rawlinson، 1858–1861)",
+   "quote": "Royal stations exist along its whole length, and excellent caravanserais",
+   "hedge": "وصف هيرودوت كما بلغه، وليس مسحاً مباشراً",
+   "chapter": "الكتاب الخامس 52: الطريق المؤدي إلى الملك",
+   "source_id": "herodotus",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000213",
+   "link": "#c213",
+   "era": 2,
+   "statement": "يذكر هيرودوت أن الطريق يمر بأرض مأهولة وخالٍ من الخطر",
+   "attributed_to": "هيرودوت، التواريخ (ترجمة Rawlinson، 1858–1861)",
+   "quote": "and is free from danger",
+   "hedge": "وصف هيرودوت كما بلغه، وليس مسحاً مباشراً",
+   "chapter": "الكتاب الخامس 52: الطريق المؤدي إلى الملك",
+   "source_id": "herodotus",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000214",
+   "link": "#c214",
+   "era": 2,
+   "statement": "يذكر هيرودوت أن نخاو أرسل سفناً بحارتها من الفينيقيين للإبحار حول أفريقيا",
+   "attributed_to": "هيرودوت، التواريخ (ترجمة Rawlinson، 1858–1861)",
+   "quote": "sent to sea a number of ships manned by Phoenicians",
+   "hedge": "الرواية في هيرودوت، وقد لا تكون موثقة بالكامل",
+   "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو",
+   "source_id": "herodotus",
+   "source_grade": "C",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000215",
+   "link": "#c215",
+   "era": 2,
+   "statement": "يذكر هيرودوت أن الرحلة استغرقت ثلاث سنوات، وأن الفينيقيين عادوا بعد أن اجتازوا أعمدة هرقل في السنة الثالثة",
+   "attributed_to": "هيرودوت، التواريخ (ترجمة Rawlinson، 1858–1861)",
+   "quote": "it was not till the third year that they doubled the Pillars of Hercules",
+   "hedge": "رواية هيرودوت، وقد لا تكون موثقة بالكامل",
+   "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو",
+   "source_id": "herodotus",
+   "source_grade": "C",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000216",
+   "link": "#c216",
+   "era": 2,
+   "statement": "يذكر الملاحون أنهم رأوا الشمس عن يمينهم في دورانهم حول ليبيا، وهيرودوت نفسه لا يصدّق ذلك",
+   "attributed_to": "هيرودوت، التواريخ (ترجمة Rawlinson، 1858–1861)",
+   "quote": "in sailing round Libya they had the sun upon their right hand",
+   "hedge": "هيرودوت يصرّح بعدم تصديقه: \"I for my part do not believe them\"",
+   "chapter": "الكتاب الرابع 41-43: الإبحار حول أفريقيا بأمر نخاو",
+   "source_id": "herodotus",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000217",
+   "link": "#c217",
+   "era": 2,
+   "statement": "يصف ملخص الإصحاح 27 صور بأنها مصدر وافر للإمداد والتجارة",
+   "attributed_to": "الكتاب المقدس، ترجمة 1611 (ملخص الإصحاح التحريري)",
+   "quote": "The rich fupplyofTyrus",
+   "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ حروف OCR مشوّهة في العنوان",
+   "chapter": "ملخص حزقيال 27 (طبعة 1611، تحريري)",
+   "source_id": "kjv1611",
+   "source_grade": "D",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000218",
+   "link": "#c218",
+   "era": 2,
+   "statement": "يصف الملخص سقوط صور بأنه عظيم لا يُستدرك",
+   "attributed_to": "الكتاب المقدس، ترجمة 1611 (ملخص الإصحاح التحريري)",
+   "quote": "The great and vnrecouerable fall thereof",
+   "hedge": "ملخص تحريري في طبعة 1611 وليس نص الآية؛ حروف OCR مشوّهة في العنوان",
+   "chapter": "ملخص حزقيال 27 (طبعة 1611، تحريري)",
+   "source_id": "kjv1611",
+   "source_grade": "D",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "politics",
+    "trade"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000301",
+   "link": "#c301",
+   "era": 3,
+   "statement": "يرى شافان أن طريق الغرب صار خالياً من العوائق بعد هزيمة لوولان وكوتشه",
+   "attributed_to": "شافان (مقدمة الترجمة، 1895)",
+   "quote": "la route de Pouest fut dés lors débarrassée de tout obstacle",
+   "hedge": "هذا من مقدمة شافان لا من نص سيما تشيان؛ فصل الفرغانة (123) لم يُستخرج بعد",
+   "chapter": "مقدمة شافان: الطريق الغربي بعد حملات الهان (يُكتب بالمقدمة لا بنص سيما تشيان)",
+   "source_id": "chavannes",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "war"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000302",
+   "link": "#c302",
+   "era": 3,
+   "statement": "يذكر شافان أن أهل تا-يوان ملّوا مطالب الصينيين بالخيل، ثم رفضوا تسليم ما طلبه مبعوث الإمبراطور",
+   "attributed_to": "شافان (مقدمة الترجمة، 1895)",
+   "quote": "Les gens de Ta-yuan finirent cependant par se lasser des demandes des Chinois",
+   "hedge": "هذا من مقدمة شافان لا من نص سيما تشيان؛ فصل الفرغانة (123) لم يُستخرج بعد",
+   "chapter": "مقدمة شافان: الطريق الغربي بعد حملات الهان (يُكتب بالمقدمة لا بنص سيما تشيان)",
+   "source_id": "chavannes",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000303",
+   "link": "#c303",
+   "era": 3,
+   "statement": "يقول شافان إن سيما تشيان حفظ نص تقرير تشانغ تشيان، ربما مختصراً",
+   "attributed_to": "شافان (مقدمة الترجمة، 1895)",
+   "quote": "Se-ma Tsien nous a conservé",
+   "hedge": "قول شافان نفسه: \"en l'abrégeant peut-être\"، ولم نفحص النص الأصلي بعد",
+   "chapter": "مقدمة شافان: تقرير تشانغ تشيان (يذكر أن سيما تشيان حفظ نصه)",
+   "source_id": "chavannes",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000304",
+   "link": "#c304",
+   "era": 3,
+   "statement": "يصف شافان التقرير بأنه يذكر الممالك، ومنها فرغانة (تا-يوان)، بوصف موجز ودقيق",
+   "attributed_to": "شافان (مقدمة الترجمة، 1895)",
+   "quote": "les états de Ta-yuan (Ferganah)",
+   "hedge": "هذا من مقدمة شافان لا من نص سيما تشيان؛ فصل الفرغانة (123) لم يُستخرج بعد",
+   "chapter": "مقدمة شافان: تقرير تشانغ تشيان (يذكر أن سيما تشيان حفظ نصه)",
+   "source_id": "chavannes",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000305",
+   "link": "#c305",
+   "era": 3,
+   "statement": "يرى شافان أن مدن تركستان الشرقية وفرغانة (تا-يوان) أقامت أولى العلاقات المنتظمة مع أسرة الهان",
+   "attributed_to": "شافان (مقدمة الترجمة، 1895)",
+   "quote": "relations suivies avec les Han",
+   "hedge": "هذا من مقدمة شافان لا من نص سيما تشيان؛ فصل الفرغانة (123) لم يُستخرج بعد",
+   "chapter": "مقدمة شافان: أول علاقات منتظمة مع الهان",
+   "source_id": "chavannes",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000306",
+   "link": "#c306",
+   "era": 3,
+   "statement": "تقع دايوان جنوب غربي الهيونغنو، وإلى الغرب تماماً من الهان، على بعد نحو عشرة آلاف لي",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "大宛在匈奴西南，在漢正西，去漢可萬里",
+   "hedge": "الـ«لي» وحدة طول صينية، والرقم تقريبي كما ورد (可萬里)",
+   "chapter": "史記 卷123 大宛列傳：大宛的位置與俗",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000307",
+   "link": "#c307",
+   "era": 3,
+   "statement": "لدى دايوان مدن محصّنة وبيوت، وأكثر من سبعين مدينة تابعة، وسكانها نحو مئات الآلاف",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "有城郭屋室。其屬邑大小七十餘城，眾可數十萬",
+   "hedge": "数十万 تقدير عام لا إحصاء دقيق",
+   "chapter": "史記 卷123 大宛列傳：大宛的位置與俗",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "population",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000308",
+   "link": "#c308",
+   "era": 3,
+   "statement": "يصف سيما تشيان دايوان بأنها أرض مستقرة تزرع القمح والأرز، ولديها خمر العنب وخيل جيدة تعرق دماً",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "其俗土著，耕田，田稻麥。有蒲陶酒。多善馬，馬汗血",
+   "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
+   "chapter": "史記 卷123 大宛列傳：大宛的位置與俗",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "economy",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000309",
+   "link": "#c309",
+   "era": 3,
+   "statement": "علم أهل دايوان بثراء الهان فأرادوا الاتصال بها، فلما رأوا تشانغ تشيان فرحوا",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "大宛聞漢之饒財，欲通不得，見騫，喜",
+   "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
+   "chapter": "史記 卷123 大宛列傳：وصول تشانغ تشيان إلى دايوان",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000310",
+   "link": "#c310",
+   "era": 3,
+   "statement": "وافق ملك دايوان، فأرسل تشانغ تشيان مع مرشدين إلى كانجو",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "大宛以為然，遣騫，為發導繹，抵康居",
+   "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
+   "chapter": "史記 卷123 大宛列傳：張騫出使月氏，經大宛",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000311",
+   "link": "#c311",
+   "era": 3,
+   "statement": "زار تشانغ تشيان بنفسه دايوان ويوتشي وباكتريا وكانجو",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "騫身所至者大宛、大月氏、大夏、康居",
+   "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
+   "chapter": "史記 卷123 大宛列傳：所至之國",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000312",
+   "link": "#c312",
+   "era": 3,
+   "statement": "يصف سيما تشيان تجار الأنسي (فرثيا) بأنهم يسافرون بالعربات والسفن، وتبلغ أسفارهم إلى البلدان المجاورة أحياناً عدة آلاف من اللي",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "民商賈用車及船，行旁國或數千里",
+   "hedge": "\"数千里\" تقدير عام، والـ«لي» وحدة طول صينية",
+   "chapter": "史記 卷123 大宛列傳：الأنسي (فرثيا): الأسواق والتجارة",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000313",
+   "link": "#c313",
+   "era": 3,
+   "statement": "يذكر سيما تشيان أن جنوب شرق باكتريا (大夏) تقع بلاد الهند (身毒)",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "其東南有身毒國",
+   "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
+   "chapter": "史記 卷123 大宛列傳：باكتريا (大夏) والهند (身毒)",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000314",
+   "link": "#c314",
+   "era": 3,
+   "statement": "رأى تشانغ تشيان في باكتريا عصا من خيزران (قيونغ) وقماشاً من شو (سيتشوان)، فسأل عنهما",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "見邛竹杖、蜀布",
+   "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
+   "chapter": "史記 卷123 大宛列傳：تشانغ تشيان: الطرق من شو إلى باكتريا",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "industry",
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000315",
+   "link": "#c315",
+   "era": 3,
+   "statement": "رأى تشانغ تشيان أن طريق شو أقصر وخالٍ من قطّاع الطرق، بخلاف الطريقين عبر القيانغ والشمال",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "從蜀宜徑，又無寇",
+   "hedge": "هذا رأي تشانغ تشيان ومقترحه، وليس وصفاً للطريق نفسه",
+   "chapter": "史記 卷123 大宛列傳：تشانغ تشيان: الطرق من شو إلى باكتريا",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000316",
+   "link": "#c316",
+   "era": 3,
+   "statement": "أقامت أسرة الهان بعد ذلك سلسلة من الحصون من جيوانتشيوان حتى يومن (باب اليشم)",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "於是酒泉列亭鄣至玉門矣",
+   "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
+   "chapter": "史記 卷123 大宛列傳：بعد وفاة تشانغ تشيان: الحصون والطرق إلى الغرب",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000317",
+   "link": "#c317",
+   "era": 3,
+   "statement": "أنشأت أسرة الهان مقاطعة جيوانتشيوان لفتح الطريق إلى بلدان الشمال الغربي",
+   "attributed_to": "سيما تشيان (نص ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "初置酒泉郡以通西北國",
+   "hedge": "رواية المؤرخ الرسمي للهان عن بلاد بعيدة اعتماداً على تقارير المبعوثين؛ نص ويكي مصدر غير مؤكد الطبعة",
+   "chapter": "史記 卷123 大宛列傳：بعد وفاة تشانغ تشيان: الحصون والطرق إلى الغرب",
+   "source_id": "sima-qian-zh",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "institutions",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000318",
+   "link": "#c318",
+   "era": 3,
+   "statement": "يذكر بوليبيوس أن بيثياس زعم أنه عاد وسار على طول ساحل أوروبا كله من قادس إلى نهر التاناييس (الدون)",
+   "attributed_to": "بيثياس (ينقله بوليبيوس؛ ترجمة شكبرغ 1889)",
+   "quote": "he adds that, on his return thence, he traversed the whole of the coast of Europe from Gades to the Tanais",
+   "hedge": "هذا ادعاء بيثياس كما نقله بوليبيوس، وبوليبيوس نفسه يرفضه",
+   "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال",
+   "source_id": "polybius",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000319",
+   "link": "#c319",
+   "era": 3,
+   "statement": "يرفض بوليبيوس تصديق أن رجلاً خاصاً فقيراً قام بهذه الرحلات الطويلة براً وبحراً",
+   "attributed_to": "بوليبيوس (ترجمة شكبرغ 1889)",
+   "quote": "we cannot believe that a private person, who was also a poor man, should have made such immense journeys by land and sea",
+   "hedge": "حكم بوليبيوس على مصداقية بيثياس، وليس تحققاً مستقلاً من رحلته",
+   "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال",
+   "source_id": "polybius",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000320",
+   "link": "#c320",
+   "era": 3,
+   "statement": "يذكر بوليبيوس أن بيثياس ادعى أنه طاف بريطانيا كلها سيراً على الأقدام",
+   "attributed_to": "بيثياس (ينقله بوليبيوس؛ ترجمة شكبرغ 1889)",
+   "quote": "professing to have traversed on foot the whole of Britain",
+   "hedge": "ادعاء بيثياس كما نقله بوليبيوس، ويرفضه بوليبيوس",
+   "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال",
+   "source_id": "polybius",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000321",
+   "link": "#c321",
+   "era": 3,
+   "statement": "يذكر بوليبيوس أن بيثياس قدّر محيط بريطانيا بأكثر من أربعين ألف ستاديون",
+   "attributed_to": "بيثياس (ينقله بوليبيوس؛ ترجمة شكبرغ 1889)",
+   "quote": "is more than forty thousand stades",
+   "hedge": "الستاديون وحدة طول إغريقية، والرقم رواية بيثياس كما نقلها بوليبيوس",
+   "chapter": "بوليبيوس 34.5: نقد بيثياس وأسفاره إلى الشمال",
+   "source_id": "polybius",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000322",
+   "link": "#c322",
+   "era": 3,
+   "statement": "انتظر أهل ميتيلين وصول الرماة والحبوب والأشياء الأخرى التي كانوا يجلبونها من البونتوس (البحر الأسود) قبل أن يعلنوا ثورتهم على أثينا",
+   "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+   "quote": "things that they were engaged in fetching from the Pontus",
+   "hedge": "يذكر ثوكيديديس أنهم ثاروا قبل الموعد المقرر",
+   "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: things that they were engaged in fetchin",
+   "source_id": "thucydides",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "trade",
+    "war"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000323",
+   "link": "#c323",
+   "era": 3,
+   "statement": "حصّن الأثينيون سونيون (رأس سونيون) لتتمكن سفن حبوبهم من الالتفاف حوله بأمان",
+   "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+   "quote": "to enable their corn-ships to round it",
+   "hedge": "رواية ثوكيديديس لقرار عسكري، والغاية المذكورة تعليله هو",
+   "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: to enable their corn-ships to round it",
+   "source_id": "thucydides",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000324",
+   "link": "#c324",
+   "era": 3,
+   "statement": "أرسل الأثينيون أساطيل لمنع القراصنة البيلوبونيسيين من التعرض لعبور السفن التجارية من فاسيليس وفينيقيا",
+   "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+   "quote": "the passage of the merchantmen from Phaselis",
+   "hedge": "إجراء عسكري أثيني يذكره ثوكيديديس، وليس وصفاً مباشراً للطريق",
+   "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: the passage of the merchantmen from Phas",
+   "source_id": "thucydides",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000325",
+   "link": "#c325",
+   "era": 3,
+   "statement": "قتل اللاكونيون تجار أثينا وحلفائها الذين أسروهم على السفن التجارية حول البيلوبونيز، ورموهم في حفر",
+   "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+   "quote": "all the Athenian and allied traders whom they caught on board the merchantmen round Peloponnese",
+   "hedge": "رواية ثوكيديديس؛ يصفها بأنها بدأت قبل أن يردّ الآخرون بالمثل",
+   "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: all the Athenian and allied traders whom",
+   "source_id": "thucydides",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000326",
+   "link": "#c326",
+   "era": 3,
+   "statement": "يقدّر ثوكيديديس أن سفينة تجارية تقطع الساحل من أبديرا إلى مصب الدانوب في أربعة أيام وأربع ليال بالريح الخلفية، بالطريق الأقصر",
+   "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+   "quote": "takes a merchantman four days and four nights with a wind astern the whole way",
+   "hedge": "تقدير ملاحي على ساحل الإمبراطورية الأوديسية؛ عليه ريح خلفية دائمة، فهو تقدير لظروف مثالية",
+   "chapter": "ثوكيديديس (كراولي 1910)، فقرة تحتوي: takes a merchantman four days and four n",
+   "source_id": "thucydides",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000327",
+   "link": "#c327",
+   "era": 3,
+   "statement": "يذكر تاسيتوس أن نقل الحبوب إلى الولايات البحرية صار أقل كلفة",
+   "attributed_to": "تاسيتوس (ترجمة Church & Brodribb، 1921)",
+   "quote": "the conveyance of corn was rendered less costly",
+   "hedge": "الفقرة في الكتاب 13 تقريباً، والتاريخ لم يُتحقق منه بمصدر آخر",
+   "chapter": "الحوليات، الكتاب XIII (تقريبي)، الفقرة 51 (تقريبي)",
+   "source_id": "tacitus",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000328",
+   "link": "#c328",
+   "era": 3,
+   "statement": "قرر مجلس الشيوخ ألا تُقدَّر السفن التجارية مع ممتلكات أصحابها، ولا تُدفع عنها ضريبة",
+   "attributed_to": "تاسيتوس (ترجمة Church & Brodribb، 1921)",
+   "quote": "merchant ships should not be assessed with their owner",
+   "hedge": "الحكم نفسه يُنسب إلى قرار رسمي يذكره تاسيتوس؛ نقل مباشر لا تفسير",
+   "chapter": "الحوليات، الكتاب XIII (تقريبي)، الفقرة 51 (تقريبي)",
+   "source_id": "tacitus",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "institutions",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000329",
+   "link": "#c329",
+   "era": 3,
+   "statement": "يصف تاسيتوس لندينيوم بأنها كانت مكتظة بالتجار وسفن التجارة، وإن لم تكن مستعمرة رسمية",
+   "attributed_to": "تاسيتوس (ترجمة Church & Brodribb، 1921)",
+   "quote": "much frequented by a number of merchants and trading vessels",
+   "hedge": "الوصف يسبق أحداث الثورة في الكتاب 14، وما بعده لا يرد في هذه الفقرة",
+   "chapter": "الحوليات، الكتاب 14، الفقرة 33 (ظاهرة في النص: \"33. Suetonius\")",
+   "source_id": "tacitus",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000330",
+   "link": "#c330",
+   "era": 3,
+   "statement": "يصف تاسيتوس قطاع طرق من قبيلة الكليتاي (Clitae) على ساحل كيليكيا بأنهم اعتدوا على المزارعين والمدنيين، وأحياناً على التجار وأصحاب السفن",
+   "attributed_to": "تاسيتوس (ترجمة Church & Brodribb، 1921)",
+   "quote": "frequently even to the merchants and ship-owners",
+   "hedge": "الحادثة في الكتاب 12 تقريباً؛ الكليتاي قبيلة جبلية تهاجم الساحل",
+   "chapter": "الحوليات، الكتاب XII (تقريبي)، الفقرة 55 (تقريبي)",
+   "source_id": "tacitus",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "society",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000331",
+   "link": "#c331",
+   "era": 3,
+   "statement": "يذكر أشوكا أنه أقام علاجين (chikichha) للناس وللحيوان",
+   "attributed_to": "أشوكا (طبعة Bhandarkar، 1920؛ قراءة OCR براكريتية)",
+   "quote": "dve chikichha kata",
+   "hedge": "المعنى المقصود 'علاج'، والقراءة من OCR لمتغير المخطوطة G؛ الترجمة من عندنا",
+   "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)",
+   "source_id": "asoka",
+   "source_grade": "A",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000332",
+   "link": "#c332",
+   "era": 3,
+   "statement": "يذكر أشوكا آباراً (udupana) على الطرق (Magesu، أي maggesu)",
+   "attributed_to": "أشوكا (طبعة Bhandarkar، 1920؛ قراءة OCR براكريتية)",
+   "quote": "Magesu = udupanani",
+   "hedge": "القراءة من OCR مشوشة، والربط بين الطرق والآبار يحتاج مراجعة يدوية",
+   "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)",
+   "source_id": "asoka",
+   "source_grade": "A",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "trade",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000333",
+   "link": "#c333",
+   "era": 3,
+   "statement": "يذكر أشوكا آباراً (kūpa) على الطرق (Parnthesi، أي pathesu) في متغير آخر من المخطوطات",
+   "attributed_to": "أشوكا (طبعة Bhandarkar، 1920؛ قراءة OCR براكريتية)",
+   "quote": "Parnthesi kipa",
+   "hedge": "متغير براكريتي آخر لـ'على الطرق'؛ يتقاطع مع 332 لكنه ليس تأكيداً مستقلاً تماماً لأن OCR واحد",
+   "chapter": "أشوكا، المرسوم الصخري الثاني (قراءة OCR براكريتية، مع متغيرات المخطوطات)",
+   "source_id": "asoka",
+   "source_grade": "A",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "trade",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000334",
+   "link": "#c334",
+   "era": 3,
+   "statement": "يذكر بان كو أن الهان بلغهم خبر الخيل السماوية والعنب، فتواصلوا مع دايوان وأنسي",
+   "attributed_to": "بان كو (ترجمة: النص الصيني من ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "聞天馬、蒲陶則通大宛、安息",
+   "hedge": "الخيل السماوية والعنب من تقرير الرحلات الغربية، وهذه الجملة في خاتمة الفصل (الحكم التاريخي)",
+   "chapter": "漢書 卷96下 西域傳：赞：开玉门、通大宛安息",
+   "source_id": "hanshu-zh",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "trade",
+    "agriculture"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000335",
+   "link": "#c335",
+   "era": 3,
+   "statement": "يذكر بان كو أن الهان فتحوا باب اليشم (يومن) ووصلوا الأقاليم الأربعة (الغرب)",
+   "attributed_to": "بان كو (ترجمة: النص الصيني من ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "開玉門，通四域",
+   "hedge": "عبارة خاتمة تلخيصية، وليست تفصيل حدث بعينه",
+   "chapter": "漢書 卷96下 西域傳：赞：开玉门、通大宛安息",
+   "source_id": "hanshu-zh",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "trade",
+    "war"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000336",
+   "link": "#c336",
+   "era": 3,
+   "statement": "يذكر بان كو أن ملك الجماعة الغربية (車師後王國) له طريق جديد يخرج شمال (五船) ويصل إلى باب اليشم، ويقترح القائد شو بو فتحه ليختصر نحو نصف المسافة ويتجنب صحراء بايلونغ دوي",
+   "attributed_to": "بان كو (ترجمة: النص الصيني من ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "欲開以省道裡半，避白龍堆之厄",
+   "hedge": "النص يذكر النية (欲开)، ولا يذكر تنفيذ الطريق في هذه الفقرة",
+   "chapter": "漢書 卷96下 西域傳：车师后王国新道与玉门关",
+   "source_id": "hanshu-zh",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000337",
+   "link": "#c337",
+   "era": 3,
+   "statement": "يذكر بان كو أن مملكة الوسون (烏孫) تبعد عن مقر الحماية الهانية 1721 لي شرقاً، وتمتد غرباً حتى الأراضي الداخلية لكانغجو نحو 5000 لي",
+   "attributed_to": "بان كو (ترجمة: النص الصيني من ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "東至都護治所千七百二十一里，西至康居蕃內地五千里",
+   "hedge": "اللي وحدة صينية، والأرقام كما وردت في النص",
+   "chapter": "漢書 卷96下 西域傳：乌孫国：里数",
+   "source_id": "hanshu-zh",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000338",
+   "link": "#c338",
+   "era": 3,
+   "statement": "يوصي النص الملك بأن يشيّد طرقاً للنقل براً وماءً، وأن يقيم أسواقاً تجارية (paṇyapattana) في المستوطنات الجديدة",
+   "attributed_to": "كوتيليا (منسوب؛ ترجمة شاماساستري 1929)",
+   "quote": "construct roads for traffic both by land and water",
+   "hedge": "نص تعليمي للحكم وليس وصفاً لواقع؛ 'الطرق المائية' تحتمل قنوات أو أنهاراً",
+   "chapter": "كوتيليا (منسوب): مهام الملك في استيطان الأراضي",
+   "source_id": "arthashastra",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "institutions",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000339",
+   "link": "#c339",
+   "era": 3,
+   "statement": "يكلّف النص الملك بتطهير الطرق من تعدي الحاشية والعمال واللصوص وحراس الحدود، ومنع الماشية من إتلافها",
+   "attributed_to": "كوتيليا (منسوب؛ ترجمة شاماساستري 1929)",
+   "quote": "clear roads of traffic",
+   "hedge": "OCR الأسماء بين الأقواس مشوش، والمعنى من الترجمة الإنجليزية",
+   "chapter": "كوتيليا (منسوب): تطهير الطرق من التعدي والسرقة",
+   "source_id": "arthashastra",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000340",
+   "link": "#c340",
+   "era": 3,
+   "statement": "يأمر النص بتخطيط المدينة المحصّنة بفتح ثلاثة طرق ملكية من الجنوب إلى الشمال وثلاثة من الشرق إلى الغرب",
+   "attributed_to": "كوتيليا (منسوب؛ ترجمة شاماساستري 1929)",
+   "quote": "three from south to north",
+   "hedge": "مخطط مثالي للمدينة، وليس وصفاً لمدينة فعلية",
+   "chapter": "كوتيليا (منسوب): تخطيط المدينة المحصنة",
+   "source_id": "arthashastra",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "institutions",
+    "war"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000341",
+   "link": "#c341",
+   "era": 3,
+   "statement": "يوجب النص على مشتري ما يبيعه الملك أن يدفع الجمرك (sulka) إضافة إلى التعويض عن خسارة تجارة الملك",
+   "attributed_to": "كوتيليا (منسوب؛ ترجمة شاماساستري 1929)",
+   "quote": "shall pay not only the toll",
+   "hedge": "كلمة sulka مقروءة من OCR مشوش (4ullca)، والمعنى من الترجمة",
+   "chapter": "كوتيليا (منسوب): الجمارك على مبيعات الملك",
+   "source_id": "arthashastra",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "institutions",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000342",
+   "link": "#c342",
+   "era": 3,
+   "statement": "يصف بان كو الطريق الجنوبي من يومن ويانغ: يسير من شمال الجبل الجنوبي حتى شاتشيو (莎車)، ومن هناك يعبر البامير (蔥嶺) فيخرج إلى يويزهي وأنسي",
+   "attributed_to": "بان كو (النص الصيني من ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "南道西逾蔥嶺則出大月氏、安息",
+   "hedge": "الطريق يتصل بلائحة مدن بعينها في النص، والمسافات غير مذكورة فيه",
+   "chapter": "漢書 卷96上 西域傳：طريقان من يومن ويانغ",
+   "source_id": "hanshu-zh",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000343",
+   "link": "#c343",
+   "era": 3,
+   "statement": "يصف بان كو الطريق الشمالي من بلاط ملك شيشي الأمامي (車師前王廷): يتبع الجبل الشمالي حتى شوليه (疏勒)، ومن هناك يعبر البامير فيخرج إلى دايوان وكانغجو وآياتشي (奄蔡)",
+   "attributed_to": "بان كو (النص الصيني من ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "北道西逾蔥嶺則出大宛、康居、奄蔡焉",
+   "hedge": "أسماء الأماكن كما وردت، وبعضها غير محدد بالخريطة الحديثة",
+   "chapter": "漢書 卷96上 西域傳：طريقان من يومن ويانغ",
+   "source_id": "hanshu-zh",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000344",
+   "link": "#c344",
+   "era": 3,
+   "statement": "يذكر بان كو أن بحيرة بوتشانغ (蒲昌海، المعروفة أيضاً بملح ز) تبعد عن يومن ويانغ أكثر من ثلاثمئة لي",
+   "attributed_to": "بان كو (النص الصيني من ويكي مصدر، CC BY-SA 4.0؛ الطبعة غير مؤكدة)",
+   "quote": "去玉門、陽關三百餘里",
+   "hedge": "اللي وحدة صينية، و\"三百餘里\" تعني أكثر من ثلاثمئة، فالرقم حد أدنى",
+   "chapter": "漢書 卷96上 西域傳：بحيرة بوتشانغ",
+   "source_id": "hanshu-zh",
+   "source_grade": "B",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "environment",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000345",
+   "link": "#c345",
+   "era": 4,
+   "statement": "يذكر فاهيان أنه ركب سفينة تجارية كبيرة بعد أن أقام سنتين في البلد الذي كان فيه",
+   "attributed_to": "فاهيان (ينقله بيل في مقدمة ترجمة شوانزانغ، 1884)",
+   "quote": "shipped himself on board a great merchant vessel",
+   "hedge": "الرواية عن فاهيان منقولة في مقدمة بيل، وليست من نص فاهيان الكامل",
+   "chapter": "فاهيان: الإبحار من البلد الذي أقام فيه إلى سيمهالا",
+   "source_id": "xuanzang-beal",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000346",
+   "link": "#c346",
+   "era": 4,
+   "statement": "يذكر فاهيان أن الإبحار إلى سيمهالا (سيلان) استغرق أربعة عشر يوماً وليلة بريح الشتاء المواتية",
+   "attributed_to": "فاهيان (ينقله بيل في مقدمة ترجمة شوانزانغ، 1884)",
+   "quote": "They sailed for fourteen days and nights",
+   "hedge": "المسافة المذكورة 700 يوجانا تقدير، والمدة هي الموثوق منها",
+   "chapter": "فاهيان: مدة الإبحار",
+   "source_id": "xuanzang-beal",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "environment"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000347",
+   "link": "#c347",
+   "era": 4,
+   "statement": "يذكر فاهيان أن تجار بلدان شتى كانوا يأتون إلى مملكة سيلان للتجارة",
+   "attributed_to": "فاهيان (ينقله بيل في مقدمة ترجمة شوانزانغ، 1884)",
+   "quote": "came here to trade",
+   "hedge": "الرواية تتضمن عناصر أسطورية (الشياطين تعرض السلع)، فالتجارة هي المعتمد منها",
+   "chapter": "فاهيان: تجارة سيلان",
+   "source_id": "xuanzang-beal",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000348",
+   "link": "#c348",
+   "era": 4,
+   "statement": "يصف شوانزانغ فرغانة (Fei-han) بأن محيطها نحو 4000 لي، محاطة بالجبال من كل جانب وتربتها خصبة",
+   "attributed_to": "شوانزانغ (ترجمة بيل، 1884)",
+   "quote": "This kingdom is about 4000 li in circuit",
+   "hedge": "اللي وحدة صينية، والرقم تقريبي كما ترجمه بيل",
+   "chapter": "شوانزانغ: فرغانة (Fei-han)",
+   "source_id": "xuanzang-beal",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "environment",
+    "agriculture"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000349",
+   "link": "#c349",
+   "era": 4,
+   "statement": "يصف غريغوريوس ليودست يتجول بين بيوت التجار في الساحة، يفحص بضائعهم الثمينة، ويختبر وزن الأدوات الفضية",
+   "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+   "quote": "examined their costly wares",
+   "hedge": "سرد غريغوريوس لحادثة بعينها، وليس وصفاً عاماً للتجارة",
+   "chapter": "غريغوريوس: ليوداست يتجول بين بيوت التجار في الساحة (الكتاب Sixth، تقريبي)",
+   "source_id": "gregory-brehaut",
+   "source_grade": "B",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000350",
+   "link": "#c350",
+   "era": 4,
+   "statement": "يذكر غريغوريوس أن التجار نهبوا الناس نهباً شديداً أثناء المجاعة",
+   "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+   "quote": "the traders plundered the people greatly",
+   "hedge": "الفقرة نفسها تذكر أسعار الحبوب والخمر، وهي خارج الاقتباس المعتمد",
+   "chapter": "غريغوريوس: التجار ينهبون الناس في المجاعة (الكتاب Seventh، تقريبي)",
+   "source_id": "gregory-brehaut",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "health"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000351",
+   "link": "#c351",
+   "era": 4,
+   "statement": "يذكر غريغوريوس أن الأعشاب المصرية التي كان يأكلها ناسك في الصوم كان التجار يحملونها إليه",
+   "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+   "quote": "which were brought to him by traders",
+   "hedge": "تفصيل في سيرة ناسك، وليس وصفاً تجارياً مباشراً",
+   "chapter": "غريغوريوس: أعشاب مصرية يحضرها التجار لناسك (الكتاب Sixth، تقريبي)",
+   "source_id": "gregory-brehaut",
+   "source_grade": "B",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "religion"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000352",
+   "link": "#c352",
+   "era": 4,
+   "statement": "يذكر غريغوريوس أن أتباع كلوديوس أحضروا خمراً إيطالياً وسورياً ليسكروا إيبرولف في الكنيسة",
+   "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+   "quote": "Italian wine, of course, and Syrian wine",
+   "hedge": "مكيدة سياسية في الرواية، وليست وصفاً لتجارة الخمر",
+   "chapter": "غريغوريوس: الخمر الإيطالي والسوري في فخ كلوديوس (الكتاب Tenth، تقريبي)",
+   "source_id": "gregory-brehaut",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "religion",
+    "trade",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000353",
+   "link": "#c353",
+   "era": 4,
+   "statement": "يذكر بيدا أن المدينة التي يعبر منها المسافرون من بريطانيا إلى أقرب سواحل الغال البلجيكي تسمى ميناء روتوبي (Rutubi portus)، ويسميها الإنجليز ريبتاكاستير",
+   "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+   "quote": "Rutubi portus",
+   "hedge": "روتوبي في بريطانيا لا في الغال: هي ريتشبورو في كنت اليوم، والنص يجعلها المدينة التي «تفتح» للعابرين أقرب ساحل من الغال. والاسم الإنجليزي لدى بيدا Reptacastir. صُحّح البيان في 2026-11-24 بعد المراجعة، وكان يضعها على الساحل الغالي خطأً",
+   "chapter": "الكتاب الأول، الفصل 1 (تقريبي): وصف بريطانيا والمعبر",
+   "source_id": "bede-latin-pl95",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000354",
+   "link": "#c354",
+   "era": 4,
+   "statement": "يذكر بيدا أن البحر بين غيسوريا (ساحل المورينيين) وبريطانيا عرضه خمسون ميلاً، وقال بعض الكتّاب إنه 450 ستاديون",
+   "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+   "quote": "interposito mari a Gessoriaco Morynorum gentis litore proximo, traiectu milium L",
+   "hedge": "الأرقام كما وردت عند بيدا، والوحدات رومانية (ميل) وإغريقية (ستاديون)",
+   "chapter": "الكتاب الأول، الفصل 1 (تقريبي): المسافة إلى البر الغالي",
+   "source_id": "bede-latin-pl95",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "environment"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000355",
+   "link": "#c355",
+   "era": 4,
+   "statement": "يروي بيدا أن قيصر جهّز نحو ثمانين سفينة نقل وسفن خفيفة للعبور إلى بريطانيا",
+   "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+   "quote": "navibus (h)onerariis atque actuariis circiter octoginta",
+   "hedge": "رواية بيدا عن قيصر، ينقلها من كتاب آخر، وليست تقريراً مباشراً من بيدا",
+   "chapter": "الكتاب الأول، الفصل 2 (تقريبي): أسطول قيصر",
+   "source_id": "bede-latin-pl95",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000356",
+   "link": "#c356",
+   "era": 4,
+   "statement": "يروي بيدا أن تجاراً قدموا حديثاً إلى روما وعرضوا بضائع كثيرة للبيع في السوق",
+   "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+   "quote": "aduenientibus nuper mercatoribus, multa uenalia in forum fuissent conlata",
+   "hedge": "الحكاية تقليدية (traditio maiorum) نقلها بيدا، ولم يشهدها بنفسه",
+   "chapter": "الكتاب الثاني، الفصل 1 (تقريبي): تجار في سوق روما",
+   "source_id": "bede-latin-pl95",
+   "source_grade": "C",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000357",
+   "link": "#c357",
+   "era": 4,
+   "statement": "يذكر بيدا أن رايدفريدوس نقل ثيودور إلى ميناء كوينتافيك (Quentovic)، ومنه أبحر إلى بريطانيا",
+   "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+   "quote": "perduxit eum ad portum, cui nomen est Quentauic",
+   "hedge": "رواية بيدا، وترقيم الفصل تقريبي في هذه الطبعة",
+   "chapter": "الكتاب الرابع، الفصل 1 (تقريبي): ميناء كوينتافيك",
+   "source_id": "bede-latin-pl95",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "religion"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000358",
+   "link": "#c358",
+   "era": 4,
+   "statement": "يروي بروكوبيوس أن رهباناً قدموا من الهند، وقالوا إنهم أقاموا زمناً طويلاً في بلد يسمى سيرِندا شمال الهند، وتعلّموا هناك كيف يُنتج الحرير",
+   "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+   "quote": "a country called Serinda",
+   "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
+   "chapter": "بروكوبيوس: رهبان من الهند ومن سيرِندا (الكتاب الثامن، الفصل 17 تقريباً)",
+   "source_id": "procopius-dewing-1928",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "industry",
+    "knowledge",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000359",
+   "link": "#c359",
+   "era": 4,
+   "statement": "يذكر بروكوبيوس أن الرهبان أخبروا الإمبراطور بأن دوداً معيناً هو الذي ينتج الحرير",
+   "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+   "quote": "certain worms are the manufacturers of silk",
+   "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
+   "chapter": "بروكوبيوس: بيض دودة القز (الكتاب الثامن، الفصل 17 تقريباً)",
+   "source_id": "procopius-dewing-1928",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "industry",
+    "knowledge"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000360",
+   "link": "#c360",
+   "era": 4,
+   "statement": "يذكر بروكوبيوس أن الرهبان الذين جاءوا إلى الإمبراطور أرادوا أن يتوقف الرومان عن شراء الحرير من الفرس، ووعدوا بتدبير ذلك",
+   "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+   "quote": "purchase their silk from the Persians",
+   "hedge": "رغبة الرهبان كما يرويها بروكوبيوس، وليست سياسة للإمبراطور مثبتة من مصدر آخر",
+   "chapter": "بروكوبيوس: وقف شراء الحرير من الفرس (الكتاب الثامن، الفصل 17 تقريباً)",
+   "source_id": "procopius-dewing-1928",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "industry",
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000361",
+   "link": "#c361",
+   "era": 4,
+   "statement": "يذكر بروكوبيوس أن الرهبان وعدوا بأن إنتاج الحرير يصبح ممكناً داخل أرض الرومان",
+   "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+   "quote": "silk in the land of the Romans",
+   "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
+   "chapter": "بروكوبيوس: إنتاج الحرير في أرض الرومان (الكتاب الثامن، الفصل 17 تقريباً)",
+   "source_id": "procopius-dewing-1928",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "industry",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000362",
+   "link": "#c362",
+   "era": 4,
+   "statement": "يذكر بروكوبيوس أن الرهبان قالوا إن نسل هذه الدودة يتكون من بيض لا يُحصى من كل واحدة",
+   "attributed_to": "بروكوبيوس (ترجمة دوينغ، لوب، 1928؛ نص يوناني وإنجليزي)",
+   "quote": "offspring of these worms",
+   "hedge": "رواية الرهبان كما نقلها بروكوبيوس، وليست تحققاً مستقلاً من أصل الحرير",
+   "chapter": "بروكوبيوس: نقل بيض الدودة (الكتاب الثامن، الفصل 17 تقريباً)",
+   "source_id": "procopius-dewing-1928",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "industry",
+    "knowledge"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000363",
+   "link": "#c363",
+   "era": 5,
+   "statement": "يذكر بولو أن الطريق البري من بكين إلى تبريز كان بعيداً جداً على حامل رسالة ثمينة، ومهدداً بالحرب",
+   "attributed_to": "ماركو بولو وروستيكيلو (ترجمة Yule، جون موراي، 1871)",
+   "quote": "The overland road from Peking to Tabriz",
+   "hedge": "وصف بولو لطول الطريق ومخاطره في وقت الرسالة، وليس قياساً حديثاً للمسافة",
+   "chapter": "ماركو بولو: الطريق البري من بكين إلى تبريز",
+   "source_id": "polo-yule-1871",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "war"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000364",
+   "link": "#c364",
+   "era": 5,
+   "statement": "يذكر بولو أن المبعوثين المغول طلبوا العودة بحراً، لأن الطريق البري كان بعيداً جداً ومهدداً بالحرب",
+   "attributed_to": "ماركو بولو وروستيكيلو (ترجمة Yule، جون موراي، 1871)",
+   "quote": "desired to return by sea",
+   "hedge": "رواية بولو عن رحلة المبعوثين، والسبب المذكور منه",
+   "chapter": "ماركو بولو: الطريق البري من بكين إلى تبريز",
+   "source_id": "polo-yule-1871",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "war",
+    "politics"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000365",
+   "link": "#c365",
+   "era": 5,
+   "statement": "يذكر تعليق يول على رحلة بولو أن الإسكندرية ما زالت مركزاً كبيراً للبضائع الهندية في فترات الحرب، وأن طرق القوافل بدأت تكتسب ميزة بعد السيطرة المغولية، فتصب في موانئ أرمينيا الكيليكية على المتوسط وطرابزون على البحر الأسود",
+   "attributed_to": "هنري يول (Henry Yule)، تعليق على ترجمته لرحلة ماركو بولو (1871)",
+   "quote": "caravan routes which debouched at the ports of Cilician Armenia",
+   "hedge": "تعليق من القرن التاسع عشر، وليس نص بولو؛ وصف عام لا إحصاء. موضع الفقرة في الطبعة الأصلية لم يُتحقَّق منه بعد",
+   "chapter": "تعليق يول على رحلة بولو: طرق القوافل بعد الفتح المغولي",
+   "source_id": "polo-yule-1871",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "war"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000366",
+   "link": "#c366",
+   "era": 4,
+   "statement": "يصف الطبري أن القوافل تخرج من أردبيل بمن يحرسها، ويتناقل الحراس القافلة بين مواضع الحراسة حتى تصل إلى وجهتها، ويكون التسليم عند منتصف الطريق",
+   "attributed_to": "الطبري (تاريخ الرسل والملوك، ط المعارف عبر تراث، برخصة شفهية من المنصة؛ غير موثقة كتابة)",
+   "quote": "والقوافل تخرج من أردبيل معها من يبذرقها",
+   "hedge": "ذكر أحداث سنة 220هـ عند الطبري، وصف لنظام الحراسة في الطريق بين أردبيل وعسكر الأفشين",
+   "chapter": "الطبري (تراث 9783، ط المعارف): حراسة القوافل من أردبيل، سنة 220هـ",
+   "source_id": "tabari-turath-9783",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000367",
+   "link": "#c367",
+   "era": 4,
+   "statement": "يذكر الطبري أن الجند قطعوا قنطرة قديمة بين سوق الأهواز ورام هرمز، فامتنع التجار ومن يحمل الميرة من عبورها، ثم أُصلحت القنطرة في اليوم نفسه",
+   "attributed_to": "الطبري (تاريخ الرسل والملوك، ط المعارف عبر تراث، برخصة شفهية من المنصة؛ غير موثقة كتابة)",
+   "quote": "قطعوا قنطرة قديمة أعجمية",
+   "hedge": "رواية الطبري عن أحداث الزنج أواخر القرن الثالث الهجري، والتاريخ الدقيق للحادثة لم يُتحقق منه بمصدر آخر",
+   "chapter": "الطبري (تراث 9783، ط المعارف): قنطرة الأهواز وانقطاع الميرة",
+   "source_id": "tabari-turath-9783",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "trade"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000368",
+   "link": "#c368",
+   "era": 5,
+   "statement": "يصف ابن بطوطة ميناء الإسكندرية بأنه مرفأ رائع لم يرَ مثله في العالم",
+   "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول؛ السنة غير مقروءة في الملف)",
+   "quote": "Alexandrie a un port magnifique",
+   "hedge": "سنة طبع المجلد غير مقروءة في الملف، والمرجح أنه 1853",
+   "chapter": "ابن بطوطة (Defrémery وSanguinetti): وصف الإسكندرية وأرصفتها ومقارنتها بموانئ أخرى",
+   "source_id": "battuta-defremery",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000369",
+   "link": "#c369",
+   "era": 5,
+   "statement": "يستثني ابن بطوطة من ذلك موانئ قولام وكاليكوت في الهند، وموانئ السوداق (القرم) التي كان يملكها الجنويون، وموانئ زيتون في الصين",
+   "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول؛ السنة غير مقروءة في الملف)",
+   "quote": "en excepte les ports de",
+   "hedge": "أسماء الموانئ في النص الفرنسي مشوهة بالـ OCR (Coùlemet، Käbikoëth، Zeïtoûn)، والمعنى من الترجمة",
+   "chapter": "ابن بطوطة (Defrémery وSanguinetti): وصف الإسكندرية وأرصفتها ومقارنتها بموانئ أخرى",
+   "source_id": "battuta-defremery",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000370",
+   "link": "#c370",
+   "era": 6,
+   "statement": "يذكر غارسيلاسو أنه لم يُسجَّل اعتداء على التجار في الطريق بعد الفتح الإسباني",
+   "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+   "quote": "nor have any Merchants and Dealers ever been affaulted on the highway",
+   "hedge": "شهادة غارسيلاسو عن الحكم الإسباني، وفيها تحيّز الدعاية وليست إحصاءً للجرائم",
+   "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): أمن الطريق والتجار بعد الفتح الإسباني، الكتاب IL",
+   "source_id": "garcilaso-rycaut-1688",
+   "source_grade": "C",
+   "info_grade": 4,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000371",
+   "link": "#c371",
+   "era": 6,
+   "statement": "يذكر غارسيلاسو أن التجار كانوا ينقلون الذهب والفضة عبر الصحاري والجبال لمسافة ثلاثمئة إلى أربعمئة فرسخ",
+   "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+   "quote": "over Defarts and Mountains",
+   "hedge": "الفرسخ وحدة قياس تقليدية، والمسافة تقدير الكاتب، والكلمة الأصلية في OCR: Defarts (Deserts)",
+   "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): أمن الطريق والتجار بعد الفتح الإسباني، الكتاب IL",
+   "source_id": "garcilaso-rycaut-1688",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000372",
+   "link": "#c372",
+   "era": 6,
+   "statement": "يصف برنال دياز سوق تلاتيلولكو الكبير بكثرة الناس وكمية البضائع، وأن كل صنف من البضائع كان موضوعاً على حدة",
+   "attributed_to": "برنال دياز دل كاستييو (ترجمة Maudslay، 1908–1916)",
+   "quote": "Each kind of merchandise was kept by itself",
+   "hedge": "شهادة عيان من حملة كورتيس (1519)، ووصف النظام السوقي لا إحصاء للكميات",
+   "chapter": "برنال دياز (ترجمة Maudslay، 1908): سوق تلاتيلولكو الكبير",
+   "source_id": "diaz-maudslay",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000373",
+   "link": "#c373",
+   "era": 6,
+   "statement": "يذكر دياز أن باعة الكاكاو كانوا يبيعونه في السوق، وأن ذكرهم جاء بعد باعة الأقمشة القطنية والخيوط",
+   "attributed_to": "برنال دياز دل كاستييو (ترجمة Maudslay، 1908–1916)",
+   "quote": "cacahuateros who sold cacao",
+   "hedge": "المصطلح cacahuateros كما ورد عنده، والنص عن السوق عامة",
+   "chapter": "برنال دياز (ترجمة Maudslay، 1908): سوق تلاتيلولكو الكبير",
+   "source_id": "diaz-maudslay",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "agriculture"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000374",
+   "link": "#c374",
+   "era": 6,
+   "statement": "تصف اليومية أهل جزيرة موزمبيق بأنهم مسلمون تجار، يتعاملون مع المور البيض، أي التجار المسلمين القادمين بالسفن",
+   "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
+   "quote": "They are merchants, and have transactions with white Moors",
+   "hedge": "الفقرة في قسم اليومية عن موزمبيق (2 مارس 1498)، لا عن كاليكوت التي وصلوها في مايو. صُحّح البيان في 2026-11-24 بعد المراجعة، وكان ينسبها إلى كاليكوت خطأً",
+   "chapter": "فاسكو دا غاما (يومية الرحلة، ترجمة Hakluyt/Ravenstein 1898): تجار الساحل وسفنهم",
+   "source_id": "gama-hakluyt-1898",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "society",
+    "religion"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000375",
+   "link": "#c375",
+   "era": 6,
+   "statement": "تذكر اليومية أن أربع سفن للمور البيض كانت راسية في ميناء جزيرة موزمبيق محمّلة بالذهب والفضة والقرنفل والفلفل والزنجبيل",
+   "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
+   "quote": "four of whose vessels were at the time in port, laden with gold, silver, cloves, pepper, ginger",
+   "hedge": "مشاهدة مباشرة من طاقم السفينة وفق اليومية، في موزمبيق (مارس 1498)",
+   "chapter": "فاسكو دا غاما (يومية الرحلة، ترجمة Hakluyt/Ravenstein 1898): تجار الساحل وسفنهم",
+   "source_id": "gama-hakluyt-1898",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000376",
+   "link": "#c376",
+   "era": 6,
+   "statement": "يذكر الطاقم أنهم سمعوا في موزمبيق أن الأحجار الكريمة واللؤلؤ والتوابل وفيرة في البلاد التي يقصدونها إلى حد جمعها بالسلال",
+   "attributed_to": "فاسكو دا غاما وطاقم رحلته (يومية مجهولة المؤلف، ترجمة Hakluyt/Ravenstein، 1898)",
+   "quote": "precious stones, pearls and spices were so plentiful",
+   "hedge": "سماع غير مباشر في موزمبيق عن بلاد الهند التي لم يصلوها بعد، والوفرة «بالسلال» مبالغة ظاهرة",
+   "chapter": "فاسكو دا غاما (يومية الرحلة، ترجمة Hakluyt/Ravenstein 1898): وفرة التوابل عند البحار",
+   "source_id": "gama-hakluyt-1898",
+   "source_grade": "B",
+   "info_grade": 4,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000377",
+   "link": "#c377",
+   "era": 5,
+   "statement": "يذكر ابن خلدون أن أربعة أجيال تكفي لإتمام الحسب والشرف لأسرة، وهو يصفه بأنه حكم عام",
+   "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+   "quote": "quatre générations suffisent pour en achever la noblesse et la considération",
+   "hedge": "المؤلف نفسه يقول إن القاعدة \"عامة الصحة\" ولها استثناءات، فهي حكم نظري وليست قانوناً تاريخياً مُختبراً",
+   "chapter": "المقدمة: الحسب والنسب",
+   "source_id": "khaldun-slane-1863",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000378",
+   "link": "#c378",
+   "era": 5,
+   "statement": "يعلل ابن خلدون تجنب الصحابة للترف في الملبس والطعام بأنهم حافظوا على خشونة الحياة البدوية",
+   "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+   "quote": "parce qu'ils conservaient toujours la rudesse de la vie nomade",
+   "hedge": "تفسير المؤلف لسلوك جماعة في صدر الإسلام، وليس وثيقة معاصرة لهم",
+   "chapter": "المقدمة: الترف والبداوة",
+   "source_id": "khaldun-slane-1863",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "culture"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000379",
+   "link": "#c379",
+   "era": 5,
+   "statement": "يقول ابن خلدون إن روح العصبية انقرضت عند المسلمين الإسبان في زمنه، وهو حكم على جماعة معاصرة له",
+   "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+   "quote": "tout esprit de corps chez eux",
+   "hedge": "حكم على جماعة في زمن المؤلف يبنيه على مشاهدته، وليس قياساً كمياً",
+   "chapter": "المقدمة: العصبية في الأندلس",
+   "source_id": "khaldun-slane-1863",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000380",
+   "link": "#c380",
+   "era": 5,
+   "statement": "يذكر ابن خلدون أن الزعيم إذا أطاعه قومه دخل في طريق الغلبة والقهر ولا يتركه، لأن للسلطة جاذبية للنفوس",
+   "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+   "quote": "tant le pouvoir a d'attraits pour les âmes",
+   "hedge": "تعميم نظري عن الزعامة، وليس وصفاً لحالة بعينها",
+   "chapter": "المقدمة: الملك والقهر",
+   "source_id": "khaldun-slane-1863",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000381",
+   "link": "#c381",
+   "era": 5,
+   "statement": "يقول ابن خلدون إن الدولة إذا بدأت تضعف ولم تعد تعتمد على إخلاص قادة الحزب الذي يسندها، فإنها تسقط في الصراع",
+   "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+   "quote": "ne peut plus compter sur le dévouement des chefs du parti qui la soutient",
+   "hedge": "شرط مشروط (إذا ضعفت... فإنها تسقط)، وليس قانوناً مطلقاً",
+   "chapter": "المقدمة: سقوط الدول",
+   "source_id": "khaldun-slane-1863",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000382",
+   "link": "#c382",
+   "era": 5,
+   "statement": "يصف ابن خلدون روح الجماعة والنسب بأنها شعور طبيعي عند العرب، ويستدل بزعماء ثقيف على ذلك",
+   "attributed_to": "ابن خلدون، المقدمة (ترجمة de Slane، باريس 1863)",
+   "quote": "sentiment naturel aux Arabes",
+   "hedge": "تعميم على شعب كامل مبني على الاستشهاد بأمثلة، وليس دراسة إحصائية",
+   "chapter": "المقدمة: العصبية عند العرب",
+   "source_id": "khaldun-slane-1863",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000383",
+   "link": "#c383",
+   "era": 3,
+   "statement": "يذكر بوليبيوس أن المعاهدة الأولى بين روما وقرطاجة تمنع السفن الرومانية الطويلة من تجاوز الرأس الجميل إلا بسبب عاصفة أو عدو",
+   "attributed_to": "بوليبيوس، التواريخ 3.22 (ترجمة Paton، Loeb 1922)",
+   "quote": "The Romans and their allies not to sail with long ships beyond the Fair Promontory unless forced by storm or by enemies",
+   "hedge": "بوليبيوس نفسه يقدّم النص بعبارة \"more or less as follows\"، أي إعادة صياغة وليس نص الوثيقة؛ والمعنى تأكد بالنص اليوناني (μακρὸν πλοῖον)",
+   "chapter": "بوليبيوس الكتاب 3: معاهدة روما وقرطاجة الأولى",
+   "source_id": "polybius-paton-1922",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "politics",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000384",
+   "link": "#c384",
+   "era": 3,
+   "statement": "يقول بوليبيوس إن نص المعاهدة القديمة لا يُقرأ إلا جزئياً، ولا يفهمه إلا أعلم الناس بعد جهد كبير",
+   "attributed_to": "بوليبيوس، التواريخ 3.22 (ترجمة Paton، Loeb 1922)",
+   "quote": "it can only be partially made out, and that after much application, by the most intelligent men",
+   "hedge": "شهادة عن صعوبة النص في زمن بوليبيوس، وليست قراءة مباشرة للوثيقة",
+   "chapter": "بوليبيوس الكتاب 3: صعوبة قراءة المعاهدة",
+   "source_id": "polybius-paton-1922",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "culture"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000385",
+   "link": "#c385",
+   "era": 3,
+   "statement": "يذكر بوليبيوس أن معاهدة لاحقة تحظر على الرومان الغزو والتجارة وتأسيس المدن إلى ما وراء الرأس الجميل وماستيا وتارسيوم",
+   "attributed_to": "بوليبيوس، التواريخ 3.24 (ترجمة Paton، Loeb 1922)",
+   "quote": "The Romans shall not maraud or trade or found a city on the",
+   "hedge": "يصف بوليبيوس المعاهدة اللاحقة بعبارة \"more or less as follows\" أيضاً، فالنص صياغة له وليس نص الوثيقة",
+   "chapter": "بوليبيوس الكتاب 3: معاهدة لاحقة",
+   "source_id": "polybius-paton-1922",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "trade",
+    "war"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000386",
+   "link": "#c386",
+   "era": 2,
+   "statement": "يذكر الكتاب أن سفن سليمان جلبت من أوفير ذهباً قدره أربعمائة وعشرون وزنة",
+   "attributed_to": "سفر الملوك الأول 9:28 (KJV 1611، طبعة 1872)",
+   "quote": "fetched from thence gold, four hundred and twenty talents",
+   "hedge": "نص ديني وليس سجلاً تجارياً؛ موقع أوفير محل خلاف، وقد ذكر المحرر الخلاف في الشرح نفسه",
+   "chapter": "الملوك الأول 9: أوفير",
+   "source_id": "kjv1611-1872-vol2",
+   "source_grade": "F",
+   "info_grade": 4,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000387",
+   "link": "#c387",
+   "era": 2,
+   "statement": "يعد حيرام سليمان بتزويده بخشب الأرز والسرو لبناء الهيكل",
+   "attributed_to": "سفر الملوك الأول 5:8 (KJV 1611، طبعة 1872)",
+   "quote": "I will do all thy desire concerning timber of cedar",
+   "hedge": "نص ديني وليس وثيقة تعاقد؛ الشحنة تُنقل بالبحر في الآية 5:9 كما يصفها النص نفسه",
+   "chapter": "الملوك الأول 5: حيرام وخشب لبنان",
+   "source_id": "kjv1611-1872-vol2",
+   "source_grade": "F",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "religion",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000388",
+   "link": "#c388",
+   "era": 6,
+   "statement": "يذكر النص أن إلى جانب الإقليمين الكبيرين (نانجينغ وبكين) توجد ثلاثة عشر إقليماً أخرى، فيكون المجموع خمسة عشر",
+   "attributed_to": "ماتيو ريتشي عبر Trigault، De Christiana expeditione (1615، اللاتينية)",
+   "quote": "ter has alix funt tredecim",
+   "hedge": "يجمع Trigault يوميات ريتشي، والنص اللاتيني من OCR فيه كلمات مشوهة؛ الإحصاء تقدير من الشاهد نفسه",
+   "chapter": "ريتشي: أقاليم الصين والمدن",
+   "source_id": "ricci-trigault-1615",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "institutions"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000389",
+   "link": "#c389",
+   "era": 6,
+   "statement": "يذكر النص أن في تلك الأقاليم 247 مدينة كبيرة، وفق ما نقله Trigault عن ريتشي",
+   "attributed_to": "ماتيو ريتشي عبر Trigault، De Christiana expeditione (1615، اللاتينية)",
+   "quote": "ln his regionibus 247",
+   "hedge": "تعريف \"المدينة الكبيرة\" وفق مقياس المؤلف غير محدد في النص، والرقم من شاهد لا من إحصاء رسمي",
+   "chapter": "ريتشي: أقاليم الصين والمدن",
+   "source_id": "ricci-trigault-1615",
+   "source_grade": "B",
+   "info_grade": 6,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "population",
+    "society"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000390",
+   "link": "#c390",
+   "era": 6,
+   "statement": "يذكر أوليا جلبي أن سوق السلطان في بورصة فيه تسعة آلاف دكان",
+   "attributed_to": "أوليا جلبي، سياحتنامه (طبعة إسطنبول 1896، المجلد الثاني، OCR عثماني)",
+   "quote": "طقوز بيك دکاندر",
+   "hedge": "رقم من رحالة في القرن السابع عشر، والمبالغة شائعة في وصف الأسواق؛ لا يوجد تحقق مستقل من العدد",
+   "chapter": "أوليا جلبي: سوق بورصة",
+   "source_id": "evliya-ottoman-1896-v2",
+   "source_grade": "D",
+   "info_grade": 4,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000391",
+   "link": "#c391",
+   "era": 6,
+   "statement": "يذكر أوليا جلبي أن البزستان العظيم في بورصة فيه ثلاثمئة دولاب (دكان)، وفي كل منها تاجر غني",
+   "attributed_to": "أوليا جلبي، سياحتنامه (طبعة إسطنبول 1896، المجلد الثاني، OCR عثماني)",
+   "quote": "اوحبوز دولابدر",
+   "hedge": "الرقم من الرحالة نفسه، ويتفق مع ترجمة Hammer الإنجليزية (three hundred shops)؛ الاتفاق لا يُثبت صحة العدد",
+   "chapter": "أوليا جلبي: البزستان في بورصة",
+   "source_id": "evliya-ottoman-1896-v2",
+   "source_grade": "D",
+   "info_grade": 4,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000392",
+   "link": "#c392",
+   "era": 3,
+   "statement": "يقول بوليبيوس إن المدينة لا تتزين بالمظاهر الخارجية، بل بفضل سكانها، في معرض حديثه عن نهب سرقوسة",
+   "attributed_to": "بوليبيوس، التواريخ الكتاب IX (ترجمة Paton، Loeb IV، 1925)",
+   "quote": "A city is not adorned by external splendours",
+   "hedge": "حكم قيمي من المؤرخ على المشهد الروماني، وليس وصفاً محايداً؛ وهو مقدمة لإدانة نهب الأعمال الفنية",
+   "chapter": "بوليبيوس الكتاب IX",
+   "source_id": "polybius-paton-1925",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "war",
+    "culture"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000393",
+   "link": "#c393",
+   "era": 3,
+   "statement": "يذكر بوليبيوس أن نهب الكنوز يثير حقداً عنيفاً على المحظوظين عند المغلوبين، ممن تذكّروا كوارثهم",
+   "attributed_to": "بوليبيوس، التواريخ الكتاب IX (ترجمة Paton، Loeb IV، 1925)",
+   "quote": "a sort of passionate hatred for the favourites of fortune flares up",
+   "hedge": "تفسير نفسي من المؤرخ لرد فعل المغلوبين، لا قياس لمشاعرهم؛ وفي النص نفسه إقرار بأن للنهب مبرراته",
+   "chapter": "بوليبيوس الكتاب IX",
+   "source_id": "polybius-paton-1925",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "society",
+    "politics"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000394",
+   "link": "#c394",
+   "era": 3,
+   "statement": "يقرر بوليبيوس أن خطأً تافهاً واحداً يكفي لإفشال خطة، بينما لا تكفي الدقة في كل التفاصيل إلا لتحقيق النجاح بالكاد",
+   "attributed_to": "بوليبيوس، التواريخ الكتاب IX (ترجمة Paton، Loeb IV، 1925)",
+   "quote": "makes a single trivial error sufficient to cause failure",
+   "hedge": "قاعدة عامة عن المشاريع العسكرية يبنيها بوليبيوس على تجارب القادة، وليست قانوناً تاريخياً مُختبراً",
+   "chapter": "بوليبيوس الكتاب IX",
+   "source_id": "polybius-paton-1925",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000395",
+   "link": "#c395",
+   "era": 3,
+   "statement": "يذكر بوليبيوس أن بعض الأمراء يُضطرون إلى تغيير سلوكهم مع تغير الظروف، فتخفي أفعالهم طبائعهم الحقيقية بدل أن تكشفها",
+   "attributed_to": "بوليبيوس، التواريخ الكتاب IX (ترجمة Paton، Loeb IV، 1925)",
+   "quote": "some princes are compelled to change with the change of circumstances",
+   "hedge": "بوليبيوس يرفض هنا رأياً سائداً بأن الظروف تكشف الطبع؛ والعبارة تعميم عن \"بعض الأمراء\" لا عن الجميع",
+   "chapter": "بوليبيوس الكتاب IX",
+   "source_id": "polybius-paton-1925",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000396",
+   "link": "#c396",
+   "era": 3,
+   "statement": "يقرر بوليبيوس أن المشاريع الجريئة تستحق الذكر سواء نجحت أو فشلت، بشرط أن تكون نتيجة تفكير سليم",
+   "attributed_to": "بوليبيوس، التواريخ الكتاب IX (ترجمة Paton، Loeb IV، 1925)",
+   "quote": "always provided that all that is done is the result of sound reasoning",
+   "hedge": "معيار تقييمي من المؤرخ للقادة الذين يخاطرون؛ العبارة مشروطة بسلامة التفكير، وهو حكم لا يُقاس",
+   "chapter": "بوليبيوس الكتاب IX",
+   "source_id": "polybius-paton-1925",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "war"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000397",
+   "link": "#c397",
+   "era": 2,
+   "statement": "يذكر النص أن ترشيش كانت تاجراً لصور لكثرة كل أنواع الثروة",
+   "attributed_to": "حزقيال 27 (KJV 1611، طبعة 1872 مع الشرح)",
+   "quote": "Tarshish was thy merchant",
+   "hedge": "نص نبوي وشعري يصف مدينة صور؛ كثرة الثروة وصف أدبي، وليس إحصاءً تجارياً",
+   "chapter": "حزقيال 27:12 (تجارة ترشيش)",
+   "source_id": "kjv1611-1872-vol6",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000398",
+   "link": "#c398",
+   "era": 2,
+   "statement": "يذكر النص أن يهوذا وأرض إسرائيل كانا يبيعان في سوق صور القمح والعسل والزيت والبلسم",
+   "attributed_to": "حزقيال 27 (KJV 1611، طبعة 1872 مع الشرح)",
+   "quote": "in thy market wheat of Minnith",
+   "hedge": "نص ديني نبوي؛ قائمة السلع تدل على التبادل لا على الكميات، والأرقام غير موجودة",
+   "chapter": "حزقيال 27:17 (القمح والزيت والعسل)",
+   "source_id": "kjv1611-1872-vol6",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "agriculture",
+    "economy"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000399",
+   "link": "#c399",
+   "era": 2,
+   "statement": "يذكر النص أن دمشق كانت تاجراً لصور في خيرات كثيرة، بخمر حلبون وصوف أبيض",
+   "attributed_to": "حزقيال 27 (KJV 1611، طبعة 1872 مع الشرح)",
+   "quote": "Damascus was thy merchant",
+   "hedge": "نص نبوي؛ حلبون وصف لنوع من الخمر في النص نفسه، والعلاقة التجارية مُقدَّمة كشهادة على ثراء صور",
+   "chapter": "حزقيال 27:18 (تجارة دمشق)",
+   "source_id": "kjv1611-1872-vol6",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "agriculture"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000400",
+   "link": "#c400",
+   "era": 3,
+   "statement": "يعدّ بوليبيوس خطأً أن يترك الرومان المنتصرون عاداتهم ويقلّدوا عادات المغلوبين، حين نقلوا كنوز سرقوسة الفنية إلى روما",
+   "attributed_to": "بوليبيوس، التواريخ الكتاب IX (ترجمة Paton، Loeb IV، 1925)",
+   "quote": "To abandon the habits of the victors and to imitate those of the conquered",
+   "hedge": "حكم من المؤرخ على قرار روماني؛ ويسير هنا عكس اتجاه سُنّة ابن خلدون (المغلوب يقلّد الغالب)، فهو شاهد مقيِّد لا ناقض لها",
+   "chapter": "بوليبيوس الكتاب IX §10: غنائم سرقوسة",
+   "source_id": "polybius-paton-1925",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "war"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000401",
+   "link": "#c401",
+   "era": 3,
+   "statement": "يذكر بوليبيوس أن الرومان كانوا يعيشون أبسط حياة، بعيداً عن الترف، ومع ذلك غلبوا دائماً من يملكون أجمل الأعمال الفنية وأكثرها",
+   "attributed_to": "بوليبيوس، التواريخ الكتاب IX (ترجمة Paton، Loeb IV، 1925)",
+   "quote": "while leading the simplest of lives",
+   "hedge": "تعميم من المؤرخ عن جيل روماني سابق، يُستعمل حجةً في جدال أخلاقي؛ ليس وصفاً إحصائياً لنمط العيش",
+   "chapter": "بوليبيوس الكتاب IX §10: غنائم سرقوسة",
+   "source_id": "polybius-paton-1925",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "society",
+    "war"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000402",
+   "link": "#c402",
+   "era": 3,
+   "statement": "يذكر تاسيتوس أن البريطانيين صاروا يكرّمون لباس الرومان، وشاعت التوغا بينهم بعد الفتح",
+   "attributed_to": "تاسيتوس، حياة أغريكولا 21 (النص اللاتيني من ويكي مصدر، CC BY-SA؛ الطبعة غير مذكورة)",
+   "quote": "Inde etiam habitus nostri honor et frequens toga",
+   "hedge": "تاسيتوس يكتب سيرة حميه أغريكولا، والتقليد هنا ثمرة سياسة رومانية مقصودة (تشجيع وبناء وتعليم)، لا ميل تلقائي فقط",
+   "chapter": "تاسيتوس، أغريكولا 21: البريطانيون والعادات الرومانية",
+   "source_id": "tacitus-agricola-la-ws",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "society"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000403",
+   "link": "#c403",
+   "era": 3,
+   "statement": "يقول تاسيتوس إن الجهلاء سمّوا تقليد العادات الرومانية حضارة، وهو في الحقيقة جزء من عبوديتهم",
+   "attributed_to": "تاسيتوس، حياة أغريكولا 21 (النص اللاتيني من ويكي مصدر، CC BY-SA؛ الطبعة غير مذكورة)",
+   "quote": "Idque apud imperitos humanitas vocabatur, cum pars servitutis esset",
+   "hedge": "حكم أخلاقي من تاسيتوس على المغلوبين؛ يتفق مع تفسير ابن خلدون للتقليد بالانقياد، لكنه من جهة الغالب لا المغلوب",
+   "chapter": "تاسيتوس، أغريكولا 21: البريطانيون والعادات الرومانية",
+   "source_id": "tacitus-agricola-la-ws",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "politics"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000404",
+   "link": "#c404",
+   "era": 3,
+   "statement": "يقول سالوست إن روما بعد زوال قرطاجة نما فيها أولاً حب المال ثم حب السلطة، وكانا أصل كل الشرور",
+   "attributed_to": "سالوست، مؤامرة كاتيلينا (النص اللاتيني من ويكي مصدر، CC BY-SA؛ الطبعة غير مذكورة)",
+   "quote": "primo pecuniae, deinde imperi cupido crevit",
+   "hedge": "تفسير أخلاقي وعظي من سالوست لانحدار الجمهورية، كتبه بعد نحو قرن من سقوط قرطاجة",
+   "chapter": "سالوست، كاتيلينا 10: بعد زوال قرطاجة",
+   "source_id": "sallust-catilina-la-ws",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "politics",
+    "society"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000405",
+   "link": "#c405",
+   "era": 3,
+   "statement": "يقول سالوست إن الذين احتملوا المشاق والأخطار صار الفراغ والثروة عليهم عبئاً وشقاءً",
+   "attributed_to": "سالوست، مؤامرة كاتيلينا (النص اللاتيني من ويكي مصدر، CC BY-SA؛ الطبعة غير مذكورة)",
+   "quote": "iis otium divitiaeque, optanda alias, oneri miseriaeque fuere",
+   "hedge": "حكم أخلاقي عام لا قياس فيه؛ لكنه شاهد مستقل عن ابن خلدون على فكرة أن الدعة بعد الشدة تُفسد",
+   "chapter": "سالوست، كاتيلينا 10: بعد زوال قرطاجة",
+   "source_id": "sallust-catilina-la-ws",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "economy"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000406",
+   "link": "#c406",
+   "era": 3,
+   "statement": "يقول سالوست إن جموعاً مشتتة مختلفة الأصل واللغة صارت بالوفاق دولة واحدة في وقت قصير",
+   "attributed_to": "سالوست، مؤامرة كاتيلينا (النص اللاتيني من ويكي مصدر، CC BY-SA؛ الطبعة غير مذكورة)",
+   "quote": "concordia civitas facta erat",
+   "hedge": "الجملة بين علامتي < > في هذه النسخة، فقد تكون زيادة نقدية من المحررين؛ والسياق عن نشأة روما شبه الأسطورية",
+   "chapter": "سالوست، كاتيلينا 6: نشأة روما",
+   "source_id": "sallust-catilina-la-ws",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "politics"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000407",
+   "link": "#c407",
+   "era": 7,
+   "statement": "يلاحظ توكفيل أن الأمريكيين على اختلاف أعمارهم وأحوالهم وطباعهم يؤلفون الجمعيات باستمرار",
+   "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+   "quote": "Americans of all ages, all conditions, and all dispositions, con- stantly form associations.",
+   "hedge": "ملاحظة زائر فرنسي بعد رحلته في 1831–1832، وتعميم على مجتمع كامل لا إحصاء",
+   "chapter": "Democracy in America, Part II",
+   "source_id": "tocqueville-reeve-1840-vol3",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000408",
+   "link": "#c408",
+   "era": 7,
+   "statement": "يقرر توكفيل قاعدة عامة: إن أراد الناس أن يبقوا متحضرين فلا بد أن ينمو فن الاجتماع في جمعيات بقدر ما تزداد المساواة في الأحوال",
+   "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+   "quote": "If men are to remain civilized, or to become so, the art of associating together must grow and improve, in the same ratio in which the equaUty of conditions is in- creased.",
+   "hedge": "قاعدة يصوغها توكفيل بنفسه عن المجتمعات الديمقراطية، وهي فرضية لم يختبرها بقياس",
+   "chapter": "Democracy in America, Part II",
+   "source_id": "tocqueville-reeve-1840-vol3",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "politics"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000409",
+   "link": "#c409",
+   "era": 7,
+   "statement": "يصف توكفيل الفردانية بأنها لفظ جديد ولّدته فكرة جديدة",
+   "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+   "quote": "Individualism is a novel expres- sion to which a novel idea has given birth.",
+   "hedge": "حكم توكفيل على مصطلح عصره، والنص ترجمة إنجليزية لا الأصل الفرنسي",
+   "chapter": "Democracy in America, Part II",
+   "source_id": "tocqueville-reeve-1840-vol3",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "culture"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000410",
+   "link": "#c410",
+   "era": 7,
+   "statement": "يرى توكفيل أن الأرستقراطية الصناعية الناشئة في عصره من أقسى ما عرفه العالم، لكنها في الوقت نفسه من أضيقها نطاقاً وأقلها خطراً",
+   "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+   "quote": "I am of opinion, upon the whole, that the manufacturing aristocracy which is growing up under our eyes, is one of the harshest which ever existed in the world ; but at the same time it is one of the most confined and least danger- ous.",
+   "hedge": "رأي يقدّمه توكفيل بصيغة الظن (I am of opinion)، ويقيّده هو نفسه في الجملة ذاتها",
+   "chapter": "Democracy in America, Part II",
+   "source_id": "tocqueville-reeve-1840-vol3",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "industry",
+    "society",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000411",
+   "link": "#c411",
+   "era": 7,
+   "statement": "يرى توكفيل أن حب الرفاه عند الأمريكيين شغف عنيد شامل يستأثر بالناس، لكن مداه محدود",
+   "attributed_to": "توكفيل، الديمقراطية في أمريكا، الجزء الثاني (ترجمة Henry Reeve، لندن 1840، المجلد الثالث)",
+   "quote": "The love of well-being is there displayed as a tenn- cious, exclusive, universal passion ; but its range is confined.",
+   "hedge": "حكم عام على الشعوب الديمقراطية مستمد من ملاحظة أمريكا، و'tenn- cious' خطأ OCR لكلمة tenacious",
+   "chapter": "Democracy in America, Part II",
+   "source_id": "tocqueville-reeve-1840-vol3",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "economy",
+    "culture"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000412",
+   "link": "#c412",
+   "era": 7,
+   "statement": "يسمّي داروين مبدأ حفظ كل تغيّر طفيف إذا كان نافعاً «الانتقاء الطبيعي»، ليبيّن صلته بانتقاء الإنسان",
+   "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+   "quote": "I have called this principle, by which each slight variation, if useful, is preserved, by the term of Natural Selection, in order to mark its relation to man’s power of selection.",
+   "hedge": "تعريف داروين لمصطلحه في الطبعة الأولى، وقد عدّل صياغات كثيرة في الطبعات اللاحقة",
+   "chapter": "On the Origin of Species",
+   "source_id": "darwin-origin-1859",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000413",
+   "link": "#c413",
+   "era": 7,
+   "statement": "يعدّ داروين صراع البقاء تطبيقاً لمذهب مالثوس على الممالك الحيوانية والنباتية كلها بقوة مضاعفة",
+   "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+   "quote": "It is the doctrine of Malthus applied with manifold force to the whole animal and vegetable kingdoms ;",
+   "hedge": "داروين يصف مصدر فكرته بنفسه، والسياق في الفصل الثالث عن صراع البقاء",
+   "chapter": "On the Origin of Species",
+   "source_id": "darwin-origin-1859",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "population"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000414",
+   "link": "#c414",
+   "era": 7,
+   "statement": "يرى داروين أن العزلة عنصر مهم في عملية الانتقاء الطبيعي",
+   "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+   "quote": "Isolation, also, is an important element in the process of natural selection.",
+   "hedge": "فرضية علمية في 1859، والتفصيل في علم الأحياء الحديث تجاوز صياغتها",
+   "chapter": "On the Origin of Species",
+   "source_id": "darwin-origin-1859",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000415",
+   "link": "#c415",
+   "era": 7,
+   "statement": "يقرر داروين أن صراع البقاء ينتج حتماً عن ارتفاع معدل التكاثر الهندسي المشترك بين الكائنات الحية",
+   "attributed_to": "داروين، أصل الأنواع (لندن: John Murray، 1859، الطبعة الأولى)",
+   "quote": "The struggle for exist- ence inevitably follows from the high geometrical ratio of increase which is common to all organic beings.",
+   "hedge": "خلاصة داروين في الفصل الأخير، وهي قاعدة نظرية لا قياس",
+   "chapter": "On the Origin of Species",
+   "source_id": "darwin-origin-1859",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "knowledge",
+    "population"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000416",
+   "link": "#c416",
+   "era": 7,
+   "statement": "يقرر البيان أن تاريخ كل مجتمع حتى الآن هو تاريخ صراع الطبقات",
+   "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+   "quote": "The history of all hitherto existing society 1 is the history of class struggles.",
+   "hedge": "أطروحة في بيان سياسي تعبوي لا دراسة تاريخية، والرقم 1 إحالة إلى هامش إنجلز (1888) الذي يقيّدها بالتاريخ المكتوب",
+   "chapter": "I. Bourgeois and Proletarians",
+   "source_id": "marx-manifesto-moore-1888-mia",
+   "source_grade": "D",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000417",
+   "link": "#c417",
+   "era": 7,
+   "statement": "يرى البيان أن البرجوازية لا تبقى إلا بتثوير أدوات الإنتاج باستمرار، ومعها علاقات الإنتاج وعلاقات المجتمع كلها",
+   "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+   "quote": "The bourgeoisie cannot exist without constantly revolutionising the instruments of production, and thereby the relations of production, and with them the whole relations of society.",
+   "hedge": "حكم تحليلي من مؤلفَين لهما موقف سياسي معلن",
+   "chapter": "I. Bourgeois and Proletarians",
+   "source_id": "marx-manifesto-moore-1888-mia",
+   "source_grade": "D",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "industry",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000418",
+   "link": "#c418",
+   "era": 7,
+   "statement": "يصف البيان عصر البرجوازية بأنه يذيب كل ثابت ويدنّس كل مقدس، فيضطر الإنسان إلى مواجهة ظروف حياته الحقيقية",
+   "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+   "quote": "All that is solid melts into air, all that is holy is profaned, and man is at last compelled to face with sober senses his real conditions of life, and his relations with his kind.",
+   "hedge": "صياغة بلاغية في بيان سياسي، والترجمة الإنجليزية لـ Moore تتصرف في الأصل الألماني",
+   "chapter": "I. Bourgeois and Proletarians",
+   "source_id": "marx-manifesto-moore-1888-mia",
+   "source_grade": "D",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "society",
+    "culture"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000419",
+   "link": "#c419",
+   "era": 7,
+   "statement": "يرى البيان أن حاجة البرجوازية إلى سوق تتسع باستمرار تدفعها إلى الانتشار في أرجاء الأرض",
+   "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+   "quote": "The need of a constantly expanding market for its products chases the bourgeoisie over the entire surface of the globe.",
+   "hedge": "تفسير سببي من مؤلفَين لهما موقف سياسي معلن، لا وصف محايد",
+   "chapter": "I. Bourgeois and Proletarians",
+   "source_id": "marx-manifesto-moore-1888-mia",
+   "source_grade": "D",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "trade"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000420",
+   "link": "#c420",
+   "era": 7,
+   "statement": "يرى البيان أن استغلال البرجوازية للسوق العالمية أعطى الإنتاج والاستهلاك طابعاً عالمياً في كل بلد",
+   "attributed_to": "ماركس وإنجلز، بيان الحزب الشيوعي (ترجمة Samuel Moore 1888، تفريغ أرشيف الماركسيين)",
+   "quote": "The bourgeoisie has through its exploitation of the world market given a cosmopolitan character to production and consumption in every country.",
+   "hedge": "حكم عام في بيان سياسي سنة 1848، قبل كثير من التحولات التي يصفها",
+   "chapter": "I. Bourgeois and Proletarians",
+   "source_id": "marx-manifesto-moore-1888-mia",
+   "source_grade": "D",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "trade"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000421",
+   "link": "#c421",
+   "era": 5,
+   "statement": "يقرر نص التبر المسبوك أن ملك السلطان الظالم لا يبقى ولا يدوم",
+   "attributed_to": "التبر المسبوك في نصيحة الملوك، المنسوب إلى الغزالي (ت 505هـ)، ضبط أحمد شمس الدين، بيروت 1988، ج1 ص44",
+   "quote": "والسلطان الظالم شؤم لا يبقى ملكه ولا يدوم",
+   "hedge": "حكم وعظي في كتاب نصيحة للملوك لا رصد تاريخي. نسبة الكتاب إلى الغزالي محل نظر عند بعض الباحثين، ولم يُتحقق في هذه الجولة من موضع هذا الفصل في الأصل الفارسي",
+   "chapter": "في ذكر العدل والسياسة وذكر الملوك وسيرهم",
+   "source_id": "turath-4129-tibr-masbuk",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "institutions"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000422",
+   "link": "#c422",
+   "era": 5,
+   "statement": "يورد النص قولاً ينسبه إلى النبي ﷺ: الملك يبقى مع الكفر ولا يبقى مع الظلم",
+   "attributed_to": "التبر المسبوك في نصيحة الملوك، المنسوب إلى الغزالي (ت 505هـ)، ضبط أحمد شمس الدين، بيروت 1988، ج1 ص44",
+   "quote": "الملك يبقى مع الكفر ولا يبقى مع الظلم",
+   "hedge": "النص ينسب القول إلى النبي ﷺ، ولم يُتحقق من نسبته في كتب الحديث في هذه الجولة، فلا يُعرض حديثاً",
+   "chapter": "في ذكر العدل والسياسة وذكر الملوك وسيرهم",
+   "source_id": "turath-4129-tibr-masbuk",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "religion"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000423",
+   "link": "#c423",
+   "era": 6,
+   "statement": "يرى ابن الصيرفي أن الوزير والأستادار، لعلمهما أن الدواوين لا تقوم إلا بالظلم، صار كل منهما يأخذ ما يظفر به، فخربت البلاد وظهر الفساد",
+   "attributed_to": "ابن الصيرفي، إنباء الهصر بأنباء العصر، ج1 (نص تراث)",
+   "quote": "لعلمهما أن الدواوين لا تسد ولا تقوم بالكلف إلا بالظلم، وصار كل من ظفر بشى أخذه وسد به، فخربت البلاد وظهر الفساد",
+   "hedge": "تفسير سببي من مؤرخ يكتب عن زمنه بحكم أخلاقي، وليس قياساً. وكلمة «يظلمان» الواردة قبل الاقتباس قراءة المحقق، والأصل «يكلمون» بحسب هامشه، والاقتباس لا يتضمنها",
+   "chapter": "حوادث عهد إينال وخشقدم",
+   "source_id": "turath-30026-sayrafi",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "institutions",
+    "politics"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000424",
+   "link": "#c424",
+   "era": 6,
+   "statement": "يذكر ابن الصيرفي أن أحد الأمراء، وكان شديد الظلم على الناس، لما جُهّزت المراكب لغزو قبرص خرّب غيطان المسلمين",
+   "attributed_to": "ابن الصيرفي، إنباء الهصر بأنباء العصر، ج1 (نص تراث)",
+   "quote": "كان شديد الظلم على الخلق سيما لما عمر الأشرف المراكب لغزو قبرص، فخرب غيطان المسلمين",
+   "hedge": "وصف لواقعة فردية يرويها مؤرخ معاصر، وليس إحصاءً لأثر الظلم في الزراعة. تجريدة قبرص سنة 863هـ بحسب هامش المحقق، والاسم يرد بصيغ مختلفة في الهامش فلم يُذكر هنا",
+   "chapter": "حوادث عهد إينال وخشقدم",
+   "source_id": "turath-30026-sayrafi",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "agriculture",
+    "politics"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000425",
+   "link": "#c425",
+   "era": 6,
+   "statement": "يروي ابن الصيرفي أن السلطان قال لمن ضُرب بأمره: «أنا أعدل وأنت تظلم؟ أنا أعمر وأنت تخرب؟»",
+   "attributed_to": "ابن الصيرفي، إنباء الهصر بأنباء العصر، ج1 (نص تراث)",
+   "quote": "أنا أعدل وانت تظلم؟ أنا أعمر وأنت تخرب؟",
+   "hedge": "قول منسوب إلى السلطان في لحظة غضب كما يرويه المؤرخ، وليس سياسة معلنة. وهو شاهد على أن الربط بين الظلم والخراب كان معروفاً عند الحكام أنفسهم",
+   "chapter": "حوادث عهد إينال وخشقدم",
+   "source_id": "turath-30026-sayrafi",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "institutions"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000426",
+   "link": "#c426",
+   "era": 7,
+   "statement": "يذكر الطهطاوي أنه في 27 يوليو، بعد أن امتنعت صحف المعارضة عن الصدور، أُغلقت الورشات والمعامل والمدارس في باريس",
+   "attributed_to": "رفاعة الطهطاوي، تخليص الإبريز في تلخيص باريز (نسخة أرشيف الإنترنت)",
+   "quote": "فأغلقت « الورشات » والمعامل ( والفبريقات ) والمدارس",
+   "hedge": "شهادة مشاهد من أعضاء البعثة المصرية في باريس، يكتب بعد الحدث بسنين ويصف ما بلغه ورآه. السنة (1830) ليست في المقطع وإنما يُعرف الحدث من تاريخه. النص يذكر «الأوامر» دون أن يسمّي فاعل الإغلاق، والكتاب لا يقدم إحصاءً لعدد ما أُغلق. النص من OCR فراجِعه بالصورة",
+   "chapter": "باريس في أيام ثورة 1830",
+   "source_id": "tahtawi-takhlis-archive",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000427",
+   "link": "#c427",
+   "era": 7,
+   "statement": "يذكر الطهطاوي أن الرعية في باريس أخذت الأسلحة من محلات السيوفية بالشراء أو بالغصب في أيام الثورة",
+   "attributed_to": "رفاعة الطهطاوي، تخليص الإبريز في تلخيص باريز (نسخة أرشيف الإنترنت)",
+   "quote": "وأخذت الرعية الأسلحة من السيوفية بشراء أو غصب",
+   "hedge": "وصف لمشهد من أيام الاضطراب، من شاهد عيان من البعثة المصرية يكتب بعد الحدث. الصيغة العامة (الرعية) لا تحدد الفئات، والنص من OCR فراجِعه بالصورة",
+   "chapter": "باريس في أيام ثورة 1830",
+   "source_id": "tahtawi-takhlis-archive",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "war"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000428",
+   "link": "#c428",
+   "era": 7,
+   "statement": "يذكر بريكلي أن الإمبراطور أقسم عند الاستعادة أن تُلتمس المشورة الواسعة، وأن يُقرَّر كل أمر بالنقاش العام",
+   "attributed_to": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
+   "quote": "wide counsels should be sought, and all things determined by public discussion",
+   "hedge": "نقل المؤرخ بالإنجليزية لمضمون الميثاق، وليست الوثيقة اليابانية نفسها. الكتاب من 1901، ويقرأ الميثاق من خلال تفسيره الخاص",
+   "chapter": "الاستعادة وميثاق 1868",
+   "source_id": "brinkley-japan-v4-1901",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "institutions"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000429",
+   "link": "#c429",
+   "era": 7,
+   "statement": "يرى بريكلي أن واضعي الميثاق لم يقصدوا إلا الساموراي، ولم يدخل عامة الناس في حسابهم",
+   "attributed_to": "Frank Brinkley، Japan: its history, arts, and literature، المجلد 4 (1901)",
+   "quote": "had the samurai alone in view",
+   "hedge": "حكم المؤرخ على مقاصد الواضعين، وليس وثيقة تنص على ذلك. يعتمد على قراءة سياسية لعصر ميجي كتبها مؤرخ من 1901",
+   "chapter": "الاستعادة وميثاق 1868",
+   "source_id": "brinkley-japan-v4-1901",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000430",
+   "link": "#c430",
+   "era": 8,
+   "statement": "تنص المادة 119 من معاهدة فرساي (1919) على أن ألمانيا تتنازل للقوى الحليفة الرئيسية عن جميع حقوقها وألقابها على مستعمراتها ما وراء البحار",
+   "attributed_to": "The Treaty of Peace between the Allied and Associated Powers and Germany (1919)",
+   "quote": "Germany renounces in favour of the Principal Allied and Associated Powers all her rights and titles over her oversea possessions.",
+   "hedge": "نص قانوني لمعاهدة صلح، يقرر ما اتفق عليه المنتصرون، ولا يثبت كيف طُبّق في كل مستعمرة. الإحالة هنا إلى نص المادة، لا إلى تنفيذها",
+   "chapter": "معاهدة فرساي: المستعمرات والمسؤولية عن الحرب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "war"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000431",
+   "link": "#c431",
+   "era": 8,
+   "statement": "تصف المادة 231 من معاهدة فرساي (1919) الحرب بأنها فُرضت على الحكومات الحليفة بعدوان ألمانيا وحلفائها",
+   "attributed_to": "The Treaty of Peace between the Allied and Associated Powers and Germany (1919)",
+   "quote": "as a consequence of the war imposed upon them by the aggression of Germany and her allies",
+   "hedge": "هذا وصف أحادي من المنتصرين في معاهدتهم، وليس حكماً تاريخياً محايداً على المسؤولية عن الحرب، وقد جادلت فيه كتب التاريخ اللاحقة",
+   "chapter": "معاهدة فرساي: المستعمرات والمسؤولية عن الحرب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "war"
+   ],
+   "owner_reviewed": true
+  },
+  {
+   "id": "cl_000000432",
+   "link": "#c432",
+   "era": 7,
+   "statement": "يقرر سميث أنه لا صفتين أشد تنافراً من صفة التاجر وصفة صاحب السيادة",
+   "attributed_to": "آدم سميث، ثروة الأمم (1776)، تحرير Edwin Cannan، 1904، المجلد الثاني",
+   "quote": "No two characters seem more inconsistent than those of trader and sovereign.",
+   "hedge": "حكم نظري عام من اقتصادي يدعو إلى الحرية التجارية، فموقفه من تدخل الدولة معلن",
+   "chapter": "Book V, Chapter II: Of the Sources of the general or public Revenue of the Society",
+   "source_id": "smith-wealth-cannan1904-vol2",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "trade",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000433",
+   "link": "#c433",
+   "era": 7,
+   "statement": "يرى سميث أن روح السيادة جعلت شركة الهند الشرقية الإنجليزية تاجراً سيئاً، كما جعلتها روح التجارة صاحب سيادة سيئاً",
+   "attributed_to": "آدم سميث، ثروة الأمم (1776)، تحرير Edwin Cannan، 1904، المجلد الثاني",
+   "quote": "the spirit of sovereignty seems to have rendered them equally bad traders.",
+   "hedge": "تقدير معاصر لأداء الشركة من خصم لاحتكارها، وليس قياساً لأرباحها",
+   "chapter": "Book V, Chapter II: Of the Sources of the general or public Revenue of the Society",
+   "source_id": "smith-wealth-cannan1904-vol2",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "economy",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000434",
+   "link": "#c434",
+   "era": 7,
+   "statement": "يقرر سميث أن الضرائب العالية كثيراً ما تدرّ على الحكومة دخلاً أقل مما تدرّه ضرائب معتدلة، بتقليل استهلاك السلع المضروبة أو بتشجيع التهريب",
+   "attributed_to": "آدم سميث، ثروة الأمم (1776)، تحرير Edwin Cannan، 1904، المجلد الثاني",
+   "quote": "afford a smaller revenue to government than what might be drawn",
+   "hedge": "قاعدة استنتجها سميث من رسوم الجمارك البريطانية في عصره؛ سببها عنده نقص الاستهلاك والتهريب، لا نشاط الرعايا كما عند ابن خلدون",
+   "chapter": "Book V, Chapter II: Of the Sources of the general or public Revenue of the Society",
+   "source_id": "smith-wealth-cannan1904-vol2",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000435",
+   "link": "#c435",
+   "era": 7,
+   "statement": "يقرر سميث أن من الصنائع، حتى أدناها، ما لا يقوم إلا في مدينة كبيرة، لأن تقسيم العمل يحدّه اتساع السوق",
+   "attributed_to": "آدم سميث، ثروة الأمم (1776)، طبعة Oxford University Press، 1904، المجلد الأول",
+   "quote": "which can be carried on nowhere but in a great town.",
+   "hedge": "قاعدة نظرية مثّل لها سميث بالحمّال وبالمزارع في مرتفعات اسكتلندا، لا رصد إحصائي",
+   "chapter": "Book I, Chapter III: That the Division of Labour is limited by the Extent of the Market",
+   "source_id": "smith-wealth-oup1904-vol1",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "industry",
+    "society",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000436",
+   "link": "#c436",
+   "era": 7,
+   "statement": "يعدّ سميث صاحب السيادة وموظفي القضاء والحرب والجيش والأسطول عمالاً غير منتجين، يُعالون من جزء من ناتج عمل غيرهم",
+   "attributed_to": "آدم سميث، ثروة الأمم (1776)، طبعة Oxford University Press، 1904، المجلد الأول",
+   "quote": "The sovereign, for example, with all the officers both of justice and war who serve under him, the whole army and navy, are unproductive labourers.",
+   "hedge": "تعريف سميث للعمل المنتج هو ما يتجسد في سلعة تبقى؛ لا ينكر نفع هذه الخدمات، بل ينفي أنها تنتج ما يُبادَل لاحقاً",
+   "chapter": "Book II, Chapter III: Of the Accumulation of Capital, or of productive and unproductive Labour",
+   "source_id": "smith-wealth-oup1904-vol1",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "economy",
+    "politics",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000437",
+   "link": "#c437",
+   "era": 8,
+   "statement": "تنص المادة 22 من عهد عصبة الأمم على أن وصاية الشعوب التي لم تعد تحت سيادة الدول التي كانت تحكمها تُعهد إلى دول متقدمة",
+   "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+   "quote": "the tutelage of such peoples should be entrusted to advanced nations",
+   "hedge": "نص عهد يقرر مبدأ الانتداب كما صاغه المنتصرون، ولا يثبت كيف طُبّق في كل إقليم. الإحالة هنا إلى النص لا إلى ممارسة الدول المنتدبة",
+   "chapter": "عهد عصبة الأمم: المادة 22 والانتداب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "institutions",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000438",
+   "link": "#c438",
+   "era": 8,
+   "statement": "تنص المادة 22 على أن تُمارس الدول المتقدمة هذه الوصاية بوصفها دولاً منتدبة نيابة عن العصبة",
+   "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+   "quote": "this tutelage should be exercised by them as Mandatories on behalf of the League",
+   "hedge": "الانتداب هنا صيغة قانونية للوصاية، وليس وصفاً لسلطة الدول المنتدبة الفعلية على الأرض",
+   "chapter": "عهد عصبة الأمم: المادة 22 والانتداب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "institutions",
+    "politics"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000439",
+   "link": "#c439",
+   "era": 8,
+   "statement": "تقول المادة 22 إن جماعات كانت تابعة للإمبراطورية العثمانية بلغت مرحلة من التطور تسمح بالاعتراف المؤقت باستقلالها",
+   "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+   "quote": "Certain communities formerly belonging to the Turkish Empire have reached a stage of development",
+   "hedge": "النص يسمّي الجماعات دون أن يعدّدها، ويحكم بأن مرحلتها تسمح بالاعتراف المؤقت. هذا حكم سياسي من واضعي العهد، وليس قياساً محايداً لمستوى التطور",
+   "chapter": "عهد عصبة الأمم: المادة 22 والانتداب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000440",
+   "link": "#c440",
+   "era": 8,
+   "statement": "تنص المادة 22 على أن رغبات تلك الجماعات تكون اعتباراً أساسياً في اختيار الدولة المنتدبة",
+   "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+   "quote": "The wishes of these communities must be a principal consideration in the selection of the Mandatory",
+   "hedge": "النص يجعل الرغبة اعتباراً أساسياً، ولا يجعلها ملزِمة. ولا يوضح كيف تُقاس هذه الرغبات",
+   "chapter": "عهد عصبة الأمم: المادة 22 والانتداب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000441",
+   "link": "#c441",
+   "era": 8,
+   "statement": "تشترط المادة 22 على الدولة المنتدبة في شعوب وسط أفريقيا أن تضمن حرية الضمير والدين، مع قيد واحد هو حفظ النظام العام والآداب",
+   "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+   "quote": "guarantee freedom of conscience and religion, subject only to the maintenance of public order and morals",
+   "hedge": "شرط الضمان والدين وارد في النص، وتطبيقه على الأرض مسألة تاريخية منفصلة تحتاج شواهد أخرى",
+   "chapter": "عهد عصبة الأمم: المادة 22 والانتداب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "institutions",
+    "society",
+    "religion"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000442",
+   "link": "#c442",
+   "era": 8,
+   "statement": "تنص المادة 22 على منع انتهاكات مثل تجارة الرقيق وتجارة السلاح وتجارة المسكرات في الأقاليم المنتدبة",
+   "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+   "quote": "the prohibition of abuses such as the slave trade, the arms traffic and the liquor traffic",
+   "hedge": "قائمة الانتهاكات المحظورة في النص لا تعني أن الحظر طُبّق فعلاً، ولا أنها كانت الانتهاكات الوحيدة",
+   "chapter": "عهد عصبة الأمم: المادة 22 والانتداب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "trade",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000443",
+   "link": "#c443",
+   "era": 8,
+   "statement": "توجب المادة 22 على الدولة المنتدبة أن تقدّم إلى المجلس تقريراً سنوياً عن الإقليم الموكل إليها",
+   "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+   "quote": "In every case of mandate, the Mandatory shall render to the Council an annual report in reference to the territory committed to its charge",
+   "hedge": "التزام التقرير مكتوب في النص، ومحتوى التقارير وصدقها لا تثبتهما المادة نفسها",
+   "chapter": "عهد عصبة الأمم: المادة 22 والانتداب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000444",
+   "link": "#c444",
+   "era": 8,
+   "statement": "تنشئ المادة 22 لجنة دائمة تتسلم التقارير السنوية للدول المنتدبة وتفحصها",
+   "attributed_to": "The Covenant of the League of Nations (1919)، جزء من معاهدة فرساي",
+   "quote": "A permanent Commission shall be constituted to receive and examine the annual reports of the Mandatories",
+   "hedge": "النص ينشئ اللجنة ويحدد مهمتها في الفحص والمشورة، ولا يحدد صلاحية لها في إلزام الدول المنتدبة",
+   "chapter": "عهد عصبة الأمم: المادة 22 والانتداب",
+   "source_id": "versailles-1919",
+   "source_grade": "A",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000445",
+   "link": "#c445",
+   "era": 3,
+   "statement": "يذكر ثوكيديديس أن تدفّق أهل الريف إلى أثينا زاد بلاء الطاعون، فالقادمون الجدد أُسكنوا في حرّ الصيف في أكواخ خانقة فاستشرى فيهم الموت",
+   "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+   "quote": "An aggravation of the existing calamity was the influx from the country into the city",
+   "hedge": "ثوكيديديس شاهد عيان أصيب بالمرض ونجا. والتكدّس سبب مشدّد في روايته، لا سبب للوباء نفسه، وطبيعة المرض مختلف فيها بين الباحثين",
+   "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الثاني: طاعون أثينا (430 ق.م)",
+   "source_id": "thucydides",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "population",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000446",
+   "link": "#c446",
+   "era": 3,
+   "statement": "يصف ثوكيديديس أن الطاعون أذهب في أثينا خشية الآلهة وقانون البشر، فلم يعد شيء يردع الناس",
+   "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+   "quote": "Fear of gods or law of man there was none to restrain them",
+   "hedge": "وصف شاهد عيان لأثر الوباء في الأخلاق والنظام، وفيه تعميم بلاغي",
+   "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الثاني: طاعون أثينا (430 ق.م)",
+   "source_id": "thucydides",
+   "source_grade": "B",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "society",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000447",
+   "link": "#c447",
+   "era": 3,
+   "statement": "ينقل ثوكيديديس أن الطاعون بدأ في الحبشة فوق مصر، ثم نزل إلى مصر وليبيا وأكثر بلاد الملك (فارس)، ثم وقع على أثينا من مينائها بيرايوس",
+   "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+   "quote": "It first began, it is said, in the parts of Ethiopia above Egypt",
+   "hedge": "ثوكيديديس يصرّح بأنه ينقل قولاً («يقال»)، فمسار الوباء رواية لا مشاهدة",
+   "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الثاني: طاعون أثينا (430 ق.م)",
+   "source_id": "thucydides",
+   "source_grade": "B",
+   "info_grade": 4,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000448",
+   "link": "#c448",
+   "era": 4,
+   "statement": "يذكر بروكوبيوس أن عدد الموتى بالطاعون في القسطنطينية بلغ خمسة آلاف في اليوم، ثم عشرة آلاف وأكثر",
+   "attributed_to": "بروكوبيوس، تاريخ الحروب، الكتاب الثاني (ترجمة دوينغ، لوب، المجلد الأول، 1914)",
+   "quote": "the tale of dead reached five thousand each day, and again it even came to ten thousand and still more than that",
+   "hedge": "بروكوبيوس كان في المدينة أثناء الوباء، لكن أرقامه تقدير لا إحصاء، والباحثون مختلفون في حجم الوفيات",
+   "chapter": "بروكوبيوس، تاريخ الحروب II.22–23: طاعون 542م في القسطنطينية",
+   "source_id": "procopius-dewing-1914-vol1",
+   "source_grade": "B",
+   "info_grade": 4,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "population"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000449",
+   "link": "#c449",
+   "era": 4,
+   "statement": "يصف بروكوبيوس أن كل عمل توقف في القسطنطينية أثناء الطاعون، وترك الصناع حرفهم، حتى عمّ الجوع مدينة كانت تفيض بالخيرات",
+   "attributed_to": "بروكوبيوس، تاريخ الحروب، الكتاب الثاني (ترجمة دوينغ، لوب، المجلد الأول، 1914)",
+   "quote": "And work of every description ceased, and all the trades were abandoned by the artisans",
+   "hedge": "وصف شاهد عيان لذروة الوباء، لا لمدته كلها",
+   "chapter": "بروكوبيوس، تاريخ الحروب II.22–23: طاعون 542م في القسطنطينية",
+   "source_id": "procopius-dewing-1914-vol1",
+   "source_grade": "B",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "economy",
+    "industry"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000450",
+   "link": "#c450",
+   "era": 4,
+   "statement": "يلاحظ بروكوبيوس أن الطاعون كان يبدأ دائماً من الساحل، ثم يصعد منه إلى الداخل",
+   "attributed_to": "بروكوبيوس، تاريخ الحروب، الكتاب الثاني (ترجمة دوينغ، لوب، المجلد الأول، 1914)",
+   "quote": "And this disease always took its start from the coast, and from there went up to the interior",
+   "hedge": "ملاحظة عامة من شاهد معاصر، تتسق مع انتقال الوباء بالسفن، والمؤلف لا يعلّلها",
+   "chapter": "بروكوبيوس، تاريخ الحروب II.22–23: طاعون 542م في القسطنطينية",
+   "source_id": "procopius-dewing-1914-vol1",
+   "source_grade": "B",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "trade"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000451",
+   "link": "#c451",
+   "era": 5,
+   "statement": "يذكر ابن بطوطة أن عدد الموتى في اليوم الواحد في الطاعون الأعظم بلغ في القاهرة ومصر (الفسطاط) أضعاف ما بلغه في دمشق",
+   "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول، 1853)",
+   "quote": "tandis qu’au Caire et à Misr (Fosthâth)",
+   "hedge": "الأرقام في هذه النسخة مشوهة بالمسح الضوئي فلا يُعتمد عليها، والمعتمد المقارنة بين المدينتين. وابن بطوطة كان في دمشق، أما القاهرة فرواية سمعها",
+   "chapter": "ابن بطوطة: الطاعون الأعظم في دمشق سنة 749هـ (1348م)",
+   "source_id": "battuta-defremery",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "population",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000452",
+   "link": "#c452",
+   "era": 5,
+   "statement": "يروي ابن بطوطة أن أهل دمشق خرجوا في الطاعون الأعظم إلى الدعاء جميعاً، والتحق بهم اليهود بالتوراة والنصارى بالإنجيل مع نسائهم وأولادهم",
+   "attributed_to": "ابن بطوطة (ترجمة Defrémery وSanguinetti، باريس، المجلد الأول، 1853)",
+   "quote": "et les chrétiens avec leur Évangile",
+   "hedge": "مشاهدة ابن بطوطة في دمشق، وتقول روايته إن الوباء خفّ بعدها، وذلك تفسيره هو",
+   "chapter": "ابن بطوطة: الطاعون الأعظم في دمشق سنة 749هـ (1348م)",
+   "source_id": "battuta-defremery",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "religion",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000453",
+   "link": "#c453",
+   "era": 4,
+   "statement": "يذكر بيدا أن المجاعة اجتاحت القسطنطينية في زمن جستنيان، ولم تتأخر الطاعون بعدها",
+   "attributed_to": "بيدا، التأريخ الكبير (النص اللاتيني، Patrologia Latina XCV)",
+   "quote": "fames Constantinopolim inuasit; nec mora pestis secuta est",
+   "hedge": "بيدا يكتب بعد قرنين من الحادثة ويعتمد على حوليات سابقة، والنص لا يذكر سنة الحدث. وتسلسل المجاعة ثم الطاعون رواية عامة لا تفصيل فيه",
+   "chapter": "بيدا: حوليات الإمبراطورية الرومانية الشرقية (حوادث القسطنطينية)",
+   "source_id": "bede-latin-pl95",
+   "source_grade": "C",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "health",
+    "agriculture"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000454",
+   "link": "#c454",
+   "era": 4,
+   "statement": "يذكر بيدا أن مجاعة شديدة عمّت سوريا في السنة نفسها التي بلغ فيها كلوديوس سنته الرابعة، وأنها سبق أن تنبأ بها أغابوس في سفر الأعمال",
+   "attributed_to": "بيدا، التأريخ الكبير (النص اللاتيني، Patrologia Latina XCV)",
+   "quote": "quo etiam anno fames grauissima per Syriam facta est",
+   "hedge": "نص بيدا متأخر، وتأريخه بالسنة تابع لحساب الحوليات. والمجاعة في سفر الأعمال (11: 28) متنبأ بها في نص ديني، فالتأكيد التاريخي يحتاج مؤيداً مستقلاً",
+   "chapter": "بيدا: حوليات الإمبراطورية الرومانية الشرقية (حوادث القسطنطينية)",
+   "source_id": "bede-latin-pl95",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "health"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000455",
+   "link": "#c455",
+   "era": 3,
+   "statement": "يروي ثوكيديديس أن أتباع كيلون المحاصرين في الأكروبوليس اشتدّ بهم الحصار حتى مات بعضهم جوعاً",
+   "attributed_to": "ثوكيديديس (ترجمة كراولي، 1910، إيفريمان)",
+   "quote": "some even dying of famine",
+   "hedge": "ثوكيديديس ينقل حادثة وقعت قبل قرن ونصف من زمنه، عن رواية الأثينيين، وتفصيل الجوع فيها موجز",
+   "chapter": "ثوكيديديس (كراولي 1910)، الكتاب الأول: حصار كيلون في أثينا",
+   "source_id": "thucydides",
+   "source_grade": "B",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "agriculture",
+    "war",
+    "health"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000456",
+   "link": "#c456",
+   "era": 5,
+   "statement": "يذكر ابن بطوطة أن قائد أمراء السند في زمنه كان مملوكاً من مماليك السلطان",
+   "attributed_to": "ابن بطوطة، ترجمة Defrémery وSanguinetti، المجلد الثالث (1855)",
+   "quote": "le chef des émirs du Sind était un esclave du sultan",
+   "hedge": "رحالة نقل ما رآه وسمعه في السند ودلهي، والخبر عن قائد بعينه في زمن الرحلة، لا عن نظام الجند كله",
+   "chapter": "ابن بطوطة: دلهي وسلاطين الهند ومماليكهم",
+   "source_id": "battuta-defremery-vol3",
+   "source_grade": "C",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "institutions",
+    "war"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000457",
+   "link": "#c457",
+   "era": 5,
+   "statement": "يروي ابن بطوطة أن بلبان، وكان مملوكاً للسلطان شمس الدين، عومل بازدراء وجُعل بين السقاة",
+   "attributed_to": "ابن بطوطة، ترجمة Defrémery وSanguinetti، المجلد الثالث (1855)",
+   "quote": "Balaban fut traité avec mépris et placé parmi les porteurs d'eau",
+   "hedge": "رواية ابن بطوطة عن حادثة قديمة في تاريخ دلهي، وحكايته تتضمن نبوءة المنجمين، فلا تُعدّ مشاهدة. ومساره اللاحق إلى الحكم لا يرد في هذه الجملة",
+   "chapter": "ابن بطوطة: دلهي وسلاطين الهند ومماليكهم",
+   "source_id": "battuta-defremery-vol3",
+   "source_grade": "C",
+   "info_grade": 4,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000458",
+   "link": "#c458",
+   "era": 3,
+   "statement": "يذكر قيصر أن جنوده في حصار ألِيزيا عدموا القمح أياماً عديدة، وعاشوا على الماشية المجلوبة من قرى بعيدة حتى بلغ الجوع حدّه الأقصى",
+   "attributed_to": "قيصر، حرب الغال، الكتاب السابع (النص اللاتيني من ويكي مصدر)",
+   "quote": "ut complures dies frumento milites caruerint et pecore ex longinquioribus vicis adacto extremam famem sustentarent",
+   "hedge": "قيصر طرف في الحصار، وكتابه يمجّد نفسه، والاعتراف بعسر إمداد الجيش هنا يخدم رواية الصمود. وهو يذكر أن عسر الإمداد لم يُضعف الجنود، فالجوع لم يحسم وحده",
+   "chapter": "قيصر: حصار ألِيزيا (52 ق.م)",
+   "source_id": "caesar-bg7-la",
+   "source_grade": "C",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "agriculture",
+    "economy"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000459",
+   "link": "#c459",
+   "era": 3,
+   "statement": "يروي قيصر أن عبيداً أسرى اعترفوا بأن جنوداً خرجوا من المعسكر سراً من الجوع وقلة الزاد يطلبون القمح والماشية في الحقول",
+   "attributed_to": "قيصر، حرب الغال، الكتاب السابع (النص اللاتيني من ويكي مصدر)",
+   "quote": "fame et inopia adductos clam ex castris exisse",
+   "hedge": "اعترافات انتُزعت بالتعذيب، وقد نقلها قيصر في صيغة تخدم روايته، فهي قول منسوب لا وقائع مثبتة",
+   "chapter": "قيصر: حصار ألِيزيا (52 ق.م)",
+   "source_id": "caesar-bg7-la",
+   "source_grade": "C",
+   "info_grade": 4,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "war",
+    "society",
+    "agriculture"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000460",
+   "link": "#c460",
+   "era": 6,
+   "statement": "يذكر غارسيلاسو أن ملوك الإنكا ألزموا رعاياهم جميعاً بتعلّم لغة البلاط، وهي التي يسميها اللغة العامة",
+   "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+   "quote": "a Command and an Injunction Jaid upon all their Vaflals, ob- liging them to learn the Language of the Court",
+   "hedge": "يروي غارسيلاسو، وهو ابن أم إنكية، سياسة دولة أجداده بعد عقود من سقوطها، ويمجّدها. والنص مصوّر من ترجمة إنجليزية من القرن السابع عشر، وفيه أخطاء OCR تُترك كما هي.",
+   "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): لغة البلاط عند الإنكا، الكتاب السابع (تقريبي)",
+   "source_id": "garcilaso-rycaut-1688",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "politics",
+    "institutions"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000461",
+   "link": "#c461",
+   "era": 6,
+   "statement": "يذكر غارسيلاسو أن حضور أبناء السادة التابعين في البلاط جعل لغة البلاط أعمّ انتشاراً، تُتعلَّم بيسر",
+   "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+   "quote": "by which means the Language of the Court became mote general and common, being learned with eafe and pleafure",
+   "hedge": "تعليل غارسيلاسو لانتشار اللغة، لا إحصاء له. وهو يمجّد دولة أجداده، وفي النص المصوّر أخطاء OCR («mote» بدل more).",
+   "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): تربية أبناء السادة في البلاط، الكتاب السابع (تقريبي)",
+   "source_id": "garcilaso-rycaut-1688",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "attribution",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "politics",
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000462",
+   "link": "#c462",
+   "era": 6,
+   "statement": "يذكر غارسيلاسو أن لغة أهل البلاد، بعد ثمانين سنة من إخضاع إمبراطورية الإنكا، ما زالت تفتقر إلى ألفاظ تعبّر عن أسرار الدين المسيحي",
+   "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+   "quote": "when now after eighty years that the Indian Empire hath been fubdued, there ftill want words in the Jadian Language to exprefs the Myfteries of our Holy Faith.",
+   "hedge": "ملاحظة كاتب عاش في البيرو بعد الفتح وكتب في إسبانيا. و«الافتقار» حكمه هو، وإبقاء الألفاظ الإسبانية في المصطلح الديني قد يكون اختياراً مقصوداً لا عجزاً في اللغة وحده. وهي تصف بقاء اللغة المحلية في التعليم الديني، لا مدى انتشار الإسبانية بين الناس.",
+   "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): اللغات بعد الفتح الإسباني (تقريبي)",
+   "source_id": "garcilaso-rycaut-1688",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "religion",
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000463",
+   "link": "#c463",
+   "era": 6,
+   "statement": "يذكر غارسيلاسو أن كتاب تعليم الدين المطبوع سنة 1585 صدر بثلاث لغات: الإسبانية، واللغة العامة في كوزكو، ولغة إقليم أيمارا",
+   "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+   "quote": "in the year 1585, in three Languages, viz. in Spanifh, in the general Language of Coz- co, and in the Tongue peculiarly belonging to the Province of Aymara",
+   "hedge": "يستشهد غارسيلاسو بالكتاب على قصور ألفاظ اللغتين المحليتين عن المصطلح الديني. ونسبة الكتاب إلى راهب بعينه لا يؤيدها غيره، والسنة كما وردت في الترجمة.",
+   "chapter": "غارسيلاسو (ترجمة Rycaut، 1688): اللغات بعد الفتح الإسباني (تقريبي)",
+   "source_id": "garcilaso-rycaut-1688",
+   "source_grade": "C",
+   "info_grade": 1,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "religion",
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000464",
+   "link": "#c464",
+   "era": 4,
+   "statement": "يقرر بيدا أن بريطانيا تدرس العلم بالحقيقة الواحدة بلغات خمس أمم: الإنجليز والبريطانيين والإسكتلنديين والبكتيين واللاتين، وأن اللاتينية صارت مشتركة بين الجميع بدراسة الكتاب المقدس",
+   "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+   "quote": "quinque gentium linguis, unam eandemque summae ueritatis et uerae sublimitatis scientiam scrutatur, et confitetur, Anglorum uidelicet, Brettonum, Scottorum, Pictorum et Latinorum, quae meditatione scripturarum ceteris omnibus est facta communis.",
+   "hedge": "وصف راهب لحال الجزيرة في القرن الثامن، من داخل الكنيسة. والعدد خمسة مربوط عنده بعدد الأسفار التي كُتبت بها الشريعة، فهو بلاغي جزئياً. ويقدّم اللاتينية لغةً لدراسة الكتاب، لا لغةَ كلام الناس اليومي.",
+   "chapter": "الكتاب الأول، الفصل 1 (تقريبي): وصف بريطانيا ولغاتها",
+   "source_id": "bede-latin-pl95",
+   "source_grade": "C",
+   "info_grade": 2,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "religion",
+    "knowledge"
+   ],
+   "owner_reviewed": false
+  },
+  {
+   "id": "cl_000000465",
+   "link": "#c465",
+   "era": 4,
+   "statement": "يروي غريغوريوس أن جموع أورليان استقبلت الملك الفرنجي بمدائح تعالت فيها السريانية واللاتينية ولغة اليهود معاً",
+   "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+   "quote": "And here the Syrian language, there that of the Latins, and again that even of the Jews, sounded together strangely in varied praises",
+   "hedge": "رواية أسقف معاصر لملوك الفرنجة، والترجمة إنجليزية مختصرة (Brehaut). والملك غونترام بحسب سياق الكتاب، ويهاجم غريغوريوس بعدها اليهود ويجعل مدائحهم ذات غرض. والنص يصف لغات الاحتفال، لا لغات المدينة كلها.",
+   "chapter": "غريغوريوس: استقبال الملك في أورليان (الكتاب الثامن، تقريبي)",
+   "source_id": "gregory-brehaut",
+   "source_grade": "B",
+   "info_grade": 3,
+   "scope": "fact",
+   "grade_status": "delegated_review",
+   "domains": [
+    "culture",
+    "religion",
+    "society"
+   ],
+   "owner_reviewed": false
+  }
+ ]
+}

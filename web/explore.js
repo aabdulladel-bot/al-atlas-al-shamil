@@ -821,7 +821,7 @@ let initialApplied = false;
 function applyInitialView() {
   if (initialApplied) return;
   initialApplied = true;
-  const { r, s, l, p } = initialView;
+  const { r, s, l, p, c } = initialView;
   // كاميرا مشارَكة: تُضبط أولاً وتُقفل أمام ما يطبّقه الرابط بعدها من منطقة أو سُنّة، ثم تُفتح
   if (p) { camLock.on = true; map.jumpTo({ center: [p[0], p[1]], zoom: p[2] }); setTimeout(() => { camLock.on = false; }, 5000); }
   // طبقات غيّرها صاحب الرابط عن الافتراضي: النقر على مربّعها يمرّ بالمسار نفسه الذي يمرّ به القارئ
@@ -832,6 +832,22 @@ function applyInitialView() {
   const until = (ok, run, tries = 40) => (ok() ? run() : tries > 0 && setTimeout(() => until(ok, run, tries - 1), 250));
   if (r) until(() => regions.length, () => { if (regions.some((x) => x.id === r)) setRegion(r); });
   if (s) until(() => sunanData?.sunan, () => { const x = sunanData.sunan.find((y) => sunnaSlug(y.id) === s); if (x) selectSunna(x); });
+  if (c) openClaimById(c);
+}
+// رابط الشاهد الثابت (#c460): يُفتح على مكانه إن كان له مكان، وإلا نصاً في بطاقته
+async function openClaimById(id) {
+  try {
+    for (const x of await getJson("data/claims_index.json")) {
+      const c = (await getJson(`data/claims_era${x.era}.json`)).claims.find((y) => y.id === id);
+      if (!c) continue;
+      if (await ensureClaimPoints()) {
+        const f = claimPoints.features.find((f) => JSON.parse(f.properties.claims).some((y) => y.id === id));
+        if (f) return goClaimPlace({ era: x.era, coords: f.geometry.coordinates, slug: f.properties.slug });
+      }
+      return goClaimText({ era: x.era, claim: c });
+    }
+    toast(`لا شاهد بالمعرّف ${id} في الأطلس.`);
+  } catch (err) { toast(`تعذّر فتح الشاهد: ${err.message}`); }
 }
 // إشعار قصير يُقرأ ويُرى
 const toastEl = document.getElementById("toast");

@@ -1,6 +1,6 @@
 // اختبار دخان للواجهة: يشغّل خادماً محلياً، ويفتح الصفحة بمتصفح Chromium، ويضغط كل زر سُنّة وحقبة
 // وطبقة سكان وحقبة ادعاءات، ويفشل إن ظهر خطأ في وحدة التحكم أو فشل تحميل ملف بيانات.
-// الاستعمال: node scripts/ui_smoke.mjs   (الصور في out/ui_desktop.png وout/ui_mobile.png)
+// الاستعمال: node scripts/ui_smoke.mjs   (الصور في out/ui_desktop.png وout/ui_mobile.png)؛ ولمقاس واحد: SMOKE_ONLY=mobile node scripts/ui_smoke.mjs
 // ويقارن لقطات ثابتة بلقطات مرجعية في scripts/visual_ref/ (انظر visualCheck). لتحديث المرجع بعد تغيير بصري مقصود:
 // UPDATE_VISUAL=1 node scripts/ui_smoke.mjs   (وVISUAL_ONLY=1 يقتصر على اللقطات المرجعية)
 import { spawn } from "node:child_process";
@@ -108,7 +108,9 @@ try {
   // عرض برمجي بـ SwiftShader عبر ANGLE: المسار الافتراضي بلا معالج رسوميات أبطأ بعشرة أضعاف مع التضاريس،
   // فتنتهي مهلة النقرات قبل أن يفرغ المتصفح (383 مقابل 33 م.ث للإطار)
   browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium", args: ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"] });
-  for (const [name, viewport] of [["desktop", { width: 1366, height: 860 }], ["mobile", { width: 390, height: 844 }]]) {
+  // SMOKE_ONLY=desktop أو mobile: مقاس واحد، لأن التشغيل الكامل يطول على متصفح بلا معالج رسوم
+  const VIEWS = [["desktop", { width: 1366, height: 860 }], ["mobile", { width: 390, height: 844 }]].filter(([n]) => !process.env.SMOKE_ONLY || n === process.env.SMOKE_ONLY);
+  for (const [name, viewport] of VIEWS) {
     if (process.env.VISUAL_ONLY) {
       await visualCheck(browser, name, viewport);
       console.log(`${name} لقطات: ${JSON.stringify(counts_visual)}`);
