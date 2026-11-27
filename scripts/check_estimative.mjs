@@ -34,6 +34,9 @@ if (fs.existsSync(path.join(ROOT, FS))) {
   for (const sg of F.signposts) fields.push([`${sg.id}: إشارة`, sg.observable]);
   for (const t of F.global_red_team ?? []) fields.push(["الاستشراف: نقد عام", t]);
 }
+// أوراق التقدير (analysis/publications/papers.json): السؤال والنقد المحرَّر نصوص تحليلية مكتوبة
+const PB = "analysis/publications/papers.json";
+if (fs.existsSync(path.join(ROOT, PB))) for (const p of read(PB).papers) fields.push([`${p.id}: السؤال`, p.question], [`${p.id}: النقد المحرَّر`, p.red_team]);
 const errors = fields.filter(([, t]) => t && loose.test(t)).map(([where, t]) => `${where}: «${t.match(loose)[2]}» لفظ احتمال مرسل؛ استعمل المقياس في حقل التقدير`);
 console.log(`اللغة التقديرية: ${fields.filter(([, t]) => t).length} نصاً تحليلياً`);
 if (errors.length) { for (const e of errors) console.log("  - " + e); process.exit(1); }
