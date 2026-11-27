@@ -2473,7 +2473,10 @@
     "politics",
     "institutions"
    ],
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "cl_000000461": {
    "domains": [
@@ -2481,14 +2484,35 @@
     "politics",
     "knowledge"
    ],
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "culture",
+     "politics",
+     "society"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
   },
   "cl_000000462": {
    "domains": [
     "culture",
-    "religion"
+    "religion",
+    "knowledge"
    ],
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "culture",
+     "religion",
+     "knowledge"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
   },
   "cl_000000463": {
    "domains": [
@@ -2496,7 +2520,10 @@
     "religion",
     "knowledge"
    ],
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "cl_000000464": {
    "domains": [
@@ -2504,7 +2531,10 @@
     "religion",
     "knowledge"
    ],
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": true
+   }
   },
   "cl_000000465": {
    "domains": [
@@ -2512,7 +2542,17 @@
     "religion",
     "society"
    ],
-   "status": "model_draft"
+   "status": "delegated_review",
+   "review": {
+    "agree": false,
+    "second": [
+     "culture",
+     "society",
+     "politics"
+    ],
+    "resolution": "اتفق التصنيفان على مجال واحد على الأقل، فجُمعا: الأول أولاً ثم ما أضافه الثاني، بثلاثة مجالات حداً أعلى",
+    "decision": "merge"
+   }
   }
  }
 }
