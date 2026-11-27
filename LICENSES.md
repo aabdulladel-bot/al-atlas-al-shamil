@@ -13,6 +13,7 @@
 |---|---|---|---|---|---|
 | `web/*.js`، `web/index.html` | كود المستودع | GNU GPL v3 (ملف `LICENSE`) | نسخ المصدر مع الترخيص عند التوزيع | 2026-11-08 | موثّق |
 | `web/vendor/maplibre-gl.js`، `web/vendor/maplibre-gl.css` | maplibre-gl-js v5.24.0 | BSD-3-Clause (ترويسة الملف) | الإبقاء على نص الترخيص والإسناد | 2026-11-08 | موثّق |
+| `web/vendor/fonts.css`، `web/vendor/fonts/` | IBM Plex Sans Arabic (IBM) وNoto Kufi Arabic (The Noto Project Authors)، الملفات من Google Fonts | SIL Open Font License 1.1 (النصان في `web/vendor/fonts/OFL-*.txt`) | الإبقاء على نص الترخيص مع الخطوط، ولا تُباع الخطوط وحدها | 2026-11-27 | موثّق |
 | `web/vendor/deck.gl.min.js`، `web/vendor/deck.gl.LICENSE` | deck.gl (vis.gl) | MIT (نص الترخيص في `deck.gl.LICENSE`) | الإبقاء على نص الترخيص | 2026-11-08 | موثّق |
 | `web/data/base/land.geojson`، `web/data/base/ocean.geojson`، `web/data/base/lakes.geojson`، `web/data/base/rivers.geojson` | `naturalearth-50m` | ملك عام (Natural Earth) | إسناد Natural Earth مستحسن | 2026-10-22 | موثّق |
 | `web/data/base/regions.json` | `naturalearth-countries-50m` (مشتق من حدود الدول) | ملك عام: «Everything here is public domain» (LICENSE في مستودع Natural Earth الرسمي) | إسناد مستحسن | 2026-11-09 | موثّق |
