@@ -419,7 +419,15 @@ async function runSearch() {
   const q = qEl.value;
   const token = ++qToken;
   if (norm(q).length < 2 && !q.trim().startsWith(">")) { closeResults(); return; }
+  // الفهرس يُبنى عند أول بحث، وقد يطول على جهاز بطيء: تظهر رسالة الانتظار بدل قائمة فارغة صامتة
+  const wait = setTimeout(() => {
+    if (token !== qToken) return;
+    qRes.innerHTML = `<p role="status">جارٍ تجهيز فهرس البحث…</p>`;
+    qRes.hidden = false;
+    qEl.setAttribute("aria-expanded", "true");
+  }, 250);
   const groups = await search(q);
+  clearTimeout(wait);
   if (token !== qToken) return;
   qItems = groups.flatMap(([, list]) => list);
   qSel = -1;

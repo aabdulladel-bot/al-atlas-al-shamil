@@ -39,11 +39,15 @@ try {
   await page.goto(`http://127.0.0.1:${PORT}/`, { waitUntil: "load" });
   await page.waitForTimeout(3500);
   await page.evaluate(() => document.getElementById("intro")?.remove());
+  // الاختبار لترتيب النتائج لا لزمن بناء الفهرس: ينتظر اكتمال الفهرس قبل أول استعلام
+  await page.evaluate(() => buildIndex());
   for (const [q, want, banned] of CASES) {
     await page.fill("#q", "");
+    await page.waitForFunction(() => document.getElementById("q-results").hidden, null, { timeout: 5000 }).catch(() => {});
     await page.click("#q");
     await page.fill("#q", q);
-    await page.waitForTimeout(1200);
+    // ينتظر ظهور نتائج هذا الاستعلام نفسه (لا رسالة الانتظار)، لا مهلة ثابتة: البحث يبطؤ على متصفح بلا معالج رسوم
+    await page.waitForFunction(() => { const r = document.getElementById("q-results"); return !r.hidden && r.innerHTML && !r.querySelector('[role="status"]'); }, null, { timeout: 20000 }).catch(() => {});
     const rows = await page.$$eval("#q-results .qr", (els) => els.slice(0, 3).map((e) => e.innerText.replace(/\s+/g, " ").trim()));
     const first = rows[0] ?? "";
     const ok = first.includes(want) && (!banned || !rows.some((r) => r.includes(banned)));
