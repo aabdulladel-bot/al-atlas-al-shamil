@@ -20,6 +20,12 @@
 | `pipeline/validate.mjs` | التحقق من أي كيان مقابل المخطط |
 | `fixtures/sample_claims.json` | بيانات اختبار مصطنعة، ليست نصاً من مصدر ولا تُنشر |
 
+## الترخيص والنشر
+- **الكود والبيانات المشتقة:** بترخيص GPL-3 (الملف `LICENSE`)، لأن حدود الحقب مشتقة من Historical Basemaps (GPL-3). والمصدر الكامل في هذا المستودع العام.
+- **الأطلس غير تجاري:** نتائج الاختبارات الكمية مشتقة من Seshat (CC BY-NC-SA)، فتُنشر بالترخيص نفسه، مع الإسناد: "This research employed data from the Seshat Databank (seshatdatabank.info) under Creative Commons Attribution Non-Commercial (CC By-NC SA) licensing."
+- **النصوص المقتبسة:** تابعة لتراخيص مصادرها، وكل مادة منشورة مسجّلة في `LICENSES.md`.
+- **النشر:** على GitHub Pages من فرع `launch` وحده، بعد نجاح `check:all` و`check:launch` في المسار نفسه (`.github/workflows/pages.yml`). والقرارات في `docs/LAUNCH_DECISIONS.md`.
+
 ## الاختبارات
 
 ```
