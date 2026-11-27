@@ -1,7 +1,7 @@
 {
   "_meta": {
     "era": 4,
-    "count": 25,
+    "count": 27,
     "status": "مسودة: تُعرض بعد مطابقة الاقتباس بالنص، وما زالت قيد المراجعة"
   },
   "claims": [
@@ -400,6 +400,40 @@
       "domains": [
         "agriculture",
         "health"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000464",
+      "statement": "يقرر بيدا أن بريطانيا تدرس العلم بالحقيقة الواحدة بلغات خمس أمم: الإنجليز والبريطانيين والإسكتلنديين والبكتيين واللاتين، وأن اللاتينية صارت مشتركة بين الجميع بدراسة الكتاب المقدس",
+      "quote": "quinque gentium linguis, unam eandemque summae ueritatis et uerae sublimitatis scientiam scrutatur, et confitetur, Anglorum uidelicet, Brettonum, Scottorum, Pictorum et Latinorum, quae meditatione scripturarum ceteris omnibus est facta communis.",
+      "attributed_to": "بيدا (النص اللاتيني من ويكي مصدر، Patrologia Latina XCV؛ CC BY-SA)",
+      "layer": "later_historian",
+      "type": "description",
+      "hedge": "وصف راهب لحال الجزيرة في القرن الثامن، من داخل الكنيسة. والعدد خمسة مربوط عنده بعدد الأسفار التي كُتبت بها الشريعة، فهو بلاغي جزئياً. ويقدّم اللاتينية لغةً لدراسة الكتاب، لا لغةَ كلام الناس اليومي.",
+      "chapter": "الكتاب الأول، الفصل 1 (تقريبي): وصف بريطانيا ولغاتها",
+      "domains": [
+        "culture",
+        "religion",
+        "knowledge"
+      ],
+      "domains_status": "delegated_review",
+      "reviewed": false
+    },
+    {
+      "id": "cl_000000465",
+      "statement": "يروي غريغوريوس أن جموع أورليان استقبلت الملك الفرنجي بمدائح تعالت فيها السريانية واللاتينية ولغة اليهود معاً",
+      "quote": "And here the Syrian language, there that of the Latins, and again that even of the Jews, sounded together strangely in varied praises",
+      "attributed_to": "غريغوريوس أسقف تور (ترجمة Brehaut، 1916)",
+      "layer": "contemporary_witness",
+      "type": "event",
+      "hedge": "رواية أسقف معاصر لملوك الفرنجة، والترجمة إنجليزية مختصرة (Brehaut). والملك غونترام بحسب سياق الكتاب، ويهاجم غريغوريوس بعدها اليهود ويجعل مدائحهم ذات غرض. والنص يصف لغات الاحتفال، لا لغات المدينة كلها.",
+      "chapter": "غريغوريوس: استقبال الملك في أورليان (الكتاب الثامن، تقريبي)",
+      "domains": [
+        "culture",
+        "religion",
+        "society"
       ],
       "domains_status": "delegated_review",
       "reviewed": false

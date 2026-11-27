@@ -496,5 +496,141 @@
     },
     "status": "verified",
     "version": 2
+  },
+  {
+    "id": "cl_000000460",
+    "passage_id": "garcilaso-rycaut-1688:court-language-command",
+    "quote": "a Command and an Injunction Jaid upon all their Vaflals, ob- liging them to learn the Language of the Court",
+    "statement": "يذكر غارسيلاسو أن ملوك الإنكا ألزموا رعاياهم جميعاً بتعلّم لغة البلاط، وهي التي يسميها اللغة العامة",
+    "type": "description",
+    "layer": "later_historian",
+    "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+    "isnad": null,
+    "hedge": "يروي غارسيلاسو، وهو ابن أم إنكية، سياسة دولة أجداده بعد عقود من سقوطها، ويمجّدها. والنص مصوّر من ترجمة إنجليزية من القرن السابع عشر، وفيه أخطاء OCR تُترك كما هي.",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000461",
+    "passage_id": "garcilaso-rycaut-1688:court-language-heirs",
+    "quote": "by which means the Language of the Court became mote general and common, being learned with eafe and pleafure",
+    "statement": "يذكر غارسيلاسو أن حضور أبناء السادة التابعين في البلاط جعل لغة البلاط أعمّ انتشاراً، تُتعلَّم بيسر",
+    "type": "cause",
+    "layer": "later_historian",
+    "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+    "isnad": null,
+    "hedge": "تعليل غارسيلاسو لانتشار اللغة، لا إحصاء له. وهو يمجّد دولة أجداده، وفي النص المصوّر أخطاء OCR («mote» بدل more).",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000462",
+    "passage_id": "garcilaso-rycaut-1688:indian-language-after-conquest",
+    "quote": "when now after eighty years that the Indian Empire hath been fubdued, there ftill want words in the Jadian Language to exprefs the Myfteries of our Holy Faith.",
+    "statement": "يذكر غارسيلاسو أن لغة أهل البلاد، بعد ثمانين سنة من إخضاع إمبراطورية الإنكا، ما زالت تفتقر إلى ألفاظ تعبّر عن أسرار الدين المسيحي",
+    "type": "state",
+    "layer": "contemporary_witness",
+    "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+    "isnad": null,
+    "hedge": "ملاحظة كاتب عاش في البيرو بعد الفتح وكتب في إسبانيا. و«الافتقار» حكمه هو، وإبقاء الألفاظ الإسبانية في المصطلح الديني قد يكون اختياراً مقصوداً لا عجزاً في اللغة وحده. وهي تصف بقاء اللغة المحلية في التعليم الديني، لا مدى انتشار الإسبانية بين الناس.",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "cl_000000463",
+    "passage_id": "garcilaso-rycaut-1688:catechism-three-languages",
+    "quote": "in the year 1585, in three Languages, viz. in Spanifh, in the general Language of Coz- co, and in the Tongue peculiarly belonging to the Province of Aymara",
+    "statement": "يذكر غارسيلاسو أن كتاب تعليم الدين المطبوع سنة 1585 صدر بثلاث لغات: الإسبانية، واللغة العامة في كوزكو، ولغة إقليم أيمارا",
+    "type": "event",
+    "layer": "contemporary_witness",
+    "attributed_to": "غارسيلاسو دي لا فيغا (ترجمة Paul Rycaut، 1688)",
+    "isnad": null,
+    "hedge": "يستشهد غارسيلاسو بالكتاب على قصور ألفاظ اللغتين المحليتين عن المصطلح الديني. ونسبة الكتاب إلى راهب بعينه لا يؤيدها غيره، والسنة كما وردت في الترجمة.",
+    "author_preference": null,
+    "mentions": {
+      "places": [],
+      "persons": [],
+      "dates": []
+    },
+    "links": {},
+    "checks": {
+      "quote_match": true,
+      "meaning": {
+        "status": "self_reviewed",
+        "reviewer": "pilot-era6"
+      },
+      "pass_agreement": {
+        "status": "not_run",
+        "classification_agree": false,
+        "runs": 1,
+        "rule": "content-first-v1"
+      },
+      "verified_by": "pilot-era6"
+    },
+    "status": "draft",
+    "version": 1
   }
 ]
