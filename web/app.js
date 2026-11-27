@@ -939,6 +939,27 @@ const COORD_SHORT = {
   "wikidata-modern-city": "موقع المدينة الحديثة",
 };
 // شاهد واحد: نصه واقتباسه المطابق وقائله وتحفّظه، ودوره في السنن. تستعمله بطاقة المكان وبطاقة الشاهد بلا مكان
+// أدوات الباحث على كل شاهد: استشهاد منسوخ بإسناده ودرجته، ورابط ثابت يفتحه في الأطلس (#c<رقم>)
+const claimReg = new Map();
+function claimLink(id) { return `${location.origin}${location.pathname}#c${Number(String(id).slice(3))}`; }
+function claimToolsHtml(c) {
+  claimReg.set(c.id, c);
+  return `<div class="card-actions claim-tools"><button type="button" class="chip" data-ccite="${escapeHtml(c.id)}">انسخ الاستشهاد</button><button type="button" class="chip" data-clink="${escapeHtml(c.id)}">انسخ رابط الشاهد</button></div>`;
+}
+function claimCitation(c) {
+  const g = typeof gradeOf === "function" ? gradeOf(c.id) : null;
+  return [`«${c.statement}»`, `— ${c.attributed_to}`, `الاقتباس: “${c.quote}”`, c.hedge ? `تحفّظ: ${c.hedge}` : "",
+    g ? `التقييم: ${g.src}${g.info}، ${gradeLabel(g)}` : "", `الأطلس الشامل، الشاهد ${c.id}: ${claimLink(c.id)}`].filter(Boolean).join("\n");
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-ccite], [data-clink]");
+  if (!b) return;
+  const id = b.dataset.ccite ?? b.dataset.clink;
+  const c = claimReg.get(id);
+  if (!c) return;
+  if (b.dataset.clink != null) copyText(b, claimLink(id), "نُسخ رابط الشاهد", "انسخ رابط الشاهد");
+  else copyText(b, claimCitation(c), "نُسخ الاستشهاد مع إسناده", "انسخ الاستشهاد");
+});
 function claimRowHtml(c) {
   const era = ERAS.find((x) => x.id === Number(c.era));
   const roles = (claimRoles.get(c.id) ?? []).map((r) => chip(`${r.role === "limit" ? "يقيّد" : "يؤيد"}: ${r.name}`, r.role));
@@ -946,7 +967,7 @@ function claimRowHtml(c) {
     `<blockquote class="ev-q" dir="auto">“${escapeHtml(c.quote)}”</blockquote>` +
     `<div class="ev-by">— <bdi>${escapeHtml(c.attributed_to)}</bdi></div>` +
     (c.hedge ? `<div class="ev-hedge">تحفّظ: ${escapeHtml(c.hedge)}</div>` : "") +
-    gradeDetails(c.id) + domainChips(c.id) +
+    gradeDetails(c.id) + domainChips(c.id) + claimToolsHtml(c) +
     `<div class="chips">${era ? chip(`الحقبة ${era.id}: ${era.label}${era.id === eraOf(time.key).id ? " (الحقبة المعروضة)" : ""}`, era.id === eraOf(time.key).id ? "now-era" : "", `data-time="${era.border}" title="انقل الخريطة إلى زمنه"`) : ""}${roles.join("")}</div></article>`;
 }
 // شاهد لا مكان له على الخريطة (يجده البحث): يُعرض نصاً، ولا تُوضع له نقطة
@@ -1736,7 +1757,7 @@ function claimHtml(c, extra = "") {
   return `<div class="ev ${extra}">${escapeHtml(c.statement)}${domainChips(c.id)}${gradeChip(c.id)}` +
     `<div class="sub">${escapeHtml(c.attributed_to)}</div>` +
     `<details class="research-only"><summary class="sub">الاقتباس والتحفّظ والتقييم</summary>` +
-    `<div class="src-quote">“${escapeHtml(c.quote)}”</div><div class="sub">تحفّظ: ${escapeHtml(c.hedge)}</div>${gradeDetails(c.id)}</details></div>`;
+    `<div class="src-quote">“${escapeHtml(c.quote)}”</div><div class="sub">تحفّظ: ${escapeHtml(c.hedge)}</div>${gradeDetails(c.id)}${claimToolsHtml(c)}</details></div>`;
 }
 // تصفّح المجالات: ادعاءات مجال واحد في كل الحقب
 const claimsDomainsEl = document.getElementById("claims-domains");
@@ -3231,6 +3252,7 @@ function viewFromHash() {
     } else if (/^r[a-z]+$/.test(part)) out.r = part.slice(1);
     else if (/^s[a-z]+$/.test(part)) out.s = part.slice(1);
     else if (/^g[a-z]+$/.test(part)) out.g = part.slice(1);
+    else if (/^c\d{1,9}$/.test(part)) out.c = `cl_${part.slice(1).padStart(9, "0")}`; // رابط شاهد ثابت
     else if (/^[hk][a-z]+$/.test(part)) (out.l ??= {})[part.slice(1)] = part[0] === "k"; // k: أُظهرت طبقة مطفأة افتراضياً، وh: أُخفيت طبقة ظاهرة
     else if (/^p\d{1,5}_\d{1,5}_\d{1,3}$/.test(part)) { const [a, b, c] = part.slice(1).split("_").map(Number); if (a <= 36000 && b <= 18000 && c <= 220) out.p = [a / 100 - 180, b / 100 - 90, c / 10]; }
   }
