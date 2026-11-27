@@ -106,11 +106,12 @@ function assess(s, supporting, limiting, quant) {
   if (!a.why?.trim()) errors.push(`${s.id}: تقدير بلا سبب`);
   if (!a.assumptions?.length) errors.push(`${s.id}: تقدير بلا افتراضات مكتوبة`);
   // اتساق الحكم مع الاختبار الكمي: ما لا يؤيده اختبار لا يُرجَّح، وما يؤيده كل اختبار لا يُستبعد
-  if (quant.some((q) => q.verdict === "لا يؤيد") && L.rank > EVEN) errors.push(`${s.id}: «${L.ar}» واختبار كمي لا يؤيدها`);
+  // قاعدة صاحب المشروع (2026-11-27): ما لا يؤيده اختبار كمي، لعدمه أو لأنه لا يؤيده، لا يُقدَّر فوق «متكافئ تقريباً» مهما كثرت شواهده
+  if (!quant.some((q) => q.verdict.startsWith("يؤيد")) && L.rank > EVEN) errors.push(`${s.id}: «${L.ar}» ولا اختبار كمي يؤيدها، والحد الأعلى «متكافئ تقريباً»`);
   if (quant.length && quant.every((q) => q.verdict.startsWith("يؤيد")) && L.rank < LIKELY) errors.push(`${s.id}: «${L.ar}» وكل اختباراتها الكمية تؤيدها`);
   if (!EST.status[a.status]) errors.push(`${s.id}: حالة تقدير غير معروفة ${a.status}`);
   const review = a.review ? { ...a.review, second_ar: a.review.second === "unassessed" ? EST.unassessed : LK.get(a.review.second)?.ar ?? a.review.second } : null;
-  return { likelihood: L.id, likelihood_ar: L.ar, range: L.range, confidence, confidence_ar: EST.confidence[confidence].ar, basis, why: a.why, assumptions: a.assumptions, status: a.status, ...(review ? { review } : {}) };
+  return { likelihood: L.id, likelihood_ar: L.ar, range: L.range, confidence, confidence_ar: EST.confidence[confidence].ar, basis, why: a.why, assumptions: a.assumptions, status: a.status, ...(review ? { review } : {}), ...(a.owner ? { owner: a.owner } : {}) };
 }
 
 const out = [];

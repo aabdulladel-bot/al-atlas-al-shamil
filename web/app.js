@@ -2709,7 +2709,7 @@ function assessmentHtml(s) {
     `<details class="research-only"><summary class="sub">الافتراضات وأساس الثقة</summary><ul class="gap-list">${a.assumptions.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>` +
     `<p class="sub">أساس الثقة: ${fmtInt(b.facts)} وقائع مرجّحة أو مؤكدة، و${fmtInt(b.views)} آراء موافقة لا تُحسب وقائع، و${fmtInt(b.limiting)} مقيِّد، و${fmtInt(b.quant_decisive)} من ${fmtInt(b.quant_total)} اختبار كمي حاسم. القاعدة: ${escapeHtml(est?.confidence?.[a.confidence]?.rule ?? "")}.</p></details>` +
     (a.review ? `<p class="sub">${a.review.agree ? "اتفق التقديران المستقلان." : `قدّر التقدير الثاني «${escapeHtml(a.review.second_ar)}»، والحسم: ${escapeHtml(a.review.resolution)}`}</p>` : "") +
-    `<p class="sub">${escapeHtml(est?.status?.[a.status] ?? "")}.</p></div>`;
+    `<p class="sub">${escapeHtml(est?.status?.[a.status] ?? "")}${a.owner?.note ? `: ${escapeHtml(a.owner.note)}` : ""}.</p></div>`;
 }
 function renderSunna(s, placesLinked) {
   const khaldun = s.khaldun.map((k) => `<div class="khaldun">«${escapeHtml(k.quote)}»<div class="sub">ابن خلدون، المقدمة: ${escapeHtml(k.location)}</div></div>`).join("");
