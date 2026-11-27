@@ -34,7 +34,7 @@
     "demography": {
       "ar": "السكان (أعمدة)",
       "about": "أعمدة ثلاثية الأبعاد ترتفع بحسب الجذر التربيعي للعدد. قبل 1800 إقليمية بتقديرات HYDE، وبعدها بحسب الدولة من Gapminder.",
-      "sources": ["owid-hyde-regional-population", "hyde-3.3", "gapminder-total-population", "gapminder-country-entities"],
+      "sources": ["owid-hyde-regional-population", "gapminder-total-population", "gapminder-country-entities"],
       "coverage": { "kind": "files", "glob": "web/data/demography_*era*.geojson", "label": "ملفات السكان", "era": true }
     },
     "lights": {

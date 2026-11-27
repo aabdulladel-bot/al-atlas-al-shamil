@@ -438,12 +438,6 @@
      "landing": "https://datahub.io/climate-and-environment/hyde-history-database-of-the-global-environment"
     },
     {
-     "id": "hyde-3.3",
-     "tier": "A",
-     "license": "CC BY 4.0 (بحسب صفحة الجامعة)",
-     "landing": "https://public.yoda.uu.nl/geo/UU01/67UHB4.html"
-    },
-    {
      "id": "gapminder-total-population",
      "tier": "B",
      "license": "CC BY 4.0 (بحسب README المستودع: Gapminder created this dataset and provides it under CC BY 4.0)",
